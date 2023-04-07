@@ -18,11 +18,24 @@
 #include <commons/collections/list.h>
 #include <commons/string.h>
 
+
+
 typedef struct {
     uint32_t size; // Tamaño del payload
     void* stream; // Payload
 } t_buffer;
 
+typedef struct{
+	uint32_t elementosLista;
+	t_list* listaInstrucciones;
+} t_instrucciones;
+
+
+//INSTRUCCIONES CONSOLA-KERNEL
+void* serializar_instrucciones_tam(uint32_t size, t_list* lista);
+t_instrucciones* deserializar_instrucciones(t_buffer* buffer);
 void enviar_instrucciones(int socket_fd, t_list* lista);
+t_instrucciones* recibir_instrucciones(int socket_fd);
+uint32_t calcular_instrucciones_buffer_size(t_list* lista);
 
 #endif /* SRC_PROTOCOLO_H_ */

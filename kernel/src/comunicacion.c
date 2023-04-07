@@ -5,6 +5,7 @@
  *      Author: utnso
  */
 #include "comunicacion.h"
+
 uint16_t pid_nuevo=0;
 
 typedef struct {
@@ -20,21 +21,10 @@ static void procesar_conexion(void* void_args) {
 	char* server_name = args->server_name;
 	free(args);
 
-	//t_instrucciones* mensaje=malloc(sizeof(t_instrucciones));
-	//mensaje=recibir_instrucciones(cliente_socket);
-	//printf("Segmento % \n", &mensaje->segmentos[0]);
+	t_instrucciones* mensaje=malloc(sizeof(t_instrucciones));
+	mensaje=recibir_instrucciones(cliente_socket);
 
-	/*t_list* segmentos=malloc(sizeof(TABLA_SEGMENTO));
-	int c=0;
-	while(c<list_size(mensaje->listaTamSegmentos)){
-		TABLA_SEGMENTO* aux=malloc(sizeof(TABLA_SEGMENTO));
-		aux->tamSegmento=list_get(mensaje->listaTamSegmentos,c);//habria que probar esto
-		list_add(segmentos,aux);
-		c++;
-	}
-
-
-	return ;*/
+	return ;
 }
 int server_escuchar(char* server_name, int server_socket) {
     cliente_socket = esperar_cliente(logger, server_name, server_socket);

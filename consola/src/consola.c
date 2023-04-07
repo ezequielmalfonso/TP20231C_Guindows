@@ -19,7 +19,7 @@ int main(int argc, char** argv) {
 		int kernel_fd;
 		cargarConfiguracion(argv[2]);
 		generar_conexion(&kernel_fd, configuracion);
-		uint32_t valor=0;
+		//uint32_t valor=0;
 
 		/*int i = 0;
 		while(segmentos[i]!=NULL){
@@ -36,7 +36,7 @@ int main(int argc, char** argv) {
 
 		//printf("La lista tiene %d elementos", k);
 
-		//enviar_instrucciones(kernel_fd, listaInstrucciones, configuracion->SEGMENTOS);
+		enviar_instrucciones(kernel_fd, listaInstrucciones);
 
 	//return 1;
 

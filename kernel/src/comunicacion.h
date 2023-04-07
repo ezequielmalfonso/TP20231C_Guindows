@@ -17,6 +17,7 @@
 #include <commons/string.h>
 #include "socket.h"
 #include "kernelConfig.h"
+#include "protocolo.h"
 //#include "planificacion.h"
 
 extern int cliente_socket;
