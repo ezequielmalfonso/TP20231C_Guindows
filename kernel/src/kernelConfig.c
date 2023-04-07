@@ -14,15 +14,17 @@ t_log * logger;
 int configValida(t_config* fd_configuracion) {
 	return (config_has_property(fd_configuracion, "IP_MEMORIA")
 		&& config_has_property(fd_configuracion, "PUERTO_MEMORIA")
+		&& config_has_property(fd_configuracion, "IP_FILESYSTEM")
+		&& config_has_property(fd_configuracion, "PUERTO_FILESYSTEM")
 		&& config_has_property(fd_configuracion, "IP_CPU")
-		&& config_has_property(fd_configuracion, "PUERTO_CPU_DISPATCH")
-		&& config_has_property(fd_configuracion, "PUERTO_CPU_INTERRUPT")
+		&& config_has_property(fd_configuracion, "PUERTO_CPU")
 		&& config_has_property(fd_configuracion, "PUERTO_ESCUCHA")
 		&& config_has_property(fd_configuracion, "ALGORITMO_PLANIFICACION")
+		&& config_has_property(fd_configuracion, "ESTIMACION_INICIAL")
+		&& config_has_property(fd_configuracion, "HRRN_ALFA")
 		&& config_has_property(fd_configuracion, "GRADO_MAX_MULTIPROGRAMACION")
-		&& config_has_property(fd_configuracion, "DISPOSITIVOS_IO")
-		&& config_has_property(fd_configuracion, "TIEMPOS_IO")
-		&& config_has_property(fd_configuracion, "QUANTUM_RR"));
+		&& config_has_property(fd_configuracion, "RECURSOS")
+		&& config_has_property(fd_configuracion, "INSTANCIAS_RECURSOS"));
 }
 
 int cargarConfiguracion() {
@@ -39,19 +41,19 @@ int cargarConfiguracion() {
 		return -1;
 	}
 
-	configuracion->IP_MEMORIA = config_get_string_value(fd_configuracion, "IP_MEMORIA");
-	configuracion->PUERTO_MEMORIA = config_get_int_value(fd_configuracion, "PUERTO_MEMORIA");
-	configuracion->IP_FILESYSTEM = config_get_string_value(fd_configuracion, "IP_FILESYSTEM");
-	configuracion->PUERTO_FILESYSTEM = config_get_int_value(fd_configuracion, "PUERTO_FILESYSTEM");
-	configuracion->IP_CPU = config_get_string_value(fd_configuracion, "IP_CPU");
-	configuracion->PUERTO_CPU = config_get_int_value(fd_configuracion, "PUERTO_CPU");
-	configuracion->PUERTO_ESCUCHA = config_get_int_value(fd_configuracion, "PUERTO_ESCUCHA");
-	configuracion->ALGORITMO_PLANIFICACION = config_get_string_value(fd_configuracion, "ALGORITMO_PLANIFICACION");
-	configuracion->ESTIMACION_INICIAL = config_get_string_value(fd_configuracion, "ESTIMACION_INICIAL");
-	configuracion->HRRN_ALFA = config_get_int_value(fd_configuracion, "HRRN_ALFA");
-	configuracion->GRADO_MAX_MULTIPROGRAMACION = config_get_int_value(fd_configuracion, "GRADO_MAX_MULTIPROGRAMACION");
-	configuracion->RECURSOS = config_get_int_value(fd_configuracion, "RECURSOS");
-	configuracion->INSTANCIAS_RECURSOS = config_get_int_value(fd_configuracion, "INSTANCIAS_RECURSOS");
+	configuracion->IP_MEMORIA 					= config_get_string_value(fd_configuracion, "IP_MEMORIA");
+	configuracion->PUERTO_MEMORIA 				= config_get_int_value(fd_configuracion, "PUERTO_MEMORIA");
+	configuracion->IP_FILESYSTEM 				= config_get_string_value(fd_configuracion, "IP_FILESYSTEM");
+	configuracion->PUERTO_FILESYSTEM 			= config_get_int_value(fd_configuracion, "PUERTO_FILESYSTEM");
+	configuracion->IP_CPU 						= config_get_string_value(fd_configuracion, "IP_CPU");
+	configuracion->PUERTO_CPU 					= config_get_int_value(fd_configuracion, "PUERTO_CPU");
+	configuracion->PUERTO_ESCUCHA 				= config_get_int_value(fd_configuracion, "PUERTO_ESCUCHA");
+	configuracion->ALGORITMO_PLANIFICACION 		= config_get_string_value(fd_configuracion, "ALGORITMO_PLANIFICACION");
+	configuracion->ESTIMACION_INICIAL 			= config_get_int_value(fd_configuracion, "ESTIMACION_INICIAL");
+	configuracion->HRRN_ALFA 					= config_get_double_value(fd_configuracion, "HRRN_ALFA");
+	configuracion->GRADO_MAX_MULTIPROGRAMACION 	= config_get_int_value(fd_configuracion, "GRADO_MAX_MULTIPROGRAMACION");
+	configuracion->RECURSOS 					= config_get_int_value(fd_configuracion, "RECURSOS");
+	configuracion->INSTANCIAS_RECURSOS 			= config_get_int_value(fd_configuracion, "INSTANCIAS_RECURSOS");
 
 	log_info(logger,
 		"\nIP_MEMORIA: %s\n"
@@ -63,7 +65,7 @@ int cargarConfiguracion() {
 		"PUERTO_ESCUCHA: %d\n"
 		"ALGORITMO_PLANIFICACION: %s\n"
 		"ESTIMACION_INICIAL: %d\n"
-		"HRRN_ALFA: %d\n"
+		"HRRN_ALFA: %.2f\n"
 		"GRADO_MAX_MULTIPROGRAMACION: %d\n",
 		//"RECURSOS: %d\n"
 		//"INSTANCIAS_RECURSOS: %d\n"

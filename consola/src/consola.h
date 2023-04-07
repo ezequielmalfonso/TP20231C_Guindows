@@ -15,8 +15,14 @@
 #include <commons/string.h>
 #include <commons/collections/list.h>
 #include "socket.h"
-//#include "protocolo.h"
+#include "protocolo.h"
+#include "estructuras.h"
 #include "consolaConfig.h"
+
+#define LONGITUD_MAXIMA_LINEA 30   // Para el archivo a leer
+
+void parseo_instrucciones(char* path_instrucciones, t_list* listaIntrucciones);
+
 
 
 #endif /* CONSOLA_H_ */
