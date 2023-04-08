@@ -38,6 +38,9 @@ t_instrucciones* recibir_instrucciones(int socket_fd)
 
 	t_instrucciones* mensaje = deserializar_instrucciones(buffer);
 
+
+
+
 	free(buffer->stream);
     free(buffer);
 
@@ -49,13 +52,7 @@ uint32_t calcular_instrucciones_buffer_size(t_list* lista){
 	uint32_t size=0;
 	int i=0;
 
-	while(i<=lista->elements_count){
-		size += 25;
-		i++;
-		//aux = list_iterator_next(listaIns);
-		//list_iterator_next(listaIns);
-	}
-
+	size += 25*(lista->elements_count)*sizeof(uint32_t);
 	//free(listaIns);
 	//free(aux);
 	return size;
@@ -74,12 +71,11 @@ void* serializar_instrucciones_tam(uint32_t size, t_list* lista) {
     offset+= sizeof(uint32_t);
 
     t_link_element* aux1 = lista->head;
-    printf("Verificamos la lista:\n");
+    //printf("Verificamos la lista:\n");
     while( aux1!=NULL )
 	{
 		INSTRUCCION* auxl2 = aux1->data;
-
-		printf("Comando: %s | Par1: %s | Par2: %s | Par3: %s\n", auxl2->comando, auxl2->parametro1, auxl2->parametro2, auxl2->parametro3 );
+		//printf("Comando: %s | Par1: %s | Par2: %s | Par3: %s\n", auxl2->comando, auxl2->parametro1, auxl2->parametro2, auxl2->parametro3 );
 
 		memcpy(stream + offset, &auxl2->comando, sizeof(aux->comando));
 		offset += sizeof(aux->comando);
@@ -98,18 +94,17 @@ void* serializar_instrucciones_tam(uint32_t size, t_list* lista) {
 t_instrucciones* deserializar_instrucciones(t_buffer* buffer){
     int i=0, c=0;
 	t_instrucciones* mensaje=malloc(sizeof(t_instrucciones));
-
-
 	void* stream = buffer->stream;
 
 	memcpy(&(mensaje->elementosLista), stream, sizeof(uint32_t));
 	stream += sizeof(uint32_t);
 
 	mensaje->listaInstrucciones=list_create();
-
+	printf("Verificamos la lista:\n");
 	while(i!=mensaje->elementosLista)
 	{
 		INSTRUCCION* aux=malloc(sizeof(INSTRUCCION));
+
 		memcpy(&(aux->comando), stream, sizeof(aux->comando));
 	    stream += sizeof(aux->comando);
 	    memcpy(&(aux->parametro1),stream , sizeof(aux->parametro1));
@@ -118,7 +113,7 @@ t_instrucciones* deserializar_instrucciones(t_buffer* buffer){
 	    stream += sizeof(aux->parametro2);
 	    memcpy(&(aux->parametro3), stream, sizeof(aux->parametro3));
 	    stream += sizeof(aux->parametro3);
-
+	    printf("Comando: %s | Par1: %s | Par2: %s | Par3: %s\n", aux->comando, aux->parametro1, aux->parametro2, aux->parametro3 );
 	    list_add(mensaje->listaInstrucciones,aux);
 	    i++;
 	}
