@@ -38,6 +38,9 @@ int main(int argc, char** argv) {
 
 		enviar_instrucciones(kernel_fd, listaInstrucciones);
 
+		//TODO : Para cuando esten todos los modulos arriba aca va while esperandocodigo de operacion desde kernel
+		//       pcb->cliente_fd
+		//WHILE(1)
 	//return 1;
 
 }

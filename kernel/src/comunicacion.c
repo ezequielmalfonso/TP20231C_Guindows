@@ -19,16 +19,58 @@ static void procesar_conexion(void* void_args) {
 	t_procesar_conexion_args* args = (t_procesar_conexion_args*) void_args;
 	int cliente_socket = args->fd;
 	char* server_name = args->server_name;
+	double   estimado_rafaga_inicial;
 	free(args);
 
 	t_instrucciones* mensaje=malloc(sizeof(t_instrucciones));
 	mensaje=recibir_instrucciones(cliente_socket);
 
+	// Una vez recibidas las instruccion desde consola creo el PCB
+    PCB_t* proceso = malloc(sizeof(PCB_t));
+	proceso = pcb_create();
+
+	//TODO pasarle los valores de inicializacion al PCB
+	uint32_t registros[4];
+	registros[0]=0;
+	registros[1]=0;
+	registros[2]=0;
+	registros[3]=0;
+
+	//pthread_mutex_lock(&pid_xd);
+
+	uint32_t archivos_abiertos[4];
+	archivos_abiertos[0]=0;
+	archivos_abiertos[1]=0;
+	archivos_abiertos[2]=0;
+	archivos_abiertos[3]=0;
+
+	estimado_rafaga_inicial = configuracion->ESTIMACION_INICIAL;
+
+	pcb_set(proceso, pid_nuevo, mensaje->listaInstrucciones, 0
+			,registros
+			//, lista de segmento PREGUNTAR ????
+			, archivos_abiertos
+			, estimado_rafaga_inicial
+			, cliente_socket);
+/*
+
+
+			 uint32_t registro_cpu[4],
+			 t_list*  segmentos,
+			 t_list*  archivos_abiertos,
+			 double   estimado_rafaga_inicial,
+			 int      cliente*/
+	pid_nuevo++;
+	//pthread_mutex_unlock(&pid_xd);
+
+	//list_destroy(mensaje->listaInstrucciones);
+	//list_destroy(mensaje->listaTamSegmentos);
+	//free(mensaje);
+
 	return ;
 }
 int server_escuchar(char* server_name, int server_socket) {
     cliente_socket = esperar_cliente(logger, server_name, server_socket);
-
 
     if (cliente_socket != -1) {
         pthread_t hilo;
@@ -36,7 +78,7 @@ int server_escuchar(char* server_name, int server_socket) {
         args->fd = cliente_socket;
         args->server_name = server_name;
         pthread_create(&hilo, NULL, (void*) procesar_conexion, (void*) args);
-        pthread_detach(hilo);
+        //pthread_detach(hilo);
         return 1;
     }
     return 0;

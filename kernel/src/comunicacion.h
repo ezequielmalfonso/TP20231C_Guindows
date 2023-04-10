@@ -19,6 +19,8 @@
 #include "kernelConfig.h"
 #include "protocolo.h"
 //#include "planificacion.h"
+#include "pcb.h"
+#include "estructuras.h"
 
 extern int cliente_socket;
 

@@ -35,11 +35,7 @@ t_instrucciones* recibir_instrucciones(int socket_fd)
 	recv(socket_fd, &(buffer->size), sizeof(int), MSG_WAITALL);
 	buffer->stream=malloc(buffer->size);
 	recv(socket_fd, buffer->stream, buffer->size, MSG_WAITALL);
-
 	t_instrucciones* mensaje = deserializar_instrucciones(buffer);
-
-
-
 
 	free(buffer->stream);
     free(buffer);
@@ -53,6 +49,7 @@ uint32_t calcular_instrucciones_buffer_size(t_list* lista){
 	int i=0;
 
 	size += 25*(lista->elements_count)*sizeof(uint32_t);
+
 	//free(listaIns);
 	//free(aux);
 	return size;

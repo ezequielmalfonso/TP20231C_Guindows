@@ -17,7 +17,7 @@
 #include <stdlib.h>
 #include <commons/collections/list.h>
 #include <commons/string.h>
-
+#include "pcb.h"
 
 
 typedef struct {
@@ -28,6 +28,8 @@ typedef struct {
 typedef struct{
 	uint32_t elementosLista;
 	t_list* listaInstrucciones;
+   // uint32_t cantSegmentos;
+   // t_list* listaTamSegmentos;
 } t_instrucciones;
 
 
