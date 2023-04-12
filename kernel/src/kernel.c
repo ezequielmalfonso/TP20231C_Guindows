@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include "kernel.h"
 
+int cpu_fd;
+
 int main(void) {
 	cargarConfiguracion();
 	t_config* config_ips = config_create("../ips.conf");
@@ -12,10 +14,10 @@ int main(void) {
 		///inicializarPlanificacion();
 	char* puerto = string_itoa(configuracion->PUERTO_ESCUCHA);
 
-		//CLIENTE
-		//CPU
-		//generar_conexiones(&interrupt_fd, &dispatch_fd, configuracion);
-		//MEMORIA
+	//CLIENTE
+	//CPU
+	generar_conexiones(&cpu_fd, configuracion);
+	//MEMORIA
 		//generar_conexion_memoria(&memoria_fd, configuracion);
 		//INICIO SERVIDOR
 		//INICIO SERVIDOR

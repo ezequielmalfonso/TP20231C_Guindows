@@ -26,9 +26,10 @@ static void procesar_conexion(void* void_args) {
 	mensaje=recibir_instrucciones(cliente_socket);
 
 	// Una vez recibidas las instruccion desde consola creo el PCB
-    PCB_t* proceso = malloc(sizeof(PCB_t));
+ /*   PCB_t* proceso = malloc(sizeof(PCB_t));
 	proceso = pcb_create();
 
+	// Aca inicializo los valores para el PCB
 	//TODO pasarle los valores de inicializacion al PCB
 	uint32_t registros[4];
 	registros[0]=0;
@@ -52,20 +53,12 @@ static void procesar_conexion(void* void_args) {
 			, archivos_abiertos
 			, estimado_rafaga_inicial
 			, cliente_socket);
-/*
 
-
-			 uint32_t registro_cpu[4],
-			 t_list*  segmentos,
-			 t_list*  archivos_abiertos,
-			 double   estimado_rafaga_inicial,
-			 int      cliente*/
-	pid_nuevo++;
+	//pid_nuevo++;
 	//pthread_mutex_unlock(&pid_xd);
-
-	//list_destroy(mensaje->listaInstrucciones);
-	//list_destroy(mensaje->listaTamSegmentos);
-	//free(mensaje);
+*/
+	list_destroy(mensaje->listaInstrucciones);
+	free(mensaje);
 
 	return ;
 }
@@ -83,3 +76,23 @@ int server_escuchar(char* server_name, int server_socket) {
     }
     return 0;
 }
+
+//CLIENTE
+//CPU
+int generar_conexiones(int* cpu_fd, t_config_kernel* configuracion) {
+    char* port_cpu = string_itoa(configuracion->PUERTO_CPU);
+
+    *cpu_fd = crear_conexion(
+            logger,
+            "CPU",
+            configuracion->IP_CPU,
+            port_cpu
+    );
+
+    free(port_cpu);
+
+    return *port_cpu != 0;
+}
+
+
+

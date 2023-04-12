@@ -19,6 +19,10 @@
 #include <commons/string.h>
 #include "pcb.h"
 
+typedef enum {
+    DEBUG = 69
+
+	}op_code;
 
 typedef struct {
     uint32_t size; // Tamaño del payload

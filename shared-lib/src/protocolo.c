@@ -97,7 +97,7 @@ t_instrucciones* deserializar_instrucciones(t_buffer* buffer){
 	stream += sizeof(uint32_t);
 
 	mensaje->listaInstrucciones=list_create();
-	printf("Verificamos la lista:\n");
+	//printf("Verificamos la lista:\n");
 	while(i!=mensaje->elementosLista)
 	{
 		INSTRUCCION* aux=malloc(sizeof(INSTRUCCION));
@@ -110,7 +110,7 @@ t_instrucciones* deserializar_instrucciones(t_buffer* buffer){
 	    stream += sizeof(aux->parametro2);
 	    memcpy(&(aux->parametro3), stream, sizeof(aux->parametro3));
 	    stream += sizeof(aux->parametro3);
-	    printf("Comando: %s | Par1: %s | Par2: %s | Par3: %s\n", aux->comando, aux->parametro1, aux->parametro2, aux->parametro3 );
+	   // printf("Comando: %s | Par1: %s | Par2: %s | Par3: %s\n", aux->comando, aux->parametro1, aux->parametro2, aux->parametro3 );
 	    list_add(mensaje->listaInstrucciones,aux);
 	    i++;
 	}

@@ -18,7 +18,7 @@
 
 extern int kernelServer;
 
-extern int interrupt_fd, dispatch_fd, memoria_fd;
+extern int cpu_fd;
 
 
 #endif /* KERNEL_H_ */

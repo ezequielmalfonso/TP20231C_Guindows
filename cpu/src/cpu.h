@@ -14,6 +14,10 @@
 #include <commons/config.h>
 #include "socket.h"
 #include "cpuConfig.h"
-#include "comunicacion.h"
+//#include "comunicacion.h"
+
+extern int cpuServer;
+
+void serverCPU();
 
 #endif /* CPU_H_ */
