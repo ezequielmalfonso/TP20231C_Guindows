@@ -18,7 +18,7 @@ int main(){
 	generar_conexion(&memoria_fd, configuracion);
 	// ENVIO y RECEPCION A MEMORIA
 	op_code op=INICIALIZAR;
-
+	send(memoria_fd,&op,sizeof(op_code),0);
 	// INICIO CPU SERVIDOR
 	char* puertoCPU = string_itoa(configuracion->PUERTO_ESCUCHA);
 	int cpuServer= iniciar_servidor(logger,"kernel server",ip,puertoCPU);//ACA IP PROPIA

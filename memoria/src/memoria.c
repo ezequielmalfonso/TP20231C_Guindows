@@ -38,7 +38,7 @@ void escuchar_kernel() {
 	while(kernel_escuchar("memoria_sv",memoriaServer));
 }
 void escuchar_cpu() {
-	//while(cpu_escuchar("memoria_sv",memoriaServer));
+	while(cpu_escuchar("memoria_sv",memoriaServer));
 }
 
 
