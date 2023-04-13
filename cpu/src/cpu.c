@@ -1,51 +1,30 @@
 /*
- ============================================================================
- Name        : cpu.c
- Author      : 
- Version     :
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
- ============================================================================
+ * cpu.c
+ *
+ *  Created on: 13 abr 2023
+ *      Author: utnso
  */
-
 #include "cpu.h"
 
+int cpuServer;
 int memoria_fd;
-//int cpuServer;
 
-int main(void) {
-
+int main(){
 	cargarConfiguracion();
 	t_config* config_ips = config_create("../ips.conf");
 	char* ip = config_get_string_value(config_ips,"IP_CPU");
-	//log_info(logger,"\nPUERTO_ESCUCHA: %d\n", configuracion->PUERTO_ESCUCHA);
 
-	char* puerto = string_itoa(configuracion->PUERTO_ESCUCHA);
-	//TODO Conexion con MEMORIA y ENVIO Y RECEPCION DE DATOS CON MEMORIA
+	//CLIENTE Conexion a MEMORIA
+	generar_conexion(&memoria_fd, configuracion);
+	// ENVIO y RECEPCION A MEMORIA
+	op_code op=INICIALIZAR;
 
-
-	//INICIO SERVIDOR CPU
-	int cpuServer= iniciar_servidor(logger,"CPU server",ip,puerto);//ACA IP PROPIA
-	free(puerto);
+	// INICIO CPU SERVIDOR
+	char* puertoCPU = string_itoa(configuracion->PUERTO_ESCUCHA);
+	int cpuServer= iniciar_servidor(logger,"kernel server",ip,puertoCPU);//ACA IP PROPIA
 	while (server_escuchar("CPU_SV", cpuServer));
 
 	limpiarConfiguracion();
-
 	return 0;
 }
-
-void serverCPU() {
-
-	//cargarConfiguracion();
-
-	//char* puertoDispatch = string_itoa(configuracion->PUERTO_ESCUCHA_DISPATCH);
-
-	//cpuServerDispatch = iniciar_servidor(logger,"dispatch server","127.0.0.1",(char*) puerto);
-
-	//free(puerto);
-
-	//while(server_escuchar("CPU_SV",cpuServer));
-
-}
-
 

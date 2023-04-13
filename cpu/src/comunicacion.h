@@ -1,7 +1,7 @@
 /*
  * comunicacion.h
  *
- *  Created on: 11 abr 2023
+ *  Created on: 13 abr 2023
  *      Author: utnso
  */
 
@@ -18,14 +18,8 @@
 #include "protocolo.h"
 #include "socket.h"
 #include "cpuConfig.h"
-//#include "main.h"
+#include "cpu.h"
 #include <semaphore.h>
-
-//sem_t sem;
-extern uint16_t pid_actual;
-
-int server_escuchar(char* server_name, int server_socket);
-
 
 extern int cliente_socket;
 

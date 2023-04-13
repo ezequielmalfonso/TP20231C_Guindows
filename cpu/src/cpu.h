@@ -1,7 +1,7 @@
 /*
  * cpu.h
  *
- *  Created on: 9 abr 2023
+ *  Created on: 13 abr 2023
  *      Author: utnso
  */
 
@@ -14,10 +14,9 @@
 #include <commons/config.h>
 #include "socket.h"
 #include "cpuConfig.h"
-//#include "comunicacion.h"
+#include "comunicacion.h"
 
-//extern int cpuServer;
+extern int cpuServer;
 
-void serverCPU();
 
 #endif /* CPU_H_ */
