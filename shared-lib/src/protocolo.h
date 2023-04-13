@@ -20,8 +20,26 @@
 #include "pcb.h"
 
 typedef enum {
-    DEBUG = 69
-
+    DEBUG = 69,
+	SET,
+	ADD,
+	MOV_IN,
+	MOV_OUT,
+	IO,
+	EXIT,
+	DISPATCH,
+	INTERRUPT,
+	PAGEFAULT,
+	CONTINUE,
+	BLOCKED,
+	PANTALLA,
+	TECLADO,
+	SOLICITUD_NRO_MARCO,
+	SIGSEGV,
+	ESCRITURA_OK,
+	ELIMINAR_ESTRUCTURAS,
+	CREAR_TABLA,
+	INICIALIZAR
 	}op_code;
 
 typedef struct {

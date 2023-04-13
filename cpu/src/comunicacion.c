@@ -73,14 +73,24 @@ static void procesar_conexion(void* void_args) {
 int server_escuchar(char* server_name, int server_socket){
 	cliente_socket = esperar_cliente(logger,server_name, server_socket);
 	//sem_wait(&sem);
-	if (cliente_socket != -1 ) {
-			t_procesar_conexion_args* argsSev = malloc(sizeof(t_procesar_conexion_args));
-			argsSev->fd = cliente_socket;
-			argsSev->server_name = server_name;
-			procesar_conexion(argsSev);
-	        return 1;
-	       // sem_post(&sem);
-		}
-	return 0;
+	if (cliente_socket != -1 ){
 
+		pthread_t hilo;
+		t_procesar_conexion_args* argsSev = malloc(sizeof(t_procesar_conexion_args));
+		argsSev->fd = cliente_socket;
+		argsSev->server_name = server_name;
+		pthread_create(&hilo, NULL, (void*) procesar_conexion, (void*) argsSev);
+
+		return 1;
+
+	}
+	return 0;
+/*
+ * pthread_t hilo;
+        t_procesar_conexion_args* args = malloc(sizeof(t_procesar_conexion_args));
+        args->fd = cliente_socket;
+        args->server_name = server_name;
+        pthread_create(&hilo, NULL, (void*) procesar_conexion, (void*) args);
+        //pthread_detach(hilo);
+        return 1;*/
 }

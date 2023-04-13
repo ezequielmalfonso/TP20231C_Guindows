@@ -16,7 +16,7 @@
 #include "cpuConfig.h"
 //#include "comunicacion.h"
 
-extern int cpuServer;
+//extern int cpuServer;
 
 void serverCPU();
 

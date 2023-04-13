@@ -11,27 +11,23 @@
 #include "cpu.h"
 
 int memoria_fd;
-int cpuServer;
+//int cpuServer;
 
 int main(void) {
 
 	cargarConfiguracion();
 	t_config* config_ips = config_create("../ips.conf");
 	char* ip = config_get_string_value(config_ips,"IP_CPU");
+	//log_info(logger,"\nPUERTO_ESCUCHA: %d\n", configuracion->PUERTO_ESCUCHA);
 
-	char* puerto = string_itoa(8001);
+	char* puerto = string_itoa(configuracion->PUERTO_ESCUCHA);
+	//TODO Conexion con MEMORIA y ENVIO Y RECEPCION DE DATOS CON MEMORIA
 
-	printf("PORT CPU: %d", puerto);
-	//INICIO SERVIDOR
-	cpuServer = iniciar_servidor(logger,"Server CPU",ip,puerto);//ACA IP PROPIA
 
+	//INICIO SERVIDOR CPU
+	int cpuServer= iniciar_servidor(logger,"CPU server",ip,puerto);//ACA IP PROPIA
 	free(puerto);
-
-	pthread_t cpu_id;
-
-	pthread_create(&cpu_id,NULL,(void*) serverCPU,NULL);
-
-	pthread_join(cpu_id,0);
+	while (server_escuchar("CPU_SV", cpuServer));
 
 	limpiarConfiguracion();
 
@@ -48,7 +44,7 @@ void serverCPU() {
 
 	//free(puerto);
 
-	while(server_escuchar("CPU_SV",cpuServer));
+	//while(server_escuchar("CPU_SV",cpuServer));
 
 }
 
