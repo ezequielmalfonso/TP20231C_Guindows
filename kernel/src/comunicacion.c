@@ -110,4 +110,19 @@ int generar_conexion_memoria(int* memoria_fd, t_config_kernel* configuracion) {
     return *memoria_fd != 0;
 }
 
+//FILESYSTEM
+int generar_conexion_fileSystem(int* file_system_fd, t_config_kernel* configuracion) {
+    char* port_file_system = string_itoa(configuracion->PUERTO_FILESYSTEM);
+
+    *file_system_fd = crear_conexion(
+            logger,
+            "FILESYSTEM",
+            configuracion->IP_FILESYSTEM,
+			port_file_system
+    );
+
+    free(port_file_system);
+
+    return *file_system_fd != 0;
+}
 

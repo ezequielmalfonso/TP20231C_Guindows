@@ -21,5 +21,6 @@ int memoriaServer;
 
 void escuchar_kernel();
 void escuchar_cpu();
+void escuchar_fileSystem();
 
 #endif /* MEMORIA_H_ */
