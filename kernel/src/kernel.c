@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include "kernel.h"
 
-int cpu_fd;
+int cpu_fd, memoria_fd;
 
 int main(void) {
 	cargarConfiguracion();
@@ -18,7 +18,7 @@ int main(void) {
 	//CPU
 	generar_conexiones(&cpu_fd, configuracion);
 	//MEMORIA
-	//generar_conexion_memoria(&memoria_fd, configuracion);
+	generar_conexion_memoria(&memoria_fd, configuracion);
 	//INICIO SERVIDOR
 	//INICIO SERVIDOR
 	int kernelServer= iniciar_servidor(logger,"kernel server",ip,puerto);//ACA IP PROPIA

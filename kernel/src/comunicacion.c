@@ -94,5 +94,20 @@ int generar_conexiones(int* cpu_fd, t_config_kernel* configuracion) {
     return *port_cpu != 0;
 }
 
+//MEMORIA
+int generar_conexion_memoria(int* memoria_fd, t_config_kernel* configuracion) {
+    char* port_memoria = string_itoa(configuracion->PUERTO_MEMORIA);
+
+    *memoria_fd = crear_conexion(
+            logger,
+            "MEMORIA",
+            configuracion->IP_MEMORIA,
+            port_memoria
+    );
+
+    free(port_memoria);
+
+    return *memoria_fd != 0;
+}
 
 

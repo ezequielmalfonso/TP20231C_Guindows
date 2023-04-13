@@ -24,7 +24,7 @@ int cargarConfiguracion() {
 	logger = log_create("LogMemoria.log", "Memoria", 1, LOG_LEVEL_INFO);
 	configuracion = malloc(sizeof(t_config_memoria));
 
-	fd_configuracion = config_create("cpu.conf");
+	fd_configuracion = config_create("memoria.conf");
 	if (fd_configuracion == NULL) {
 		fd_configuracion = config_create("memoria.conf");
 	}
