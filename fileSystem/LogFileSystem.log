@@ -454,3 +454,48 @@ RETARDO_ACCESO_BLOQUE: 15000
 
 [INFO] 23:37:34:501 FileSystem/(21304:21304): Escuchando en (null):8003 (FileSystem server)
 
+[INFO] 15:22:16:378 FileSystem/(17022:17022): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/fs/bloques.dat
+PATH_FCB: /home/utnso/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[ERROR] 15:22:16:381 FileSystem/(17022:17022): Error al conectar (a MEMORIA)
+
+[INFO] 15:22:16:381 FileSystem/(17022:17022): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 15:22:39:298 FileSystem/(17032:17032): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/fs/bloques.dat
+PATH_FCB: /home/utnso/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[INFO] 15:22:39:303 FileSystem/(17032:17032): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 15:22:39:304 FileSystem/(17032:17032): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 15:28:47:674 FileSystem/(17315:17315): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/fs/bloques.dat
+PATH_FCB: /home/utnso/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[INFO] 15:28:47:677 FileSystem/(17315:17315): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 15:28:47:678 FileSystem/(17315:17315): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 15:32:07:097 FileSystem/(17315:17315): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 15:32:20:151 FileSystem/(17315:18008): Se ha finalizado la conexion

@@ -19,6 +19,8 @@ int main(void) {
 	generar_conexiones(&cpu_fd, configuracion);
 	//MEMORIA
 	generar_conexion_memoria(&memoria_fd, configuracion);
+	op_code op=INICIALIZAR;
+	send(memoria_fd,&op,sizeof(op_code),0);
 	//FILESYSTEM
 	generar_conexion_fileSystem(&file_system_fd, configuracion);
 

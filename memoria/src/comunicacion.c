@@ -36,8 +36,10 @@ static void procesar_kernel(void * void_args) {
 
     switch (cop) {
     case DEBUG:
-      log_info(logger, "debug");
-      break;
+    			log_info(logger, "debug");
+    			break;
+    case INICIALIZAR: log_info(logger, "RESPUESTA AL CONECTAR KERNEL");
+    				  break;
     /*case CREAR_TABLA:
       pid = 0;
       id_segmento = 0;
