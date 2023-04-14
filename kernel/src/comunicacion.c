@@ -26,7 +26,7 @@ static void procesar_conexion(void* void_args) {
 	mensaje=recibir_instrucciones(cliente_socket);
 
 	// Una vez recibidas las instruccion desde consola creo el PCB
- /*   PCB_t* proceso = malloc(sizeof(PCB_t));
+    PCB_t* proceso = malloc(sizeof(PCB_t));
 	proceso = pcb_create();
 
 	// Aca inicializo los valores para el PCB
@@ -37,27 +37,27 @@ static void procesar_conexion(void* void_args) {
 	registros[2]=0;
 	registros[3]=0;
 
-	//pthread_mutex_lock(&pid_xd);
+	// uint32_t archivos_abiertos;  TODO de que tipo seria??? Una lista o un array?
 
-	uint32_t archivos_abiertos[4];
-	archivos_abiertos[0]=0;
-	archivos_abiertos[1]=0;
-	archivos_abiertos[2]=0;
-	archivos_abiertos[3]=0;
 
 	estimado_rafaga_inicial = configuracion->ESTIMACION_INICIAL;
 
-	pcb_set(proceso, pid_nuevo, mensaje->listaInstrucciones, 0
-			,registros
-			//, lista de segmento PREGUNTAR ????
-			, archivos_abiertos
+	// posible semaforo
+	pcb_set(  proceso
+			, pid_nuevo
+			, mensaje->listaInstrucciones, 0
+			, registros
+			//, tabla_de_segmentos PREGUNTAR ????
+			//, archivos_abiertos
 			, estimado_rafaga_inicial
-			, cliente_socket);
+			, cliente_socket
+			);
 
-	//pid_nuevo++;
-	//pthread_mutex_unlock(&pid_xd);
-*/
+	pid_nuevo++;
+	//fin semaforo
+
 	list_destroy(mensaje->listaInstrucciones);
+	// destroy lists de segmentos
 	free(mensaje);
 
 	return ;

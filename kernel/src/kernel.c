@@ -19,12 +19,12 @@ int main(void) {
 	generar_conexiones(&cpu_fd, configuracion);
 	//MEMORIA
 	generar_conexion_memoria(&memoria_fd, configuracion);
+	// Es para probar el envio a memoria desde kernel
 	op_code op=INICIALIZAR;
 	send(memoria_fd,&op,sizeof(op_code),0);
 	//FILESYSTEM
 	generar_conexion_fileSystem(&file_system_fd, configuracion);
 
-	//INICIO SERVIDOR
 	//INICIO SERVIDOR
 	int kernelServer= iniciar_servidor(logger,"kernel server",ip,puerto);//ACA IP PROPIA
 	free(puerto);
