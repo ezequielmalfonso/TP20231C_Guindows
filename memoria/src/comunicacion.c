@@ -38,7 +38,7 @@ static void procesar_kernel(void * void_args) {
     case DEBUG:
     			log_info(logger, "debug");
     			break;
-    case INICIALIZAR: log_info(logger, "RESPUESTA AL CONECTAR KERNEL");
+    case KERNEL: log_info(logger, "RESPUESTA AL CONECTAR KERNEL");
     				  break;
     /*case CREAR_TABLA:
       pid = 0;
@@ -118,13 +118,13 @@ static void procesar_kernel(void * void_args) {
       log_error(logger, "Cliente desconectado de %s...", server_name);
       return;
     default:
-      log_error(logger, "Algo anduvo mal en el server de %s", server_name);
+      log_error(logger, "Algo anduvo mal en el server KERNEL de %s", server_name);
       log_info(logger, "Cop: %d", cop);
       return;
     }
   }
 
-  log_warning(logger, "El cliente se desconecto de %s server", server_name);
+  log_warning(logger, "El cliente KERNEL se desconecto de %s server", server_name);
   return;
 }
 
@@ -150,7 +150,7 @@ static void procesar_cpu(void * void_args) {
     case DEBUG:
       log_info(logger, "debug");
       break;
-    case INICIALIZAR: log_info(logger, "RESPUESTA AL CONECTAR CPU");
+    case CPU: log_info(logger, "RESPUESTA AL CONECTAR CPU");
     				//pthread_mutex_lock(&mx_cpu);
     				//send(cliente_socket, &(configuracion -> ENTRADAS_POR_TABLA), sizeof(uint16_t), 0);
     				//send(cliente_socket, &(configuracion -> TAM_PAGINA), sizeof(uint16_t), 0);
@@ -161,13 +161,13 @@ static void procesar_cpu(void * void_args) {
     		log_error(logger, "Cliente desconectado de %s...", server_name);
     		return;
     default:
-    		log_error(logger, "Algo anduvo mal en el server de %s", server_name);
+    		log_error(logger, "Algo anduvo mal en el server CPU de %s", server_name);
     		log_info(logger, "Cop: %d", cop);
     		return;
     }
   }
 
-  log_warning(logger, "El cliente se desconecto de %s server", server_name);
+  log_warning(logger, "El cliente CPU se desconecto de %s server", server_name);
   return;
 }
 
@@ -190,7 +190,7 @@ static void procesar_fileSystem(void * void_args) {
     case DEBUG:
       log_info(logger, "debug");
       break;
-    case INICIALIZAR: log_info(logger, "RESPUESTA AL CONECTAR FILESYSTEM");
+    case FS: log_info(logger, "RESPUESTA AL CONECTAR FILESYSTEM");
     				//pthread_mutex_lock(&mx_cpu);
     				//send(cliente_socket, &(configuracion -> ENTRADAS_POR_TABLA), sizeof(uint16_t), 0);
     				//send(cliente_socket, &(configuracion -> TAM_PAGINA), sizeof(uint16_t), 0);
@@ -201,13 +201,13 @@ static void procesar_fileSystem(void * void_args) {
     		log_error(logger, "Cliente desconectado de %s...", server_name);
     		return;
     default:
-    		log_error(logger, "Algo anduvo mal en el server de %s", server_name);
+    		log_error(logger, "Algo anduvo mal en el server de FS %s", server_name);
     		log_info(logger, "Cop: %d", cop);
     		return;
     }
   }
 
-  log_warning(logger, "El cliente se desconecto de %s server", server_name);
+  log_warning(logger, "El cliente FS se desconecto de %s server", server_name);
   return;
 }
 

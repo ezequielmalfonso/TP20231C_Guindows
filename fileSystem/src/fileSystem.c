@@ -21,7 +21,7 @@ int main(void) {
 	//CLIENTE Conexion a MEMORIA
 	generar_conexion(&memoria_fd, configuracion);
 	// ENVIO y RECEPCION A MEMORIA
-	op_code op=INICIALIZAR;
+	op_code op=FS;
 	send(memoria_fd,&op,sizeof(op_code),0);
 	// INICIO CPU SERVIDOR
 	char* puertoFileSystem = string_itoa(configuracion->PUERTO_ESCUCHA);

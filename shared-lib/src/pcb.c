@@ -54,11 +54,11 @@ int pcb_find_index(t_list* lista, uint16_t pid){
 	}
 	return -1;
 }
-
+/*
 void pcb_destroy(PCB_t* pcb){
 	list_destroy(pcb->instrucciones); //ROMPE ESTO
 	list_destroy(pcb->segmentos);
 	list_destroy(pcb->nros_segmentos);
 	free(pcb);
 }
-
+*/
