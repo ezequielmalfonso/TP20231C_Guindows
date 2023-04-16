@@ -110,10 +110,92 @@ t_instrucciones* deserializar_instrucciones(t_buffer* buffer){
 	    stream += sizeof(aux->parametro2);
 	    memcpy(&(aux->parametro3), stream, sizeof(aux->parametro3));
 	    stream += sizeof(aux->parametro3);
-	   // printf("Comando: %s | Par1: %s | Par2: %s | Par3: %s\n", aux->comando, aux->parametro1, aux->parametro2, aux->parametro3 );
+	    //printf("Comando: %s | Par1: %s | Par2: %s | Par3: %s\n", aux->comando, aux->parametro1, aux->parametro2, aux->parametro3 );
 	    list_add(mensaje->listaInstrucciones,aux);
 	    i++;
 	}
 
 	return mensaje;
+}
+
+//ENVIAR PCB KERNEL->CPU_DISPATCH
+
+bool send_proceso(int fd, PCB_t *proceso,op_code codigo) {
+    size_t size;
+    void* stream = serializar_proceso(&size, proceso,codigo);
+    if (send(fd, stream, size, 0) != size) {
+        free(stream);
+        return false;
+    }
+    free(stream);
+    return true;
+}
+
+static void* serializar_proceso(size_t* size, PCB_t *proceso, op_code codigo) {
+
+
+	uint32_t elementosLista= list_size(proceso->instrucciones);
+	//uint32_t tablaSegmentos= list_size(proceso->tabla_de_segmentos);
+
+	*size= sizeof(op_code)+   // 4
+		   sizeof(size_t)+ //SIZE
+		   sizeof(uint16_t)+ //SIZE PID
+		   sizeof(uint32_t)+ //SIZE PC
+		   (sizeof(uint32_t)*4)+ //SIZE REGISTROS
+		   sizeof(uint32_t)+ //SIZE elementosLista
+		   ((3*25)*elementosLista)+ //SIZE LISTA INSTRUCCIONES
+		   //sizeof(uint32_t)+//SIZE cantListaSegmentos
+		   //sizeof(uint32_t)*listSegmentos + //SIZE SEGMENTOS SIN LOS ID
+		   sizeof(int); //SIZE CONSOLA FD
+
+	size_t size_load=*size- sizeof(op_code) -sizeof(size_t);
+	uint32_t offset = 0;
+	void* stream = malloc(*size);
+
+	op_code cop = codigo;
+	memcpy(stream + offset, &cop, sizeof(op_code));
+	offset+= sizeof(op_code);
+
+	memcpy(stream + offset, &size_load, sizeof(size_t));
+	offset+= sizeof(size_t);
+	memcpy(stream + offset, &proceso->pid, sizeof(uint16_t));
+	offset+= sizeof(uint16_t);
+	memcpy(stream + offset, &proceso->pc, sizeof(uint32_t));
+	offset+= sizeof(uint32_t);
+
+	memcpy(stream + offset, &proceso->registro_cpu[0], sizeof(uint32_t));
+	offset+= sizeof(uint32_t);
+	memcpy(stream + offset, &proceso->registro_cpu[1], sizeof(uint32_t));
+	offset+= sizeof(uint32_t);
+	memcpy(stream + offset, &proceso->registro_cpu[2], sizeof(uint32_t));
+	offset+= sizeof(uint32_t);
+	memcpy(stream + offset, &proceso->registro_cpu[3], sizeof(uint32_t));
+	offset+= sizeof(uint32_t);
+
+	memcpy(stream + offset, &elementosLista, sizeof(uint32_t));
+	offset+= sizeof(uint32_t);
+
+	t_link_element* aux1 = proceso->instrucciones->head;
+
+	while( aux1!=NULL )
+	{
+		INSTRUCCION* auxl2 = aux1->data;
+		//printf("Verificamos la lista:\n");
+		//printf("Comando: %s | Par1: %s | Par2: %s | Par3: %s\n\n", auxl2->comando, auxl2->parametro1, auxl2->parametro2, auxl2->parametro3 );
+
+		memcpy(stream + offset, &auxl2->comando, sizeof(auxl2->comando));
+		offset += sizeof(auxl2->comando);
+		memcpy(stream + offset, &auxl2->parametro1, sizeof(auxl2->parametro1));
+		offset += sizeof(auxl2->parametro1);
+		memcpy(stream + offset, &auxl2->parametro2, sizeof(auxl2->parametro2));
+		offset += sizeof(auxl2->parametro2);
+		memcpy(stream + offset, &auxl2->parametro3, sizeof(auxl2->parametro3));
+		offset += sizeof(auxl2->parametro3);
+		aux1 = aux1->next;
+	}
+
+	memcpy(stream + offset, &proceso->cliente_fd, sizeof(int));
+
+	//free(aux);
+	return stream;
 }

@@ -44,9 +44,11 @@ void fifo_ready_execute(){
 		log_info(logger,"PID: %d - Estado Anterior: READY - Estado Actual: EXECUTE", proceso->pid);
 		//pthread_mutex_unlock(&mx_log);
 		pthread_mutex_lock(&mx_cpu);
-		send_proceso(cpu_fd, proceso,DISPATCH);
+		//send_proceso(cpu_fd, proceso,DISPATCH);
+		op_code op=DEBUG;
+		send(cpu_fd,&op,sizeof(op_code),0);
 		//pthread_mutex_unlock(&mx_cpu);
-		pcb_destroy(proceso);
+		//pcb_destroy(proceso);
 		sem_post(&s_esperar_cpu);
 	}
 }
@@ -65,6 +67,7 @@ void inicializarPlanificacion(){
 	}
 	sem_init(&s_multiprogramacion_actual, 0, configuracion->GRADO_MAX_MULTIPROGRAMACION);
 	pthread_t corto_plazo;
+
 	if(!strcmp(configuracion->ALGORITMO_PLANIFICACION,"FIFO")){
 		pthread_create(&corto_plazo, NULL, (void*) fifo_ready_execute, NULL);
 		//pthread_mutex_lock(&mx_log);
@@ -72,6 +75,7 @@ void inicializarPlanificacion(){
 		//pthread_mutex_unlock(&mx_log);
 	}else if(!strcmp(configuracion->ALGORITMO_PLANIFICACION,"HRRN")){
 	//	pthread_create(&corto_plazo, NULL, (void*) hrrn_ready_execute, NULL);
+		log_info(logger,"ALGORITMO_PLANIFICACION HRRN!!!!");
 	}
 	else{
 		//pthread_mutex_lock(&mx_log);
@@ -79,5 +83,5 @@ void inicializarPlanificacion(){
 		//pthread_mutex_unlock(&mx_log);
 	}
 	pthread_t espera_CPU;
-	pthread_create(&espera_CPU, NULL, (void*) esperar_cpu, NULL);
+	//pthread_create(&espera_CPU, NULL, (void*) esperar_cpu, NULL);
 }

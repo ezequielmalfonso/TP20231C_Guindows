@@ -27,7 +27,17 @@ void pcb_set(PCB_t*   pcb,
 			 double   estimado_rafaga_inicial,
 			 uint32_t tiempo_llegada_a_ready,
 			 int      cliente){
-
+/*
+ PCB_t*   pcb,
+		     uint16_t pid,
+			 t_list* instrucciones,
+			 uint32_t pc,
+			 uint32_t registros_cpu[4],
+			 //t_list* tabla_de_segmentos,
+			// t_list* archivos_abiertos,
+			 double   estimado_rafaga_inicial,
+			 uint32_t tiempo_llegada_a_ready,
+			 int cliente*/
 	//list_destroy_and_destroy_elements(pcb->instrucciones,free);
 	list_add_all(pcb->instrucciones,instrucciones);
 	pcb->pid=pid;

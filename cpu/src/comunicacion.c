@@ -31,6 +31,11 @@ static void procesar_conexion(void* void_args) {
 		 case DEBUG:
 					 log_info(logger, "debug");
 					 break;
+		 case DISPATCH:
+			 	 	 //PCB_t* proceso= pcb_create();
+			 	 	log_info(logger,"Recibiendo PCB desde %s ", cop );
+
+			 	 	 break;
 		 // Errores
 		 case -1:
 				 log_error(logger, "Cliente desconectado de %s...", server_name);

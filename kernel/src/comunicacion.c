@@ -20,6 +20,7 @@ static void procesar_conexion(void* void_args) {
 	int cliente_socket = args->fd;
 	char* server_name = args->server_name;
 	double   estimado_rafaga_inicial;
+	uint32_t tiempo_llegada_a_ready;
 	free(args);
 
 	t_instrucciones* mensaje=malloc(sizeof(t_instrucciones));
@@ -45,11 +46,13 @@ static void procesar_conexion(void* void_args) {
 	// posible semaforo
 	pcb_set(  proceso
 			, pid_nuevo
-			, mensaje->listaInstrucciones, 0
+			, mensaje->listaInstrucciones
+			, 0   // PC
 			, registros
 			//, tabla_de_segmentos PREGUNTAR ????
 			//, archivos_abiertos
 			, estimado_rafaga_inicial
+			, tiempo_llegada_a_ready
 			, cliente_socket
 			);
 
@@ -59,6 +62,9 @@ static void procesar_conexion(void* void_args) {
 	list_destroy(mensaje->listaInstrucciones);
 	// destroy lists de segmentos
 	free(mensaje);
+
+
+	log_info(logger,"Se crea el proceso %d en NEW", proceso->pid);
 
 	return ;
 }

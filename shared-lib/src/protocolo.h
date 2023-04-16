@@ -74,4 +74,12 @@ void enviar_instrucciones(int socket_fd, t_list* lista);
 t_instrucciones* recibir_instrucciones(int socket_fd);
 uint32_t calcular_instrucciones_buffer_size(t_list* lista);
 
+//ENVIO PROCESO KERNEL CPU
+bool send_proceso(int fd, PCB_t *proceso,op_code codigo);
+static void* serializar_proceso(size_t* size, PCB_t *proceso,op_code codigo);
+bool recv_proceso(int fd, PCB_t* proceso);
+static void deserializar_proceso(void* stream, PCB_t* proceso);
+
+
+
 #endif /* SRC_PROTOCOLO_H_ */
