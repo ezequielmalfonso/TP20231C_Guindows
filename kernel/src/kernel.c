@@ -21,7 +21,7 @@ int main(void) {
 	//MEMORIA
 	generar_conexion_memoria(&memoria_fd, configuracion);
 	// Es para probar el envio a memoria desde kernel
-	 op=KERNEL;
+	op=KERNEL;
 	send(memoria_fd,&op,sizeof(op_code),0);
 	//FILESYSTEM
 	generar_conexion_fileSystem(&file_system_fd, configuracion);
