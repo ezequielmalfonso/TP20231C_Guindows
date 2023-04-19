@@ -20,12 +20,12 @@
 #include "protocolo.h"
 #include "kernel.h"
 
-//extern pthread_mutex_t mx_cola_new;
-//extern pthread_mutex_t mx_cola_ready;
-//extern pthread_mutex_t mx_lista_block;
-//extern pthread_mutex_t mx_log;
-//extern pthread_mutex_t mx_cpu_desocupado;
-//extern pthread_mutex_t mx_memoria;
+extern pthread_mutex_t mx_cola_new;
+extern pthread_mutex_t mx_cola_ready;
+extern pthread_mutex_t mx_lista_block;
+extern pthread_mutex_t mx_log;
+extern pthread_mutex_t mx_cpu_desocupado;
+extern pthread_mutex_t mx_memoria;
 
 extern sem_t s_pasaje_a_ready, s_io,s_ready_execute,s_cpu_desocupado,s_cont_ready,s_multiprogramacion_actual,s_esperar_cpu,s_pcb_desalojado,s_blocked;
 extern sem_t s_ios[10];

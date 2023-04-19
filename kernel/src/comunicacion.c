@@ -63,8 +63,12 @@ static void procesar_conexion(void* void_args) {
 	// destroy lists de segmentos
 	free(mensaje);
 
+	pthread_mutex_lock(&mx_cola_new);
+	queue_push(cola_new,proceso);
+	pthread_mutex_unlock(&mx_cola_new);
 
 	log_info(logger,"Se crea el proceso %d en NEW", proceso->pid);
+
 
 	return ;
 }

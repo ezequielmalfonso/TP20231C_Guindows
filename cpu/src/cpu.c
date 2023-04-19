@@ -24,7 +24,7 @@ int main(){
 	//pthread_mutex_unlock(&mx_memoria);
 	// INICIO CPU SERVIDOR
 	char* puertoCPU = string_itoa(configuracion->PUERTO_ESCUCHA);
-	int cpuServer= iniciar_servidor(logger,"kernel server",ip,puertoCPU);//ACA IP PROPIA
+	int cpuServer= iniciar_servidor(logger,"cpu server",ip,puertoCPU);//ACA IP PROPIA
 	while (server_escuchar("CPU_SV", cpuServer));
 
 	limpiarConfiguracion();

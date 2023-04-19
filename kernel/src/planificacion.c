@@ -34,6 +34,7 @@ bool cpu_desocupado=true;
 
 void fifo_ready_execute(){
 	while(1){
+	     	//log_info(logger,"Entro al while");
 		sem_wait(&s_ready_execute);
 		sem_wait(&s_cpu_desocupado); // Para que no ejecute cada vez que un proceso llega a ready
 		sem_wait(&s_cont_ready); // Para que no intente ejecutar si la lista de ready esta vacia

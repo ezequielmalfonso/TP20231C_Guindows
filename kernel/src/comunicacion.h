@@ -18,7 +18,7 @@
 #include "socket.h"
 #include "kernelConfig.h"
 #include "protocolo.h"
-//#include "planificacion.h"
+#include "planificacion.h"
 #include "pcb.h"
 #include "estructuras.h"
 
