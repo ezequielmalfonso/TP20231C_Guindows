@@ -40,79 +40,22 @@ static void procesar_kernel(void * void_args) {
     			break;
     case KERNEL: log_info(logger, "RESPUESTA AL CONECTAR KERNEL");
     				  break;
-    /*case CREAR_TABLA:
+    case CREAR_TABLA:
       pid = 0;
       id_segmento = 0;
       int cantidad_ids = 0;
       op_code op;
 
-      //pthread_mutex_lock(&mx_kernel);
-      //recv(cliente_socket, & pid, sizeof(uint16_t), 0);
-      //recv(cliente_socket, & cantidad_ids, sizeof(uint32_t), 0);
-      //pthread_mutex_unlock(&mx_kernel);
+      pthread_mutex_lock(&mx_kernel);
+      recv(cliente_socket, & pid, sizeof(uint16_t), 0);
+      recv(cliente_socket, & cantidad_ids, sizeof(uint32_t), 0);
+      pthread_mutex_unlock(&mx_kernel);
 
-      t_list* lista_tabla_de_paginas=list_create();
+      t_list* tabla_de_segmentos = list_create();
 
       log_info(logger, "[KERNEL] Creando tabla para programa %d", pid);
-
-      int i = 0;/
-    /*  while (i < cantidad_ids) {
-        int sid = 0;
-        int tamanio = 0;
-        pthread_mutex_lock(&mx_kernel);
-        recv(cliente_socket, & sid, sizeof(uint32_t), 0);
-        recv(cliente_socket, & tamanio, sizeof(uint32_t), 0);
-        pthread_mutex_unlock(&mx_kernel);
-        //t_list* tabla_de_paginas = crear_tabla(pid);
-       // log_info(logger, "[KERNEL] Tabla creada del Segmento %d con %d entradas ", sid, configuracion->ENTRADAS_POR_TABLA);
-        list_add(lista_tabla_de_paginas, tabla_de_paginas);
-
-        i++;
-      }*/
-      //list_add(lista_tablas_de_procesos,lista_tabla_de_paginas);
-      //crear_estructura_clock(pid);
-
-
-      //pthread_mutex_lock(&mx_kernel);
-      //send(cliente_socket, & op, sizeof(op_code), 0);
-      //pthread_mutex_unlock(&mx_kernel);
-     // break;
-   /* case ELIMINAR_ESTRUCTURAS:
-      uint32_t tabla_paginas = 0;
-      uint16_t pid = 0;
-
-      pthread_mutex_lock(&mx_kernel);
-      recv(cliente_socket, & tabla_paginas, sizeof(uint32_t), 0);
-      recv(cliente_socket, & pid, sizeof(uint16_t), 0);
-      pthread_mutex_unlock(&mx_kernel);
-
-      log_info(logger, "[KERNEL] Eliminando tablas del proceso %d", pid);
-      eliminar_estructuras(tabla_paginas, pid);
-
       break;
-    case PAGEFAULT:
-      //pthread_mutex_lock(&mx_pagefault);
-      op_code op2 = PAGEFAULT;
 
-      uint32_t num_segmento = 0;
-      uint32_t num_pagina = 0;
-       uint16_t pid_actual = 0;
-
-      pthread_mutex_lock(&mx_kernel);
-      recv(cliente_socket, &pid_actual, sizeof(uint16_t), 0);
-      recv(cliente_socket, &num_segmento, sizeof(int32_t), 0);
-      recv(cliente_socket, &num_pagina, sizeof(uint32_t), 0);
-      pthread_mutex_unlock(&mx_kernel);
-
-      uint32_t nro_marco = tratar_page_fault(num_segmento, num_pagina, pid_actual);
-      log_info(logger, "[KERNEL] Numero de marco obtenido = %d", nro_marco);
-      usleep(configuracion -> RETARDO_MEMORIA * 1000);
-      pthread_mutex_lock(&mx_kernel);
-      send(cliente_socket, & op2, sizeof(uint32_t), 0);
-      pthread_mutex_unlock(&mx_kernel);
-      //pthread_mutex_unlock(&mx_pagefault);
-
-      break;*/
     // Errores
     case -1:
       log_error(logger, "Cliente desconectado de %s...", server_name);

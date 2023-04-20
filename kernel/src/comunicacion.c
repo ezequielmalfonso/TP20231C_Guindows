@@ -63,15 +63,40 @@ static void procesar_conexion(void* void_args) {
 	// destroy lists de segmentos
 	free(mensaje);
 
+	// creo un hilo por cada proceso y lo voy metiendo en la cola_new
 	pthread_mutex_lock(&mx_cola_new);
 	queue_push(cola_new,proceso);
 	pthread_mutex_unlock(&mx_cola_new);
+
+	//  saco el proceso de la cola NEW y lo paso A READY
+	//sem_wait(&s_multiprogramacion_actual);
+	pthread_mutex_lock(&mx_cola_new);
+	proceso=queue_pop(cola_new);
+	pthread_mutex_unlock(&mx_cola_new);
+
+	//Solicito a memoria tabla de segmentos
+	solicitar_tabla_de_segmentos(proceso);
+
+	log_info(logger,"“PID: %d - Estado Anterior: NEW - Estado Actual: READY", proceso->pid);
+
+
 
 	log_info(logger,"Se crea el proceso %d en NEW", proceso->pid);
 
 
 	return ;
 }
+// SOLICITO TABLA DE SEGMENTOS A MEMORIA
+// TODO le mando el proceoso y memoria que me responde en este momento?
+void solicitar_tabla_de_segmentos(PCB_t* pcb){ log_info(logger, "Envio solicitud a MEMORIA");
+	op_code op=CREAR_TABLA;
+	pthread_mutex_lock(&mx_memoria);
+    send(memoria_fd,&op,sizeof(op_code),0);
+	send(memoria_fd,&(pcb->pid),sizeof(uint16_t),0);
+	pthread_mutex_unlock(&mx_memoria);
+}
+
+
 int server_escuchar(char* server_name, int server_socket) {
     cliente_socket = esperar_cliente(logger, server_name, server_socket);
 
