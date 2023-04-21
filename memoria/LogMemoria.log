@@ -1733,3 +1733,27 @@ ALGORITMO_ASIGNACION: BEST
 [INFO] 00:04:04:660 Memoria/(46126:46129): Se ha finalizado la conexion
 [INFO] 00:04:17:194 Memoria/(46126:46128): Se ha finalizado la conexion
 [INFO] 00:04:19:848 Memoria/(46126:46127): Se ha finalizado la conexion
+[INFO] 00:23:32:783 Memoria/(51932:51932): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 4096
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 00:23:32:790 Memoria/(51932:51932): Algoritmo BEST configurado
+[INFO] 00:23:32:805 Memoria/(51932:51932): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 00:23:36:885 Memoria/(51932:51933): Cliente conectado (a memoria_sv)
+
+[INFO] 00:23:36:885 Memoria/(51932:51933): RESPUESTA AL CONECTAR CPU
+[INFO] 00:23:39:317 Memoria/(51932:51934): Cliente conectado (a memoria_sv)
+
+[INFO] 00:23:39:318 Memoria/(51932:51934): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 00:23:41:305 Memoria/(51932:51935): Cliente conectado (a memoria_sv)
+
+[INFO] 00:23:41:306 Memoria/(51932:51935): RESPUESTA AL CONECTAR KERNEL
+[INFO] 00:23:45:962 Memoria/(51932:51935): [KERNEL] Creando tabla de segmentos para programa 0
+[INFO] 00:23:45:962 Memoria/(51932:51935): Se ha finalizado la conexion
+[INFO] 00:23:49:466 Memoria/(51932:51934): Se ha finalizado la conexion
+[INFO] 00:23:52:659 Memoria/(51932:51933): Se ha finalizado la conexion

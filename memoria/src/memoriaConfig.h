@@ -14,6 +14,7 @@
 #include "commons/log.h"
 #include "commons/config.h"
 
+
 typedef struct {
 	uint32_t PUERTO_ESCUCHA;
 	uint32_t TAM_MEMORIA;

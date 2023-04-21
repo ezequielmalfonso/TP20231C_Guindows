@@ -22,6 +22,7 @@
 #include<commons/collections/queue.h>
 #include<commons/collections/list.h>
 #include<commons/collections/dictionary.h>
+#include "memoriaConfig.h"
 
 void inicializar_memoria();
 void apagar_memoria();

@@ -62,6 +62,7 @@ int cargarConfiguracion() {
 	return 0;
 }
 
+
 void limpiarConfiguracion() {
 	free(configuracion);
 	config_destroy(fd_configuracion);

@@ -53,7 +53,7 @@ static void procesar_kernel(void * void_args) {
 
       t_list* tabla_de_segmentos = list_create();
 
-      log_info(logger, "[KERNEL] Creando tabla para programa %d", pid);
+      log_info(logger, "[KERNEL] Creando tabla de segmentos para programa %d", pid);
       break;
 
     // Errores
