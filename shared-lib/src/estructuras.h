@@ -15,5 +15,10 @@ typedef struct instruccion{
 	char parametro3[20];
 } INSTRUCCION;
 
+typedef struct{
+	uint32_t id_segmento;
+	uint64_t direccion_base;
+	uint32_t tamanio_segmento;
+}t_segmento;
 
 

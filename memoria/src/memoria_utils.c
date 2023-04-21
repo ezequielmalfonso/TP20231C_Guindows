@@ -18,7 +18,7 @@ char* algortimo_asignacion;
 
 void* memoria;
 t_list* lista_tablas_de_procesos;
-
+t_segmento* segmento;
 //t_log * logger;
 
 /*
@@ -34,8 +34,14 @@ void inicializar_memoria(){
 	retardo_compactacion = configuracion->RETARDO_COMPACTACION;
 	algortimo_asignacion = configuracion->ALGORITMO_ASIGNACION;
 
+	// Creacion segmento 0
+   segmento->id_segmento      = 0;
+   segmento->direccion_base   = 0;
+   segmento->tamanio_segmento = configuracion->TAM_SEGMENTO_0;
+
 
 	log_info(logger,"Algoritmo %s configurado", configuracion->ALGORITMO_ASIGNACION);
+	log_info(logger,"Segmento 0 (Compartido) creado: Id: %d - Dir Base: %d - Tamanio: %d", segmento->id_segmento, segmento->direccion_base, segmento->tamanio_segmento);
 
 	//log_info(logger, "Enviando a CPU: tam_pagina=%d - cant_ent_paginas=%d", configuracion->TAM_PAGINA, configuracion->ENTRADAS_POR_TABLA);
 	//send(cliente_cpu, &entradas_por_tabla, sizeof(uint16_t),0);

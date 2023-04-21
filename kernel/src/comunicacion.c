@@ -68,7 +68,7 @@ static void procesar_conexion(void* void_args) {
 	queue_push(cola_new,proceso);
 	pthread_mutex_unlock(&mx_cola_new);
 
-	//  saco el proceso de la cola NEW y lo paso A READY
+	//  saco el proceso de la cola NEW y lo paso A READY FIFO
 	//sem_wait(&s_multiprogramacion_actual);
 	pthread_mutex_lock(&mx_cola_new);
 	proceso=queue_pop(cola_new);
