@@ -77,11 +77,21 @@ static void procesar_conexion(void* void_args) {
 	//Solicito a memoria tabla de segmentos
 	solicitar_tabla_de_segmentos(proceso);
 
+
+	t_segmento segmento;// = malloc(sizeof(t_segmento));
+	uint32_t id_segmento;
+	uint64_t direccion_base;
+	uint32_t tamanio_segmento;
+	// Recibir el segmento 0 desde memoria y ponerlo en PCB
+	recv(memoria_fd, &id_segmento, sizeof(uint32_t), 0);
+	recv(memoria_fd, &direccion_base, sizeof(uint64_t), 0);
+	recv(memoria_fd, &tamanio_segmento, sizeof(uint32_t), 0);
+
+	log_info(logger,"Recibiendo Segmento 0 (Compartido) creado: Id: %d - Dir Base: %d - Tamanio: %d", id_segmento, direccion_base, tamanio_segmento);
+
 	log_info(logger,"“PID: %d - Estado Anterior: NEW - Estado Actual: READY", proceso->pid);
-
-
-
-	log_info(logger,"Se crea el proceso %d en NEW", proceso->pid);
+	sem_post(&s_ready_execute);
+	//log_info(logger,"Se crea el proceso %d en NEW", proceso->pid);
 
 
 	return ;

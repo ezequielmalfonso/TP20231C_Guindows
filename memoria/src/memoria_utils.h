@@ -24,6 +24,8 @@
 #include<commons/collections/dictionary.h>
 #include "memoriaConfig.h"
 
+extern t_segmento* segmento;
+
 void inicializar_memoria();
 void apagar_memoria();
 

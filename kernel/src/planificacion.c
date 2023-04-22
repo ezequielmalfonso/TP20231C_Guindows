@@ -34,7 +34,19 @@ bool cpu_desocupado=true;
 
 void fifo_ready_execute(){
 	while(1){
-	     	log_info(logger,"Entro al while");
+	    log_info(logger,"Entro al while");
+	    sem_wait(&s_ready_execute);
+
+	    // Pongo semaforo para asegurar que ningun otro proceso pueda acceder a la cola ready en este momento
+	    pthread_mutex_lock(&mx_cola_ready);
+	    PCB_t* proceso = queue_pop(cola_ready);
+	    pthread_mutex_unlock(&mx_cola_ready);
+
+	    log_info(logger,"PID: %d - Estado Anterior: READY - Estado Actual: EXECUTE", proceso->pid);
+
+	    //pthread_mutex_lock(&mx_cpu);
+
+
 		/*sem_wait(&s_ready_execute);
 		sem_wait(&s_cpu_desocupado); // Para que no ejecute cada vez que un proceso llega a ready
 		sem_wait(&s_cont_ready); // Para que no intente ejecutar si la lista de ready esta vacia

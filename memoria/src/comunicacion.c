@@ -53,7 +53,17 @@ static void procesar_kernel(void * void_args) {
 
       t_list* tabla_de_segmentos = list_create();
 
-      log_info(logger, "[KERNEL] Creando tabla de segmentos para programa %d", pid);
+      log_info(logger, "[KERNEL] Recibiendo solicitud de segmento para programa %d", pid);
+
+      // Despuesta cambiar a tabla de segmentos
+      //envio_segmento_0(segmento);
+      pthread_mutex_lock(&mx_kernel);
+      send(cliente_socket, &(segmento->id_segmento), sizeof(uint32_t), 0);
+      send(cliente_socket, &(segmento->direccion_base), sizeof(uint64_t), 0);
+      send(cliente_socket, &(segmento->tamanio_segmento), sizeof(uint32_t), MSG_WAITALL);
+      pthread_mutex_unlock(&mx_kernel);
+
+
       break;
 
     // Errores
