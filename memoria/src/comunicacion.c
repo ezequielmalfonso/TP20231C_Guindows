@@ -48,7 +48,6 @@ static void procesar_kernel(void * void_args) {
 
       pthread_mutex_lock(&mx_kernel);
       recv(cliente_socket, & pid, sizeof(uint16_t), 0);
-      recv(cliente_socket, & cantidad_ids, sizeof(uint32_t), 0);
       pthread_mutex_unlock(&mx_kernel);
 
       t_list* tabla_de_segmentos = list_create();
@@ -57,9 +56,10 @@ static void procesar_kernel(void * void_args) {
 
       // Despuesta cambiar a tabla de segmentos
       //envio_segmento_0(segmento);
+      log_info(logger, "[KERNEL] Envio de segmento 0 para programa %d", pid);
       pthread_mutex_lock(&mx_kernel);
-      send(cliente_socket, &(segmento->id_segmento), sizeof(uint32_t), 0);
-      send(cliente_socket, &(segmento->direccion_base), sizeof(uint64_t), 0);
+      send(cliente_socket, &(segmento->id_segmento), sizeof(uint32_t), MSG_WAITALL);
+      send(cliente_socket, &(segmento->direccion_base), sizeof(uint64_t), MSG_WAITALL);
       send(cliente_socket, &(segmento->tamanio_segmento), sizeof(uint32_t), MSG_WAITALL);
       pthread_mutex_unlock(&mx_kernel);
 

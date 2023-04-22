@@ -28,7 +28,7 @@ typedef struct {
 	t_list* instrucciones;
 	uint32_t pc; 				// Program counter
 	uint32_t registro_cpu[4];
-	//t_list* tabla_de_segmentos;
+	t_list* tabla_de_segmentos;
 	double estimado_rafaga_inicial;
 	int tiempo_llegada_a_ready;
 	//t_list* archivos_abiertos;

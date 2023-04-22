@@ -40,8 +40,8 @@ static void procesar_conexion(void* void_args) {
 
 	// uint32_t archivos_abiertos;  TODO de que tipo seria??? Una lista o un array?
 
-
 	estimado_rafaga_inicial = configuracion->ESTIMACION_INICIAL;
+
 
 	// posible semaforo
 	pcb_set(  proceso
@@ -49,7 +49,7 @@ static void procesar_conexion(void* void_args) {
 			, mensaje->listaInstrucciones
 			, 0   // PC
 			, registros
-			//, tabla_de_segmentos PREGUNTAR ????
+			//, tabla_segmentos
 			//, archivos_abiertos
 			, estimado_rafaga_inicial
 			, tiempo_llegada_a_ready
@@ -59,36 +59,49 @@ static void procesar_conexion(void* void_args) {
 	pid_nuevo++;
 	//fin semaforo
 
-	list_destroy(mensaje->listaInstrucciones);
-	// destroy lists de segmentos
-	free(mensaje);
-
-	// creo un hilo por cada proceso y lo voy metiendo en la cola_new
-	pthread_mutex_lock(&mx_cola_new);
-	queue_push(cola_new,proceso);
-	pthread_mutex_unlock(&mx_cola_new);
-
-	//  saco el proceso de la cola NEW y lo paso A READY FIFO
-	//sem_wait(&s_multiprogramacion_actual);
-	pthread_mutex_lock(&mx_cola_new);
-	proceso=queue_pop(cola_new);
-	pthread_mutex_unlock(&mx_cola_new);
-
 	//Solicito a memoria tabla de segmentos
 	solicitar_tabla_de_segmentos(proceso);
 
+	t_segmento* segmento = malloc(sizeof(t_segmento));
+	uint32_t id_segmento      = 0;
+	uint64_t direccion_base   = 0;
+	uint32_t tamanio_segmento = 0;
 
-	t_segmento segmento;// = malloc(sizeof(t_segmento));
-	uint32_t id_segmento;
-	uint64_t direccion_base;
-	uint32_t tamanio_segmento;
 	// Recibir el segmento 0 desde memoria y ponerlo en PCB
 	recv(memoria_fd, &id_segmento, sizeof(uint32_t), 0);
 	recv(memoria_fd, &direccion_base, sizeof(uint64_t), 0);
 	recv(memoria_fd, &tamanio_segmento, sizeof(uint32_t), 0);
 
+	segmento->id_segmento      = id_segmento;
+	segmento->direccion_base   = direccion_base;
+	segmento->tamanio_segmento = tamanio_segmento;
+
+	list_add(proceso->tabla_de_segmentos, segmento);
+
+
 	log_info(logger,"Recibiendo Segmento 0 (Compartido) creado: Id: %d - Dir Base: %d - Tamanio: %d", id_segmento, direccion_base, tamanio_segmento);
 
+
+	list_destroy(mensaje->listaInstrucciones);
+	// destroy lists de segmentos
+	free(mensaje);
+
+	// creo un hilo por cada proceso y lo voy metiendo en la cola_new
+//	pthread_mutex_lock(&mx_cola_new);
+	queue_push(cola_new,proceso);
+//	pthread_mutex_unlock(&mx_cola_new);
+
+	//  saco el proceso de la cola NEW y lo paso A READY FIFO
+	//sem_wait(&s_multiprogramacion_actual);
+//	pthread_mutex_lock(&mx_cola_new);
+//	proceso=queue_pop(cola_new);
+//	pthread_mutex_unlock(&mx_cola_new);
+
+
+//	pthread_mutex_lock(&mx_cola_ready);
+//	queue_push(cola_ready,proceso);
+//	pthread_mutex_unlock(&mx_cola_ready);
+	//pthread_mutex_lock(&mx_log);
 	log_info(logger,"“PID: %d - Estado Anterior: NEW - Estado Actual: READY", proceso->pid);
 	sem_post(&s_ready_execute);
 	//log_info(logger,"Se crea el proceso %d en NEW", proceso->pid);

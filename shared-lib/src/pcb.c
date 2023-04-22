@@ -10,7 +10,7 @@
 PCB_t* pcb_create(){
 	PCB_t* pcb 		 		= malloc(sizeof(PCB_t));
 	pcb->instrucciones  	= list_create();
-	//pcb->tabla_de_segmentos	= list_create();
+	pcb->tabla_de_segmentos	= list_create();
 	//pcb->archivos_abiertos 	= list_create();
 
 	//TODO ver como iniciar los valores de REG_USO_GRAL_CPU y TABLA_SEGMENTOS
@@ -22,22 +22,12 @@ void pcb_set(PCB_t*   pcb,
 			 t_list*  instrucciones,
 			 uint32_t pc,
 			 uint32_t registro_cpu[4],
-			 //t_list*  tabla_de_segmentos,    /// TODO preguntar de donde saldria este dato?????
+			 //t_list*  tabla_de_segmentos,
 			 //t_list*  archivos_abiertos,
 			 double   estimado_rafaga_inicial,
 			 uint32_t tiempo_llegada_a_ready,
 			 int      cliente){
-/*
- PCB_t*   pcb,
-		     uint16_t pid,
-			 t_list* instrucciones,
-			 uint32_t pc,
-			 uint32_t registros_cpu[4],
-			 //t_list* tabla_de_segmentos,
-			// t_list* archivos_abiertos,
-			 double   estimado_rafaga_inicial,
-			 uint32_t tiempo_llegada_a_ready,
-			 int cliente*/
+
 	//list_destroy_and_destroy_elements(pcb->instrucciones,free);
 	list_add_all(pcb->instrucciones,instrucciones);
 	pcb->pid=pid;
@@ -47,11 +37,12 @@ void pcb_set(PCB_t*   pcb,
 	pcb->registro_cpu[1] = registro_cpu[1];
 	pcb->registro_cpu[2] = registro_cpu[2];
 	pcb->registro_cpu[3] = registro_cpu[3];
+
 	//list_destroy_and_destroy_elements(pcb->segmentos,free);
     //list_add_all(pcb->segmentos,segmentos);
 	//   TODO la parte de segmentos cuando lo aclaren y archivos abiertos
 	//pcb->archivos_abiertos
-    //pcb->estimado_rafaga_inicial = estimado_rafaga_inicial;
+    pcb->estimado_rafaga_inicial = estimado_rafaga_inicial;
     pcb->cliente_fd=cliente;
 }
 
