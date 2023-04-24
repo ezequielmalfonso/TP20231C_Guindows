@@ -135,7 +135,7 @@ static void* serializar_proceso(size_t* size, PCB_t *proceso, op_code codigo) {
 
 
 	uint32_t elementosLista= list_size(proceso->instrucciones);
-	//uint32_t tablaSegmentos= list_size(proceso->tabla_de_segmentos);
+	uint32_t tablaSegmentos= list_size(proceso->tabla_de_segmentos);
 
 	*size= sizeof(op_code)+   // 4
 		   sizeof(size_t)+ //SIZE
@@ -160,23 +160,8 @@ static void* serializar_proceso(size_t* size, PCB_t *proceso, op_code codigo) {
 	offset+= sizeof(size_t);
 	memcpy(stream + offset, &proceso->pid, sizeof(uint16_t));
 	offset+= sizeof(uint16_t);
-	memcpy(stream + offset, &proceso->pc, sizeof(uint32_t));
-	offset+= sizeof(uint32_t);
-
-	memcpy(stream + offset, &proceso->registro_cpu[0], sizeof(uint32_t));
-	offset+= sizeof(uint32_t);
-	memcpy(stream + offset, &proceso->registro_cpu[1], sizeof(uint32_t));
-	offset+= sizeof(uint32_t);
-	memcpy(stream + offset, &proceso->registro_cpu[2], sizeof(uint32_t));
-	offset+= sizeof(uint32_t);
-	memcpy(stream + offset, &proceso->registro_cpu[3], sizeof(uint32_t));
-	offset+= sizeof(uint32_t);
-
-	memcpy(stream + offset, &elementosLista, sizeof(uint32_t));
-	offset+= sizeof(uint32_t);
 
 	t_link_element* aux1 = proceso->instrucciones->head;
-
 	while( aux1!=NULL )
 	{
 		INSTRUCCION* auxl2 = aux1->data;
@@ -193,6 +178,41 @@ static void* serializar_proceso(size_t* size, PCB_t *proceso, op_code codigo) {
 		offset += sizeof(auxl2->parametro3);
 		aux1 = aux1->next;
 	}
+
+	memcpy(stream + offset, &proceso->pc, sizeof(uint32_t));
+	offset+= sizeof(uint32_t);
+
+	memcpy(stream + offset, &proceso->registro_cpu[0], sizeof(uint32_t));
+	offset+= sizeof(uint32_t);
+	memcpy(stream + offset, &proceso->registro_cpu[1], sizeof(uint32_t));
+	offset+= sizeof(uint32_t);
+	memcpy(stream + offset, &proceso->registro_cpu[2], sizeof(uint32_t));
+	offset+= sizeof(uint32_t);
+	memcpy(stream + offset, &proceso->registro_cpu[3], sizeof(uint32_t));
+	offset+= sizeof(uint32_t);
+
+	memcpy(stream + offset, &elementosLista, sizeof(uint32_t));
+	offset+= sizeof(uint32_t);
+
+	memcpy(stream + offset, &tablaSegmentos, sizeof(uint32_t));
+	offset+= sizeof(uint32_t);
+
+	t_link_element* aux_tab_seg = proceso->tabla_de_segmentos->head;
+	while( aux_tab_seg!=NULL )
+	{
+		t_segmento* aux_tab_seg_2 = aux_tab_seg->data;
+		memcpy(stream + offset, &aux_tab_seg_2->id_segmento, sizeof(aux_tab_seg_2->id_segmento));
+		offset += sizeof(aux_tab_seg_2->id_segmento);
+		memcpy(stream + offset, &aux_tab_seg_2->direccion_base, sizeof(aux_tab_seg_2->direccion_base));
+		offset += sizeof(aux_tab_seg_2->direccion_base);
+		memcpy(stream + offset, &aux_tab_seg_2->tamanio_segmento, sizeof(aux_tab_seg_2->tamanio_segmento));
+		offset += sizeof(aux_tab_seg_2->tamanio_segmento);
+	}
+
+	memcpy(stream + offset, &proceso->estimado_rafaga_inicial, sizeof(uint32_t));
+	offset+= sizeof(uint32_t);
+	memcpy(stream + offset, &proceso->tiempo_llegada_a_ready, sizeof(uint32_t));
+	offset+= sizeof(uint32_t);
 
 	memcpy(stream + offset, &proceso->cliente_fd, sizeof(int));
 

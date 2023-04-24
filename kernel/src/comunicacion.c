@@ -63,6 +63,7 @@ static void procesar_conexion(void* void_args) {
 	solicitar_tabla_de_segmentos(proceso);
 
 	t_segmento* segmento = malloc(sizeof(t_segmento));
+
 	uint32_t id_segmento      = 0;
 	uint64_t direccion_base   = 0;
 	uint32_t tamanio_segmento = 0;
@@ -76,41 +77,43 @@ static void procesar_conexion(void* void_args) {
 	segmento->direccion_base   = direccion_base;
 	segmento->tamanio_segmento = tamanio_segmento;
 
+	//agrego el PCB creado el segmento recibido desde memoria
 	list_add(proceso->tabla_de_segmentos, segmento);
 
-
 	log_info(logger,"Recibiendo Segmento 0 (Compartido) creado: Id: %d - Dir Base: %d - Tamanio: %d", id_segmento, direccion_base, tamanio_segmento);
-
 
 	list_destroy(mensaje->listaInstrucciones);
 	// destroy lists de segmentos
 	free(mensaje);
 
 	// creo un hilo por cada proceso y lo voy metiendo en la cola_new
-//	pthread_mutex_lock(&mx_cola_new);
+	pthread_mutex_lock(&mx_cola_new);
 	queue_push(cola_new,proceso);
-//	pthread_mutex_unlock(&mx_cola_new);
+	pthread_mutex_unlock(&mx_cola_new);
 
 	//  saco el proceso de la cola NEW y lo paso A READY FIFO
-	//sem_wait(&s_multiprogramacion_actual);
-//	pthread_mutex_lock(&mx_cola_new);
-//	proceso=queue_pop(cola_new);
-//	pthread_mutex_unlock(&mx_cola_new);
+	sem_wait(&s_multiprogramacion_actual);
+	pthread_mutex_lock(&mx_cola_new);
+	proceso=queue_pop(cola_new);
+	pthread_mutex_unlock(&mx_cola_new);
 
 
-//	pthread_mutex_lock(&mx_cola_ready);
-//	queue_push(cola_ready,proceso);
-//	pthread_mutex_unlock(&mx_cola_ready);
+	pthread_mutex_lock(&mx_cola_ready);
+	queue_push(cola_ready,proceso);
+	pthread_mutex_unlock(&mx_cola_ready);
 	//pthread_mutex_lock(&mx_log);
 	log_info(logger,"“PID: %d - Estado Anterior: NEW - Estado Actual: READY", proceso->pid);
+
+	sem_post(&s_cont_ready);
 	sem_post(&s_ready_execute);
+
 	//log_info(logger,"Se crea el proceso %d en NEW", proceso->pid);
 
 
 	return ;
 }
 // SOLICITO TABLA DE SEGMENTOS A MEMORIA
-// TODO le mando el proceoso y memoria que me responde en este momento?
+// TODO le mando el proceso y memoria que me responde en este momento?
 void solicitar_tabla_de_segmentos(PCB_t* pcb){ log_info(logger, "Envio solicitud a MEMORIA");
 	op_code op=CREAR_TABLA;
 	pthread_mutex_lock(&mx_memoria);
