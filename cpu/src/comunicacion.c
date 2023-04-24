@@ -32,7 +32,7 @@ static void procesar_conexion(void* void_args) {
 					 log_info(logger, "debug");
 					 break;
 		 case DISPATCH:
-			 	 	 //PCB_t* proceso= pcb_create();
+			 	    PCB_t* proceso= pcb_create();
 			 	 	log_info(logger,"Recibiendo PCB desde %s ", cop );
 
 			 	 	 break;
