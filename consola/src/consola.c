@@ -12,20 +12,13 @@
 
 int main(int argc, char** argv) {
 
-	// ESTO NO VA ES SOLO PARA PROBAR
+	    // TODO ESTO NO VA ES SOLO PARA PROBAR
 		argv[1] = "/home/utnso/tp-2023-1c-Guindows/consola/instrucciones.txt";
 		argv[2] = "/home/utnso/tp-2023-1c-Guindows/consola/consolaConfig/consola.conf";
 
 		int kernel_fd;
 		cargarConfiguracion(argv[2]);
 		generar_conexion(&kernel_fd, configuracion);
-		//uint32_t valor=0;
-
-		/*int i = 0;
-		while(segmentos[i]!=NULL){
-				printf("SEGMENTO: %s",segmentos[i]);
-				i++;
-			}*/
 
 		//printf("Path: %s \n", argv[2]);
 		// Parseo del archivo y armado de lista
@@ -56,7 +49,7 @@ void parseo_instrucciones(char* path_instrucciones,t_list* listaInstrucciones){
 		//printf("Parametro a envia con LISTA: %d \n", atoi(argv[2]));
 
 		pseudocode = fopen(path_instrucciones,"r");   		  // ABRO MODO Lectura
-		char bufer[LONGITUD_MAXIMA_LINEA];		  // Genero buffer
+		char bufer[LONGITUD_MAXIMA_LINEA];		              // Genero buffer
 
 		if(!pseudocode){
 			printf("No se pudo acceder al archivo\n");
@@ -102,8 +95,6 @@ void parseo_instrucciones(char* path_instrucciones,t_list* listaInstrucciones){
 			}
 
 		list_add(listaInstrucciones,instrucs);
-
-
 
 		free(linea);
 		}

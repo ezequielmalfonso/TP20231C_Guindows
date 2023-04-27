@@ -13,8 +13,6 @@ t_log * logger;
 int configValida(t_config* fd_configuracion) {
 	return (config_has_property(fd_configuracion, "IP_KERNEL")
 		&& config_has_property(fd_configuracion, "PUERTO_KERNEL")
-		//&& config_has_property(fd_configuracion, "SEGMENTOS")
-		//&& config_has_property(fd_configuracion, "TIEMPO_PANTALLA")
 		);
 }
 
@@ -33,22 +31,16 @@ int cargarConfiguracion(char* path) {
 		return -1;
 	}
 
-	configuracion->IP_KERNEL = config_get_string_value(fd_configuracion, "IP_KERNEL");
+	configuracion->IP_KERNEL     = config_get_string_value(fd_configuracion, "IP_KERNEL");
 	configuracion->PUERTO_KERNEL = config_get_int_value(fd_configuracion, "PUERTO_KERNEL");
-	//configuracion->SEGMENTOS = config_get_array_value(fd_configuracion, "SEGMENTOS");
-	//configuracion->TIEMPO_PANTALLA = config_get_int_value(fd_configuracion, "TIEMPO_PANTALLA");
 
 
 	log_info(logger,
 		"\nIP_KERNEL: %s\n"
 		"PUERTO_KERNEL: %d",
 		configuracion->IP_KERNEL,
-		configuracion->PUERTO_KERNEL); /*DESPUES HAY QUE ADAPTARLO PARA LOGGEAR LOS SEGMENTOS*/
-/*
-	while(configuracion->SEGMENTOS[i]!=NULL){
-		log_info(logger,"SEGMENTO: %s",configuracion->SEGMENTOS[i]);
-		i++;
-	}*/
+		configuracion->PUERTO_KERNEL);
+	/*TODO REVISAR LOGGER OBLIGATORIOS DESPUES HAY QUE ADAPTARLO PARA LOGGEAR LOS SEGMENTOS*/
 
 	return 0;
 }

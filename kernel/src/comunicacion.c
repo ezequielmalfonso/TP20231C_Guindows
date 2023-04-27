@@ -20,7 +20,7 @@ static void procesar_conexion(void* void_args) {
 	int cliente_socket = args->fd;
 	char* server_name = args->server_name;
 	double   estimado_rafaga_inicial;
-	uint32_t tiempo_llegada_a_ready;
+	uint32_t tiempo_llegada_a_ready;   // TODO unixepoch: Averiguar como funciona y como la usamos
 	free(args);
 
 	t_instrucciones* mensaje=malloc(sizeof(t_instrucciones));
@@ -38,7 +38,7 @@ static void procesar_conexion(void* void_args) {
 	registros[2]=0;
 	registros[3]=0;
 
-	// uint32_t archivos_abiertos;  TODO de que tipo seria??? Una lista o un array?
+	// uint32_t archivos_abiertos; TODO de que tipo seria??? Una lista o un array?
 
 	estimado_rafaga_inicial = configuracion->ESTIMACION_INICIAL;
 

@@ -20,7 +20,6 @@ void enviar_instrucciones(int socket_fd, t_list* lista){
 	offset += sizeof(uint32_t);
 	memcpy(a_enviar + offset, buffer->stream, buffer->size);
 
-
 	send(socket_fd, a_enviar,buffer->size+sizeof(uint32_t) ,0);
 
 	free(a_enviar);
@@ -46,7 +45,7 @@ t_instrucciones* recibir_instrucciones(int socket_fd)
 uint32_t calcular_instrucciones_buffer_size(t_list* lista){
 
 	uint32_t size=0;
-	int i=0;
+	//int i=0;
 
 	size += 25*(lista->elements_count)*sizeof(uint32_t);
 

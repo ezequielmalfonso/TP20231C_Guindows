@@ -4,6 +4,7 @@
 #include "kernel.h"
 
 int cpu_fd, memoria_fd, file_system_fd;
+// TODO consola_fd para cuando haya que avisalr que finalizao el proceso y la consola se tenga q desconectar
 
 int main(void) {
 	cargarConfiguracion();

@@ -31,7 +31,7 @@ void pcb_set(PCB_t*   pcb,
 	//list_destroy_and_destroy_elements(pcb->instrucciones,free);
 	list_add_all(pcb->instrucciones,instrucciones);
 	pcb->pid=pid;
-	pcb->pc = pc;
+	pcb->pc = pc; //TODO como se inicializa??
 	//antes de cambiar de puntero, destruyo toda existencia de la anterior
 	pcb->registro_cpu[0] = registro_cpu[0];
 	pcb->registro_cpu[1] = registro_cpu[1];
