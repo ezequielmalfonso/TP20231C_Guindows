@@ -4,7 +4,7 @@
  *  Created on: 12 abr 2023
  *      Author: utnso
  */
-#include "comunicacion.h"
+#include "memoriaComunicacion.h"
 
 typedef struct {
   int fd;

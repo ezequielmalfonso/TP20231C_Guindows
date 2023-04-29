@@ -5,7 +5,7 @@
  *      Author: utnso
  */
 
-#include "comunicacion.h"
+#include "consolaComunicacion.h"
 
 int generar_conexion(int* kernel_fd, t_config_consola* configuracion) {
     char* port_kernel = string_itoa(configuracion->PUERTO_KERNEL);

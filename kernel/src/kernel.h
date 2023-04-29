@@ -13,8 +13,9 @@
 #include <commons/log.h>
 #include <commons/config.h>
 #include "socket.h"
+
+#include "kernelComunicacion.h"
 #include "kernelConfig.h"
-#include "comunicacion.h"
 
 extern int kernelServer;
 

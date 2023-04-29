@@ -5,8 +5,8 @@
  *      Author: utnso
  */
 
-#ifndef COMUNICACION_H_
-#define COMUNICACION_H_
+#ifndef MEMORIACOMUNICACION_H_
+#define MEMORIACOMUNICACION_H_
 
 #include <stdint.h>
 #include <string.h>
@@ -27,4 +27,4 @@ int kernel_escuchar(char* server_name, int server_socket);
 //CPU
 int cpu_escuchar(char* server_name, int server_socket);
 
-#endif /* COMUNICACION_H_ */
+#endif /* MEMORIACOMUNICACION_H_ */

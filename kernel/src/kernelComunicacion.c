@@ -4,7 +4,7 @@
  *  Created on: 6 abr 2023
  *      Author: utnso
  */
-#include "comunicacion.h"
+#include "kernelComunicacion.h"
 
 uint16_t pid_nuevo=0;
 

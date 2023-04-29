@@ -5,8 +5,8 @@
  *      Author: utnso
  */
 
-#ifndef COMUNICACION_H_
-#define COMUNICACION_H_
+#ifndef KERNELCOMUNICACION_H_
+#define KERNELCOMUNICACION_H_
 
 #include <stdint.h>
 #include <string.h>
@@ -31,4 +31,4 @@ int server_escuchar(char* server_name, int server_socket);
 int generar_conexiones(int* cpu_fd, t_config_kernel* configuracion);
 //int generar_conexion_memoria(int* memoria_fd, t_config_kernel* configuracion);
 
-#endif /* COMUNICACION_H_ */
+#endif /* KERNELCOMUNICACION_H_ */

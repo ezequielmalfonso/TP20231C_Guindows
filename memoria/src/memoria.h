@@ -15,7 +15,8 @@
 #include "socket.h"
 #include "memoriaConfig.h"
 #include "protocolo.h"
-#include "comunicacion.h"
+
+#include "memoriaComunicacion.h"
 
 int memoriaServer;
 

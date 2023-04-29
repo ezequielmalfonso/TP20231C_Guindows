@@ -5,8 +5,8 @@
  *      Author: utnso
  */
 
-#ifndef COMUNICACION_H_
-#define COMUNICACION_H_
+#ifndef FILESYSTEMCOMUNICACION_H_
+#define FILESYSTEMCOMUNICACION_H_
 
 #include <stdint.h>
 #include <string.h>
@@ -24,4 +24,4 @@
 extern int cliente_socket;
 
 
-#endif /* COMUNICACION_H_ */
+#endif /* FILESYSTEMCOMUNICACION_H_ */

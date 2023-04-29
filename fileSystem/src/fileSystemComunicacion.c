@@ -5,7 +5,7 @@
  *      Author: utnso
  */
 
-#include "comunicacion.h"
+#include "fileSystemComunicacion.h"
 
 int cliente_socket;
 typedef struct {

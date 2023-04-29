@@ -12,9 +12,10 @@
 #include <stdlib.h>
 #include <commons/log.h>
 #include <commons/config.h>
+
+#include "fileSystemComunicacion.h"
 #include "socket.h"
 #include "fileSystemConfig.h"
-#include "comunicacion.h"
 
 extern int fileSystemServer;
 

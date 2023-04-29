@@ -13,8 +13,9 @@
 #include <commons/log.h>
 #include <commons/config.h>
 #include "socket.h"
+
+#include "cpuComunicacion.h"
 #include "cpuConfig.h"
-#include "comunicacion.h"
 
 extern int cpuServer;
 
