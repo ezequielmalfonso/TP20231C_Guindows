@@ -78,6 +78,7 @@ static void procesar_conexion(void* void_args) {
 	segmento->tamanio_segmento = tamanio_segmento;
 
 	//agrego el PCB creado el segmento recibido desde memoria
+	// TODO preguntar
 	list_add(proceso->tabla_de_segmentos, segmento);
 
 	log_info(logger,"Recibiendo Segmento 0 (Compartido) creado: Id: %d - Dir Base: %d - Tamanio: %d", id_segmento, direccion_base, tamanio_segmento);

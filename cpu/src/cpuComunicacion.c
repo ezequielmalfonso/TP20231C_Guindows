@@ -20,6 +20,7 @@ static void procesar_conexion(void* void_args) {
  free(args);
 
  op_code cop;
+
  while (cliente_socket != -1) {
 
 	 if (recv(cliente_socket, &cop, sizeof(op_code), 0) != sizeof(op_code)) {
@@ -32,10 +33,10 @@ static void procesar_conexion(void* void_args) {
 					 log_info(logger, "debug");
 					 break;
 		 case DISPATCH:
-			 	    PCB_t* proceso= pcb_create();
-			 	 	log_info(logger,"Recibiendo PCB desde %s ", cop );
-
-			 	 	 break;
+			 	    	PCB_t* proceso= pcb_create();
+			 	    	log_info(logger,"Recibiendo PCB desde %s ", cop );
+			 	    	recv_proceso(cliente_socket,proceso);
+			 	    	break;
 		 // Errores
 		 case -1:
 				 log_error(logger, "Cliente desconectado de %s...", server_name);
