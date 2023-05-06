@@ -42,18 +42,26 @@ static void procesar_conexion(void* void_args) {
 	//TODO preguntar si asi vamos bien para darle el tamaño a los registros antes de enviarlo al CPU y
 	//que el CPU Los tiene que cargar para devolverlos
 
-	if(strcmp(auxl2->parametro1, "AX") == 0){
+	// ESTO ESTA BIEN PARA DARLE TAMANO A LOS REGISTRO, CAPAZ ES RECOMENDABLE ABSTRAERLO A OTRA FUNCION.
+	if(strcmp(auxl2->parametro1, "AX" || "BX" || "CX" || "DX") == 0){
+		char* registros;
+		registros = (char*)malloc(4);
+	}else{
+		log_info(logger, "Algo fallo");
+	}
+	if(strcmp(auxl2->parametro1, "EAX" || "EBX" || "ECX" || "EDX") == 0){
+		char* registros;
+		registros = (char*)malloc(8);
+	}else{
+		log_info(logger, "Algo fallo");
+	}
+	if(strcmp(auxl2->parametro1, "RAX" || "RBX" || "RCX" || "RDX") == 0){
 		char* registros;
 		registros = (char*)malloc(16);
 	}else{
 		log_info(logger, "Algo fallo");
 	}
-	/*if(strcmp(auxl2->parametro1, "AX") == 0){
-		char* registros;
-		registros = (char*)malloc(16);
-	}else{
-		log_info(logger, "Algo fallo");
-	}	*/
+
 
 	// uint32_t archivos_abiertos; TODO de que tipo seria??? Una lista o un array?
 
