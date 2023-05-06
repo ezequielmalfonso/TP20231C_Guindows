@@ -52,7 +52,8 @@ typedef enum {
 	INICIALIZAR,
 	KERNEL,
 	CPU,
-	FS
+	FS,
+	AX
 	}op_code;
 
 typedef struct {

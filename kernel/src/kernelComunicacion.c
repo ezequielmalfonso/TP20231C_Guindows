@@ -32,11 +32,28 @@ static void procesar_conexion(void* void_args) {
 
 	// Aca inicializo los valores para el PCB
 	//TODO pasarle los valores de inicializacion al PCB
-	uint32_t registros[4];
-	registros[0]=0;
-	registros[1]=0;
-	registros[2]=0;
-	registros[3]=0;
+	// casi un char* ??
+	t_link_element* aux1 = mensaje->listaInstrucciones->head;
+	INSTRUCCION* auxl2 = malloc(sizeof(INSTRUCCION));
+	auxl2 = aux1->data;
+
+	char* registros;
+
+	//TODO preguntar si asi vamos bien para darle el tamaño a los registros antes de enviarlo al CPU y
+	//que el CPU Los tiene que cargar para devolverlos
+
+	if(strcmp(auxl2->parametro1, "AX") == 0){
+		char* registros;
+		registros = (char*)malloc(16);
+	}else{
+		log_info(logger, "Algo fallo");
+	}
+	/*if(strcmp(auxl2->parametro1, "AX") == 0){
+		char* registros;
+		registros = (char*)malloc(16);
+	}else{
+		log_info(logger, "Algo fallo");
+	}	*/
 
 	// uint32_t archivos_abiertos; TODO de que tipo seria??? Una lista o un array?
 

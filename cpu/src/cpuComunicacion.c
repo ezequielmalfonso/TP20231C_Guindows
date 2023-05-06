@@ -34,8 +34,9 @@ static void procesar_conexion(void* void_args) {
 					 break;
 		 case DISPATCH:
 			 	    	PCB_t* proceso= pcb_create();
-			 	    	log_info(logger,"Recibiendo PCB desde %s ", cop );
+			 	    	//log_info(logger,"Recibiendo PCB desde %s ", cop );
 			 	    	recv_proceso(cliente_socket,proceso);
+
 			 	    	break;
 		 // Errores
 		 case -1:

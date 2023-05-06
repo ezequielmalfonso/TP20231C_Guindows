@@ -21,7 +21,7 @@ void pcb_set(PCB_t*   pcb,
 			 uint16_t pid,
 			 t_list*  instrucciones,
 			 uint32_t pc,
-			 uint32_t registro_cpu[4],
+			 char* registro_cpu,
 			 //t_list*  archivos_abiertos,
 			 double   estimado_rafaga_inicial,
 			 uint32_t tiempo_llegada_a_ready,
@@ -32,11 +32,11 @@ void pcb_set(PCB_t*   pcb,
 	pcb->pid=pid;
 	pcb->pc = pc; //TODO como se inicializa??
 	//antes de cambiar de puntero, destruyo toda existencia de la anterior
-	pcb->registro_cpu[0] = registro_cpu[0];
+	/*pcb->registro_cpu[0] = registro_cpu[0];
 	pcb->registro_cpu[1] = registro_cpu[1];
 	pcb->registro_cpu[2] = registro_cpu[2];
 	pcb->registro_cpu[3] = registro_cpu[3];
-
+*/
 	//list_destroy_and_destroy_elements(pcb->segmentos,free);
     //list_add_all(pcb->segmentos,segmentos);
 	//   TODO la parte de segmentos cuando lo aclaren y archivos abiertos

@@ -27,7 +27,7 @@ typedef struct {
 	uint16_t pid;
 	t_list* instrucciones;
 	uint32_t pc; 				// Program counter
-	uint32_t registro_cpu[4];
+	char* registro_cpu;
 	t_list* tabla_de_segmentos;
 	double estimado_rafaga_inicial;
 	int tiempo_llegada_a_ready;
@@ -42,7 +42,7 @@ void pcb_set(PCB_t*   pcb,
 		     uint16_t pid,
 			 t_list* instrucciones,
 			 uint32_t pc,
-			 uint32_t registros_cpu[4],
+			 char* registros_cpu,
 			 //t_list* tabla_de_segmentos,
 			// t_list* archivos_abiertos,
 			 double   estimado_rafaga_inicial,

@@ -142,7 +142,7 @@ static void* serializar_proceso(size_t* size, PCB_t *proceso, op_code codigo) {
 		   sizeof(uint32_t)+ 		//SIZE elementosLista
 		   sizeof(INSTRUCCION)* elementosLista+ 	//SIZE LISTA INSTRUCCIONES
 		   sizeof(uint32_t)+ 		//SIZE PC
-		   (sizeof(uint32_t)*4)+ 	//SIZE REGISTROS
+		   (sizeof(char)*16)+ 	//SIZE REGISTROS
 		   sizeof(uint32_t)+ 		//SIZE tablaSegmento
 		   sizeof(t_segmento)*tablaSegmentos+//((25)*tablaSegmentos)+   //sizeof(uint32_t)+//SIZE cantListaSegmentos
 		   sizeof(double)+         	// Estimado rafaga
@@ -188,14 +188,14 @@ static void* serializar_proceso(size_t* size, PCB_t *proceso, op_code codigo) {
 	memcpy(stream + offset, &proceso->pc, sizeof(uint32_t));
 	offset+= sizeof(uint32_t);
 
-	memcpy(stream + offset, &proceso->registro_cpu[0], sizeof(uint32_t));
-	offset+= sizeof(uint32_t);
-	memcpy(stream + offset, &proceso->registro_cpu[1], sizeof(uint32_t));
-	offset+= sizeof(uint32_t);
-	memcpy(stream + offset, &proceso->registro_cpu[2], sizeof(uint32_t));
-	offset+= sizeof(uint32_t);
-	memcpy(stream + offset, &proceso->registro_cpu[3], sizeof(uint32_t));
-	offset+= sizeof(uint32_t);
+	memcpy(stream + offset, &proceso->registro_cpu, sizeof(char)*16);
+	offset+= sizeof(char)*16;
+/*	memcpy(stream + offset, &proceso->registro_cpu, sizeof(char*));
+	offset+= sizeof(char*);
+	memcpy(stream + offset, &proceso->registro_cpu, sizeof(char*));
+	offset+= sizeof(char*);
+	memcpy(stream + offset, &proceso->registro_cpu, sizeof(char*));
+	offset+= sizeof(char*);*/
 
 	memcpy(stream + offset, &tablaSegmentos, sizeof(uint32_t));
 	offset+= sizeof(uint32_t);
@@ -249,7 +249,6 @@ static void deserializar_proceso(void* stream, PCB_t* proceso) {
 	stream+=sizeof(uint16_t);
 
 	proceso->instrucciones=list_create();
-	proceso->tabla_de_segmentos=list_create();
 
 	memcpy(&elementosLista, stream, sizeof(uint32_t));
 	stream+=sizeof(uint32_t);
@@ -257,8 +256,6 @@ static void deserializar_proceso(void* stream, PCB_t* proceso) {
 	while(i!=elementosLista)
 	{
 		INSTRUCCION* aux=malloc(sizeof(INSTRUCCION));
-		printf("Verificamos la lista recibida en cpu:\n");
-		printf("Comando: %s | Par1: %s | Par2: %s | Par: %s\n\n", aux->comando, aux->parametro1, aux->parametro2 ,aux->parametro3);
 
 		memcpy(&(aux->comando), stream, sizeof(aux->comando));
 		stream += sizeof(aux->comando);
@@ -269,36 +266,44 @@ static void deserializar_proceso(void* stream, PCB_t* proceso) {
 		memcpy(&(aux->parametro3), stream, sizeof(aux->parametro3));
 		stream += sizeof(aux->parametro3);
 		list_add(proceso->instrucciones,aux);
+
+		//printf("Verificamos la lista recibida en cpu:\n");
+		//printf("Comando: %s | Par1: %s | Par2: %s | Par: %s\n\n", aux->comando, aux->parametro1, aux->parametro2 ,aux->parametro3);
 		i++;
 	}
 
 	memcpy(&(proceso->pc), stream, sizeof(uint32_t));
 	stream+=sizeof(uint32_t);
+//printf("PC: %s", proceso->pc);
 
-	memcpy(&(proceso->registro_cpu[0]),stream, sizeof(uint32_t));
-	stream+=sizeof(uint32_t);
-	memcpy(&(proceso->registro_cpu[1]),stream, sizeof(uint32_t));
-	stream+=sizeof(uint32_t);
-	memcpy(&(proceso->registro_cpu[2]),stream, sizeof(uint32_t));
-	stream+=sizeof(uint32_t);
-	memcpy(&(proceso->registro_cpu[3]),stream, sizeof(uint32_t));
-	stream+=sizeof(uint32_t);
-
+	memcpy(&(proceso->registro_cpu),stream, sizeof(char)*16);
+	stream+=sizeof(char)*16;
+/*	memcpy(&(proceso->registro_cpu),stream, sizeof(char*));
+	stream+=sizeof(char*);
+	memcpy(&(proceso->registro_cpu),stream, sizeof(char*));
+	stream+=sizeof(char*);
+	memcpy(&(proceso->registro_cpu),stream, sizeof(char*));
+	stream+=sizeof(char*);
+*/
 	memcpy(&cantSegmentos, stream, sizeof(uint32_t));
 	stream+= sizeof(uint32_t);
 
+	proceso->tabla_de_segmentos=list_create();
+
 	while(c < cantSegmentos)
 	{
-	  t_segmento* aux_seg = malloc(sizeof(t_segmento));
-
+	  t_segmento* aux_seg = (t_segmento*)malloc(sizeof(t_segmento));
+	  aux_seg->id_segmento = 0;
+	  aux_seg->direccion_base = 0;
+	  aux_seg->tamanio_segmento = 0;
 	  memcpy(&(aux_seg->id_segmento), stream, sizeof(aux_seg->id_segmento));
 	  stream += sizeof(aux_seg->id_segmento);
 	  memcpy(&(aux_seg->direccion_base), stream, sizeof(aux_seg->direccion_base));
 	  stream += sizeof(aux_seg->direccion_base);
 	  memcpy(&(aux_seg->tamanio_segmento), stream, sizeof(aux_seg->tamanio_segmento));
 	  stream += sizeof(aux_seg->tamanio_segmento);
-
 	  list_add(proceso->tabla_de_segmentos, aux_seg);
+	  //printf("Comando: %d | Par1: %d | Par2: %d \n\n", aux_seg->id_segmento, aux_seg->direccion_base, aux_seg->tamanio_segmento );
 	  c++;
 	}
 
