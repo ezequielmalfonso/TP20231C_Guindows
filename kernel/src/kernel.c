@@ -35,3 +35,8 @@ int main(void) {
 	limpiarConfiguracion();
 	return 0;
 }
+
+
+
+
+

@@ -25,10 +25,13 @@
 extern int cliente_socket;
 
 extern uint16_t pid_nuevo;
+extern char* registros;
 //SERVIDOR
 int server_escuchar(char* server_name, int server_socket);
 //CLIENTE
 int generar_conexiones(int* cpu_fd, t_config_kernel* configuracion);
 //int generar_conexion_memoria(int* memoria_fd, t_config_kernel* configuracion);
+
+void asignacion_tamanio_registros(INSTRUCCION*);
 
 #endif /* KERNELCOMUNICACION_H_ */

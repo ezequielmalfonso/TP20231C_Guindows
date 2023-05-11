@@ -14,6 +14,7 @@ typedef struct {
 } t_procesar_conexion_args;
 //pthread_mutex_t pid_xd = PTHREAD_MUTEX_INITIALIZER;
 int cliente_socket;
+char* registros;
 
 static void procesar_conexion(void* void_args) {
 	t_procesar_conexion_args* args = (t_procesar_conexion_args*) void_args;
@@ -37,31 +38,10 @@ static void procesar_conexion(void* void_args) {
 	INSTRUCCION* auxl2 = malloc(sizeof(INSTRUCCION));
 	auxl2 = aux1->data;
 
-	char* registros;
+	asignacion_tamanio_registros(auxl2);
 
 	//TODO preguntar si asi vamos bien para darle el tamaño a los registros antes de enviarlo al CPU y
 	//que el CPU Los tiene que cargar para devolverlos
-
-	// ESTO ESTA BIEN PARA DARLE TAMANO A LOS REGISTRO, CAPAZ ES RECOMENDABLE ABSTRAERLO A OTRA FUNCION.
-	if(strcmp(auxl2->parametro1, "AX" || "BX" || "CX" || "DX") == 0){
-		char* registros;
-		registros = (char*)malloc(4);
-	}else{
-		log_info(logger, "Algo fallo");
-	}
-	if(strcmp(auxl2->parametro1, "EAX" || "EBX" || "ECX" || "EDX") == 0){
-		char* registros;
-		registros = (char*)malloc(8);
-	}else{
-		log_info(logger, "Algo fallo");
-	}
-	if(strcmp(auxl2->parametro1, "RAX" || "RBX" || "RCX" || "RDX") == 0){
-		char* registros;
-		registros = (char*)malloc(16);
-	}else{
-		log_info(logger, "Algo fallo");
-	}
-
 
 	// uint32_t archivos_abiertos; TODO de que tipo seria??? Una lista o un array?
 
@@ -213,3 +193,19 @@ int generar_conexion_fileSystem(int* file_system_fd, t_config_kernel* configurac
     return *file_system_fd != 0;
 }
 
+
+void asignacion_tamanio_registros(INSTRUCCION* instruccion){
+
+	if(strcmp(instruccion->parametro1, "AX" ) == 0 || strcmp(instruccion->parametro1, "BX") == 0 || strcmp(instruccion->parametro1, "CX") == 0 || strcmp(instruccion->parametro1, "DX") == 0){
+			char* registros;
+			registros = (char*)malloc(4);
+		}else if(strcmp(instruccion->parametro1, "EAX" ) == 0 || strcmp(instruccion->parametro1, "EBX") == 0 || strcmp(instruccion->parametro1, "ECX") == 0 || strcmp(instruccion->parametro1, "EDX") == 0){
+			char* registros;
+			registros = (char*)malloc(8);
+		}else if(strcmp(instruccion->parametro1, "RAX" ) == 0 || strcmp(instruccion->parametro1, "RBX") == 0 || strcmp(instruccion->parametro1, "RCX") == 0 || strcmp(instruccion->parametro1, "RDX") == 0){
+			char* registros;
+			registros = (char*)malloc(16);
+		}else{
+			log_info(logger, "Algo fallo");
+		}
+}

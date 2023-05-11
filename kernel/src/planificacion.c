@@ -88,6 +88,84 @@ void inicializarPlanificacion(){
 		//pthread_mutex_unlock(&mx_log);
 	}
 	pthread_t espera_CPU;
-	//pthread_create(&espera_CPU, NULL, (void*) esperar_cpu, NULL);
+	pthread_create(&espera_CPU, NULL, (void*) esperar_cpu, NULL);
 }
+
+
+void esperar_cpu(){
+	while(1){
+		sem_wait(&s_esperar_cpu);
+		op_code cop;
+		PCB_t* pcb = pcb_create();
+		//pthread_mutex_lock(&mx_cpu);
+		//pthread_mutex_lock(&mx_pageFault);
+		if (recv(cpu_fd, &cop, sizeof(op_code), 0) <= 0) {
+			//pthread_mutex_lock(&mx_log);
+			log_error(logger,"DISCONNECT FAILURE!");
+			//pthread_mutex_unlock(&mx_log);
+			exit(-1);
+		}
+log_info(logger, "Recibo cop en kernel desde CPU: &s", cop);
+		if (!recv_proceso(cpu_fd, pcb)) {
+			//pthread_mutex_lock(&mx_log);
+			log_error(logger,"Fallo recibiendo PROGRAMA %d", pcb->pid);
+			//pthread_mutex_unlock(&mx_log);
+			exit(-1);
+		}
+		//pthread_mutex_lock(&mx_cpu_desocupado);
+		//cpu_desocupado = true;
+		//pthread_mutex_unlock(&mx_cpu_desocupado);
+		switch (cop) {
+			case EXIT:
+				send(pcb->cliente_fd,&cop,sizeof(op_code),0);
+				execute_a_exit(pcb);
+				sem_post(&s_cpu_desocupado);
+				sem_post(&s_ready_execute);
+				break;
+
+			case INTERRUPT: // para hrrn
+
+					break;
+
+			case IO:
+				//pthread_mutex_lock(&mx_cola_blocked);
+				//queue_push(cola_blocked,pcb);
+				//pthread_mutex_unlock(&mx_cola_blocked);
+				//Creamos el hilo aparte que lo bloquee y se encargue de su io
+			/*	pthread_t hilo_bloqueado;
+				sem_post(&s_blocked);
+				pthread_create(&hilo_bloqueado,NULL,(void*)bloqueando,pcb);
+				pthread_detach(hilo_bloqueado);
+				 //pthread_mutex_lock(&mx_log);
+				log_info(logger, "PID: %d - Estado Anterior: EXECUTE - Estado Actual: BLOCKED", pcb->pid);
+				 //pthread_mutex_unlock(&mx_log);
+				sem_post(&s_cpu_desocupado);*/
+
+			/* 	//Por si la interrupcion se mando cuando se estaba procesando la instruccion IO
+				pthread_mutex_lock(&mx_hay_interrupcion);
+				if(hay_interrupcion){
+					pthread_mutex_unlock(&mx_hay_interrupcion);
+					sem_post(&s_pcb_desalojado);
+				}
+				pthread_mutex_unlock(&mx_hay_interrupcion);*/
+				break;
+
+
+			default:
+				log_error(logger, "AAAlgo anduvo mal en el server del kernel\n Cop: %d",cop);
+		}
+	}
+}
+
+void execute_a_exit(PCB_t* pcb){
+	//pthread_mutex_lock(&mx_log);
+    log_info(logger,"PID: %d - Estado Anterior: EXECUTE - Estado Actual: EXIT", pcb->pid);
+    //pthread_mutex_unlock(&mx_log);
+    sem_post(&s_multiprogramacion_actual);//cuando se finaliza
+    //liberar_espacio_de_memoria(PCB); Liberamos las estructructuras de memoria
+    pcb_destroy(pcb);
+    //avisar_consola_finalizacion(); Funcion que le avisa a la consola que se finalizo correctamente
+}
+
+
 

@@ -38,7 +38,7 @@ static void procesar_conexion(void* void_args) {
 			 	    	recv_proceso(cliente_socket,proceso);
 			 	    	log_info(logger, "Recibi PCB id: %d", proceso->pid);
 			 	    	op_code codigo=iniciar_ciclo_instruccion(proceso);
-
+			 	    	send_proceso(cliente_socket,proceso,codigo);			// envio proceso al kenel
 			 	    	break;
 		 // Errores
 		 case -1:

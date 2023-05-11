@@ -41,7 +41,6 @@ op_code iniciar_ciclo_instruccion(PCB_t* pcb){
 		if(decode(instruccion_ejecutar)){
 			log_info(logger,"En CPU");
 			usleep(configuracion->RETARDO_INSTRUCCION*1000);
-
 		}
 		estado = execute(instruccion_ejecutar,pcb->registro_cpu,pcb->pid);
 		if(estado == CONTINUE){
@@ -60,15 +59,83 @@ INSTRUCCION* fetch(t_list* instrucciones, uint32_t pc){
 }
 
 int decode(INSTRUCCION* instruccion_ejecutar ){
-	return (!strcmp(instruccion_ejecutar->comando,"SET")|| !strcmp(instruccion_ejecutar->comando,"ADD"));
+	return (!strcmp(instruccion_ejecutar->comando,"SET"));
 }
 
 
 int execute(INSTRUCCION* instruccion_ejecutar,char* registros,uint16_t pid){
 
 	if(!strcmp(instruccion_ejecutar->comando,"SET")){
-			log_info(logger,"Ejecutando SET parametro 1: %s parametro 2: %s",instruccion_ejecutar->parametro1,instruccion_ejecutar->parametro2);
+		log_info(logger,"Ejecutando SET parametro 1: %s parametro 2: %s",instruccion_ejecutar->parametro1,instruccion_ejecutar->parametro2);
+		registros = instruccion_ejecutar->parametro2;
+
+	}else if(!strcmp(instruccion_ejecutar->comando,"MOV_OUT")){
+
+				log_info(logger,"Listo para ejecutar MOV_OUT ");
+
+	}else if(!strcmp(instruccion_ejecutar->comando,"WAIT")){
+
+		log_info(logger,"Listo para ejecutar WAIT ");
+
+	}else if(!strcmp(instruccion_ejecutar->comando,"I/O")){
+
+		log_info(logger,"Listo para ejecutar I/O ");
+
+	}else if(!strcmp(instruccion_ejecutar->comando,"SIGNAL")){
+
+		log_info(logger,"Listo para ejecutar SIGNAL ");
+
+	}else if(!strcmp(instruccion_ejecutar->comando,"MOV_IN")){
+
+		log_info(logger,"Listo para ejecutar MOV_IN ");
+
+	}else if(!strcmp(instruccion_ejecutar->comando,"F_OPEN")){
+
+		log_info(logger,"Listo para ejecutar F_OPEN ");
+
+	}else if(!strcmp(instruccion_ejecutar->comando,"YIELD")){
+
+		log_info(logger,"Listo para ejecutar YIELD, desalojando voluntariamente la cpu en FIFO TAMBIEN?? ");
+
+	}else if(!strcmp(instruccion_ejecutar->comando,"F_TRUNCATE")){
+
+		log_info(logger,"Listo para ejecutar F_TRUNCATE ");
+
+	}else if(!strcmp(instruccion_ejecutar->comando,"F_SEEK")){
+
+		log_info(logger,"Listo para ejecutar F_SEEK ");
+
+	}else if(!strcmp(instruccion_ejecutar->comando,"CREATE_SEGMENT")){
+
+		log_info(logger,"Listo para ejecutar CREATE_SEGMENT ");
+
+	}else if(!strcmp(instruccion_ejecutar->comando,"F_WRITE")){
+
+		log_info(logger,"Listo para ejecutar F_WRITE ");
+
+	}else if(!strcmp(instruccion_ejecutar->comando,"F_READ")){
+
+		log_info(logger,"Listo para ejecutar F_READ ");
+
+	}else if(!strcmp(instruccion_ejecutar->comando,"DELETE_SEGMENT")){
+
+		log_info(logger,"Listo para ejecutar DELETE_SEGMENT ");
+
+	}else if(!strcmp(instruccion_ejecutar->comando,"F_CLOSE")){
+
+		log_info(logger,"Listo para ejecutar F_CLOSE ");
+
+	}else if(!strcmp(instruccion_ejecutar->comando,"EXIT")){
+		log_info(logger, "a morir proceso!!!!");
+		//sleep(5);
+		log_info(logger,"Ejecutando EXIT");
+		//limpiar_tlb();
+		return EXIT;
+	}else{
+		//printf("Comando: %s | Par1: %s | Par2: %s | Par: %s\n\n", instruccion_ejecutar->comando, instruccion_ejecutar->parametro1, instruccion_ejecutar->parametro2 ,instruccion_ejecutar->parametro3);
+		log_error(logger,"Hubo un error en el ciclo de instruccion, ");
 	}
-	return 1; // solo par aprobar la funcion
+
+	return CONTINUE; // solo par aprobar la funcion
 }
 

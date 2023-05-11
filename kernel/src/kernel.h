@@ -17,9 +17,12 @@
 #include "kernelComunicacion.h"
 #include "kernelConfig.h"
 
+
 extern int kernelServer;
 
 extern int cpu_fd, memoria_fd;
+
+
 
 
 #endif /* KERNEL_H_ */
