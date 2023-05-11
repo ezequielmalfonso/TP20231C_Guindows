@@ -79,7 +79,9 @@ int execute(INSTRUCCION* instruccion_ejecutar,char* registros,uint16_t pid){
 
 	}else if(!strcmp(instruccion_ejecutar->comando,"I/O")){
 
-		log_info(logger,"Listo para ejecutar I/O ");
+
+		log_info(logger,"Ejecutando IO parametro 1: %s ",instruccion_ejecutar->parametro1);
+		//return IO;
 
 	}else if(!strcmp(instruccion_ejecutar->comando,"SIGNAL")){
 

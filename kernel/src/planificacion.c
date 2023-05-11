@@ -50,8 +50,8 @@ void fifo_ready_execute(){
 	   // pthread_mutex_lock(&mx_cpu);
 	    send_proceso(cpu_fd, proceso,DISPATCH);
 	  //  pthread_mutex_unlock(&mx_cpu);
-	    //pcb_destroy(proceso);
-	    //sem_post(&s_esperar_cpu);
+	    pcb_destroy(proceso);
+	    sem_post(&s_esperar_cpu);
 
 	}
 }

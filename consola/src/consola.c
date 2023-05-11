@@ -34,6 +34,19 @@ int main(int argc, char** argv) {
 		//TODO : Para cuando esten todos los modulos arriba aca va while esperandocodigo de operacion desde kernel
 		//       pcb->cliente_fd
 		//WHILE(1)
+		while(1){
+				op_code cod,cop_aux;
+				recv(kernel_fd,&cod,sizeof(op_code),MSG_WAITALL);
+				switch(cod){
+					case EXIT:
+						log_info(logger, "Se realizo el envio se desconecto del kernel");
+						limpiarConfiguracion();
+						exit(-1);
+					break;
+					default:
+						break;
+				}
+			}
 	//return 1;
 
 }

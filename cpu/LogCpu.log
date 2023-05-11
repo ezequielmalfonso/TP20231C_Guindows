@@ -3448,3 +3448,322 @@ TAM_MAX_SEGMENTO: 128
 [INFO] 00:13:31:397 Cpu/(172593:172598): a morir proceso!!!!
 [INFO] 00:13:31:397 Cpu/(172593:172598): Ejecutando EXIT
 [INFO] 00:13:50:196 Cpu/(172593:172598): Se ha finalizado la conexion
+[INFO] 20:33:03:339 Cpu/(176969:176969): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 20:33:03:340 Cpu/(176969:176969): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 20:33:03:344 Cpu/(176969:176969): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 20:33:05:931 Cpu/(176969:176969): Cliente conectado (a CPU_SV)
+
+[INFO] 20:33:08:017 Cpu/(176969:176974): Recibi PCB id: 0
+[INFO] 20:33:08:017 Cpu/(176969:176974): En CPU
+[INFO] 20:33:09:018 Cpu/(176969:176974): Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 20:33:09:019 Cpu/(176969:176974): Listo para ejecutar MOV_OUT 
+[INFO] 20:33:09:019 Cpu/(176969:176974): Listo para ejecutar WAIT 
+[INFO] 20:33:09:019 Cpu/(176969:176974): Listo para ejecutar I/O 
+[INFO] 20:33:09:019 Cpu/(176969:176974): Listo para ejecutar SIGNAL 
+[INFO] 20:33:09:019 Cpu/(176969:176974): Listo para ejecutar MOV_IN 
+[INFO] 20:33:09:019 Cpu/(176969:176974): Listo para ejecutar F_OPEN 
+[ERROR] 20:33:09:019 Cpu/(176969:176974): Hubo un error en el ciclo de instruccion, 
+[INFO] 20:33:09:019 Cpu/(176969:176974): Listo para ejecutar F_TRUNCATE 
+[INFO] 20:33:09:020 Cpu/(176969:176974): Listo para ejecutar F_SEEK 
+[INFO] 20:33:09:020 Cpu/(176969:176974): Listo para ejecutar CREATE_SEGMENT 
+[INFO] 20:33:09:020 Cpu/(176969:176974): Listo para ejecutar F_WRITE 
+[INFO] 20:33:09:020 Cpu/(176969:176974): Listo para ejecutar F_READ 
+[INFO] 20:33:09:020 Cpu/(176969:176974): Listo para ejecutar DELETE_SEGMENT 
+[INFO] 20:33:09:020 Cpu/(176969:176974): Listo para ejecutar F_CLOSE 
+[INFO] 20:33:09:020 Cpu/(176969:176974): a morir proceso!!!!
+[INFO] 20:33:09:020 Cpu/(176969:176974): Ejecutando EXIT
+[INFO] 20:33:24:387 Cpu/(176969:176974): Se ha finalizado la conexion
+[INFO] 20:34:23:488 Cpu/(177144:177144): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 20:34:23:490 Cpu/(177144:177144): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 20:34:23:490 Cpu/(177144:177144): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 20:34:26:033 Cpu/(177144:177144): Cliente conectado (a CPU_SV)
+
+[INFO] 20:34:27:801 Cpu/(177144:177151): Recibi PCB id: 0
+[INFO] 20:34:27:801 Cpu/(177144:177151): En CPU
+[INFO] 20:34:28:801 Cpu/(177144:177151): Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 20:34:28:802 Cpu/(177144:177151): Listo para ejecutar MOV_OUT 
+[INFO] 20:34:28:802 Cpu/(177144:177151): Listo para ejecutar WAIT 
+[INFO] 20:34:28:802 Cpu/(177144:177151): Listo para ejecutar I/O 
+[INFO] 20:34:28:802 Cpu/(177144:177151): Listo para ejecutar SIGNAL 
+[INFO] 20:34:28:802 Cpu/(177144:177151): Listo para ejecutar MOV_IN 
+[INFO] 20:34:28:803 Cpu/(177144:177151): Listo para ejecutar F_OPEN 
+[ERROR] 20:34:28:803 Cpu/(177144:177151): Hubo un error en el ciclo de instruccion, 
+[INFO] 20:34:28:803 Cpu/(177144:177151): Listo para ejecutar F_TRUNCATE 
+[INFO] 20:34:28:803 Cpu/(177144:177151): Listo para ejecutar F_SEEK 
+[INFO] 20:34:28:803 Cpu/(177144:177151): Listo para ejecutar CREATE_SEGMENT 
+[INFO] 20:34:28:803 Cpu/(177144:177151): Listo para ejecutar F_WRITE 
+[INFO] 20:34:28:803 Cpu/(177144:177151): Listo para ejecutar F_READ 
+[INFO] 20:34:28:803 Cpu/(177144:177151): Listo para ejecutar DELETE_SEGMENT 
+[INFO] 20:34:28:803 Cpu/(177144:177151): Listo para ejecutar F_CLOSE 
+[INFO] 20:34:28:803 Cpu/(177144:177151): a morir proceso!!!!
+[INFO] 20:34:28:803 Cpu/(177144:177151): Ejecutando EXIT
+[INFO] 20:34:32:241 Cpu/(177144:177151): Recibi PCB id: 1
+[INFO] 20:34:32:242 Cpu/(177144:177151): En CPU
+[INFO] 20:34:33:242 Cpu/(177144:177151): Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 20:34:33:242 Cpu/(177144:177151): Listo para ejecutar MOV_OUT 
+[INFO] 20:34:33:242 Cpu/(177144:177151): Listo para ejecutar WAIT 
+[INFO] 20:34:33:243 Cpu/(177144:177151): Listo para ejecutar I/O 
+[INFO] 20:34:33:243 Cpu/(177144:177151): Listo para ejecutar SIGNAL 
+[INFO] 20:34:33:243 Cpu/(177144:177151): Listo para ejecutar MOV_IN 
+[INFO] 20:34:33:243 Cpu/(177144:177151): Listo para ejecutar F_OPEN 
+[ERROR] 20:34:33:244 Cpu/(177144:177151): Hubo un error en el ciclo de instruccion, 
+[INFO] 20:34:33:244 Cpu/(177144:177151): Listo para ejecutar F_TRUNCATE 
+[INFO] 20:34:33:244 Cpu/(177144:177151): Listo para ejecutar F_SEEK 
+[INFO] 20:34:33:244 Cpu/(177144:177151): Listo para ejecutar CREATE_SEGMENT 
+[INFO] 20:34:33:244 Cpu/(177144:177151): Listo para ejecutar F_WRITE 
+[INFO] 20:34:33:245 Cpu/(177144:177151): Listo para ejecutar F_READ 
+[INFO] 20:34:33:245 Cpu/(177144:177151): Listo para ejecutar DELETE_SEGMENT 
+[INFO] 20:34:33:245 Cpu/(177144:177151): Listo para ejecutar F_CLOSE 
+[INFO] 20:34:33:246 Cpu/(177144:177151): a morir proceso!!!!
+[INFO] 20:34:33:246 Cpu/(177144:177151): Ejecutando EXIT
+[INFO] 20:35:16:018 Cpu/(177144:177151): Recibi PCB id: 2
+[INFO] 20:35:16:018 Cpu/(177144:177151): En CPU
+[INFO] 20:35:17:018 Cpu/(177144:177151): Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 20:35:17:018 Cpu/(177144:177151): Listo para ejecutar MOV_OUT 
+[INFO] 20:35:17:018 Cpu/(177144:177151): Listo para ejecutar WAIT 
+[INFO] 20:35:17:018 Cpu/(177144:177151): Listo para ejecutar I/O 
+[INFO] 20:35:17:018 Cpu/(177144:177151): Listo para ejecutar SIGNAL 
+[INFO] 20:35:17:018 Cpu/(177144:177151): Listo para ejecutar MOV_IN 
+[INFO] 20:35:17:018 Cpu/(177144:177151): Listo para ejecutar F_OPEN 
+[ERROR] 20:35:17:018 Cpu/(177144:177151): Hubo un error en el ciclo de instruccion, 
+[INFO] 20:35:17:018 Cpu/(177144:177151): Listo para ejecutar F_TRUNCATE 
+[INFO] 20:35:17:018 Cpu/(177144:177151): Listo para ejecutar F_SEEK 
+[INFO] 20:35:17:019 Cpu/(177144:177151): Listo para ejecutar CREATE_SEGMENT 
+[INFO] 20:35:17:019 Cpu/(177144:177151): Listo para ejecutar F_WRITE 
+[INFO] 20:35:17:019 Cpu/(177144:177151): Listo para ejecutar F_READ 
+[INFO] 20:35:17:019 Cpu/(177144:177151): Listo para ejecutar DELETE_SEGMENT 
+[INFO] 20:35:17:019 Cpu/(177144:177151): Listo para ejecutar F_CLOSE 
+[INFO] 20:35:17:019 Cpu/(177144:177151): a morir proceso!!!!
+[INFO] 20:35:17:019 Cpu/(177144:177151): Ejecutando EXIT
+[INFO] 20:35:25:122 Cpu/(177144:177151): Recibi PCB id: 3
+[INFO] 20:35:25:122 Cpu/(177144:177151): En CPU
+[INFO] 20:35:26:122 Cpu/(177144:177151): Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 20:35:26:123 Cpu/(177144:177151): Listo para ejecutar MOV_OUT 
+[INFO] 20:35:26:123 Cpu/(177144:177151): Listo para ejecutar WAIT 
+[INFO] 20:35:26:123 Cpu/(177144:177151): Listo para ejecutar I/O 
+[INFO] 20:35:26:123 Cpu/(177144:177151): Listo para ejecutar SIGNAL 
+[INFO] 20:35:26:124 Cpu/(177144:177151): Listo para ejecutar MOV_IN 
+[INFO] 20:35:26:124 Cpu/(177144:177151): Listo para ejecutar F_OPEN 
+[ERROR] 20:35:26:124 Cpu/(177144:177151): Hubo un error en el ciclo de instruccion, 
+[INFO] 20:35:26:124 Cpu/(177144:177151): Listo para ejecutar F_TRUNCATE 
+[INFO] 20:35:26:124 Cpu/(177144:177151): Listo para ejecutar F_SEEK 
+[INFO] 20:35:26:125 Cpu/(177144:177151): Listo para ejecutar CREATE_SEGMENT 
+[INFO] 20:35:26:125 Cpu/(177144:177151): Listo para ejecutar F_WRITE 
+[INFO] 20:35:26:125 Cpu/(177144:177151): Listo para ejecutar F_READ 
+[INFO] 20:35:26:125 Cpu/(177144:177151): Listo para ejecutar DELETE_SEGMENT 
+[INFO] 20:35:26:126 Cpu/(177144:177151): Listo para ejecutar F_CLOSE 
+[INFO] 20:35:26:126 Cpu/(177144:177151): a morir proceso!!!!
+[INFO] 20:35:26:126 Cpu/(177144:177151): Ejecutando EXIT
+[INFO] 20:35:33:563 Cpu/(177144:177151): Se ha finalizado la conexion
+[INFO] 20:37:48:514 Cpu/(177395:177395): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 20:37:48:516 Cpu/(177395:177395): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 20:37:48:517 Cpu/(177395:177395): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 20:37:51:780 Cpu/(177395:177395): Cliente conectado (a CPU_SV)
+
+[INFO] 20:37:53:425 Cpu/(177395:177400): Recibi PCB id: 0
+[INFO] 20:37:53:425 Cpu/(177395:177400): En CPU
+[INFO] 20:37:54:425 Cpu/(177395:177400): Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 20:37:54:427 Cpu/(177395:177400): Listo para ejecutar MOV_OUT 
+[INFO] 20:37:54:427 Cpu/(177395:177400): Listo para ejecutar WAIT 
+[INFO] 20:37:54:427 Cpu/(177395:177400): Listo para ejecutar I/O 
+[INFO] 20:37:54:428 Cpu/(177395:177400): Listo para ejecutar SIGNAL 
+[INFO] 20:37:54:428 Cpu/(177395:177400): Listo para ejecutar MOV_IN 
+[INFO] 20:37:54:429 Cpu/(177395:177400): Listo para ejecutar F_OPEN 
+[ERROR] 20:37:54:429 Cpu/(177395:177400): Hubo un error en el ciclo de instruccion, 
+[INFO] 20:37:54:429 Cpu/(177395:177400): Listo para ejecutar F_TRUNCATE 
+[INFO] 20:37:54:429 Cpu/(177395:177400): Listo para ejecutar F_SEEK 
+[INFO] 20:37:54:429 Cpu/(177395:177400): Listo para ejecutar CREATE_SEGMENT 
+[INFO] 20:37:54:429 Cpu/(177395:177400): Listo para ejecutar F_WRITE 
+[INFO] 20:37:54:430 Cpu/(177395:177400): Listo para ejecutar F_READ 
+[INFO] 20:37:54:430 Cpu/(177395:177400): Listo para ejecutar DELETE_SEGMENT 
+[INFO] 20:37:54:430 Cpu/(177395:177400): Listo para ejecutar F_CLOSE 
+[INFO] 20:37:54:430 Cpu/(177395:177400): a morir proceso!!!!
+[INFO] 20:37:54:431 Cpu/(177395:177400): Ejecutando EXIT
+[INFO] 20:37:58:730 Cpu/(177395:177400): Recibi PCB id: 1
+[INFO] 20:37:58:730 Cpu/(177395:177400): En CPU
+[INFO] 20:37:59:730 Cpu/(177395:177400): Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 20:37:59:731 Cpu/(177395:177400): Listo para ejecutar MOV_OUT 
+[INFO] 20:37:59:731 Cpu/(177395:177400): Listo para ejecutar WAIT 
+[INFO] 20:37:59:731 Cpu/(177395:177400): Listo para ejecutar I/O 
+[INFO] 20:37:59:731 Cpu/(177395:177400): Listo para ejecutar SIGNAL 
+[INFO] 20:37:59:731 Cpu/(177395:177400): Listo para ejecutar MOV_IN 
+[INFO] 20:37:59:732 Cpu/(177395:177400): Listo para ejecutar F_OPEN 
+[ERROR] 20:37:59:732 Cpu/(177395:177400): Hubo un error en el ciclo de instruccion, 
+[INFO] 20:37:59:732 Cpu/(177395:177400): Listo para ejecutar F_TRUNCATE 
+[INFO] 20:37:59:732 Cpu/(177395:177400): Listo para ejecutar F_SEEK 
+[INFO] 20:37:59:733 Cpu/(177395:177400): Listo para ejecutar CREATE_SEGMENT 
+[INFO] 20:37:59:733 Cpu/(177395:177400): Listo para ejecutar F_WRITE 
+[INFO] 20:37:59:733 Cpu/(177395:177400): Listo para ejecutar F_READ 
+[INFO] 20:37:59:733 Cpu/(177395:177400): Listo para ejecutar DELETE_SEGMENT 
+[INFO] 20:37:59:734 Cpu/(177395:177400): Listo para ejecutar F_CLOSE 
+[INFO] 20:37:59:734 Cpu/(177395:177400): a morir proceso!!!!
+[INFO] 20:37:59:734 Cpu/(177395:177400): Ejecutando EXIT
+[INFO] 20:38:02:313 Cpu/(177395:177400): Recibi PCB id: 2
+[INFO] 20:38:02:313 Cpu/(177395:177400): En CPU
+[INFO] 20:38:03:314 Cpu/(177395:177400): Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 20:38:03:314 Cpu/(177395:177400): Listo para ejecutar MOV_OUT 
+[INFO] 20:38:03:315 Cpu/(177395:177400): Listo para ejecutar WAIT 
+[INFO] 20:38:03:315 Cpu/(177395:177400): Listo para ejecutar I/O 
+[INFO] 20:38:03:315 Cpu/(177395:177400): Listo para ejecutar SIGNAL 
+[INFO] 20:38:03:316 Cpu/(177395:177400): Listo para ejecutar MOV_IN 
+[INFO] 20:38:03:316 Cpu/(177395:177400): Listo para ejecutar F_OPEN 
+[ERROR] 20:38:03:316 Cpu/(177395:177400): Hubo un error en el ciclo de instruccion, 
+[INFO] 20:38:03:316 Cpu/(177395:177400): Listo para ejecutar F_TRUNCATE 
+[INFO] 20:38:03:317 Cpu/(177395:177400): Listo para ejecutar F_SEEK 
+[INFO] 20:38:03:317 Cpu/(177395:177400): Listo para ejecutar CREATE_SEGMENT 
+[INFO] 20:38:03:318 Cpu/(177395:177400): Listo para ejecutar F_WRITE 
+[INFO] 20:38:03:318 Cpu/(177395:177400): Listo para ejecutar F_READ 
+[INFO] 20:38:03:318 Cpu/(177395:177400): Listo para ejecutar DELETE_SEGMENT 
+[INFO] 20:38:03:318 Cpu/(177395:177400): Listo para ejecutar F_CLOSE 
+[INFO] 20:38:03:319 Cpu/(177395:177400): a morir proceso!!!!
+[INFO] 20:38:03:319 Cpu/(177395:177400): Ejecutando EXIT
+[INFO] 20:38:05:342 Cpu/(177395:177400): Recibi PCB id: 3
+[INFO] 20:38:05:342 Cpu/(177395:177400): En CPU
+[INFO] 20:38:06:342 Cpu/(177395:177400): Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 20:38:06:343 Cpu/(177395:177400): Listo para ejecutar MOV_OUT 
+[INFO] 20:38:06:343 Cpu/(177395:177400): Listo para ejecutar WAIT 
+[INFO] 20:38:06:344 Cpu/(177395:177400): Listo para ejecutar I/O 
+[INFO] 20:38:06:344 Cpu/(177395:177400): Listo para ejecutar SIGNAL 
+[INFO] 20:38:06:344 Cpu/(177395:177400): Listo para ejecutar MOV_IN 
+[INFO] 20:38:06:344 Cpu/(177395:177400): Listo para ejecutar F_OPEN 
+[ERROR] 20:38:06:345 Cpu/(177395:177400): Hubo un error en el ciclo de instruccion, 
+[INFO] 20:38:06:345 Cpu/(177395:177400): Listo para ejecutar F_TRUNCATE 
+[INFO] 20:38:06:345 Cpu/(177395:177400): Listo para ejecutar F_SEEK 
+[INFO] 20:38:06:345 Cpu/(177395:177400): Listo para ejecutar CREATE_SEGMENT 
+[INFO] 20:38:06:346 Cpu/(177395:177400): Listo para ejecutar F_WRITE 
+[INFO] 20:38:06:346 Cpu/(177395:177400): Listo para ejecutar F_READ 
+[INFO] 20:38:06:346 Cpu/(177395:177400): Listo para ejecutar DELETE_SEGMENT 
+[INFO] 20:38:06:346 Cpu/(177395:177400): Listo para ejecutar F_CLOSE 
+[INFO] 20:38:06:347 Cpu/(177395:177400): a morir proceso!!!!
+[INFO] 20:38:06:347 Cpu/(177395:177400): Ejecutando EXIT
+[INFO] 20:38:09:953 Cpu/(177395:177400): Recibi PCB id: 4
+[INFO] 20:38:09:953 Cpu/(177395:177400): En CPU
+[INFO] 20:38:10:954 Cpu/(177395:177400): Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 20:38:10:955 Cpu/(177395:177400): Listo para ejecutar MOV_OUT 
+[INFO] 20:38:10:955 Cpu/(177395:177400): Listo para ejecutar WAIT 
+[INFO] 20:38:10:956 Cpu/(177395:177400): Listo para ejecutar I/O 
+[INFO] 20:38:10:956 Cpu/(177395:177400): Listo para ejecutar SIGNAL 
+[INFO] 20:38:10:956 Cpu/(177395:177400): Listo para ejecutar MOV_IN 
+[INFO] 20:38:10:956 Cpu/(177395:177400): Listo para ejecutar F_OPEN 
+[ERROR] 20:38:10:957 Cpu/(177395:177400): Hubo un error en el ciclo de instruccion, 
+[INFO] 20:38:10:957 Cpu/(177395:177400): Listo para ejecutar F_TRUNCATE 
+[INFO] 20:38:10:957 Cpu/(177395:177400): Listo para ejecutar F_SEEK 
+[INFO] 20:38:10:958 Cpu/(177395:177400): Listo para ejecutar CREATE_SEGMENT 
+[INFO] 20:38:10:958 Cpu/(177395:177400): Listo para ejecutar F_WRITE 
+[INFO] 20:38:10:958 Cpu/(177395:177400): Listo para ejecutar F_READ 
+[INFO] 20:38:10:958 Cpu/(177395:177400): Listo para ejecutar DELETE_SEGMENT 
+[INFO] 20:38:10:958 Cpu/(177395:177400): Listo para ejecutar F_CLOSE 
+[INFO] 20:38:10:959 Cpu/(177395:177400): a morir proceso!!!!
+[INFO] 20:38:10:959 Cpu/(177395:177400): Ejecutando EXIT
+[INFO] 20:39:25:618 Cpu/(177395:177400): Se ha finalizado la conexion
+[INFO] 21:11:40:815 Cpu/(177892:177892): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 21:11:40:880 Cpu/(177892:177892): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:11:40:881 Cpu/(177892:177892): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 21:11:43:979 Cpu/(177892:177892): Cliente conectado (a CPU_SV)
+
+[INFO] 21:11:45:526 Cpu/(177892:177897): Recibi PCB id: 0
+[INFO] 21:11:45:526 Cpu/(177892:177897): En CPU
+[INFO] 21:11:46:526 Cpu/(177892:177897): Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 21:11:46:527 Cpu/(177892:177897): Listo para ejecutar MOV_OUT 
+[INFO] 21:11:46:527 Cpu/(177892:177897): Listo para ejecutar WAIT 
+[INFO] 21:11:46:527 Cpu/(177892:177897): Ejecutando IO parametro 1: 10
+ 
+[INFO] 21:14:13:384 Cpu/(178001:178001): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 21:14:13:387 Cpu/(178001:178001): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:14:13:387 Cpu/(178001:178001): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 21:14:17:556 Cpu/(178001:178001): Cliente conectado (a CPU_SV)
+
+[INFO] 21:14:20:027 Cpu/(178001:178006): Recibi PCB id: 0
+[INFO] 21:14:20:028 Cpu/(178001:178006): En CPU
+[INFO] 21:14:21:028 Cpu/(178001:178006): Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 21:14:21:028 Cpu/(178001:178006): Listo para ejecutar MOV_OUT 
+[INFO] 21:14:21:028 Cpu/(178001:178006): Listo para ejecutar WAIT 
+[INFO] 21:14:21:028 Cpu/(178001:178006): Ejecutando IO parametro 1: 10
+ 
+[INFO] 21:14:21:028 Cpu/(178001:178006): Listo para ejecutar SIGNAL 
+[INFO] 21:14:21:028 Cpu/(178001:178006): Listo para ejecutar MOV_IN 
+[INFO] 21:14:21:028 Cpu/(178001:178006): Listo para ejecutar F_OPEN 
+[ERROR] 21:14:21:028 Cpu/(178001:178006): Hubo un error en el ciclo de instruccion, 
+[INFO] 21:14:21:028 Cpu/(178001:178006): Listo para ejecutar F_TRUNCATE 
+[INFO] 21:14:21:028 Cpu/(178001:178006): Listo para ejecutar F_SEEK 
+[INFO] 21:14:21:028 Cpu/(178001:178006): Listo para ejecutar CREATE_SEGMENT 
+[INFO] 21:14:21:028 Cpu/(178001:178006): Listo para ejecutar F_WRITE 
+[INFO] 21:14:21:029 Cpu/(178001:178006): Listo para ejecutar F_READ 
+[INFO] 21:14:21:029 Cpu/(178001:178006): Listo para ejecutar DELETE_SEGMENT 
+[INFO] 21:14:21:029 Cpu/(178001:178006): Listo para ejecutar F_CLOSE 
+[INFO] 21:14:21:029 Cpu/(178001:178006): a morir proceso!!!!
+[INFO] 21:14:21:029 Cpu/(178001:178006): Ejecutando EXIT
+[INFO] 21:14:27:185 Cpu/(178001:178006): Recibi PCB id: 1
+[INFO] 21:14:27:185 Cpu/(178001:178006): En CPU
+[INFO] 21:14:28:186 Cpu/(178001:178006): Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 21:14:28:186 Cpu/(178001:178006): Listo para ejecutar MOV_OUT 
+[INFO] 21:14:28:187 Cpu/(178001:178006): Listo para ejecutar WAIT 
+[INFO] 21:14:28:187 Cpu/(178001:178006): Ejecutando IO parametro 1: 10
+ 
+[INFO] 21:14:28:187 Cpu/(178001:178006): Listo para ejecutar SIGNAL 
+[INFO] 21:14:28:187 Cpu/(178001:178006): Listo para ejecutar MOV_IN 
+[INFO] 21:14:28:187 Cpu/(178001:178006): Listo para ejecutar F_OPEN 
+[ERROR] 21:14:28:187 Cpu/(178001:178006): Hubo un error en el ciclo de instruccion, 
+[INFO] 21:14:28:187 Cpu/(178001:178006): Listo para ejecutar F_TRUNCATE 
+[INFO] 21:14:28:187 Cpu/(178001:178006): Listo para ejecutar F_SEEK 
+[INFO] 21:14:28:187 Cpu/(178001:178006): Listo para ejecutar CREATE_SEGMENT 
+[INFO] 21:14:28:188 Cpu/(178001:178006): Listo para ejecutar F_WRITE 
+[INFO] 21:14:28:188 Cpu/(178001:178006): Listo para ejecutar F_READ 
+[INFO] 21:14:28:188 Cpu/(178001:178006): Listo para ejecutar DELETE_SEGMENT 
+[INFO] 21:14:28:188 Cpu/(178001:178006): Listo para ejecutar F_CLOSE 
+[INFO] 21:14:28:188 Cpu/(178001:178006): a morir proceso!!!!
+[INFO] 21:14:28:188 Cpu/(178001:178006): Ejecutando EXIT
+[INFO] 21:14:30:986 Cpu/(178001:178006): Se ha finalizado la conexion

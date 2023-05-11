@@ -44,3 +44,9 @@ int cargarConfiguracion(char* path) {
 
 	return 0;
 }
+void limpiarConfiguracion() {
+	free(configuracion);
+	config_destroy(fd_configuracion);
+	log_destroy(logger);
+
+}
