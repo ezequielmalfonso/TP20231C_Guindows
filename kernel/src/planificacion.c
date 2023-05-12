@@ -123,6 +123,14 @@ log_info(logger, "Recibo cop en kernel desde CPU: &s", cop);
 				sem_post(&s_ready_execute);
 				break;
 
+			case YIELD:
+				 log_info(logger, "Recibi YIELD de CPU lo mandamos al final de la cola READY");
+				 log_info("Valor del PC: %d", pcb->pc);
+				 pthread_mutex_lock(&mx_cola_ready);
+				 queue_push(cola_ready,pcb);
+				 pthread_mutex_unlock(&mx_cola_ready);
+				 break;
+
 			case INTERRUPT: // para hrrn
 
 					break;
