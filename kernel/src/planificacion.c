@@ -129,6 +129,11 @@ log_info(logger, "Recibo cop en kernel desde CPU: &s", cop);
 				 pthread_mutex_lock(&mx_cola_ready);
 				 queue_push(cola_ready,pcb);
 				 pthread_mutex_unlock(&mx_cola_ready);
+
+					sem_post(&s_cont_ready);
+			//		sem_post(&s_pcb_desalojado);
+					sem_post(&s_ready_execute);
+					sem_post(&s_cpu_desocupado);
 				 break;
 
 			case INTERRUPT: // para hrrn
