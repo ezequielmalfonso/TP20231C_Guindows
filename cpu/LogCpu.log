@@ -4484,3 +4484,504 @@ TAM_MAX_SEGMENTO: 128
 [INFO] 18:37:44:545 Cpu/(186621:186628): a morir proceso!!!!
 [INFO] 18:37:44:545 Cpu/(186621:186628): Ejecutando EXIT
 [INFO] 18:51:25:133 Cpu/(186621:186628): Se ha finalizado la conexion
+[INFO] 23:20:20:458 Cpu/(187299:187299): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 23:20:20:459 Cpu/(187299:187299): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:20:20:460 Cpu/(187299:187299): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 23:20:22:827 Cpu/(187299:187299): Cliente conectado (a CPU_SV)
+
+[INFO] 23:20:25:206 Cpu/(187299:187304): Recibi PCB id: 0
+[INFO] 23:20:25:206 Cpu/(187299:187304): En CPU
+[INFO] 23:20:26:206 Cpu/(187299:187304): Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 23:20:26:207 Cpu/(187299:187304): Listo para ejecutar MOV_OUT 
+[INFO] 23:20:26:207 Cpu/(187299:187304): Listo para ejecutar WAIT 
+[INFO] 23:20:26:207 Cpu/(187299:187304): Ejecutando IO parametro 1: 10
+ 
+[INFO] 23:20:26:207 Cpu/(187299:187304): Listo para ejecutar SIGNAL 
+[INFO] 23:20:26:207 Cpu/(187299:187304): Listo para ejecutar MOV_IN 
+[INFO] 23:20:26:207 Cpu/(187299:187304): Listo para ejecutar F_OPEN 
+[INFO] 23:20:26:207 Cpu/(187299:187304): Listo para ejecutar YIELD, desalojando voluntariamente la cpu en FIFO TAMBIEN?? 
+[INFO] 23:20:26:207 Cpu/(187299:187304): Ejecutando YIELD
+[INFO] 23:20:26:208 Cpu/(187299:187304): Recibi PCB id: 0
+[INFO] 23:20:26:208 Cpu/(187299:187304): Listo para ejecutar F_TRUNCATE 
+[INFO] 23:20:26:208 Cpu/(187299:187304): Listo para ejecutar F_SEEK 
+[INFO] 23:20:26:208 Cpu/(187299:187304): Listo para ejecutar CREATE_SEGMENT 
+[INFO] 23:20:26:208 Cpu/(187299:187304): Listo para ejecutar F_WRITE 
+[INFO] 23:20:26:208 Cpu/(187299:187304): Listo para ejecutar F_READ 
+[INFO] 23:20:26:209 Cpu/(187299:187304): Listo para ejecutar DELETE_SEGMENT 
+[INFO] 23:20:26:209 Cpu/(187299:187304): Listo para ejecutar F_CLOSE 
+[INFO] 23:20:26:209 Cpu/(187299:187304): a morir proceso!!!!
+[INFO] 23:20:26:209 Cpu/(187299:187304): Ejecutando EXIT
+[INFO] 23:20:46:055 Cpu/(187299:187304): Se ha finalizado la conexion
+[INFO] 23:24:59:360 Cpu/(187487:187487): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 23:24:59:361 Cpu/(187487:187487): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:24:59:362 Cpu/(187487:187487): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 23:25:01:602 Cpu/(187487:187487): Cliente conectado (a CPU_SV)
+
+[INFO] 23:25:03:387 Cpu/(187487:187492): Recibi PCB id: 0
+[INFO] 23:25:03:387 Cpu/(187487:187492): En CPU
+[INFO] 23:25:04:387 Cpu/(187487:187492): Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 23:25:04:391 Cpu/(187487:187492): Listo para ejecutar MOV_OUT 
+[INFO] 23:25:04:391 Cpu/(187487:187492): Listo para ejecutar WAIT 
+[INFO] 23:25:04:392 Cpu/(187487:187492): Ejecutando IO parametro 1: 10
+ 
+[INFO] 23:25:04:392 Cpu/(187487:187492): Listo para ejecutar SIGNAL 
+[INFO] 23:25:04:392 Cpu/(187487:187492): Listo para ejecutar MOV_IN 
+[INFO] 23:25:04:392 Cpu/(187487:187492): Listo para ejecutar F_OPEN 
+[INFO] 23:25:04:393 Cpu/(187487:187492): Listo para ejecutar YIELD, desalojando voluntariamente la cpu en FIFO TAMBIEN?? 
+[INFO] 23:25:04:393 Cpu/(187487:187492): Ejecutando YIELD
+[INFO] 23:25:05:682 Cpu/(187487:187492): Se ha finalizado la conexion
+[INFO] 23:25:59:425 Cpu/(187583:187583): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 23:25:59:426 Cpu/(187583:187583): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:25:59:427 Cpu/(187583:187583): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 23:26:01:626 Cpu/(187583:187583): Cliente conectado (a CPU_SV)
+
+[INFO] 23:26:01:628 Cpu/(187583:187588): Se ha finalizado la conexion
+[INFO] 23:28:51:617 Cpu/(187597:187597): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 23:28:51:618 Cpu/(187597:187597): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:28:51:619 Cpu/(187597:187597): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 23:28:53:690 Cpu/(187597:187597): Cliente conectado (a CPU_SV)
+
+[INFO] 23:28:55:636 Cpu/(187597:187602): Recibi PCB id: 0
+[INFO] 23:28:55:637 Cpu/(187597:187602): En CPU
+[INFO] 23:28:56:637 Cpu/(187597:187602): Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 23:28:56:637 Cpu/(187597:187602): Listo para ejecutar MOV_OUT 
+[INFO] 23:28:56:637 Cpu/(187597:187602): Listo para ejecutar WAIT 
+[INFO] 23:28:56:637 Cpu/(187597:187602): Ejecutando IO parametro 1: 10
+ 
+[INFO] 23:28:56:637 Cpu/(187597:187602): Listo para ejecutar SIGNAL 
+[INFO] 23:28:56:637 Cpu/(187597:187602): Listo para ejecutar MOV_IN 
+[INFO] 23:28:56:637 Cpu/(187597:187602): Listo para ejecutar F_OPEN 
+[INFO] 23:28:56:638 Cpu/(187597:187602): Listo para ejecutar YIELD, desalojando voluntariamente la cpu en FIFO TAMBIEN?? 
+[INFO] 23:28:56:638 Cpu/(187597:187602): Ejecutando YIELD
+[INFO] 23:28:56:638 Cpu/(187597:187602): Recibi PCB id: 0
+[INFO] 23:28:56:638 Cpu/(187597:187602): Listo para ejecutar F_TRUNCATE 
+[INFO] 23:28:56:639 Cpu/(187597:187602): Listo para ejecutar F_SEEK 
+[INFO] 23:28:56:639 Cpu/(187597:187602): Listo para ejecutar CREATE_SEGMENT 
+[INFO] 23:28:56:639 Cpu/(187597:187602): Listo para ejecutar F_WRITE 
+[INFO] 23:28:56:639 Cpu/(187597:187602): Listo para ejecutar F_READ 
+[INFO] 23:28:56:639 Cpu/(187597:187602): Listo para ejecutar DELETE_SEGMENT 
+[INFO] 23:28:56:639 Cpu/(187597:187602): Listo para ejecutar F_CLOSE 
+[INFO] 23:28:56:639 Cpu/(187597:187602): a morir proceso!!!!
+[INFO] 23:28:56:639 Cpu/(187597:187602): Ejecutando EXIT
+[INFO] 23:29:01:699 Cpu/(187597:187602): Recibi PCB id: 1
+[INFO] 23:29:01:699 Cpu/(187597:187602): En CPU
+[INFO] 23:29:02:700 Cpu/(187597:187602): Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 23:29:02:700 Cpu/(187597:187602): Listo para ejecutar MOV_OUT 
+[INFO] 23:29:02:700 Cpu/(187597:187602): Listo para ejecutar WAIT 
+[INFO] 23:29:02:700 Cpu/(187597:187602): Ejecutando IO parametro 1: 10
+ 
+[INFO] 23:29:02:700 Cpu/(187597:187602): Listo para ejecutar SIGNAL 
+[INFO] 23:29:02:700 Cpu/(187597:187602): Listo para ejecutar MOV_IN 
+[INFO] 23:29:02:700 Cpu/(187597:187602): Listo para ejecutar F_OPEN 
+[INFO] 23:29:02:700 Cpu/(187597:187602): Listo para ejecutar YIELD, desalojando voluntariamente la cpu en FIFO TAMBIEN?? 
+[INFO] 23:29:02:700 Cpu/(187597:187602): Ejecutando YIELD
+[INFO] 23:29:02:701 Cpu/(187597:187602): Recibi PCB id: 1
+[INFO] 23:29:02:701 Cpu/(187597:187602): Listo para ejecutar F_TRUNCATE 
+[INFO] 23:29:02:701 Cpu/(187597:187602): Listo para ejecutar F_SEEK 
+[INFO] 23:29:02:701 Cpu/(187597:187602): Listo para ejecutar CREATE_SEGMENT 
+[INFO] 23:29:02:701 Cpu/(187597:187602): Listo para ejecutar F_WRITE 
+[INFO] 23:29:02:701 Cpu/(187597:187602): Listo para ejecutar F_READ 
+[INFO] 23:29:02:701 Cpu/(187597:187602): Listo para ejecutar DELETE_SEGMENT 
+[INFO] 23:29:02:701 Cpu/(187597:187602): Listo para ejecutar F_CLOSE 
+[INFO] 23:29:02:701 Cpu/(187597:187602): a morir proceso!!!!
+[INFO] 23:29:02:701 Cpu/(187597:187602): Ejecutando EXIT
+[INFO] 23:29:15:238 Cpu/(187597:187602): Recibi PCB id: 2
+[INFO] 23:29:15:238 Cpu/(187597:187602): En CPU
+[INFO] 23:29:16:238 Cpu/(187597:187602): Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 23:29:16:239 Cpu/(187597:187602): Listo para ejecutar MOV_OUT 
+[INFO] 23:29:16:239 Cpu/(187597:187602): Listo para ejecutar WAIT 
+[INFO] 23:29:16:239 Cpu/(187597:187602): Ejecutando IO parametro 1: 10
+ 
+[INFO] 23:29:16:239 Cpu/(187597:187602): Listo para ejecutar SIGNAL 
+[INFO] 23:29:16:239 Cpu/(187597:187602): Listo para ejecutar MOV_IN 
+[INFO] 23:29:16:239 Cpu/(187597:187602): Listo para ejecutar F_OPEN 
+[INFO] 23:29:16:239 Cpu/(187597:187602): Listo para ejecutar YIELD, desalojando voluntariamente la cpu en FIFO TAMBIEN?? 
+[INFO] 23:29:16:239 Cpu/(187597:187602): Ejecutando YIELD
+[INFO] 23:29:16:239 Cpu/(187597:187602): Recibi PCB id: 2
+[INFO] 23:29:16:239 Cpu/(187597:187602): Listo para ejecutar F_TRUNCATE 
+[INFO] 23:29:16:239 Cpu/(187597:187602): Listo para ejecutar F_SEEK 
+[INFO] 23:29:16:239 Cpu/(187597:187602): Listo para ejecutar CREATE_SEGMENT 
+[INFO] 23:29:16:240 Cpu/(187597:187602): Listo para ejecutar F_WRITE 
+[INFO] 23:29:16:240 Cpu/(187597:187602): Listo para ejecutar F_READ 
+[INFO] 23:29:16:240 Cpu/(187597:187602): Listo para ejecutar DELETE_SEGMENT 
+[INFO] 23:29:16:240 Cpu/(187597:187602): Listo para ejecutar F_CLOSE 
+[INFO] 23:29:16:240 Cpu/(187597:187602): a morir proceso!!!!
+[INFO] 23:29:16:240 Cpu/(187597:187602): Ejecutando EXIT
+[INFO] 23:45:10:871 Cpu/(187597:187602): Se ha finalizado la conexion
+[INFO] 23:45:24:103 Cpu/(188068:188068): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 23:45:24:104 Cpu/(188068:188068): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:45:24:105 Cpu/(188068:188068): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 23:45:26:730 Cpu/(188068:188068): Cliente conectado (a CPU_SV)
+
+[INFO] 23:45:28:826 Cpu/(188068:188073): Recibi PCB id: 0
+[INFO] 23:45:28:827 Cpu/(188068:188073): En CPU
+[INFO] 23:45:29:827 Cpu/(188068:188073): Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 23:45:29:827 Cpu/(188068:188073): Listo para ejecutar MOV_OUT 
+[INFO] 23:45:29:827 Cpu/(188068:188073): Listo para ejecutar WAIT 
+[INFO] 23:45:29:827 Cpu/(188068:188073): Ejecutando IO parametro 1: 10
+ 
+[INFO] 23:45:29:827 Cpu/(188068:188073): Listo para ejecutar SIGNAL 
+[INFO] 23:45:29:827 Cpu/(188068:188073): Listo para ejecutar MOV_IN 
+[INFO] 23:45:29:827 Cpu/(188068:188073): Listo para ejecutar F_OPEN 
+[INFO] 23:45:29:827 Cpu/(188068:188073): Listo para ejecutar YIELD, desalojando voluntariamente la cpu en FIFO TAMBIEN?? 
+[INFO] 23:45:29:828 Cpu/(188068:188073): Ejecutando YIELD
+[INFO] 23:45:29:828 Cpu/(188068:188073): Recibi PCB id: 0
+[INFO] 23:45:29:828 Cpu/(188068:188073): Listo para ejecutar F_TRUNCATE 
+[INFO] 23:45:29:828 Cpu/(188068:188073): Listo para ejecutar F_SEEK 
+[INFO] 23:45:29:828 Cpu/(188068:188073): Listo para ejecutar CREATE_SEGMENT 
+[INFO] 23:45:29:828 Cpu/(188068:188073): Listo para ejecutar F_WRITE 
+[INFO] 23:45:29:828 Cpu/(188068:188073): Listo para ejecutar F_READ 
+[INFO] 23:45:29:828 Cpu/(188068:188073): Listo para ejecutar DELETE_SEGMENT 
+[INFO] 23:45:29:828 Cpu/(188068:188073): Listo para ejecutar F_CLOSE 
+[INFO] 23:45:29:829 Cpu/(188068:188073): a morir proceso!!!!
+[INFO] 23:45:29:829 Cpu/(188068:188073): Ejecutando EXIT
+[INFO] 23:45:38:214 Cpu/(188068:188073): Se ha finalizado la conexion
+[INFO] 23:47:04:384 Cpu/(188168:188168): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 23:47:04:385 Cpu/(188168:188168): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:47:04:385 Cpu/(188168:188168): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 23:47:08:924 Cpu/(188168:188168): Cliente conectado (a CPU_SV)
+
+[INFO] 23:47:12:203 Cpu/(188168:188173): Recibi PCB id: 0
+[INFO] 23:47:12:203 Cpu/(188168:188173): En CPU
+[INFO] 23:47:13:203 Cpu/(188168:188173): Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 23:47:13:203 Cpu/(188168:188173): Listo para ejecutar MOV_OUT 
+[INFO] 23:47:13:203 Cpu/(188168:188173): Listo para ejecutar WAIT 
+[INFO] 23:47:13:203 Cpu/(188168:188173): Ejecutando IO parametro 1: 10
+ 
+[INFO] 23:47:13:205 Cpu/(188168:188173): Recibi PCB id: 0
+[INFO] 23:47:13:205 Cpu/(188168:188173): Listo para ejecutar SIGNAL 
+[INFO] 23:47:13:206 Cpu/(188168:188173): Listo para ejecutar MOV_IN 
+[INFO] 23:47:13:206 Cpu/(188168:188173): Listo para ejecutar F_OPEN 
+[INFO] 23:47:13:206 Cpu/(188168:188173): Listo para ejecutar YIELD, desalojando voluntariamente la cpu en FIFO TAMBIEN?? 
+[INFO] 23:47:13:206 Cpu/(188168:188173): Ejecutando YIELD
+[INFO] 23:47:13:206 Cpu/(188168:188173): Recibi PCB id: 0
+[INFO] 23:47:13:206 Cpu/(188168:188173): Listo para ejecutar F_TRUNCATE 
+[INFO] 23:47:13:206 Cpu/(188168:188173): Listo para ejecutar F_SEEK 
+[INFO] 23:47:13:206 Cpu/(188168:188173): Listo para ejecutar CREATE_SEGMENT 
+[INFO] 23:47:13:206 Cpu/(188168:188173): Listo para ejecutar F_WRITE 
+[INFO] 23:47:13:206 Cpu/(188168:188173): Listo para ejecutar F_READ 
+[INFO] 23:47:13:206 Cpu/(188168:188173): Listo para ejecutar DELETE_SEGMENT 
+[INFO] 23:47:13:206 Cpu/(188168:188173): Listo para ejecutar F_CLOSE 
+[INFO] 23:47:13:206 Cpu/(188168:188173): a morir proceso!!!!
+[INFO] 23:47:13:206 Cpu/(188168:188173): Ejecutando EXIT
+[INFO] 23:47:28:335 Cpu/(188168:188173): Recibi PCB id: 1
+[INFO] 23:47:28:335 Cpu/(188168:188173): En CPU
+[INFO] 23:47:29:335 Cpu/(188168:188173): Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 23:47:29:335 Cpu/(188168:188173): Listo para ejecutar MOV_OUT 
+[INFO] 23:47:29:336 Cpu/(188168:188173): Listo para ejecutar WAIT 
+[INFO] 23:47:29:336 Cpu/(188168:188173): Ejecutando IO parametro 1: 10
+ 
+[INFO] 23:47:29:340 Cpu/(188168:188173): Recibi PCB id: 1
+[INFO] 23:47:29:340 Cpu/(188168:188173): Listo para ejecutar SIGNAL 
+[INFO] 23:47:29:341 Cpu/(188168:188173): Listo para ejecutar MOV_IN 
+[INFO] 23:47:29:341 Cpu/(188168:188173): Listo para ejecutar F_OPEN 
+[INFO] 23:47:29:341 Cpu/(188168:188173): Listo para ejecutar YIELD, desalojando voluntariamente la cpu en FIFO TAMBIEN?? 
+[INFO] 23:47:29:341 Cpu/(188168:188173): Ejecutando YIELD
+[INFO] 23:47:29:341 Cpu/(188168:188173): Recibi PCB id: 1
+[INFO] 23:47:29:341 Cpu/(188168:188173): Listo para ejecutar F_TRUNCATE 
+[INFO] 23:47:29:341 Cpu/(188168:188173): Listo para ejecutar F_SEEK 
+[INFO] 23:47:29:342 Cpu/(188168:188173): Listo para ejecutar CREATE_SEGMENT 
+[INFO] 23:47:29:342 Cpu/(188168:188173): Listo para ejecutar F_WRITE 
+[INFO] 23:47:29:342 Cpu/(188168:188173): Listo para ejecutar F_READ 
+[INFO] 23:47:29:342 Cpu/(188168:188173): Listo para ejecutar DELETE_SEGMENT 
+[INFO] 23:47:29:342 Cpu/(188168:188173): Listo para ejecutar F_CLOSE 
+[INFO] 23:47:29:342 Cpu/(188168:188173): a morir proceso!!!!
+[INFO] 23:47:29:342 Cpu/(188168:188173): Ejecutando EXIT
+[INFO] 23:47:39:935 Cpu/(188168:188173): Recibi PCB id: 2
+[INFO] 23:47:39:935 Cpu/(188168:188173): En CPU
+[INFO] 23:47:40:935 Cpu/(188168:188173): Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 23:47:40:936 Cpu/(188168:188173): Listo para ejecutar MOV_OUT 
+[INFO] 23:47:40:936 Cpu/(188168:188173): Listo para ejecutar WAIT 
+[INFO] 23:47:40:936 Cpu/(188168:188173): Ejecutando IO parametro 1: 10
+ 
+[INFO] 23:47:40:936 Cpu/(188168:188173): Recibi PCB id: 3
+[INFO] 23:47:40:936 Cpu/(188168:188173): En CPU
+[INFO] 23:47:41:936 Cpu/(188168:188173): Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 23:47:41:942 Cpu/(188168:188173): Listo para ejecutar MOV_OUT 
+[INFO] 23:47:41:942 Cpu/(188168:188173): Listo para ejecutar WAIT 
+[INFO] 23:47:41:942 Cpu/(188168:188173): Ejecutando IO parametro 1: 10
+ 
+[INFO] 23:47:41:943 Cpu/(188168:188173): Recibi PCB id: 2
+[INFO] 23:47:41:943 Cpu/(188168:188173): Listo para ejecutar SIGNAL 
+[INFO] 23:47:41:943 Cpu/(188168:188173): Listo para ejecutar MOV_IN 
+[INFO] 23:47:41:944 Cpu/(188168:188173): Listo para ejecutar F_OPEN 
+[INFO] 23:47:41:944 Cpu/(188168:188173): Listo para ejecutar YIELD, desalojando voluntariamente la cpu en FIFO TAMBIEN?? 
+[INFO] 23:47:41:944 Cpu/(188168:188173): Ejecutando YIELD
+[INFO] 23:47:41:944 Cpu/(188168:188173): Recibi PCB id: 2
+[INFO] 23:47:41:945 Cpu/(188168:188173): Listo para ejecutar F_TRUNCATE 
+[INFO] 23:47:41:945 Cpu/(188168:188173): Listo para ejecutar F_SEEK 
+[INFO] 23:47:41:945 Cpu/(188168:188173): Listo para ejecutar CREATE_SEGMENT 
+[INFO] 23:47:41:945 Cpu/(188168:188173): Listo para ejecutar F_WRITE 
+[INFO] 23:47:41:945 Cpu/(188168:188173): Listo para ejecutar F_READ 
+[INFO] 23:47:41:945 Cpu/(188168:188173): Listo para ejecutar DELETE_SEGMENT 
+[INFO] 23:47:41:945 Cpu/(188168:188173): Listo para ejecutar F_CLOSE 
+[INFO] 23:47:41:945 Cpu/(188168:188173): a morir proceso!!!!
+[INFO] 23:47:41:945 Cpu/(188168:188173): Ejecutando EXIT
+[INFO] 23:47:41:952 Cpu/(188168:188173): Recibi PCB id: 3
+[INFO] 23:47:41:953 Cpu/(188168:188173): Listo para ejecutar SIGNAL 
+[INFO] 23:47:41:953 Cpu/(188168:188173): Listo para ejecutar MOV_IN 
+[INFO] 23:47:41:953 Cpu/(188168:188173): Listo para ejecutar F_OPEN 
+[INFO] 23:47:41:953 Cpu/(188168:188173): Listo para ejecutar YIELD, desalojando voluntariamente la cpu en FIFO TAMBIEN?? 
+[INFO] 23:47:41:953 Cpu/(188168:188173): Ejecutando YIELD
+[INFO] 23:47:41:953 Cpu/(188168:188173): Recibi PCB id: 3
+[INFO] 23:47:41:953 Cpu/(188168:188173): Listo para ejecutar F_TRUNCATE 
+[INFO] 23:47:41:953 Cpu/(188168:188173): Listo para ejecutar F_SEEK 
+[INFO] 23:47:41:953 Cpu/(188168:188173): Listo para ejecutar CREATE_SEGMENT 
+[INFO] 23:47:41:953 Cpu/(188168:188173): Listo para ejecutar F_WRITE 
+[INFO] 23:47:41:953 Cpu/(188168:188173): Listo para ejecutar F_READ 
+[INFO] 23:47:41:953 Cpu/(188168:188173): Listo para ejecutar DELETE_SEGMENT 
+[INFO] 23:47:41:953 Cpu/(188168:188173): Listo para ejecutar F_CLOSE 
+[INFO] 23:47:41:953 Cpu/(188168:188173): a morir proceso!!!!
+[INFO] 23:47:41:954 Cpu/(188168:188173): Ejecutando EXIT
+[INFO] 23:48:41:887 Cpu/(188168:188173): Se ha finalizado la conexion
+[INFO] 23:52:15:642 Cpu/(188319:188319): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 23:52:15:643 Cpu/(188319:188319): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:52:15:644 Cpu/(188319:188319): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 23:52:25:138 Cpu/(188319:188319): Cliente conectado (a CPU_SV)
+
+[INFO] 23:52:27:907 Cpu/(188319:188325): Recibi PCB id: 0
+[INFO] 23:52:27:907 Cpu/(188319:188325): En CPU
+[INFO] 23:52:28:907 Cpu/(188319:188325): Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 23:52:28:907 Cpu/(188319:188325): Listo para ejecutar MOV_OUT 
+[INFO] 23:52:28:907 Cpu/(188319:188325): Listo para ejecutar WAIT 
+[INFO] 23:52:28:907 Cpu/(188319:188325): Ejecutando IO parametro 1: 10
+ 
+[INFO] 23:52:28:909 Cpu/(188319:188325): Recibi PCB id: 0
+[INFO] 23:52:28:909 Cpu/(188319:188325): Listo para ejecutar SIGNAL 
+[INFO] 23:52:28:909 Cpu/(188319:188325): Listo para ejecutar MOV_IN 
+[INFO] 23:52:28:909 Cpu/(188319:188325): Listo para ejecutar F_OPEN 
+[INFO] 23:52:28:909 Cpu/(188319:188325): Listo para ejecutar YIELD, desalojando voluntariamente la cpu en FIFO TAMBIEN?? 
+[INFO] 23:52:28:909 Cpu/(188319:188325): Ejecutando YIELD
+[INFO] 23:52:28:909 Cpu/(188319:188325): Recibi PCB id: 0
+[INFO] 23:52:28:909 Cpu/(188319:188325): Listo para ejecutar F_TRUNCATE 
+[INFO] 23:52:28:909 Cpu/(188319:188325): Listo para ejecutar F_SEEK 
+[INFO] 23:52:28:909 Cpu/(188319:188325): Listo para ejecutar CREATE_SEGMENT 
+[INFO] 23:52:28:909 Cpu/(188319:188325): Listo para ejecutar F_WRITE 
+[INFO] 23:52:28:909 Cpu/(188319:188325): Listo para ejecutar F_READ 
+[INFO] 23:52:28:909 Cpu/(188319:188325): Listo para ejecutar DELETE_SEGMENT 
+[INFO] 23:52:28:909 Cpu/(188319:188325): Listo para ejecutar F_CLOSE 
+[INFO] 23:52:28:909 Cpu/(188319:188325): a morir proceso!!!!
+[INFO] 23:52:28:909 Cpu/(188319:188325): Ejecutando EXIT
+[INFO] 23:54:23:171 Cpu/(188319:188325): Recibi PCB id: 1
+[INFO] 23:54:23:171 Cpu/(188319:188325): En CPU
+[INFO] 23:54:24:171 Cpu/(188319:188325): Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 23:54:24:171 Cpu/(188319:188325): Listo para ejecutar MOV_OUT 
+[INFO] 23:54:24:171 Cpu/(188319:188325): Listo para ejecutar WAIT 
+[INFO] 23:54:24:171 Cpu/(188319:188325): Ejecutando IO parametro 1: 10
+ 
+[INFO] 23:54:24:171 Cpu/(188319:188325): Recibi PCB id: 2
+[INFO] 23:54:24:171 Cpu/(188319:188325): En CPU
+[INFO] 23:54:25:172 Cpu/(188319:188325): Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 23:54:25:172 Cpu/(188319:188325): Listo para ejecutar MOV_OUT 
+[INFO] 23:54:25:172 Cpu/(188319:188325): Listo para ejecutar WAIT 
+[INFO] 23:54:25:173 Cpu/(188319:188325): Ejecutando IO parametro 1: 10
+ 
+[INFO] 23:54:25:173 Cpu/(188319:188325): Recibi PCB id: 1
+[INFO] 23:54:25:173 Cpu/(188319:188325): Listo para ejecutar SIGNAL 
+[INFO] 23:54:25:173 Cpu/(188319:188325): Listo para ejecutar MOV_IN 
+[INFO] 23:54:25:173 Cpu/(188319:188325): Listo para ejecutar F_OPEN 
+[INFO] 23:54:25:173 Cpu/(188319:188325): Listo para ejecutar YIELD, desalojando voluntariamente la cpu en FIFO TAMBIEN?? 
+[INFO] 23:54:25:173 Cpu/(188319:188325): Ejecutando YIELD
+[INFO] 23:54:25:173 Cpu/(188319:188325): Recibi PCB id: 3
+[INFO] 23:54:25:173 Cpu/(188319:188325): En CPU
+[INFO] 23:54:26:174 Cpu/(188319:188325): Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 23:54:26:175 Cpu/(188319:188325): Listo para ejecutar MOV_OUT 
+[INFO] 23:54:26:175 Cpu/(188319:188325): Listo para ejecutar WAIT 
+[INFO] 23:54:26:176 Cpu/(188319:188325): Ejecutando IO parametro 1: 10
+ 
+[INFO] 23:54:26:176 Cpu/(188319:188325): Recibi PCB id: 1
+[INFO] 23:54:26:176 Cpu/(188319:188325): Listo para ejecutar F_TRUNCATE 
+[INFO] 23:54:26:177 Cpu/(188319:188325): Listo para ejecutar F_SEEK 
+[INFO] 23:54:26:177 Cpu/(188319:188325): Listo para ejecutar CREATE_SEGMENT 
+[INFO] 23:54:26:177 Cpu/(188319:188325): Listo para ejecutar F_WRITE 
+[INFO] 23:54:26:177 Cpu/(188319:188325): Listo para ejecutar F_READ 
+[INFO] 23:54:26:177 Cpu/(188319:188325): Listo para ejecutar DELETE_SEGMENT 
+[INFO] 23:54:26:177 Cpu/(188319:188325): Listo para ejecutar F_CLOSE 
+[INFO] 23:54:26:177 Cpu/(188319:188325): a morir proceso!!!!
+[INFO] 23:54:26:177 Cpu/(188319:188325): Ejecutando EXIT
+[INFO] 23:54:26:180 Cpu/(188319:188325): Recibi PCB id: 2
+[INFO] 23:54:26:180 Cpu/(188319:188325): Listo para ejecutar SIGNAL 
+[INFO] 23:54:26:180 Cpu/(188319:188325): Listo para ejecutar MOV_IN 
+[INFO] 23:54:26:180 Cpu/(188319:188325): Listo para ejecutar F_OPEN 
+[INFO] 23:54:26:180 Cpu/(188319:188325): Listo para ejecutar YIELD, desalojando voluntariamente la cpu en FIFO TAMBIEN?? 
+[INFO] 23:54:26:180 Cpu/(188319:188325): Ejecutando YIELD
+[INFO] 23:54:26:181 Cpu/(188319:188325): Recibi PCB id: 2
+[INFO] 23:54:26:181 Cpu/(188319:188325): Listo para ejecutar F_TRUNCATE 
+[INFO] 23:54:26:181 Cpu/(188319:188325): Listo para ejecutar F_SEEK 
+[INFO] 23:54:26:181 Cpu/(188319:188325): Listo para ejecutar CREATE_SEGMENT 
+[INFO] 23:54:26:181 Cpu/(188319:188325): Listo para ejecutar F_WRITE 
+[INFO] 23:54:26:181 Cpu/(188319:188325): Listo para ejecutar F_READ 
+[INFO] 23:54:26:181 Cpu/(188319:188325): Listo para ejecutar DELETE_SEGMENT 
+[INFO] 23:54:26:181 Cpu/(188319:188325): Listo para ejecutar F_CLOSE 
+[INFO] 23:54:26:181 Cpu/(188319:188325): a morir proceso!!!!
+[INFO] 23:54:26:181 Cpu/(188319:188325): Ejecutando EXIT
+[INFO] 23:54:26:191 Cpu/(188319:188325): Recibi PCB id: 3
+[INFO] 23:54:26:191 Cpu/(188319:188325): Listo para ejecutar SIGNAL 
+[INFO] 23:54:26:191 Cpu/(188319:188325): Listo para ejecutar MOV_IN 
+[INFO] 23:54:26:191 Cpu/(188319:188325): Listo para ejecutar F_OPEN 
+[INFO] 23:54:26:191 Cpu/(188319:188325): Listo para ejecutar YIELD, desalojando voluntariamente la cpu en FIFO TAMBIEN?? 
+[INFO] 23:54:26:191 Cpu/(188319:188325): Ejecutando YIELD
+[INFO] 23:54:26:192 Cpu/(188319:188325): Recibi PCB id: 3
+[INFO] 23:54:26:192 Cpu/(188319:188325): Listo para ejecutar F_TRUNCATE 
+[INFO] 23:54:26:192 Cpu/(188319:188325): Listo para ejecutar F_SEEK 
+[INFO] 23:54:26:192 Cpu/(188319:188325): Listo para ejecutar CREATE_SEGMENT 
+[INFO] 23:54:26:192 Cpu/(188319:188325): Listo para ejecutar F_WRITE 
+[INFO] 23:54:26:192 Cpu/(188319:188325): Listo para ejecutar F_READ 
+[INFO] 23:54:26:192 Cpu/(188319:188325): Listo para ejecutar DELETE_SEGMENT 
+[INFO] 23:54:26:192 Cpu/(188319:188325): Listo para ejecutar F_CLOSE 
+[INFO] 23:54:26:192 Cpu/(188319:188325): a morir proceso!!!!
+[INFO] 23:54:26:192 Cpu/(188319:188325): Ejecutando EXIT
+[INFO] 23:59:30:926 Cpu/(188319:188325): Se ha finalizado la conexion
+[INFO] 00:08:03:447 Cpu/(188806:188806): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 00:08:03:450 Cpu/(188806:188806): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 00:08:03:450 Cpu/(188806:188806): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 00:08:34:360 Cpu/(188806:188806): Cliente conectado (a CPU_SV)
+
+[INFO] 00:08:36:932 Cpu/(188806:188811): Recibi PCB id: 0
+[INFO] 00:08:36:932 Cpu/(188806:188811): En CPU
+[INFO] 00:08:37:932 Cpu/(188806:188811): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 00:08:37:932 Cpu/(188806:188811): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 00:08:37:932 Cpu/(188806:188811): PID: 0 -  Listo para ejecutar WAIT 
+[INFO] 00:08:37:932 Cpu/(188806:188811): PID: 0 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 00:08:37:932 Cpu/(188806:188811): Recibi PCB id: 1
+[INFO] 00:08:37:932 Cpu/(188806:188811): En CPU
+[INFO] 00:08:38:933 Cpu/(188806:188811): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 00:08:38:934 Cpu/(188806:188811): PID: 1 -  Listo para ejecutar MOV_OUT 
+[INFO] 00:08:38:934 Cpu/(188806:188811): PID: 1 -  Listo para ejecutar WAIT 
+[INFO] 00:08:38:934 Cpu/(188806:188811): PID: 1 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 00:08:38:934 Cpu/(188806:188811): Recibi PCB id: 0
+[INFO] 00:08:38:934 Cpu/(188806:188811): PID: 0 - Listo para ejecutar SIGNAL 
+[INFO] 00:08:38:934 Cpu/(188806:188811): PID: 0 - Listo para ejecutar MOV_IN 
+[INFO] 00:08:38:934 Cpu/(188806:188811): PID: 0 - Listo para ejecutar F_OPEN 
+[INFO] 00:08:38:934 Cpu/(188806:188811): PID: 0 - Ejecutando YIELD 
+[INFO] 00:08:38:934 Cpu/(188806:188811): Recibi PCB id: 2
+[INFO] 00:08:38:934 Cpu/(188806:188811): En CPU
+[INFO] 00:08:39:934 Cpu/(188806:188811): PID: 2 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 00:08:39:935 Cpu/(188806:188811): PID: 2 -  Listo para ejecutar MOV_OUT 
+[INFO] 00:08:39:935 Cpu/(188806:188811): PID: 2 -  Listo para ejecutar WAIT 
+[INFO] 00:08:39:935 Cpu/(188806:188811): PID: 2 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 00:08:39:935 Cpu/(188806:188811): Recibi PCB id: 0
+[INFO] 00:08:39:935 Cpu/(188806:188811): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 00:08:39:935 Cpu/(188806:188811): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 00:08:39:935 Cpu/(188806:188811): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 00:08:39:935 Cpu/(188806:188811): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 00:08:39:936 Cpu/(188806:188811): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 00:08:39:936 Cpu/(188806:188811): PID: 0 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 00:08:39:936 Cpu/(188806:188811): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 00:08:39:936 Cpu/(188806:188811): a morir proceso!!!!
+[INFO] 00:08:39:936 Cpu/(188806:188811): PID: 0 - Ejecutando EXIT
+[INFO] 00:08:39:937 Cpu/(188806:188811): Recibi PCB id: 1
+[INFO] 00:08:39:937 Cpu/(188806:188811): PID: 1 - Listo para ejecutar SIGNAL 
+[INFO] 00:08:39:937 Cpu/(188806:188811): PID: 1 - Listo para ejecutar MOV_IN 
+[INFO] 00:08:39:937 Cpu/(188806:188811): PID: 1 - Listo para ejecutar F_OPEN 
+[INFO] 00:08:39:937 Cpu/(188806:188811): PID: 1 - Ejecutando YIELD 
+[INFO] 00:08:39:938 Cpu/(188806:188811): Recibi PCB id: 1
+[INFO] 00:08:39:938 Cpu/(188806:188811): PID: 1 - Listo para ejecutar F_TRUNCATE 
+[INFO] 00:08:39:938 Cpu/(188806:188811): PID: 1 - Listo para ejecutar F_SEEK 
+[INFO] 00:08:39:938 Cpu/(188806:188811): PID: 1 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 00:08:39:938 Cpu/(188806:188811): PID: 1 - Listo para ejecutar F_WRITE 
+[INFO] 00:08:39:938 Cpu/(188806:188811): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 00:08:39:938 Cpu/(188806:188811): PID: 1 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 00:08:39:938 Cpu/(188806:188811): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 00:08:39:938 Cpu/(188806:188811): a morir proceso!!!!
+[INFO] 00:08:39:938 Cpu/(188806:188811): PID: 1 - Ejecutando EXIT
+[INFO] 00:08:39:941 Cpu/(188806:188811): Recibi PCB id: 2
+[INFO] 00:08:39:941 Cpu/(188806:188811): PID: 2 - Listo para ejecutar SIGNAL 
+[INFO] 00:08:39:941 Cpu/(188806:188811): PID: 2 - Listo para ejecutar MOV_IN 
+[INFO] 00:08:39:941 Cpu/(188806:188811): PID: 2 - Listo para ejecutar F_OPEN 
+[INFO] 00:08:39:941 Cpu/(188806:188811): PID: 2 - Ejecutando YIELD 
+[INFO] 00:08:39:941 Cpu/(188806:188811): Recibi PCB id: 2
+[INFO] 00:08:39:941 Cpu/(188806:188811): PID: 2 - Listo para ejecutar F_TRUNCATE 
+[INFO] 00:08:39:941 Cpu/(188806:188811): PID: 2 - Listo para ejecutar F_SEEK 
+[INFO] 00:08:39:941 Cpu/(188806:188811): PID: 2 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 00:08:39:941 Cpu/(188806:188811): PID: 2 - Listo para ejecutar F_WRITE 
+[INFO] 00:08:39:941 Cpu/(188806:188811): PID: 2 - Listo para ejecutar F_READ 
+[INFO] 00:08:39:941 Cpu/(188806:188811): PID: 2 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 00:08:39:941 Cpu/(188806:188811): PID: 2 - Listo para ejecutar F_CLOSE 
+[INFO] 00:08:39:941 Cpu/(188806:188811): a morir proceso!!!!
+[INFO] 00:08:39:941 Cpu/(188806:188811): PID: 2 - Ejecutando EXIT
+[INFO] 00:09:59:854 Cpu/(188806:188811): Se ha finalizado la conexion

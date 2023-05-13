@@ -66,73 +66,72 @@ int decode(INSTRUCCION* instruccion_ejecutar ){
 int execute(INSTRUCCION* instruccion_ejecutar,char* registros,uint16_t pid, uint32_t pc){
 
 	if(!strcmp(instruccion_ejecutar->comando,"SET") && pc == 0){
-			log_info(logger,"Ejecutando SET parametro 1: %s parametro 2: %s",instruccion_ejecutar->parametro1,instruccion_ejecutar->parametro2);
+			log_info(logger,"PID: %d - Ejecutando SET parametro 1: %s parametro 2: %s", pid,instruccion_ejecutar->parametro1,instruccion_ejecutar->parametro2);
 			registros = instruccion_ejecutar->parametro2;
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"MOV_OUT") && pc == 1){
 
-					log_info(logger,"Listo para ejecutar MOV_OUT ");
+					log_info(logger,"PID: %d -  Listo para ejecutar MOV_OUT ", pid);
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"WAIT") && pc == 2){
 
-			log_info(logger,"Listo para ejecutar WAIT ");
+			log_info(logger,"PID: %d -  Listo para ejecutar WAIT ", pid);
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"I/O") && pc == 3){
 
-			log_info(logger,"Ejecutando IO parametro 1: %s ",instruccion_ejecutar->parametro1);
-			//return IO;
+			log_info(logger,"PID: %d - Ejecutando IO parametro 1: %s ", pid,instruccion_ejecutar->parametro1);
+			return IO;
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"SIGNAL") && pc == 4){
 
-			log_info(logger,"Listo para ejecutar SIGNAL ");
+			log_info(logger,"PID: %d - Listo para ejecutar SIGNAL ", pid);
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"MOV_IN") && pc == 5){
 
-			log_info(logger,"Listo para ejecutar MOV_IN ");
+			log_info(logger,"PID: %d - Listo para ejecutar MOV_IN ", pid);
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"F_OPEN") && pc == 6){
 
-			log_info(logger,"Listo para ejecutar F_OPEN ");
+			log_info(logger,"PID: %d - Listo para ejecutar F_OPEN ", pid);
 
 		}else if(!strcmp(strtok(instruccion_ejecutar->comando, "\n"),"YIELD") && pc == 7){
 
-			log_info(logger,"Listo para ejecutar YIELD, desalojando voluntariamente la cpu en FIFO TAMBIEN?? ");
-			log_info(logger,"Ejecutando YIELD");
+			log_info(logger,"PID: %d - Ejecutando YIELD ", pid);
 
 			return YIELD;
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"F_TRUNCATE") && pc == 8){
 
-			log_info(logger,"Listo para ejecutar F_TRUNCATE ");
+			log_info(logger,"PID: %d - Listo para ejecutar F_TRUNCATE ", pid);
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"F_SEEK") && pc == 9){
 
-			log_info(logger,"Listo para ejecutar F_SEEK ");
+			log_info(logger,"PID: %d - Listo para ejecutar F_SEEK ", pid);
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"CREATE_SEGMENT") && pc == 10){
 
-			log_info(logger,"Listo para ejecutar CREATE_SEGMENT ");
+			log_info(logger,"PID: %d - Listo para ejecutar CREATE_SEGMENT ", pid);
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"F_WRITE") && pc == 11){
 
-			log_info(logger,"Listo para ejecutar F_WRITE ");
+			log_info(logger,"PID: %d - Listo para ejecutar F_WRITE ", pid);
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"F_READ") && pc == 12){
 
-			log_info(logger,"Listo para ejecutar F_READ ");
+			log_info(logger,"PID: %d - Listo para ejecutar F_READ ", pid);
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"DELETE_SEGMENT") && pc == 13){
 
-			log_info(logger,"Listo para ejecutar DELETE_SEGMENT ");
+			log_info(logger,"PID: %d - Listo para ejecutar DELETE_SEGMENT ", pid);
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"F_CLOSE") && pc == 14){
 
-			log_info(logger,"Listo para ejecutar F_CLOSE ");
+			log_info(logger,"PID: %d - Listo para ejecutar F_CLOSE ", pid);
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"EXIT") && pc == 15){
 			log_info(logger, "a morir proceso!!!!");
 			//sleep(5);
-			log_info(logger,"Ejecutando EXIT");
+			log_info(logger,"PID: %d - Ejecutando EXIT", pid);
 			//limpiar_tlb();
 			return EXIT;
 		}else{
