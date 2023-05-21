@@ -35,6 +35,7 @@ typedef struct {
 extern t_config_kernel * configuracion;
 extern t_config * fd_configuracion;
 extern t_log * logger;
+extern t_list* t_list_recursos;
 
 int cargarConfiguracion();
 

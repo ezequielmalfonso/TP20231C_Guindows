@@ -11,6 +11,8 @@ t_config_kernel * configuracion;
 t_config * fd_configuracion;
 t_log * logger;
 
+t_list* lista_de_recursos;
+
 int configValida(t_config* fd_configuracion) {
 	return (config_has_property(fd_configuracion, "IP_MEMORIA")
 		&& config_has_property(fd_configuracion, "PUERTO_MEMORIA")
@@ -28,6 +30,9 @@ int configValida(t_config* fd_configuracion) {
 }
 
 int cargarConfiguracion() {
+	int total_recursos = 0;
+	int i = 0;
+
 	logger = log_create("LogKernel.log", "Kernel", 1, LOG_LEVEL_INFO);
 	configuracion = malloc(sizeof(t_config_kernel));
 
@@ -52,8 +57,24 @@ int cargarConfiguracion() {
 	configuracion->ESTIMACION_INICIAL 			= config_get_int_value(fd_configuracion, "ESTIMACION_INICIAL");
 	configuracion->HRRN_ALFA 					= config_get_double_value(fd_configuracion, "HRRN_ALFA");
 	configuracion->GRADO_MAX_MULTIPROGRAMACION 	= config_get_int_value(fd_configuracion, "GRADO_MAX_MULTIPROGRAMACION");
-	configuracion->RECURSOS 					= config_get_string_value(fd_configuracion, "RECURSOS");
-	configuracion->INSTANCIAS_RECURSOS 			= config_get_string_value(fd_configuracion, "INSTANCIAS_RECURSOS");
+	configuracion->RECURSOS 					= config_get_array_value(fd_configuracion, "RECURSOS");
+	configuracion->INSTANCIAS_RECURSOS 			= config_get_array_value(fd_configuracion, "INSTANCIAS_RECURSOS");
+
+
+	//Armo la lista de recursos con sus instancias iniciales.
+	lista_de_recursos = list_create();
+
+/*
+	log_info(logger, "Cantidad de recursos disponibles: %s ", configuracion->RECURSOS[0]);
+
+
+	while(configuracion->RECURSOS[i] != NULL)
+	{
+		log_info(logger, "Recursos disponible: %s con %s instancias", configuracion->RECURSOS[i],configuracion->INSTANCIAS_RECURSOS[i] );
+		i++;
+	}*/
+
+
 
 	log_info(logger,
 		"\nIP_MEMORIA: %s\n"
@@ -66,9 +87,9 @@ int cargarConfiguracion() {
 		"ALGORITMO_PLANIFICACION: %s\n"
 		"ESTIMACION_INICIAL: %d\n"
 		"HRRN_ALFA: %.2f\n"
-		"GRADO_MAX_MULTIPROGRAMACION: %d\n"
-		"RECURSOS: %s\n"
-		"INSTANCIAS_RECURSOS: %s\n",
+		"GRADO_MAX_MULTIPROGRAMACION: %d\n",
+		//"RECURSOS: %s\n"
+		//"INSTANCIAS_RECURSOS: %s\n",
 		configuracion->IP_MEMORIA,
 		configuracion->PUERTO_MEMORIA,
 		configuracion->IP_FILESYSTEM,
@@ -79,10 +100,19 @@ int cargarConfiguracion() {
 		configuracion->ALGORITMO_PLANIFICACION,
 		configuracion->ESTIMACION_INICIAL,
 		configuracion->HRRN_ALFA,
-		configuracion->GRADO_MAX_MULTIPROGRAMACION,
-		configuracion->RECURSOS,
-		configuracion->INSTANCIAS_RECURSOS   //, HAY QUE VER COMO MOSTRARLOS PORQUE SON LISTAS
+		configuracion->GRADO_MAX_MULTIPROGRAMACION
+		//configuracion->RECURSOS,
+		//configuracion->INSTANCIAS_RECURSOS   //, HAY QUE VER COMO MOSTRARLOS PORQUE SON LISTAS
 	    );
+
+
+	while(configuracion->RECURSOS[total_recursos] != NULL)
+	{
+		log_info(logger, "RECURSO: %s con %d instancias", configuracion->RECURSOS[total_recursos],atoi(configuracion->INSTANCIAS_RECURSOS[total_recursos]) );
+		total_recursos++;
+	}
+	log_info(logger, "Cantidad de recursos disponibles: %d ", total_recursos);
+
 	return 0;
 }
 

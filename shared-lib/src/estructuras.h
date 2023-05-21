@@ -21,4 +21,9 @@ typedef struct{
 	uint32_t tamanio_segmento;
 }t_segmento;
 
+typedef struct {
+    char* recurso;
+    uint16_t instancias;
+}t_recurso;
+
 
