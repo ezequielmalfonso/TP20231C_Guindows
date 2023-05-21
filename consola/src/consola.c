@@ -39,7 +39,7 @@ int main(int argc, char** argv) {
 				recv(kernel_fd,&cod,sizeof(op_code),MSG_WAITALL);
 				switch(cod){
 					case EXIT:
-						log_info(logger, "Se realizo el envio se desconecto del kernel");
+						log_info(logger, "Se realizo el envio se desconecto del kernel - Finalizo consola por EXIT");
 						limpiarConfiguracion();
 						exit(-1);
 					break;

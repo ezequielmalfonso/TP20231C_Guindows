@@ -52,8 +52,8 @@ int cargarConfiguracion() {
 	configuracion->ESTIMACION_INICIAL 			= config_get_int_value(fd_configuracion, "ESTIMACION_INICIAL");
 	configuracion->HRRN_ALFA 					= config_get_double_value(fd_configuracion, "HRRN_ALFA");
 	configuracion->GRADO_MAX_MULTIPROGRAMACION 	= config_get_int_value(fd_configuracion, "GRADO_MAX_MULTIPROGRAMACION");
-	configuracion->RECURSOS 					= config_get_int_value(fd_configuracion, "RECURSOS");
-	configuracion->INSTANCIAS_RECURSOS 			= config_get_int_value(fd_configuracion, "INSTANCIAS_RECURSOS");
+	configuracion->RECURSOS 					= config_get_string_value(fd_configuracion, "RECURSOS");
+	configuracion->INSTANCIAS_RECURSOS 			= config_get_string_value(fd_configuracion, "INSTANCIAS_RECURSOS");
 
 	log_info(logger,
 		"\nIP_MEMORIA: %s\n"
@@ -66,9 +66,9 @@ int cargarConfiguracion() {
 		"ALGORITMO_PLANIFICACION: %s\n"
 		"ESTIMACION_INICIAL: %d\n"
 		"HRRN_ALFA: %.2f\n"
-		"GRADO_MAX_MULTIPROGRAMACION: %d\n",
-		//"RECURSOS: %d\n"
-		//"INSTANCIAS_RECURSOS: %d\n"
+		"GRADO_MAX_MULTIPROGRAMACION: %d\n"
+		"RECURSOS: %s\n"
+		"INSTANCIAS_RECURSOS: %s\n",
 		configuracion->IP_MEMORIA,
 		configuracion->PUERTO_MEMORIA,
 		configuracion->IP_FILESYSTEM,
@@ -79,9 +79,9 @@ int cargarConfiguracion() {
 		configuracion->ALGORITMO_PLANIFICACION,
 		configuracion->ESTIMACION_INICIAL,
 		configuracion->HRRN_ALFA,
-		configuracion->GRADO_MAX_MULTIPROGRAMACION
-		//configuracion->RECURSOS,
-		//configuracion->INSTANCIAS_RECURSOS), HAY QUE VER COMO MOSTRARLOS PORQUE SON LISTAS
+		configuracion->GRADO_MAX_MULTIPROGRAMACION,
+		configuracion->RECURSOS,
+		configuracion->INSTANCIAS_RECURSOS   //, HAY QUE VER COMO MOSTRARLOS PORQUE SON LISTAS
 	    );
 	return 0;
 }

@@ -4985,3 +4985,380 @@ TAM_MAX_SEGMENTO: 128
 [INFO] 00:08:39:941 Cpu/(188806:188811): a morir proceso!!!!
 [INFO] 00:08:39:941 Cpu/(188806:188811): PID: 2 - Ejecutando EXIT
 [INFO] 00:09:59:854 Cpu/(188806:188811): Se ha finalizado la conexion
+[INFO] 21:29:21:796 Cpu/(29062:29062): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 21:29:21:799 Cpu/(29062:29062): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:29:21:800 Cpu/(29062:29062): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 21:29:26:675 Cpu/(29062:29062): Cliente conectado (a CPU_SV)
+
+[INFO] 21:29:36:240 Cpu/(29062:29067): Recibi PCB id: 0
+[INFO] 21:29:36:240 Cpu/(29062:29067): En CPU
+[INFO] 21:29:37:241 Cpu/(29062:29067): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 21:29:37:241 Cpu/(29062:29067): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 21:29:37:241 Cpu/(29062:29067): PID: 0 -  Listo para ejecutar WAIT 
+[INFO] 21:29:37:241 Cpu/(29062:29067): PID: 0 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 21:29:37:244 Cpu/(29062:29067): Recibi PCB id: 0
+[INFO] 21:29:37:244 Cpu/(29062:29067): PID: 0 - Listo para ejecutar SIGNAL 
+[INFO] 21:29:37:244 Cpu/(29062:29067): PID: 0 - Listo para ejecutar MOV_IN 
+[INFO] 21:29:37:244 Cpu/(29062:29067): PID: 0 - Listo para ejecutar F_OPEN 
+[INFO] 21:29:37:244 Cpu/(29062:29067): PID: 0 - Ejecutando YIELD 
+[INFO] 21:29:37:244 Cpu/(29062:29067): Recibi PCB id: 0
+[INFO] 21:29:37:244 Cpu/(29062:29067): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 21:29:37:244 Cpu/(29062:29067): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 21:29:37:244 Cpu/(29062:29067): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 21:29:37:244 Cpu/(29062:29067): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 21:29:37:244 Cpu/(29062:29067): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 21:29:37:244 Cpu/(29062:29067): PID: 0 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 21:29:37:245 Cpu/(29062:29067): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 21:29:37:245 Cpu/(29062:29067): a morir proceso!!!!
+[INFO] 21:29:37:245 Cpu/(29062:29067): PID: 0 - Ejecutando EXIT
+[INFO] 21:29:59:545 Cpu/(29062:29067): Recibi PCB id: 1
+[INFO] 21:29:59:545 Cpu/(29062:29067): En CPU
+[INFO] 21:30:00:545 Cpu/(29062:29067): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 21:30:00:546 Cpu/(29062:29067): PID: 1 -  Listo para ejecutar MOV_OUT 
+[INFO] 21:30:00:546 Cpu/(29062:29067): PID: 1 -  Listo para ejecutar WAIT 
+[INFO] 21:30:00:546 Cpu/(29062:29067): PID: 1 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 21:30:00:546 Cpu/(29062:29067): Recibi PCB id: 2
+[INFO] 21:30:00:546 Cpu/(29062:29067): En CPU
+[INFO] 21:30:01:547 Cpu/(29062:29067): PID: 2 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 21:30:01:547 Cpu/(29062:29067): PID: 2 -  Listo para ejecutar MOV_OUT 
+[INFO] 21:30:01:547 Cpu/(29062:29067): PID: 2 -  Listo para ejecutar WAIT 
+[INFO] 21:30:01:547 Cpu/(29062:29067): PID: 2 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 21:30:01:548 Cpu/(29062:29067): Recibi PCB id: 1
+[INFO] 21:30:01:548 Cpu/(29062:29067): PID: 1 - Listo para ejecutar SIGNAL 
+[INFO] 21:30:01:548 Cpu/(29062:29067): PID: 1 - Listo para ejecutar MOV_IN 
+[INFO] 21:30:01:548 Cpu/(29062:29067): PID: 1 - Listo para ejecutar F_OPEN 
+[INFO] 21:30:01:548 Cpu/(29062:29067): PID: 1 - Ejecutando YIELD 
+[INFO] 21:30:01:548 Cpu/(29062:29067): Recibi PCB id: 1
+[INFO] 21:30:01:548 Cpu/(29062:29067): PID: 1 - Listo para ejecutar F_TRUNCATE 
+[INFO] 21:30:01:548 Cpu/(29062:29067): PID: 1 - Listo para ejecutar F_SEEK 
+[INFO] 21:30:01:548 Cpu/(29062:29067): PID: 1 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 21:30:01:548 Cpu/(29062:29067): PID: 1 - Listo para ejecutar F_WRITE 
+[INFO] 21:30:01:548 Cpu/(29062:29067): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 21:30:01:548 Cpu/(29062:29067): PID: 1 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 21:30:01:548 Cpu/(29062:29067): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 21:30:01:549 Cpu/(29062:29067): a morir proceso!!!!
+[INFO] 21:30:01:549 Cpu/(29062:29067): PID: 1 - Ejecutando EXIT
+[INFO] 21:30:01:552 Cpu/(29062:29067): Recibi PCB id: 2
+[INFO] 21:30:01:552 Cpu/(29062:29067): PID: 2 - Listo para ejecutar SIGNAL 
+[INFO] 21:30:01:552 Cpu/(29062:29067): PID: 2 - Listo para ejecutar MOV_IN 
+[INFO] 21:30:01:552 Cpu/(29062:29067): PID: 2 - Listo para ejecutar F_OPEN 
+[INFO] 21:30:01:552 Cpu/(29062:29067): PID: 2 - Ejecutando YIELD 
+[INFO] 21:30:01:553 Cpu/(29062:29067): Recibi PCB id: 2
+[INFO] 21:30:01:553 Cpu/(29062:29067): PID: 2 - Listo para ejecutar F_TRUNCATE 
+[INFO] 21:30:01:553 Cpu/(29062:29067): PID: 2 - Listo para ejecutar F_SEEK 
+[INFO] 21:30:01:553 Cpu/(29062:29067): PID: 2 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 21:30:01:553 Cpu/(29062:29067): PID: 2 - Listo para ejecutar F_WRITE 
+[INFO] 21:30:01:553 Cpu/(29062:29067): PID: 2 - Listo para ejecutar F_READ 
+[INFO] 21:30:01:553 Cpu/(29062:29067): PID: 2 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 21:30:01:553 Cpu/(29062:29067): PID: 2 - Listo para ejecutar F_CLOSE 
+[INFO] 21:30:01:553 Cpu/(29062:29067): a morir proceso!!!!
+[INFO] 21:30:01:553 Cpu/(29062:29067): PID: 2 - Ejecutando EXIT
+[INFO] 21:30:10:909 Cpu/(29062:29067): Recibi PCB id: 3
+[INFO] 21:30:10:909 Cpu/(29062:29067): En CPU
+[INFO] 21:30:11:911 Cpu/(29062:29067): PID: 3 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 21:30:11:911 Cpu/(29062:29067): PID: 3 -  Listo para ejecutar MOV_OUT 
+[INFO] 21:30:11:911 Cpu/(29062:29067): PID: 3 -  Listo para ejecutar WAIT 
+[INFO] 21:30:11:911 Cpu/(29062:29067): PID: 3 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 21:30:11:912 Cpu/(29062:29067): Recibi PCB id: 4
+[INFO] 21:30:11:912 Cpu/(29062:29067): En CPU
+[INFO] 21:30:12:912 Cpu/(29062:29067): PID: 4 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 21:30:12:912 Cpu/(29062:29067): PID: 4 -  Listo para ejecutar MOV_OUT 
+[INFO] 21:30:12:912 Cpu/(29062:29067): PID: 4 -  Listo para ejecutar WAIT 
+[INFO] 21:30:12:912 Cpu/(29062:29067): PID: 4 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 21:30:12:913 Cpu/(29062:29067): Recibi PCB id: 3
+[INFO] 21:30:12:913 Cpu/(29062:29067): PID: 3 - Listo para ejecutar SIGNAL 
+[INFO] 21:30:12:913 Cpu/(29062:29067): PID: 3 - Listo para ejecutar MOV_IN 
+[INFO] 21:30:12:913 Cpu/(29062:29067): PID: 3 - Listo para ejecutar F_OPEN 
+[INFO] 21:30:12:913 Cpu/(29062:29067): PID: 3 - Ejecutando YIELD 
+[INFO] 21:30:12:914 Cpu/(29062:29067): Recibi PCB id: 5
+[INFO] 21:30:12:914 Cpu/(29062:29067): En CPU
+[INFO] 21:30:13:914 Cpu/(29062:29067): PID: 5 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 21:30:13:914 Cpu/(29062:29067): PID: 5 -  Listo para ejecutar MOV_OUT 
+[INFO] 21:30:13:914 Cpu/(29062:29067): PID: 5 -  Listo para ejecutar WAIT 
+[INFO] 21:30:13:914 Cpu/(29062:29067): PID: 5 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 21:30:13:915 Cpu/(29062:29067): Recibi PCB id: 3
+[INFO] 21:30:13:915 Cpu/(29062:29067): PID: 3 - Listo para ejecutar F_TRUNCATE 
+[INFO] 21:30:13:915 Cpu/(29062:29067): PID: 3 - Listo para ejecutar F_SEEK 
+[INFO] 21:30:13:915 Cpu/(29062:29067): PID: 3 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 21:30:13:915 Cpu/(29062:29067): PID: 3 - Listo para ejecutar F_WRITE 
+[INFO] 21:30:13:915 Cpu/(29062:29067): PID: 3 - Listo para ejecutar F_READ 
+[INFO] 21:30:13:915 Cpu/(29062:29067): PID: 3 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 21:30:13:915 Cpu/(29062:29067): PID: 3 - Listo para ejecutar F_CLOSE 
+[INFO] 21:30:13:915 Cpu/(29062:29067): a morir proceso!!!!
+[INFO] 21:30:13:915 Cpu/(29062:29067): PID: 3 - Ejecutando EXIT
+[INFO] 21:30:13:916 Cpu/(29062:29067): Recibi PCB id: 4
+[INFO] 21:30:13:916 Cpu/(29062:29067): PID: 4 - Listo para ejecutar SIGNAL 
+[INFO] 21:30:13:916 Cpu/(29062:29067): PID: 4 - Listo para ejecutar MOV_IN 
+[INFO] 21:30:13:916 Cpu/(29062:29067): PID: 4 - Listo para ejecutar F_OPEN 
+[INFO] 21:30:13:916 Cpu/(29062:29067): PID: 4 - Ejecutando YIELD 
+[INFO] 21:30:13:917 Cpu/(29062:29067): Recibi PCB id: 4
+[INFO] 21:30:13:917 Cpu/(29062:29067): PID: 4 - Listo para ejecutar F_TRUNCATE 
+[INFO] 21:30:13:917 Cpu/(29062:29067): PID: 4 - Listo para ejecutar F_SEEK 
+[INFO] 21:30:13:917 Cpu/(29062:29067): PID: 4 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 21:30:13:917 Cpu/(29062:29067): PID: 4 - Listo para ejecutar F_WRITE 
+[INFO] 21:30:13:917 Cpu/(29062:29067): PID: 4 - Listo para ejecutar F_READ 
+[INFO] 21:30:13:917 Cpu/(29062:29067): PID: 4 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 21:30:13:917 Cpu/(29062:29067): PID: 4 - Listo para ejecutar F_CLOSE 
+[INFO] 21:30:13:917 Cpu/(29062:29067): a morir proceso!!!!
+[INFO] 21:30:13:917 Cpu/(29062:29067): PID: 4 - Ejecutando EXIT
+[INFO] 21:30:13:920 Cpu/(29062:29067): Recibi PCB id: 5
+[INFO] 21:30:13:920 Cpu/(29062:29067): PID: 5 - Listo para ejecutar SIGNAL 
+[INFO] 21:30:13:920 Cpu/(29062:29067): PID: 5 - Listo para ejecutar MOV_IN 
+[INFO] 21:30:13:920 Cpu/(29062:29067): PID: 5 - Listo para ejecutar F_OPEN 
+[INFO] 21:30:13:920 Cpu/(29062:29067): PID: 5 - Ejecutando YIELD 
+[INFO] 21:30:13:921 Cpu/(29062:29067): Recibi PCB id: 5
+[INFO] 21:30:13:921 Cpu/(29062:29067): PID: 5 - Listo para ejecutar F_TRUNCATE 
+[INFO] 21:30:13:921 Cpu/(29062:29067): PID: 5 - Listo para ejecutar F_SEEK 
+[INFO] 21:30:13:921 Cpu/(29062:29067): PID: 5 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 21:30:13:921 Cpu/(29062:29067): PID: 5 - Listo para ejecutar F_WRITE 
+[INFO] 21:30:13:921 Cpu/(29062:29067): PID: 5 - Listo para ejecutar F_READ 
+[INFO] 21:30:13:921 Cpu/(29062:29067): PID: 5 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 21:30:13:921 Cpu/(29062:29067): PID: 5 - Listo para ejecutar F_CLOSE 
+[INFO] 21:30:13:921 Cpu/(29062:29067): a morir proceso!!!!
+[INFO] 21:30:13:921 Cpu/(29062:29067): PID: 5 - Ejecutando EXIT
+[INFO] 21:30:21:575 Cpu/(29062:29067): Se ha finalizado la conexion
+[INFO] 18:53:22:475 Cpu/(30815:30815): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[ERROR] 18:53:22:477 Cpu/(30815:30815): Error al conectar (a MEMORIA)
+
+[INFO] 18:53:22:478 Cpu/(30815:30815): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 18:54:24:283 Cpu/(30836:30836): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 18:54:24:285 Cpu/(30836:30836): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:54:24:286 Cpu/(30836:30836): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 18:54:29:602 Cpu/(30836:30836): Cliente conectado (a CPU_SV)
+
+[INFO] 18:54:37:760 Cpu/(30836:30841): Recibi PCB id: 0
+[INFO] 18:54:37:760 Cpu/(30836:30841): En CPU
+[INFO] 18:54:38:762 Cpu/(30836:30841): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 18:54:38:762 Cpu/(30836:30841): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:54:38:762 Cpu/(30836:30841): PID: 0 -  Listo para ejecutar WAIT 
+[INFO] 18:54:38:762 Cpu/(30836:30841): PID: 0 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 18:54:38:763 Cpu/(30836:30841): Recibi PCB id: 1
+[INFO] 18:54:38:764 Cpu/(30836:30841): En CPU
+[INFO] 18:54:39:764 Cpu/(30836:30841): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 18:54:39:764 Cpu/(30836:30841): PID: 1 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:54:39:765 Cpu/(30836:30841): PID: 1 -  Listo para ejecutar WAIT 
+[INFO] 18:54:39:765 Cpu/(30836:30841): PID: 1 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 18:54:39:765 Cpu/(30836:30841): Recibi PCB id: 0
+[INFO] 18:54:39:765 Cpu/(30836:30841): PID: 0 - Listo para ejecutar SIGNAL 
+[INFO] 18:54:39:765 Cpu/(30836:30841): PID: 0 - Listo para ejecutar MOV_IN 
+[INFO] 18:54:39:766 Cpu/(30836:30841): PID: 0 - Listo para ejecutar F_OPEN 
+[INFO] 18:54:39:766 Cpu/(30836:30841): PID: 0 - Ejecutando YIELD 
+[INFO] 18:54:39:766 Cpu/(30836:30841): Recibi PCB id: 2
+[INFO] 18:54:39:766 Cpu/(30836:30841): En CPU
+[INFO] 18:54:40:766 Cpu/(30836:30841): PID: 2 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 18:54:40:767 Cpu/(30836:30841): PID: 2 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:54:40:767 Cpu/(30836:30841): PID: 2 -  Listo para ejecutar WAIT 
+[INFO] 18:54:40:767 Cpu/(30836:30841): PID: 2 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 18:54:40:768 Cpu/(30836:30841): Recibi PCB id: 0
+[INFO] 18:54:40:768 Cpu/(30836:30841): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 18:54:40:769 Cpu/(30836:30841): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 18:54:40:769 Cpu/(30836:30841): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 18:54:40:769 Cpu/(30836:30841): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 18:54:40:769 Cpu/(30836:30841): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 18:54:40:769 Cpu/(30836:30841): PID: 0 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 18:54:40:769 Cpu/(30836:30841): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 18:54:40:769 Cpu/(30836:30841): a morir proceso!!!!
+[INFO] 18:54:40:769 Cpu/(30836:30841): PID: 0 - Ejecutando EXIT
+[INFO] 18:54:40:771 Cpu/(30836:30841): Recibi PCB id: 1
+[INFO] 18:54:40:771 Cpu/(30836:30841): PID: 1 - Listo para ejecutar SIGNAL 
+[INFO] 18:54:40:771 Cpu/(30836:30841): PID: 1 - Listo para ejecutar MOV_IN 
+[INFO] 18:54:40:771 Cpu/(30836:30841): PID: 1 - Listo para ejecutar F_OPEN 
+[INFO] 18:54:40:771 Cpu/(30836:30841): PID: 1 - Ejecutando YIELD 
+[INFO] 18:54:40:772 Cpu/(30836:30841): Recibi PCB id: 1
+[INFO] 18:54:40:772 Cpu/(30836:30841): PID: 1 - Listo para ejecutar F_TRUNCATE 
+[INFO] 18:54:40:772 Cpu/(30836:30841): PID: 1 - Listo para ejecutar F_SEEK 
+[INFO] 18:54:40:772 Cpu/(30836:30841): PID: 1 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 18:54:40:772 Cpu/(30836:30841): PID: 1 - Listo para ejecutar F_WRITE 
+[INFO] 18:54:40:772 Cpu/(30836:30841): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 18:54:40:772 Cpu/(30836:30841): PID: 1 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 18:54:40:772 Cpu/(30836:30841): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 18:54:40:772 Cpu/(30836:30841): a morir proceso!!!!
+[INFO] 18:54:40:772 Cpu/(30836:30841): PID: 1 - Ejecutando EXIT
+[INFO] 18:54:40:776 Cpu/(30836:30841): Recibi PCB id: 2
+[INFO] 18:54:40:776 Cpu/(30836:30841): PID: 2 - Listo para ejecutar SIGNAL 
+[INFO] 18:54:40:776 Cpu/(30836:30841): PID: 2 - Listo para ejecutar MOV_IN 
+[INFO] 18:54:40:776 Cpu/(30836:30841): PID: 2 - Listo para ejecutar F_OPEN 
+[INFO] 18:54:40:776 Cpu/(30836:30841): PID: 2 - Ejecutando YIELD 
+[INFO] 18:54:40:776 Cpu/(30836:30841): Recibi PCB id: 2
+[INFO] 18:54:40:776 Cpu/(30836:30841): PID: 2 - Listo para ejecutar F_TRUNCATE 
+[INFO] 18:54:40:776 Cpu/(30836:30841): PID: 2 - Listo para ejecutar F_SEEK 
+[INFO] 18:54:40:777 Cpu/(30836:30841): PID: 2 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 18:54:40:777 Cpu/(30836:30841): PID: 2 - Listo para ejecutar F_WRITE 
+[INFO] 18:54:40:777 Cpu/(30836:30841): PID: 2 - Listo para ejecutar F_READ 
+[INFO] 18:54:40:777 Cpu/(30836:30841): PID: 2 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 18:54:40:777 Cpu/(30836:30841): PID: 2 - Listo para ejecutar F_CLOSE 
+[INFO] 18:54:40:777 Cpu/(30836:30841): a morir proceso!!!!
+[INFO] 18:54:40:777 Cpu/(30836:30841): PID: 2 - Ejecutando EXIT
+[INFO] 18:54:49:798 Cpu/(30836:30841): Se ha finalizado la conexion
+[INFO] 19:08:59:110 Cpu/(31373:31373): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 19:08:59:111 Cpu/(31373:31373): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 19:08:59:111 Cpu/(31373:31373): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 19:09:06:048 Cpu/(31373:31373): Cliente conectado (a CPU_SV)
+
+[INFO] 19:11:36:338 Cpu/(31373:31379): Se ha finalizado la conexion
+[INFO] 19:34:18:685 Cpu/(31831:31831): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 19:34:18:686 Cpu/(31831:31831): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 19:34:18:687 Cpu/(31831:31831): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 19:34:21:713 Cpu/(31831:31831): Cliente conectado (a CPU_SV)
+
+[INFO] 19:34:30:952 Cpu/(31831:31836): Recibi PCB id: 0
+[INFO] 19:34:30:952 Cpu/(31831:31836): En CPU
+[INFO] 19:34:31:952 Cpu/(31831:31836): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 19:34:31:952 Cpu/(31831:31836): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 19:34:31:952 Cpu/(31831:31836): PID: 0 -  Listo para ejecutar WAIT 
+[INFO] 19:34:31:952 Cpu/(31831:31836): PID: 0 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 19:34:31:955 Cpu/(31831:31836): Recibi PCB id: 0
+[INFO] 19:34:31:955 Cpu/(31831:31836): PID: 0 - Listo para ejecutar SIGNAL 
+[INFO] 19:34:31:956 Cpu/(31831:31836): PID: 0 - Listo para ejecutar MOV_IN 
+[INFO] 19:34:31:956 Cpu/(31831:31836): PID: 0 - Listo para ejecutar F_OPEN 
+[INFO] 19:34:31:956 Cpu/(31831:31836): PID: 0 - Ejecutando YIELD 
+[INFO] 19:34:31:956 Cpu/(31831:31836): Recibi PCB id: 0
+[INFO] 19:34:31:956 Cpu/(31831:31836): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 19:34:31:956 Cpu/(31831:31836): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 19:34:31:956 Cpu/(31831:31836): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 19:34:31:956 Cpu/(31831:31836): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 19:34:31:956 Cpu/(31831:31836): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 19:34:31:956 Cpu/(31831:31836): PID: 0 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 19:34:31:956 Cpu/(31831:31836): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 19:34:31:956 Cpu/(31831:31836): a morir proceso!!!!
+[INFO] 19:34:31:956 Cpu/(31831:31836): PID: 0 - Ejecutando EXIT
+[INFO] 19:35:37:711 Cpu/(31937:31937): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[ERROR] 19:35:37:713 Cpu/(31937:31937): Error al conectar (a MEMORIA)
+
+[INFO] 19:35:37:713 Cpu/(31937:31937): Cliente conectado (a CPU_SV)
+
+[INFO] 19:37:12:429 Cpu/(32028:32028): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 19:37:12:431 Cpu/(32028:32028): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 19:37:12:431 Cpu/(32028:32028): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 19:37:16:390 Cpu/(32028:32028): Cliente conectado (a CPU_SV)
+
+[INFO] 19:37:19:860 Cpu/(32028:32033): Recibi PCB id: 0
+[INFO] 19:37:19:860 Cpu/(32028:32033): En CPU
+[INFO] 19:37:20:860 Cpu/(32028:32033): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 19:37:20:860 Cpu/(32028:32033): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 19:37:20:860 Cpu/(32028:32033): PID: 0 -  Listo para ejecutar WAIT 
+[INFO] 19:38:13:311 Cpu/(32028:32033): Se ha finalizado la conexion
+[INFO] 19:44:17:953 Cpu/(32224:32224): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 19:44:17:955 Cpu/(32224:32224): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 19:44:17:955 Cpu/(32224:32224): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 19:44:30:844 Cpu/(32224:32224): Cliente conectado (a CPU_SV)
+
+[INFO] 19:44:33:167 Cpu/(32224:32229): Recibi PCB id: 0
+[INFO] 19:44:33:167 Cpu/(32224:32229): En CPU
+[INFO] 19:44:34:167 Cpu/(32224:32229): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 19:44:34:167 Cpu/(32224:32229): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 19:44:34:167 Cpu/(32224:32229): PID: 0 -  Listo para ejecutar WAIT 
+[INFO] 19:46:48:170 Cpu/(32310:32310): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[ERROR] 19:46:48:172 Cpu/(32310:32310): Error al conectar (a MEMORIA)
+
+[INFO] 19:46:48:172 Cpu/(32310:32310): Cliente conectado (a CPU_SV)
+
+[INFO] 19:51:16:503 Cpu/(32633:32633): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 19:51:16:505 Cpu/(32633:32633): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 19:51:16:505 Cpu/(32633:32633): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 19:51:20:414 Cpu/(32633:32633): Cliente conectado (a CPU_SV)
+
+[INFO] 19:51:23:145 Cpu/(32633:32638): Recibi PCB id: 0
+[INFO] 19:51:23:146 Cpu/(32633:32638): En CPU
+[INFO] 19:51:24:146 Cpu/(32633:32638): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 19:51:24:146 Cpu/(32633:32638): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 19:51:24:146 Cpu/(32633:32638): PID: 0 -  Listo para ejecutar WAIT 
+[INFO] 19:51:48:751 Cpu/(32633:32638): Se ha finalizado la conexion

@@ -122,6 +122,12 @@ void esperar_cpu(){
 				sem_post(&s_cpu_desocupado);
 				sem_post(&s_ready_execute);
 				break;
+			case WAIT:
+				// preguntar si va estar siemrpe en el mismo orden la lista de instrucciones
+				// SI NO usar un while
+				 INSTRUCCION* instruccion = list_get(pcb->instrucciones, 2);
+				 log_info(logger, "PID: %d - Recibo pedido de WAIT por RECURSO: %s", pcb->pid, instruccion->parametro1 );
+				 break;
 
 			case YIELD:
 				 log_info(logger, "Recibi YIELD de CPU lo mandamos al final de la cola READY");

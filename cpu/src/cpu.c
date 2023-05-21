@@ -77,6 +77,8 @@ int execute(INSTRUCCION* instruccion_ejecutar,char* registros,uint16_t pid, uint
 
 			log_info(logger,"PID: %d -  Listo para ejecutar WAIT ", pid);
 
+			return WAIT;
+
 		}else if(!strcmp(instruccion_ejecutar->comando,"I/O") && pc == 3){
 
 			log_info(logger,"PID: %d - Ejecutando IO parametro 1: %s ", pid,instruccion_ejecutar->parametro1);
