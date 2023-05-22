@@ -3890,3 +3890,17 @@ RETARDO_ACCESO_BLOQUE: 15000
 [INFO] 23:56:58:801 FileSystem/(210286:210286): Cliente conectado (a FILESYSTEM_SV)
 
 [INFO] 23:57:12:450 FileSystem/(210286:210291): Se ha finalizado la conexion
+[INFO] 21:37:27:575 FileSystem/(35743:35743): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/fs/bloques.dat
+PATH_FCB: /home/utnso/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[INFO] 21:37:27:576 FileSystem/(35743:35743): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:37:27:577 FileSystem/(35743:35743): Escuchando en (null):8003 (FileSystem server)
+

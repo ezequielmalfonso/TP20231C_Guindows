@@ -14,6 +14,7 @@
 #include "commons/log.h"
 #include "commons/config.h"
 #include "commons/collections/list.h"
+//#include "estructuras.h"
 
 typedef struct {
 	char* IP_MEMORIA;

@@ -64,15 +64,15 @@ int cargarConfiguracion() {
 	//Armo la lista de recursos con sus instancias iniciales.
 	lista_de_recursos = list_create();
 
-/*
-	log_info(logger, "Cantidad de recursos disponibles: %s ", configuracion->RECURSOS[0]);
-
-
+	// Agrego cada recurso en una posicion de la lista de recursos disponibles con su cantidad de instancias disponibles
+	// por archivo de configuracion
 	while(configuracion->RECURSOS[i] != NULL)
 	{
-		log_info(logger, "Recursos disponible: %s con %s instancias", configuracion->RECURSOS[i],configuracion->INSTANCIAS_RECURSOS[i] );
+		t_recurso* aux_recurso = malloc(sizeof(t_recurso));
+		strcpy(aux_recurso->recurso, configuracion->RECURSOS[i]);
+		aux_recurso->instancias = atoi(configuracion->INSTANCIAS_RECURSOS[i]);
 		i++;
-	}*/
+	}
 
 
 
