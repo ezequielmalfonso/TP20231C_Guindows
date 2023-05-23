@@ -30,9 +30,8 @@ int configValida(t_config* fd_configuracion) {
 }
 
 int cargarConfiguracion() {
-	int total_recursos = 0;
 	int i = 0;
-
+	int total_recursos = 0;
 	logger = log_create("LogKernel.log", "Kernel", 1, LOG_LEVEL_INFO);
 	configuracion = malloc(sizeof(t_config_kernel));
 
@@ -63,18 +62,24 @@ int cargarConfiguracion() {
 
 	//Armo la lista de recursos con sus instancias iniciales.
 	lista_de_recursos = list_create();
-
+	//string_from_format(configuracion->RECURSOS[i]);
 	// Agrego cada recurso en una posicion de la lista de recursos disponibles con su cantidad de instancias disponibles
 	// por archivo de configuracion
+	//string_from_format(configuracion->RECURSOS[i])
+
 	while(configuracion->RECURSOS[i] != NULL)
 	{
 		t_recurso* aux_recurso = malloc(sizeof(t_recurso));
+		//aux_recurso->recurso =  configuracion->RECURSOS[i];
+		///log_info(logger, "Long %d  RECURSO: %s con %d instancias", strlen(configuracion->RECURSOS[i]), configuracion->RECURSOS[i],atoi(configuracion->INSTANCIAS_RECURSOS[i]) );
+
 		strcpy(aux_recurso->recurso, configuracion->RECURSOS[i]);
 		aux_recurso->instancias = atoi(configuracion->INSTANCIAS_RECURSOS[i]);
+		aux_recurso->cola_bloqueados_recurso = queue_create();
+		list_add(lista_de_recursos, aux_recurso);
+
 		i++;
 	}
-
-
 
 	log_info(logger,
 		"\nIP_MEMORIA: %s\n"
@@ -111,7 +116,7 @@ int cargarConfiguracion() {
 		log_info(logger, "RECURSO: %s con %d instancias", configuracion->RECURSOS[total_recursos],atoi(configuracion->INSTANCIAS_RECURSOS[total_recursos]) );
 		total_recursos++;
 	}
-	log_info(logger, "Cantidad de recursos disponibles: %d ", total_recursos);
+	log_info(logger, "Cantidad total de recursos disponibles: %d ", total_recursos);
 
 	return 0;
 }
@@ -122,3 +127,5 @@ void limpiarConfiguracion() {
 	log_destroy(logger);
 
 }
+
+

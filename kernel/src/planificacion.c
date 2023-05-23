@@ -115,6 +115,7 @@ void esperar_cpu(){
 		//pthread_mutex_lock(&mx_cpu_desocupado);
 		//cpu_desocupado = true;
 		//pthread_mutex_unlock(&mx_cpu_desocupado);
+		log_info(logger, "Pid: %d", pcb->pid);
 		switch (cop) {
 			case EXIT:
 				send(pcb->cliente_fd,&cop,sizeof(op_code),0);
@@ -125,12 +126,39 @@ void esperar_cpu(){
 			case WAIT:
 				// preguntar si va estar siempre en el mismo orden la lista de instrucciones
 				// SI NO usar un while
-				 INSTRUCCION* instruccion = list_get(pcb->instrucciones, 2);
+				 INSTRUCCION* instruccion = list_get(pcb->instrucciones, 2);      // La instruccion 2 es el WAIT
 				 log_info(logger, "PID: %d - Recibo pedido de WAIT por RECURSO: %s", pcb->pid, instruccion->parametro1 );
+
+				 t_link_element* aux_rec1 = lista_de_recursos->head;
+				 uint16_t instancias;
+				 while( aux_rec1!=NULL )
+				 {
+					 t_recurso* aux_rec2 = aux_rec1->data;
+					 if(strcmp(aux_rec2->recurso, instruccion->parametro1))
+					 {
+						 log_info(logger, "Para RECURSO %s hay %d instancias disponibles antes de ejecutar", aux_rec2->recurso, aux_rec2->instancias );
+						 instancias = aux_rec2->instancias;
+						 break;
+					 }
+					 aux_rec1 = aux_rec1->next;
+				 }
+
+				 if(instancias > 0)
+				 { // Si entra es pq va ejecutar la instancia del recurso y resto 1 a la instancia
+					 instancias -= 1;
+					 log_info(logger,"PID: %d - Wait: %s - Instancias: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"), instancias  );
+					 //send_proceso(cpu_fd, pcb,DISPATCH);
+
+					/* sem_post(&s_esperar_cpu);
+					 sem_post(&s_ready_execute);
+					 sem_post(&s_cpu_desocupado);*/
+
+				 }
+
 				 break;
 
 			case YIELD:
-				 log_info(logger, "Recibi YIELD de CPU lo mandamos al final de la cola READY");
+				 log_info(logger, "PID: %d - Recibi YIELD de CPU lo mandamos al final de la cola READY");
 				 log_info("Valor del PC: %d", pcb->pc);
 				 pthread_mutex_lock(&mx_cola_ready);
 				 queue_push(cola_ready,pcb);

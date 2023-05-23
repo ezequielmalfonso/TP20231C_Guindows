@@ -20,6 +20,7 @@
 #include "protocolo.h"
 #include "kernel.h"
 
+
 extern pthread_mutex_t mx_cola_new;
 extern pthread_mutex_t mx_cola_ready;
 extern pthread_mutex_t mx_lista_block;

@@ -14,7 +14,8 @@
 #include "commons/log.h"
 #include "commons/config.h"
 #include "commons/collections/list.h"
-//#include "estructuras.h"
+#include "commons/collections/queue.h"
+
 
 typedef struct {
 	char* IP_MEMORIA;
@@ -32,13 +33,21 @@ typedef struct {
 	char** INSTANCIAS_RECURSOS;
 } t_config_kernel;
 
+typedef struct {
+    char recurso[20];
+    uint16_t instancias;
+    t_queue* cola_bloqueados_recurso;
+}t_recurso;
+
 
 extern t_config_kernel * configuracion;
 extern t_config * fd_configuracion;
 extern t_log * logger;
-extern t_list* t_list_recursos;
+extern t_list* lista_de_recursos;
+
 
 int cargarConfiguracion();
-
+char* convertirCharPtr(char** arreglo, int longitud);
+int obtenerLongitud(char** arreglo);
 
 #endif /* KERNELCONFIG_H_ */

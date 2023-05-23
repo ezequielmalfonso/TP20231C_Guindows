@@ -5,9 +5,12 @@
  *      Author: utnso
  */
 
+#include<commons/collections/queue.h>
+
 /*
   PREGUNTAR POR LONGITUD DE CHAR DE la estructura de instruccion????
  */
+
 typedef struct instruccion{
 	char comando[20];
 	char parametro1[20];
@@ -21,9 +24,6 @@ typedef struct{
 	uint32_t tamanio_segmento;
 }t_segmento;
 
-typedef struct {
-    char* recurso;
-    uint16_t instancias;
-}t_recurso;
+
 
 
