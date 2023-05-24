@@ -38,6 +38,7 @@ static void procesar_conexion(void* void_args) {
 			 	    	recv_proceso(cliente_socket,proceso);
 			 	    	log_info(logger, "Recibi PCB id: %d", proceso->pid);
 			 	    	op_code codigo=iniciar_ciclo_instruccion(proceso);
+			 	    	//log_info(logger, "Cop: %d ", codigo);
 			 	    	send_proceso(cliente_socket,proceso,codigo);			// envio proceso al kenel
 			 	    	break;
 		 // Errores
@@ -46,7 +47,7 @@ static void procesar_conexion(void* void_args) {
 				 return;
 		 default:
 				 log_error(logger, "Algo anduvo mal en el server de %s", server_name);
-				 log_info(logger, "Cop: %d", cop);
+				 //log_info(logger, "Cop: %d", cop);
 				 return;
 	 }
  }

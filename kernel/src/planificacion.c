@@ -115,7 +115,7 @@ void esperar_cpu(){
 		//pthread_mutex_lock(&mx_cpu_desocupado);
 		//cpu_desocupado = true;
 		//pthread_mutex_unlock(&mx_cpu_desocupado);
-		log_info(logger, "Pid: %d, %d ", pcb->pid, cop);
+		//log_info(logger, "Pid: %d, %d ", pcb->pid, cop);
 		switch (cop) {
 			case EXIT:
 				send(pcb->cliente_fd,&cop,sizeof(op_code),0);
@@ -149,13 +149,21 @@ void esperar_cpu(){
 				 { // Si entra es pq va ejecutar la instancia del recurso y resto 1 a la instancia
 					 instancias -= 1;
 					 log_info(logger,"PID: %d - Wait: %s - Instancias: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"), instancias  );
+
+					 pthread_mutex_lock(&mx_cola_ready);  // TODO hacer mas pruebas
 					 send_proceso(cpu_fd, pcb,DISPATCH);
+					 pthread_mutex_unlock(&mx_cola_ready);
+
+					 sem_post(&s_ready_execute);
 					 sem_post(&s_cpu_desocupado);
+					 sem_post(&s_esperar_cpu);
 
 
 				 }else{
+					 log_info(logger,"PID: %d - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: %s - Instancias: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"), instancias  );
 					 t_recurso* aux_rec2 = aux_rec1->data;
 					 t_recurso* rec_block = list_get(aux_rec1->data, pos_recurso);
+
 					 pthread_mutex_lock(&mx_cola_blocked);
 					 queue_push(rec_block->cola_bloqueados_recurso,pcb);
 					 pthread_mutex_unlock(&mx_cola_blocked);
@@ -164,8 +172,8 @@ void esperar_cpu(){
 				 break;
 
 			case YIELD:
-				 log_info(logger, "PID: %d - Recibi YIELD de CPU lo mandamos al final de la cola READY");
-				 log_info("Valor del PC: %d", pcb->pc);
+				 log_info(logger, "PID: %d - Recibi YIELD de CPU lo mandamos al final de la cola READY", pcb->pid);
+				// log_info("Valor del PC: %d", pcb->pc);
 				 pthread_mutex_lock(&mx_cola_ready);
 				 queue_push(cola_ready,pcb);
 				 pthread_mutex_unlock(&mx_cola_ready);
