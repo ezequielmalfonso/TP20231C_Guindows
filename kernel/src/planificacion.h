@@ -29,7 +29,7 @@ extern pthread_mutex_t mx_cpu_desocupado;
 extern pthread_mutex_t mx_memoria;
 
 extern sem_t s_pasaje_a_ready, s_io,s_ready_execute,s_cpu_desocupado,s_cont_ready,s_multiprogramacion_actual,s_esperar_cpu,s_pcb_desalojado,s_blocked;
-//extern sem_t s_ios[10];
+extern sem_t s_blocked_rec;
 extern t_queue* cola_new;
 extern t_queue* cola_ready;
 extern t_queue* cola_ready_sec;

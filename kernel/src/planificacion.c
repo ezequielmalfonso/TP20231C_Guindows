@@ -24,7 +24,7 @@ pthread_mutex_t mx_cpu 				= PTHREAD_MUTEX_INITIALIZER;
 //pthread_mutex_t mx_hilo_pageFault 	= PTHREAD_MUTEX_INITIALIZER;
 
 sem_t s_pasaje_a_ready, s_ready_execute,s_cpu_desocupado,s_cont_ready,s_multiprogramacion_actual,s_esperar_cpu,s_pcb_desalojado,s_blocked,s_io;
-//sem_t s_ios;
+sem_t s_blocked_rec;
 t_queue* cola_new;
 t_queue* cola_ready;
 t_queue* cola_ready_sec;
@@ -94,7 +94,7 @@ void inicializarPlanificacion(){
 
 void esperar_cpu(){
 	while(1){
-		sem_wait(&s_esperar_cpu);
+		sem_wait(&s_esperar_cpu); //--> se bloquea
 		op_code cop;
 		PCB_t* pcb = pcb_create();
 		//pthread_mutex_lock(&mx_cpu);
@@ -115,7 +115,7 @@ void esperar_cpu(){
 		//pthread_mutex_lock(&mx_cpu_desocupado);
 		//cpu_desocupado = true;
 		//pthread_mutex_unlock(&mx_cpu_desocupado);
-		log_info(logger, "Pid: %d", pcb->pid);
+		log_info(logger, "Pid: %d, %d ", pcb->pid, cop);
 		switch (cop) {
 			case EXIT:
 				send(pcb->cliente_fd,&cop,sizeof(op_code),0);
@@ -131,6 +131,7 @@ void esperar_cpu(){
 
 				 t_link_element* aux_rec1 = lista_de_recursos->head;
 				 uint16_t instancias;
+				 int pos_recurso = 0;
 				 while( aux_rec1!=NULL )
 				 {
 					 t_recurso* aux_rec2 = aux_rec1->data;
@@ -141,18 +142,23 @@ void esperar_cpu(){
 						 break;
 					 }
 					 aux_rec1 = aux_rec1->next;
+					 pos_recurso++;
 				 }
 
 				 if(instancias > 0)
 				 { // Si entra es pq va ejecutar la instancia del recurso y resto 1 a la instancia
 					 instancias -= 1;
 					 log_info(logger,"PID: %d - Wait: %s - Instancias: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"), instancias  );
-					 //send_proceso(cpu_fd, pcb,DISPATCH);
+					 send_proceso(cpu_fd, pcb,DISPATCH);
+					 sem_post(&s_cpu_desocupado);
 
-					/* sem_post(&s_esperar_cpu);
-					 sem_post(&s_ready_execute);
-					 sem_post(&s_cpu_desocupado);*/
 
+				 }else{
+					 t_recurso* aux_rec2 = aux_rec1->data;
+					 t_recurso* rec_block = list_get(aux_rec1->data, pos_recurso);
+					 pthread_mutex_lock(&mx_cola_blocked);
+					 queue_push(rec_block->cola_bloqueados_recurso,pcb);
+					 pthread_mutex_unlock(&mx_cola_blocked);
 				 }
 
 				 break;
