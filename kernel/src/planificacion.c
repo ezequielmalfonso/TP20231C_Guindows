@@ -194,69 +194,54 @@ void esperar_cpu(){
 					{
 					  log_info(logger, "Para RECURSO %s hay %d instancias disponibles antes de ejecutar", aux_rec2_s->recurso, aux_rec2_s->instancias );
 					  //instancias = aux_rec2->instancias;
-					  break;
-					 }
-					 aux_rec1_s = aux_rec1_s->next;
-					 pos_recurso++;
 
-				}
+					  aux_rec1_s = aux_rec1_s->next;
+					  pos_recurso++;
 
+					  if(aux_rec2_s->instancias < 0)
+					  {
+						 log_info(logger, "entro al if instancias");
+						 aux_rec2_s->instancias += 1;
+						 log_info(logger,"PID: %d - SIGNAL: %s - Instancias: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"), aux_rec2_s->instancias  );
 
-
-				 /*pos_recurso = 0;
-
-				 while( aux_rec1!=NULL )
-				 {
-					 t_recurso* aux_rec2 = aux_rec1->data;
-					 if(strcmp(aux_rec2->recurso, instruccion->parametro1))
-					 {
-						 log_info(logger, "Para RECURSO %s hay %d instancias disponibles antes de ejecutar", aux_rec2->recurso, aux_rec2->instancias );
-						 //instancias = aux_rec2->instancias;
-
-						 if(aux_rec2->instancias <= 0)
-						 { // Si entra es pq va ejecutar la instancia del recurso y resto 1 a la instancia
-							 aux_rec2->instancias += 1;
-							 log_info(logger,"PID: %d - SIGNAL: %s - Instancias: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"), aux_rec2->instancias  );
-
-
-							 if(!queue_is_empty(aux_rec2->cola_bloqueados_recurso))
-							 {
-								 pthread_mutex_lock(&mx_cola_blocked);
-								 pcb_blocked = queue_pop(aux_rec2->cola_bloqueados_recurso);
-								 pthread_mutex_unlock(&mx_cola_blocked);
-							 }
-							 pthread_mutex_lock(&mx_cola_ready);  // TODO hacer mas pruebas
-							 send_proceso(cpu_fd, pcb,DISPATCH);
-							 pthread_mutex_unlock(&mx_cola_ready);
-
-							 pthread_mutex_lock(&mx_cola_ready);
-							 queue_push(cola_ready,pcb_blocked);
-							 pthread_mutex_unlock(&mx_cola_ready);
-
-
-							 sem_post(&s_ready_execute);
-							 sem_post(&s_cpu_desocupado);
-							 sem_post(&s_esperar_cpu);
-
-						 }else{
-							 aux_rec2->instancias += 1;
-							 log_info(logger,"PID: %d - SIGNAL: %s - Instancias: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"), aux_rec2->instancias  );
-
-							 pthread_mutex_lock(&mx_cola_ready);  // TODO hacer mas pruebas
-							 send_proceso(cpu_fd, pcb,DISPATCH);
-						     pthread_mutex_unlock(&mx_cola_ready);
-
-							 sem_post(&s_ready_execute);
-							 sem_post(&s_cpu_desocupado);
-							 sem_post(&s_esperar_cpu);
-
+						 if(!queue_is_empty(aux_rec2_s->cola_bloqueados_recurso))
+						 {
+							 pthread_mutex_lock(&mx_cola_blocked);
+							 pcb_blocked = queue_pop(aux_rec2_s->cola_bloqueados_recurso);
+							 pthread_mutex_unlock(&mx_cola_blocked);
+							 log_info(logger, "PID: %d q desbloqueo", pcb_blocked->pid );
 						 }
-						 break;
+						 //pthread_mutex_lock(&mx_cola_ready);  // TODO hacer mas pruebas
+						 //send_proceso(cpu_fd, pcb,DISPATCH);
+						 //pthread_mutex_unlock(&mx_cola_ready);
+
+						 pthread_mutex_lock(&mx_cola_ready);
+						 queue_push(cola_ready,pcb_blocked);
+						 send_proceso(cpu_fd, pcb,DISPATCH);
+						 pthread_mutex_unlock(&mx_cola_ready);
 
 
+						 sem_post(&s_ready_execute);
+						 sem_post(&s_cpu_desocupado);
+						 sem_post(&s_esperar_cpu);
+					 }else{
+						 log_info(logger, "entro al else instancias");
+						 aux_rec2_s->instancias += 1;
+						 log_info(logger,"PID: %d - SIGNAL: %s - Instancias: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"), aux_rec2_s->instancias  );
+
+						 pthread_mutex_lock(&mx_cola_ready);  // TODO hacer mas pruebas
+						 send_proceso(cpu_fd, pcb,DISPATCH);
+					     pthread_mutex_unlock(&mx_cola_ready);
+
+						 sem_post(&s_ready_execute);
+						 sem_post(&s_cpu_desocupado);
+						 sem_post(&s_esperar_cpu);
+					   }
+					}
+					 break;
 					 aux_rec1 = aux_rec1->next;
 					 pos_recurso++;
-				 }*/
+				}
 
 				break;
 
@@ -350,6 +335,7 @@ void ejecutar_io(PCB_t* pcb,int numero) {
 		sem_post(&s_ready_execute);
 		sem_post(&s_cont_ready);
 		sem_post(&s_io);
+		//log_info(logger, "PID: %d - probando como queda", pcb->pid);
 }
 
 

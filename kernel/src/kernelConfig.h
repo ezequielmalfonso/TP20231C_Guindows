@@ -35,7 +35,7 @@ typedef struct {
 
 typedef struct {
     char recurso[20];
-    uint16_t instancias;
+    int instancias;
     t_queue* cola_bloqueados_recurso;
 }t_recurso;
 

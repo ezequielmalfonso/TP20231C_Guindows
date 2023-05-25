@@ -1,0 +1,979 @@
+[INFO] 14:49:56:659 Kernel/(2809:2809): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: FIFO
+ESTIMACION_INICIAL: 10000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 14:49:56:660 Kernel/(2809:2809): RECURSO: DISCO con 1 instancias
+[INFO] 14:49:56:660 Kernel/(2809:2809): RECURSO: RECURSO_1 con 2 instancias
+[INFO] 14:49:56:660 Kernel/(2809:2809): Cantidad total de recursos disponibles: 2 
+[INFO] 14:49:56:660 Kernel/(2809:2809): ALGORITMO_PLANIFICACION FIFOOO!!!!
+[INFO] 14:49:56:660 Kernel/(2809:2809): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 14:49:56:660 Kernel/(2809:2809): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 14:49:56:661 Kernel/(2809:2809): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 14:49:56:661 Kernel/(2809:2809): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 14:50:51:983 Kernel/(2809:2809): Cliente conectado (a KERNEL_SV)
+
+[INFO] 14:50:51:992 Kernel/(2809:3107): Envio solicitud a MEMORIA
+[INFO] 14:50:51:992 Kernel/(2809:3107): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 14:50:51:992 Kernel/(2809:3107): “PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 14:50:51:993 Kernel/(2809:2810): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 14:50:52:993 Kernel/(2809:2811): Pid: 0, 79 
+[INFO] 14:50:52:993 Kernel/(2809:2811): PID: 0 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 14:50:52:994 Kernel/(2809:2811): Para RECURSO DISCO hay 1 instancias disponibles antes de ejecutar
+[INFO] 14:50:52:994 Kernel/(2809:2811): PID: 0 - Wait: DISCO - Instancias: 0 
+[INFO] 14:50:52:994 Kernel/(2809:2811): Pid: 0, 78 
+[INFO] 14:50:52:994 Kernel/(2809:2811): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O
+[INFO] 14:50:52:995 Kernel/(2809:3108): instruccion numer 3
+[INFO] 14:50:52:995 Kernel/(2809:3108):  me meti al if
+[INFO] 14:50:52:995 Kernel/(2809:3108):  ejecutar io
+[INFO] 14:50:52:995 Kernel/(2809:3108):  PID: 0 - Bloqueado por: I/O durante: 10
+
+[INFO] 14:50:52:996 Kernel/(2809:3108): PID: 0 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 14:50:52:996 Kernel/(2809:2810): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 14:50:52:996 Kernel/(2809:2811): Pid: 0, 80 
+[INFO] 14:50:52:996 Kernel/(2809:2811): PID: 0 - Recibo pedido de SIGNAL por RECURSO: DISCO
+
+[INFO] 14:50:52:996 Kernel/(2809:2811): Para RECURSO DISCO hay 0 instancias disponibles antes de ejecutar
+[INFO] 14:50:57:577 Kernel/(2809:2809): Cliente conectado (a KERNEL_SV)
+
+[INFO] 14:50:57:577 Kernel/(2809:3110): Envio solicitud a MEMORIA
+[INFO] 14:50:57:622 Kernel/(2809:3110): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 14:50:57:622 Kernel/(2809:3110): “PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 14:50:57:622 Kernel/(2809:2810): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 14:50:58:200 Kernel/(2809:2809): Cliente conectado (a KERNEL_SV)
+
+[INFO] 14:50:58:200 Kernel/(2809:3112): Envio solicitud a MEMORIA
+[INFO] 14:50:58:242 Kernel/(2809:3112): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 14:50:58:242 Kernel/(2809:3112): “PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 14:50:58:623 Kernel/(2809:2811): Pid: 1, 79 
+[INFO] 14:50:58:624 Kernel/(2809:2811): PID: 1 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 14:50:58:626 Kernel/(2809:2811): Para RECURSO DISCO hay 0 instancias disponibles antes de ejecutar
+[INFO] 14:50:58:627 Kernel/(2809:2811): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: DISCO - Instancias: 65535 
+[INFO] 14:50:58:628 Kernel/(2809:2810): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 14:50:59:631 Kernel/(2809:2811): Pid: 2, 79 
+[INFO] 14:50:59:631 Kernel/(2809:2811): PID: 2 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 14:50:59:631 Kernel/(2809:2811): Para RECURSO DISCO hay 65535 instancias disponibles antes de ejecutar
+[INFO] 14:50:59:631 Kernel/(2809:2811): PID: 2 - Wait: DISCO - Instancias: 65534 
+[INFO] 14:50:59:631 Kernel/(2809:2811): Pid: 2, 78 
+[INFO] 14:50:59:631 Kernel/(2809:2811): PID: 2 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O
+[INFO] 14:50:59:631 Kernel/(2809:3113): instruccion numer 3
+[INFO] 14:50:59:631 Kernel/(2809:3113):  me meti al if
+[INFO] 14:50:59:632 Kernel/(2809:3113):  ejecutar io
+[INFO] 14:50:59:632 Kernel/(2809:3113):  PID: 2 - Bloqueado por: I/O durante: 10
+
+[INFO] 14:50:59:632 Kernel/(2809:3113): PID: 2 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 14:50:59:632 Kernel/(2809:2810): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 14:50:59:632 Kernel/(2809:2811): Pid: 2, 80 
+[INFO] 14:50:59:632 Kernel/(2809:2811): PID: 2 - Recibo pedido de SIGNAL por RECURSO: DISCO
+
+[INFO] 14:50:59:632 Kernel/(2809:2811): Para RECURSO DISCO hay 65534 instancias disponibles antes de ejecutar
+[INFO] 14:59:34:275 Kernel/(3547:3547): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: FIFO
+ESTIMACION_INICIAL: 10000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 14:59:34:277 Kernel/(3547:3547): RECURSO: DISCO con 1 instancias
+[INFO] 14:59:34:277 Kernel/(3547:3547): RECURSO: RECURSO_1 con 2 instancias
+[INFO] 14:59:34:277 Kernel/(3547:3547): Cantidad total de recursos disponibles: 2 
+[INFO] 14:59:34:277 Kernel/(3547:3547): ALGORITMO_PLANIFICACION FIFOOO!!!!
+[INFO] 14:59:34:278 Kernel/(3547:3547): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 14:59:34:279 Kernel/(3547:3547): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 14:59:34:279 Kernel/(3547:3547): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 14:59:34:279 Kernel/(3547:3547): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 14:59:37:049 Kernel/(3547:3547): Cliente conectado (a KERNEL_SV)
+
+[INFO] 14:59:37:051 Kernel/(3547:3553): Envio solicitud a MEMORIA
+[INFO] 14:59:37:059 Kernel/(3547:3553): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 14:59:37:060 Kernel/(3547:3553): “PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 14:59:37:061 Kernel/(3547:3548): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 14:59:38:062 Kernel/(3547:3549): Pid: 0, 79 
+[INFO] 14:59:38:062 Kernel/(3547:3549): PID: 0 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 14:59:38:062 Kernel/(3547:3549): Para RECURSO DISCO hay 1 instancias disponibles antes de ejecutar
+[INFO] 14:59:38:062 Kernel/(3547:3549): PID: 0 - Wait: DISCO - Instancias: 0 
+[INFO] 14:59:38:063 Kernel/(3547:3549): Pid: 0, 78 
+[INFO] 14:59:38:063 Kernel/(3547:3549): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O
+[INFO] 14:59:38:063 Kernel/(3547:3554): instruccion numer 3
+[INFO] 14:59:38:063 Kernel/(3547:3554):  me meti al if
+[INFO] 14:59:38:063 Kernel/(3547:3554):  ejecutar io
+[INFO] 14:59:38:064 Kernel/(3547:3554):  PID: 0 - Bloqueado por: I/O durante: 10
+
+[INFO] 14:59:38:064 Kernel/(3547:3554): PID: 0 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 14:59:38:064 Kernel/(3547:3548): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 14:59:38:064 Kernel/(3547:3549): Pid: 0, 80 
+[INFO] 14:59:38:064 Kernel/(3547:3549): PID: 0 - Recibo pedido de SIGNAL por RECURSO: DISCO
+
+[INFO] 14:59:38:064 Kernel/(3547:3549): Para RECURSO DISCO hay 0 instancias disponibles antes de ejecutar
+[INFO] 15:08:51:020 Kernel/(3784:3784): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: FIFO
+ESTIMACION_INICIAL: 10000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 15:08:51:022 Kernel/(3784:3784): RECURSO: DISCO con 1 instancias
+[INFO] 15:08:51:022 Kernel/(3784:3784): RECURSO: RECURSO_1 con 2 instancias
+[INFO] 15:08:51:022 Kernel/(3784:3784): Cantidad total de recursos disponibles: 2 
+[INFO] 15:08:51:022 Kernel/(3784:3784): ALGORITMO_PLANIFICACION FIFOOO!!!!
+[INFO] 15:08:51:023 Kernel/(3784:3784): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 15:08:51:023 Kernel/(3784:3784): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 15:08:51:024 Kernel/(3784:3784): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 15:08:51:024 Kernel/(3784:3784): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 15:08:54:654 Kernel/(3784:3784): Cliente conectado (a KERNEL_SV)
+
+[INFO] 15:08:54:655 Kernel/(3784:3790): Envio solicitud a MEMORIA
+[INFO] 15:08:54:655 Kernel/(3784:3790): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:08:54:655 Kernel/(3784:3790): “PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 15:08:54:655 Kernel/(3784:3785): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 15:08:55:656 Kernel/(3784:3786): Pid: 0, 79 
+[INFO] 15:08:55:656 Kernel/(3784:3786): PID: 0 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 15:08:55:656 Kernel/(3784:3786): Para RECURSO DISCO hay 1 instancias disponibles antes de ejecutar
+[INFO] 15:08:55:656 Kernel/(3784:3786): PID: 0 - Wait: DISCO - Instancias: 0 
+[INFO] 15:08:55:657 Kernel/(3784:3786): Pid: 0, 78 
+[INFO] 15:08:55:657 Kernel/(3784:3786): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O
+[INFO] 15:08:55:657 Kernel/(3784:3791): instruccion numer 3
+[INFO] 15:08:55:657 Kernel/(3784:3791):  me meti al if
+[INFO] 15:08:55:658 Kernel/(3784:3791):  ejecutar io
+[INFO] 15:08:55:658 Kernel/(3784:3791):  PID: 0 - Bloqueado por: I/O durante: 10
+
+[INFO] 15:08:55:658 Kernel/(3784:3791): PID: 0 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 15:08:55:658 Kernel/(3784:3785): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 15:08:55:659 Kernel/(3784:3786): Pid: 0, 80 
+[INFO] 15:08:55:659 Kernel/(3784:3786): PID: 0 - Recibo pedido de SIGNAL por RECURSO: DISCO
+
+[INFO] 15:08:55:659 Kernel/(3784:3786): Para RECURSO DISCO hay 0 instancias disponibles antes de ejecutar
+[INFO] 15:13:48:969 Kernel/(3919:3919): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: FIFO
+ESTIMACION_INICIAL: 10000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 15:13:48:970 Kernel/(3919:3919): RECURSO: DISCO con 1 instancias
+[INFO] 15:13:48:970 Kernel/(3919:3919): RECURSO: RECURSO_1 con 2 instancias
+[INFO] 15:13:48:970 Kernel/(3919:3919): Cantidad total de recursos disponibles: 2 
+[INFO] 15:13:48:971 Kernel/(3919:3919): ALGORITMO_PLANIFICACION FIFOOO!!!!
+[INFO] 15:13:48:971 Kernel/(3919:3919): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 15:13:48:971 Kernel/(3919:3919): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 15:13:48:972 Kernel/(3919:3919): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 15:13:48:972 Kernel/(3919:3919): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 15:13:50:852 Kernel/(3919:3919): Cliente conectado (a KERNEL_SV)
+
+[INFO] 15:13:50:853 Kernel/(3919:3925): Envio solicitud a MEMORIA
+[INFO] 15:13:50:854 Kernel/(3919:3925): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:13:50:854 Kernel/(3919:3925): “PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 15:13:50:854 Kernel/(3919:3920): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 15:13:51:855 Kernel/(3919:3921): Pid: 0, 79 
+[INFO] 15:13:51:855 Kernel/(3919:3921): PID: 0 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 15:13:51:855 Kernel/(3919:3921): Para RECURSO DISCO hay 1 instancias disponibles antes de ejecutar
+[INFO] 15:13:51:855 Kernel/(3919:3921): PID: 0 - Wait: DISCO - Instancias: 0 
+[INFO] 15:13:51:855 Kernel/(3919:3921): Pid: 0, 78 
+[INFO] 15:13:51:855 Kernel/(3919:3921): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O
+[INFO] 15:13:51:855 Kernel/(3919:3926): instruccion numer 3
+[INFO] 15:13:51:855 Kernel/(3919:3926):  me meti al if
+[INFO] 15:13:51:855 Kernel/(3919:3926):  ejecutar io
+[INFO] 15:13:51:855 Kernel/(3919:3926):  PID: 0 - Bloqueado por: I/O durante: 10
+
+[INFO] 15:13:51:856 Kernel/(3919:3926): PID: 0 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 15:13:51:856 Kernel/(3919:3920): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 15:13:51:856 Kernel/(3919:3921): Pid: 0, 80 
+[INFO] 15:13:51:856 Kernel/(3919:3921): PID: 0 - Recibo pedido de SIGNAL por RECURSO: DISCO
+
+[INFO] 15:13:51:856 Kernel/(3919:3921): Para RECURSO DISCO hay 0 instancias disponibles antes de ejecutar
+[INFO] 15:19:13:909 Kernel/(4107:4107): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: FIFO
+ESTIMACION_INICIAL: 10000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 15:19:13:910 Kernel/(4107:4107): RECURSO: DISCO con 1 instancias
+[INFO] 15:19:13:911 Kernel/(4107:4107): RECURSO: RECURSO_1 con 2 instancias
+[INFO] 15:19:13:911 Kernel/(4107:4107): Cantidad total de recursos disponibles: 2 
+[INFO] 15:19:13:911 Kernel/(4107:4107): ALGORITMO_PLANIFICACION FIFOOO!!!!
+[INFO] 15:19:13:911 Kernel/(4107:4107): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 15:19:13:912 Kernel/(4107:4107): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 15:19:13:912 Kernel/(4107:4107): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 15:19:13:913 Kernel/(4107:4107): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 15:19:15:934 Kernel/(4107:4107): Cliente conectado (a KERNEL_SV)
+
+[INFO] 15:19:15:935 Kernel/(4107:4113): Envio solicitud a MEMORIA
+[INFO] 15:19:15:935 Kernel/(4107:4113): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:19:15:936 Kernel/(4107:4113): “PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 15:19:15:936 Kernel/(4107:4108): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 15:19:16:937 Kernel/(4107:4109): Pid: 0, 79 
+[INFO] 15:19:16:937 Kernel/(4107:4109): PID: 0 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 15:19:16:937 Kernel/(4107:4109): Para RECURSO DISCO hay 1 instancias disponibles antes de ejecutar
+[INFO] 15:19:16:937 Kernel/(4107:4109): PID: 0 - Wait: DISCO - Instancias: 0 
+[INFO] 15:19:16:938 Kernel/(4107:4109): Pid: 0, 78 
+[INFO] 15:19:16:938 Kernel/(4107:4109): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O
+[INFO] 15:19:16:938 Kernel/(4107:4114): instruccion numer 3
+[INFO] 15:19:16:938 Kernel/(4107:4114):  me meti al if
+[INFO] 15:19:16:939 Kernel/(4107:4114):  ejecutar io
+[INFO] 15:19:16:939 Kernel/(4107:4114):  PID: 0 - Bloqueado por: I/O durante: 10
+
+[INFO] 15:19:16:939 Kernel/(4107:4114): PID: 0 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 15:19:16:939 Kernel/(4107:4108): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 15:19:16:940 Kernel/(4107:4109): Pid: 0, 80 
+[INFO] 15:19:16:940 Kernel/(4107:4109): PID: 0 - Recibo pedido de SIGNAL por RECURSO: DISCO
+
+[INFO] 15:19:16:940 Kernel/(4107:4109): Para RECURSO DISCO hay 0 instancias disponibles antes de ejecutar
+[INFO] 15:19:16:940 Kernel/(4107:4109): entro al if instancias
+[INFO] 15:19:16:940 Kernel/(4107:4109): PID: 0 - SIGNAL: DISCO - Instancias: 1 
+[INFO] 15:19:16:940 Kernel/(4107:4109): Pid: 0, 85 
+[INFO] 15:19:16:940 Kernel/(4107:4109): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 15:19:16:940 Kernel/(4107:4108): PID: 52464 - Estado Anterior: READY - Estado Actual: EXECUTE
+[ERROR] 15:19:17:632 Kernel/(4107:4109): DISCONNECT FAILURE!
+[INFO] 15:31:35:597 Kernel/(4239:4239): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: FIFO
+ESTIMACION_INICIAL: 10000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 15:31:35:599 Kernel/(4239:4239): RECURSO: DISCO con 1 instancias
+[INFO] 15:31:35:599 Kernel/(4239:4239): RECURSO: RECURSO_1 con 2 instancias
+[INFO] 15:31:35:599 Kernel/(4239:4239): Cantidad total de recursos disponibles: 2 
+[INFO] 15:31:35:600 Kernel/(4239:4239): ALGORITMO_PLANIFICACION FIFOOO!!!!
+[INFO] 15:31:35:600 Kernel/(4239:4239): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 15:31:35:601 Kernel/(4239:4239): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 15:31:35:602 Kernel/(4239:4239): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 15:31:35:602 Kernel/(4239:4239): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 15:31:38:015 Kernel/(4239:4239): Cliente conectado (a KERNEL_SV)
+
+[INFO] 15:31:38:015 Kernel/(4239:4245): Envio solicitud a MEMORIA
+[INFO] 15:31:38:016 Kernel/(4239:4245): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:31:38:016 Kernel/(4239:4245): “PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 15:31:38:016 Kernel/(4239:4240): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 15:31:39:018 Kernel/(4239:4241): Pid: 0, 79 
+[INFO] 15:31:39:018 Kernel/(4239:4241): PID: 0 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 15:31:39:018 Kernel/(4239:4241): Para RECURSO DISCO hay 1 instancias disponibles antes de ejecutar
+[INFO] 15:31:39:018 Kernel/(4239:4241): PID: 0 - Wait: DISCO - Instancias: 0 
+[INFO] 15:31:39:019 Kernel/(4239:4241): Pid: 0, 78 
+[INFO] 15:31:39:019 Kernel/(4239:4241): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O
+[INFO] 15:31:39:019 Kernel/(4239:4246): instruccion numer 3
+[INFO] 15:31:39:019 Kernel/(4239:4246):  me meti al if
+[INFO] 15:31:39:019 Kernel/(4239:4246):  ejecutar io
+[INFO] 15:31:39:020 Kernel/(4239:4246):  PID: 0 - Bloqueado por: I/O durante: 10
+
+[INFO] 15:31:39:020 Kernel/(4239:4246): PID: 0 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 15:31:39:020 Kernel/(4239:4240): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 15:31:39:020 Kernel/(4239:4241): Pid: 0, 80 
+[INFO] 15:31:39:020 Kernel/(4239:4241): PID: 0 - Recibo pedido de SIGNAL por RECURSO: DISCO
+
+[INFO] 15:31:39:020 Kernel/(4239:4241): Para RECURSO DISCO hay 0 instancias disponibles antes de ejecutar
+[INFO] 15:31:39:020 Kernel/(4239:4241): entro al if instancias
+[INFO] 15:31:39:020 Kernel/(4239:4241): PID: 0 - SIGNAL: DISCO - Instancias: 1 
+[INFO] 15:31:39:021 Kernel/(4239:4241): Pid: 0, 85 
+[INFO] 15:31:39:021 Kernel/(4239:4241): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 15:31:39:021 Kernel/(4239:4240): PID: 36080 - Estado Anterior: READY - Estado Actual: EXECUTE
+[ERROR] 15:31:39:199 Kernel/(4239:4241): DISCONNECT FAILURE!
+[INFO] 15:32:52:661 Kernel/(4340:4340): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: FIFO
+ESTIMACION_INICIAL: 10000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 15:32:52:662 Kernel/(4340:4340): RECURSO: DISCO con 1 instancias
+[INFO] 15:32:52:663 Kernel/(4340:4340): RECURSO: RECURSO_1 con 2 instancias
+[INFO] 15:32:52:663 Kernel/(4340:4340): Cantidad total de recursos disponibles: 2 
+[INFO] 15:32:52:663 Kernel/(4340:4340): ALGORITMO_PLANIFICACION FIFOOO!!!!
+[INFO] 15:32:52:663 Kernel/(4340:4340): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 15:32:52:664 Kernel/(4340:4340): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 15:32:52:665 Kernel/(4340:4340): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 15:32:52:665 Kernel/(4340:4340): Cliente conectado (a KERNEL_SV)
+
+[INFO] 15:33:01:557 Kernel/(4346:4346): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: FIFO
+ESTIMACION_INICIAL: 10000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 15:33:01:558 Kernel/(4346:4346): RECURSO: DISCO con 1 instancias
+[INFO] 15:33:01:558 Kernel/(4346:4346): RECURSO: RECURSO_1 con 2 instancias
+[INFO] 15:33:01:558 Kernel/(4346:4346): Cantidad total de recursos disponibles: 2 
+[INFO] 15:33:01:558 Kernel/(4346:4346): ALGORITMO_PLANIFICACION FIFOOO!!!!
+[INFO] 15:33:01:559 Kernel/(4346:4346): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 15:33:01:559 Kernel/(4346:4346): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 15:33:01:560 Kernel/(4346:4346): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 15:33:01:560 Kernel/(4346:4346): Cliente conectado (a KERNEL_SV)
+
+[INFO] 15:34:21:909 Kernel/(4381:4381): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: FIFO
+ESTIMACION_INICIAL: 10000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 15:34:21:910 Kernel/(4381:4381): RECURSO: DISCO con 1 instancias
+[INFO] 15:34:21:910 Kernel/(4381:4381): RECURSO: RECURSO_1 con 2 instancias
+[INFO] 15:34:21:910 Kernel/(4381:4381): Cantidad total de recursos disponibles: 2 
+[INFO] 15:34:21:911 Kernel/(4381:4381): ALGORITMO_PLANIFICACION FIFOOO!!!!
+[INFO] 15:34:21:911 Kernel/(4381:4381): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 15:34:21:912 Kernel/(4381:4381): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 15:34:21:912 Kernel/(4381:4381): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 15:34:21:913 Kernel/(4381:4381): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 15:34:23:897 Kernel/(4381:4381): Cliente conectado (a KERNEL_SV)
+
+[INFO] 15:34:23:898 Kernel/(4381:4387): Envio solicitud a MEMORIA
+[INFO] 15:34:23:898 Kernel/(4381:4387): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:34:23:898 Kernel/(4381:4387): “PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 15:34:23:898 Kernel/(4381:4382): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 15:34:24:900 Kernel/(4381:4383): Pid: 0, 79 
+[INFO] 15:34:24:900 Kernel/(4381:4383): PID: 0 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 15:34:24:900 Kernel/(4381:4383): Para RECURSO DISCO hay 1 instancias disponibles antes de ejecutar
+[INFO] 15:34:24:900 Kernel/(4381:4383): PID: 0 - Wait: DISCO - Instancias: 0 
+[INFO] 15:34:24:901 Kernel/(4381:4383): Pid: 0, 78 
+[INFO] 15:34:24:901 Kernel/(4381:4383): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O
+[INFO] 15:34:24:901 Kernel/(4381:4388): instruccion numer 3
+[INFO] 15:34:24:901 Kernel/(4381:4388):  me meti al if
+[INFO] 15:34:24:901 Kernel/(4381:4388):  ejecutar io
+[INFO] 15:34:24:901 Kernel/(4381:4388):  PID: 0 - Bloqueado por: I/O durante: 10
+
+[INFO] 15:34:24:902 Kernel/(4381:4388): PID: 0 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 15:34:24:902 Kernel/(4381:4382): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 15:34:24:902 Kernel/(4381:4383): Pid: 0, 80 
+[INFO] 15:34:24:902 Kernel/(4381:4383): PID: 0 - Recibo pedido de SIGNAL por RECURSO: DISCO
+
+[INFO] 15:34:24:902 Kernel/(4381:4383): Para RECURSO DISCO hay 0 instancias disponibles antes de ejecutar
+[INFO] 15:34:24:902 Kernel/(4381:4383): entro al if instancias
+[INFO] 15:34:24:902 Kernel/(4381:4383): PID: 0 - SIGNAL: DISCO - Instancias: 1 
+[INFO] 15:34:24:903 Kernel/(4381:4383): Pid: 0, 85 
+[INFO] 15:34:24:903 Kernel/(4381:4383): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 15:34:24:903 Kernel/(4381:4382): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 15:34:24:903 Kernel/(4381:4383): Pid: 0, 84 
+[INFO] 15:34:24:903 Kernel/(4381:4383): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 15:39:40:054 Kernel/(4601:4601): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: FIFO
+ESTIMACION_INICIAL: 10000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 15:39:40:056 Kernel/(4601:4601): RECURSO: DISCO con 1 instancias
+[INFO] 15:39:40:056 Kernel/(4601:4601): RECURSO: RECURSO_1 con 2 instancias
+[INFO] 15:39:40:056 Kernel/(4601:4601): Cantidad total de recursos disponibles: 2 
+[INFO] 15:39:40:056 Kernel/(4601:4601): ALGORITMO_PLANIFICACION FIFOOO!!!!
+[INFO] 15:39:40:057 Kernel/(4601:4601): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 15:39:40:058 Kernel/(4601:4601): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 15:39:40:058 Kernel/(4601:4601): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 15:39:40:058 Kernel/(4601:4601): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 15:39:47:543 Kernel/(4601:4601): Cliente conectado (a KERNEL_SV)
+
+[INFO] 15:39:47:544 Kernel/(4601:4608): Envio solicitud a MEMORIA
+[INFO] 15:39:47:545 Kernel/(4601:4608): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:39:47:545 Kernel/(4601:4608): “PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 15:39:47:545 Kernel/(4601:4602): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 15:39:47:919 Kernel/(4601:4601): Cliente conectado (a KERNEL_SV)
+
+[INFO] 15:39:47:919 Kernel/(4601:4610): Envio solicitud a MEMORIA
+[INFO] 15:39:47:962 Kernel/(4601:4610): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:39:47:962 Kernel/(4601:4610): “PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 15:39:48:546 Kernel/(4601:4603): Pid: 0, 79 
+[INFO] 15:39:48:546 Kernel/(4601:4603): PID: 0 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 15:39:48:546 Kernel/(4601:4603): Para RECURSO DISCO hay 1 instancias disponibles antes de ejecutar
+[INFO] 15:39:48:546 Kernel/(4601:4603): PID: 0 - Wait: DISCO - Instancias: 0 
+[INFO] 15:39:48:546 Kernel/(4601:4602): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 15:39:48:547 Kernel/(4601:4603): Pid: 0, 78 
+[INFO] 15:39:48:547 Kernel/(4601:4603): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O
+[INFO] 15:39:48:548 Kernel/(4601:4611): instruccion numer 3
+[INFO] 15:39:48:548 Kernel/(4601:4611):  me meti al if
+[INFO] 15:39:48:550 Kernel/(4601:4611):  ejecutar io
+[INFO] 15:39:48:551 Kernel/(4601:4611):  PID: 0 - Bloqueado por: I/O durante: 10
+
+[INFO] 15:39:48:552 Kernel/(4601:4611): PID: 0 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 15:39:48:552 Kernel/(4601:4602): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 15:39:49:549 Kernel/(4601:4603): Pid: 1, 79 
+[INFO] 15:39:49:549 Kernel/(4601:4603): PID: 1 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 15:39:49:550 Kernel/(4601:4603): Para RECURSO DISCO hay 0 instancias disponibles antes de ejecutar
+[INFO] 15:39:49:550 Kernel/(4601:4603): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: DISCO - Instancias: 65535 
+[INFO] 15:39:49:589 Kernel/(4601:4603): Pid: 0, 80 
+[INFO] 15:39:49:589 Kernel/(4601:4603): PID: 0 - Recibo pedido de SIGNAL por RECURSO: DISCO
+
+[INFO] 15:39:49:589 Kernel/(4601:4603): Para RECURSO DISCO hay 65535 instancias disponibles antes de ejecutar
+[INFO] 15:39:49:589 Kernel/(4601:4603): entro al else instancias
+[INFO] 15:39:49:589 Kernel/(4601:4603): PID: 0 - SIGNAL: DISCO - Instancias: 0 
+[INFO] 15:39:49:590 Kernel/(4601:4603): Pid: 0, 85 
+[INFO] 15:39:49:590 Kernel/(4601:4603): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 15:39:49:590 Kernel/(4601:4602): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 15:39:49:590 Kernel/(4601:4603): Pid: 0, 84 
+[INFO] 15:39:49:590 Kernel/(4601:4603): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 15:53:28:497 Kernel/(4880:4880): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: FIFO
+ESTIMACION_INICIAL: 10000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 15:53:28:499 Kernel/(4880:4880): RECURSO: DISCO con 1 instancias
+[INFO] 15:53:28:499 Kernel/(4880:4880): RECURSO: RECURSO_1 con 2 instancias
+[INFO] 15:53:28:500 Kernel/(4880:4880): Cantidad total de recursos disponibles: 2 
+[INFO] 15:53:28:501 Kernel/(4880:4880): ALGORITMO_PLANIFICACION FIFOOO!!!!
+[INFO] 15:53:28:501 Kernel/(4880:4880): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 15:53:28:502 Kernel/(4880:4880): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 15:53:28:503 Kernel/(4880:4880): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 15:53:28:503 Kernel/(4880:4880): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 15:53:32:826 Kernel/(4880:4880): Cliente conectado (a KERNEL_SV)
+
+[INFO] 15:53:32:827 Kernel/(4880:4886): Envio solicitud a MEMORIA
+[INFO] 15:53:32:827 Kernel/(4880:4886): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:53:32:827 Kernel/(4880:4886): “PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 15:53:32:827 Kernel/(4880:4881): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 15:53:33:178 Kernel/(4880:4880): Cliente conectado (a KERNEL_SV)
+
+[INFO] 15:53:33:178 Kernel/(4880:4888): Envio solicitud a MEMORIA
+[INFO] 15:53:33:222 Kernel/(4880:4888): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:53:33:222 Kernel/(4880:4888): “PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 15:53:33:828 Kernel/(4880:4882): Pid: 0, 79 
+[INFO] 15:53:33:828 Kernel/(4880:4882): PID: 0 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 15:53:33:828 Kernel/(4880:4882): Para RECURSO DISCO hay 1 instancias disponibles antes de ejecutar
+[INFO] 15:53:33:828 Kernel/(4880:4882): PID: 0 - Wait: DISCO - Instancias: 0 
+[INFO] 15:53:33:828 Kernel/(4880:4881): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 15:53:33:829 Kernel/(4880:4882): Pid: 0, 78 
+[INFO] 15:53:33:829 Kernel/(4880:4882): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O
+[INFO] 15:53:33:829 Kernel/(4880:4889): instruccion numer 3
+[INFO] 15:53:33:829 Kernel/(4880:4889):  me meti al if
+[INFO] 15:53:33:830 Kernel/(4880:4889):  ejecutar io
+[INFO] 15:53:33:830 Kernel/(4880:4889):  PID: 0 - Bloqueado por: I/O durante: 10
+
+[INFO] 15:53:33:830 Kernel/(4880:4889): PID: 0 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 15:53:33:831 Kernel/(4880:4881): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 15:53:34:829 Kernel/(4880:4882): Pid: 1, 79 
+[INFO] 15:53:34:829 Kernel/(4880:4882): PID: 1 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 15:53:34:829 Kernel/(4880:4882): Para RECURSO DISCO hay 0 instancias disponibles antes de ejecutar
+[INFO] 15:53:34:829 Kernel/(4880:4882): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: DISCO - Instancias: -1 
+[INFO] 15:53:34:870 Kernel/(4880:4882): Pid: 0, 80 
+[INFO] 15:53:34:870 Kernel/(4880:4882): PID: 0 - Recibo pedido de SIGNAL por RECURSO: DISCO
+
+[INFO] 15:53:34:870 Kernel/(4880:4882): Para RECURSO DISCO hay -1 instancias disponibles antes de ejecutar
+[INFO] 15:53:34:870 Kernel/(4880:4882): entro al if instancias
+[INFO] 15:53:34:870 Kernel/(4880:4882): PID: 0 - SIGNAL: DISCO - Instancias: 0 
+[INFO] 15:53:34:870 Kernel/(4880:4882): Pid: 0, 85 
+[INFO] 15:53:34:870 Kernel/(4880:4882): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 15:53:34:870 Kernel/(4880:4881): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 15:53:34:870 Kernel/(4880:4882): Pid: 1, 78 
+[INFO] 15:53:34:870 Kernel/(4880:4882): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O
+[INFO] 15:53:34:870 Kernel/(4880:4890): instruccion numer 3
+[INFO] 15:53:34:870 Kernel/(4880:4890):  me meti al if
+[INFO] 15:53:34:870 Kernel/(4880:4890):  ejecutar io
+[INFO] 15:53:34:870 Kernel/(4880:4890):  PID: 1 - Bloqueado por: I/O durante: 10
+
+[INFO] 15:53:34:871 Kernel/(4880:4890): PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 15:53:34:871 Kernel/(4880:4881): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 15:53:34:871 Kernel/(4880:4882): Pid: 0, 84 
+[INFO] 15:53:34:871 Kernel/(4880:4882): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 16:01:35:196 Kernel/(4995:4995): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: FIFO
+ESTIMACION_INICIAL: 10000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 16:01:35:198 Kernel/(4995:4995): RECURSO: DISCO con 1 instancias
+[INFO] 16:01:35:198 Kernel/(4995:4995): RECURSO: RECURSO_1 con 2 instancias
+[INFO] 16:01:35:198 Kernel/(4995:4995): Cantidad total de recursos disponibles: 2 
+[INFO] 16:01:35:198 Kernel/(4995:4995): ALGORITMO_PLANIFICACION FIFOOO!!!!
+[INFO] 16:01:35:199 Kernel/(4995:4995): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 16:01:35:199 Kernel/(4995:4995): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 16:01:35:200 Kernel/(4995:4995): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 16:01:35:200 Kernel/(4995:4995): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 16:01:37:917 Kernel/(4995:4995): Cliente conectado (a KERNEL_SV)
+
+[INFO] 16:01:37:918 Kernel/(4995:5001): Envio solicitud a MEMORIA
+[INFO] 16:01:37:918 Kernel/(4995:5001): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 16:01:37:918 Kernel/(4995:5001): “PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:01:37:919 Kernel/(4995:4996): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:01:38:333 Kernel/(4995:4995): Cliente conectado (a KERNEL_SV)
+
+[INFO] 16:01:38:333 Kernel/(4995:5003): Envio solicitud a MEMORIA
+[INFO] 16:01:38:374 Kernel/(4995:5003): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 16:01:38:374 Kernel/(4995:5003): “PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:01:38:920 Kernel/(4995:4997): Pid: 0, 79 
+[INFO] 16:01:38:920 Kernel/(4995:4997): PID: 0 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 16:01:38:920 Kernel/(4995:4997): Para RECURSO DISCO hay 1 instancias disponibles antes de ejecutar
+[INFO] 16:01:38:920 Kernel/(4995:4997): PID: 0 - Wait: DISCO - Instancias: 0 
+[INFO] 16:01:38:920 Kernel/(4995:4996): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:01:38:920 Kernel/(4995:4997): Pid: 0, 78 
+[INFO] 16:01:38:920 Kernel/(4995:4997): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O
+[INFO] 16:01:38:920 Kernel/(4995:5004): instruccion numer 3
+[INFO] 16:01:38:920 Kernel/(4995:5004):  me meti al if
+[INFO] 16:01:38:921 Kernel/(4995:5004):  ejecutar io
+[INFO] 16:01:38:921 Kernel/(4995:5004):  PID: 0 - Bloqueado por: I/O durante: 10
+
+[INFO] 16:01:38:921 Kernel/(4995:5004): PID: 0 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 16:01:38:921 Kernel/(4995:4996): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:01:39:921 Kernel/(4995:4997): Pid: 1, 79 
+[INFO] 16:01:39:921 Kernel/(4995:4997): PID: 1 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 16:01:39:921 Kernel/(4995:4997): Para RECURSO DISCO hay 0 instancias disponibles antes de ejecutar
+[INFO] 16:01:39:921 Kernel/(4995:4997): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: DISCO - Instancias: -1 
+[INFO] 16:01:39:962 Kernel/(4995:4997): Pid: 0, 80 
+[INFO] 16:01:39:962 Kernel/(4995:4997): PID: 0 - Recibo pedido de SIGNAL por RECURSO: DISCO
+
+[INFO] 16:01:39:962 Kernel/(4995:4997): Para RECURSO DISCO hay -1 instancias disponibles antes de ejecutar
+[INFO] 16:01:39:962 Kernel/(4995:4997): entro al if instancias
+[INFO] 16:01:39:962 Kernel/(4995:4997): PID: 0 - SIGNAL: DISCO - Instancias: 0 
+[INFO] 16:01:39:963 Kernel/(4995:4997): Pid: 0, 85 
+[INFO] 16:01:39:963 Kernel/(4995:4997): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 16:01:39:963 Kernel/(4995:4996): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:01:39:963 Kernel/(4995:4997): Pid: 1, 78 
+[INFO] 16:01:39:963 Kernel/(4995:4997): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O
+[INFO] 16:01:39:963 Kernel/(4995:5005): instruccion numer 3
+[INFO] 16:01:39:963 Kernel/(4995:5005):  me meti al if
+[INFO] 16:01:39:963 Kernel/(4995:5005):  ejecutar io
+[INFO] 16:01:39:963 Kernel/(4995:5005):  PID: 1 - Bloqueado por: I/O durante: 10
+
+[INFO] 16:01:39:964 Kernel/(4995:5005): PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 16:01:39:964 Kernel/(4995:4996): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:01:39:965 Kernel/(4995:4997): Pid: 0, 84 
+[INFO] 16:01:39:965 Kernel/(4995:4997): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 16:03:49:339 Kernel/(5105:5105): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: FIFO
+ESTIMACION_INICIAL: 10000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 16:03:49:341 Kernel/(5105:5105): RECURSO: DISCO con 1 instancias
+[INFO] 16:03:49:341 Kernel/(5105:5105): RECURSO: RECURSO_1 con 2 instancias
+[INFO] 16:03:49:341 Kernel/(5105:5105): Cantidad total de recursos disponibles: 2 
+[INFO] 16:03:49:341 Kernel/(5105:5105): ALGORITMO_PLANIFICACION FIFOOO!!!!
+[INFO] 16:03:49:342 Kernel/(5105:5105): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 16:03:49:342 Kernel/(5105:5105): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 16:03:49:343 Kernel/(5105:5105): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 16:03:49:344 Kernel/(5105:5105): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 16:03:52:165 Kernel/(5105:5105): Cliente conectado (a KERNEL_SV)
+
+[INFO] 16:03:52:165 Kernel/(5105:5111): Envio solicitud a MEMORIA
+[INFO] 16:03:52:166 Kernel/(5105:5111): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 16:03:52:166 Kernel/(5105:5111): “PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:03:52:166 Kernel/(5105:5106): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:03:52:516 Kernel/(5105:5105): Cliente conectado (a KERNEL_SV)
+
+[INFO] 16:03:52:517 Kernel/(5105:5113): Envio solicitud a MEMORIA
+[INFO] 16:03:52:558 Kernel/(5105:5113): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 16:03:52:558 Kernel/(5105:5113): “PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:03:53:168 Kernel/(5105:5107): Pid: 0, 79 
+[INFO] 16:03:53:168 Kernel/(5105:5107): PID: 0 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 16:03:53:168 Kernel/(5105:5107): Para RECURSO DISCO hay 1 instancias disponibles antes de ejecutar
+[INFO] 16:03:53:168 Kernel/(5105:5107): PID: 0 - Wait: DISCO - Instancias: 0 
+[INFO] 16:03:53:168 Kernel/(5105:5106): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:03:53:168 Kernel/(5105:5107): Pid: 0, 78 
+[INFO] 16:03:53:168 Kernel/(5105:5107): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O
+[INFO] 16:03:53:168 Kernel/(5105:5114): instruccion numer 3
+[INFO] 16:03:53:169 Kernel/(5105:5114):  me meti al if
+[INFO] 16:03:53:169 Kernel/(5105:5114):  ejecutar io
+[INFO] 16:03:53:169 Kernel/(5105:5114):  PID: 0 - Bloqueado por: I/O durante: 10
+
+[INFO] 16:03:53:169 Kernel/(5105:5114): PID: 0 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 16:03:53:169 Kernel/(5105:5106): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:03:54:169 Kernel/(5105:5107): Pid: 1, 79 
+[INFO] 16:03:54:169 Kernel/(5105:5107): PID: 1 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 16:03:54:169 Kernel/(5105:5107): Para RECURSO DISCO hay 0 instancias disponibles antes de ejecutar
+[INFO] 16:03:54:169 Kernel/(5105:5107): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: DISCO - Instancias: -1 
+[INFO] 16:03:54:209 Kernel/(5105:5107): Pid: 0, 80 
+[INFO] 16:03:54:210 Kernel/(5105:5107): PID: 0 - Recibo pedido de SIGNAL por RECURSO: DISCO
+
+[INFO] 16:03:54:210 Kernel/(5105:5107): Para RECURSO DISCO hay -1 instancias disponibles antes de ejecutar
+[INFO] 16:03:54:210 Kernel/(5105:5107): entro al if instancias
+[INFO] 16:03:54:210 Kernel/(5105:5107): PID: 0 - SIGNAL: DISCO - Instancias: 0 
+[INFO] 16:03:54:210 Kernel/(5105:5107): entro al if bloquedos
+[INFO] 16:03:54:210 Kernel/(5105:5107): Pid: 0, 85 
+[INFO] 16:03:54:210 Kernel/(5105:5107): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 16:03:54:210 Kernel/(5105:5106): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:03:54:210 Kernel/(5105:5107): Pid: 1, 78 
+[INFO] 16:03:54:210 Kernel/(5105:5107): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O
+[INFO] 16:03:54:210 Kernel/(5105:5115): instruccion numer 3
+[INFO] 16:03:54:210 Kernel/(5105:5115):  me meti al if
+[INFO] 16:03:54:210 Kernel/(5105:5115):  ejecutar io
+[INFO] 16:03:54:210 Kernel/(5105:5115):  PID: 1 - Bloqueado por: I/O durante: 10
+
+[INFO] 16:03:54:210 Kernel/(5105:5115): PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 16:03:54:210 Kernel/(5105:5106): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:03:54:210 Kernel/(5105:5107): Pid: 0, 84 
+[INFO] 16:03:54:210 Kernel/(5105:5107): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 16:06:05:572 Kernel/(5244:5244): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: FIFO
+ESTIMACION_INICIAL: 10000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 16:06:05:575 Kernel/(5244:5244): RECURSO: DISCO con 1 instancias
+[INFO] 16:06:05:576 Kernel/(5244:5244): RECURSO: RECURSO_1 con 2 instancias
+[INFO] 16:06:05:576 Kernel/(5244:5244): Cantidad total de recursos disponibles: 2 
+[INFO] 16:06:05:576 Kernel/(5244:5244): ALGORITMO_PLANIFICACION FIFOOO!!!!
+[INFO] 16:06:05:577 Kernel/(5244:5244): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 16:06:05:577 Kernel/(5244:5244): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 16:06:05:578 Kernel/(5244:5244): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 16:06:05:578 Kernel/(5244:5244): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 16:06:08:127 Kernel/(5244:5244): Cliente conectado (a KERNEL_SV)
+
+[INFO] 16:06:08:128 Kernel/(5244:5250): Envio solicitud a MEMORIA
+[INFO] 16:06:08:128 Kernel/(5244:5250): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 16:06:08:129 Kernel/(5244:5250): “PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:06:08:129 Kernel/(5244:5245): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:06:08:508 Kernel/(5244:5244): Cliente conectado (a KERNEL_SV)
+
+[INFO] 16:06:08:509 Kernel/(5244:5252): Envio solicitud a MEMORIA
+[INFO] 16:06:08:550 Kernel/(5244:5252): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 16:06:08:550 Kernel/(5244:5252): “PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:06:09:130 Kernel/(5244:5246): Pid: 0, 79 
+[INFO] 16:06:09:130 Kernel/(5244:5246): PID: 0 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 16:06:09:130 Kernel/(5244:5246): Para RECURSO DISCO hay 1 instancias disponibles antes de ejecutar
+[INFO] 16:06:09:130 Kernel/(5244:5246): PID: 0 - Wait: DISCO - Instancias: 0 
+[INFO] 16:06:09:130 Kernel/(5244:5245): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:06:09:130 Kernel/(5244:5246): Pid: 0, 78 
+[INFO] 16:06:09:130 Kernel/(5244:5246): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O
+[INFO] 16:06:09:130 Kernel/(5244:5253): instruccion numer 3
+[INFO] 16:06:09:131 Kernel/(5244:5253):  me meti al if
+[INFO] 16:06:09:131 Kernel/(5244:5253):  ejecutar io
+[INFO] 16:06:09:131 Kernel/(5244:5253):  PID: 0 - Bloqueado por: I/O durante: 10
+
+[INFO] 16:06:09:131 Kernel/(5244:5253): PID: 0 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 16:06:09:131 Kernel/(5244:5245): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:06:10:131 Kernel/(5244:5246): Pid: 1, 79 
+[INFO] 16:06:10:131 Kernel/(5244:5246): PID: 1 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 16:06:10:131 Kernel/(5244:5246): Para RECURSO DISCO hay 0 instancias disponibles antes de ejecutar
+[INFO] 16:06:10:131 Kernel/(5244:5246): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: DISCO - Instancias: -1 
+[INFO] 16:06:10:174 Kernel/(5244:5246): Pid: 0, 80 
+[INFO] 16:06:10:174 Kernel/(5244:5246): PID: 0 - Recibo pedido de SIGNAL por RECURSO: DISCO
+
+[INFO] 16:06:10:174 Kernel/(5244:5246): Para RECURSO DISCO hay -1 instancias disponibles antes de ejecutar
+[INFO] 16:06:10:174 Kernel/(5244:5246): entro al if instancias
+[INFO] 16:06:10:174 Kernel/(5244:5246): PID: 0 - SIGNAL: DISCO - Instancias: 0 
+[INFO] 16:06:10:174 Kernel/(5244:5246): PID: 1 q desbloqueo
+[INFO] 16:06:10:174 Kernel/(5244:5246): Pid: 0, 85 
+[INFO] 16:06:10:174 Kernel/(5244:5246): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 16:06:10:174 Kernel/(5244:5245): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:06:10:174 Kernel/(5244:5246): Pid: 1, 78 
+[INFO] 16:06:10:174 Kernel/(5244:5246): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O
+[INFO] 16:06:10:174 Kernel/(5244:5254): instruccion numer 3
+[INFO] 16:06:10:174 Kernel/(5244:5254):  me meti al if
+[INFO] 16:06:10:174 Kernel/(5244:5254):  ejecutar io
+[INFO] 16:06:10:174 Kernel/(5244:5254):  PID: 1 - Bloqueado por: I/O durante: 10
+
+[INFO] 16:06:10:174 Kernel/(5244:5254): PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 16:06:10:174 Kernel/(5244:5245): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:06:10:175 Kernel/(5244:5246): Pid: 0, 84 
+[INFO] 16:06:10:175 Kernel/(5244:5246): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 16:23:14:607 Kernel/(5491:5491): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: FIFO
+ESTIMACION_INICIAL: 10000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 16:23:14:610 Kernel/(5491:5491): RECURSO: DISCO con 1 instancias
+[INFO] 16:23:14:610 Kernel/(5491:5491): RECURSO: RECURSO_1 con 2 instancias
+[INFO] 16:23:14:610 Kernel/(5491:5491): Cantidad total de recursos disponibles: 2 
+[INFO] 16:23:14:610 Kernel/(5491:5491): ALGORITMO_PLANIFICACION FIFOOO!!!!
+[INFO] 16:23:14:611 Kernel/(5491:5491): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 16:23:14:611 Kernel/(5491:5491): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 16:23:14:612 Kernel/(5491:5491): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 16:23:14:612 Kernel/(5491:5491): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 16:23:18:185 Kernel/(5491:5491): Cliente conectado (a KERNEL_SV)
+
+[INFO] 16:23:18:186 Kernel/(5491:5497): Envio solicitud a MEMORIA
+[INFO] 16:23:18:187 Kernel/(5491:5497): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 16:23:18:187 Kernel/(5491:5497): “PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:23:18:187 Kernel/(5491:5492): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:23:18:616 Kernel/(5491:5491): Cliente conectado (a KERNEL_SV)
+
+[INFO] 16:23:18:617 Kernel/(5491:5499): Envio solicitud a MEMORIA
+[INFO] 16:23:18:658 Kernel/(5491:5499): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 16:23:18:658 Kernel/(5491:5499): “PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:23:19:188 Kernel/(5491:5493): Pid: 0, 79 
+[INFO] 16:23:19:188 Kernel/(5491:5493): PID: 0 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 16:23:19:188 Kernel/(5491:5493): Para RECURSO DISCO hay 1 instancias disponibles antes de ejecutar
+[INFO] 16:23:19:188 Kernel/(5491:5493): PID: 0 - Wait: DISCO - Instancias: 0 
+[INFO] 16:23:19:188 Kernel/(5491:5492): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:23:19:188 Kernel/(5491:5493): Pid: 0, 78 
+[INFO] 16:23:19:188 Kernel/(5491:5493): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O
+[INFO] 16:23:19:189 Kernel/(5491:5500): instruccion numer 3
+[INFO] 16:23:19:189 Kernel/(5491:5500):  me meti al if
+[INFO] 16:23:19:189 Kernel/(5491:5500):  ejecutar io
+[INFO] 16:23:19:189 Kernel/(5491:5500):  PID: 0 - Bloqueado por: I/O durante: 10
+
+[INFO] 16:23:19:189 Kernel/(5491:5500): PID: 0 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 16:23:19:190 Kernel/(5491:5492): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:23:19:190 Kernel/(5491:5500): PID: 7201 - probando como queda
+[INFO] 16:23:20:189 Kernel/(5491:5493): Pid: 1, 79 
+[INFO] 16:23:20:189 Kernel/(5491:5493): PID: 1 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 16:23:20:189 Kernel/(5491:5493): Para RECURSO DISCO hay 0 instancias disponibles antes de ejecutar
+[INFO] 16:23:20:189 Kernel/(5491:5493): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: DISCO - Instancias: -1 
+[INFO] 16:23:20:232 Kernel/(5491:5493): Pid: 0, 80 
+[INFO] 16:23:20:232 Kernel/(5491:5493): PID: 0 - Recibo pedido de SIGNAL por RECURSO: DISCO
+
+[INFO] 16:23:20:232 Kernel/(5491:5493): Para RECURSO DISCO hay -1 instancias disponibles antes de ejecutar
+[INFO] 16:23:20:232 Kernel/(5491:5493): entro al if instancias
+[INFO] 16:23:20:232 Kernel/(5491:5493): PID: 0 - SIGNAL: DISCO - Instancias: 0 
+[INFO] 16:23:20:232 Kernel/(5491:5493): PID: 1 q desbloqueo
+[INFO] 16:23:20:233 Kernel/(5491:5493): Pid: 0, 85 
+[INFO] 16:23:20:233 Kernel/(5491:5493): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 16:23:20:233 Kernel/(5491:5492): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:23:20:233 Kernel/(5491:5493): Pid: 1, 78 
+[INFO] 16:23:20:233 Kernel/(5491:5493): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O
+[INFO] 16:23:20:233 Kernel/(5491:5501): instruccion numer 3
+[INFO] 16:23:20:234 Kernel/(5491:5501):  me meti al if
+[INFO] 16:23:20:234 Kernel/(5491:5501):  ejecutar io
+[INFO] 16:23:20:234 Kernel/(5491:5501):  PID: 1 - Bloqueado por: I/O durante: 10
+
+[INFO] 16:23:20:235 Kernel/(5491:5501): PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 16:23:20:235 Kernel/(5491:5492): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:23:20:235 Kernel/(5491:5493): Pid: 0, 84 
+[INFO] 16:23:20:235 Kernel/(5491:5493): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 16:23:20:237 Kernel/(5491:5501): PID: 1 - probando como queda
+[INFO] 16:28:37:985 Kernel/(5613:5613): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: FIFO
+ESTIMACION_INICIAL: 10000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 16:28:37:986 Kernel/(5613:5613): RECURSO: DISCO con 1 instancias
+[INFO] 16:28:37:986 Kernel/(5613:5613): RECURSO: RECURSO_1 con 2 instancias
+[INFO] 16:28:37:986 Kernel/(5613:5613): Cantidad total de recursos disponibles: 2 
+[INFO] 16:28:37:987 Kernel/(5613:5613): ALGORITMO_PLANIFICACION FIFOOO!!!!
+[INFO] 16:28:37:987 Kernel/(5613:5613): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 16:28:37:987 Kernel/(5613:5613): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 16:28:37:988 Kernel/(5613:5613): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 16:28:37:988 Kernel/(5613:5613): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 16:28:40:531 Kernel/(5613:5613): Cliente conectado (a KERNEL_SV)
+
+[INFO] 16:28:40:532 Kernel/(5613:5619): Envio solicitud a MEMORIA
+[INFO] 16:28:40:532 Kernel/(5613:5619): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 16:28:40:532 Kernel/(5613:5619): “PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:28:40:532 Kernel/(5613:5614): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:28:40:953 Kernel/(5613:5613): Cliente conectado (a KERNEL_SV)
+
+[INFO] 16:28:40:954 Kernel/(5613:5621): Envio solicitud a MEMORIA
+[INFO] 16:28:40:997 Kernel/(5613:5621): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 16:28:40:997 Kernel/(5613:5621): “PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:28:41:533 Kernel/(5613:5615): Pid: 0, 79 
+[INFO] 16:28:41:533 Kernel/(5613:5615): PID: 0 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 16:28:41:533 Kernel/(5613:5615): Para RECURSO DISCO hay 1 instancias disponibles antes de ejecutar
+[INFO] 16:28:41:533 Kernel/(5613:5615): PID: 0 - Wait: DISCO - Instancias: 0 
+[INFO] 16:28:41:533 Kernel/(5613:5614): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:28:41:533 Kernel/(5613:5615): Pid: 0, 78 
+[INFO] 16:28:41:533 Kernel/(5613:5615): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O
+[INFO] 16:28:41:534 Kernel/(5613:5622): instruccion numer 3
+[INFO] 16:28:41:534 Kernel/(5613:5622):  me meti al if
+[INFO] 16:28:41:534 Kernel/(5613:5622):  ejecutar io
+[INFO] 16:28:41:534 Kernel/(5613:5622):  PID: 0 - Bloqueado por: I/O durante: 10
+
+[INFO] 16:28:41:534 Kernel/(5613:5622): PID: 0 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 16:28:41:535 Kernel/(5613:5614): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:28:41:535 Kernel/(5613:5622): PID: 23585 - probando como queda
+[INFO] 16:28:42:535 Kernel/(5613:5615): Pid: 1, 79 
+[INFO] 16:28:42:535 Kernel/(5613:5615): PID: 1 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 16:28:42:535 Kernel/(5613:5615): Para RECURSO DISCO hay 0 instancias disponibles antes de ejecutar
+[INFO] 16:28:42:535 Kernel/(5613:5615): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: DISCO - Instancias: -1 
+[INFO] 16:28:42:580 Kernel/(5613:5615): Pid: 0, 80 
+[INFO] 16:28:42:581 Kernel/(5613:5615): PID: 0 - vengo dps del I/O
+[INFO] 16:28:42:581 Kernel/(5613:5615): PID: 0 - Recibo pedido de SIGNAL por RECURSO: DISCO
+
+[INFO] 16:28:42:581 Kernel/(5613:5615): Para RECURSO DISCO hay -1 instancias disponibles antes de ejecutar
+[INFO] 16:28:42:581 Kernel/(5613:5615): entro al if instancias
+[INFO] 16:28:42:581 Kernel/(5613:5615): PID: 0 - SIGNAL: DISCO - Instancias: 0 
+[INFO] 16:28:42:581 Kernel/(5613:5615): PID: 1 q desbloqueo
+[INFO] 16:28:42:584 Kernel/(5613:5615): Pid: 0, 85 
+[INFO] 16:28:42:584 Kernel/(5613:5615): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 16:28:42:584 Kernel/(5613:5614): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:28:42:585 Kernel/(5613:5615): Pid: 1, 78 
+[INFO] 16:28:42:585 Kernel/(5613:5615): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O
+[INFO] 16:28:42:596 Kernel/(5613:5623): instruccion numer 3
+[INFO] 16:28:42:597 Kernel/(5613:5623):  me meti al if
+[INFO] 16:28:42:597 Kernel/(5613:5623):  ejecutar io
+[INFO] 16:28:42:597 Kernel/(5613:5623):  PID: 1 - Bloqueado por: I/O durante: 10
+
+[INFO] 16:28:42:597 Kernel/(5613:5623): PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 16:28:42:598 Kernel/(5613:5614): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:28:42:602 Kernel/(5613:5615): Pid: 0, 84 
+[INFO] 16:28:42:602 Kernel/(5613:5615): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 16:28:42:603 Kernel/(5613:5623): PID: 1 - probando como queda

@@ -75,7 +75,7 @@ int execute(INSTRUCCION* instruccion_ejecutar,char* registros,uint16_t pid, uint
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"WAIT") && pc == 2){
 
-			log_info(logger,"PID: %d -  Listo para ejecutar WAIT ", pid);
+			log_info(logger,"PID: %d - Envio WAIT a Kernel parametro 1: %s ", pid,instruccion_ejecutar->parametro1);
 
 			return WAIT;
 
@@ -86,7 +86,7 @@ int execute(INSTRUCCION* instruccion_ejecutar,char* registros,uint16_t pid, uint
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"SIGNAL") && pc == 4){
 
-			log_info(logger,"PID: %d - Listo para ejecutar SIGNAL ", pid);
+			log_info(logger,"PID: %d - Envio SIGNAL a kernel parametro 1: %s ", pid,instruccion_ejecutar->parametro1);
 			return SIGNAL;
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"MOV_IN") && pc == 5){
