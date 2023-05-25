@@ -13,6 +13,8 @@ t_log * logger;
 
 t_list* lista_de_recursos;
 
+t_temporal* reloj_inicio;
+
 int configValida(t_config* fd_configuracion) {
 	return (config_has_property(fd_configuracion, "IP_MEMORIA")
 		&& config_has_property(fd_configuracion, "PUERTO_MEMORIA")
@@ -78,6 +80,17 @@ int cargarConfiguracion() {
 		list_add(lista_de_recursos, aux_recurso);
 		i++;
 	}
+
+	if(!strcmp(configuracion->ALGORITMO_PLANIFICACION, "HRRN")){
+
+		reloj_inicio = temporal_create();
+		log_info(logger,"Probando hora %f", temporal_gettime(reloj_inicio));
+			wait(10000);
+			log_info(logger,"Probando hora %f", temporal_gettime(reloj_inicio));
+
+	}
+
+
 
 	log_info(logger,
 		"\nIP_MEMORIA: %s\n"
