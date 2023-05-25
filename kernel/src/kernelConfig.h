@@ -45,6 +45,8 @@ extern t_config_kernel * configuracion;
 extern t_config * fd_configuracion;
 extern t_log * logger;
 extern t_list* lista_de_recursos;
+extern t_temporal* reloj_inicio;
+
 
 
 int cargarConfiguracion();

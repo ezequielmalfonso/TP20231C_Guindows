@@ -30,6 +30,7 @@ t_queue* cola_ready;
 t_queue* cola_ready_sec;
 t_list* list_blocked;
 
+
 bool cpu_desocupado=true;
 
 void fifo_ready_execute(){
@@ -55,6 +56,69 @@ void fifo_ready_execute(){
 	}
 }
 
+void hrrn_ready_execute(){
+
+	while(1){
+		    log_info(logger,"PID: hrrn_ready_execute");
+		    sem_wait(&s_ready_execute);
+		    sem_wait(&s_cpu_desocupado); // Para que no ejecute cada vez que un proceso llega a ready
+		    sem_wait(&s_cont_ready); // Para que no intente ejecutar si la lista de ready esta vacia
+
+		    ordenar_hrrn(cola_ready);
+
+		    // Pongo semaforo para asegurar que ningun otro proceso pueda acceder a la cola ready en este momento
+		    pthread_mutex_lock(&mx_cola_ready);
+		    PCB_t* proceso = queue_pop(cola_ready);
+		    pthread_mutex_unlock(&mx_cola_ready);
+
+
+		    log_info(logger,"PID: %d - Estado Anterior: READY - Estado Actual: EXECUTE", proceso->pid);
+
+		   // pthread_mutex_lock(&mx_cpu);
+		    send_proceso(cpu_fd, proceso,DISPATCH);
+		  //  pthread_mutex_unlock(&mx_cpu);
+		    pcb_destroy(proceso);
+		    sem_post(&s_esperar_cpu);
+		}
+}
+
+void ordenar_hrrn(t_queue *cola_ready){
+
+	t_list* listaReady = malloc(sizeof(t_list));
+	listaReady = list_create();
+
+	PCB_t* proceso;
+	int i = 0;
+
+	while(i < queue_size(cola_ready)){
+
+		proceso = queue_pop(cola_ready);
+		list_add(listaReady,proceso);
+
+		i++;
+	}
+
+	list_sort(listaReady,*menor);
+
+	 t_link_element* aux_proc1 = listaReady->head;
+
+	while( aux_proc1!=NULL )
+	{
+	   PCB_t* aux_proc = aux_proc1->data;
+	   queue_push(cola_ready, aux_proc);
+	   aux_proc1 = aux_proc1->next;
+	}
+
+
+}
+
+bool menor(PCB_t* a,PCB_t* b){
+	//TODO SJF FORMULA???????
+	//TODO HRRN FORMULA??????
+	return a->tiempo_llegada_a_ready < b->tiempo_llegada_a_ready;
+}
+
+
 void inicializarPlanificacion(){
 	cola_new		= queue_create();
 	cola_ready		= queue_create();
@@ -78,7 +142,7 @@ void inicializarPlanificacion(){
 		log_info(logger,"ALGORITMO_PLANIFICACION FIFOOO!!!!");
 		//pthread_mutex_unlock(&mx_log);
 	}else if(!strcmp(configuracion->ALGORITMO_PLANIFICACION,"HRRN")){
-	//	pthread_create(&corto_plazo, NULL, (void*) hrrn_ready_execute, NULL);
+		pthread_create(&corto_plazo, NULL, (void*) hrrn_ready_execute, NULL);
 		log_info(logger,"ALGORITMO_PLANIFICACION HRRN!!!!");
 	}
 	else{
@@ -149,6 +213,8 @@ void esperar_cpu(){
 							 aux_rec2->instancias -= 1;
 							 log_info(logger,"PID: %d - Wait: %s - Instancias: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"), aux_rec2->instancias  );
 
+							 pcb->tiempo_llegada_a_ready = temporal_gettime(reloj_inicio);
+
 							 pthread_mutex_lock(&mx_cola_ready);  // TODO hacer mas pruebas
 							 send_proceso(cpu_fd, pcb,DISPATCH);
 							 pthread_mutex_unlock(&mx_cola_ready);
@@ -214,6 +280,8 @@ void esperar_cpu(){
 							 log_error(logger, "Ocurrio un error con las instancias del recurso %d: ", pcb->pid);
 						 }
 
+						 pcb_blocked->tiempo_llegada_a_ready = temporal_gettime(reloj_inicio);
+
 						 pthread_mutex_lock(&mx_cola_ready);
 						 queue_push(cola_ready,pcb_blocked);
 						 send_proceso(cpu_fd, pcb,DISPATCH);
@@ -227,6 +295,8 @@ void esperar_cpu(){
 					 }else{
 						 aux_rec2_s->instancias += 1;
 						 log_info(logger,"PID: %d - SIGNAL: %s - Instancias: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"), aux_rec2_s->instancias  );
+
+
 
 						 pthread_mutex_lock(&mx_cola_ready);  // TODO hacer mas pruebas
 						 send_proceso(cpu_fd, pcb,DISPATCH);
@@ -248,6 +318,9 @@ void esperar_cpu(){
 			case YIELD:
 				 log_info(logger, "PID: %d - Recibi YIELD de CPU lo mandamos al final de la cola READY", pcb->pid);
 				// log_info("Valor del PC: %d", pcb->pc);
+
+				 pcb->tiempo_llegada_a_ready = temporal_gettime(reloj_inicio);
+
 				 pthread_mutex_lock(&mx_cola_ready);
 				 queue_push(cola_ready,pcb);
 				 pthread_mutex_unlock(&mx_cola_ready);
@@ -330,6 +403,9 @@ void ejecutar_io(PCB_t* pcb,int numero) {
 		//pthread_mutex_lock(&mx_log);
 		log_info(logger, "PID: %d - Estado Anterior: BLOCKED - Estado Actual: READY", pcb->pid);
 		//pthread_mutex_unlock(&mx_log);
+
+		pcb->tiempo_llegada_a_ready = temporal_gettime(reloj_inicio);
+
 		pthread_mutex_lock(&mx_cola_ready);
 		queue_push(cola_ready, pcb);
 		pthread_mutex_unlock(&mx_cola_ready);

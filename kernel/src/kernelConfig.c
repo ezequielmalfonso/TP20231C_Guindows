@@ -81,15 +81,8 @@ int cargarConfiguracion() {
 		i++;
 	}
 
-	if(!strcmp(configuracion->ALGORITMO_PLANIFICACION, "HRRN")){
-
-		reloj_inicio = temporal_create();
-		log_info(logger,"Probando hora %f", temporal_gettime(reloj_inicio));
-			wait(10000);
-			log_info(logger,"Probando hora %f", temporal_gettime(reloj_inicio));
-
-	}
-
+	reloj_inicio = temporal_create();
+	log_info(logger,"Probando hora %d", temporal_gettime(reloj_inicio));
 
 
 	log_info(logger,

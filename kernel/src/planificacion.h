@@ -17,9 +17,9 @@
 #include<commons/collections/queue.h>
 #include<commons/collections/list.h>
 #include<commons/collections/dictionary.h>
+#include<commons/temporal.h>
 #include "protocolo.h"
 #include "kernel.h"
-
 
 extern pthread_mutex_t mx_cola_new;
 extern pthread_mutex_t mx_cola_ready;
@@ -40,6 +40,7 @@ void esperar_cpu();
 void bloqueando(PCB_t*);
 void inicializarPlanificacion();
 void execute_a_exit(PCB_t*);
+bool menor(PCB_t* a,PCB_t* b);
 //void ejecutar_io(PCB_t*,int);
 
 
