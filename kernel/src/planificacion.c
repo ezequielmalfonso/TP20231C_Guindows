@@ -34,8 +34,7 @@ bool cpu_desocupado=true;
 
 void fifo_ready_execute(){
 	while(1){
-	    //log_info(logger,"Entro al while");
-
+	    //log_info(logger,"PID: fifo_ready_execute");
 	    sem_wait(&s_ready_execute);
 	    sem_wait(&s_cpu_desocupado); // Para que no ejecute cada vez que un proceso llega a ready
 	    sem_wait(&s_cont_ready); // Para que no intente ejecutar si la lista de ready esta vacia
@@ -116,7 +115,8 @@ void esperar_cpu(){
 		//pthread_mutex_lock(&mx_cpu_desocupado);
 		//cpu_desocupado = true;
 		//pthread_mutex_unlock(&mx_cpu_desocupado);
-		log_info(logger, "Pid: %d, %d ", pcb->pid, cop);
+
+		//log_info(logger, "Pid: %d, %d ", pcb->pid, cop);
 		INSTRUCCION* instruccion = malloc(sizeof(INSTRUCCION));
 
 		switch (cop) {
@@ -210,22 +210,21 @@ void esperar_cpu(){
 							 pcb_blocked = queue_pop(aux_rec2_s->cola_bloqueados_recurso);
 							 pthread_mutex_unlock(&mx_cola_blocked);
 							 log_info(logger, "PID: %d q desbloqueo", pcb_blocked->pid );
+						 }else{
+							 log_error(logger, "Ocurrio un error con las instancias del recurso %d: ", pcb->pid);
 						 }
-						 //pthread_mutex_lock(&mx_cola_ready);  // TODO hacer mas pruebas
-						 //send_proceso(cpu_fd, pcb,DISPATCH);
-						 //pthread_mutex_unlock(&mx_cola_ready);
 
 						 pthread_mutex_lock(&mx_cola_ready);
 						 queue_push(cola_ready,pcb_blocked);
 						 send_proceso(cpu_fd, pcb,DISPATCH);
 						 pthread_mutex_unlock(&mx_cola_ready);
 
-
-						 sem_post(&s_ready_execute);
+						 sem_post(&s_cont_ready);
+					     sem_post(&s_ready_execute);
 						 sem_post(&s_cpu_desocupado);
 						 sem_post(&s_esperar_cpu);
+
 					 }else{
-						 log_info(logger, "entro al else instancias");
 						 aux_rec2_s->instancias += 1;
 						 log_info(logger,"PID: %d - SIGNAL: %s - Instancias: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"), aux_rec2_s->instancias  );
 
@@ -236,6 +235,7 @@ void esperar_cpu(){
 						 sem_post(&s_ready_execute);
 						 sem_post(&s_cpu_desocupado);
 						 sem_post(&s_esperar_cpu);
+
 					   }
 					}
 					 break;
@@ -271,6 +271,7 @@ void esperar_cpu(){
 				log_info(logger, "PID: %d - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O", pcb->pid);
 				 //pthread_mutex_unlock(&mx_log);
 				sem_post(&s_cpu_desocupado);
+
 				break;
 
 
@@ -310,7 +311,7 @@ void bloqueando(PCB_t* pcb){
 
 void ejecutar_io(PCB_t* pcb,int numero) {
 		//pthread_mutex_lock(&mx_log);
-		log_info(logger, " ejecutar io");
+		//log_info(logger, " ejecutar io");
 		//pthread_mutex_unlock(&mx_log);
 
 		//pthread_mutex_lock(&mx_cola_blocked);
