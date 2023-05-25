@@ -72,12 +72,10 @@ int cargarConfiguracion() {
 		t_recurso* aux_recurso = malloc(sizeof(t_recurso));
 		//aux_recurso->recurso =  configuracion->RECURSOS[i];
 		///log_info(logger, "Long %d  RECURSO: %s con %d instancias", strlen(configuracion->RECURSOS[i]), configuracion->RECURSOS[i],atoi(configuracion->INSTANCIAS_RECURSOS[i]) );
-
 		strcpy(aux_recurso->recurso, configuracion->RECURSOS[i]);
 		aux_recurso->instancias = atoi(configuracion->INSTANCIAS_RECURSOS[i]);
 		aux_recurso->cola_bloqueados_recurso = queue_create();
 		list_add(lista_de_recursos, aux_recurso);
-
 		i++;
 	}
 

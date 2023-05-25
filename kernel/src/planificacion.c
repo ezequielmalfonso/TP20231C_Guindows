@@ -96,7 +96,8 @@ void esperar_cpu(){
 	while(1){
 		sem_wait(&s_esperar_cpu); //--> se bloquea
 		op_code cop;
-		PCB_t* pcb = pcb_create();
+		PCB_t* pcb         = pcb_create();
+		PCB_t* pcb_blocked = pcb_create();
 		//pthread_mutex_lock(&mx_cpu);
 		//pthread_mutex_lock(&mx_pageFault);
 		if (recv(cpu_fd, &cop, sizeof(op_code), 0) <= 0) {
@@ -115,7 +116,9 @@ void esperar_cpu(){
 		//pthread_mutex_lock(&mx_cpu_desocupado);
 		//cpu_desocupado = true;
 		//pthread_mutex_unlock(&mx_cpu_desocupado);
-		//log_info(logger, "Pid: %d, %d ", pcb->pid, cop);
+		log_info(logger, "Pid: %d, %d ", pcb->pid, cop);
+		INSTRUCCION* instruccion = malloc(sizeof(INSTRUCCION));
+
 		switch (cop) {
 			case EXIT:
 				send(pcb->cliente_fd,&cop,sizeof(op_code),0);
@@ -126,50 +129,136 @@ void esperar_cpu(){
 			case WAIT:
 				// preguntar si va estar siempre en el mismo orden la lista de instrucciones
 				// SI NO usar un while
-				 INSTRUCCION* instruccion = list_get(pcb->instrucciones, 2);      // La instruccion 2 es el WAIT
+				 instruccion = list_get(pcb->instrucciones, 2);      // La instruccion 2 es el WAIT
 				 log_info(logger, "PID: %d - Recibo pedido de WAIT por RECURSO: %s", pcb->pid, instruccion->parametro1 );
 
 				 t_link_element* aux_rec1 = lista_de_recursos->head;
-				 uint16_t instancias;
+				 //uint16_t instancias;
 				 int pos_recurso = 0;
+
 				 while( aux_rec1!=NULL )
 				 {
 					 t_recurso* aux_rec2 = aux_rec1->data;
 					 if(strcmp(aux_rec2->recurso, instruccion->parametro1))
 					 {
 						 log_info(logger, "Para RECURSO %s hay %d instancias disponibles antes de ejecutar", aux_rec2->recurso, aux_rec2->instancias );
-						 instancias = aux_rec2->instancias;
+						 //instancias = aux_rec2->instancias;
+
+						 if(aux_rec2->instancias > 0)
+						 { // Si entra es pq va ejecutar la instancia del recurso y resto 1 a la instancia
+							 aux_rec2->instancias -= 1;
+							 log_info(logger,"PID: %d - Wait: %s - Instancias: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"), aux_rec2->instancias  );
+
+							 pthread_mutex_lock(&mx_cola_ready);  // TODO hacer mas pruebas
+							 send_proceso(cpu_fd, pcb,DISPATCH);
+							 pthread_mutex_unlock(&mx_cola_ready);
+
+							 sem_post(&s_ready_execute);
+							 sem_post(&s_cpu_desocupado);
+							 sem_post(&s_esperar_cpu);
+
+						 }else{
+							 aux_rec2->instancias -= 1;
+							 log_info(logger,"PID: %d - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: %s - Instancias: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"), aux_rec2->instancias  );
+
+							 pthread_mutex_lock(&mx_cola_blocked);
+							 queue_push(aux_rec2->cola_bloqueados_recurso,pcb);
+							 pthread_mutex_unlock(&mx_cola_blocked);
+
+							 sem_post(&s_ready_execute);
+							 sem_post(&s_cpu_desocupado);
+							 sem_post(&s_esperar_cpu);
+
+						 }
 						 break;
 					 }
+
 					 aux_rec1 = aux_rec1->next;
 					 pos_recurso++;
 				 }
 
-				 if(instancias > 0)
-				 { // Si entra es pq va ejecutar la instancia del recurso y resto 1 a la instancia
-					 instancias -= 1;
-					 log_info(logger,"PID: %d - Wait: %s - Instancias: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"), instancias  );
-
-					 pthread_mutex_lock(&mx_cola_ready);  // TODO hacer mas pruebas
-					 send_proceso(cpu_fd, pcb,DISPATCH);
-					 pthread_mutex_unlock(&mx_cola_ready);
-
-					 sem_post(&s_ready_execute);
-					 sem_post(&s_cpu_desocupado);
-					 sem_post(&s_esperar_cpu);
-
-
-				 }else{
-					 log_info(logger,"PID: %d - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: %s - Instancias: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"), instancias  );
-					 t_recurso* aux_rec2 = aux_rec1->data;
-					 t_recurso* rec_block = list_get(aux_rec1->data, pos_recurso);
-
-					 pthread_mutex_lock(&mx_cola_blocked);
-					 queue_push(rec_block->cola_bloqueados_recurso,pcb);
-					 pthread_mutex_unlock(&mx_cola_blocked);
-				 }
-
 				 break;
+
+			case SIGNAL:
+				instruccion = list_get(pcb->instrucciones, 4);      // La instruccion 4 es el SIGNAL
+				log_info(logger, "PID: %d - Recibo pedido de SIGNAL por RECURSO: %s", pcb->pid, instruccion->parametro1 );
+
+				t_link_element* aux_rec1_s = lista_de_recursos->head;
+				// uint16_t instancias;
+				int pos_recurso_s = 0;
+
+				while(aux_rec1_s != NULL)
+				{
+					t_recurso* aux_rec2_s = aux_rec1_s->data;
+					if(strcmp(aux_rec2_s->recurso, instruccion->parametro1))
+					{
+					  log_info(logger, "Para RECURSO %s hay %d instancias disponibles antes de ejecutar", aux_rec2_s->recurso, aux_rec2_s->instancias );
+					  //instancias = aux_rec2->instancias;
+					  break;
+					 }
+					 aux_rec1_s = aux_rec1_s->next;
+					 pos_recurso++;
+
+				}
+
+
+
+				 /*pos_recurso = 0;
+
+				 while( aux_rec1!=NULL )
+				 {
+					 t_recurso* aux_rec2 = aux_rec1->data;
+					 if(strcmp(aux_rec2->recurso, instruccion->parametro1))
+					 {
+						 log_info(logger, "Para RECURSO %s hay %d instancias disponibles antes de ejecutar", aux_rec2->recurso, aux_rec2->instancias );
+						 //instancias = aux_rec2->instancias;
+
+						 if(aux_rec2->instancias <= 0)
+						 { // Si entra es pq va ejecutar la instancia del recurso y resto 1 a la instancia
+							 aux_rec2->instancias += 1;
+							 log_info(logger,"PID: %d - SIGNAL: %s - Instancias: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"), aux_rec2->instancias  );
+
+
+							 if(!queue_is_empty(aux_rec2->cola_bloqueados_recurso))
+							 {
+								 pthread_mutex_lock(&mx_cola_blocked);
+								 pcb_blocked = queue_pop(aux_rec2->cola_bloqueados_recurso);
+								 pthread_mutex_unlock(&mx_cola_blocked);
+							 }
+							 pthread_mutex_lock(&mx_cola_ready);  // TODO hacer mas pruebas
+							 send_proceso(cpu_fd, pcb,DISPATCH);
+							 pthread_mutex_unlock(&mx_cola_ready);
+
+							 pthread_mutex_lock(&mx_cola_ready);
+							 queue_push(cola_ready,pcb_blocked);
+							 pthread_mutex_unlock(&mx_cola_ready);
+
+
+							 sem_post(&s_ready_execute);
+							 sem_post(&s_cpu_desocupado);
+							 sem_post(&s_esperar_cpu);
+
+						 }else{
+							 aux_rec2->instancias += 1;
+							 log_info(logger,"PID: %d - SIGNAL: %s - Instancias: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"), aux_rec2->instancias  );
+
+							 pthread_mutex_lock(&mx_cola_ready);  // TODO hacer mas pruebas
+							 send_proceso(cpu_fd, pcb,DISPATCH);
+						     pthread_mutex_unlock(&mx_cola_ready);
+
+							 sem_post(&s_ready_execute);
+							 sem_post(&s_cpu_desocupado);
+							 sem_post(&s_esperar_cpu);
+
+						 }
+						 break;
+
+
+					 aux_rec1 = aux_rec1->next;
+					 pos_recurso++;
+				 }*/
+
+				break;
 
 			case YIELD:
 				 log_info(logger, "PID: %d - Recibi YIELD de CPU lo mandamos al final de la cola READY", pcb->pid);
@@ -194,7 +283,7 @@ void esperar_cpu(){
 				pthread_create(&hilo_bloqueado,NULL,(void*)bloqueando,pcb);
 				pthread_detach(hilo_bloqueado);								// Hace y me aseguro el hilo no se va a joinear con el hilo principal
 				 //pthread_mutex_lock(&mx_log);
-				log_info(logger, "PID: %d - Estado Anterior: EXECUTE - Estado Actual: BLOCKED", pcb->pid);
+				log_info(logger, "PID: %d - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O", pcb->pid);
 				 //pthread_mutex_unlock(&mx_log);
 				sem_post(&s_cpu_desocupado);
 				break;

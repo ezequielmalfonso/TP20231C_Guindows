@@ -87,6 +87,7 @@ int execute(INSTRUCCION* instruccion_ejecutar,char* registros,uint16_t pid, uint
 		}else if(!strcmp(instruccion_ejecutar->comando,"SIGNAL") && pc == 4){
 
 			log_info(logger,"PID: %d - Listo para ejecutar SIGNAL ", pid);
+			return SIGNAL;
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"MOV_IN") && pc == 5){
 
