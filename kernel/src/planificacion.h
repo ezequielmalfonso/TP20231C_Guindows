@@ -21,6 +21,13 @@
 #include "protocolo.h"
 #include "kernel.h"
 
+
+typedef struct {
+    uint32_t pid;
+    int tiempo_in_exec;
+    int tiempo_out_exec;
+}t_tiempos_rafaga_anterior;
+
 extern pthread_mutex_t mx_cola_new;
 extern pthread_mutex_t mx_cola_ready;
 extern pthread_mutex_t mx_lista_block;
@@ -34,6 +41,8 @@ extern t_queue* cola_new;
 extern t_queue* cola_ready;
 extern t_queue* cola_ready_sec;
 extern t_list* list_blocked;
+extern t_tiempos_rafaga_anterior raf_anterior;
+extern t_list* list_rafa_anterior;
 //t_dictionary* iteracion_blocked; no se que chota es
 
 void esperar_cpu();
@@ -42,6 +51,7 @@ void inicializarPlanificacion();
 void execute_a_exit(PCB_t*);
 bool menor(PCB_t* a,PCB_t* b, uint32_t, double);
 void ordenar_hrrn(t_queue *cola_ready,uint32_t estimacion, double alpha);
+double obtenerEstimadoRafaga(PCB_t* a,uint32_t estimadoInicial, double alfa);
 //void ejecutar_io(PCB_t*,int);
 
 

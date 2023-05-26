@@ -23,7 +23,7 @@ void pcb_set(PCB_t*   pcb,
 			 uint32_t pc,
 			 char* registro_cpu,
 			 //t_list*  archivos_abiertos,
-			 double   estimado_rafaga_inicial,
+			 double   estimado_proxima_rafaga,
 			 uint32_t tiempo_llegada_a_ready,
 			 int      cliente){
 
@@ -41,7 +41,7 @@ void pcb_set(PCB_t*   pcb,
     //list_add_all(pcb->segmentos,segmentos);
 	//   TODO la parte de segmentos cuando lo aclaren y archivos abiertos
 	//pcb->archivos_abiertos
-    pcb->estimado_proxima_rafaga = estimado_rafaga_inicial;
+    pcb->estimado_proxima_rafaga = estimado_proxima_rafaga;
     pcb->cliente_fd=cliente;
 }
 

@@ -29,7 +29,8 @@ t_queue* cola_new;
 t_queue* cola_ready;
 t_queue* cola_ready_sec;
 t_list* list_blocked;
-
+t_tiempos_rafaga_anterior raf_anterior;
+t_list* list_rafa_anterior;
 
 bool cpu_desocupado=true;
 
@@ -70,10 +71,28 @@ void hrrn_ready_execute(){
 		    PCB_t* proceso = queue_pop(cola_ready);
 		    pthread_mutex_unlock(&mx_cola_ready);
 
-<<<<<<< HEAD
-		    log_info(logger,"PID: %d - Tiempo q llego a ready: %d",proceso->pid, proceso->tiempo_llegada_a_ready);
-=======
->>>>>>> 0e70a6b804e6c880305552908487df7cd94a6199
+		    t_link_element* aux_list_raf_ant = list_rafa_anterior->head;
+
+		    while( aux_list_raf_ant!=NULL )
+		   	{
+		   	   t_tiempos_rafaga_anterior* aux_list_raf_ant2 = aux_list_raf_ant->data;
+
+		   	   if( aux_list_raf_ant2->pid ==  proceso->pid)
+		   	   {
+		   		 aux_list_raf_ant2->tiempo_in_exec =  temporal_gettime(reloj_inicio);
+		   		 break;
+
+		   	   } else if (aux_list_raf_ant->next == NULL){
+
+		   		   raf_anterior.pid = proceso->pid;
+		   		   raf_anterior.tiempo_in_exec = temporal_gettime(reloj_inicio);
+		   		   raf_anterior.tiempo_out_exec = 0;
+
+		   		   list_add(aux_list_raf_ant2, &raf_anterior);
+		   	   }
+		   	   aux_list_raf_ant = aux_list_raf_ant->next;
+		   	}
+
 		    log_info(logger,"PID: %d - Estado Anterior: READY - Estado Actual: EXECUTE", proceso->pid);
 
 		   // pthread_mutex_lock(&mx_cpu);
@@ -84,7 +103,7 @@ void hrrn_ready_execute(){
 		}
 }
 
-void ordenar_hrrn(t_queue *cola_ready, uint32_t *estimacion){
+void ordenar_hrrn(t_queue *cola_ready, uint32_t estimacion, double alfa){
 
 	t_list* listaReady = malloc(sizeof(t_list));
 	listaReady = list_create();
@@ -119,9 +138,10 @@ bool menor(PCB_t* a,PCB_t* b,uint32_t estimadoInicial, double alfa){
 	// S = α . estimadoAnterior + (1 - α) . ráfagaAnterior
 	double s;
 	s = obtenerEstimadoRafaga(a,estimadoInicial,alfa);
+    int w = temporal_gettime(reloj_inicio) - a->tiempo_llegada_a_ready;
 
 	//TODO HRRN FORMULA??????
-	//R.R. = (S + W) / S  = 1 + W/S - Donde S = Ráfaga estimada y W = Tiempo de espera
+	//R.R. = (S + W(tiempo de espera en ready (el actual - el q esta en el pcb))) / S  = 1 + W/S - Donde S = Ráfaga estimada y W = Tiempo de espera
 	//obtenerRatio();
 
 	return a->tiempo_llegada_a_ready < b->tiempo_llegada_a_ready;
@@ -131,10 +151,12 @@ double obtenerEstimadoRafaga(PCB_t* a,uint32_t estimadoInicial, double alfa){
 
 	// S = α . estimadoAnterior + (1 - α) . ráfagaAnterior
 	double s;
+
 	if(a->estimado_proxima_rafaga == 0){
-		s = alfa * estimadoInicial;
+		s = alfa * estimadoInicial  + 0;
 	}
 	else{
+
 		s = alfa * a->estimado_proxima_rafaga + (1-alfa) * a->estimado_proxima_rafaga;
 
 	}
@@ -204,6 +226,7 @@ void esperar_cpu(){
 
 		//log_info(logger, "Pid: %d, %d ", pcb->pid, cop);
 		INSTRUCCION* instruccion = malloc(sizeof(INSTRUCCION));
+		t_link_element* aux_list_raf_ant = list_rafa_anterior->head;
 
 		switch (cop) {
 			case EXIT:
@@ -247,6 +270,23 @@ void esperar_cpu(){
 
 						 }else{
 							 aux_rec2->instancias -= 1;
+
+							 //------
+							 //t_link_element* aux_list_raf_ant = list_rafa_anterior->head;
+
+							while( aux_list_raf_ant!=NULL )
+							{
+							   t_tiempos_rafaga_anterior* aux_list_raf_ant2 = aux_list_raf_ant->data;
+
+							   if( aux_list_raf_ant2->pid ==  pcb->pid)
+							   {
+								 aux_list_raf_ant2->tiempo_out_exec =  temporal_gettime(reloj_inicio);
+								 break;
+							   }
+							   aux_list_raf_ant = aux_list_raf_ant->next;
+							}
+							 //---
+
 							 log_info(logger,"PID: %d - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: %s - Instancias: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"), aux_rec2->instancias  );
 
 							 pthread_mutex_lock(&mx_cola_blocked);
@@ -362,7 +402,24 @@ void esperar_cpu(){
 				sem_post(&s_blocked);
 				pthread_create(&hilo_bloqueado,NULL,(void*)bloqueando,pcb);
 				pthread_detach(hilo_bloqueado);								// Hace y me aseguro el hilo no se va a joinear con el hilo principal
-				 //pthread_mutex_lock(&mx_log);
+
+				 //------
+				// t_link_element* aux_list_raf_ant = list_rafa_anterior->head;
+
+				while( aux_list_raf_ant!=NULL )
+				{
+				   t_tiempos_rafaga_anterior* aux_list_raf_ant2 = aux_list_raf_ant->data;
+
+				   if( aux_list_raf_ant2->pid ==  pcb->pid)
+				   {
+					 aux_list_raf_ant2->tiempo_out_exec =  temporal_gettime(reloj_inicio);
+					 break;
+				   }
+				   aux_list_raf_ant = aux_list_raf_ant->next;
+				}
+				 //---
+
+				//pthread_mutex_lock(&mx_log);
 				log_info(logger, "PID: %d - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O", pcb->pid);
 				 //pthread_mutex_unlock(&mx_log);
 				sem_post(&s_cpu_desocupado);

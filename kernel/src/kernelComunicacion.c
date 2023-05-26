@@ -20,7 +20,7 @@ static void procesar_conexion(void* void_args) {
 	t_procesar_conexion_args* args = (t_procesar_conexion_args*) void_args;
 	int cliente_socket = args->fd;
 	char* server_name = args->server_name;
-	double   estimado_proxima_rafaga;
+	double   estimado_rafaga_inicial;
 	uint32_t tiempo_llegada_a_ready;   // TODO unixepoch: Averiguar como funciona y como la usamos
 	free(args);
 
@@ -45,7 +45,7 @@ static void procesar_conexion(void* void_args) {
 
 	// uint32_t archivos_abiertos; TODO de que tipo seria??? Una lista o un array?
 
-	estimado_proxima_rafaga = 0; //configuracion->ESTIMACION_INICIAL;
+	estimado_rafaga_inicial = 0; //configuracion->ESTIMACION_INICIAL;
 
 
 	// posible semaforo
@@ -56,7 +56,7 @@ static void procesar_conexion(void* void_args) {
 			, registros
 			//, tabla_segmentos
 			//, archivos_abiertos
-			, estimado_proxima_rafaga
+			, estimado_rafaga_inicial
 			, tiempo_llegada_a_ready
 			, cliente_socket
 			);
@@ -92,7 +92,6 @@ static void procesar_conexion(void* void_args) {
 	// destroy lists de segmentos
 	free(mensaje);
 
-	proceso->tiempo_llegada_a_ready = temporal_gettime(reloj_inicio);
 	// creo un hilo por cada proceso y lo voy metiendo en la cola_new
 
 	pthread_mutex_lock(&mx_cola_new);
@@ -105,6 +104,7 @@ static void procesar_conexion(void* void_args) {
 	proceso=queue_pop(cola_new);
 	pthread_mutex_unlock(&mx_cola_new);
 
+	list_rafa_anterior = list_create();
 
 	proceso->tiempo_llegada_a_ready = temporal_gettime(reloj_inicio);
 	pthread_mutex_lock(&mx_cola_ready);

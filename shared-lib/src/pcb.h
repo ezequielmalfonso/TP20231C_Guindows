@@ -45,7 +45,7 @@ void pcb_set(PCB_t*   pcb,
 			 char* registros_cpu,
 			 //t_list* tabla_de_segmentos,
 			// t_list* archivos_abiertos,
-			 double   estimado_rafaga_inicial,
+			 double   estimado_proxima_rafaga,
 			 uint32_t tiempo_llegada_a_ready,
 			 int cliente);
 
