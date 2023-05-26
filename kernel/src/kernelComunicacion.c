@@ -92,7 +92,9 @@ static void procesar_conexion(void* void_args) {
 	// destroy lists de segmentos
 	free(mensaje);
 
+	proceso->tiempo_llegada_a_ready = temporal_gettime(reloj_inicio);
 	// creo un hilo por cada proceso y lo voy metiendo en la cola_new
+
 	pthread_mutex_lock(&mx_cola_new);
 	queue_push(cola_new,proceso);
 	pthread_mutex_unlock(&mx_cola_new);

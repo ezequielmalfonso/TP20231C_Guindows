@@ -71,7 +71,7 @@ void hrrn_ready_execute(){
 		    PCB_t* proceso = queue_pop(cola_ready);
 		    pthread_mutex_unlock(&mx_cola_ready);
 
-
+		    log_info(logger,"PID: %d - Tiempo q llego a ready: %d",proceso->pid, proceso->tiempo_llegada_a_ready);
 		    log_info(logger,"PID: %d - Estado Anterior: READY - Estado Actual: EXECUTE", proceso->pid);
 
 		   // pthread_mutex_lock(&mx_cpu);
