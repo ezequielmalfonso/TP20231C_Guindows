@@ -40,7 +40,8 @@ void esperar_cpu();
 void bloqueando(PCB_t*);
 void inicializarPlanificacion();
 void execute_a_exit(PCB_t*);
-bool menor(PCB_t* a,PCB_t* b);
+bool menor(PCB_t* a,PCB_t* b, uint32_t, double);
+void ordenar_hrrn(t_queue *cola_ready,uint32_t estimacion, double alpha);
 //void ejecutar_io(PCB_t*,int);
 
 

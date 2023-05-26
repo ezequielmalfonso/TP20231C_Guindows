@@ -214,7 +214,7 @@ static void* serializar_proceso(size_t* size, PCB_t *proceso, op_code codigo) {
 		aux_tab_seg = aux_tab_seg->next;
 	}
 
-	memcpy(stream + offset, &proceso->estimado_rafaga_inicial, sizeof(uint32_t));
+	memcpy(stream + offset, &proceso->estimado_proxima_rafaga, sizeof(uint32_t));
 	offset+= sizeof(uint32_t);
 	memcpy(stream + offset, &proceso->tiempo_llegada_a_ready, sizeof(uint32_t));
 	offset+= sizeof(uint32_t);
@@ -307,7 +307,7 @@ static void deserializar_proceso(void* stream, PCB_t* proceso) {
 	  c++;
 	}
 
-	memcpy(&proceso->estimado_rafaga_inicial, stream, sizeof(uint32_t));
+	memcpy(&proceso->estimado_proxima_rafaga, stream, sizeof(uint32_t));
 	stream+= sizeof(uint32_t);
 	memcpy(&proceso->tiempo_llegada_a_ready, stream, sizeof(uint32_t));
 	stream+= sizeof(uint32_t);
