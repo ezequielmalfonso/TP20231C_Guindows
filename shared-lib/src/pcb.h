@@ -29,7 +29,7 @@ typedef struct {
 	uint32_t pc; 				// Program counter
 	char* registro_cpu;
 	t_list* tabla_de_segmentos;
-	double estimado_rafaga_inicial;
+	double estimado_proxima_rafaga;
 	int tiempo_llegada_a_ready;
 	//t_list* archivos_abiertos;
 	int cliente_fd;              // consola cliente cuando hace de cliente de kernel

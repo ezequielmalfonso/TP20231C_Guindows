@@ -41,7 +41,7 @@ void pcb_set(PCB_t*   pcb,
     //list_add_all(pcb->segmentos,segmentos);
 	//   TODO la parte de segmentos cuando lo aclaren y archivos abiertos
 	//pcb->archivos_abiertos
-    pcb->estimado_rafaga_inicial = estimado_rafaga_inicial;
+    pcb->estimado_proxima_rafaga = estimado_rafaga_inicial;
     pcb->cliente_fd=cliente;
 }
 

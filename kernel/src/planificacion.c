@@ -64,13 +64,11 @@ void hrrn_ready_execute(){
 		    sem_wait(&s_cpu_desocupado); // Para que no ejecute cada vez que un proceso llega a ready
 		    sem_wait(&s_cont_ready); // Para que no intente ejecutar si la lista de ready esta vacia
 
-		    ordenar_hrrn(cola_ready);
+		    ordenar_hrrn(cola_ready, configuracion->ESTIMACION_INICIAL, configuracion->HRRN_ALFA);
 
-		    // Pongo semaforo para asegurar que ningun otro proceso pueda acceder a la cola ready en este momento
 		    pthread_mutex_lock(&mx_cola_ready);
 		    PCB_t* proceso = queue_pop(cola_ready);
 		    pthread_mutex_unlock(&mx_cola_ready);
-
 
 		    log_info(logger,"PID: %d - Estado Anterior: READY - Estado Actual: EXECUTE", proceso->pid);
 
@@ -82,7 +80,7 @@ void hrrn_ready_execute(){
 		}
 }
 
-void ordenar_hrrn(t_queue *cola_ready){
+void ordenar_hrrn(t_queue *cola_ready, uint32_t *estimacion){
 
 	t_list* listaReady = malloc(sizeof(t_list));
 	listaReady = list_create();
@@ -112,12 +110,32 @@ void ordenar_hrrn(t_queue *cola_ready){
 
 }
 
-bool menor(PCB_t* a,PCB_t* b){
+bool menor(PCB_t* a,PCB_t* b,uint32_t estimadoInicial, double alfa){
 	//TODO SJF FORMULA???????
+	// S = α . estimadoAnterior + (1 - α) . ráfagaAnterior
+	double s;
+	s = obtenerEstimadoRafaga(a,estimadoInicial,alfa);
+
 	//TODO HRRN FORMULA??????
+	//R.R. = (S + W) / S  = 1 + W/S - Donde S = Ráfaga estimada y W = Tiempo de espera
+	//obtenerRatio();
+
 	return a->tiempo_llegada_a_ready < b->tiempo_llegada_a_ready;
 }
 
+double obtenerEstimadoRafaga(PCB_t* a,uint32_t estimadoInicial, double alfa){
+
+	// S = α . estimadoAnterior + (1 - α) . ráfagaAnterior
+	double s;
+	if(a->estimado_proxima_rafaga == 0){
+		s = alfa * estimadoInicial;
+	}
+	else{
+		s = alfa * a->estimado_proxima_rafaga + (1-alfa) * a->estimado_proxima_rafaga;
+
+	}
+	return s;
+}
 
 void inicializarPlanificacion(){
 	cola_new		= queue_create();
