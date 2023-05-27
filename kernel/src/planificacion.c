@@ -65,7 +65,7 @@ void hrrn_ready_execute(){
 		    sem_wait(&s_cpu_desocupado); // Para que no ejecute cada vez que un proceso llega a ready
 		    sem_wait(&s_cont_ready); // Para que no intente ejecutar si la lista de ready esta vacia
 
-		    ordenar_hrrn(cola_ready, configuracion->ESTIMACION_INICIAL, configuracion->HRRN_ALFA);
+		    ordenar_hrrn(cola_ready);
 
 		    pthread_mutex_lock(&mx_cola_ready);
 		    PCB_t* proceso = queue_pop(cola_ready);
@@ -103,7 +103,7 @@ void hrrn_ready_execute(){
 		}
 }
 
-void ordenar_hrrn(t_queue *cola_ready, uint32_t estimacion, double alfa){
+void ordenar_hrrn(t_queue *cola_ready){
 
 	t_list* listaReady = malloc(sizeof(t_list));
 	listaReady = list_create();
@@ -119,7 +119,7 @@ void ordenar_hrrn(t_queue *cola_ready, uint32_t estimacion, double alfa){
 		i++;
 	}
 
-	list_sort(listaReady,*menor);
+	list_sort(listaReady, menor);
 
 	 t_link_element* aux_proc1 = listaReady->head;
 
@@ -133,21 +133,23 @@ void ordenar_hrrn(t_queue *cola_ready, uint32_t estimacion, double alfa){
 
 }
 
-bool menor(PCB_t* a,PCB_t* b,uint32_t estimadoInicial, double alfa){
+bool menor(PCB_t* a, PCB_t* b){
 	//TODO SJF FORMULA???????
 	// S = α . estimadoAnterior + (1 - α) . ráfagaAnterior
-	double s;
-	s = obtenerEstimadoRafaga(a,estimadoInicial,alfa);
-    int w = temporal_gettime(reloj_inicio) - a->tiempo_llegada_a_ready;
+
+	double sa = obtenerEstimadoRafaga(a, configuracion->ESTIMACION_INICIAL, configuracion->HRRN_ALFA);
+	double sb = obtenerEstimadoRafaga(b, configuracion->ESTIMACION_INICIAL, configuracion->HRRN_ALFA);
+    int wa = temporal_gettime(reloj_inicio) - a->tiempo_llegada_a_ready;
+    int wb = temporal_gettime(reloj_inicio) - b->tiempo_llegada_a_ready;
 
 	//TODO HRRN FORMULA??????
 	//R.R. = (S + W(tiempo de espera en ready (el actual - el q esta en el pcb))) / S  = 1 + W/S - Donde S = Ráfaga estimada y W = Tiempo de espera
 	//obtenerRatio();
 
-	return a->tiempo_llegada_a_ready < b->tiempo_llegada_a_ready;
+	return 1 / (wa + sa) < 1 / (wb + sb);
 }
 
-double obtenerEstimadoRafaga(PCB_t* a,uint32_t estimadoInicial, double alfa){
+double obtenerEstimadoRafaga(PCB_t* a, uint32_t estimadoInicial, double alfa){
 
 	// S = α . estimadoAnterior + (1 - α) . ráfagaAnterior
 	double s;
@@ -156,8 +158,25 @@ double obtenerEstimadoRafaga(PCB_t* a,uint32_t estimadoInicial, double alfa){
 		s = alfa * estimadoInicial  + 0;
 	}
 	else{
+		// Busco el nodo con el pid
+		int tiempo_in_exec, tiempo_out_exec;
+		 t_link_element* aux_list_raf_ant = list_rafa_anterior->head;
 
-		s = alfa * a->estimado_proxima_rafaga + (1-alfa) * a->estimado_proxima_rafaga;
+				    while( aux_list_raf_ant!=NULL )
+				   	{
+				   	   t_tiempos_rafaga_anterior* aux_list_raf_ant2 = aux_list_raf_ant->data;
+
+				   	   if( aux_list_raf_ant2->pid == a->pid)
+				   	   {
+				   		 tiempo_in_exec = aux_list_raf_ant2->tiempo_in_exec;
+				   		 tiempo_out_exec = aux_list_raf_ant2->tiempo_out_exec;
+				   		 break;
+
+				   	   }
+				   	   aux_list_raf_ant = aux_list_raf_ant->next;
+				   	}
+		int duracionUltimaRafaga = tiempo_out_exec - tiempo_in_exec;
+		s = alfa * a->estimado_proxima_rafaga + (1-alfa) * duracionUltimaRafaga;
 
 	}
 	return s;
