@@ -263,7 +263,7 @@ void esperar_cpu(){
 				 t_link_element* aux_rec1 = lista_de_recursos->head;
 				 //uint16_t instancias;
 				 int pos_recurso = 0;
-
+				 //log_info(logger, "XXXXX RECURSO: %s", instruccion->parametro1 );
 				 while( aux_rec1!=NULL )
 				 {
 					 t_recurso* aux_rec2 = aux_rec1->data;
@@ -306,7 +306,7 @@ void esperar_cpu(){
 							}
 							 //---
 
-							 log_info(logger,"PID: %d - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: %s - Instancias: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"), aux_rec2->instancias  );
+							 log_info(logger,"PID: %d - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: %s - Instancias: %d - PC: %d", pcb->pid, strtok(instruccion->parametro1, "\n"), aux_rec2->instancias , pcb->pc );
 
 							 pthread_mutex_lock(&mx_cola_blocked);
 							 queue_push(aux_rec2->cola_bloqueados_recurso,pcb);
@@ -356,10 +356,13 @@ void esperar_cpu(){
 							 pthread_mutex_lock(&mx_cola_blocked);
 							 pcb_blocked = queue_pop(aux_rec2_s->cola_bloqueados_recurso);
 							 pthread_mutex_unlock(&mx_cola_blocked);
-							 log_info(logger, "PID: %d q desbloqueo", pcb_blocked->pid );
+							 log_info(logger, "PID: %d que se  desbloqueo", pcb_blocked->pid );
 						 }else{
 							 log_error(logger, "Ocurrio un error con las instancias del recurso %d: ", pcb->pid);
 						 }
+
+						///******** pcb_blocked->pc --;   // TODO depende lo que responda se deja o se saca
+						 log_info(logger, "PID: %d - Estado Anterior: BLOCKED - Estado Actual: READY - PROGRAM COINTER: %d", pcb_blocked->pid, pcb_blocked->pc );
 
 						 pcb_blocked->tiempo_llegada_a_ready = temporal_gettime(reloj_inicio);
 
