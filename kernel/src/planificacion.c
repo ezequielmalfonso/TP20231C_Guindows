@@ -19,6 +19,7 @@ pthread_mutex_t mx_cola_blocked 	= PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_cpu_desocupado 	= PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_memoria 			= PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_cpu 				= PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t mx_instancias       = PTHREAD_MUTEX_INITIALIZER;
 //pthread_mutex_t mx_pageFault 		= PTHREAD_MUTEX_INITIALIZER;
 //pthread_mutex_t mx_interrupt 		= PTHREAD_MUTEX_INITIALIZER;
 //pthread_mutex_t mx_hilo_pageFault 	= PTHREAD_MUTEX_INITIALIZER;
@@ -267,14 +268,18 @@ void esperar_cpu(){
 				 while( aux_rec1!=NULL )
 				 {
 					 t_recurso* aux_rec2 = aux_rec1->data;
-					 if(strcmp(aux_rec2->recurso, instruccion->parametro1))
+
+					 if(!strcmp(aux_rec2->recurso, strtok(instruccion->parametro1, "\n")))
 					 {
 						 log_info(logger, "Para RECURSO %s hay %d instancias disponibles antes de ejecutar", aux_rec2->recurso, aux_rec2->instancias );
 						 //instancias = aux_rec2->instancias;
 
 						 if(aux_rec2->instancias > 0)
 						 { // Si entra es pq va ejecutar la instancia del recurso y resto 1 a la instancia
+							 pthread_mutex_lock(&mx_instancias);
 							 aux_rec2->instancias -= 1;
+							 pthread_mutex_unlock(&mx_instancias);
+
 							 log_info(logger,"PID: %d - Wait: %s - Instancias: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"), aux_rec2->instancias  );
 
 							 pcb->tiempo_llegada_a_ready = temporal_gettime(reloj_inicio);
@@ -288,8 +293,9 @@ void esperar_cpu(){
 							 sem_post(&s_esperar_cpu);
 
 						 }else{
-							 aux_rec2->instancias -= 1;
-
+							 pthread_mutex_lock(&mx_instancias);
+							 aux_rec2->instancias -= 1;  //TODO PREGUNTAR!!!
+							 pthread_mutex_unlock(&mx_instancias);
 							 //------
 							 //t_link_element* aux_list_raf_ant = list_rafa_anterior->head;
 
@@ -337,8 +343,9 @@ void esperar_cpu(){
 				while(aux_rec1_s != NULL)
 				{
 					t_recurso* aux_rec2_s = aux_rec1_s->data;
-					if(strcmp(aux_rec2_s->recurso, instruccion->parametro1))
-					{
+
+					 if(!strcmp(aux_rec2_s->recurso, strtok(instruccion->parametro1, "\n")))
+					 {
 					  log_info(logger, "Para RECURSO %s hay %d instancias disponibles antes de ejecutar", aux_rec2_s->recurso, aux_rec2_s->instancias );
 					  //instancias = aux_rec2->instancias;
 
@@ -348,7 +355,11 @@ void esperar_cpu(){
 					  if(aux_rec2_s->instancias < 0)
 					  {
 						 log_info(logger, "entro al if instancias");
+
+						 pthread_mutex_lock(&mx_instancias);
 						 aux_rec2_s->instancias += 1;
+						 pthread_mutex_unlock(&mx_instancias);
+
 						 log_info(logger,"PID: %d - SIGNAL: %s - Instancias: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"), aux_rec2_s->instancias  );
 
 						 if(!queue_is_empty(aux_rec2_s->cola_bloqueados_recurso))
@@ -360,11 +371,16 @@ void esperar_cpu(){
 						 }else{
 							 log_error(logger, "Ocurrio un error con las instancias del recurso %d: ", pcb->pid);
 						 }
-
-						///******** pcb_blocked->pc --;   // TODO depende lo que responda se deja o se saca
+/***********************************************************/
+						 pcb_blocked->pc--;   // TODO depende lo que responda se deja o se saca
+/***********************************************************/
 						 log_info(logger, "PID: %d - Estado Anterior: BLOCKED - Estado Actual: READY - PROGRAM COINTER: %d", pcb_blocked->pid, pcb_blocked->pc );
 
 						 pcb_blocked->tiempo_llegada_a_ready = temporal_gettime(reloj_inicio);
+
+						 pthread_mutex_lock(&mx_instancias);
+						 aux_rec2_s->instancias += 1; //TODO me hace ruidooo
+						 pthread_mutex_unlock(&mx_instancias);
 
 						 pthread_mutex_lock(&mx_cola_ready);
 						 queue_push(cola_ready,pcb_blocked);
@@ -377,12 +393,12 @@ void esperar_cpu(){
 						 sem_post(&s_esperar_cpu);
 
 					 }else{
+						 pthread_mutex_lock(&mx_instancias);
 						 aux_rec2_s->instancias += 1;
+						 pthread_mutex_unlock(&mx_instancias);
 						 log_info(logger,"PID: %d - SIGNAL: %s - Instancias: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"), aux_rec2_s->instancias  );
 
-
-
-						 pthread_mutex_lock(&mx_cola_ready);  // TODO hacer mas pruebas
+						 pthread_mutex_lock(&mx_cola_ready);
 						 send_proceso(cpu_fd, pcb,DISPATCH);
 					     pthread_mutex_unlock(&mx_cola_ready);
 
@@ -391,10 +407,10 @@ void esperar_cpu(){
 						 sem_post(&s_esperar_cpu);
 
 					   }
+					  break;
 					}
-					 break;
-					 aux_rec1 = aux_rec1->next;
-					 pos_recurso++;
+					aux_rec1 = aux_rec1->next;
+					pos_recurso++;
 				}
 
 				break;
@@ -515,5 +531,13 @@ void ejecutar_io(PCB_t* pcb,int numero) {
 		sem_post(&s_io);
 		//log_info(logger, "PID: %d - probando como queda", pcb->pid);
 }
+/*
+Suponiendo que tenes P1 y P2 que ejecuten en ese orden:
+P1 vendría primero, tomaría el recurso sin bloquearse (quedando el valor del recurso en 0) y luego se bloquearía en IO por 10 segundos.
+Seguiría P2 ejecutando WAIT y se bloquearía por no haber instancias disponibles (quedando el valor del recurso en -1).
+Al desbloquearse P1 del IO, su próxima instrucción sería SIGNAL y desbloquearía a P2.
+*/
+
+
 
 
