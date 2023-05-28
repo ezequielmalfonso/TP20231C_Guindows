@@ -372,14 +372,14 @@ void esperar_cpu(){
 							 log_error(logger, "Ocurrio un error con las instancias del recurso %d: ", pcb->pid);
 						 }
 /***********************************************************/
-						 pcb_blocked->pc--;   // TODO depende lo que responda se deja o se saca
+						 //pcb_blocked->pc--;   // TODO depende lo que responda se deja o se saca
 /***********************************************************/
 						 log_info(logger, "PID: %d - Estado Anterior: BLOCKED - Estado Actual: READY - PROGRAM COINTER: %d", pcb_blocked->pid, pcb_blocked->pc );
 
 						 pcb_blocked->tiempo_llegada_a_ready = temporal_gettime(reloj_inicio);
 
 						 pthread_mutex_lock(&mx_instancias);
-						 aux_rec2_s->instancias += 1; //TODO me hace ruidooo
+						 //aux_rec2_s->instancias += 1; //TODO me hace ruidooo
 						 pthread_mutex_unlock(&mx_instancias);
 
 						 pthread_mutex_lock(&mx_cola_ready);
