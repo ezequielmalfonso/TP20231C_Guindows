@@ -95,7 +95,8 @@ int execute(INSTRUCCION* instruccion_ejecutar,char* registros,uint16_t pid, uint
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"F_OPEN") && pc == 6){
 
-			log_info(logger,"PID: %d - Listo para ejecutar F_OPEN ", pid);
+			log_info(logger,"PID: %d - Envio F_OPEN a kernel parametro 1: %s ", pid,instruccion_ejecutar->parametro1);
+			return F_OPEN;
 
 		}else if(!strcmp(strtok(instruccion_ejecutar->comando, "\n"),"YIELD") && pc == 7){
 

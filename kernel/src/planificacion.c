@@ -258,7 +258,7 @@ void esperar_cpu(){
 			case WAIT:
 				// preguntar si va estar siempre en el mismo orden la lista de instrucciones
 				// SI NO usar un while
-				 instruccion = list_get(pcb->instrucciones, 2);      // La instruccion 2 es el WAIT
+				 instruccion = list_get(pcb->instrucciones, 2);      // La instruccion 2 es el WAIT		TODO: esto se puede sacar del pc? como en F_OPEN
 				 log_info(logger, "PID: %d - Recibo pedido de WAIT por RECURSO: %s", pcb->pid, instruccion->parametro1 );
 
 				 t_link_element* aux_rec1 = lista_de_recursos->head;
@@ -276,13 +276,14 @@ void esperar_cpu(){
 
 						 if(aux_rec2->instancias > 0)
 						 { // Si entra es pq va ejecutar la instancia del recurso y resto 1 a la instancia
-							 pthread_mutex_lock(&mx_instancias);
+							 pthread_mutex_lock(&mx_instancias);	// TODO: hacen falta estos semaforos? se ejecutan de a una
 							 aux_rec2->instancias -= 1;
 							 pthread_mutex_unlock(&mx_instancias);
 
 							 log_info(logger,"PID: %d - Wait: %s - Instancias: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"), aux_rec2->instancias  );
 
-							 pcb->tiempo_llegada_a_ready = temporal_gettime(reloj_inicio);
+							 // no pasa por ready, vuelve de una al cpu
+							 //pcb->tiempo_llegada_a_ready = temporal_gettime(reloj_inicio);
 
 							 pthread_mutex_lock(&mx_cola_ready);  // TODO hacer mas pruebas
 							 send_proceso(cpu_fd, pcb,DISPATCH);
@@ -418,6 +419,7 @@ void esperar_cpu(){
 			case YIELD:
 				 log_info(logger, "PID: %d - Recibi YIELD de CPU lo mandamos al final de la cola READY", pcb->pid);
 				// log_info("Valor del PC: %d", pcb->pc);
+				 // deberia entregar todos sus recursos cuando hace yield?
 
 				 pcb->tiempo_llegada_a_ready = temporal_gettime(reloj_inicio);
 
@@ -464,6 +466,25 @@ void esperar_cpu(){
 
 				break;
 
+			case F_OPEN:
+				/*
+				t_list_iterator* iterador = list_iterator_create(pcb->instrucciones);
+				while(iterator_has_next(iterador)) {
+					if(list_iterator_index(iterador) == pcb->pc)
+					iterator_next(iterador);
+				}*/
+				INSTRUCCION* instruccion = list_get(pcb->instrucciones, pcb->pc-1);      // Esto podria estar fuera del switch y que lo usen todos
+				log_info(logger, "PID: %d - Recibo pedido de F_OPEN por: %s", pcb->pid, instruccion->parametro1);
+
+				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_OPEN);
+
+				pthread_mutex_lock(&mx_cola_ready);
+				send_proceso(cpu_fd, pcb,DISPATCH);
+				pthread_mutex_unlock(&mx_cola_ready);
+
+				sem_post(&s_cpu_desocupado);
+				sem_post(&s_esperar_cpu);
+				break;
 
 			default:
 				log_error(logger, "AAAlgo anduvo mal en el server del kernel\n Cop: %d",cop);

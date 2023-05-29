@@ -29,17 +29,24 @@ static void procesar_conexion(void* void_args) {
 	 }
 
 	 switch (cop) {
-		 case DEBUG:
-					 log_info(logger, "debug");
-					 break;
+	 	 case DEBUG:
+	 		 log_info(logger, "debug");
+	 		 break;
+
+		 case F_OPEN:
+			 char parametro1[20], parametro2[20], parametro3[20];
+			 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
+			 log_info(logger, "Se recibio F_OPEN con parametros %s, %s y %s", parametro1, parametro2, parametro3);
+			 break;
+
 		 // Errores
 		 case -1:
-				 log_error(logger, "Cliente desconectado de %s...", server_name);
-				 return;
+			 log_error(logger, "Cliente desconectado de %s...", server_name);
+			 return;
 		 default:
-				 log_error(logger, "Algo anduvo mal en el server de %s", server_name);
-				 log_info(logger, "Cop: %d", cop);
-				 return;
+			 log_error(logger, "Algo anduvo mal en el server de %s", server_name);
+			 log_info(logger, "Cop: %d", cop);
+			 return;
 	 }
  }
 

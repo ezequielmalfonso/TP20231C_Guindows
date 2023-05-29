@@ -20,7 +20,7 @@
 
 extern int kernelServer;
 
-extern int cpu_fd, memoria_fd;
+extern int cpu_fd, memoria_fd, file_system_fd;
 
 
 

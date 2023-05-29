@@ -317,3 +317,54 @@ static void deserializar_proceso(void* stream, PCB_t* proceso) {
 
 }
 
+// ENVIO DE INSTRUCCION KERNEL-FILESYSTEM
+bool send_archivo(int fd, char* param1, char* param2, char* param3, op_code codigo) {
+	size_t size;
+	void* stream = serializar_instruccion(&size, param1, param2, param3, codigo);
+	if (send(fd, stream, size, 0) != size) {
+		free(stream);
+		return false;
+	}
+	free(stream);
+	return true;
+}
+
+static void* serializar_instruccion(size_t* size, char* param1, char* param2, char* param3, op_code codigo) {
+	size_t char20size = sizeof(char) * 20;
+	size_t opcodesize = sizeof(op_code);
+	*size = 3 * char20size + opcodesize + sizeof(size_t);
+	void * stream = malloc(*size);
+	size_t size_load = *size- opcodesize - sizeof(size_t);	// El size no incluye el size ni el opcode (se saca antes)
+
+	memcpy(stream, &codigo, opcodesize);
+	int offset = opcodesize;
+	memcpy(stream + offset, &size_load, sizeof(size_t));
+	offset += sizeof(size_t);
+	memcpy(stream + offset, param1, char20size);
+	offset += char20size;
+	memcpy(stream + offset, param2, char20size);
+	offset += char20size;
+	memcpy(stream + offset, param3, char20size);
+	return stream;
+}
+
+bool recv_instruccion(int fd, char* param1, char* param2, char* param3) {
+	size_t size_payload;
+	if (recv(fd, &size_payload, sizeof(size_t), MSG_WAITALL) != sizeof(size_t))
+		return false;
+	void* stream = malloc(size_payload);
+	if (recv(fd, stream, size_payload, MSG_WAITALL) != size_payload) {
+		free(stream);
+	    return false;
+	}
+	    deserializar_instruccion(stream, param1, param2, param3);
+	    free(stream);
+	    return true;
+}
+
+static void deserializar_instruccion(void* stream, char* param1, char* param2, char* param3) {
+	memcpy(param1, stream, sizeof(char) * 20);
+	memcpy(param2, stream, sizeof(char) * 20);
+	memcpy(param3, stream, sizeof(char) * 20);
+}
+
