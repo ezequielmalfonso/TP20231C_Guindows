@@ -246,6 +246,7 @@ void esperar_cpu(){
 
 		//log_info(logger, "Pid: %d, %d ", pcb->pid, cop);
 		INSTRUCCION* instruccion = malloc(sizeof(INSTRUCCION));
+		instruccion = list_get(pcb->instrucciones, pcb->pc-1);
 		t_link_element* aux_list_raf_ant = list_rafa_anterior->head;
 
 		switch (cop) {
@@ -255,10 +256,8 @@ void esperar_cpu(){
 				sem_post(&s_cpu_desocupado);
 				sem_post(&s_ready_execute);
 				break;
+
 			case WAIT:
-				// preguntar si va estar siempre en el mismo orden la lista de instrucciones
-				// SI NO usar un while
-				 instruccion = list_get(pcb->instrucciones, 2);      // La instruccion 2 es el WAIT		TODO: esto se puede sacar del pc? como en F_OPEN
 				 log_info(logger, "PID: %d - Recibo pedido de WAIT por RECURSO: %s", pcb->pid, instruccion->parametro1 );
 
 				 t_link_element* aux_rec1 = lista_de_recursos->head;
@@ -334,7 +333,6 @@ void esperar_cpu(){
 				 break;
 
 			case SIGNAL:
-				instruccion = list_get(pcb->instrucciones, 4);      // La instruccion 4 es el SIGNAL
 				log_info(logger, "PID: %d - Recibo pedido de SIGNAL por RECURSO: %s", pcb->pid, instruccion->parametro1 );
 
 				t_link_element* aux_rec1_s = lista_de_recursos->head;
@@ -467,13 +465,6 @@ void esperar_cpu(){
 				break;
 
 			case F_OPEN:
-				/*
-				t_list_iterator* iterador = list_iterator_create(pcb->instrucciones);
-				while(iterator_has_next(iterador)) {
-					if(list_iterator_index(iterador) == pcb->pc)
-					iterator_next(iterador);
-				}*/
-				INSTRUCCION* instruccion = list_get(pcb->instrucciones, pcb->pc-1);      // Esto podria estar fuera del switch y que lo usen todos
 				log_info(logger, "PID: %d - Recibo pedido de F_OPEN por: %s", pcb->pid, instruccion->parametro1);
 
 				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_OPEN);
@@ -489,6 +480,8 @@ void esperar_cpu(){
 			default:
 				log_error(logger, "AAAlgo anduvo mal en el server del kernel\n Cop: %d",cop);
 		}
+		//hace que no ande ¿?¿?
+		//free(instruccion);
 	}
 }
 
