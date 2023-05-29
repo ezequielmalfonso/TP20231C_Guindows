@@ -363,8 +363,11 @@ bool recv_instruccion(int fd, char* param1, char* param2, char* param3) {
 }
 
 static void deserializar_instruccion(void* stream, char* param1, char* param2, char* param3) {
-	memcpy(param1, stream, sizeof(char) * 20);
-	memcpy(param2, stream, sizeof(char) * 20);
-	memcpy(param3, stream, sizeof(char) * 20);
+	size_t char20size = sizeof(char) * 20;
+	memcpy(param1, stream, char20size);
+	stream += char20size;
+	memcpy(param2, stream, char20size);
+	stream += char20size;
+	memcpy(param3, stream, char20size);
 }
 
