@@ -13,8 +13,8 @@
 int main(int argc, char** argv) {
 
 	    // TODO ESTO NO VA ES SOLO PARA PROBAR
-		argv[1] = "/home/utnso/tp-2023-1c-Guindows/consola/instrucciones.txt";
-		argv[2] = "/home/utnso/tp-2023-1c-Guindows/consola/consolaConfig/consola.conf";
+		//argv[1] = "/home/utnso/tp-2023-1c-Guindows/consola/instrucciones.txt";
+		//argv[2] = "/home/utnso/tp-2023-1c-Guindows/consola/consolaConfig/consola.conf";
 
 		int kernel_fd;
 		cargarConfiguracion(argv[2]);

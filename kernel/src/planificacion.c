@@ -248,17 +248,12 @@ void esperar_cpu(){
 		INSTRUCCION* instruccion = malloc(sizeof(INSTRUCCION));
 		instruccion = list_get(pcb->instrucciones, pcb->pc-1);
 		t_link_element* aux_list_raf_ant = list_rafa_anterior->head;
-
+		bool recurso_existe = false;
 		switch (cop) {
-			case EXIT:
-				send(pcb->cliente_fd,&cop,sizeof(op_code),0);
-				execute_a_exit(pcb);
-				sem_post(&s_cpu_desocupado);
-				sem_post(&s_ready_execute);
-				break;
 
 			case WAIT:
 				 log_info(logger, "PID: %d - Recibo pedido de WAIT por RECURSO: %s", pcb->pid, instruccion->parametro1 );
+
 
 				 t_link_element* aux_rec1 = lista_de_recursos->head;
 				 //uint16_t instancias;
@@ -267,9 +262,10 @@ void esperar_cpu(){
 				 while( aux_rec1!=NULL )
 				 {
 					 t_recurso* aux_rec2 = aux_rec1->data;
-
+					 log_info(logger,"llegue: recurso 0%s0, parametro 0%s0", aux_rec2->recurso, strtok(instruccion->parametro1, "\n"));
 					 if(!strcmp(aux_rec2->recurso, strtok(instruccion->parametro1, "\n")))
 					 {
+						 recurso_existe = true;
 						 log_info(logger, "Para RECURSO %s hay %d instancias disponibles antes de ejecutar", aux_rec2->recurso, aux_rec2->instancias );
 						 //instancias = aux_rec2->instancias;
 
@@ -329,8 +325,20 @@ void esperar_cpu(){
 					 aux_rec1 = aux_rec1->next;
 					 pos_recurso++;
 				 }
+				 if(recurso_existe) {	// Si es null no se encontro el recurso
+					 break;
+				 } else {
+					 log_error(logger, "PID: %d - Recibo pedido de WAIT por recurso desconocido: %s", pcb->pid, instruccion->parametro1);
+					 cop = EXIT + 100;	// no hay break asi que sigue por los case de abajo
+				 }
 
-				 break;
+			case EXIT + 100:	// Este exit sirve solo par el wait de arriba
+				cop -= 100;
+				send(pcb->cliente_fd,&cop,sizeof(op_code),0);
+				execute_a_exit(pcb);
+				sem_post(&s_cpu_desocupado);
+				sem_post(&s_ready_execute);
+				break;
 
 			case SIGNAL:
 				log_info(logger, "PID: %d - Recibo pedido de SIGNAL por RECURSO: %s", pcb->pid, instruccion->parametro1 );
@@ -345,73 +353,86 @@ void esperar_cpu(){
 
 					 if(!strcmp(aux_rec2_s->recurso, strtok(instruccion->parametro1, "\n")))
 					 {
-					  log_info(logger, "Para RECURSO %s hay %d instancias disponibles antes de ejecutar", aux_rec2_s->recurso, aux_rec2_s->instancias );
-					  //instancias = aux_rec2->instancias;
+						 recurso_existe = 1;
+						 log_info(logger, "Para RECURSO %s hay %d instancias disponibles antes de ejecutar", aux_rec2_s->recurso, aux_rec2_s->instancias );
+						 //instancias = aux_rec2->instancias;
 
-					  aux_rec1_s = aux_rec1_s->next;
-					  pos_recurso++;
+						 aux_rec1_s = aux_rec1_s->next;
+						 pos_recurso++;
 
-					  if(aux_rec2_s->instancias < 0)
-					  {
-						 log_info(logger, "entro al if instancias");
-
-						 pthread_mutex_lock(&mx_instancias);
-						 aux_rec2_s->instancias += 1;
-						 pthread_mutex_unlock(&mx_instancias);
-
-						 log_info(logger,"PID: %d - SIGNAL: %s - Instancias: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"), aux_rec2_s->instancias  );
-
-						 if(!queue_is_empty(aux_rec2_s->cola_bloqueados_recurso))
+						 if(aux_rec2_s->instancias < 0)
 						 {
-							 pthread_mutex_lock(&mx_cola_blocked);
-							 pcb_blocked = queue_pop(aux_rec2_s->cola_bloqueados_recurso);
-							 pthread_mutex_unlock(&mx_cola_blocked);
-							 log_info(logger, "PID: %d que se  desbloqueo", pcb_blocked->pid );
-						 }else{
-							 log_error(logger, "Ocurrio un error con las instancias del recurso %d: ", pcb->pid);
-						 }
+							 log_info(logger, "entro al if instancias");
+
+							 pthread_mutex_lock(&mx_instancias);
+							 aux_rec2_s->instancias += 1;
+							 pthread_mutex_unlock(&mx_instancias);
+
+							 log_info(logger,"PID: %d - SIGNAL: %s - Instancias: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"), aux_rec2_s->instancias  );
+
+							 if(!queue_is_empty(aux_rec2_s->cola_bloqueados_recurso))
+							 {
+								 pthread_mutex_lock(&mx_cola_blocked);
+								 pcb_blocked = queue_pop(aux_rec2_s->cola_bloqueados_recurso);
+								 pthread_mutex_unlock(&mx_cola_blocked);
+								 log_info(logger, "PID: %d que se  desbloqueo", pcb_blocked->pid );
+							 }else {
+								 log_error(logger, "Ocurrio un error con las instancias del recurso %d: ", pcb->pid);
+							 }
 /***********************************************************/
 						 //pcb_blocked->pc--;   // TODO depende lo que responda se deja o se saca
 /***********************************************************/
-						 log_info(logger, "PID: %d - Estado Anterior: BLOCKED - Estado Actual: READY - PROGRAM COINTER: %d", pcb_blocked->pid, pcb_blocked->pc );
+							 log_info(logger, "PID: %d - Estado Anterior: BLOCKED - Estado Actual: READY - PROGRAM COINTER: %d", pcb_blocked->pid, pcb_blocked->pc );
 
-						 pcb_blocked->tiempo_llegada_a_ready = temporal_gettime(reloj_inicio);
+							 pcb_blocked->tiempo_llegada_a_ready = temporal_gettime(reloj_inicio);
 
-						 pthread_mutex_lock(&mx_instancias);
-						 //aux_rec2_s->instancias += 1; //TODO me hace ruidooo
-						 pthread_mutex_unlock(&mx_instancias);
+							 pthread_mutex_lock(&mx_instancias);
+							 //aux_rec2_s->instancias += 1; //TODO me hace ruidooo
+							 pthread_mutex_unlock(&mx_instancias);
 
-						 pthread_mutex_lock(&mx_cola_ready);
-						 queue_push(cola_ready,pcb_blocked);
-						 send_proceso(cpu_fd, pcb,DISPATCH);
-						 pthread_mutex_unlock(&mx_cola_ready);
+							 pthread_mutex_lock(&mx_cola_ready);
+							 queue_push(cola_ready,pcb_blocked);
+							 send_proceso(cpu_fd, pcb,DISPATCH);
+							 pthread_mutex_unlock(&mx_cola_ready);
 
-						 sem_post(&s_cont_ready);
-					     sem_post(&s_ready_execute);
-						 sem_post(&s_cpu_desocupado);
-						 sem_post(&s_esperar_cpu);
+							 sem_post(&s_cont_ready);
+							 sem_post(&s_ready_execute);
+							 sem_post(&s_cpu_desocupado);
+							 sem_post(&s_esperar_cpu);
 
-					 }else{
-						 pthread_mutex_lock(&mx_instancias);
-						 aux_rec2_s->instancias += 1;
-						 pthread_mutex_unlock(&mx_instancias);
-						 log_info(logger,"PID: %d - SIGNAL: %s - Instancias: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"), aux_rec2_s->instancias  );
+						 } else{
+							 pthread_mutex_lock(&mx_instancias);
+							 aux_rec2_s->instancias += 1;
+							 pthread_mutex_unlock(&mx_instancias);
+							 log_info(logger,"PID: %d - SIGNAL: %s - Instancias: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"), aux_rec2_s->instancias  );
 
-						 pthread_mutex_lock(&mx_cola_ready);
-						 send_proceso(cpu_fd, pcb,DISPATCH);
-					     pthread_mutex_unlock(&mx_cola_ready);
+							 pthread_mutex_lock(&mx_cola_ready);
+							 send_proceso(cpu_fd, pcb,DISPATCH);
+							 pthread_mutex_unlock(&mx_cola_ready);
 
-						 sem_post(&s_ready_execute);
-						 sem_post(&s_cpu_desocupado);
-						 sem_post(&s_esperar_cpu);
+							 sem_post(&s_ready_execute);
+							 sem_post(&s_cpu_desocupado);
+							 sem_post(&s_esperar_cpu);
 
-					   }
-					  break;
-					}
-					aux_rec1 = aux_rec1->next;
-					pos_recurso++;
+						   }
+						 break;
+					 }
+					 aux_rec1_s = aux_rec1_s->next;
+					 pos_recurso++;
 				}
 
+				if(recurso_existe) {	// Si es null no se encontro el recurso
+					break;
+				} else {
+					log_error(logger, "PID: %d - Recibo pedido de SIGNAL por recurso desconocido: %s", pcb->pid, instruccion->parametro1);
+					cop = EXIT;	// no hay break asi que sigue hasta que lo encuentra
+				}
+
+			case EXIT:	// Segundo exit
+				send(pcb->cliente_fd,&cop,sizeof(op_code),0);
+				execute_a_exit(pcb);
+				sem_post(&s_cpu_desocupado);
+				sem_post(&s_ready_execute);
 				break;
 
 			case YIELD:
