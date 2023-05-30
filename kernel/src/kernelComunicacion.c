@@ -104,7 +104,7 @@ static void procesar_conexion(void* void_args) {
 	proceso=queue_pop(cola_new);
 	pthread_mutex_unlock(&mx_cola_new);
 
-	list_rafa_anterior = list_create();
+
 
 	proceso->tiempo_llegada_a_ready = temporal_gettime(reloj_inicio);
 	pthread_mutex_lock(&mx_cola_ready);

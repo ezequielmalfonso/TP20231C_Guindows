@@ -200,6 +200,8 @@ void inicializarPlanificacion(){
 	sem_init(&s_multiprogramacion_actual, 0, configuracion->GRADO_MAX_MULTIPROGRAMACION);
 	pthread_t corto_plazo;
 
+	list_rafa_anterior = list_create();
+
 	if(!strcmp(configuracion->ALGORITMO_PLANIFICACION,"FIFO")){
 		pthread_create(&corto_plazo, NULL, (void*) fifo_ready_execute, NULL);
 		//pthread_mutex_lock(&mx_log);
