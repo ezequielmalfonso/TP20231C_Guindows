@@ -262,8 +262,9 @@ void esperar_cpu(){
 				 while( aux_rec1!=NULL )
 				 {
 					 t_recurso* aux_rec2 = aux_rec1->data;
-					 log_info(logger,"llegue: recurso 0%s0, parametro 0%s0", aux_rec2->recurso, strtok(instruccion->parametro1, "\n"));
-					 if(!strcmp(aux_rec2->recurso, strtok(instruccion->parametro1, "\n")))
+					 //log_info(logger,"llegue: recurso 0%s0, parametro 0%s0, 0%s0", aux_rec2->recurso, strtok(instruccion->parametro1, "\n"), strtok(strtok(instruccion->parametro1, "\n"), "\n"));
+					 if(	!strcmp(aux_rec2->recurso, strtok(instruccion->parametro1, "\r")) ||	// Soluciona error de recurso no encontrado. Habria que sanitizar mejor los datos en consola?
+							!strcmp(aux_rec2->recurso, strtok(instruccion->parametro1, "\n")))
 					 {
 						 recurso_existe = true;
 						 log_info(logger, "Para RECURSO %s hay %d instancias disponibles antes de ejecutar", aux_rec2->recurso, aux_rec2->instancias );
@@ -329,16 +330,13 @@ void esperar_cpu(){
 					 break;
 				 } else {
 					 log_error(logger, "PID: %d - Recibo pedido de WAIT por recurso desconocido: %s", pcb->pid, instruccion->parametro1);
-					 cop = EXIT + 100;	// no hay break asi que sigue por los case de abajo
+					 cop = EXIT;	// Lo mismo que un exit
+					 send(pcb->cliente_fd,&cop,sizeof(op_code),0);
+					 execute_a_exit(pcb);
+					 sem_post(&s_cpu_desocupado);
+					 sem_post(&s_ready_execute);
+					 break;
 				 }
-
-			case EXIT + 100:	// Este exit sirve solo par el wait de arriba
-				cop -= 100;
-				send(pcb->cliente_fd,&cop,sizeof(op_code),0);
-				execute_a_exit(pcb);
-				sem_post(&s_cpu_desocupado);
-				sem_post(&s_ready_execute);
-				break;
 
 			case SIGNAL:
 				log_info(logger, "PID: %d - Recibo pedido de SIGNAL por RECURSO: %s", pcb->pid, instruccion->parametro1 );
@@ -351,7 +349,8 @@ void esperar_cpu(){
 				{
 					t_recurso* aux_rec2_s = aux_rec1_s->data;
 
-					 if(!strcmp(aux_rec2_s->recurso, strtok(instruccion->parametro1, "\n")))
+					 if(	!strcmp(aux_rec2_s->recurso, strtok(instruccion->parametro1, "\r")) || // Soluciona error de recurso no encontrado. Habria que sanitizar mejor los datos en consola?
+							!strcmp(aux_rec2_s->recurso, strtok(instruccion->parametro1, "\n")))
 					 {
 						 recurso_existe = 1;
 						 log_info(logger, "Para RECURSO %s hay %d instancias disponibles antes de ejecutar", aux_rec2_s->recurso, aux_rec2_s->instancias );
@@ -425,7 +424,7 @@ void esperar_cpu(){
 					break;
 				} else {
 					log_error(logger, "PID: %d - Recibo pedido de SIGNAL por recurso desconocido: %s", pcb->pid, instruccion->parametro1);
-					cop = EXIT;	// no hay break asi que sigue hasta que lo encuentra
+					cop = EXIT;	// no hay break asi que sigue hasta que lo encuentra (sin comparar case)
 				}
 
 			case EXIT:	// Segundo exit
