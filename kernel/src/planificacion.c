@@ -89,12 +89,12 @@ void hrrn_ready_execute(){
 		   		   raf_anterior.tiempo_in_exec = temporal_gettime(reloj_inicio);
 		   		   raf_anterior.tiempo_out_exec = 0;
 
-		   		   list_add(aux_list_raf_ant2, &raf_anterior);
+		   		   list_add(list_rafa_anterior, &raf_anterior);
 		   	   }
 		   	   aux_list_raf_ant = aux_list_raf_ant->next;
 		   	}
 
-		    log_info(logger,"PID: %d - Estado Anterior: READY - Estado Actual: EXECUTE", proceso->pid);
+		    log_info(logger,"PID: %d - Estado Anterior: READY - Estado Actual: EXECUTE hrrn", proceso->pid);
 
 		   // pthread_mutex_lock(&mx_cpu);
 		    send_proceso(cpu_fd, proceso,DISPATCH);
@@ -147,7 +147,7 @@ bool menor(PCB_t* a, PCB_t* b){
 	//R.R. = (S + W(tiempo de espera en ready (el actual - el q esta en el pcb))) / S  = 1 + W/S - Donde S = Ráfaga estimada y W = Tiempo de espera
 	//obtenerRatio();
 
-	return 1 / (wa + sa) < 1 / (wb + sb);
+	return 1 + (wa / sa) < 1 + (wb / sb);
 }
 
 double obtenerEstimadoRafaga(PCB_t* a, uint32_t estimadoInicial, double alfa){
@@ -439,6 +439,17 @@ void esperar_cpu(){
 				// log_info("Valor del PC: %d", pcb->pc);
 				 // deberia entregar todos sus recursos cuando hace yield?
 
+				 while( aux_list_raf_ant!=NULL )
+				{
+				   t_tiempos_rafaga_anterior* aux_list_raf_ant2 = aux_list_raf_ant->data;
+
+				   if( aux_list_raf_ant2->pid ==  pcb->pid)
+				   {
+					 aux_list_raf_ant2->tiempo_out_exec =  temporal_gettime(reloj_inicio);
+					 break;
+				   }
+				   aux_list_raf_ant = aux_list_raf_ant->next;
+				}
 				 pcb->tiempo_llegada_a_ready = temporal_gettime(reloj_inicio);
 
 				 pthread_mutex_lock(&mx_cola_ready);
