@@ -26,7 +26,7 @@ int cargarConfiguracion() {
 
 	//fd_configuracion = config_create("cpu.conf");
 	log_warning(logger, "Cpu config pruebas");
-	fd_configuracion = config_create("configPruebas/cpu_BASE.conf");
+	fd_configuracion = config_create("configPruebas/cpu_DEADLOCK.conf");
 
 	if (fd_configuracion == NULL) {
 		fd_configuracion = config_create("cpu.conf");

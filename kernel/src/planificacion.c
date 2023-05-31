@@ -274,7 +274,7 @@ void esperar_cpu(){
 				 while( aux_rec1!=NULL )
 				 {
 					 t_recurso* aux_rec2 = aux_rec1->data;
-					 //log_info(logger,"llegue: recurso 0%s0, parametro 0%s0, 0%s0", aux_rec2->recurso, strtok(instruccion->parametro1, "\n"), strtok(strtok(instruccion->parametro1, "\n"), "\n"));
+					 log_info(logger,"llegue: recurso 0%s0, parametro 0%s0, 0%s0", aux_rec2->recurso, strtok(instruccion->parametro1, "\n"), strtok(strtok(instruccion->parametro1, "\n"), "\n"));
 					 if(	!strcmp(aux_rec2->recurso, strtok(instruccion->parametro1, "\r")) ||	// Soluciona error de recurso no encontrado. Habria que sanitizar mejor los datos en consola?
 							!strcmp(aux_rec2->recurso, strtok(instruccion->parametro1, "\n")))
 					 {
@@ -572,11 +572,11 @@ void ejecutar_io(PCB_t* pcb,int numero) {
 		}*/
 
 		INSTRUCCION* inst = list_get(pcb->instrucciones, pcb->pc - 1); //-1 porque ya se incremento el PC
-		uint32_t tiempo = atoi(inst->parametro2);
+		uint32_t tiempo = atoi(inst->parametro1);
 		//pthread_mutex_lock(&mx_log);
 		log_info(logger, " PID: %d - Bloqueado por: %s durante: %s", pcb->pid, inst->comando, inst->parametro1);
 		//pthread_mutex_unlock(&mx_log);
-		usleep(tiempo * 1000);
+		sleep(tiempo);
 		//pthread_mutex_lock(&mx_log);
 		log_info(logger, "PID: %d - Estado Anterior: BLOCKED - Estado Actual: READY", pcb->pid);
 		//pthread_mutex_unlock(&mx_log);

@@ -39,7 +39,7 @@ int cargarConfiguracion() {
 
 	//fd_configuracion = config_create("kernel.conf");
 	log_warning(logger, "Kernel config pruebas");
-	fd_configuracion = config_create("configPruebas/kernel_BASE.conf");
+	fd_configuracion = config_create("configPruebas/kernel_DEADLOCK.conf");
 
 	if (fd_configuracion == NULL) {
 		fd_configuracion = config_create("kernel.conf");
