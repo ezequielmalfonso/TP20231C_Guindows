@@ -24,8 +24,8 @@
 
 typedef struct {
     uint32_t pid;
-    int tiempo_in_exec;
-    int tiempo_out_exec;
+    int64_t tiempo_in_exec;
+    int64_t tiempo_out_exec;
 }t_tiempos_rafaga_anterior;
 
 extern pthread_mutex_t mx_cola_new;

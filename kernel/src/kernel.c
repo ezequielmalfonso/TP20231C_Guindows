@@ -11,6 +11,7 @@ int main(void) {
 	t_config* config_ips = config_create("../ips.conf");
 
 	char* ip = config_get_string_value(config_ips,"IP_KERNEL");
+	list_rafa_anterior = list_create();
 	inicializarPlanificacion();
 	char* puerto = string_itoa(configuracion->PUERTO_ESCUCHA);
 

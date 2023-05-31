@@ -61,76 +61,83 @@ void fifo_ready_execute(){
 void hrrn_ready_execute(){
 
 	while(1){
-		    log_info(logger,"PID: hrrn_ready_execute");
-		    sem_wait(&s_ready_execute);
-		    sem_wait(&s_cpu_desocupado); // Para que no ejecute cada vez que un proceso llega a ready
-		    sem_wait(&s_cont_ready); // Para que no intente ejecutar si la lista de ready esta vacia
+		log_info(logger,"PID: hrrn_ready_execute");
+		sem_wait(&s_ready_execute);
+		sem_wait(&s_cpu_desocupado); // Para que no ejecute cada vez que un proceso llega a ready
+		sem_wait(&s_cont_ready); // Para que no intente ejecutar si la lista de ready esta vacia
 
-		    ordenar_hrrn(cola_ready);
+		t_link_element* aux_list_raf_ant = list_rafa_anterior->head;
 
-		    pthread_mutex_lock(&mx_cola_ready);
-		    PCB_t* proceso = queue_pop(cola_ready);
-		    pthread_mutex_unlock(&mx_cola_ready);
+		ordenar_hrrn(cola_ready);
 
-		    t_link_element* aux_list_raf_ant = list_rafa_anterior->head;
+		pthread_mutex_lock(&mx_cola_ready);
+		PCB_t* proceso = queue_pop(cola_ready);
+		pthread_mutex_unlock(&mx_cola_ready);
 
-		    while( aux_list_raf_ant!=NULL )
-		   	{
-		   	   t_tiempos_rafaga_anterior* aux_list_raf_ant2 = aux_list_raf_ant->data;
+		while( aux_list_raf_ant != NULL )
+		{
+			t_tiempos_rafaga_anterior* aux_list_raf_ant2 = aux_list_raf_ant->data;
+			//log_info(logger, "estoy buscando a PID: %d, comparo con PID: %d", proceso->pid, aux_list_raf_ant2->pid);
 
-		   	   if( aux_list_raf_ant2->pid ==  proceso->pid)
-		   	   {
-		   		 aux_list_raf_ant2->tiempo_in_exec =  temporal_gettime(reloj_inicio);
-		   		 break;
-
-		   	   } else if (aux_list_raf_ant->next == NULL){
-
-		   		   raf_anterior.pid = proceso->pid;
-		   		   raf_anterior.tiempo_in_exec = temporal_gettime(reloj_inicio);
-		   		   raf_anterior.tiempo_out_exec = 0;
-
-		   		   list_add(list_rafa_anterior, &raf_anterior);
-		   	   }
-		   	   aux_list_raf_ant = aux_list_raf_ant->next;
-		   	}
-
-		    log_info(logger,"PID: %d - Estado Anterior: READY - Estado Actual: EXECUTE hrrn", proceso->pid);
-
-		   // pthread_mutex_lock(&mx_cpu);
-		    send_proceso(cpu_fd, proceso,DISPATCH);
-		  //  pthread_mutex_unlock(&mx_cpu);
-		    pcb_destroy(proceso);
-		    sem_post(&s_esperar_cpu);
+			if( aux_list_raf_ant2->pid == proceso->pid)
+			{
+				//log_info(logger, "encontre a PID: %d en la lista de rafagas", proceso->pid);
+				aux_list_raf_ant2->tiempo_in_exec =  temporal_gettime(reloj_inicio);
+				break;
+			}
+			aux_list_raf_ant = aux_list_raf_ant->next;
 		}
+
+
+		log_info(logger,"PID: %d - Estado Anterior: READY - Estado Actual: EXECUTE hrrn", proceso->pid);
+
+	   // pthread_mutex_lock(&mx_cpu);
+		send_proceso(cpu_fd, proceso,DISPATCH);
+	  //  pthread_mutex_unlock(&mx_cpu);
+		pcb_destroy(proceso);
+		sem_post(&s_esperar_cpu);
+	}
 }
+
 
 void ordenar_hrrn(t_queue *cola_ready){
 
+	log_info(logger, "estoy ordenando amigo");
 	t_list* listaReady = malloc(sizeof(t_list));
 	listaReady = list_create();
 
 	PCB_t* proceso;
 	int i = 0;
+	//log_warning(logger, "lolo: %d", queue_size(cola_ready));
 
-	while(i < queue_size(cola_ready)){
+	//pthread_mutex_lock(&mx_cola_ready);
+	int queuesize = queue_size(cola_ready);
+	//pthread_mutex_lock(&mx_cola_ready);
 
+	while(i < queuesize){
+
+		pthread_mutex_lock(&mx_cola_ready);
 		proceso = queue_pop(cola_ready);
-		list_add(listaReady,proceso);
-
+		pthread_mutex_unlock(&mx_cola_ready);
+		//log_warning(logger, "lolo: %d", queue_size(cola_ready));
+		list_add(listaReady, proceso);
+		//log_info(logger, "agrego");
 		i++;
 	}
-
-	list_sort(listaReady, menor);
+	bool (*a)(void* x, void* y) = menor;
+	list_sort(listaReady, a);
 
 	 t_link_element* aux_proc1 = listaReady->head;
 
-	while( aux_proc1!=NULL )
+	while( aux_proc1 != NULL)
 	{
 	   PCB_t* aux_proc = aux_proc1->data;
+	   pthread_mutex_lock(&mx_cola_ready);
 	   queue_push(cola_ready, aux_proc);
+	   pthread_mutex_unlock(&mx_cola_ready);
 	   aux_proc1 = aux_proc1->next;
 	}
-
+	//list_destroy(listaReady);
 
 }
 
@@ -138,16 +145,21 @@ bool menor(PCB_t* a, PCB_t* b){
 	//TODO SJF FORMULA???????
 	// S = α . estimadoAnterior + (1 - α) . ráfagaAnterior
 
-	double sa = obtenerEstimadoRafaga(a, configuracion->ESTIMACION_INICIAL, configuracion->HRRN_ALFA);
-	double sb = obtenerEstimadoRafaga(b, configuracion->ESTIMACION_INICIAL, configuracion->HRRN_ALFA);
-    int wa = temporal_gettime(reloj_inicio) - a->tiempo_llegada_a_ready;
-    int wb = temporal_gettime(reloj_inicio) - b->tiempo_llegada_a_ready;
-
+	//log_error(logger, "PID a = %d, PID b = %d", a->pid, b->pid);
+	int64_t tiempo = temporal_gettime(reloj_inicio);
+	double sa = a->estimado_proxima_rafaga;
+	double sb = b->estimado_proxima_rafaga;
+	log_error(logger, "-PID a = %d, PID b = %d", a->pid, b->pid);
+    long int wa = (tiempo - a->tiempo_llegada_a_ready);
+    long int wb = (tiempo - b->tiempo_llegada_a_ready);
+    //log_warning(logger, "-PID a = %d, PID b = %d", a->pid, b->pid);
+    //log_error(logger, "Estoy comparando sa = %d, sb = %d, wa = %ld, wb = %ld, PID a: %d, PID b: %d, a ready: %d, b ready: %d", sa, sb, wa, wb, a->pid, b->pid, a->tiempo_llegada_a_ready, b->tiempo_llegada_a_ready);
+    //log_error(logger, "PID a = %d, PID b = %d", a->pid, b->pid);
 	//TODO HRRN FORMULA??????
 	//R.R. = (S + W(tiempo de espera en ready (el actual - el q esta en el pcb))) / S  = 1 + W/S - Donde S = Ráfaga estimada y W = Tiempo de espera
 	//obtenerRatio();
 
-	return 1 + (wa / sa) < 1 + (wb / sb);
+	return (1 + (wa / sa)) > (1 + (wb / sb));
 }
 
 double obtenerEstimadoRafaga(PCB_t* a, uint32_t estimadoInicial, double alfa){
@@ -155,31 +167,31 @@ double obtenerEstimadoRafaga(PCB_t* a, uint32_t estimadoInicial, double alfa){
 	// S = α . estimadoAnterior + (1 - α) . ráfagaAnterior
 	double s;
 
-	if(a->estimado_proxima_rafaga == 0){
-		s = alfa * estimadoInicial  + 0;
-	}
-	else{
 		// Busco el nodo con el pid
-		int tiempo_in_exec, tiempo_out_exec;
+		int64_t tiempo_in_exec, tiempo_out_exec;
 		 t_link_element* aux_list_raf_ant = list_rafa_anterior->head;
+		while( aux_list_raf_ant != NULL )
+		{
+		   t_tiempos_rafaga_anterior* aux_list_raf_ant2 = aux_list_raf_ant->data;
+		   if( aux_list_raf_ant2->pid == a->pid)
+		   {
+			   tiempo_in_exec = aux_list_raf_ant2->tiempo_in_exec;
+			   tiempo_out_exec = aux_list_raf_ant2->tiempo_out_exec;
+			   break;
+		   }
+		   aux_list_raf_ant = aux_list_raf_ant->next;
+		}
 
-				    while( aux_list_raf_ant!=NULL )
-				   	{
-				   	   t_tiempos_rafaga_anterior* aux_list_raf_ant2 = aux_list_raf_ant->data;
+		if(tiempo_out_exec == 0 || tiempo_in_exec == 0 || a->estimado_proxima_rafaga == 0) {
+			s = alfa * estimadoInicial + 0;
+		} else {
+			int64_t duracionUltimaRafaga = tiempo_out_exec - tiempo_in_exec;
+			if(duracionUltimaRafaga <= 0) log_error(logger, "Duracion de rafaga imposible");
+			//log_info(logger, "=======\nEl proceso PID: %d estuvo en el cpu %d", a->pid, duracionUltimaRafaga);
+			s = alfa * a->estimado_proxima_rafaga + (1-alfa) * duracionUltimaRafaga / 1000;
+		}
 
-				   	   if( aux_list_raf_ant2->pid == a->pid)
-				   	   {
-				   		 tiempo_in_exec = aux_list_raf_ant2->tiempo_in_exec;
-				   		 tiempo_out_exec = aux_list_raf_ant2->tiempo_out_exec;
-				   		 break;
-
-				   	   }
-				   	   aux_list_raf_ant = aux_list_raf_ant->next;
-				   	}
-		int duracionUltimaRafaga = tiempo_out_exec - tiempo_in_exec;
-		s = alfa * a->estimado_proxima_rafaga + (1-alfa) * duracionUltimaRafaga;
-
-	}
+	a->estimado_proxima_rafaga = s; // llega bien
 	return s;
 }
 
@@ -199,8 +211,6 @@ void inicializarPlanificacion(){
 	}*/
 	sem_init(&s_multiprogramacion_actual, 0, configuracion->GRADO_MAX_MULTIPROGRAMACION);
 	pthread_t corto_plazo;
-
-	list_rafa_anterior = list_create();
 
 	if(!strcmp(configuracion->ALGORITMO_PLANIFICACION,"FIFO")){
 		pthread_create(&corto_plazo, NULL, (void*) fifo_ready_execute, NULL);
@@ -305,6 +315,7 @@ void esperar_cpu(){
 							   if( aux_list_raf_ant2->pid ==  pcb->pid)
 							   {
 								 aux_list_raf_ant2->tiempo_out_exec =  temporal_gettime(reloj_inicio);
+								 pcb->estimado_proxima_rafaga = obtenerEstimadoRafaga(pcb, configuracion->ESTIMACION_INICIAL, configuracion->HRRN_ALFA);
 								 break;
 							   }
 							   aux_list_raf_ant = aux_list_raf_ant->next;
@@ -448,6 +459,7 @@ void esperar_cpu(){
 				   if( aux_list_raf_ant2->pid ==  pcb->pid)
 				   {
 					 aux_list_raf_ant2->tiempo_out_exec =  temporal_gettime(reloj_inicio);
+					 pcb->estimado_proxima_rafaga = obtenerEstimadoRafaga(pcb, configuracion->ESTIMACION_INICIAL, configuracion->HRRN_ALFA);
 					 break;
 				   }
 				   aux_list_raf_ant = aux_list_raf_ant->next;
@@ -484,6 +496,7 @@ void esperar_cpu(){
 				   if( aux_list_raf_ant2->pid ==  pcb->pid)
 				   {
 					 aux_list_raf_ant2->tiempo_out_exec =  temporal_gettime(reloj_inicio);
+					 pcb->estimado_proxima_rafaga = obtenerEstimadoRafaga(pcb, configuracion->ESTIMACION_INICIAL, configuracion->HRRN_ALFA);
 					 break;
 				   }
 				   aux_list_raf_ant = aux_list_raf_ant->next;

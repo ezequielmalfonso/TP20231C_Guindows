@@ -60,7 +60,11 @@ static void procesar_conexion(void* void_args) {
 			, tiempo_llegada_a_ready
 			, cliente_socket
 			);
-
+	t_tiempos_rafaga_anterior* rafaga_inicial = malloc(sizeof(t_tiempos_rafaga_anterior));
+	rafaga_inicial->pid = pid_nuevo;
+	rafaga_inicial->tiempo_in_exec = 0;
+	rafaga_inicial->tiempo_out_exec = 0;
+	list_add(list_rafa_anterior, rafaga_inicial);
 	pid_nuevo++;
 	//fin semaforo
 
@@ -91,6 +95,7 @@ static void procesar_conexion(void* void_args) {
 	list_destroy(mensaje->listaInstrucciones);
 	// destroy lists de segmentos
 	free(mensaje);
+
 
 	// creo un hilo por cada proceso y lo voy metiendo en la cola_new
 

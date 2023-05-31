@@ -37,7 +37,10 @@ int cargarConfiguracion() {
 	logger = log_create("LogKernel.log", "Kernel", 1, LOG_LEVEL_INFO);
 	configuracion = malloc(sizeof(t_config_kernel));
 
-	fd_configuracion = config_create("kernel.conf");
+	//fd_configuracion = config_create("kernel.conf");
+	log_warning(logger, "Kernel config pruebas");
+	fd_configuracion = config_create("configPruebas/kernel_BASE.conf");
+
 	if (fd_configuracion == NULL) {
 		fd_configuracion = config_create("kernel.conf");
 	}
