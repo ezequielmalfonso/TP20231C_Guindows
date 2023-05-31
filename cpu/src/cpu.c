@@ -134,8 +134,6 @@ int execute(INSTRUCCION* instruccion_ejecutar,char* registros,uint16_t pid, uint
 			log_info(logger,"PID: %d - Listo para ejecutar F_CLOSE ", pid);
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"EXIT") ){
-			log_info(logger, "a morir proceso!!!!");
-			//sleep(5);
 			log_info(logger,"PID: %d - Ejecutando EXIT", pid);
 			//limpiar_tlb();
 			return EXIT;

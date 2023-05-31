@@ -534,6 +534,7 @@ void esperar_cpu(){
 void execute_a_exit(PCB_t* pcb){
 	//pthread_mutex_lock(&mx_log);
     log_info(logger,"PID: %d - Estado Anterior: EXECUTE - Estado Actual: EXIT", pcb->pid);
+    log_info(logger,"Finaliza el proceso %d - Motivo: COMPLETAR CUANDO LO TENGAMOS", pcb->pid);
     //pthread_mutex_unlock(&mx_log);
     sem_post(&s_multiprogramacion_actual);//cuando se finaliza
     //liberar_espacio_de_memoria(PCB); Liberamos las estructructuras de memoria

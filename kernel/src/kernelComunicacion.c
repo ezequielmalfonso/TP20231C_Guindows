@@ -30,7 +30,6 @@ static void procesar_conexion(void* void_args) {
 	// Una vez recibidas las instruccion desde consola creo el PCB
     PCB_t* proceso = malloc(sizeof(PCB_t));
 	proceso = pcb_create();
-
 	// Aca inicializo los valores para el PCB
 	//TODO pasarle los valores de inicializacion al PCB
 	// casi un char* ??
@@ -116,7 +115,8 @@ static void procesar_conexion(void* void_args) {
 	queue_push(cola_ready,proceso);
 	pthread_mutex_unlock(&mx_cola_ready);
 	//pthread_mutex_lock(&mx_log);
-	log_info(logger,"“PID: %d - Estado Anterior: NEW - Estado Actual: READY", proceso->pid);
+	log_info(logger,"Se crea el proceso %d en NEW",proceso->pid);
+	log_info(logger,"PID: %d - Estado Anterior: NEW - Estado Actual: READY", proceso->pid);
 
 	sem_post(&s_cont_ready);
 	sem_post(&s_ready_execute);
