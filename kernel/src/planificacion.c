@@ -539,7 +539,66 @@ void esperar_cpu(){
 				sem_post(&s_cpu_desocupado);
 				sem_post(&s_esperar_cpu);
 				break;
+			case F_CLOSE:
+				log_info(logger, "PID: %d - Recibo pedido de F_CLOSE por: %s", pcb->pid, instruccion->parametro1);
 
+				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_CLOSE);
+
+				pthread_mutex_lock(&mx_cola_ready);
+				send_proceso(cpu_fd, pcb,DISPATCH);
+				pthread_mutex_unlock(&mx_cola_ready);
+
+				sem_post(&s_cpu_desocupado);
+				sem_post(&s_esperar_cpu);
+				break;
+			case F_SEEK:
+				log_info(logger, "PID: %d - Recibo pedido de F_SEEK por: %s", pcb->pid, instruccion->parametro1);
+
+				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_SEEK);
+
+				pthread_mutex_lock(&mx_cola_ready);
+				send_proceso(cpu_fd, pcb,DISPATCH);
+				pthread_mutex_unlock(&mx_cola_ready);
+
+				sem_post(&s_cpu_desocupado);
+				sem_post(&s_esperar_cpu);
+				break;
+			case F_TRUNCATE:
+				log_info(logger, "PID: %d - Recibo pedido de F_TRUNCATE por: %s", pcb->pid, instruccion->parametro1);
+
+				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_TRUNCATE);
+
+				pthread_mutex_lock(&mx_cola_ready);
+				send_proceso(cpu_fd, pcb,DISPATCH);
+				pthread_mutex_unlock(&mx_cola_ready);
+
+				sem_post(&s_cpu_desocupado);
+				sem_post(&s_esperar_cpu);
+				break;
+			case F_READ:
+				log_info(logger, "PID: %d - Recibo pedido de F_READ por: %s", pcb->pid, instruccion->parametro1);
+
+				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_READ);
+
+				pthread_mutex_lock(&mx_cola_ready);
+				send_proceso(cpu_fd, pcb,DISPATCH);
+				pthread_mutex_unlock(&mx_cola_ready);
+
+				sem_post(&s_cpu_desocupado);
+				sem_post(&s_esperar_cpu);
+				break;
+			case F_WRITE:
+				log_info(logger, "PID: %d - Recibo pedido de F_WRITE por: %s", pcb->pid, instruccion->parametro1);
+
+				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_WRITE);
+
+				pthread_mutex_lock(&mx_cola_ready);
+				send_proceso(cpu_fd, pcb,DISPATCH);
+				pthread_mutex_unlock(&mx_cola_ready);
+
+				sem_post(&s_cpu_desocupado);
+				sem_post(&s_esperar_cpu);
+				break;
 			default:
 				log_error(logger, "AAAlgo anduvo mal en el server del kernel\n Cop: %d",cop);
 		}

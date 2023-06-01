@@ -28,15 +28,41 @@ static void procesar_conexion(void* void_args) {
 		 return;
 	 }
 
+	 char parametro1[20], parametro2[20], parametro3[20];
+
 	 switch (cop) {
 	 	 case DEBUG:
 	 		 log_info(logger, "debug");
 	 		 break;
 
 		 case F_OPEN:
-			 char parametro1[20], parametro2[20], parametro3[20];
 			 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
 			 log_info(logger, "Se recibio F_OPEN con parametros %s, %s y %s", parametro1, parametro2, parametro3);
+			 break;
+
+		 case F_CLOSE:
+			 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
+			 log_info(logger, "Se recibio F_CLOSE con parametros %s, %s y %s", parametro1, parametro2, parametro3);
+			 break;
+
+		 case F_SEEK:
+			 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
+			 log_info(logger, "Se recibio F_SEEK con parametros %s, %s y %s", parametro1, parametro2, parametro3);
+			 break;
+
+		 case F_TRUNCATE:
+			 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
+			 log_info(logger, "Se recibio F_TRUNCATE con parametros %s, %s y %s", parametro1, parametro2, parametro3);
+			 break;
+
+		 case F_READ:
+			 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
+			 log_info(logger, "Se recibio F_READ con parametros %s, %s y %s", parametro1, parametro2, parametro3);
+			 break;
+
+		 case F_WRITE:
+			 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
+			 log_info(logger, "Se recibio F_WRITE con parametros %s, %s y %s", parametro1, parametro2, parametro3);
 			 break;
 
 		 // Errores

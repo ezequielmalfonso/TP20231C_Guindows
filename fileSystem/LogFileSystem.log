@@ -8788,3 +8788,160 @@ RETARDO_ACCESO_BLOQUE: 15000
 
 [INFO] 17:51:56:886 FileSystem/(8809:8815): Se recibio F_OPEN con parametros ARCHIVO
 ,  y 
+[INFO] 18:08:23:009 FileSystem/(9754:9754): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /fs/sbloque.dat
+PATH_BITMAP: /fs/bitmap.dat
+PATH_BLOQUES: /fs/bloques.dat
+PATH_FCB: /fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[INFO] 18:08:23:010 FileSystem/(9754:9754): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:08:23:011 FileSystem/(9754:9754): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 18:08:23:997 FileSystem/(9754:9754): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 18:08:39:050 FileSystem/(9754:9759): Se recibio F_OPEN con parametros ARCHIVO
+,  y 
+[INFO] 18:08:39:050 FileSystem/(9754:9759): Se recibio F_TRUNCATE con parametros ARCHIVO, 64
+ y 
+[INFO] 18:08:39:051 FileSystem/(9754:9759): Se recibio F_SEEK con parametros ARCHIVO, 10
+ y 
+[INFO] 18:08:39:051 FileSystem/(9754:9759): Se recibio F_WRITE con parametros ARCHIVO, 4 y 4
+
+[INFO] 18:08:39:052 FileSystem/(9754:9759): Se recibio F_READ con parametros ARCHIVO, 16 y 4
+
+[INFO] 18:09:46:231 FileSystem/(9754:9759): Se ha finalizado la conexion
+[INFO] 18:11:08:337 FileSystem/(9865:9865): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /fs/sbloque.dat
+PATH_BITMAP: /fs/bitmap.dat
+PATH_BLOQUES: /fs/bloques.dat
+PATH_FCB: /fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[INFO] 18:11:08:340 FileSystem/(9865:9865): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:11:08:342 FileSystem/(9865:9865): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 18:11:11:271 FileSystem/(9865:9865): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 18:11:23:563 FileSystem/(9865:9871): Se recibio F_OPEN con parametros ARCHIVO
+,  y 
+[INFO] 18:11:23:564 FileSystem/(9865:9871): Se recibio F_TRUNCATE con parametros ARCHIVO, 64
+ y 
+[INFO] 18:11:23:564 FileSystem/(9865:9871): Se recibio F_SEEK con parametros ARCHIVO, 10
+ y 
+[INFO] 18:11:23:565 FileSystem/(9865:9871): Se recibio F_WRITE con parametros ARCHIVO, 4 y 4
+
+[INFO] 18:11:23:565 FileSystem/(9865:9871): Se recibio F_READ con parametros ARCHIVO, 16 y 4
+
+[INFO] 18:11:52:304 FileSystem/(9865:9871): Se ha finalizado la conexion
+[INFO] 18:11:59:908 FileSystem/(9965:9965): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /fs/sbloque.dat
+PATH_BITMAP: /fs/bitmap.dat
+PATH_BLOQUES: /fs/bloques.dat
+PATH_FCB: /fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[INFO] 18:11:59:910 FileSystem/(9965:9965): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:11:59:911 FileSystem/(9965:9965): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 18:12:01:144 FileSystem/(9965:9965): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 18:12:13:663 FileSystem/(9965:9970): Se recibio F_OPEN con parametros ARCHIVO
+,  y 
+[INFO] 18:12:13:663 FileSystem/(9965:9970): Se recibio F_TRUNCATE con parametros ARCHIVO, 64
+ y 
+[INFO] 18:12:13:664 FileSystem/(9965:9970): Se recibio F_SEEK con parametros ARCHIVO, 10
+ y 
+[INFO] 18:12:13:664 FileSystem/(9965:9970): Se recibio F_WRITE con parametros ARCHIVO, 4 y 4
+
+[INFO] 18:12:13:665 FileSystem/(9965:9970): Se recibio F_READ con parametros ARCHIVO, 16 y 4
+
+[INFO] 18:12:13:666 FileSystem/(9965:9970): Se recibio F_CLOSE con parametros ARCHIVO
+,  y 
+[INFO] 18:16:05:816 FileSystem/(9965:9970): Se ha finalizado la conexion
+[INFO] 18:16:10:714 FileSystem/(10124:10124): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /fs/sbloque.dat
+PATH_BITMAP: /fs/bitmap.dat
+PATH_BLOQUES: /fs/bloques.dat
+PATH_FCB: /fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[INFO] 18:16:10:715 FileSystem/(10124:10124): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:16:10:716 FileSystem/(10124:10124): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 18:16:11:849 FileSystem/(10124:10124): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 18:16:24:729 FileSystem/(10124:10129): Se ha finalizado la conexion
+[INFO] 18:17:12:834 FileSystem/(10227:10227): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /fs/sbloque.dat
+PATH_BITMAP: /fs/bitmap.dat
+PATH_BLOQUES: /fs/bloques.dat
+PATH_FCB: /fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[INFO] 18:17:12:837 FileSystem/(10227:10227): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:17:12:837 FileSystem/(10227:10227): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 18:19:44:211 FileSystem/(10264:10264): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /fs/sbloque.dat
+PATH_BITMAP: /fs/bitmap.dat
+PATH_BLOQUES: /fs/bloques.dat
+PATH_FCB: /fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[ERROR] 18:19:44:212 FileSystem/(10264:10264): Error al conectar (a MEMORIA)
+
+[INFO] 18:19:44:213 FileSystem/(10264:10264): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 18:20:15:884 FileSystem/(10285:10285): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /fs/sbloque.dat
+PATH_BITMAP: /fs/bitmap.dat
+PATH_BLOQUES: /fs/bloques.dat
+PATH_FCB: /fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[INFO] 18:20:15:886 FileSystem/(10285:10285): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:20:15:887 FileSystem/(10285:10285): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 18:20:17:880 FileSystem/(10285:10285): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 18:20:32:287 FileSystem/(10285:10290): Se recibio F_OPEN con parametros ARCHIVO
+,  y 
+[INFO] 18:20:32:288 FileSystem/(10285:10290): Se recibio F_TRUNCATE con parametros ARCHIVO, 64
+ y 
+[INFO] 18:20:32:289 FileSystem/(10285:10290): Se recibio F_SEEK con parametros ARCHIVO, 10
+ y 
+[INFO] 18:20:32:289 FileSystem/(10285:10290): Se recibio F_WRITE con parametros ARCHIVO, 4 y 4
+
+[INFO] 18:20:32:290 FileSystem/(10285:10290): Se recibio F_READ con parametros ARCHIVO, 16 y 4
+
+[INFO] 18:20:32:290 FileSystem/(10285:10290): Se recibio F_CLOSE con parametros ARCHIVO
+,  y 
+[INFO] 18:20:39:833 FileSystem/(10285:10290): Se ha finalizado la conexion

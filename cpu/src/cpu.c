@@ -108,10 +108,12 @@ int execute(INSTRUCCION* instruccion_ejecutar,char* registros,uint16_t pid, uint
 		}else if(!strcmp(instruccion_ejecutar->comando,"F_TRUNCATE") ){
 
 			log_info(logger,"PID: %d - Listo para ejecutar F_TRUNCATE ", pid);
+			return F_TRUNCATE;
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"F_SEEK") ){
 
 			log_info(logger,"PID: %d - Listo para ejecutar F_SEEK ", pid);
+			return F_SEEK;
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"CREATE_SEGMENT") ){
 
@@ -120,10 +122,12 @@ int execute(INSTRUCCION* instruccion_ejecutar,char* registros,uint16_t pid, uint
 		}else if(!strcmp(instruccion_ejecutar->comando,"F_WRITE") ){
 
 			log_info(logger,"PID: %d - Listo para ejecutar F_WRITE ", pid);
+			return F_WRITE;
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"F_READ") ){
 
 			log_info(logger,"PID: %d - Listo para ejecutar F_READ ", pid);
+			return F_READ;
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"DELETE_SEGMENT") ){
 
@@ -132,6 +136,7 @@ int execute(INSTRUCCION* instruccion_ejecutar,char* registros,uint16_t pid, uint
 		}else if(!strcmp(instruccion_ejecutar->comando,"F_CLOSE") ){
 
 			log_info(logger,"PID: %d - Listo para ejecutar F_CLOSE ", pid);
+			return F_CLOSE;
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"EXIT") ){
 			log_info(logger,"PID: %d - Ejecutando EXIT", pid);
