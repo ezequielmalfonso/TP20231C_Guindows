@@ -61,7 +61,7 @@ void fifo_ready_execute(){
 void hrrn_ready_execute(){
 
 	while(1){
-		log_info(logger,"PID: hrrn_ready_execute");
+		//log_info(logger,"PID: hrrn_ready_execute");
 		sem_wait(&s_ready_execute);
 		sem_wait(&s_cpu_desocupado); // Para que no ejecute cada vez que un proceso llega a ready
 		sem_wait(&s_cont_ready); // Para que no intente ejecutar si la lista de ready esta vacia
@@ -102,7 +102,7 @@ void hrrn_ready_execute(){
 
 void ordenar_hrrn(t_queue *cola_ready){
 
-	log_info(logger, "estoy ordenando amigo");
+	//log_info(logger, "estoy ordenando amigo");
 	t_list* listaReady = malloc(sizeof(t_list));
 	listaReady = list_create();
 
@@ -149,7 +149,7 @@ bool menor(PCB_t* a, PCB_t* b){
 	int64_t tiempo = temporal_gettime(reloj_inicio);
 	double sa = a->estimado_proxima_rafaga;
 	double sb = b->estimado_proxima_rafaga;
-	log_error(logger, "-PID a = %d, PID b = %d", a->pid, b->pid);
+	//log_error(logger, "-PID a = %d, PID b = %d", a->pid, b->pid);
     long int wa = (tiempo - a->tiempo_llegada_a_ready);
     long int wb = (tiempo - b->tiempo_llegada_a_ready);
     //log_warning(logger, "-PID a = %d, PID b = %d", a->pid, b->pid);
@@ -261,6 +261,8 @@ void esperar_cpu(){
 		instruccion = list_get(pcb->instrucciones, pcb->pc-1);
 		t_link_element* aux_list_raf_ant = list_rafa_anterior->head;
 		bool recurso_existe = false;
+		char* motivoExit;
+
 		switch (cop) {
 
 			case WAIT:
@@ -274,7 +276,7 @@ void esperar_cpu(){
 				 while( aux_rec1!=NULL )
 				 {
 					 t_recurso* aux_rec2 = aux_rec1->data;
-					 log_info(logger,"llegue: recurso 0%s0, parametro 0%s0, 0%s0", aux_rec2->recurso, strtok(instruccion->parametro1, "\n"), strtok(strtok(instruccion->parametro1, "\n"), "\n"));
+					 //log_info(logger,"llegue: recurso 0%s0, parametro 0%s0, 0%s0", aux_rec2->recurso, strtok(instruccion->parametro1, "\n"), strtok(strtok(instruccion->parametro1, "\n"), "\n"));
 					 if(	!strcmp(aux_rec2->recurso, strtok(instruccion->parametro1, "\r")) ||	// Soluciona error de recurso no encontrado. Habria que sanitizar mejor los datos en consola?
 							!strcmp(aux_rec2->recurso, strtok(instruccion->parametro1, "\n")))
 					 {
@@ -345,7 +347,8 @@ void esperar_cpu(){
 					 log_error(logger, "PID: %d - Recibo pedido de WAIT por recurso desconocido: %s", pcb->pid, instruccion->parametro1);
 					 cop = EXIT;	// Lo mismo que un exit
 					 send(pcb->cliente_fd,&cop,sizeof(op_code),0);
-					 execute_a_exit(pcb);
+					 motivoExit = "WAIT por Recurso Inexistente";
+					 execute_a_exit(pcb,motivoExit);
 					 sem_post(&s_cpu_desocupado);
 					 sem_post(&s_ready_execute);
 					 break;
@@ -438,11 +441,18 @@ void esperar_cpu(){
 				} else {
 					log_error(logger, "PID: %d - Recibo pedido de SIGNAL por recurso desconocido: %s", pcb->pid, instruccion->parametro1);
 					cop = EXIT;	// no hay break asi que sigue hasta que lo encuentra (sin comparar case)
+					send(pcb->cliente_fd,&cop,sizeof(op_code),0);
+					motivoExit = "SIGNAL por Recurso Inexistente";
+					execute_a_exit(pcb,motivoExit);
+					sem_post(&s_cpu_desocupado);
+					sem_post(&s_ready_execute);
+					break;
 				}
 
 			case EXIT:	// Segundo exit
 				send(pcb->cliente_fd,&cop,sizeof(op_code),0);
-				execute_a_exit(pcb);
+				motivoExit = "POR FIN";
+				execute_a_exit(pcb,motivoExit);
 				sem_post(&s_cpu_desocupado);
 				sem_post(&s_ready_execute);
 				break;
@@ -485,8 +495,7 @@ void esperar_cpu(){
 				sem_post(&s_blocked);
 				pthread_create(&hilo_bloqueado,NULL,(void*)bloqueando,pcb);
 				pthread_detach(hilo_bloqueado);								// Hace y me aseguro el hilo no se va a joinear con el hilo principal
-
-				 //------
+				//------
 				// t_link_element* aux_list_raf_ant = list_rafa_anterior->head;
 
 				while( aux_list_raf_ant!=NULL )
@@ -501,8 +510,7 @@ void esperar_cpu(){
 				   }
 				   aux_list_raf_ant = aux_list_raf_ant->next;
 				}
-				 //---
-
+				//---
 				//pthread_mutex_lock(&mx_log);
 				log_info(logger, "PID: %d - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O", pcb->pid);
 				 //pthread_mutex_unlock(&mx_log);
@@ -531,10 +539,10 @@ void esperar_cpu(){
 	}
 }
 
-void execute_a_exit(PCB_t* pcb){
+void execute_a_exit(PCB_t* pcb, char* motivoExit){
 	//pthread_mutex_lock(&mx_log);
     log_info(logger,"PID: %d - Estado Anterior: EXECUTE - Estado Actual: EXIT", pcb->pid);
-    log_info(logger,"Finaliza el proceso %d - Motivo: COMPLETAR CUANDO LO TENGAMOS", pcb->pid);
+    log_info(logger,"Finaliza el proceso %d - Motivo: %s", pcb->pid, motivoExit);
     //pthread_mutex_unlock(&mx_log);
     sem_post(&s_multiprogramacion_actual);//cuando se finaliza
     //liberar_espacio_de_memoria(PCB); Liberamos las estructructuras de memoria
@@ -548,11 +556,11 @@ void bloqueando(PCB_t* pcb){
 	sem_wait(&s_blocked);
 	INSTRUCCION* inst = list_get(pcb->instrucciones, pcb->pc - 1);
 	//pthread_mutex_lock(&mx_log);
-	log_info(logger, "instruccion numer %d",(pcb->pc-1));
+	log_info(logger, "Instruccion numer %d",(pcb->pc-1));
 	//pthread_mutex_unlock(&mx_log);
 	if(!strcmp(inst->comando,"I/O")){ // HAY QUE VER COMO METERSE EN ESE CHAR ** DISPOSITIVOS IO PARA QUE HAGA EL STRCMP
 		//pthread_mutex_lock(&mx_log);
-		log_info(logger, " me meti al if");
+		//log_info(logger, " me meti al if");
 		//pthread_mutex_unlock(&mx_log);
 		//sem_wait(&s_ios[i]);
 		sem_wait(&s_io);
@@ -592,13 +600,42 @@ void ejecutar_io(PCB_t* pcb,int numero) {
 		sem_post(&s_io);
 		//log_info(logger, "PID: %d - probando como queda", pcb->pid);
 }
-/*
-Suponiendo que tenes P1 y P2 que ejecuten en ese orden:
-P1 vendría primero, tomaría el recurso sin bloquearse (quedando el valor del recurso en 0) y luego se bloquearía en IO por 10 segundos.
-Seguiría P2 ejecutando WAIT y se bloquearía por no haber instancias disponibles (quedando el valor del recurso en -1).
-Al desbloquearse P1 del IO, su próxima instrucción sería SIGNAL y desbloquearía a P2.
-*/
 
+char* procesosEnReady(t_queue* cola_ready){
+	//log_info(logger, "estoy ordenando amigo");
+	t_list* listaReady = malloc(sizeof(t_list));
+	listaReady = list_create();
+	int queuesize = queue_size(cola_ready);
+	int i = 0;
+	PCB_t * proceso;
+	char* string_pids;
+
+	while(i < queuesize){
+
+		pthread_mutex_lock(&mx_cola_ready);
+		proceso = queue_pop(cola_ready);
+		pthread_mutex_unlock(&mx_cola_ready);
+		//log_warning(logger, "lolo: %d", queue_size(cola_ready));
+		list_add(listaReady, proceso);
+		//log_info(logger, "agrego");
+		i++;
+	}
+	t_link_element* aux_proc1 = listaReady->head;
+
+	while( aux_proc1 != NULL)
+	{
+	   PCB_t* aux_proc = aux_proc1->data;
+	   strcat(string_pids, (char*)aux_proc->pid);
+	   strcat(string_pids, ",");
+	   pthread_mutex_lock(&mx_cola_ready);
+	   queue_push(cola_ready, aux_proc);
+	   pthread_mutex_unlock(&mx_cola_ready);
+	   aux_proc1 = aux_proc1->next;
+	}
+log_error(logger, "PIDSSS: %s", string_pids );
+	return string_pids;
+
+}
 
 
 

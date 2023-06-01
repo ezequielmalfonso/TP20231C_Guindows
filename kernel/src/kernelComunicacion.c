@@ -108,12 +108,14 @@ static void procesar_conexion(void* void_args) {
 	proceso=queue_pop(cola_new);
 	pthread_mutex_unlock(&mx_cola_new);
 
-
-
 	proceso->tiempo_llegada_a_ready = temporal_gettime(reloj_inicio);
+	// TODO para listar los pids despues de entrar a ready
+	//char* pids = procesosEnReady(cola_ready);
+	//log_info(logger, "Ingreso a Ready algoritmo %s - PIDS: [%s] ", configuracion->ALGORITMO_PLANIFICACION, pids);
 	pthread_mutex_lock(&mx_cola_ready);
 	queue_push(cola_ready,proceso);
 	pthread_mutex_unlock(&mx_cola_ready);
+
 	//pthread_mutex_lock(&mx_log);
 	log_info(logger,"Se crea el proceso %d en NEW",proceso->pid);
 	log_info(logger,"PID: %d - Estado Anterior: NEW - Estado Actual: READY", proceso->pid);
@@ -214,6 +216,6 @@ void asignacion_tamanio_registros(INSTRUCCION* instruccion){
 			char* registros;
 			registros = (char*)malloc(16);
 		}else{
-			log_info(logger, "Algo fallo");
+			log_warning(logger, "No hay asignacion tamaño de registros");
 		}
 }

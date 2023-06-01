@@ -24,9 +24,9 @@ int cargarConfiguracion() {
 	logger = log_create("LogCpu.log", "Cpu", 1, LOG_LEVEL_INFO);
 	configuracion = malloc(sizeof(t_config_cpu));
 
-	//fd_configuracion = config_create("cpu.conf");
-	log_warning(logger, "Cpu config pruebas");
-	fd_configuracion = config_create("configPruebas/cpu_DEADLOCK.conf");
+	fd_configuracion = config_create("cpu.conf");
+	//log_warning(logger, "Cpu config pruebas");
+	//fd_configuracion = config_create("configPruebas/cpu_DEADLOCK.conf");
 
 	if (fd_configuracion == NULL) {
 		fd_configuracion = config_create("cpu.conf");
