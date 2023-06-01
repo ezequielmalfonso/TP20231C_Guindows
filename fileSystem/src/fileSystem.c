@@ -60,7 +60,7 @@ int configValidaSuperBloque(t_config* superBloque){
 int cargarSuperBloque(char *path){
 	log_warning(logger, "PATH: %s",configuracion->PATH_SUPERBLOQUE );
 	t_config* superBloque;
-	t_super_bloque* configuracionSuperBloque;
+	t_super_bloque* configuracionSuperBloque = malloc(sizeof(t_super_bloque));
 	//logger = log_create("superBloque.log", "SuperBLoque", 1, LOG_LEVEL_INFO);
 
 		superBloque = config_create(path);
@@ -74,14 +74,14 @@ int cargarSuperBloque(char *path){
 		}
 		log_error(logger, "PATH: %s",configuracion->PATH_SUPERBLOQUE );
 		configuracionSuperBloque->BLOCK_SIZE = config_get_int_value(superBloque, "BLOCK_SIZE");
-		//configuracionSuperBloque->BLOCK_COUNT = config_get_int_value(superBloque, "BLOCK_COUNT");
+		configuracionSuperBloque->BLOCK_COUNT = config_get_int_value(superBloque, "BLOCK_COUNT");
 
-/*
+
 		log_info(logger,
 			"\nBLOCK_SIZE: %d\n"
 			"BLOCK_COUNT: %d",
 			configuracionSuperBloque->BLOCK_SIZE,
 			configuracionSuperBloque->BLOCK_COUNT);
-*/
+
 	return 0;
 }
