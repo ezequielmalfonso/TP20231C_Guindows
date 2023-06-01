@@ -16,13 +16,14 @@
 #include "fileSystemComunicacion.h"
 #include "socket.h"
 #include "fileSystemConfig.h"
+#include "sys/mman.h"
 
 typedef struct {
 	uint32_t BLOCK_SIZE;
 	uint32_t BLOCK_COUNT;
 } t_super_bloque;
 
-
+extern t_super_bloque* configuracionSuperBloque;
 
 extern int fileSystemServer;
 
