@@ -17,6 +17,13 @@
 #include "socket.h"
 #include "fileSystemConfig.h"
 
+typedef struct {
+	uint32_t BLOCK_SIZE;
+	uint32_t BLOCK_COUNT;
+} t_super_bloque;
+
+
+
 extern int fileSystemServer;
 
 #endif /* FILESYSTEM_H_ */
