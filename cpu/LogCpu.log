@@ -25867,3 +25867,44 @@ TAM_MAX_SEGMENTO: 128
 [INFO] 16:22:01:032 Cpu/(8235:8241): PID: 1 - Envio SIGNAL a kernel parametro 1: EL_CUARTO_DE_FRANCIA
  
 [INFO] 16:22:30:303 Cpu/(8235:8241): Se ha finalizado la conexion
+[INFO] 17:51:11:357 Cpu/(8804:8804): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 17:51:11:359 Cpu/(8804:8804): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 17:51:11:360 Cpu/(8804:8804): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 17:51:43:776 Cpu/(8804:8804): Cliente conectado (a CPU_SV)
+
+[INFO] 17:51:45:882 Cpu/(8804:8814): Recibi PCB id: 0
+[INFO] 17:51:45:882 Cpu/(8804:8814): En CPU
+[INFO] 17:51:46:882 Cpu/(8804:8814): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 17:51:46:882 Cpu/(8804:8814): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 17:51:46:883 Cpu/(8804:8814): PID: 0 - Envio WAIT a Kernel parametro 1: DISCO
+ 
+[INFO] 17:51:46:883 Cpu/(8804:8814): Recibi PCB id: 0
+[INFO] 17:51:46:883 Cpu/(8804:8814): PID: 0 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 17:51:56:886 Cpu/(8804:8814): Recibi PCB id: 0
+[INFO] 17:51:56:886 Cpu/(8804:8814): PID: 0 - Envio SIGNAL a kernel parametro 1: DISCO
+ 
+[INFO] 17:51:56:886 Cpu/(8804:8814): Recibi PCB id: 0
+[INFO] 17:51:56:886 Cpu/(8804:8814): PID: 0 - Listo para ejecutar MOV_IN 
+[INFO] 17:51:56:886 Cpu/(8804:8814): PID: 0 - Envio F_OPEN a kernel parametro 1: ARCHIVO
+ 
+[INFO] 17:51:56:886 Cpu/(8804:8814): Recibi PCB id: 0
+[INFO] 17:51:56:886 Cpu/(8804:8814): PID: 0 - Ejecutando YIELD 
+[INFO] 17:51:56:887 Cpu/(8804:8814): Recibi PCB id: 0
+[INFO] 17:51:56:887 Cpu/(8804:8814): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 17:51:56:887 Cpu/(8804:8814): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 17:51:56:887 Cpu/(8804:8814): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 17:51:56:887 Cpu/(8804:8814): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 17:51:56:887 Cpu/(8804:8814): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 17:51:56:887 Cpu/(8804:8814): PID: 0 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 17:51:56:887 Cpu/(8804:8814): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 17:51:56:887 Cpu/(8804:8814): PID: 0 - Ejecutando EXIT

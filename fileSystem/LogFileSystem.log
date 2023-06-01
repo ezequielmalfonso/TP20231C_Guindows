@@ -8770,3 +8770,21 @@ RETARDO_ACCESO_BLOQUE: 15000
 [INFO] 16:21:55:275 FileSystem/(8236:8236): Cliente conectado (a FILESYSTEM_SV)
 
 [INFO] 16:22:30:303 FileSystem/(8236:8242): Se ha finalizado la conexion
+[INFO] 17:51:39:117 FileSystem/(8809:8809): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /fs/sbloque.dat
+PATH_BITMAP: /fs/bitmap.dat
+PATH_BLOQUES: /fs/bloques.dat
+PATH_FCB: /fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[INFO] 17:51:39:118 FileSystem/(8809:8809): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 17:51:39:119 FileSystem/(8809:8809): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 17:51:43:777 FileSystem/(8809:8809): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 17:51:56:886 FileSystem/(8809:8815): Se recibio F_OPEN con parametros ARCHIVO
+,  y 
