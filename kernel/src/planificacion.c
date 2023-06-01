@@ -397,6 +397,10 @@ void esperar_cpu(){
 /***********************************************************/
 						 //pcb_blocked->pc--;   // TODO depende lo que responda se deja o se saca
 /***********************************************************/
+							 // TODO para listar los pids despues de entrar a ready
+							 char* pids = procesosEnReady(cola_ready);
+							 log_info(logger, "Ingreso a Ready algoritmo %s - PIDS: [%s] ", configuracion->ALGORITMO_PLANIFICACION, pids);
+
 							 log_info(logger, "PID: %d - Estado Anterior: BLOCKED - Estado Actual: READY - PROGRAM COINTER: %d", pcb_blocked->pid, pcb_blocked->pc );
 
 							 pcb_blocked->tiempo_llegada_a_ready = temporal_gettime(reloj_inicio);
@@ -479,6 +483,11 @@ void esperar_cpu(){
 				 pthread_mutex_lock(&mx_cola_ready);
 				 queue_push(cola_ready,pcb);
 				 pthread_mutex_unlock(&mx_cola_ready);
+
+				 // TODO para listar los pids despues de entrar a ready
+								 char* pids = procesosEnReady(cola_ready);
+								 log_info(logger, "Ingreso a Ready algoritmo %s - PIDS: [%s] ", configuracion->ALGORITMO_PLANIFICACION, pids);
+
 
 				 sem_post(&s_cont_ready);
 			//	 sem_post(&s_pcb_desalojado);
@@ -595,6 +604,10 @@ void ejecutar_io(PCB_t* pcb,int numero) {
 		pthread_mutex_lock(&mx_cola_ready);
 		queue_push(cola_ready, pcb);
 		pthread_mutex_unlock(&mx_cola_ready);
+
+		// TODO para listar los pids despues de entrar a ready
+		char* pids = procesosEnReady(cola_ready);
+		log_info(logger, "Ingreso a Ready algoritmo %s - PIDS: [%s] ", configuracion->ALGORITMO_PLANIFICACION, pids);
 		sem_post(&s_ready_execute);
 		sem_post(&s_cont_ready);
 		sem_post(&s_io);
@@ -608,6 +621,7 @@ char* procesosEnReady(t_queue* cola_ready){
 	int queuesize = queue_size(cola_ready);
 	int i = 0;
 	PCB_t * proceso;
+	int pids[queuesize];
 	char* string_pids;
 
 	while(i < queuesize){
@@ -616,23 +630,32 @@ char* procesosEnReady(t_queue* cola_ready){
 		proceso = queue_pop(cola_ready);
 		pthread_mutex_unlock(&mx_cola_ready);
 		//log_warning(logger, "lolo: %d", queue_size(cola_ready));
+		pids[i] = proceso->pid;
 		list_add(listaReady, proceso);
 		//log_info(logger, "agrego");
+		//log_warning(logger, "PIDSSS: %s", string_itoa(pids[i]) );
+		if(i==0){
+			strcpy(string_pids, string_itoa(pids[i]));
+		}else{
+			strcat(string_pids, " ");
+			strcat(string_pids, string_itoa(pids[i]));
+
+		}
+
 		i++;
 	}
 	t_link_element* aux_proc1 = listaReady->head;
-
+	i = 0;
 	while( aux_proc1 != NULL)
 	{
 	   PCB_t* aux_proc = aux_proc1->data;
-	   strcat(string_pids, (char*)aux_proc->pid);
-	   strcat(string_pids, ",");
 	   pthread_mutex_lock(&mx_cola_ready);
 	   queue_push(cola_ready, aux_proc);
 	   pthread_mutex_unlock(&mx_cola_ready);
 	   aux_proc1 = aux_proc1->next;
+	   i++;
 	}
-log_error(logger, "PIDSSS: %s", string_pids );
+//log_error(logger, "PIDSSS: %s", string_pids );
 	return string_pids;
 
 }
