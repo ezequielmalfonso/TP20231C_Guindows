@@ -530,7 +530,7 @@ void esperar_cpu(){
 			case F_OPEN:
 				log_info(logger, "PID: %d - Recibo pedido de F_OPEN por: %s", pcb->pid, instruccion->parametro1);
 
-				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_OPEN);
+				send_archivo(file_system_fd,instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_OPEN);
 
 				pthread_mutex_lock(&mx_cola_ready);
 				send_proceso(cpu_fd, pcb,DISPATCH);

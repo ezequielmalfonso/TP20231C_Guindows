@@ -75,7 +75,7 @@ int execute(INSTRUCCION* instruccion_ejecutar,char* registros,uint16_t pid, uint
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"WAIT") ){
 
-			log_info(logger,"PID: %d - Envio WAIT a Kernel parametro 1: %s ", pid,instruccion_ejecutar->parametro1);
+			log_info(logger,"PID: %d - Ejecutando WAIT a Kernel por recurso: %s ", pid,instruccion_ejecutar->parametro1);
 
 			return WAIT;
 
@@ -86,7 +86,7 @@ int execute(INSTRUCCION* instruccion_ejecutar,char* registros,uint16_t pid, uint
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"SIGNAL") ){
 
-			log_info(logger,"PID: %d - Envio SIGNAL a kernel parametro 1: %s ", pid,instruccion_ejecutar->parametro1);
+			log_info(logger,"PID: %d - Ejecutando SIGNAL a kernel por recurso: %s ", pid,instruccion_ejecutar->parametro1);
 			return SIGNAL;
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"MOV_IN") ){
@@ -95,7 +95,7 @@ int execute(INSTRUCCION* instruccion_ejecutar,char* registros,uint16_t pid, uint
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"F_OPEN") ){
 
-			log_info(logger,"PID: %d - Envio F_OPEN a kernel parametro 1: %s ", pid,instruccion_ejecutar->parametro1);
+			log_info(logger,"PID: %d - Ejecutando F_OPEN - Solicita a kernel abrir: %s ", pid,instruccion_ejecutar->parametro1);
 			return F_OPEN;
 
 		}else if(	!strcmp(strtok(instruccion_ejecutar->comando, "\n"),"YIELD") ||
