@@ -44,7 +44,7 @@ static void procesar_conexion(void* void_args) {
 
 	// uint32_t archivos_abiertos; TODO de que tipo seria??? Una lista o un array?
 
-	estimado_rafaga_inicial = 0; //configuracion->ESTIMACION_INICIAL;
+	estimado_rafaga_inicial = configuracion->ESTIMACION_INICIAL;
 
 
 	// posible semaforo
@@ -109,6 +109,7 @@ static void procesar_conexion(void* void_args) {
 	pthread_mutex_unlock(&mx_cola_new);
 
 	proceso->tiempo_llegada_a_ready = temporal_gettime(reloj_inicio);
+	// tiene que estar mas arriba proceso->estimado_proxima_rafaga = configuracion->ESTIMACION_INICIAL;
 	pthread_mutex_lock(&mx_cola_ready);
 	queue_push(cola_ready,proceso);
 	pthread_mutex_unlock(&mx_cola_ready);
