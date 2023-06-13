@@ -37,9 +37,6 @@ static void procesar_conexion(void* void_args) {
 
 		 case F_OPEN:
 			 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
-			 PCB_t* proceso= pcb_create();
-			 //log_info(logger,"Recibiendo PCB desde %s ", cop );
-			 //recv_proceso(cliente_socket,proceso);
 			 log_info(logger, "Se recibio F_OPEN con parametros %s, %s y %s", parametro1, parametro2, parametro3);
 			 log_info(logger, "F_OPEN - Crear archivo: %s", parametro1);
 			 break;

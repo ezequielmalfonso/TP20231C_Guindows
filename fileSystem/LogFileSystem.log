@@ -10123,3 +10123,63 @@ BLOCK_COUNT: 65536
 [INFO] 06:43:02:362 FileSystem/(34868:34868): Cliente conectado (a FILESYSTEM_SV)
 
 [INFO] 06:44:02:387 FileSystem/(34868:34874): Se ha finalizado la conexion
+[INFO] 20:45:50:023 FileSystem/(64311:64311): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 20:45:50:031 FileSystem/(64311:64311): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 20:45:50:031 FileSystem/(64311:64311): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 20:45:50:031 FileSystem/(64311:64311): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[WARNING] 20:45:50:034 FileSystem/(64311:64311): Bloque
+[INFO] 20:45:50:035 FileSystem/(64311:64311): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 20:45:50:035 FileSystem/(64311:64311): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 20:45:51:404 FileSystem/(64311:64311): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 20:46:06:736 FileSystem/(64311:64317): Se ha finalizado la conexion
+[INFO] 20:46:24:263 FileSystem/(64327:64327): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 20:46:24:265 FileSystem/(64327:64327): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 20:46:24:265 FileSystem/(64327:64327): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 20:46:24:265 FileSystem/(64327:64327): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[WARNING] 20:46:24:266 FileSystem/(64327:64327): Bloque
+[INFO] 20:46:24:267 FileSystem/(64327:64327): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 20:46:24:267 FileSystem/(64327:64327): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 20:46:31:739 FileSystem/(64327:64327): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 20:46:47:642 FileSystem/(64327:64337): Se recibio F_OPEN con parametros ARCHIVO
+,  y 
+[INFO] 20:46:47:642 FileSystem/(64327:64337): F_OPEN - Crear archivo: ARCHIVO
+
+[INFO] 20:46:47:644 FileSystem/(64327:64337): Se recibio F_TRUNCATE con parametros ARCHIVO, 64
+ y 
+[INFO] 20:46:47:645 FileSystem/(64327:64337): Se recibio F_SEEK con parametros ARCHIVO, 10
+ y 
+[INFO] 20:46:47:646 FileSystem/(64327:64337): Se recibio F_WRITE con parametros ARCHIVO, 4 y 4
+
+[INFO] 20:46:47:647 FileSystem/(64327:64337): Se recibio F_READ con parametros ARCHIVO, 16 y 4
+
+[INFO] 20:46:47:648 FileSystem/(64327:64337): Se recibio F_CLOSE con parametros ARCHIVO
+,  y 
+[INFO] 20:55:48:782 FileSystem/(64327:64337): Se ha finalizado la conexion
