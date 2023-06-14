@@ -28,18 +28,20 @@ int main(int argc, char** argv) {
 		parseo_instrucciones(argv[1],listaInstrucciones);
 
 		//printf("La lista tiene %d elementos", k);
-
+		//log_warning(logger, "ESTOY EN CONSOLA ANTES DE enviar las intrucciones");
 		enviar_instrucciones(kernel_fd, listaInstrucciones);
 
 		//TODO : Para cuando esten todos los modulos arriba aca va while esperandocodigo de operacion desde kernel
 		//       pcb->cliente_fd
-		//WHILE(1)
+		//log_warning(logger, "ESTOY EN CONSOLA ANTES DEL WHILE");
 		while(1){
 				op_code cod,cop_aux;
+				//log_error(logger, "ESTOY EN CONSOLA ANTES de recibir el codop");
 				recv(kernel_fd,&cod,sizeof(op_code),MSG_WAITALL);
+
 				switch(cod){
 					case EXIT:
-						log_info(logger, "Se realizo el envio se desconecto del kernel - Finalizo consola por EXIT");
+						log_warning(logger, "Se realizo el envio se desconecto del kernel - Finalizo consola por EXIT");
 						limpiarConfiguracion();
 						exit(-1);
 					break;

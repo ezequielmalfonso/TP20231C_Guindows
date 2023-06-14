@@ -133,8 +133,9 @@ bool send_proceso(int fd, PCB_t *proceso,op_code codigo) {
 static void* serializar_proceso(size_t* size, PCB_t *proceso, op_code codigo) {
 
 
-	uint32_t elementosLista= list_size(proceso->instrucciones);
-	uint32_t tablaSegmentos= list_size(proceso->tabla_de_segmentos);
+	uint32_t elementosLista         = list_size(proceso->instrucciones);
+	uint32_t tablaSegmentos         = list_size(proceso->tabla_de_segmentos);
+	uint32_t list_archivos_abiertos = list_size(proceso->archivos_abiertos);
 
 	*size= sizeof(op_code)+   // 4
 		   sizeof(size_t)+ 			//SIZE
@@ -147,7 +148,7 @@ static void* serializar_proceso(size_t* size, PCB_t *proceso, op_code codigo) {
 		   sizeof(t_segmento)*tablaSegmentos+//((25)*tablaSegmentos)+   //sizeof(uint32_t)+//SIZE cantListaSegmentos
 		   sizeof(double)+         	// Estimado rafaga
 		   sizeof(uint32_t)+       	// tiempo de llegada
-		   //sizeof(uint32_t)*listSegmentos + //SIZE SEGMENTOS SIN LOS ID
+		   sizeof(t_archivoAbierto)*list_archivos_abiertos + //SIZE SEGMENTOS SIN LOS ID
 		   sizeof(int); 			//SIZE CONSOLA FD
 
 	size_t size_load = *size- sizeof(op_code) -sizeof(size_t);
@@ -219,6 +220,20 @@ static void* serializar_proceso(size_t* size, PCB_t *proceso, op_code codigo) {
 	memcpy(stream + offset, &proceso->tiempo_llegada_a_ready, sizeof(uint32_t));
 	offset+= sizeof(uint32_t);
 
+	memcpy(stream + offset, &list_archivos_abiertos, sizeof(uint32_t)); //cantidad archviso abiertos
+	offset+= sizeof(uint32_t);
+
+	t_link_element* aux_list_arch = proceso->archivos_abiertos->head;
+	while(aux_list_arch != NULL)
+	{
+		t_archivoAbierto* aux_list_arch2 = aux_list_arch->data;
+		memcpy(stream + offset, &aux_list_arch2->nombre_archivo, sizeof(aux_list_arch2->nombre_archivo));
+		offset += sizeof(aux_list_arch2->nombre_archivo);
+		memcpy(stream + offset, &aux_list_arch2->puntero, sizeof(aux_list_arch2->puntero));
+		offset += sizeof(aux_list_arch2->puntero);
+		aux_list_arch = aux_list_arch->next;
+	}
+
 	memcpy(stream + offset, &proceso->cliente_fd, sizeof(int));
 
 	//free(aux);
@@ -241,9 +256,9 @@ bool recv_proceso(int fd, PCB_t* proceso){
 }
 
 static void deserializar_proceso(void* stream, PCB_t* proceso) {
-	int i=0,c=0;
+	int i=0,c=0, j=0;
 
-	uint32_t elementosLista=0, cantSegmentos=0;
+	uint32_t elementosLista=0, cantSegmentos=0, cantidadArchivos = 0;
 
 	memcpy(&(proceso->pid), stream, sizeof(uint16_t));
 	stream+=sizeof(uint16_t);
@@ -290,6 +305,7 @@ static void deserializar_proceso(void* stream, PCB_t* proceso) {
 
 	proceso->tabla_de_segmentos=list_create();
 
+
 	while(c < cantSegmentos)
 	{
 	  t_segmento* aux_seg = (t_segmento*)malloc(sizeof(t_segmento));
@@ -311,6 +327,19 @@ static void deserializar_proceso(void* stream, PCB_t* proceso) {
 	stream+= sizeof(double);
 	memcpy(&proceso->tiempo_llegada_a_ready, stream, sizeof(uint32_t));
 	stream+= sizeof(uint32_t);
+
+	memcpy(&cantidadArchivos, stream, sizeof(uint32_t));
+	stream+= sizeof(uint32_t);
+
+	while(j<cantidadArchivos)
+	{
+		t_archivoAbierto* aux_arch = (t_archivoAbierto*)malloc(sizeof(t_archivoAbierto));
+		memcpy(&(aux_arch->nombre_archivo), stream, sizeof(aux_arch->nombre_archivo));
+		stream += sizeof(aux_arch->nombre_archivo);
+		memcpy(&(aux_arch->puntero), stream, sizeof(aux_arch->puntero));
+		stream += sizeof(aux_arch->puntero);
+		j++;
+	}
 
 	memcpy(&proceso->cliente_fd, stream, sizeof(int));
 

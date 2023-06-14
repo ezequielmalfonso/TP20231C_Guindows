@@ -36148,3 +36148,276 @@ TAM_MAX_SEGMENTO: 128
 
 [INFO] 06:43:55:412 Cpu/(34867:34873): PID: 2 - Ejecutando EXIT
 [INFO] 06:44:02:388 Cpu/(34867:34873): Se ha finalizado la conexion
+[INFO] 23:54:24:651 Cpu/(3275:3275): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 23:54:24:659 Cpu/(3275:3275): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:54:24:660 Cpu/(3275:3275): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 23:54:28:504 Cpu/(3275:3275): Cliente conectado (a CPU_SV)
+
+[INFO] 23:54:30:557 Cpu/(3275:3280): Recibi PCB id: 0
+[INFO] 23:54:30:557 Cpu/(3275:3280): En CPU
+[INFO] 23:54:31:558 Cpu/(3275:3280): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 23:54:31:558 Cpu/(3275:3280): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:54:31:558 Cpu/(3275:3280): PID: 0 - Ejecutando WAIT a Kernel por recurso: DISCO
+ 
+[INFO] 23:54:31:560 Cpu/(3275:3280): Recibi PCB id: 0
+[INFO] 23:54:31:560 Cpu/(3275:3280): PID: 0 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 23:54:41:563 Cpu/(3275:3280): Recibi PCB id: 0
+[INFO] 23:54:41:563 Cpu/(3275:3280): PID: 0 - Ejecutando SIGNAL a kernel por recurso: DISCO
+ 
+[INFO] 23:54:41:564 Cpu/(3275:3280): Recibi PCB id: 0
+[INFO] 23:54:41:564 Cpu/(3275:3280): PID: 0 - Listo para ejecutar MOV_IN 
+[INFO] 23:54:41:564 Cpu/(3275:3280): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 23:54:41:565 Cpu/(3275:3280): Recibi PCB id: 0
+[INFO] 23:54:41:565 Cpu/(3275:3280): PID: 0 - Ejecutando YIELD 
+[INFO] 23:54:41:566 Cpu/(3275:3280): Recibi PCB id: 0
+[INFO] 23:54:41:566 Cpu/(3275:3280): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 23:54:41:567 Cpu/(3275:3280): Recibi PCB id: 0
+[INFO] 23:54:41:567 Cpu/(3275:3280): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 23:54:41:568 Cpu/(3275:3280): Recibi PCB id: 0
+[INFO] 23:54:41:569 Cpu/(3275:3280): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 23:54:41:569 Cpu/(3275:3280): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 23:54:41:570 Cpu/(3275:3280): Recibi PCB id: 0
+[INFO] 23:54:41:570 Cpu/(3275:3280): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 23:54:41:570 Cpu/(3275:3280): Recibi PCB id: 0
+[INFO] 23:54:41:571 Cpu/(3275:3280): PID: 0 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 23:54:41:571 Cpu/(3275:3280): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 23:54:41:571 Cpu/(3275:3280): Recibi PCB id: 0
+[INFO] 23:54:41:572 Cpu/(3275:3280): PID: 0 - Ejecutando EXIT
+[INFO] 23:55:34:256 Cpu/(3275:3280): Recibi PCB id: 1
+[INFO] 23:55:34:256 Cpu/(3275:3280): En CPU
+[INFO] 23:55:35:257 Cpu/(3275:3280): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: AAAA
+
+[INFO] 23:55:35:257 Cpu/(3275:3280): En CPU
+[INFO] 23:55:36:257 Cpu/(3275:3280): PID: 1 - Ejecutando SET parametro 1: BX parametro 2: BBBB
+
+[INFO] 23:55:36:258 Cpu/(3275:3280): En CPU
+[INFO] 23:55:37:258 Cpu/(3275:3280): PID: 1 - Ejecutando SET parametro 1: CX parametro 2: CCCC
+
+[INFO] 23:55:37:258 Cpu/(3275:3280): En CPU
+[INFO] 23:55:38:259 Cpu/(3275:3280): PID: 1 - Ejecutando SET parametro 1: DX parametro 2: DDDD
+
+[INFO] 23:55:38:259 Cpu/(3275:3280): En CPU
+[INFO] 23:55:39:260 Cpu/(3275:3280): PID: 1 - Ejecutando SET parametro 1: EAX parametro 2: AAAAAAAA
+
+[INFO] 23:55:39:260 Cpu/(3275:3280): En CPU
+[INFO] 23:55:40:260 Cpu/(3275:3280): PID: 1 - Ejecutando SET parametro 1: EBX parametro 2: BBBBBBBB
+
+[INFO] 23:55:40:261 Cpu/(3275:3280): En CPU
+[INFO] 23:55:41:261 Cpu/(3275:3280): PID: 1 - Ejecutando SET parametro 1: ECX parametro 2: CCCCCCCC
+
+[INFO] 23:55:41:261 Cpu/(3275:3280): En CPU
+[INFO] 23:55:42:262 Cpu/(3275:3280): PID: 1 - Ejecutando SET parametro 1: EDX parametro 2: DDDDDDDD
+
+[INFO] 23:55:42:262 Cpu/(3275:3280): En CPU
+[INFO] 23:55:43:263 Cpu/(3275:3280): PID: 1 - Ejecutando SET parametro 1: RAX parametro 2: AAAAAAAAAAAAAAAA
+
+[INFO] 23:55:43:263 Cpu/(3275:3280): En CPU
+[INFO] 23:55:44:263 Cpu/(3275:3280): PID: 1 - Ejecutando SET parametro 1: RBX parametro 2: BBBBBBBBBBBBBBBB
+
+[INFO] 23:55:44:264 Cpu/(3275:3280): En CPU
+[INFO] 23:55:45:264 Cpu/(3275:3280): PID: 1 - Ejecutando SET parametro 1: RCX parametro 2: CCCCCCCCCCCCCCCC
+
+[INFO] 23:55:45:265 Cpu/(3275:3280): En CPU
+[INFO] 23:55:46:265 Cpu/(3275:3280): PID: 1 - Ejecutando SET parametro 1: RDX parametro 2: DDDDDDDDDDDDDDDD
+
+[INFO] 23:55:46:265 Cpu/(3275:3280): PID: 1 - Ejecutando YIELD 
+[INFO] 23:55:46:266 Cpu/(3275:3280): Recibi PCB id: 1
+[INFO] 23:55:46:266 Cpu/(3275:3280): En CPU
+[INFO] 23:55:47:267 Cpu/(3275:3280): PID: 1 - Ejecutando SET parametro 1: RAX parametro 2: TCHOUAMENIAFUERA
+
+[INFO] 23:55:47:268 Cpu/(3275:3280): En CPU
+[INFO] 23:55:48:268 Cpu/(3275:3280): PID: 1 - Ejecutando SET parametro 1: RBX parametro 2: SEGUNDO_FRANCIA_
+
+[INFO] 23:55:48:268 Cpu/(3275:3280): PID: 1 - Ejecutando EXIT
+[INFO] 23:58:05:199 Cpu/(3275:3280): Se ha finalizado la conexion
+[INFO] 23:58:11:695 Cpu/(3640:3640): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 23:58:11:695 Cpu/(3640:3640): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:58:11:695 Cpu/(3640:3640): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 23:58:15:923 Cpu/(3640:3640): Cliente conectado (a CPU_SV)
+
+[INFO] 23:58:19:909 Cpu/(3640:3651): Recibi PCB id: 0
+[INFO] 23:58:19:909 Cpu/(3640:3651): En CPU
+[INFO] 23:58:20:910 Cpu/(3640:3651): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: AAAA
+
+[INFO] 23:58:20:911 Cpu/(3640:3651): En CPU
+[INFO] 23:58:21:911 Cpu/(3640:3651): PID: 0 - Ejecutando SET parametro 1: BX parametro 2: BBBB
+
+[INFO] 23:58:21:912 Cpu/(3640:3651): En CPU
+[INFO] 23:58:22:912 Cpu/(3640:3651): PID: 0 - Ejecutando SET parametro 1: CX parametro 2: CCCC
+
+[INFO] 23:58:22:912 Cpu/(3640:3651): En CPU
+[INFO] 23:58:23:912 Cpu/(3640:3651): PID: 0 - Ejecutando SET parametro 1: DX parametro 2: DDDD
+
+[INFO] 23:58:23:913 Cpu/(3640:3651): En CPU
+[INFO] 23:58:24:914 Cpu/(3640:3651): PID: 0 - Ejecutando SET parametro 1: EAX parametro 2: AAAAAAAA
+
+[INFO] 23:58:24:915 Cpu/(3640:3651): En CPU
+[INFO] 23:58:25:916 Cpu/(3640:3651): PID: 0 - Ejecutando SET parametro 1: EBX parametro 2: BBBBBBBB
+
+[INFO] 23:58:25:916 Cpu/(3640:3651): En CPU
+[INFO] 23:58:26:917 Cpu/(3640:3651): PID: 0 - Ejecutando SET parametro 1: ECX parametro 2: CCCCCCCC
+
+[INFO] 23:58:26:917 Cpu/(3640:3651): En CPU
+[INFO] 23:58:27:918 Cpu/(3640:3651): PID: 0 - Ejecutando SET parametro 1: EDX parametro 2: DDDDDDDD
+
+[INFO] 23:58:27:919 Cpu/(3640:3651): En CPU
+[INFO] 23:58:28:920 Cpu/(3640:3651): PID: 0 - Ejecutando SET parametro 1: RAX parametro 2: AAAAAAAAAAAAAAAA
+
+[INFO] 23:58:28:920 Cpu/(3640:3651): En CPU
+[INFO] 23:58:29:921 Cpu/(3640:3651): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: BBBBBBBBBBBBBBBB
+
+[INFO] 23:58:29:921 Cpu/(3640:3651): En CPU
+[INFO] 23:58:30:922 Cpu/(3640:3651): PID: 0 - Ejecutando SET parametro 1: RCX parametro 2: CCCCCCCCCCCCCCCC
+
+[INFO] 23:58:30:922 Cpu/(3640:3651): En CPU
+[INFO] 23:58:31:922 Cpu/(3640:3651): PID: 0 - Ejecutando SET parametro 1: RDX parametro 2: DDDDDDDDDDDDDDDD
+
+[INFO] 23:58:31:923 Cpu/(3640:3651): PID: 0 - Ejecutando YIELD 
+[INFO] 23:58:31:923 Cpu/(3640:3651): Recibi PCB id: 0
+[INFO] 23:58:31:924 Cpu/(3640:3651): En CPU
+[INFO] 23:58:32:924 Cpu/(3640:3651): PID: 0 - Ejecutando SET parametro 1: RAX parametro 2: TCHOUAMENIAFUERA
+
+[INFO] 23:58:32:925 Cpu/(3640:3651): En CPU
+[INFO] 23:58:33:926 Cpu/(3640:3651): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SEGUNDO_FRANCIA_
+
+[INFO] 23:58:33:926 Cpu/(3640:3651): PID: 0 - Ejecutando EXIT
+[INFO] 23:58:51:294 Cpu/(3640:3651): Se ha finalizado la conexion
+[INFO] 23:59:09:329 Cpu/(3734:3734): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 23:59:09:330 Cpu/(3734:3734): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:59:09:331 Cpu/(3734:3734): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 23:59:12:030 Cpu/(3734:3734): Cliente conectado (a CPU_SV)
+
+[INFO] 23:59:15:559 Cpu/(3734:3739): Recibi PCB id: 0
+[INFO] 23:59:15:559 Cpu/(3734:3739): En CPU
+[INFO] 23:59:16:560 Cpu/(3734:3739): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: AAAA
+
+[INFO] 23:59:16:560 Cpu/(3734:3739): En CPU
+[INFO] 23:59:17:560 Cpu/(3734:3739): PID: 0 - Ejecutando SET parametro 1: BX parametro 2: BBBB
+
+[INFO] 23:59:17:561 Cpu/(3734:3739): En CPU
+[INFO] 23:59:18:561 Cpu/(3734:3739): PID: 0 - Ejecutando SET parametro 1: CX parametro 2: CCCC
+
+[INFO] 23:59:18:562 Cpu/(3734:3739): En CPU
+[INFO] 23:59:19:562 Cpu/(3734:3739): PID: 0 - Ejecutando SET parametro 1: DX parametro 2: DDDD
+
+[INFO] 23:59:19:562 Cpu/(3734:3739): En CPU
+[INFO] 23:59:20:563 Cpu/(3734:3739): PID: 0 - Ejecutando SET parametro 1: EAX parametro 2: AAAAAAAA
+
+[INFO] 23:59:20:564 Cpu/(3734:3739): En CPU
+[INFO] 23:59:21:564 Cpu/(3734:3739): PID: 0 - Ejecutando SET parametro 1: EBX parametro 2: BBBBBBBB
+
+[INFO] 23:59:21:565 Cpu/(3734:3739): En CPU
+[INFO] 23:59:22:566 Cpu/(3734:3739): PID: 0 - Ejecutando SET parametro 1: ECX parametro 2: CCCCCCCC
+
+[INFO] 23:59:22:568 Cpu/(3734:3739): En CPU
+[INFO] 23:59:23:570 Cpu/(3734:3739): PID: 0 - Ejecutando SET parametro 1: EDX parametro 2: DDDDDDDD
+
+[INFO] 23:59:23:570 Cpu/(3734:3739): En CPU
+[INFO] 23:59:24:571 Cpu/(3734:3739): PID: 0 - Ejecutando SET parametro 1: RAX parametro 2: AAAAAAAAAAAAAAAA
+
+[INFO] 23:59:24:571 Cpu/(3734:3739): En CPU
+[INFO] 23:59:25:572 Cpu/(3734:3739): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: BBBBBBBBBBBBBBBB
+
+[INFO] 23:59:25:572 Cpu/(3734:3739): En CPU
+[INFO] 23:59:26:572 Cpu/(3734:3739): PID: 0 - Ejecutando SET parametro 1: RCX parametro 2: CCCCCCCCCCCCCCCC
+
+[INFO] 23:59:26:573 Cpu/(3734:3739): En CPU
+[INFO] 23:59:27:573 Cpu/(3734:3739): PID: 0 - Ejecutando SET parametro 1: RDX parametro 2: DDDDDDDDDDDDDDDD
+
+[INFO] 23:59:27:574 Cpu/(3734:3739): PID: 0 - Ejecutando YIELD 
+[INFO] 23:59:27:575 Cpu/(3734:3739): Recibi PCB id: 0
+[INFO] 23:59:27:575 Cpu/(3734:3739): En CPU
+[INFO] 23:59:28:576 Cpu/(3734:3739): PID: 0 - Ejecutando SET parametro 1: RAX parametro 2: TCHOUAMENIAFUERA
+
+[INFO] 23:59:28:577 Cpu/(3734:3739): En CPU
+[INFO] 23:59:29:577 Cpu/(3734:3739): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SEGUNDO_FRANCIA_
+
+[INFO] 23:59:29:578 Cpu/(3734:3739): PID: 0 - Ejecutando EXIT
+[INFO] 00:00:25:967 Cpu/(3734:3739): Se ha finalizado la conexion
+[INFO] 00:00:30:753 Cpu/(3911:3911): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 00:00:30:754 Cpu/(3911:3911): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 00:00:30:754 Cpu/(3911:3911): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 00:00:32:516 Cpu/(3911:3911): Cliente conectado (a CPU_SV)
+
+[INFO] 00:00:35:335 Cpu/(3911:3916): Recibi PCB id: 0
+[INFO] 00:00:35:335 Cpu/(3911:3916): En CPU
+[INFO] 00:00:36:335 Cpu/(3911:3916): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: AAAA
+
+[INFO] 00:00:36:336 Cpu/(3911:3916): En CPU
+[INFO] 00:00:37:336 Cpu/(3911:3916): PID: 0 - Ejecutando SET parametro 1: BX parametro 2: BBBB
+
+[INFO] 00:00:37:337 Cpu/(3911:3916): En CPU
+[INFO] 00:00:38:338 Cpu/(3911:3916): PID: 0 - Ejecutando SET parametro 1: CX parametro 2: CCCC
+
+[INFO] 00:00:38:339 Cpu/(3911:3916): En CPU
+[INFO] 00:00:39:339 Cpu/(3911:3916): PID: 0 - Ejecutando SET parametro 1: DX parametro 2: DDDD
+
+[INFO] 00:00:39:339 Cpu/(3911:3916): En CPU
+[INFO] 00:00:40:339 Cpu/(3911:3916): PID: 0 - Ejecutando SET parametro 1: EAX parametro 2: AAAAAAAA
+
+[INFO] 00:00:40:340 Cpu/(3911:3916): En CPU
+[INFO] 00:00:41:340 Cpu/(3911:3916): PID: 0 - Ejecutando SET parametro 1: EBX parametro 2: BBBBBBBB
+
+[INFO] 00:00:41:341 Cpu/(3911:3916): En CPU
+[INFO] 00:00:42:342 Cpu/(3911:3916): PID: 0 - Ejecutando SET parametro 1: ECX parametro 2: CCCCCCCC
+
+[INFO] 00:00:42:343 Cpu/(3911:3916): En CPU
+[INFO] 00:00:43:343 Cpu/(3911:3916): PID: 0 - Ejecutando SET parametro 1: EDX parametro 2: DDDDDDDD
+
+[INFO] 00:00:43:345 Cpu/(3911:3916): En CPU
+[INFO] 00:00:44:346 Cpu/(3911:3916): PID: 0 - Ejecutando SET parametro 1: RAX parametro 2: AAAAAAAAAAAAAAAA
+
+[INFO] 00:00:44:346 Cpu/(3911:3916): En CPU
+[INFO] 00:00:45:347 Cpu/(3911:3916): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: BBBBBBBBBBBBBBBB
+
+[INFO] 00:00:45:347 Cpu/(3911:3916): En CPU
+[INFO] 00:00:46:348 Cpu/(3911:3916): PID: 0 - Ejecutando SET parametro 1: RCX parametro 2: CCCCCCCCCCCCCCCC
+
+[INFO] 00:00:46:349 Cpu/(3911:3916): En CPU
+[INFO] 00:00:47:350 Cpu/(3911:3916): PID: 0 - Ejecutando SET parametro 1: RDX parametro 2: DDDDDDDDDDDDDDDD
+
+[INFO] 00:00:47:350 Cpu/(3911:3916): PID: 0 - Ejecutando YIELD 
+[INFO] 00:00:47:353 Cpu/(3911:3916): Recibi PCB id: 0
+[INFO] 00:00:47:353 Cpu/(3911:3916): En CPU
+[INFO] 00:00:48:355 Cpu/(3911:3916): PID: 0 - Ejecutando SET parametro 1: RAX parametro 2: TCHOUAMENIAFUERA
+
+[INFO] 00:00:48:356 Cpu/(3911:3916): En CPU
+[INFO] 00:00:49:357 Cpu/(3911:3916): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SEGUNDO_FRANCIA_
+
+[INFO] 00:00:49:358 Cpu/(3911:3916): PID: 0 - Ejecutando EXIT
+[INFO] 00:00:55:470 Cpu/(3911:3916): Se ha finalizado la conexion

@@ -13,6 +13,14 @@
 int fileSystemServer;
 int memoria_fd;
 t_super_bloque* configuracionSuperBloque;
+//BITMAP
+int bitmap;
+size_t bitmapSize;
+
+// FCB
+
+t_FCB* FCB_archivo;
+
 
 int main(void) {
 	// Configuracion gral
@@ -31,19 +39,10 @@ int main(void) {
 	send(memoria_fd,&op,sizeof(op_code),0);
 
 	// Aca deberia ir cargarBitmap de bloque
-	FILE *bitmap;
-	bitmap = fopen("bitmap.dat","r");
 
-	size_t fileSize = configuracionSuperBloque->BLOCK_COUNT * configuracionSuperBloque->BLOCK_SIZE;
+	iniciarBitmap(configuracion->PATH_BITMAP, configuracionSuperBloque->BLOCK_COUNT);
 
-	// void * mmap (void *address, size_t length, int protect, int flags, int filedes, off_t offset)
-	void * fileData = mmap(NULL,fileSize,PROT_READ | PROT_WRITE,MAP_PRIVATE,fileno(bitmap),0);
-
-	if (fileData == MAP_FAILED) {
-	     log_info(logger, "Error al mapear el archivo");
-	     fclose(bitmap);
-	     return 1;
-	}
+	// RECORRER DIRECTORIO DE FCB's
 
 	// Hay que usar mmap, msync, y munmap en ese orden
 
@@ -52,14 +51,10 @@ int main(void) {
 	int FileSystemServer= iniciar_servidor(logger,"FileSystem server",ip,puertoFileSystem);//ACA IP PROPIA
 	while (server_escuchar("FILESYSTEM_SV", FileSystemServer));
 
-
 	limpiarConfiguracion();
 	return 0;
 
 }
-
-
-// No sabia donde ponerlo ajsjas
 // Cargar archivo superbloque
 int configValidaSuperBloque(t_config* superBloque){
 	return (config_has_property(superBloque,"BLOCK_SIZE") && config_has_property(superBloque,"BLOCK_COUNT"));
@@ -114,3 +109,88 @@ int cargarArchivoBloques(char *path){
 		*/
 	return 0;
 }
+
+
+int iniciarBitmap (char* path ,uint32_t block_count ){
+
+	//TODO creo que solo va el de leer, pq nos dicen qu e lo podemos tener creado de antemano
+	//bitmap = open(path, O_RDWR | O_CREAT, 0777); // Paso la ruta absoluta
+	bitmap = open(path, O_RDWR , 0777); // Paso la ruta absoluta
+
+	if(bitmap == -1){
+		log_info(logger, "error al abrir BITMAP"); // Si falla FOPEN muestro error
+		return 1;
+	}
+
+	bitmapSize = block_count / 8; //Calculo el tamanio
+
+	// Aca tenemos 2 opciones, truncar el tamanio del archivo a fileSize o darle un tamanio mucho mayor
+
+	ftruncate(bitmap,bitmapSize); // Podriamos verificar si se trunco con un if
+
+	// void * mmap (void *address, size_t length, int protect, int flags, int filedes, off_t offset)
+	void * fileData = mmap(NULL,bitmapSize,PROT_READ | PROT_WRITE,MAP_PRIVATE, bitmap,0);
+
+	if (fileData == MAP_FAILED) {
+	     log_info(logger, "Error al mapear el archivo");
+	     close(bitmap);
+	     return 1;
+	}
+	// Creo el bitarray
+	bitarray_create_with_mode(fileData,bitmapSize, LSB_FIRST);
+	// Pongo todos los bits en 0
+	memset(fileData, 0, bitmapSize);
+	//Sincronizo los datos en memoria con el archivo bitmap.dat
+	msync(fileData, bitmapSize, MS_SYNC); //Podriamos verificar con un if si se sincronizo
+
+	munmap(fileData, bitmapSize);
+	close(bitmap);
+
+	return 0;
+}
+
+/* CREO QUE ESTA MAL, PORQUE ACA ESTOY LEYENDO UN ARCHIVO, Y REALMENTE DEBERIA INICIAR VACIO
+
+// LEER FCB's
+
+int configuracionValidaFCB(t_config* FCB){
+	return (config_has_property(FCB,"NOMBRE_ARCHIVO")
+			&& config_has_property(FCB,"TAMANIO_ARCHIVO")
+			&& config_has_property(FCB,"PUNTERO_DIRECTO")
+			&& config_has_property(FCB,"PUNTERO_INDIRECTO")
+			);
+}
+
+int datosFCB(char* path){
+	t_config* FCB;
+	FCB_archivo = malloc(sizeof(t_FCB));
+
+	FCB = config_create(path);
+	if(FCB == NULL){
+		FCB = config_create(path);
+	}
+	if(FCB == NULL || !configuracionValidaFCB(FCB)){
+		log_error(logger,"FCB invalido");
+	}
+
+	FCB_archivo->nombre_archivo = config_get_string_value (FCB,"NOMBRE_ARCHIVO");
+	FCB_archivo->tamanio_archivo = config_get_int_value (FCB,"TAMANIO_ARCHIVO");
+	FCB_archivo->puntero_directo = config_get_int_value (FCB, "PUNTERO_DIRECTO");
+	FCB_archivo->puntero_indirecto = config_get_int_value (FCB,"PUNTERO_INDIRECTO");
+
+	log_info(logger,
+			"\nNOMBRE_ARCHIVO: %s \n"
+			"TAMANIO_ARCHIVO: %d"
+			"PUNTERO_DIRECTO: %d"
+			"PUNTERO_INDIRECTO: %d",
+			FCB_archivo->nombre_archivo,
+			FCB_archivo->tamanio_archivo,
+			FCB_archivo->puntero_directo,
+			FCB_archivo->puntero_indirecto
+	);
+
+	return 0;
+}
+*/
+
+

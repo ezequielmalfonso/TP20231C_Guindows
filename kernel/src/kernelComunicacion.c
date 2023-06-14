@@ -95,7 +95,6 @@ static void procesar_conexion(void* void_args) {
 	// destroy lists de segmentos
 	free(mensaje);
 
-
 	// creo un hilo por cada proceso y lo voy metiendo en la cola_new
 
 	pthread_mutex_lock(&mx_cola_new);

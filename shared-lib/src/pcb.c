@@ -11,7 +11,7 @@ PCB_t* pcb_create(){
 	PCB_t* pcb 		 		= malloc(sizeof(PCB_t));
 	pcb->instrucciones  	= list_create();
 	pcb->tabla_de_segmentos	= list_create();
-	//pcb->archivos_abiertos 	= list_create();
+	pcb->archivos_abiertos 	= list_create();
 
 	//TODO ver como iniciar los valores de REG_USO_GRAL_CPU y TABLA_SEGMENTOS
 	return pcb;

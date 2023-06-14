@@ -12,6 +12,8 @@
 #include <stdlib.h>
 #include <commons/log.h>
 #include <commons/config.h>
+#include <commons/bitarray.h>
+#include <fcntl.h>
 
 #include "fileSystemComunicacion.h"
 #include "socket.h"
@@ -22,6 +24,13 @@ typedef struct {
 	uint32_t BLOCK_SIZE;
 	uint32_t BLOCK_COUNT;
 } t_super_bloque;
+
+typedef struct {
+	char* nombre_archivo;
+	uint32_t tamanio_archivo;
+	uint32_t puntero_directo;
+	uint32_t puntero_indirecto;
+} t_FCB;
 
 extern t_super_bloque* configuracionSuperBloque;
 

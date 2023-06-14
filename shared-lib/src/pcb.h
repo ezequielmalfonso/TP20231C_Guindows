@@ -31,9 +31,18 @@ typedef struct {
 	t_list* tabla_de_segmentos;
 	double estimado_proxima_rafaga;
 	int tiempo_llegada_a_ready;
-	//t_list* archivos_abiertos;
+	t_list* archivos_abiertos;
 	int cliente_fd;              // consola cliente cuando hace de cliente de kernel
 }PCB_t;
+
+
+typedef struct{
+	char* nombre_archivo;
+	uint32_t puntero;
+}t_archivoAbierto;
+
+
+
 
 PCB_t* pcb_create();
 
