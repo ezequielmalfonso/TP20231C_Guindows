@@ -10,6 +10,16 @@
 
 #include "fileSystem.h"
 
+typedef struct {
+	char* NOMBRE_ARCHIVO;
+	uint32_t TAMANIO_ARCHIVO;
+	uint32_t PUNTERO_DIRECTO;
+	uint32_t PUNTERO_INDIRECTO;
+} t_fcb;
+
+struct t_fcb *lista;
+
+
 int fileSystemServer;
 int memoria_fd;
 t_super_bloque* configuracionSuperBloque;
@@ -27,7 +37,7 @@ int main(void) {
 	cargarConfiguracion();
 	//log_warning(logger, "PATH: %s",configuracion->PATH_SUPERBLOQUE );
 	cargarSuperBloque(configuracion->PATH_SUPERBLOQUE);
-	cargarArchivoBloques(configuracion->PATH_BLOQUES);
+	cargarArchivoBloques(configuracion->PATH_BLOQUES, configuracionSuperBloque->BLOCK_SIZE, configuracionSuperBloque->BLOCK_COUNT);
 
 	t_config* config_ips = config_create("../ips.conf");
 	char* ip = config_get_string_value(config_ips,"IP_FILESYSTEM");
@@ -88,15 +98,17 @@ int cargarSuperBloque(char *path){
 	return 0;
 }
 
-int cargarArchivoBloques(char *path){
-	log_warning(logger, "Bloque");
-	t_config* bloque;
+// El archivo de bloques no es una config no lo borre pero lo dejo comentado
+
+//int cargarArchivoBloques(char *path){
+	//log_warning(logger, "Bloque");
+	//t_config* bloque;
 	//logger = log_create("superBloque.log", "SuperBLoque", 1, LOG_LEVEL_INFO);
 
-		bloque = config_create(path);
-		if (bloque == NULL) {
-			bloque = config_create(path);
-		}
+		//bloque = config_create(path);
+		//if (bloque == NULL) {
+			//bloque = config_create(path);
+		//}
 
 		//configuracionSuperBloque->BLOCK_SIZE = config_get_int_value(bloque, "BLOCK_SIZE");
 		//configuracionSuperBloque->BLOCK_COUNT = config_get_int_value(bloque, "BLOCK_COUNT");
@@ -107,26 +119,39 @@ int cargarArchivoBloques(char *path){
 			configuracionSuperBloque->BLOCK_SIZE,
 			configuracionSuperBloque->BLOCK_COUNT);
 		*/
+	//return 0;
+//}
+
+
+int fd_ArchivoBloques;
+// Aca falta todavia crear estructura de tipo bloque, y dsp falta relacionar todo, BITMAP, ARCHIVO DE BLOQUES Y FCBS
+
+int cargarArchivoBloques(char *path, int BLOCK_SIZE, int BLOCK_COUNT){
+	if (open(path, O_RDWR) == -1){
+		fd_ArchivoBloques = open(path, O_CREAT | O_RDWR);
+		ftruncate(fd_ArchivoBloques, BLOCK_SIZE * BLOCK_COUNT);
+	}
+	else {
+		log_info(logger,"Archivo de Bloques Cargado");
+	}
 	return 0;
 }
 
 
+
 int iniciarBitmap (char* path ,uint32_t block_count ){
 
+	bitmapSize = block_count / 8; //Calculo el tamanio
 	//TODO creo que solo va el de leer, pq nos dicen qu e lo podemos tener creado de antemano
 	//bitmap = open(path, O_RDWR | O_CREAT, 0777); // Paso la ruta absoluta
 	bitmap = open(path, O_RDWR , 0777); // Paso la ruta absoluta
 
 	if(bitmap == -1){
-		log_info(logger, "error al abrir BITMAP"); // Si falla FOPEN muestro error
-		return 1;
+		log_info(logger, "No existe el BITMAP"); // Si falla FOPEN muestro error
+		bitmap = open(path, O_RDWR | O_CREAT , 0777);
+		// Aca tenemos 2 opciones, truncar el tamanio del archivo a fileSize o darle un tamanio mucho mayor
+		ftruncate(bitmap,bitmapSize); // Podriamos verificar si se trunco con un if
 	}
-
-	bitmapSize = block_count / 8; //Calculo el tamanio
-
-	// Aca tenemos 2 opciones, truncar el tamanio del archivo a fileSize o darle un tamanio mucho mayor
-
-	ftruncate(bitmap,bitmapSize); // Podriamos verificar si se trunco con un if
 
 	// void * mmap (void *address, size_t length, int protect, int flags, int filedes, off_t offset)
 	void * fileData = mmap(NULL,bitmapSize,PROT_READ | PROT_WRITE,MAP_PRIVATE, bitmap,0);
@@ -147,6 +172,12 @@ int iniciarBitmap (char* path ,uint32_t block_count ){
 	close(bitmap);
 
 	return 0;
+}
+
+t_fcb* recorrerDirectorioFCB(char* PATH){
+
+
+	return lista;
 }
 
 /* CREO QUE ESTA MAL, PORQUE ACA ESTOY LEYENDO UN ARCHIVO, Y REALMENTE DEBERIA INICIAR VACIO

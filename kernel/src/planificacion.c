@@ -684,5 +684,18 @@ char* procesosEnReady(t_queue* cola_ready){
 
 }
 
+void esperarRespuestaFS(){
+	op_code mensaje;
+	recv(cliente_socket, &mensaje, sizeof(op_code), 0);
 
+	if(mensaje == F_OPEN_FAIL){
+		send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_CREATE);
+		recv(cliente_socket, &mensaje , sizeof(op_code), 0);
+		if(mensaje == OK){
+			//Por ahora nada
+		}
+	}
+
+
+}
 

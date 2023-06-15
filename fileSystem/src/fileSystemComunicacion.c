@@ -31,6 +31,7 @@ static void procesar_conexion(void* void_args) {
 	 char parametro1[20], parametro2[20], parametro3[20];
 
 	 switch (cop) {
+	 	 int fd_archivo;
 	 	 case DEBUG:
 	 		 log_info(logger, "debug");
 	 		 break;
@@ -38,7 +39,24 @@ static void procesar_conexion(void* void_args) {
 		 case F_OPEN:
 			 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
 			 log_info(logger, "Se recibio F_OPEN con parametros %s, %s y %s", parametro1, parametro2, parametro3);
-			 log_info(logger, "F_OPEN - Crear archivo: %s", parametro1);
+			 if(recorrerFCBs(parametro1) == -1){
+				 send(cliente_socket, sizeof(op_code), F_OPEN_FAIL);
+				 log_info(logger, "El archivo %s no existe", parametro1);
+			 }	else {
+				 send(cliente_socket, sizeof(op_code), F_OPEN_OK);
+				 log_info(logger, "Abrir archivo: %s", parametro1);
+			 }
+
+			 break;
+
+		 case F_CREATE:
+			 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
+			 log_info(logger, "Crear archivo: %s", parametro1);
+			 fd_archivo = open(parametro1, O_CREAT);
+			 fwrite(fd_archivo,"NOMBRE_ARCHIVO: %s", parametro1);
+			 fwrite(fd_archivo,	"TAMANIO_ARCHIVO: %d", 0);
+			 fwrite(fd_archivo, "PUNTERO_DIRECTO: ");
+			 fwrite(fd_archivo, "PUNTERO_INDIRECTO: ");
 			 break;
 
 		 case F_CLOSE:
@@ -112,4 +130,9 @@ int server_escuchar(char* server_name, int server_socket) {
         return 1;
     }
     return 0;
+}
+
+int recorrerFCBs(){
+
+	return 0;
 }

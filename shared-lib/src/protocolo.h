@@ -28,6 +28,7 @@ typedef enum {
 	F_WRITE,
 	F_TRUNCATE,
 	F_SEEK,
+	F_CREATE,
 	CREATE_SEGMENT,
 	IO,
 	WAIT,
@@ -53,7 +54,10 @@ typedef enum {
 	KERNEL,
 	CPU,
 	FS,
-	AX
+	AX,
+	F_OPEN_OK,
+	F_OPEN_FAIL,
+	OK
 	}op_code;
 
 typedef struct {
