@@ -57,7 +57,9 @@ typedef enum {
 	AX,
 	F_OPEN_OK,
 	F_OPEN_FAIL,
-	OK
+	OK,
+	F_CREATE_FAIL,
+	F_CREATE_OK
 	}op_code;
 
 typedef struct {

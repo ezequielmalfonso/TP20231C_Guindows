@@ -31,7 +31,7 @@ static void procesar_conexion(void* void_args) {
 	 char parametro1[20], parametro2[20], parametro3[20];
 
 	 switch (cop) {
-	 	 int fd_archivo;
+	 	 FILE* fd_archivo; // antes era un int y se usaba open, ahora fopen
 	 	 case DEBUG:
 	 		 log_info(logger, "debug");
 	 		 break;
@@ -40,10 +40,10 @@ static void procesar_conexion(void* void_args) {
 			 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
 			 log_info(logger, "Se recibio F_OPEN con parametros %s, %s y %s", parametro1, parametro2, parametro3);
 			 if(recorrerFCBs(parametro1) == -1){
-				 send(cliente_socket, sizeof(op_code), F_OPEN_FAIL);
+				 //send(cliente_socket, sizeof(op_code), F_OPEN_FAIL);
 				 log_info(logger, "El archivo %s no existe", parametro1);
 			 }	else {
-				 send(cliente_socket, sizeof(op_code), F_OPEN_OK);
+				 //send(cliente_socket, sizeof(op_code), F_OPEN_OK);
 				 log_info(logger, "Abrir archivo: %s", parametro1);
 			 }
 
@@ -51,12 +51,48 @@ static void procesar_conexion(void* void_args) {
 
 		 case F_CREATE:
 			 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
+			 char* nombre = strtok(parametro1, "\n");
 			 log_info(logger, "Crear archivo: %s", parametro1);
-			 fd_archivo = open(parametro1, O_CREAT);
+			 //fd_archivo = open(parametro1, O_CREAT);
+			 char* pathArchivo = string_from_format("./FCB/%s.txt", nombre);
+			 if(fileExiste(pathArchivo)) {
+				 log_error(logger, "Ya existe %s", pathArchivo);
+				 cop = F_CREATE_FAIL;
+				 send(cliente_socket, &cop, sizeof(op_code), 0);
+				 break;
+			 }
+			 FILE* fcb_new = fopen(pathArchivo, "w");
+			 if(!fcb_new) {
+				 log_error(logger, "Error inesperado al crear archivo");
+				 break;
+			 }
+
+			 free(pathArchivo);
+			 char* linea = string_from_format("NOMRE_ARCHIVO=%s\n", nombre);
+			 fwrite(linea, sizeof(char), string_length(linea), fcb_new);
+			 free(linea);
+			 linea = string_from_format("TAMANIO_ARCHIVO=%s\n", "0");
+			 fwrite(linea, sizeof(char), string_length(linea), fcb_new);
+			 free(linea);
+			 linea = string_from_format("PUNTERO_DIRECTO=%s\n", "hola");	//TODO: agregar esto al FCB
+			 fwrite(linea, sizeof(char), string_length(linea), fcb_new);
+			 free(linea);
+			 linea = string_from_format("PUNTERO_INDIRECTO=%s", "hola");
+			 fwrite(linea, sizeof(char), string_length(linea), fcb_new);
+			 free(linea);
+			 fclose(fcb_new);
+
+			 log_info(logger, "FCB de %s creado correctamente", nombre);
+			 //free(nombre) no se si va o no
+			 cop = F_CREATE_OK;
+			 send(cliente_socket, &cop, sizeof(op_code), 0);
+
+			 /*kejesto?
 			 fwrite(fd_archivo,"NOMBRE_ARCHIVO: %s", parametro1);
 			 fwrite(fd_archivo,	"TAMANIO_ARCHIVO: %d", 0);
 			 fwrite(fd_archivo, "PUNTERO_DIRECTO: ");
 			 fwrite(fd_archivo, "PUNTERO_INDIRECTO: ");
+			 */
 			 break;
 
 		 case F_CLOSE:

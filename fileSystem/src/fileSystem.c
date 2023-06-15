@@ -224,4 +224,13 @@ int datosFCB(char* path){
 }
 */
 
+int fileExiste(char* nombreArchivo) {
+	FILE* archivo;
+	if((archivo = fopen(nombreArchivo, "r"))) {
+		fclose(archivo);
+		return 1;
+	}
+	return 0;
+}
+
 

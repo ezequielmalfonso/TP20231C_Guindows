@@ -138,6 +138,10 @@ int execute(INSTRUCCION* instruccion_ejecutar,char* registros,uint16_t pid, uint
 			log_info(logger,"PID: %d - Listo para ejecutar F_CLOSE ", pid);
 			return F_CLOSE;
 
+		}else if(!strcmp(instruccion_ejecutar->comando,"F_CREATE") ){
+			log_info(logger,"PID: %d - Listo para ejecutar F_CREATE", pid);
+			return F_CREATE;
+
 		}else if(!strcmp(instruccion_ejecutar->comando,"EXIT") ){
 			log_info(logger,"PID: %d - Ejecutando EXIT", pid);
 			//limpiar_tlb();

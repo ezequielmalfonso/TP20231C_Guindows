@@ -552,6 +552,7 @@ void esperar_cpu(){
 				sem_post(&s_cpu_desocupado);
 				sem_post(&s_esperar_cpu);
 				break;
+
 			case F_WRITE:
 				log_info(logger, "PID: %d - Recibo pedido de F_WRITE por: %s", pcb->pid, instruccion->parametro1);
 
@@ -563,6 +564,29 @@ void esperar_cpu(){
 
 				sem_post(&s_cpu_desocupado);
 				sem_post(&s_esperar_cpu);
+				break;
+
+			case F_CREATE:
+				log_info(logger, "PID: %d - Recibo pedido de F_CREATE por: %s", pcb->pid, instruccion->parametro1);
+
+				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_CREATE);
+				op_code mensaje;
+				recv(file_system_fd, &mensaje , sizeof(op_code), 0);
+
+				pthread_mutex_lock(&mx_cola_ready);
+				send_proceso(cpu_fd, pcb,DISPATCH);
+				pthread_mutex_unlock(&mx_cola_ready);
+
+				if(mensaje == F_CREATE_FAIL) {
+					log_error(logger, "PID: %d - Recibo pedido de F_CREATE por archivo existente: %s", pcb->pid, instruccion->parametro1);
+					cop = EXIT;
+					send(pcb->cliente_fd,&cop,sizeof(op_code),0);
+					motivoExit = "F_CREATE por archivo existente"; // ?
+					execute_a_exit(pcb, motivoExit);
+				}
+				sem_post(&s_cpu_desocupado);
+				sem_post(&s_esperar_cpu);
+
 				break;
 			default:
 				log_error(logger, "AAAlgo anduvo mal en el server del kernel\n Cop: %d",cop);
@@ -689,7 +713,7 @@ void esperarRespuestaFS(){
 	recv(cliente_socket, &mensaje, sizeof(op_code), 0);
 
 	if(mensaje == F_OPEN_FAIL){
-		send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_CREATE);
+		//send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_CREATE);
 		recv(cliente_socket, &mensaje , sizeof(op_code), 0);
 		if(mensaje == OK){
 			//Por ahora nada

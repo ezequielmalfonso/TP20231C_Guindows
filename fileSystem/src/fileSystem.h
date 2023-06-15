@@ -34,6 +34,8 @@ typedef struct {
 
 extern t_super_bloque* configuracionSuperBloque;
 
+int fileExiste(char* nombreArchivo);
+
 extern int fileSystemServer;
 
 #endif /* FILESYSTEM_H_ */
