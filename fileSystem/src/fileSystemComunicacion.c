@@ -36,14 +36,32 @@ static void procesar_conexion(void* void_args) {
 	 		 log_info(logger, "debug");
 	 		 break;
 
+	 	 case F_EXISTS:
+	 		 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
+			 log_info(logger, "Se recibio F_EXISTS con parametros %s, %s y %s", parametro1, parametro2, parametro3);
+
+			 if(recorrerFCBs(configuracion->PATH_FCB,strtok(parametro1, "\n")) == -1){
+				 cop=0;
+				 send(cliente_socket, &cop, sizeof(op_code), 0);
+
+			 }else {
+				 cop=1;
+				 send(cliente_socket, &cop, sizeof(op_code), 0);
+
+			 }
+
+	 		  break;
 		 case F_OPEN:
 			 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
 			 log_info(logger, "Se recibio F_OPEN con parametros %s, %s y %s", parametro1, parametro2, parametro3);
-			 if(recorrerFCBs(parametro1) == -1){
-				 //send(cliente_socket, sizeof(op_code), F_OPEN_FAIL);
+
+			 if(recorrerFCBs(configuracion->PATH_FCB,strtok(parametro1, "\n")) == -1){
+				 cop=F_OPEN_FAIL;
+				 send(cliente_socket,&cop, sizeof(op_code), 0);
 				 log_info(logger, "El archivo %s no existe", parametro1);
 			 }	else {
-				 //send(cliente_socket, sizeof(op_code), F_OPEN_OK);
+				 cop=F_OPEN_OK;
+				 send(cliente_socket,&cop, sizeof(op_code), 0);
 				 log_info(logger, "Abrir archivo: %s", parametro1);
 			 }
 
@@ -54,7 +72,7 @@ static void procesar_conexion(void* void_args) {
 			 char* nombre = strtok(parametro1, "\n");
 			 log_info(logger, "Crear archivo: %s", parametro1);
 			 //fd_archivo = open(parametro1, O_CREAT);
-			 char* pathArchivo = string_from_format("./FCB/%s.txt", nombre);
+			 char* pathArchivo = string_from_format("/home/utnso/tp-2023-1c-Guindows/fs/fcb/%s.txt", nombre);
 			 if(fileExiste(pathArchivo)) {
 				 log_error(logger, "Ya existe %s", pathArchivo);
 				 cop = F_CREATE_FAIL;
@@ -168,7 +186,22 @@ int server_escuchar(char* server_name, int server_socket) {
     return 0;
 }
 
-int recorrerFCBs(){
+int recorrerFCBs(char* PATH, char* nombre_Archivo){
+	DIR *directorioFCB = opendir(PATH);
+log_warning(logger, "RUta: %s - Nombre: %s", PATH, nombre_Archivo);
+	if(directorioFCB == NULL){
+		log_info(logger, "Directorio Erroneo");
+		return -2;
+	}
+	struct dirent *lectura;
+	log_warning(logger, "EXISTEEEEEE!!!!!!???? %s - %s", lectura->d_name , nombre_Archivo);
+	while ((lectura = readdir(directorioFCB)) != NULL){
+		log_error(logger, "EXISTEEEEEE!!!!!!???? %s - %s", lectura->d_name , nombre_Archivo);
+		if(lectura->d_name == nombre_Archivo){
+			log_warning(logger, "EXISTEEEEEE!!!!!!???? %s - %s", lectura->d_name , nombre_Archivo);
+			return 0;
+		}
+	}
 
-	return 0;
+	return -1;
 }

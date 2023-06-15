@@ -11831,3 +11831,732 @@ BLOCK_COUNT: 65536
 [INFO] 07:38:30:243 FileSystem/(39807:39812): Crear archivo: JOHN
 [ERROR] 07:38:30:243 FileSystem/(39807:39812): Ya existe ./FCB/JOHN.txt
 [INFO] 07:54:59:491 FileSystem/(39807:39812): Se ha finalizado la conexion
+[INFO] 19:45:11:680 FileSystem/(10175:10175): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 19:45:11:681 FileSystem/(10175:10175): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 19:45:11:682 FileSystem/(10175:10175): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 19:45:11:682 FileSystem/(10175:10175): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 19:45:11:682 FileSystem/(10175:10175): Archivo de Bloques Cargado
+[INFO] 19:45:11:683 FileSystem/(10175:10175): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 19:45:11:683 FileSystem/(10175:10175): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 19:45:46:213 FileSystem/(10175:10175): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 19:46:27:918 FileSystem/(10175:10181): Crear archivo: JOHN
+[ERROR] 19:46:27:918 FileSystem/(10175:10181): Ya existe ./FCB/JOHN.txt
+[INFO] 19:51:27:047 FileSystem/(10175:10181): Crear archivo: JOHN
+[ERROR] 19:51:27:047 FileSystem/(10175:10181): Ya existe ./FCB/JOHN.txt
+[INFO] 19:52:43:375 FileSystem/(10175:10181): Se ha finalizado la conexion
+[INFO] 19:53:00:155 FileSystem/(10261:10261): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 19:53:00:156 FileSystem/(10261:10261): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 19:53:00:156 FileSystem/(10261:10261): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 19:53:00:156 FileSystem/(10261:10261): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 19:53:00:157 FileSystem/(10261:10261): Archivo de Bloques Cargado
+[INFO] 19:53:00:157 FileSystem/(10261:10261): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 19:53:00:158 FileSystem/(10261:10261): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 19:53:01:807 FileSystem/(10261:10261): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 19:55:11:841 FileSystem/(10261:10266): Se ha finalizado la conexion
+[INFO] 19:55:21:050 FileSystem/(10284:10284): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 19:55:21:051 FileSystem/(10284:10284): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 19:55:21:052 FileSystem/(10284:10284): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 19:55:21:052 FileSystem/(10284:10284): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 19:55:21:052 FileSystem/(10284:10284): Archivo de Bloques Cargado
+[INFO] 19:55:21:053 FileSystem/(10284:10284): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 19:55:21:054 FileSystem/(10284:10284): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 19:55:29:159 FileSystem/(10284:10284): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 19:59:44:123 FileSystem/(10284:10289): Se ha finalizado la conexion
+[INFO] 19:59:53:275 FileSystem/(10449:10449): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 19:59:53:277 FileSystem/(10449:10449): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 19:59:53:277 FileSystem/(10449:10449): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 19:59:53:277 FileSystem/(10449:10449): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 19:59:53:277 FileSystem/(10449:10449): Archivo de Bloques Cargado
+[INFO] 19:59:53:278 FileSystem/(10449:10449): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 19:59:53:279 FileSystem/(10449:10449): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 19:59:56:206 FileSystem/(10449:10449): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 20:00:10:384 FileSystem/(10449:10455): Crear archivo: JOHN
+[ERROR] 20:00:10:384 FileSystem/(10449:10455): Ya existe ./FCB/JOHN.txt
+[INFO] 22:11:18:045 FileSystem/(10449:10455): Se ha finalizado la conexion
+[INFO] 22:11:36:502 FileSystem/(14594:14594): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 22:11:36:504 FileSystem/(14594:14594): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 22:11:36:504 FileSystem/(14594:14594): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 22:11:36:504 FileSystem/(14594:14594): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 22:11:36:505 FileSystem/(14594:14594): Archivo de Bloques Cargado
+[INFO] 22:11:36:505 FileSystem/(14594:14594): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:11:36:506 FileSystem/(14594:14594): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 22:11:38:244 FileSystem/(14594:14594): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 22:12:57:502 FileSystem/(14594:14599): Se ha finalizado la conexion
+[INFO] 22:13:26:679 FileSystem/(14638:14638): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 22:13:26:687 FileSystem/(14638:14638): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 22:13:26:688 FileSystem/(14638:14638): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 22:13:26:690 FileSystem/(14638:14638): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 22:13:26:690 FileSystem/(14638:14638): Archivo de Bloques Cargado
+[INFO] 22:13:26:691 FileSystem/(14638:14638): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:13:26:691 FileSystem/(14638:14638): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 22:14:06:771 FileSystem/(14638:14638): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 22:14:06:802 FileSystem/(14638:14699): Se ha finalizado la conexion
+[INFO] 22:14:44:511 FileSystem/(14758:14758): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 22:14:44:519 FileSystem/(14758:14758): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 22:14:44:519 FileSystem/(14758:14758): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 22:14:44:519 FileSystem/(14758:14758): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 22:14:44:520 FileSystem/(14758:14758): Archivo de Bloques Cargado
+[INFO] 22:14:44:522 FileSystem/(14758:14758): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:14:44:522 FileSystem/(14758:14758): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 22:14:48:663 FileSystem/(14758:14758): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 22:15:16:567 FileSystem/(14758:14762): Se ha finalizado la conexion
+[INFO] 22:18:24:624 FileSystem/(15012:15012): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 22:18:24:630 FileSystem/(15012:15012): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 22:18:24:632 FileSystem/(15012:15012): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 22:18:24:632 FileSystem/(15012:15012): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 22:18:24:632 FileSystem/(15012:15012): Archivo de Bloques Cargado
+[INFO] 22:18:24:635 FileSystem/(15012:15012): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:18:24:635 FileSystem/(15012:15012): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 22:18:39:105 FileSystem/(15012:15012): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 22:18:55:088 FileSystem/(15012:15055): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[INFO] 22:18:58:426 FileSystem/(15012:15055): Crear archivo: JOHN
+[INFO] 22:18:58:433 FileSystem/(15012:15055): FCB de JOHN creado correctamente
+[INFO] 22:19:43:901 FileSystem/(15012:15055): Se ha finalizado la conexion
+[INFO] 22:27:34:961 FileSystem/(15220:15220): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 22:27:34:963 FileSystem/(15220:15220): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 22:27:34:963 FileSystem/(15220:15220): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 22:27:34:964 FileSystem/(15220:15220): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 22:27:34:964 FileSystem/(15220:15220): Archivo de Bloques Cargado
+[INFO] 22:27:34:964 FileSystem/(15220:15220): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:27:34:965 FileSystem/(15220:15220): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 22:27:35:741 FileSystem/(15220:15220): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 22:27:37:205 FileSystem/(15220:15225): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[INFO] 22:27:37:205 FileSystem/(15220:15225): Crear archivo: JOHN
+[INFO] 22:27:37:205 FileSystem/(15220:15225): FCB de JOHN creado correctamente
+[INFO] 22:46:06:212 FileSystem/(15220:15225): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[INFO] 22:46:06:212 FileSystem/(15220:15225): Se recibio F_OPEN con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[INFO] 22:46:06:212 FileSystem/(15220:15225): El archivo JOHN no existe
+[INFO] 22:51:40:445 FileSystem/(15220:15225): Se ha finalizado la conexion
+[INFO] 22:51:54:582 FileSystem/(15717:15717): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 22:51:54:583 FileSystem/(15717:15717): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 22:51:54:583 FileSystem/(15717:15717): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 22:51:54:583 FileSystem/(15717:15717): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 22:51:54:583 FileSystem/(15717:15717): Archivo de Bloques Cargado
+[INFO] 22:51:54:584 FileSystem/(15717:15717): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:51:54:584 FileSystem/(15717:15717): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 22:51:55:481 FileSystem/(15717:15717): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 22:51:57:844 FileSystem/(15717:15722): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[INFO] 22:51:57:844 FileSystem/(15717:15722): Crear archivo: JOHN
+[ERROR] 22:51:57:844 FileSystem/(15717:15722): Ya existe ./FCB/JOHN.txt
+[INFO] 22:56:41:517 FileSystem/(15717:15722): Se ha finalizado la conexion
+[INFO] 22:57:11:024 FileSystem/(15969:15969): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 22:57:11:026 FileSystem/(15969:15969): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 22:57:11:026 FileSystem/(15969:15969): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 22:57:11:026 FileSystem/(15969:15969): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 22:57:11:026 FileSystem/(15969:15969): Archivo de Bloques Cargado
+[INFO] 22:57:11:027 FileSystem/(15969:15969): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:57:11:028 FileSystem/(15969:15969): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 22:57:26:028 FileSystem/(15969:15969): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 22:57:39:546 FileSystem/(15969:15975): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[INFO] 22:57:39:547 FileSystem/(15969:15975): Crear archivo: JOHN
+[ERROR] 22:57:39:547 FileSystem/(15969:15975): Ya existe ./FCB/JOHN.txt
+[INFO] 22:59:23:580 FileSystem/(15969:15975): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[INFO] 22:59:23:580 FileSystem/(15969:15975): Se recibio F_OPEN con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[INFO] 22:59:23:580 FileSystem/(15969:15975): El archivo JOHN no existe
+[INFO] 23:00:47:863 FileSystem/(15969:15975): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[INFO] 23:00:47:863 FileSystem/(15969:15975): Se recibio F_OPEN con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[INFO] 23:00:47:863 FileSystem/(15969:15975): El archivo JOHN no existe
+[INFO] 23:04:04:441 FileSystem/(15969:15975): Se ha finalizado la conexion
+[INFO] 23:04:45:504 FileSystem/(16054:16054): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 23:04:45:506 FileSystem/(16054:16054): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 23:04:45:507 FileSystem/(16054:16054): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 23:04:45:507 FileSystem/(16054:16054): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 23:04:45:507 FileSystem/(16054:16054): Archivo de Bloques Cargado
+[INFO] 23:04:45:508 FileSystem/(16054:16054): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:04:45:508 FileSystem/(16054:16054): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 23:04:49:646 FileSystem/(16054:16054): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 23:04:49:647 FileSystem/(16054:16060): Se ha finalizado la conexion
+[INFO] 23:06:00:569 FileSystem/(16086:16086): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 23:06:00:570 FileSystem/(16086:16086): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 23:06:00:571 FileSystem/(16086:16086): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 23:06:00:571 FileSystem/(16086:16086): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 23:06:00:572 FileSystem/(16086:16086): Archivo de Bloques Cargado
+[INFO] 23:06:00:572 FileSystem/(16086:16086): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:06:00:573 FileSystem/(16086:16086): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 23:06:01:439 FileSystem/(16086:16086): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 23:06:05:205 FileSystem/(16086:16091): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[INFO] 23:06:05:205 FileSystem/(16086:16091): Crear archivo: JOHN
+[INFO] 23:06:05:205 FileSystem/(16086:16091): FCB de JOHN creado correctamente
+[INFO] 23:06:16:783 FileSystem/(16086:16091): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[INFO] 23:06:16:783 FileSystem/(16086:16091): Se recibio F_OPEN con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[INFO] 23:06:16:783 FileSystem/(16086:16091): El archivo JOHN no existe
+[INFO] 23:11:42:529 FileSystem/(16335:16335): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 23:11:42:530 FileSystem/(16335:16335): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 23:11:42:531 FileSystem/(16335:16335): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 23:11:42:531 FileSystem/(16335:16335): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 23:11:42:531 FileSystem/(16335:16335): Archivo de Bloques Cargado
+[INFO] 23:11:42:532 FileSystem/(16335:16335): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:11:42:532 FileSystem/(16335:16335): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 23:11:45:631 FileSystem/(16335:16335): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 23:11:47:318 FileSystem/(16335:16341): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[INFO] 23:11:47:318 FileSystem/(16335:16341): Crear archivo: JOHN
+[INFO] 23:11:47:318 FileSystem/(16335:16341): FCB de JOHN creado correctamente
+[INFO] 23:17:40:584 FileSystem/(16335:16341): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[INFO] 23:17:40:584 FileSystem/(16335:16341): Se recibio F_OPEN con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[INFO] 23:17:40:584 FileSystem/(16335:16341): El archivo JOHN no existe
+[INFO] 23:22:24:235 FileSystem/(16335:16341): Se ha finalizado la conexion
+[INFO] 23:22:36:163 FileSystem/(16598:16598): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 23:22:36:164 FileSystem/(16598:16598): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 23:22:36:164 FileSystem/(16598:16598): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 23:22:36:164 FileSystem/(16598:16598): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 23:22:36:164 FileSystem/(16598:16598): Archivo de Bloques Cargado
+[INFO] 23:22:36:165 FileSystem/(16598:16598): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:22:36:165 FileSystem/(16598:16598): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 23:22:37:272 FileSystem/(16598:16598): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 23:22:39:359 FileSystem/(16598:16603): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[INFO] 23:22:39:359 FileSystem/(16598:16603): Crear archivo: JOHN
+[INFO] 23:22:39:359 FileSystem/(16598:16603): FCB de JOHN creado correctamente
+[INFO] 23:23:02:755 FileSystem/(16598:16603): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[INFO] 23:23:02:755 FileSystem/(16598:16603): Se recibio F_OPEN con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[INFO] 23:23:02:755 FileSystem/(16598:16603): El archivo JOHN no existe
+[INFO] 23:25:50:434 FileSystem/(16598:16603): Se ha finalizado la conexion
+[INFO] 23:25:54:939 FileSystem/(16808:16808): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 23:25:54:942 FileSystem/(16808:16808): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 23:25:54:943 FileSystem/(16808:16808): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 23:25:54:943 FileSystem/(16808:16808): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 23:25:54:943 FileSystem/(16808:16808): Archivo de Bloques Cargado
+[INFO] 23:25:54:944 FileSystem/(16808:16808): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:25:54:944 FileSystem/(16808:16808): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 23:25:56:072 FileSystem/(16808:16808): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 23:25:57:624 FileSystem/(16808:16813): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[WARNING] 23:25:57:624 FileSystem/(16808:16813): RUta: /home/utnso/tp-2023-1c-Guindows/fs/fcb - Nombre: JOHN
+[INFO] 23:25:57:624 FileSystem/(16808:16813): Crear archivo: JOHN
+[ERROR] 23:25:57:624 FileSystem/(16808:16813): Ya existe /home/utnso/tp-2023-1c-Guindows/fs/fcb/JOHN.txt
+[INFO] 23:26:33:339 FileSystem/(16808:16813): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[WARNING] 23:26:33:339 FileSystem/(16808:16813): RUta: /home/utnso/tp-2023-1c-Guindows/fs/fcb - Nombre: JOHN
+[INFO] 23:26:33:339 FileSystem/(16808:16813): Se recibio F_OPEN con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[WARNING] 23:26:33:339 FileSystem/(16808:16813): RUta: /home/utnso/tp-2023-1c-Guindows/fs/fcb - Nombre: JOHN
+[INFO] 23:26:33:340 FileSystem/(16808:16813): El archivo JOHN no existe
+[INFO] 23:27:14:659 FileSystem/(16808:16813): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[WARNING] 23:27:14:660 FileSystem/(16808:16813): RUta: /home/utnso/tp-2023-1c-Guindows/fs/fcb - Nombre: JOHN
+[INFO] 23:27:14:660 FileSystem/(16808:16813): Se recibio F_OPEN con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[WARNING] 23:27:14:660 FileSystem/(16808:16813): RUta: /home/utnso/tp-2023-1c-Guindows/fs/fcb - Nombre: JOHN
+[INFO] 23:27:14:660 FileSystem/(16808:16813): El archivo JOHN no existe
+[INFO] 23:27:23:787 FileSystem/(16808:16813): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[WARNING] 23:27:23:787 FileSystem/(16808:16813): RUta: /home/utnso/tp-2023-1c-Guindows/fs/fcb - Nombre: JOHN
+[INFO] 23:27:23:787 FileSystem/(16808:16813): Se recibio F_OPEN con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[WARNING] 23:27:23:787 FileSystem/(16808:16813): RUta: /home/utnso/tp-2023-1c-Guindows/fs/fcb - Nombre: JOHN
+[INFO] 23:27:23:787 FileSystem/(16808:16813): El archivo JOHN no existe
+[INFO] 23:27:36:397 FileSystem/(16808:16813): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[WARNING] 23:27:36:397 FileSystem/(16808:16813): RUta: /home/utnso/tp-2023-1c-Guindows/fs/fcb - Nombre: JOHN
+[INFO] 23:27:36:397 FileSystem/(16808:16813): Se recibio F_OPEN con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[WARNING] 23:27:36:397 FileSystem/(16808:16813): RUta: /home/utnso/tp-2023-1c-Guindows/fs/fcb - Nombre: JOHN
+[INFO] 23:27:36:398 FileSystem/(16808:16813): El archivo JOHN no existe
+[INFO] 23:27:39:671 FileSystem/(16808:16813): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[WARNING] 23:27:39:672 FileSystem/(16808:16813): RUta: /home/utnso/tp-2023-1c-Guindows/fs/fcb - Nombre: JOHN
+[INFO] 23:27:39:672 FileSystem/(16808:16813): Se recibio F_OPEN con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[WARNING] 23:27:39:672 FileSystem/(16808:16813): RUta: /home/utnso/tp-2023-1c-Guindows/fs/fcb - Nombre: JOHN
+[INFO] 23:27:39:672 FileSystem/(16808:16813): El archivo JOHN no existe
+[INFO] 23:28:01:426 FileSystem/(16808:16813): Se ha finalizado la conexion
+[INFO] 23:28:05:947 FileSystem/(16842:16842): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb/
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 23:28:05:949 FileSystem/(16842:16842): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 23:28:05:949 FileSystem/(16842:16842): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 23:28:05:950 FileSystem/(16842:16842): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 23:28:05:950 FileSystem/(16842:16842): Archivo de Bloques Cargado
+[INFO] 23:28:05:950 FileSystem/(16842:16842): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:28:05:951 FileSystem/(16842:16842): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 23:28:06:672 FileSystem/(16842:16842): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 23:28:07:687 FileSystem/(16842:16847): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[WARNING] 23:28:07:687 FileSystem/(16842:16847): RUta: /home/utnso/tp-2023-1c-Guindows/fs/fcb/ - Nombre: JOHN
+[INFO] 23:28:07:688 FileSystem/(16842:16847): Crear archivo: JOHN
+[ERROR] 23:28:07:688 FileSystem/(16842:16847): Ya existe /home/utnso/tp-2023-1c-Guindows/fs/fcb/JOHN.txt
+[INFO] 23:28:16:123 FileSystem/(16842:16847): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[WARNING] 23:28:16:123 FileSystem/(16842:16847): RUta: /home/utnso/tp-2023-1c-Guindows/fs/fcb/ - Nombre: JOHN
+[INFO] 23:28:16:123 FileSystem/(16842:16847): Se recibio F_OPEN con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[WARNING] 23:28:16:124 FileSystem/(16842:16847): RUta: /home/utnso/tp-2023-1c-Guindows/fs/fcb/ - Nombre: JOHN
+[INFO] 23:28:16:124 FileSystem/(16842:16847): El archivo JOHN no existe
+[INFO] 23:29:02:324 FileSystem/(16842:16847): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[WARNING] 23:29:02:324 FileSystem/(16842:16847): RUta: /home/utnso/tp-2023-1c-Guindows/fs/fcb/ - Nombre: JOHN
+[INFO] 23:29:02:324 FileSystem/(16842:16847): Se recibio F_OPEN con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[WARNING] 23:29:02:325 FileSystem/(16842:16847): RUta: /home/utnso/tp-2023-1c-Guindows/fs/fcb/ - Nombre: JOHN
+[INFO] 23:29:02:325 FileSystem/(16842:16847): El archivo JOHN no existe
+[INFO] 23:29:12:867 FileSystem/(16842:16847): Se ha finalizado la conexion
+[INFO] 23:32:38:854 FileSystem/(16991:16991): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb/
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 23:32:38:855 FileSystem/(16991:16991): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 23:32:38:855 FileSystem/(16991:16991): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 23:32:38:855 FileSystem/(16991:16991): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 23:32:38:856 FileSystem/(16991:16991): Archivo de Bloques Cargado
+[INFO] 23:32:38:856 FileSystem/(16991:16991): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:32:38:857 FileSystem/(16991:16991): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 23:32:39:872 FileSystem/(16991:16991): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 23:32:41:658 FileSystem/(16991:16996): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[WARNING] 23:32:41:658 FileSystem/(16991:16996): RUta: /home/utnso/tp-2023-1c-Guindows/fs/fcb/ - Nombre: JOHN
+[INFO] 23:32:41:658 FileSystem/(16991:16996): Crear archivo: JOHN
+[ERROR] 23:32:41:658 FileSystem/(16991:16996): Ya existe /home/utnso/tp-2023-1c-Guindows/fs/fcb/JOHN.txt
+[INFO] 23:33:08:476 FileSystem/(16991:16996): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[WARNING] 23:33:08:476 FileSystem/(16991:16996): RUta: /home/utnso/tp-2023-1c-Guindows/fs/fcb/ - Nombre: JOHN
+[INFO] 23:33:08:476 FileSystem/(16991:16996): Se recibio F_OPEN con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[WARNING] 23:33:08:476 FileSystem/(16991:16996): RUta: /home/utnso/tp-2023-1c-Guindows/fs/fcb/ - Nombre: JOHN
+[INFO] 23:33:08:476 FileSystem/(16991:16996): El archivo JOHN no existe
+[INFO] 23:33:45:659 FileSystem/(16991:16996): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[WARNING] 23:33:45:659 FileSystem/(16991:16996): RUta: /home/utnso/tp-2023-1c-Guindows/fs/fcb/ - Nombre: JOHN
+[INFO] 23:33:45:659 FileSystem/(16991:16996): Se recibio F_OPEN con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[WARNING] 23:33:45:659 FileSystem/(16991:16996): RUta: /home/utnso/tp-2023-1c-Guindows/fs/fcb/ - Nombre: JOHN
+[INFO] 23:33:45:659 FileSystem/(16991:16996): El archivo JOHN no existe
+[INFO] 23:33:51:396 FileSystem/(16991:16996): Se ha finalizado la conexion
+[INFO] 23:33:56:348 FileSystem/(17014:17014): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 23:33:56:349 FileSystem/(17014:17014): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 23:33:56:350 FileSystem/(17014:17014): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 23:33:56:350 FileSystem/(17014:17014): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 23:33:56:350 FileSystem/(17014:17014): Archivo de Bloques Cargado
+[INFO] 23:33:56:351 FileSystem/(17014:17014): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:33:56:351 FileSystem/(17014:17014): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 23:33:57:313 FileSystem/(17014:17014): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 23:33:58:954 FileSystem/(17014:17019): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[WARNING] 23:33:58:954 FileSystem/(17014:17019): RUta: /home/utnso/tp-2023-1c-Guindows/fs/fcb - Nombre: JOHN
+[INFO] 23:33:58:955 FileSystem/(17014:17019): Crear archivo: JOHN
+[ERROR] 23:33:58:955 FileSystem/(17014:17019): Ya existe /home/utnso/tp-2023-1c-Guindows/fs/fcb/JOHN.txt
+[INFO] 23:34:05:212 FileSystem/(17014:17019): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[WARNING] 23:34:05:212 FileSystem/(17014:17019): RUta: /home/utnso/tp-2023-1c-Guindows/fs/fcb - Nombre: JOHN
+[INFO] 23:34:05:212 FileSystem/(17014:17019): Se recibio F_OPEN con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[WARNING] 23:34:05:212 FileSystem/(17014:17019): RUta: /home/utnso/tp-2023-1c-Guindows/fs/fcb - Nombre: JOHN
+[INFO] 23:34:05:212 FileSystem/(17014:17019): El archivo JOHN no existe
+[INFO] 23:35:31:243 FileSystem/(17014:17019): Se ha finalizado la conexion
+[INFO] 23:35:35:222 FileSystem/(17221:17221): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 23:35:35:224 FileSystem/(17221:17221): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 23:35:35:224 FileSystem/(17221:17221): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 23:35:35:225 FileSystem/(17221:17221): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 23:35:35:226 FileSystem/(17221:17221): Archivo de Bloques Cargado
+[INFO] 23:35:35:227 FileSystem/(17221:17221): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:35:35:228 FileSystem/(17221:17221): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 23:35:36:192 FileSystem/(17221:17221): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 23:35:38:402 FileSystem/(17221:17226): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[WARNING] 23:35:38:402 FileSystem/(17221:17226): RUta: /home/utnso/tp-2023-1c-Guindows/fs/fcb - Nombre: JOHN
+[WARNING] 23:35:38:402 FileSystem/(17221:17226): EXISTEEEEEE!!!!!!???? вя - JOHN
+[ERROR] 23:35:38:402 FileSystem/(17221:17226): EXISTEEEEEE!!!!!!???? JOHN.txt - JOHN
+[ERROR] 23:35:38:402 FileSystem/(17221:17226): EXISTEEEEEE!!!!!!???? . - JOHN
+[ERROR] 23:35:38:402 FileSystem/(17221:17226): EXISTEEEEEE!!!!!!???? .. - JOHN
+[INFO] 23:35:38:403 FileSystem/(17221:17226): Crear archivo: JOHN
+[ERROR] 23:35:38:403 FileSystem/(17221:17226): Ya existe /home/utnso/tp-2023-1c-Guindows/fs/fcb/JOHN.txt
+[INFO] 23:36:20:916 FileSystem/(17221:17226): Se recibio F_EXISTS con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[WARNING] 23:36:20:916 FileSystem/(17221:17226): RUta: /home/utnso/tp-2023-1c-Guindows/fs/fcb - Nombre: JOHN
+[WARNING] 23:36:20:916 FileSystem/(17221:17226): EXISTEEEEEE!!!!!!???? вя - JOHN
+[ERROR] 23:36:20:916 FileSystem/(17221:17226): EXISTEEEEEE!!!!!!???? JOHN.txt - JOHN
+[ERROR] 23:36:20:916 FileSystem/(17221:17226): EXISTEEEEEE!!!!!!???? . - JOHN
+[ERROR] 23:36:20:916 FileSystem/(17221:17226): EXISTEEEEEE!!!!!!???? .. - JOHN
+[INFO] 23:36:20:917 FileSystem/(17221:17226): Se recibio F_OPEN con parametros JOHN
+, ): 
+IP_KERNEL: 127.0 y .0.1
+PUERTO_KERNEL: 
+[WARNING] 23:36:20:917 FileSystem/(17221:17226): RUta: /home/utnso/tp-2023-1c-Guindows/fs/fcb - Nombre: JOHN
+[WARNING] 23:36:20:917 FileSystem/(17221:17226): EXISTEEEEEE!!!!!!???? вя - JOHN
+[ERROR] 23:36:20:917 FileSystem/(17221:17226): EXISTEEEEEE!!!!!!???? JOHN.txt - JOHN
+[ERROR] 23:36:20:917 FileSystem/(17221:17226): EXISTEEEEEE!!!!!!???? . - JOHN
+[ERROR] 23:36:20:917 FileSystem/(17221:17226): EXISTEEEEEE!!!!!!???? .. - JOHN
+[INFO] 23:36:20:917 FileSystem/(17221:17226): El archivo JOHN no existe
+[INFO] 23:36:33:822 FileSystem/(17221:17226): Se ha finalizado la conexion

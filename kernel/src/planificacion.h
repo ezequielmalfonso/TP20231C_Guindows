@@ -28,6 +28,11 @@ typedef struct {
     int64_t tiempo_out_exec;
 }t_tiempos_rafaga_anterior;
 
+typedef struct{
+	char* nombre;
+	t_queue* c_proc_bloqueados;
+}t_archivo_abierto;
+
 extern pthread_mutex_t mx_cola_new;
 extern pthread_mutex_t mx_cola_ready;
 extern pthread_mutex_t mx_lista_block;
@@ -43,6 +48,7 @@ extern t_queue* cola_ready_sec;
 extern t_list* list_blocked;
 extern t_tiempos_rafaga_anterior raf_anterior;
 extern t_list* list_rafa_anterior;
+extern t_list* tabla_global_archivos;
 //t_dictionary* iteracion_blocked; no se que chota es
 
 void esperar_cpu();

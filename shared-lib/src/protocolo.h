@@ -59,7 +59,8 @@ typedef enum {
 	F_OPEN_FAIL,
 	OK,
 	F_CREATE_FAIL,
-	F_CREATE_OK
+	F_CREATE_OK,
+	F_EXISTS
 	}op_code;
 
 typedef struct {

@@ -20,6 +20,7 @@
 #include "fileSystemConfig.h"
 #include "fileSystem.h"
 #include <semaphore.h>
+#include <dirent.h>
 
 extern int cliente_socket;
 

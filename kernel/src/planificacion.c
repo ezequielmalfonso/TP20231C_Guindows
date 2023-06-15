@@ -36,6 +36,8 @@ int64_t reloj = 1;
 
 bool cpu_desocupado=true;
 
+t_list* tabla_global_archivos;
+
 void fifo_ready_execute(){
 	while(1){
 	    //log_info(logger,"PID: fifo_ready_execute");
@@ -166,6 +168,8 @@ void inicializarPlanificacion(){
 	cola_ready		= queue_create();
 	cola_ready_sec	= queue_create();
 
+	tabla_global_archivos = list_create();
+
 	sem_init(&s_ready_execute,0,0);
 	sem_init(&s_cpu_desocupado, 0, 1);
 	sem_init(&s_esperar_cpu, 0, 0);
@@ -228,6 +232,7 @@ void esperar_cpu(){
 		t_link_element* aux_list_raf_ant = list_rafa_anterior->head;	// deberia ir cada vez que la necesito y listo
 		bool recurso_existe = false;
 		char* motivoExit;
+		op_code mensaje;
 
 		switch (cop) {
 
@@ -494,12 +499,87 @@ void esperar_cpu(){
 
 			case F_OPEN:
 				log_info(logger, "PID: %d - Recibo pedido de F_OPEN por: %s", pcb->pid, instruccion->parametro1);
+				// LOG obligatorio
+				log_info(logger, "PID: %d - Abrir Archivo: %s", pcb->pid, instruccion->parametro1);
 
-				send_archivo(file_system_fd,instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_OPEN);
 
-				pthread_mutex_lock(&mx_cola_ready);
-				send_proceso(cpu_fd, pcb,DISPATCH);
-				pthread_mutex_unlock(&mx_cola_ready);
+				t_archivo_abierto* archivo;
+
+				// Verifico si la tabla glboal esta vacia, SI no lo esta busco si el archivo esta abierto
+				if(!list_is_empty(tabla_global_archivos)){
+					// CONSULTAMOS SI ESTA ABIERTO
+					log_error(logger, "Entre en if de lista NO vacio global");
+					archivo = list_get(tabla_global_archivos,strtok(instruccion->parametro1, "\n") );
+				}else{
+					archivo = NULL;
+					log_error(logger, "Entre en else de lista vacio global");
+				}
+
+				//Si el archivo esta abierto
+				if(archivo)
+				{ log_warning(logger, "Archivo abierto: %s",instruccion->parametro1);
+					// SI esta abierto en la global: bloquemos proceso en cola de proceso bloqueados del archivo
+					//TODO tiempos HRRN
+
+					// cargamos en list ade archivo abierto por el proceso
+					t_archivoAbierto* archivo_proceso = malloc(sizeof(t_archivoAbierto));
+					archivo_proceso->nombre_archivo = strtok(instruccion->parametro1, "\n");
+					archivo_proceso->puntero = 0;
+					list_add(pcb->archivos_abiertos, archivo_proceso);
+
+					queue_push(archivo->c_proc_bloqueados,pcb);
+
+
+				}else{
+					log_warning(logger, "Archivo NO ESTA abierto: %s",instruccion->parametro1);
+					send_archivo(file_system_fd,instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_EXISTS);
+					recv(file_system_fd, &mensaje , sizeof(op_code), 0);
+
+					// si el archivo existe
+					if(mensaje)
+					{
+						// PRIMER ENVIO PARA APERTURA DE ARCHIVO
+						send_archivo(file_system_fd,instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_OPEN);
+						recv(file_system_fd, &mensaje , sizeof(op_code), 0);
+
+						if(mensaje == F_OPEN_OK) {
+							t_archivo_abierto* archivo_nuevo = malloc(sizeof(t_archivo_abierto));
+							archivo_nuevo->nombre = strtok(instruccion->parametro1, "\n");
+							archivo->c_proc_bloqueados = queue_create();
+							list_add(tabla_global_archivos, archivo_nuevo);
+						}else{
+							log_error(logger, "PID: %d - F_OPEN ERROR: 1 %s", pcb->pid, instruccion->parametro1);
+						}
+
+					}else{
+						log_error(logger, "PID: %d - Recibo pedido de F_CREATE por archivo existente: %s", pcb->pid, instruccion->parametro1);
+						send_archivo(file_system_fd,instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_CREATE);
+
+						if(mensaje == F_CREATE_OK)
+						{
+							// PRIMER ENVIO PARA APERTURA DE ARCHIVO
+							send_archivo(file_system_fd,instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_OPEN);
+							recv(file_system_fd, &mensaje , sizeof(op_code), 0);
+							if(mensaje == F_OPEN_OK) {
+								t_archivo_abierto* archivo_nuevo = malloc(sizeof(t_archivo_abierto));
+								archivo_nuevo->nombre = strtok(instruccion->parametro1, "\n");
+								archivo->c_proc_bloqueados = queue_create();
+								list_add(tabla_global_archivos, archivo_nuevo);
+							}else{
+								log_warning(logger, "PID: %d - F_OPEN ERROR: 2 %s", pcb->pid, instruccion->parametro1);
+							}
+
+						}else{
+							log_error(logger, "PID: %d - F_OPEN ERROR: 3 %s", pcb->pid, instruccion->parametro1);
+						}
+
+					}
+					//VER...
+					pthread_mutex_lock(&mx_cola_ready);
+					send_proceso(cpu_fd, pcb,DISPATCH);
+					pthread_mutex_unlock(&mx_cola_ready);
+
+				}
 
 				sem_post(&s_cpu_desocupado);
 				sem_post(&s_esperar_cpu);
@@ -570,12 +650,8 @@ void esperar_cpu(){
 				log_info(logger, "PID: %d - Recibo pedido de F_CREATE por: %s", pcb->pid, instruccion->parametro1);
 
 				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_CREATE);
-				op_code mensaje;
-				recv(file_system_fd, &mensaje , sizeof(op_code), 0);
 
-				pthread_mutex_lock(&mx_cola_ready);
-				send_proceso(cpu_fd, pcb,DISPATCH);
-				pthread_mutex_unlock(&mx_cola_ready);
+				recv(file_system_fd, &mensaje , sizeof(op_code), 0);
 
 				if(mensaje == F_CREATE_FAIL) {
 					log_error(logger, "PID: %d - Recibo pedido de F_CREATE por archivo existente: %s", pcb->pid, instruccion->parametro1);
