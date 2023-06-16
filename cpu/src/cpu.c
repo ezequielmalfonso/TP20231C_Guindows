@@ -42,6 +42,11 @@ op_code iniciar_ciclo_instruccion(PCB_t* pcb){
 			log_info(logger,"En CPU");
 			usleep(configuracion->RETARDO_INSTRUCCION*1000);
 		}
+		///////////////
+		if(list_is_empty(pcb->archivos_abiertos)) {
+			log_error(logger, "WTFAMIGO el pcb no tiene archivos abiertos!!!!");
+		}
+		////////////////
 		estado = execute(instruccion_ejecutar,pcb->registro_cpu,pcb->pid, pcb->pc);
 		if(estado == CONTINUE){
 			//estado = check_interrupt();

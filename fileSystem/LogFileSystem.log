@@ -12994,3 +12994,163 @@ BLOCK_COUNT: 65536
 [INFO] 02:38:52:198 FileSystem/(43201:43310): Se recibio F_OPEN para archivo JOHN
 [INFO] 02:38:52:198 FileSystem/(43201:43310): Se ha abierto el archivo: JOHN
 [INFO] 02:39:37:932 FileSystem/(43201:43310): Se ha finalizado la conexion
+[INFO] 19:21:20:914 FileSystem/(48191:48191): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 19:21:20:919 FileSystem/(48191:48191): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 19:21:20:942 FileSystem/(48191:48191): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 19:21:20:942 FileSystem/(48191:48191): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 19:21:20:942 FileSystem/(48191:48191): Archivo de Bloques Cargado
+[INFO] 19:21:20:942 FileSystem/(48191:48191): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 19:21:20:968 FileSystem/(48191:48191): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 19:21:27:500 FileSystem/(48191:48191): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 19:21:31:575 FileSystem/(48191:48196): Se recibio F_EXISTS para archivo JOHN
+[INFO] 19:21:31:577 FileSystem/(48191:48196): F_CREATE
+[INFO] 19:21:31:577 FileSystem/(48191:48196): Crear archivo: JOHN
+[INFO] 19:21:31:582 FileSystem/(48191:48196): FCB de JOHN creado correctamente
+[INFO] 19:21:31:582 FileSystem/(48191:48196): Se recibio F_OPEN para archivo JOHN
+[INFO] 19:21:31:582 FileSystem/(48191:48196): Se ha abierto el archivo: JOHN
+[INFO] 19:21:32:585 FileSystem/(48191:48196): Se recibio F_CLOSE con parametros JOHN,  y 
+[INFO] 19:22:33:430 FileSystem/(48191:48196): Se ha finalizado la conexion
+[INFO] 19:22:44:004 FileSystem/(48191:48191): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 19:22:46:325 FileSystem/(48191:48205): Se recibio F_EXISTS para archivo JOHN
+[INFO] 19:22:46:325 FileSystem/(48191:48205): Se recibio F_OPEN para archivo JOHN
+[INFO] 19:22:46:325 FileSystem/(48191:48205): Se ha abierto el archivo: JOHN
+[INFO] 19:22:47:327 FileSystem/(48191:48205): Se recibio F_CLOSE con parametros JOHN,  y 
+[INFO] 19:24:29:406 FileSystem/(48191:48205): Se ha finalizado la conexion
+[INFO] 19:24:32:593 FileSystem/(48191:48191): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 19:24:35:637 FileSystem/(48191:48265): Se recibio F_EXISTS para archivo JOHN
+[INFO] 19:24:35:637 FileSystem/(48191:48265): Se recibio F_OPEN para archivo JOHN
+[INFO] 19:24:35:637 FileSystem/(48191:48265): Se ha abierto el archivo: JOHN
+[INFO] 19:24:36:640 FileSystem/(48191:48265): Se recibio F_CLOSE con parametros JOHN,  y 
+[INFO] 19:31:57:823 FileSystem/(48191:48265): Se ha finalizado la conexion
+[INFO] 19:32:06:083 FileSystem/(48191:48191): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 19:32:08:601 FileSystem/(48191:48389): Se recibio F_EXISTS para archivo JOHN
+[INFO] 19:32:08:602 FileSystem/(48191:48389): Se recibio F_OPEN para archivo JOHN
+[INFO] 19:32:08:602 FileSystem/(48191:48389): Se ha abierto el archivo: JOHN
+[INFO] 19:32:09:605 FileSystem/(48191:48389): Se recibio F_CLOSE con parametros JOHN,  y 
+[INFO] 19:33:33:496 FileSystem/(48191:48389): Se ha finalizado la conexion
+[INFO] 19:33:36:580 FileSystem/(48191:48191): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 19:33:39:103 FileSystem/(48191:48439): Se recibio F_EXISTS para archivo JOHN
+[INFO] 19:33:39:422 FileSystem/(48191:48439): Se recibio F_OPEN para archivo JOHN
+[INFO] 19:33:39:423 FileSystem/(48191:48439): Se ha abierto el archivo: JOHN
+[INFO] 19:33:40:425 FileSystem/(48191:48439): Se recibio F_CLOSE con parametros JOHN,  y 
+[INFO] 19:36:34:946 FileSystem/(48191:48439): Se ha finalizado la conexion
+[INFO] 19:36:37:536 FileSystem/(48191:48191): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 19:36:40:223 FileSystem/(48191:48511): Se recibio F_EXISTS para archivo JOHN
+[INFO] 19:36:40:223 FileSystem/(48191:48511): Se recibio F_OPEN para archivo JOHN
+[INFO] 19:36:40:223 FileSystem/(48191:48511): Se ha abierto el archivo: JOHN
+[INFO] 19:36:41:226 FileSystem/(48191:48511): Se recibio F_CLOSE con parametros JOHN,  y 
+[INFO] 19:41:03:121 FileSystem/(48191:48511): Se ha finalizado la conexion
+[INFO] 19:41:09:967 FileSystem/(48191:48191): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 19:41:13:084 FileSystem/(48191:48603): Se recibio F_EXISTS para archivo JOHN
+[INFO] 19:41:13:084 FileSystem/(48191:48603): Se recibio F_OPEN para archivo JOHN
+[INFO] 19:41:13:085 FileSystem/(48191:48603): Se ha abierto el archivo: JOHN
+[INFO] 19:41:14:086 FileSystem/(48191:48603): Se recibio F_CLOSE con parametros JOHN,  y 
+[INFO] 19:47:07:395 FileSystem/(48191:48603): Se ha finalizado la conexion
+[INFO] 19:47:10:040 FileSystem/(48191:48191): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 19:47:10:052 FileSystem/(48191:48728): Se ha finalizado la conexion
+[INFO] 19:47:23:104 FileSystem/(48191:48191): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 19:47:23:226 FileSystem/(48191:48736): Se ha finalizado la conexion
+[INFO] 19:47:28:584 FileSystem/(48191:48191): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 19:47:28:585 FileSystem/(48191:48742): Se ha finalizado la conexion
+[INFO] 19:47:33:507 FileSystem/(48191:48191): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 19:47:33:508 FileSystem/(48191:48748): Se ha finalizado la conexion
+[INFO] 19:47:36:327 FileSystem/(48191:48191): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 19:47:36:328 FileSystem/(48191:48754): Se ha finalizado la conexion
+[INFO] 19:47:49:227 FileSystem/(48191:48191): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 19:47:49:228 FileSystem/(48191:48762): Se ha finalizado la conexion
+[INFO] 19:49:13:446 FileSystem/(48191:48191): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 19:49:16:292 FileSystem/(48191:48808): Se recibio F_EXISTS para archivo JOHN
+[INFO] 19:49:16:296 FileSystem/(48191:48808): Se recibio F_OPEN para archivo JOHN
+[INFO] 19:49:16:296 FileSystem/(48191:48808): Se ha abierto el archivo: JOHN
+[INFO] 19:49:17:297 FileSystem/(48191:48808): Se recibio F_CLOSE con parametros JOHN,  y 
+[INFO] 19:49:28:001 FileSystem/(48191:48808): Se ha finalizado la conexion
+[INFO] 19:59:39:413 FileSystem/(48191:48191): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 19:59:42:182 FileSystem/(48191:49026): Se recibio F_EXISTS para archivo JOHN
+[INFO] 19:59:42:182 FileSystem/(48191:49026): Se recibio F_OPEN para archivo JOHN
+[INFO] 19:59:42:182 FileSystem/(48191:49026): Se ha abierto el archivo: JOHN
+[INFO] 19:59:43:185 FileSystem/(48191:49026): Se recibio F_CLOSE con parametros JOHN,  y 
+[INFO] 19:59:59:098 FileSystem/(48191:49026): Se ha finalizado la conexion
+[INFO] 20:01:39:588 FileSystem/(48191:48191): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 20:01:42:745 FileSystem/(48191:49088): Se recibio F_EXISTS para archivo JOHN
+[INFO] 20:01:42:797 FileSystem/(48191:49088): Se recibio F_OPEN para archivo JOHN
+[INFO] 20:01:42:797 FileSystem/(48191:49088): Se ha abierto el archivo: JOHN
+[INFO] 20:01:43:799 FileSystem/(48191:49088): Se recibio F_CLOSE con parametros JOHN,  y 
+[INFO] 20:01:48:356 FileSystem/(48191:49088): Se ha finalizado la conexion
+[INFO] 20:22:37:487 FileSystem/(49415:49415): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 20:22:37:493 FileSystem/(49415:49415): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 20:22:37:499 FileSystem/(49415:49415): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 20:22:37:501 FileSystem/(49415:49415): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 20:22:37:502 FileSystem/(49415:49415): Archivo de Bloques Cargado
+[INFO] 20:22:37:503 FileSystem/(49415:49415): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 20:22:37:509 FileSystem/(49415:49415): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 20:22:42:611 FileSystem/(49415:49415): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 20:22:49:176 FileSystem/(49415:49422): Se ha finalizado la conexion
+[INFO] 20:24:45:076 FileSystem/(49522:49522): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 20:24:45:105 FileSystem/(49522:49522): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 20:24:45:107 FileSystem/(49522:49522): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 20:24:45:107 FileSystem/(49522:49522): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 20:24:45:107 FileSystem/(49522:49522): Archivo de Bloques Cargado
+[INFO] 20:24:45:107 FileSystem/(49522:49522): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 20:24:45:111 FileSystem/(49522:49522): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 20:24:46:670 FileSystem/(49522:49522): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 20:24:49:209 FileSystem/(49522:49527): Se recibio F_EXISTS para archivo JOHN
+[INFO] 20:24:49:217 FileSystem/(49522:49527): Se recibio F_OPEN para archivo JOHN
+[INFO] 20:24:49:217 FileSystem/(49522:49527): Se ha abierto el archivo: JOHN
+[INFO] 20:24:50:220 FileSystem/(49522:49527): Se recibio F_CLOSE con parametros JOHN,  y 

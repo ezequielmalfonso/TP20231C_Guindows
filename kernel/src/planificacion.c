@@ -38,6 +38,8 @@ bool cpu_desocupado=true;
 
 t_list* tabla_global_archivos;
 char* archivoABuscar;
+t_archivo_abierto* archivo;
+t_archivoAbierto* archivo_proceso;
 
 void fifo_ready_execute(){
 	while(1){
@@ -503,9 +505,6 @@ void esperar_cpu(){
 				// LOG obligatorio
 				log_info(logger, "PID: %d - Abrir Archivo: %s", pcb->pid, instruccion->parametro1);
 
-
-				t_archivo_abierto* archivo;
-
 				// Verifico si la tabla global esta vacia
 				if(!list_is_empty(tabla_global_archivos)){
 					// CONSULTAMOS SI EL ARCHIVO ESTA ABIERTO (=EN TABLA)
@@ -520,15 +519,16 @@ void esperar_cpu(){
 
 				// Si el archivo esta abierto (=EN TABLA)
 				if(archivo)
-				{ log_warning(logger, "El archivo %s ya estaba abierto",instruccion->parametro1);
+				{ log_warning(logger, "El archivo %s ya estaba abierto en la TGA",instruccion->parametro1);
 					// SI esta abierto en la global: bloquemos proceso en cola de proceso bloqueados del archivo
 					//TODO tiempos HRRN
 
 					// cargamos en la list de archivos abiertos por el proceso
-					t_archivoAbierto* archivo_proceso = malloc(sizeof(t_archivoAbierto));
+					archivo_proceso = malloc(sizeof(t_archivoAbierto));
 					archivo_proceso->nombre_archivo = strtok(instruccion->parametro1, "\n");
 					archivo_proceso->puntero = 0;
 					list_add(pcb->archivos_abiertos, archivo_proceso);
+					log_info(logger, "PID: %d - Se agrego %s a la tabla de archivos abiertos (ya en TGA)", pcb->pid, archivo_proceso->nombre_archivo);
 
 					// El proceso se bloquea hasta que se libere el archivo (fclose)
 					log_warning(logger, "PID: %d - Bloqueado esperando archivo %s", pcb->pid, instruccion->parametro1);
@@ -587,9 +587,16 @@ void esperar_cpu(){
 						}
 
 					}
+					archivo_proceso = malloc(sizeof(t_archivoAbierto));
+					archivo_proceso->nombre_archivo = strtok(instruccion->parametro1, "\n");
+					archivo_proceso->puntero = 0;
+					list_add(pcb->archivos_abiertos, archivo_proceso);
+					//t_archivoAbierto* borrame = list_get(pcb->archivos_abiertos, 0);
+					//log_warning(logger, "###Primer elemento de la tabla del proceso=%s", borrame->nombre_archivo);
+					log_info(logger, "PID: %d - Se agrego %s a la tabla de archivos abiertos", pcb->pid, archivo_proceso->nombre_archivo);
 					//VER...
 					pthread_mutex_lock(&mx_cola_ready);
-					send_proceso(cpu_fd, pcb,DISPATCH);
+					send_proceso(cpu_fd, pcb, DISPATCH);
 					pthread_mutex_unlock(&mx_cola_ready);
 
 				}
@@ -597,11 +604,59 @@ void esperar_cpu(){
 				sem_post(&s_cpu_desocupado);
 				sem_post(&s_esperar_cpu);
 				break;
+
 			case F_CLOSE:
+				// Saca el archivo de tabla global de archivos abiertos y de la tabla de archivos abiertos del proceso
 				log_info(logger, "PID: %d - Recibo pedido de F_CLOSE por: %s", pcb->pid, instruccion->parametro1);
 
-				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_CLOSE);
+				// Tabla global de archivos abiertos
+				if(!list_is_empty(tabla_global_archivos)) {	// Reviso que este el archivo en la TGA
+					archivoABuscar = strtok(instruccion->parametro1, "\n");	// global
+					bool (*aux1)(void* x) = criterio_nombre_archivo;	// se puede meter como parametro directamente de alguna forma y no tener que usar aux1
+					archivo = list_find(tabla_global_archivos, aux1);
+				} else {	// No esta en la TGA
+					log_error(logger, "PID: %d - Pedido de F_CLOSE por archivo no abierto"); // No esta abierto. Tambien puede que no exista
+					//TODO: EXIT-------------------------------##########################################
+					break;
+				}
 
+				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_CLOSE);
+				// TODO: hace falta que responda un f_close_ok/fail y evaluar?
+
+				// Tabla de archivos del proceso
+				if(!list_is_empty(pcb->archivos_abiertos)) {	//
+					archivoABuscar = strtok(instruccion->parametro1, "\n");	// global
+					bool (*aux2)(void* x) = criterio_nombre_archivo_proceso;	// se puede meter como parametro directamente de alguna forma y no tener que usar aux2
+					t_archivoAbierto* archivoAux = NULL;
+					archivoAux = list_find(pcb->archivos_abiertos, aux2);
+					if(archivoAux == NULL){
+						log_error(logger, "PID: %d - Pedido de F_CLOSE por archivo no abierto por el proceso: %s", pcb->pid, instruccion->parametro1);
+						//TODO: EXIT-------------------------------###############################################
+						break;
+					}
+					// Si lo encuentro, saco el archivo de la tabla de archivos del proceso
+					list_remove_element(pcb->archivos_abiertos, archivoAux);
+					log_info(logger, "PID: %d - Se elimino %s de la tabla de archivos abiertos", pcb->pid, archivoAux->nombre_archivo);
+				} else {
+					log_error(logger, "PID: %d - Pedido de F_CLOSE sin archivos abiertos (tabla vacia)", pcb->pid);
+					//TODO: EXIT-------------------------------###############################################con semaforos tienen que ser (cpu desocupaado y esperar cpu)
+					break;
+				}
+
+				// Si no hay procesos bloqueados esperando -> lo saco de la TGA con un fclose
+				if(queue_is_empty(archivo->c_proc_bloqueados)) {
+					list_remove_element(tabla_global_archivos, archivo);
+					log_warning(logger, "El archivo %s fue eliminado de la tabla global de archivos abiertos", archivo->nombre);
+				} else {	// Si hay procesos bloqueados mando el primer bloqueado a ready
+					PCB_t* procesoBloqueado = queue_pop(archivo->c_proc_bloqueados);
+					procesoBloqueado->tiempo_llegada_a_ready = tiempo;	// hrrn
+					pthread_mutex_lock(&mx_cola_ready);
+					queue_push(cola_ready, procesoBloqueado);
+					pthread_mutex_unlock(&mx_cola_ready);
+					log_info(logger, "PID: %d - Estado anterior: Blocked por archivo - Estado actual: READY", procesoBloqueado->pid);//TODO: listar cola ready?##########
+				}
+
+				// Si no hubo ningun exit por error mando el proceso nuevamente al cpu
 				pthread_mutex_lock(&mx_cola_ready);
 				send_proceso(cpu_fd, pcb,DISPATCH);
 				pthread_mutex_unlock(&mx_cola_ready);
@@ -812,8 +867,14 @@ void esperarRespuestaFS(){
 
 }
 
-bool criterio_nombre_archivo(t_archivo_abierto* archivo) {
+bool criterio_nombre_archivo(t_archivo_abierto* archivo) {	// solo para TGA
 	if(strcmp(archivo->nombre, archivoABuscar)){
+		return false;
+	}
+	return true;
+}
+bool criterio_nombre_archivo_proceso(t_archivoAbierto* archivo) {	// solo para lista de archivos del proceso
+	if(strcmp(archivo->nombre_archivo, archivoABuscar)){
 		return false;
 	}
 	return true;

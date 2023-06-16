@@ -61,6 +61,7 @@ double obtenerEstimadoRafaga(PCB_t* a,uint32_t estimadoInicial, double alfa);
 //void ejecutar_io(PCB_t*,int);
 char* procesosEnReady(t_queue*);
 bool criterio_nombre_archivo(t_archivo_abierto* archivo);
+bool criterio_nombre_archivo_proceso(t_archivoAbierto* archivo);
 
 
 
