@@ -38074,3 +38074,402 @@ TAM_MAX_SEGMENTO: 128
 [INFO] 21:41:28:754 Cpu/(50679:50730): Recibi PCB id: 0
 [INFO] 21:41:28:754 Cpu/(50679:50730): PID: 0 - Ejecutando EXIT
 [INFO] 21:41:43:682 Cpu/(50679:50730): Se ha finalizado la conexion
+[INFO] 22:07:15:035 Cpu/(20224:20224): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 22:07:15:036 Cpu/(20224:20224): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:07:15:036 Cpu/(20224:20224): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:08:15:270 Cpu/(20224:20224): Cliente conectado (a CPU_SV)
+
+[INFO] 22:08:24:128 Cpu/(20224:20252): Recibi PCB id: 0
+[INFO] 22:08:24:128 Cpu/(20224:20252): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 22:08:24:129 Cpu/(20224:20252): Recibi PCB id: 0
+[INFO] 22:08:24:129 Cpu/(20224:20252): PID: 0 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 22:08:24:694 Cpu/(20224:20252): Recibi PCB id: 1
+[INFO] 22:08:24:694 Cpu/(20224:20252): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 22:08:34:131 Cpu/(20224:20252): Recibi PCB id: 0
+[INFO] 22:08:34:131 Cpu/(20224:20252): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 22:08:34:132 Cpu/(20224:20252): Recibi PCB id: 0
+[INFO] 22:08:34:132 Cpu/(20224:20252): PID: 0 - Ejecutando EXIT
+[INFO] 22:16:30:313 Cpu/(20224:20252): Se ha finalizado la conexion
+[INFO] 22:16:43:035 Cpu/(20451:20451): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 22:16:43:036 Cpu/(20451:20451): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:16:43:037 Cpu/(20451:20451): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:16:49:871 Cpu/(20451:20451): Cliente conectado (a CPU_SV)
+
+[INFO] 22:16:49:874 Cpu/(20451:20457): Se ha finalizado la conexion
+[INFO] 22:18:00:819 Cpu/(20483:20483): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 22:18:00:822 Cpu/(20483:20483): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:18:00:823 Cpu/(20483:20483): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:18:03:158 Cpu/(20483:20483): Cliente conectado (a CPU_SV)
+
+[INFO] 22:18:07:313 Cpu/(20483:20488): Recibi PCB id: 0
+[INFO] 22:18:07:314 Cpu/(20483:20488): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 22:18:07:314 Cpu/(20483:20488): Recibi PCB id: 0
+[INFO] 22:18:07:314 Cpu/(20483:20488): PID: 0 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 22:18:07:918 Cpu/(20483:20488): Recibi PCB id: 1
+[INFO] 22:18:07:918 Cpu/(20483:20488): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 22:18:17:316 Cpu/(20483:20488): Recibi PCB id: 0
+[INFO] 22:18:17:316 Cpu/(20483:20488): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 22:18:17:317 Cpu/(20483:20488): Recibi PCB id: 0
+[INFO] 22:18:17:317 Cpu/(20483:20488): PID: 0 - Ejecutando EXIT
+[INFO] 22:18:17:317 Cpu/(20483:20488): Recibi PCB id: 1
+[INFO] 22:18:17:318 Cpu/(20483:20488): En CPU
+[INFO] 22:18:18:319 Cpu/(20483:20488): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 22:18:18:319 Cpu/(20483:20488): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 22:18:18:320 Cpu/(20483:20488): Recibi PCB id: 1
+[INFO] 22:18:18:320 Cpu/(20483:20488): PID: 1 - Ejecutando EXIT
+[INFO] 22:18:18:757 Cpu/(20483:20488): Se ha finalizado la conexion
+[INFO] 22:19:33:315 Cpu/(20524:20524): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 22:19:33:318 Cpu/(20524:20524): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:19:33:318 Cpu/(20524:20524): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:19:35:647 Cpu/(20524:20524): Cliente conectado (a CPU_SV)
+
+[INFO] 22:19:39:899 Cpu/(20524:20529): Recibi PCB id: 0
+[INFO] 22:19:39:899 Cpu/(20524:20529): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 22:19:39:900 Cpu/(20524:20529): Recibi PCB id: 0
+[INFO] 22:19:39:900 Cpu/(20524:20529): PID: 0 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 22:19:40:489 Cpu/(20524:20529): Recibi PCB id: 1
+[INFO] 22:19:40:489 Cpu/(20524:20529): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 22:19:49:906 Cpu/(20524:20529): Recibi PCB id: 0
+[INFO] 22:19:49:906 Cpu/(20524:20529): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 22:19:49:906 Cpu/(20524:20529): Recibi PCB id: 0
+[INFO] 22:19:49:906 Cpu/(20524:20529): PID: 0 - Ejecutando EXIT
+[INFO] 22:19:49:906 Cpu/(20524:20529): Recibi PCB id: 1
+[INFO] 22:19:49:908 Cpu/(20524:20529): En CPU
+[INFO] 22:19:50:908 Cpu/(20524:20529): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 22:19:50:908 Cpu/(20524:20529): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 22:19:50:910 Cpu/(20524:20529): Recibi PCB id: 1
+[INFO] 22:19:50:910 Cpu/(20524:20529): PID: 1 - Ejecutando EXIT
+[INFO] 22:19:51:110 Cpu/(20524:20529): Se ha finalizado la conexion
+[INFO] 22:21:41:413 Cpu/(20709:20709): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 22:21:41:414 Cpu/(20709:20709): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:21:41:415 Cpu/(20709:20709): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:21:48:431 Cpu/(20709:20709): Cliente conectado (a CPU_SV)
+
+[INFO] 22:21:53:020 Cpu/(20709:20715): Recibi PCB id: 0
+[INFO] 22:21:53:020 Cpu/(20709:20715): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 22:21:53:021 Cpu/(20709:20715): Recibi PCB id: 0
+[INFO] 22:21:53:022 Cpu/(20709:20715): PID: 0 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 22:21:53:730 Cpu/(20709:20715): Recibi PCB id: 1
+[INFO] 22:21:53:730 Cpu/(20709:20715): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 22:22:03:029 Cpu/(20709:20715): Recibi PCB id: 0
+[INFO] 22:22:03:029 Cpu/(20709:20715): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 22:22:03:030 Cpu/(20709:20715): Recibi PCB id: 0
+[INFO] 22:22:03:030 Cpu/(20709:20715): PID: 0 - Ejecutando EXIT
+[INFO] 22:23:12:275 Cpu/(20709:20715): Se ha finalizado la conexion
+[INFO] 22:23:19:188 Cpu/(20825:20825): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 22:23:19:190 Cpu/(20825:20825): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:23:19:191 Cpu/(20825:20825): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:23:23:234 Cpu/(20825:20825): Cliente conectado (a CPU_SV)
+
+[INFO] 22:23:26:123 Cpu/(20825:20831): Recibi PCB id: 0
+[INFO] 22:23:26:125 Cpu/(20825:20831): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 22:23:26:127 Cpu/(20825:20831): Recibi PCB id: 0
+[INFO] 22:23:26:127 Cpu/(20825:20831): PID: 0 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 22:23:26:850 Cpu/(20825:20831): Recibi PCB id: 1
+[INFO] 22:23:26:850 Cpu/(20825:20831): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 22:23:36:130 Cpu/(20825:20831): Recibi PCB id: 0
+[INFO] 22:23:36:130 Cpu/(20825:20831): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 22:23:36:131 Cpu/(20825:20831): Recibi PCB id: 0
+[INFO] 22:23:36:131 Cpu/(20825:20831): PID: 0 - Ejecutando EXIT
+[INFO] 22:23:36:131 Cpu/(20825:20831): Recibi PCB id: 1
+[INFO] 22:23:36:132 Cpu/(20825:20831): En CPU
+[INFO] 22:23:37:133 Cpu/(20825:20831): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 22:23:37:134 Cpu/(20825:20831): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 22:23:37:135 Cpu/(20825:20831): Recibi PCB id: 1
+[INFO] 22:23:37:135 Cpu/(20825:20831): PID: 1 - Ejecutando EXIT
+[INFO] 22:23:37:346 Cpu/(20825:20831): Se ha finalizado la conexion
+[INFO] 22:24:22:244 Cpu/(20848:20848): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 22:24:22:247 Cpu/(20848:20848): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:24:22:247 Cpu/(20848:20848): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:24:40:387 Cpu/(20848:20848): Cliente conectado (a CPU_SV)
+
+[INFO] 22:24:40:415 Cpu/(20848:20896): Se ha finalizado la conexion
+[INFO] 22:26:28:757 Cpu/(20934:20934): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 22:26:28:759 Cpu/(20934:20934): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:26:28:759 Cpu/(20934:20934): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:26:56:107 Cpu/(20934:20934): Cliente conectado (a CPU_SV)
+
+[INFO] 22:27:10:231 Cpu/(20934:21036): Recibi PCB id: 0
+[INFO] 22:27:10:231 Cpu/(20934:21036): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 22:27:10:234 Cpu/(20934:21036): Recibi PCB id: 0
+[INFO] 22:27:10:234 Cpu/(20934:21036): PID: 0 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 22:27:11:036 Cpu/(20934:21036): Recibi PCB id: 1
+[INFO] 22:27:11:037 Cpu/(20934:21036): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 22:27:20:247 Cpu/(20934:21036): Recibi PCB id: 0
+[INFO] 22:27:20:247 Cpu/(20934:21036): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 22:27:53:593 Cpu/(20934:21036): Recibi PCB id: 0
+[INFO] 22:27:53:594 Cpu/(20934:21036): PID: 0 - Ejecutando EXIT
+[INFO] 22:27:56:541 Cpu/(20934:21036): Recibi PCB id: 1
+[INFO] 22:27:56:541 Cpu/(20934:21036): En CPU
+[INFO] 22:27:57:542 Cpu/(20934:21036): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 22:27:57:542 Cpu/(20934:21036): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 22:29:58:587 Cpu/(20934:21036): Recibi PCB id: 1
+[INFO] 22:29:58:587 Cpu/(20934:21036): PID: 1 - Ejecutando EXIT
+[INFO] 22:30:01:982 Cpu/(20934:21036): Se ha finalizado la conexion
+[INFO] 22:30:41:574 Cpu/(21147:21147): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 22:30:41:577 Cpu/(21147:21147): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:30:41:577 Cpu/(21147:21147): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:30:47:521 Cpu/(21147:21147): Cliente conectado (a CPU_SV)
+
+[INFO] 22:30:47:524 Cpu/(21147:21154): Se ha finalizado la conexion
+[INFO] 22:31:43:422 Cpu/(21208:21208): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 22:31:43:423 Cpu/(21208:21208): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:31:43:423 Cpu/(21208:21208): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:31:47:909 Cpu/(21208:21208): Cliente conectado (a CPU_SV)
+
+[INFO] 22:31:57:949 Cpu/(21208:21215): Se ha finalizado la conexion
+[INFO] 22:32:08:422 Cpu/(21221:21221): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 22:32:08:424 Cpu/(21221:21221): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:32:08:424 Cpu/(21221:21221): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:32:11:803 Cpu/(21221:21221): Cliente conectado (a CPU_SV)
+
+[INFO] 22:32:15:523 Cpu/(21221:21226): Recibi PCB id: 0
+[INFO] 22:32:15:523 Cpu/(21221:21226): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 22:32:15:524 Cpu/(21221:21226): Recibi PCB id: 0
+[INFO] 22:32:15:524 Cpu/(21221:21226): PID: 0 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 22:32:16:209 Cpu/(21221:21226): Recibi PCB id: 1
+[INFO] 22:32:16:210 Cpu/(21221:21226): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 22:32:25:527 Cpu/(21221:21226): Recibi PCB id: 0
+[INFO] 22:32:25:527 Cpu/(21221:21226): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 22:32:25:527 Cpu/(21221:21226): Recibi PCB id: 0
+[INFO] 22:32:25:527 Cpu/(21221:21226): PID: 0 - Ejecutando EXIT
+[INFO] 22:32:25:528 Cpu/(21221:21226): Recibi PCB id: 1
+[INFO] 22:32:25:529 Cpu/(21221:21226): En CPU
+[INFO] 22:32:26:529 Cpu/(21221:21226): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 22:32:26:530 Cpu/(21221:21226): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 22:32:26:530 Cpu/(21221:21226): Recibi PCB id: 1
+[INFO] 22:32:26:530 Cpu/(21221:21226): PID: 1 - Ejecutando EXIT
+[INFO] 22:32:26:737 Cpu/(21221:21226): Se ha finalizado la conexion
+[INFO] 22:33:31:367 Cpu/(21387:21387): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 22:33:31:370 Cpu/(21387:21387): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:33:31:371 Cpu/(21387:21387): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:33:35:210 Cpu/(21387:21387): Cliente conectado (a CPU_SV)
+
+[INFO] 22:33:35:212 Cpu/(21387:21392): Se ha finalizado la conexion
+[INFO] 22:34:42:416 Cpu/(21426:21426): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 22:34:42:418 Cpu/(21426:21426): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:34:42:419 Cpu/(21426:21426): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:34:44:058 Cpu/(21426:21426): Cliente conectado (a CPU_SV)
+
+[INFO] 22:34:48:228 Cpu/(21426:21431): Recibi PCB id: 0
+[INFO] 22:34:48:228 Cpu/(21426:21431): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 22:34:48:229 Cpu/(21426:21431): Recibi PCB id: 0
+[INFO] 22:34:48:229 Cpu/(21426:21431): PID: 0 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 22:34:48:845 Cpu/(21426:21431): Recibi PCB id: 1
+[INFO] 22:34:48:845 Cpu/(21426:21431): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 22:34:58:232 Cpu/(21426:21431): Recibi PCB id: 0
+[INFO] 22:34:58:232 Cpu/(21426:21431): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 22:34:58:232 Cpu/(21426:21431): Recibi PCB id: 0
+[INFO] 22:34:58:232 Cpu/(21426:21431): PID: 0 - Ejecutando EXIT
+[INFO] 22:34:58:234 Cpu/(21426:21431): Recibi PCB id: 1
+[INFO] 22:34:58:234 Cpu/(21426:21431): En CPU
+[INFO] 22:34:59:235 Cpu/(21426:21431): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 22:34:59:236 Cpu/(21426:21431): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 22:34:59:236 Cpu/(21426:21431): Recibi PCB id: 1
+[INFO] 22:34:59:236 Cpu/(21426:21431): PID: 1 - Ejecutando EXIT
+[INFO] 22:34:59:454 Cpu/(21426:21431): Se ha finalizado la conexion
+[INFO] 22:35:40:904 Cpu/(21445:21445): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 22:35:40:906 Cpu/(21445:21445): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:35:40:907 Cpu/(21445:21445): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:44:55:178 Cpu/(21703:21703): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 22:44:55:184 Cpu/(21703:21703): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:44:55:184 Cpu/(21703:21703): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:44:57:253 Cpu/(21703:21703): Cliente conectado (a CPU_SV)
+
+[INFO] 22:45:00:550 Cpu/(21703:21709): Recibi PCB id: 0
+[INFO] 22:45:00:550 Cpu/(21703:21709): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 22:45:00:551 Cpu/(21703:21709): Recibi PCB id: 0
+[INFO] 22:45:00:551 Cpu/(21703:21709): PID: 0 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 22:45:01:046 Cpu/(21703:21709): Recibi PCB id: 1
+[INFO] 22:45:01:046 Cpu/(21703:21709): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 22:45:10:553 Cpu/(21703:21709): Recibi PCB id: 0
+[INFO] 22:45:10:553 Cpu/(21703:21709): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 22:45:10:554 Cpu/(21703:21709): Recibi PCB id: 0
+[INFO] 22:45:10:554 Cpu/(21703:21709): PID: 0 - Ejecutando EXIT
+[INFO] 22:45:37:040 Cpu/(21703:21709): Se ha finalizado la conexion
+[INFO] 22:53:51:724 Cpu/(21916:21916): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 22:53:51:726 Cpu/(21916:21916): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:53:51:726 Cpu/(21916:21916): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:54:00:288 Cpu/(21916:21916): Cliente conectado (a CPU_SV)
+
+[INFO] 22:54:03:554 Cpu/(21916:21923): Recibi PCB id: 0
+[INFO] 22:54:03:554 Cpu/(21916:21923): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 22:54:03:555 Cpu/(21916:21923): Recibi PCB id: 0
+[INFO] 22:54:03:555 Cpu/(21916:21923): PID: 0 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 22:54:04:070 Cpu/(21916:21923): Recibi PCB id: 1
+[INFO] 22:54:04:070 Cpu/(21916:21923): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 22:54:13:557 Cpu/(21916:21923): Recibi PCB id: 0
+[INFO] 22:54:13:557 Cpu/(21916:21923): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 22:54:13:557 Cpu/(21916:21923): Recibi PCB id: 0
+[INFO] 22:54:13:557 Cpu/(21916:21923): PID: 0 - Ejecutando EXIT
+[INFO] 22:54:13:558 Cpu/(21916:21923): Recibi PCB id: 1
+[INFO] 22:54:13:559 Cpu/(21916:21923): En CPU
+[INFO] 22:54:14:559 Cpu/(21916:21923): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 22:54:14:559 Cpu/(21916:21923): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 22:54:14:560 Cpu/(21916:21923): Recibi PCB id: 1
+[INFO] 22:54:14:560 Cpu/(21916:21923): PID: 1 - Ejecutando EXIT

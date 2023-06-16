@@ -370,10 +370,6 @@ void esperar_cpu(){
 
 							 pcb_blocked->tiempo_llegada_a_ready = temporal_gettime(reloj_inicio);
 
-							 pthread_mutex_lock(&mx_instancias);
-							 //aux_rec2_s->instancias += 1; //TODO me hace ruidooo
-							 pthread_mutex_unlock(&mx_instancias);
-
 							 pthread_mutex_lock(&mx_cola_ready);
 							 queue_push(cola_ready,pcb_blocked);
 							 send_proceso(cpu_fd, pcb,DISPATCH);
@@ -656,6 +652,8 @@ void esperar_cpu(){
 					queue_push(cola_ready, procesoBloqueado);
 					pthread_mutex_unlock(&mx_cola_ready);
 					log_info(logger, "PID: %d - Estado anterior: Blocked por archivo - Estado actual: READY", procesoBloqueado->pid);//TODO: listar cola ready?##########
+					sem_post(&s_cont_ready);
+					sem_post(&s_ready_execute);
 				}
 
 				// Si no hubo ningun exit por error mando el proceso nuevamente al cpu
@@ -663,8 +661,9 @@ void esperar_cpu(){
 				send_proceso(cpu_fd, pcb,DISPATCH);
 				pthread_mutex_unlock(&mx_cola_ready);
 
-				sem_post(&s_cpu_desocupado);
+  			    sem_post(&s_cpu_desocupado);
 				sem_post(&s_esperar_cpu);
+
 				break;
 			case F_SEEK:
 				log_info(logger, "PID: %d - Recibo pedido de F_SEEK por: %s", pcb->pid, instruccion->parametro1);
