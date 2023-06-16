@@ -13296,3 +13296,47 @@ BLOCK_COUNT: 65536
 [INFO] 21:28:16:637 FileSystem/(50511:50522): Se ha abierto el archivo: JOHN
 [INFO] 21:28:17:639 FileSystem/(50511:50522): Se recibio F_CLOSE con parametros JOHN,  y 
 [INFO] 21:28:24:624 FileSystem/(50511:50522): Se ha finalizado la conexion
+[INFO] 21:32:29:490 FileSystem/(50680:50680): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 21:32:29:497 FileSystem/(50680:50680): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 21:32:29:500 FileSystem/(50680:50680): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 21:32:29:501 FileSystem/(50680:50680): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 21:32:29:502 FileSystem/(50680:50680): Archivo de Bloques Cargado
+[INFO] 21:32:29:503 FileSystem/(50680:50680): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:32:29:509 FileSystem/(50680:50680): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 21:32:34:885 FileSystem/(50680:50680): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 21:32:37:579 FileSystem/(50680:50685): Se recibio F_EXISTS para archivo JOHN
+[INFO] 21:32:37:579 FileSystem/(50680:50685): F_CREATE
+[INFO] 21:32:37:580 FileSystem/(50680:50685): Crear archivo: JOHN
+[INFO] 21:32:37:580 FileSystem/(50680:50685): FCB de JOHN creado correctamente
+[INFO] 21:32:37:582 FileSystem/(50680:50685): Se recibio F_OPEN para archivo JOHN
+[INFO] 21:32:37:582 FileSystem/(50680:50685): Se ha abierto el archivo: JOHN
+[INFO] 21:32:38:585 FileSystem/(50680:50685): Se recibio F_CLOSE con parametros JOHN,  y 
+[INFO] 21:33:51:777 FileSystem/(50680:50685): Se recibio F_EXISTS para archivo JOHN
+[INFO] 21:33:51:777 FileSystem/(50680:50685): Se recibio F_OPEN para archivo JOHN
+[INFO] 21:33:51:777 FileSystem/(50680:50685): Se ha abierto el archivo: JOHN
+[INFO] 21:33:52:778 FileSystem/(50680:50685): Se recibio F_CLOSE con parametros JOHN,  y 
+[INFO] 21:39:16:201 FileSystem/(50680:50685): Se ha finalizado la conexion
+[INFO] 21:40:29:571 FileSystem/(50680:50680): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 21:40:53:199 FileSystem/(50680:50722): Se ha finalizado la conexion
+[INFO] 21:41:14:219 FileSystem/(50680:50680): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 21:41:18:750 FileSystem/(50680:50731): Se recibio F_EXISTS para archivo JOHN
+[INFO] 21:41:18:750 FileSystem/(50680:50731): Se recibio F_OPEN para archivo JOHN
+[INFO] 21:41:18:750 FileSystem/(50680:50731): Se ha abierto el archivo: JOHN
+[INFO] 21:41:28:754 FileSystem/(50680:50731): Se recibio F_CLOSE con parametros JOHN,  y 
+[INFO] 21:41:43:682 FileSystem/(50680:50731): Se ha finalizado la conexion
