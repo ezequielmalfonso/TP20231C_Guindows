@@ -37,7 +37,7 @@ typedef struct {
 
 
 typedef struct{
-	char* nombre_archivo;
+	char nombre_archivo[20];
 	uint32_t puntero;
 }t_archivoAbierto;
 

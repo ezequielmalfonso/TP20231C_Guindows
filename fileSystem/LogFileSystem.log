@@ -13154,3 +13154,145 @@ BLOCK_COUNT: 65536
 [INFO] 20:24:49:217 FileSystem/(49522:49527): Se recibio F_OPEN para archivo JOHN
 [INFO] 20:24:49:217 FileSystem/(49522:49527): Se ha abierto el archivo: JOHN
 [INFO] 20:24:50:220 FileSystem/(49522:49527): Se recibio F_CLOSE con parametros JOHN,  y 
+[INFO] 20:48:24:608 FileSystem/(49522:49527): Se ha finalizado la conexion
+[INFO] 20:48:38:305 FileSystem/(49940:49940): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 20:48:38:309 FileSystem/(49940:49940): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 20:48:38:312 FileSystem/(49940:49940): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 20:48:38:313 FileSystem/(49940:49940): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 20:48:38:313 FileSystem/(49940:49940): Archivo de Bloques Cargado
+[INFO] 20:48:38:315 FileSystem/(49940:49940): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 20:48:38:386 FileSystem/(49940:49940): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 20:48:42:446 FileSystem/(49940:49940): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 20:48:44:765 FileSystem/(49940:49945): Se recibio F_EXISTS para archivo JOHN
+[INFO] 20:48:44:766 FileSystem/(49940:49945): Se recibio F_OPEN para archivo JOHN
+[INFO] 20:48:44:766 FileSystem/(49940:49945): Se ha abierto el archivo: JOHN
+[INFO] 20:48:45:769 FileSystem/(49940:49945): Se recibio F_CLOSE con parametros JOHN,  y 
+[INFO] 20:49:00:675 FileSystem/(49940:49945): Se ha finalizado la conexion
+[INFO] 21:01:34:344 FileSystem/(50103:50103): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 21:01:34:384 FileSystem/(50103:50103): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 21:01:34:399 FileSystem/(50103:50103): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 21:01:34:399 FileSystem/(50103:50103): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 21:01:34:399 FileSystem/(50103:50103): Archivo de Bloques Cargado
+[INFO] 21:01:34:400 FileSystem/(50103:50103): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:01:34:442 FileSystem/(50103:50103): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 21:01:35:914 FileSystem/(50103:50103): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 21:01:38:711 FileSystem/(50103:50108): Se recibio F_EXISTS para archivo JOHN
+[INFO] 21:01:38:717 FileSystem/(50103:50108): Se recibio F_OPEN para archivo JOHN
+[INFO] 21:01:38:717 FileSystem/(50103:50108): Se ha abierto el archivo: JOHN
+[INFO] 21:01:39:720 FileSystem/(50103:50108): Se recibio F_CLOSE con parametros JOHN,  y 
+[INFO] 21:14:49:730 FileSystem/(50103:50108): Se ha finalizado la conexion
+[INFO] 21:15:24:068 FileSystem/(50281:50281): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 21:15:24:069 FileSystem/(50281:50281): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 21:15:24:071 FileSystem/(50281:50281): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 21:15:24:071 FileSystem/(50281:50281): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 21:15:24:071 FileSystem/(50281:50281): Archivo de Bloques Cargado
+[INFO] 21:15:24:072 FileSystem/(50281:50281): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:15:24:246 FileSystem/(50281:50281): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 21:15:30:803 FileSystem/(50281:50281): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 21:15:33:589 FileSystem/(50281:50287): Se recibio F_EXISTS para archivo JOHN
+[INFO] 21:15:33:594 FileSystem/(50281:50287): Se recibio F_OPEN para archivo JOHN
+[INFO] 21:15:33:595 FileSystem/(50281:50287): Se ha abierto el archivo: JOHN
+[INFO] 21:15:34:597 FileSystem/(50281:50287): Se recibio F_CLOSE con parametros JOHN,  y 
+[INFO] 21:25:53:710 FileSystem/(50281:50287): Se ha finalizado la conexion
+[INFO] 21:26:04:159 FileSystem/(50495:50495): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 21:26:04:159 FileSystem/(50495:50495): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 21:26:04:161 FileSystem/(50495:50495): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 21:26:04:161 FileSystem/(50495:50495): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 21:26:04:161 FileSystem/(50495:50495): Archivo de Bloques Cargado
+[INFO] 21:26:04:162 FileSystem/(50495:50495): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:26:04:166 FileSystem/(50495:50495): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 21:26:05:848 FileSystem/(50495:50495): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 21:26:05:851 FileSystem/(50495:50500): Se ha finalizado la conexion
+[INFO] 21:26:11:194 FileSystem/(50495:50495): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 21:26:11:195 FileSystem/(50495:50505): Se ha finalizado la conexion
+[INFO] 21:26:41:295 FileSystem/(50511:50511): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 21:26:41:296 FileSystem/(50511:50511): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 21:26:41:297 FileSystem/(50511:50511): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 21:26:41:297 FileSystem/(50511:50511): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 21:26:41:297 FileSystem/(50511:50511): Archivo de Bloques Cargado
+[INFO] 21:26:41:297 FileSystem/(50511:50511): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:26:41:298 FileSystem/(50511:50511): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 21:26:43:984 FileSystem/(50511:50511): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 21:26:43:984 FileSystem/(50511:50516): Se ha finalizado la conexion
+[INFO] 21:27:39:415 FileSystem/(50511:50511): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 21:27:42:279 FileSystem/(50511:50522): Se recibio F_EXISTS para archivo JOHN
+[INFO] 21:27:42:279 FileSystem/(50511:50522): Se recibio F_OPEN para archivo JOHN
+[INFO] 21:27:42:279 FileSystem/(50511:50522): Se ha abierto el archivo: JOHN
+[INFO] 21:27:43:282 FileSystem/(50511:50522): Se recibio F_CLOSE con parametros JOHN,  y 
+[INFO] 21:28:16:637 FileSystem/(50511:50522): Se recibio F_EXISTS para archivo JOHN
+[INFO] 21:28:16:637 FileSystem/(50511:50522): Se recibio F_OPEN para archivo JOHN
+[INFO] 21:28:16:637 FileSystem/(50511:50522): Se ha abierto el archivo: JOHN
+[INFO] 21:28:17:639 FileSystem/(50511:50522): Se recibio F_CLOSE con parametros JOHN,  y 
+[INFO] 21:28:24:624 FileSystem/(50511:50522): Se ha finalizado la conexion

@@ -525,7 +525,8 @@ void esperar_cpu(){
 
 					// cargamos en la list de archivos abiertos por el proceso
 					archivo_proceso = malloc(sizeof(t_archivoAbierto));
-					archivo_proceso->nombre_archivo = strtok(instruccion->parametro1, "\n");
+					//archivo_proceso->nombre_archivo = strtok(instruccion->parametro1, "\n");
+					strcpy(archivo_proceso->nombre_archivo, strtok(instruccion->parametro1,"\n"));
 					archivo_proceso->puntero = 0;
 					list_add(pcb->archivos_abiertos, archivo_proceso);
 					log_info(logger, "PID: %d - Se agrego %s a la tabla de archivos abiertos (ya en TGA)", pcb->pid, archivo_proceso->nombre_archivo);
@@ -588,7 +589,8 @@ void esperar_cpu(){
 
 					}
 					archivo_proceso = malloc(sizeof(t_archivoAbierto));
-					archivo_proceso->nombre_archivo = strtok(instruccion->parametro1, "\n");
+					//archivo_proceso->nombre_archivo = strtok(instruccion->parametro1, "\n");
+					strcpy(archivo_proceso->nombre_archivo, strtok(instruccion->parametro1,"\n"));
 					archivo_proceso->puntero = 0;
 					list_add(pcb->archivos_abiertos, archivo_proceso);
 					//t_archivoAbierto* borrame = list_get(pcb->archivos_abiertos, 0);

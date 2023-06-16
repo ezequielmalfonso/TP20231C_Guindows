@@ -120,6 +120,9 @@ t_instrucciones* deserializar_instrucciones(t_buffer* buffer){
 //ENVIAR PCB KERNEL->CPU_DISPATCH
 
 bool send_proceso(int fd, PCB_t *proceso,op_code codigo) {
+	//////////////
+	//printf("\n\n######protocolo.c  send_proceso### esta empty?: %d\n", list_is_empty(proceso->archivos_abiertos));
+	//////////
     size_t size;
     void* stream = serializar_proceso(&size, proceso,codigo);
     if (send(fd, stream, size, 0) != size) {
@@ -250,6 +253,9 @@ bool recv_proceso(int fd, PCB_t* proceso){
         return false;
     }
     deserializar_proceso(stream, proceso);
+    //////////////
+    	//printf("\n\n########protocolo.c  recv_proceso### esta empty?: %d\n", list_is_empty(proceso->archivos_abiertos));
+    	//////////
     free(stream);
     return true;
 
@@ -338,6 +344,7 @@ static void deserializar_proceso(void* stream, PCB_t* proceso) {
 		stream += sizeof(aux_arch->nombre_archivo);
 		memcpy(&(aux_arch->puntero), stream, sizeof(aux_arch->puntero));
 		stream += sizeof(aux_arch->puntero);
+		list_add(proceso->archivos_abiertos, aux_arch);
 		j++;
 	}
 
