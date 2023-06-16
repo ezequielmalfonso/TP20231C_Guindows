@@ -9,8 +9,6 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include src/subdir.mk
--include objects.mk
-
 ifneq ($(MAKECMDGOALS),clean)
 ifneq ($(strip $(C++_DEPS)),)
 -include $(C++_DEPS)
@@ -54,10 +52,10 @@ all: main-build
 main-build: fileSystem
 
 # Tool invocations
-fileSystem: $(OBJS) $(USER_OBJS) makefile objects.mk $(OPTIONAL_TOOL_DEPS)
+fileSystem: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L"/home/utnso/tp-2023-1c-Guindows/shared-lib/Debug" -o "fileSystem" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L"/home/utnso/tp-2023-1c-Guindows/shared-lib/Debug" -o "fileSystem" $(OBJS) $(USER_OBJS) $(LIBS) -lcommons -lpthread -lshared-lib
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -37,6 +37,7 @@ int64_t reloj = 1;
 bool cpu_desocupado=true;
 
 t_list* tabla_global_archivos;
+char* archivoABuscar;
 
 void fifo_ready_execute(){
 	while(1){
@@ -505,72 +506,84 @@ void esperar_cpu(){
 
 				t_archivo_abierto* archivo;
 
-				// Verifico si la tabla glboal esta vacia, SI no lo esta busco si el archivo esta abierto
+				// Verifico si la tabla global esta vacia
 				if(!list_is_empty(tabla_global_archivos)){
-					// CONSULTAMOS SI ESTA ABIERTO
-					log_error(logger, "Entre en if de lista NO vacio global");
-					archivo = list_get(tabla_global_archivos,strtok(instruccion->parametro1, "\n") );
+					// CONSULTAMOS SI EL ARCHIVO ESTA ABIERTO (=EN TABLA)
+					log_warning(logger, "Hay elementos en la tabla global de archivos. Busco el %s", instruccion->parametro1);
+					archivoABuscar = strtok(instruccion->parametro1, "\n");	// global
+					bool (*aux)(void* x) = criterio_nombre_archivo;
+					archivo = list_find(tabla_global_archivos, aux);	// Devuelvo el elemento de la tabla con el nombre buscado
 				}else{
 					archivo = NULL;
-					log_error(logger, "Entre en else de lista vacio global");
+					log_warning(logger, "La tabla global de archivos esta vacia");
 				}
 
-				//Si el archivo esta abierto
+				// Si el archivo esta abierto (=EN TABLA)
 				if(archivo)
-				{ log_warning(logger, "Archivo abierto: %s",instruccion->parametro1);
+				{ log_warning(logger, "El archivo %s ya estaba abierto",instruccion->parametro1);
 					// SI esta abierto en la global: bloquemos proceso en cola de proceso bloqueados del archivo
 					//TODO tiempos HRRN
 
-					// cargamos en list ade archivo abierto por el proceso
+					// cargamos en la list de archivos abiertos por el proceso
 					t_archivoAbierto* archivo_proceso = malloc(sizeof(t_archivoAbierto));
 					archivo_proceso->nombre_archivo = strtok(instruccion->parametro1, "\n");
 					archivo_proceso->puntero = 0;
 					list_add(pcb->archivos_abiertos, archivo_proceso);
 
+					// El proceso se bloquea hasta que se libere el archivo (fclose)
+					log_warning(logger, "PID: %d - Bloqueado esperando archivo %s", pcb->pid, instruccion->parametro1);
 					queue_push(archivo->c_proc_bloqueados,pcb);
 
 
-				}else{
-					log_warning(logger, "Archivo NO ESTA abierto: %s",instruccion->parametro1);
+				}else { // El archivo no esta abierto
+					log_warning(logger, "Archivo %s no esta abierto",instruccion->parametro1);
 					send_archivo(file_system_fd,instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_EXISTS);
 					recv(file_system_fd, &mensaje , sizeof(op_code), 0);
 
-					// si el archivo existe
+					log_warning(logger, "Existencia=%d", mensaje);
+
+					// Reviso si el archivo existe en el fs
 					if(mensaje)
 					{
-						// PRIMER ENVIO PARA APERTURA DE ARCHIVO
+						// El archivo existe -> lo abro
 						send_archivo(file_system_fd,instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_OPEN);
 						recv(file_system_fd, &mensaje , sizeof(op_code), 0);
 
 						if(mensaje == F_OPEN_OK) {
 							t_archivo_abierto* archivo_nuevo = malloc(sizeof(t_archivo_abierto));
 							archivo_nuevo->nombre = strtok(instruccion->parametro1, "\n");
-							archivo->c_proc_bloqueados = queue_create();
+							archivo_nuevo->c_proc_bloqueados = queue_create();
 							list_add(tabla_global_archivos, archivo_nuevo);
-						}else{
-							log_error(logger, "PID: %d - F_OPEN ERROR: 1 %s", pcb->pid, instruccion->parametro1);
+							log_warning(logger, "El archivo %s fue abierto y cargado a la tabla global de archivos abiertos", instruccion->parametro1);
+						} else{
+							log_error(logger, "PID: %d - F_OPEN ERROR: El archivo %s existe pero no se pudo abrir", pcb->pid, instruccion->parametro1);
+							// no deberia entrar nunca
 						}
 
-					}else{
-						log_error(logger, "PID: %d - Recibo pedido de F_CREATE por archivo existente: %s", pcb->pid, instruccion->parametro1);
+					} else{	// El archivo no existe -> lo creo
+						log_info(logger, "PID: %d - Recibo pedido de F_CREATE por archivo inexistente: %s", pcb->pid, instruccion->parametro1);
 						send_archivo(file_system_fd,instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_CREATE);
+						recv(file_system_fd, &mensaje , sizeof(op_code), 0);
 
 						if(mensaje == F_CREATE_OK)
 						{
-							// PRIMER ENVIO PARA APERTURA DE ARCHIVO
-							send_archivo(file_system_fd,instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_OPEN);
+							// PRIMER ENVIO PARA APERTURA DEL ARCHIVO NUEVO
+							send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_OPEN);
 							recv(file_system_fd, &mensaje , sizeof(op_code), 0);
 							if(mensaje == F_OPEN_OK) {
 								t_archivo_abierto* archivo_nuevo = malloc(sizeof(t_archivo_abierto));
 								archivo_nuevo->nombre = strtok(instruccion->parametro1, "\n");
-								archivo->c_proc_bloqueados = queue_create();
+								archivo_nuevo->c_proc_bloqueados = queue_create();
 								list_add(tabla_global_archivos, archivo_nuevo);
-							}else{
-								log_warning(logger, "PID: %d - F_OPEN ERROR: 2 %s", pcb->pid, instruccion->parametro1);
+								log_warning(logger, "El archivo %s fue creado, abierto y cargado a la tabla global de archivos abiertos", instruccion->parametro1);
+							} else{
+								log_warning(logger, "PID: %d - F_OPEN ERROR: El archivo %s fue creado pero no se pudo abrir", pcb->pid, instruccion->parametro1);
+								// no deberia entrar nunca
 							}
 
 						}else{
-							log_error(logger, "PID: %d - F_OPEN ERROR: 3 %s", pcb->pid, instruccion->parametro1);
+							log_error(logger, "PID: %d - F_OPEN ERROR: No se pudo hacer el F_CREATE del archivo nuevo: %s", pcb->pid, instruccion->parametro1);
+							// falta de espacio o se intento crear un archivo ya existente (error)
 						}
 
 					}
@@ -797,5 +810,12 @@ void esperarRespuestaFS(){
 	}
 
 
+}
+
+bool criterio_nombre_archivo(t_archivo_abierto* archivo) {
+	if(strcmp(archivo->nombre, archivoABuscar)){
+		return false;
+	}
+	return true;
 }
 

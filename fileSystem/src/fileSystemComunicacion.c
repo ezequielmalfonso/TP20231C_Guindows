@@ -29,6 +29,8 @@ static void procesar_conexion(void* void_args) {
 	 }
 
 	 char parametro1[20], parametro2[20], parametro3[20];
+	 char* pathArchivo;
+	 char* nombre;
 
 	 switch (cop) {
 	 	 FILE* fd_archivo; // antes era un int y se usaba open, ahora fopen
@@ -38,11 +40,14 @@ static void procesar_conexion(void* void_args) {
 
 	 	 case F_EXISTS:
 	 		 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
-			 log_info(logger, "Se recibio F_EXISTS con parametros %s, %s y %s", parametro1, parametro2, parametro3);
+	 		 nombre = strtok(parametro1, "\n");
+			 log_info(logger, "Se recibio F_EXISTS para archivo %s", parametro1);
+			 pathArchivo = string_from_format("%s/%s", configuracion->PATH_FCB, nombre);
 
-			 if(recorrerFCBs(configuracion->PATH_FCB,strtok(parametro1, "\n")) == -1){
-				 cop=0;
-				 send(cliente_socket, &cop, sizeof(op_code), 0);
+			 //if(recorrerFCBs(configuracion->PATH_FCB,strtok(parametro1, "\n")) == -1){
+			 if(!fileExiste(pathArchivo)){
+			 	 cop=0;
+			 	 send(cliente_socket, &cop, sizeof(op_code), 0);
 
 			 }else {
 				 cop=1;
@@ -53,26 +58,30 @@ static void procesar_conexion(void* void_args) {
 	 		  break;
 		 case F_OPEN:
 			 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
-			 log_info(logger, "Se recibio F_OPEN con parametros %s, %s y %s", parametro1, parametro2, parametro3);
+			 nombre = strtok(parametro1, "\n");
+			 log_info(logger, "Se recibio F_OPEN para archivo %s", parametro1);
+			 pathArchivo = string_from_format("%s/%s", configuracion->PATH_FCB, nombre);
 
-			 if(recorrerFCBs(configuracion->PATH_FCB,strtok(parametro1, "\n")) == -1){
+			// if(recorrerFCBs(configuracion->PATH_FCB, strtok(parametro1, "\n")) == -1){
+			if(!fileExiste(pathArchivo)){
 				 cop=F_OPEN_FAIL;
 				 send(cliente_socket,&cop, sizeof(op_code), 0);
 				 log_info(logger, "El archivo %s no existe", parametro1);
 			 }	else {
 				 cop=F_OPEN_OK;
 				 send(cliente_socket,&cop, sizeof(op_code), 0);
-				 log_info(logger, "Abrir archivo: %s", parametro1);
+				 log_info(logger, "Se ha abierto el archivo: %s", parametro1);
 			 }
 
 			 break;
 
 		 case F_CREATE:
+			 log_info(logger, "F_CREATE");
 			 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
-			 char* nombre = strtok(parametro1, "\n");
+			 nombre = strtok(parametro1, "\n");
 			 log_info(logger, "Crear archivo: %s", parametro1);
 			 //fd_archivo = open(parametro1, O_CREAT);
-			 char* pathArchivo = string_from_format("/home/utnso/tp-2023-1c-Guindows/fs/fcb/%s.txt", nombre);
+			 pathArchivo = string_from_format("%s/%s", configuracion->PATH_FCB, nombre);
 			 if(fileExiste(pathArchivo)) {
 				 log_error(logger, "Ya existe %s", pathArchivo);
 				 cop = F_CREATE_FAIL;
