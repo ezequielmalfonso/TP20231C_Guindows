@@ -49,6 +49,7 @@ extern t_list* list_blocked;
 extern t_tiempos_rafaga_anterior raf_anterior;
 extern t_list* list_rafa_anterior;
 extern t_list* tabla_global_archivos;
+
 //t_dictionary* iteracion_blocked; no se que chota es
 
 void esperar_cpu();

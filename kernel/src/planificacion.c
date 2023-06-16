@@ -41,6 +41,8 @@ char* archivoABuscar;
 t_archivo_abierto* archivo;
 t_archivoAbierto* archivo_proceso;
 
+op_code cop;
+
 void fifo_ready_execute(){
 	while(1){
 	    //log_info(logger,"PID: fifo_ready_execute");
@@ -207,7 +209,7 @@ void inicializarPlanificacion(){
 void esperar_cpu(){
 	while(1){
 		sem_wait(&s_esperar_cpu); //--> se bloquea
-		op_code cop;
+
 		PCB_t* pcb         = pcb_create();
 		PCB_t* pcb_blocked = pcb_create();
 		//pthread_mutex_lock(&mx_cpu);
@@ -310,12 +312,8 @@ void esperar_cpu(){
 					 break;
 				 } else {
 					 log_error(logger, "PID: %d - Recibo pedido de WAIT por recurso desconocido: %s", pcb->pid, instruccion->parametro1);
-					 cop = EXIT;	// Lo mismo que un exit
-					 send(pcb->cliente_fd,&cop,sizeof(op_code),0);
 					 motivoExit = "WAIT por Recurso Inexistente";
 					 execute_a_exit(pcb,motivoExit);
-					 sem_post(&s_cpu_desocupado);
-					 sem_post(&s_ready_execute);
 					 break;
 				 }
 
@@ -405,21 +403,14 @@ void esperar_cpu(){
 					break;
 				} else {
 					log_error(logger, "PID: %d - Recibo pedido de SIGNAL por recurso desconocido: %s", pcb->pid, instruccion->parametro1);
-					cop = EXIT;	// no hay break asi que sigue hasta que lo encuentra (sin comparar case)
-					send(pcb->cliente_fd,&cop,sizeof(op_code),0);
 					motivoExit = "SIGNAL por Recurso Inexistente";
 					execute_a_exit(pcb,motivoExit);
-					sem_post(&s_cpu_desocupado);
-					sem_post(&s_ready_execute);
 					break;
 				}
 
 			case EXIT:	// Segundo exit
-				send(pcb->cliente_fd,&cop,sizeof(op_code),0);
 				motivoExit = "POR FIN";
 				execute_a_exit(pcb,motivoExit);
-				sem_post(&s_cpu_desocupado);
-				sem_post(&s_ready_execute);
 				break;
 
 			case YIELD:
@@ -452,9 +443,9 @@ void esperar_cpu(){
 				 queue_push(cola_ready,pcb);
 				 pthread_mutex_unlock(&mx_cola_ready);
 
-				 // TODO para listar los pids despues de entrar a ready
-								 char* pids = procesosEnReady(cola_ready);
-								 log_info(logger, "Ingreso a Ready algoritmo %s - PIDS: [%s] ", configuracion->ALGORITMO_PLANIFICACION, pids);
+				 // Lista los pids despues de entrar a ready
+				char* pids = procesosEnReady(cola_ready);
+				log_info(logger, "Ingreso a Ready algoritmo %s - PIDS: [%s] ", configuracion->ALGORITMO_PLANIFICACION, pids);
 
 
 				 sem_post(&s_cont_ready);
@@ -580,7 +571,10 @@ void esperar_cpu(){
 
 						}else{
 							log_error(logger, "PID: %d - F_OPEN ERROR: No se pudo hacer el F_CREATE del archivo nuevo: %s", pcb->pid, instruccion->parametro1);
-							// falta de espacio o se intento crear un archivo ya existente (error)
+							// TODO ?falta de espacio o se intento crear un archivo ya existente (error)
+							motivoExit = "Falta de espacio en FS";
+							execute_a_exit(pcb,motivoExit);
+
 						}
 
 					}
@@ -614,7 +608,8 @@ void esperar_cpu(){
 					archivo = list_find(tabla_global_archivos, aux1);
 				} else {	// No esta en la TGA
 					log_error(logger, "PID: %d - Pedido de F_CLOSE por archivo no abierto"); // No esta abierto. Tambien puede que no exista
-					//TODO: EXIT-------------------------------##########################################
+					motivoExit = "No esta abierto en tabla global";
+					execute_a_exit(pcb,motivoExit);
 					break;
 				}
 
@@ -629,7 +624,8 @@ void esperar_cpu(){
 					archivoAux = list_find(pcb->archivos_abiertos, aux2);
 					if(archivoAux == NULL){
 						log_error(logger, "PID: %d - Pedido de F_CLOSE por archivo no abierto por el proceso: %s", pcb->pid, instruccion->parametro1);
-						//TODO: EXIT-------------------------------###############################################
+						motivoExit = "No esta abierto en tabla del proceso";
+						execute_a_exit(pcb,motivoExit);
 						break;
 					}
 					// Si lo encuentro, saco el archivo de la tabla de archivos del proceso
@@ -637,7 +633,8 @@ void esperar_cpu(){
 					log_info(logger, "PID: %d - Se elimino %s de la tabla de archivos abiertos", pcb->pid, archivoAux->nombre_archivo);
 				} else {
 					log_error(logger, "PID: %d - Pedido de F_CLOSE sin archivos abiertos (tabla vacia)", pcb->pid);
-					//TODO: EXIT-------------------------------###############################################con semaforos tienen que ser (cpu desocupaado y esperar cpu)
+					motivoExit = "Tabla global vacia";
+					execute_a_exit(pcb,motivoExit);
 					break;
 				}
 
@@ -651,6 +648,9 @@ void esperar_cpu(){
 					pthread_mutex_lock(&mx_cola_ready);
 					queue_push(cola_ready, procesoBloqueado);
 					pthread_mutex_unlock(&mx_cola_ready);
+					// Lista los pids despues de entrar a ready
+				    char* pids = procesosEnReady(cola_ready);
+					log_info(logger, "Ingreso a Ready algoritmo %s - PIDS: [%s] ", configuracion->ALGORITMO_PLANIFICACION, pids);
 					log_info(logger, "PID: %d - Estado anterior: Blocked por archivo - Estado actual: READY", procesoBloqueado->pid);//TODO: listar cola ready?##########
 					sem_post(&s_cont_ready);
 					sem_post(&s_ready_execute);
@@ -742,6 +742,8 @@ void esperar_cpu(){
 }
 
 void execute_a_exit(PCB_t* pcb, char* motivoExit){
+	cop = EXIT;
+	send(pcb->cliente_fd,&cop,sizeof(op_code),0);
 	//pthread_mutex_lock(&mx_log);
     log_info(logger,"PID: %d - Estado Anterior: EXECUTE - Estado Actual: EXIT", pcb->pid);
     log_info(logger,"Finaliza el proceso %d - Motivo: %s", pcb->pid, motivoExit);
@@ -750,6 +752,8 @@ void execute_a_exit(PCB_t* pcb, char* motivoExit){
     //liberar_espacio_de_memoria(PCB); Liberamos las estructructuras de memoria
     pcb_destroy(pcb);
     //avisar_consola_finalizacion(); Funcion que le avisa a la consola que se finalizo correctamente
+    sem_post(&s_cpu_desocupado);
+    sem_post(&s_ready_execute);
 }
 
 void bloqueando(PCB_t* pcb){
