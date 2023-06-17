@@ -14,8 +14,9 @@
 #include <commons/config.h>
 #include <commons/bitarray.h>
 #include <fcntl.h>
+#include "protocolo.h"
 
-#include "fileSystemComunicacion.h"
+//#include "fileSystemComunicacion.h"
 #include "socket.h"
 #include "fileSystemConfig.h"
 #include "sys/mman.h"
@@ -26,7 +27,7 @@ typedef struct {
 } t_super_bloque;
 
 typedef struct {
-	char* nombre_archivo;
+	char nombre_archivo[20];
 	uint32_t tamanio_archivo;
 	uint32_t puntero_directo;
 	uint32_t puntero_indirecto;
@@ -37,5 +38,6 @@ extern t_super_bloque* configuracionSuperBloque;
 int fileExiste(char* nombreArchivo);
 
 extern int fileSystemServer;
+extern void* fileData;
 
 #endif /* FILESYSTEM_H_ */

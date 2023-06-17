@@ -54,6 +54,7 @@ extern t_list* tabla_global_archivos;
 
 void esperar_cpu();
 void bloqueando(PCB_t*);
+void bloqueando_por_filesystem(PCB_t*);
 void inicializarPlanificacion();
 void execute_a_exit(PCB_t*, char*);
 bool menor(PCB_t* a,PCB_t* b);
@@ -63,6 +64,8 @@ double obtenerEstimadoRafaga(PCB_t* a,uint32_t estimadoInicial, double alfa);
 char* procesosEnReady(t_queue*);
 bool criterio_nombre_archivo(t_archivo_abierto* archivo);
 bool criterio_nombre_archivo_proceso(t_archivoAbierto* archivo);
+void esperar_filesystem(PCB_t* pcb);
+
 
 
 

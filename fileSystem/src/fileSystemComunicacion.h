@@ -23,6 +23,7 @@
 #include <dirent.h>
 
 extern int cliente_socket;
+extern t_FCB* FCB_archivo;
 
 
 #endif /* FILESYSTEMCOMUNICACION_H_ */

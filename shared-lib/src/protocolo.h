@@ -60,7 +60,9 @@ typedef enum {
 	OK,
 	F_CREATE_FAIL,
 	F_CREATE_OK,
-	F_EXISTS
+	F_EXISTS,
+	F_TRUNCATE_OK,
+	F_TRUNCATE_FAIL
 	}op_code;
 
 typedef struct {

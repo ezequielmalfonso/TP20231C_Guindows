@@ -13,6 +13,8 @@
 #include <stdlib.h>
 #include "commons/log.h"
 #include "commons/config.h"
+#include "commons/bitarray.h"
+
 
 typedef struct {
 	char* IP_MEMORIA;
@@ -25,9 +27,14 @@ typedef struct {
 	uint32_t RETARDO_ACCESO_BLOQUE;
 } t_config_file_system;
 
+
+
 extern t_config_file_system * configuracion;
 extern t_config * fd_configuracion;
 extern t_log * logger;
+extern t_config* FCB;
+//extern void* fileData;
+
 
 int cargarConfiguracion();
 

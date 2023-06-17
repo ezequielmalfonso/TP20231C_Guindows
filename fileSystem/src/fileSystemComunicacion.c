@@ -13,6 +13,7 @@ typedef struct {
     char* server_name;
 } t_procesar_conexion_args;
 
+t_FCB* FCB_archivo;
 
 static void procesar_conexion(void* void_args) {
  t_procesar_conexion_args* args = (t_procesar_conexion_args*) void_args;
@@ -32,6 +33,8 @@ static void procesar_conexion(void* void_args) {
 	 char* pathArchivo;
 	 char* nombre;
 
+	 pathArchivo = string_from_format("%s/%s", configuracion->PATH_FCB, nombre);
+
 	 switch (cop) {
 	 	 FILE* fd_archivo; // antes era un int y se usaba open, ahora fopen
 	 	 case DEBUG:
@@ -42,7 +45,6 @@ static void procesar_conexion(void* void_args) {
 	 		 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
 	 		 nombre = strtok(parametro1, "\n");
 			 log_info(logger, "Se recibio F_EXISTS para archivo %s", parametro1);
-			 pathArchivo = string_from_format("%s/%s", configuracion->PATH_FCB, nombre);
 
 			 //if(recorrerFCBs(configuracion->PATH_FCB,strtok(parametro1, "\n")) == -1){
 			 if(!fileExiste(pathArchivo)){
@@ -60,7 +62,7 @@ static void procesar_conexion(void* void_args) {
 			 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
 			 nombre = strtok(parametro1, "\n");
 			 log_info(logger, "Se recibio F_OPEN para archivo %s", parametro1);
-			 pathArchivo = string_from_format("%s/%s", configuracion->PATH_FCB, nombre);
+
 
 			// if(recorrerFCBs(configuracion->PATH_FCB, strtok(parametro1, "\n")) == -1){
 			if(!fileExiste(pathArchivo)){
@@ -80,8 +82,7 @@ static void procesar_conexion(void* void_args) {
 			 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
 			 nombre = strtok(parametro1, "\n");
 			 log_info(logger, "Crear archivo: %s", parametro1);
-			 //fd_archivo = open(parametro1, O_CREAT);
-			 pathArchivo = string_from_format("%s/%s", configuracion->PATH_FCB, nombre);
+
 			 if(fileExiste(pathArchivo)) {
 				 log_error(logger, "Ya existe %s", pathArchivo);
 				 cop = F_CREATE_FAIL;
@@ -135,6 +136,48 @@ static void procesar_conexion(void* void_args) {
 		 case F_TRUNCATE:
 			 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
 			 log_info(logger, "Se recibio F_TRUNCATE con parametros %s, %s y %s", parametro1, parametro2, parametro3);
+			 sleep(3);
+			 datosFCB(pathArchivo);
+
+			 // 1 - determinar cantidad de bloques que necesita el archivo con el nuevo tamaño
+			 // 2 TAMAÑO_NUEVO - TAMAÑO ACTUAL,
+			 //   SI la diferencia es < 0 ==> resto bloques
+			 //   SI la diferencia es > 0 ==> SUMO bloques
+			 //   SI es cero no hago nada
+			 // 3 - Determinar cuantos bloques libres hay en el bitmap
+			 int i;
+			 int bloques_libres = 0;
+			 int tamano_bitmap = bitarray_get_max_bit(fileData);
+
+			 for(i = 0; i <  tamano_bitmap ; i++ )
+			 {
+				 if( !bitarray_test_bit(fileData,  i)){
+					 bloques_libres++;
+				 }
+			 }
+
+			 log_warning(logger, "bloques libres: %d" , bloques_libres );
+
+
+
+
+
+
+
+/*
+
+
+			 //Guarda los datos de la variable struct en FCB del archivo
+			 config_set_value (FCB, "NOMBRE_ARCHIVO", FCB_archivo->nombre_archivo);
+			 config_set_value (FCB, "TAMANIO_ARCHIVO", FCB_archivo->tamanio_archivo);
+			 config_set_value (FCB, "PUNTERO_DIRECTO", FCB_archivo->puntero_directo);
+			 config_set_value (FCB, "PUNTERO_INDIRECTO", FCB_archivo->puntero_indirecto);*/
+
+		//	 FCB_archivo->tamanio_archivo = atoi(strtok(parametro3, "\n"));
+			 config_save_in_file(FCB, pathArchivo);
+
+			 cop = F_TRUNCATE_OK;
+			 send(cliente_socket, &cop, sizeof(op_code), 0);
 			 break;
 
 		 case F_READ:

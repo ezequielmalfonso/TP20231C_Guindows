@@ -24,12 +24,14 @@ pthread_mutex_t mx_instancias       = PTHREAD_MUTEX_INITIALIZER;
 //pthread_mutex_t mx_interrupt 		= PTHREAD_MUTEX_INITIALIZER;
 //pthread_mutex_t mx_hilo_pageFault 	= PTHREAD_MUTEX_INITIALIZER;
 
-sem_t s_pasaje_a_ready, s_ready_execute,s_cpu_desocupado,s_cont_ready,s_multiprogramacion_actual,s_esperar_cpu,s_pcb_desalojado,s_blocked,s_io;
+sem_t s_pasaje_a_ready, s_ready_execute,s_cpu_desocupado,s_cont_ready,s_multiprogramacion_actual,s_esperar_cpu,s_pcb_desalojado,s_blocked,s_io, s_blocked_fs;
 sem_t s_blocked_rec;
 t_queue* cola_new;
 t_queue* cola_ready;
 t_queue* cola_ready_sec;
 t_list* list_blocked;
+t_queue* cola_blocked_respuesta_fs;
+t_queue* cola_blocked_fs_libre;
 //t_tiempos_rafaga_anterior raf_anterior;
 t_list* list_rafa_anterior;
 int64_t reloj = 1;
@@ -172,6 +174,8 @@ void inicializarPlanificacion(){
 	cola_new		= queue_create();
 	cola_ready		= queue_create();
 	cola_ready_sec	= queue_create();
+	cola_blocked_respuesta_fs = queue_create();
+	cola_blocked_fs_libre     = queue_create();
 
 	tabla_global_archivos = list_create();
 
@@ -180,6 +184,7 @@ void inicializarPlanificacion(){
 	sem_init(&s_esperar_cpu, 0, 0);
 	sem_init(&s_cont_ready,0,0);
 	sem_init(&s_io, 0, 1);
+
 
 /*	for(int i=0;i<10;i++){
 		sem_init(&s_ios[i], 0, 1);
@@ -506,7 +511,7 @@ void esperar_cpu(){
 
 				// Si el archivo esta abierto (=EN TABLA)
 				if(archivo)
-				{ log_warning(logger, "El archivo %s ya estaba abierto en la TGA",instruccion->parametro1);
+				{  log_warning(logger, "El archivo %s ya estaba abierto en la TGA",instruccion->parametro1);
 					// SI esta abierto en la global: bloquemos proceso en cola de proceso bloqueados del archivo
 					//TODO tiempos HRRN
 
@@ -666,9 +671,32 @@ void esperar_cpu(){
 
 				break;
 			case F_SEEK:
-				log_info(logger, "PID: %d - Recibo pedido de F_SEEK por: %s", pcb->pid, instruccion->parametro1);
+				//log_info(logger, "PID: %d - Recibo pedido de F_SEEK por: %s - puntero %s", pcb->pid, instruccion->parametro1, instruccion->parametro2);
+				// LOG obligatorio
+				log_info(logger, "PID: %d - Actualizar puntero Archivo:: %s - Puntero: %s", pcb->pid, instruccion->parametro1, instruccion->parametro2);
 
-				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_SEEK);
+				// Tabla de archivos del proceso: verifico que el archivo este abierto y actualizo el valor del puntero
+				if(!list_is_empty(pcb->archivos_abiertos)) {	//
+					log_error(logger, "Entro al if");
+					archivoABuscar = strtok(instruccion->parametro1, "\n");	// global
+					bool (*aux3)(void* x) = criterio_nombre_archivo_proceso;	// se puede meter como parametro directamente de alguna forma y no tener que usar aux2
+					t_archivoAbierto* archivoAux2 = NULL;
+					archivoAux2 = list_find(pcb->archivos_abiertos, aux3);
+					if(archivoAux2 == NULL){
+						log_error(logger, "PID: %d - Pedido de F_SEEK por archivo no abierto por el proceso: %s", pcb->pid, instruccion->parametro1);
+						motivoExit = "No esta abierto en tabla del proceso";
+						execute_a_exit(pcb,motivoExit);
+						break;
+					}
+					// Si lo encuentro, actualizo el puntero puntero en la lista de archivos abiertos del proceso
+					archivoAux2->puntero = atoi(strtok(instruccion->parametro2,"\n"));
+					//log_info(logger, "PID: %d - Se elimino %s de la tabla de archivos abiertos", pcb->pid, archivoAux->nombre_archivo);
+				} else {
+					log_error(logger, "PID: %d - Pedido de F_CLOSE sin archivos abiertos (tabla vacia)", pcb->pid);
+					motivoExit = "Tabla global vacia";
+					execute_a_exit(pcb,motivoExit);
+					break;
+				}
 
 				pthread_mutex_lock(&mx_cola_ready);
 				send_proceso(cpu_fd, pcb,DISPATCH);
@@ -679,15 +707,29 @@ void esperar_cpu(){
 				break;
 			case F_TRUNCATE:
 				log_info(logger, "PID: %d - Recibo pedido de F_TRUNCATE por: %s", pcb->pid, instruccion->parametro1);
-
+				sem_post(&s_blocked_fs);
 				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_TRUNCATE);
 
-				pthread_mutex_lock(&mx_cola_ready);
-				send_proceso(cpu_fd, pcb,DISPATCH);
-				pthread_mutex_unlock(&mx_cola_ready);
+				while( aux_list_raf_ant!=NULL )
+				{
+				   t_tiempos_rafaga_anterior* aux_list_raf_ant2 = aux_list_raf_ant->data;
+
+				   if( aux_list_raf_ant2->pid ==  pcb->pid)
+				   {
+					 aux_list_raf_ant2->tiempo_out_exec =  temporal_gettime(reloj_inicio);
+					 double estimadorNuevo = obtenerEstimadoRafaga(pcb, configuracion->ESTIMACION_INICIAL, configuracion->HRRN_ALFA);
+					 pcb->estimado_proxima_rafaga = estimadorNuevo;
+					 break;
+				   }
+				   aux_list_raf_ant = aux_list_raf_ant->next;
+				}
+
+				pthread_t hilo_bloqueado_truncate;
+				pthread_create(&hilo_bloqueado_truncate,NULL,(void*)bloqueando_por_filesystem,pcb);
+				pthread_detach(hilo_bloqueado_truncate);
 
 				sem_post(&s_cpu_desocupado);
-				sem_post(&s_esperar_cpu);
+
 				break;
 			case F_READ:
 				log_info(logger, "PID: %d - Recibo pedido de F_READ por: %s", pcb->pid, instruccion->parametro1);
@@ -743,6 +785,10 @@ void esperar_cpu(){
 
 void execute_a_exit(PCB_t* pcb, char* motivoExit){
 	cop = EXIT;
+
+	// TODO liberar_recursos(pcb);  PEGARLO A LA LISTA DE TIEMPOS
+	// TODO liberar_archivo(pcb);
+
 	send(pcb->cliente_fd,&cop,sizeof(op_code),0);
 	//pthread_mutex_lock(&mx_log);
     log_info(logger,"PID: %d - Estado Anterior: EXECUTE - Estado Actual: EXIT", pcb->pid);
@@ -771,6 +817,8 @@ void bloqueando(PCB_t* pcb){
 		//sem_wait(&s_ios[i]);
 		sem_wait(&s_io);
 		ejecutar_io(pcb,i);
+	}else if(!strcmp(inst->comando,"F_TRUNCATE")){
+		esperar_filesystem(pcb);
 	}
 }
 
@@ -868,8 +916,6 @@ void esperarRespuestaFS(){
 			//Por ahora nada
 		}
 	}
-
-
 }
 
 bool criterio_nombre_archivo(t_archivo_abierto* archivo) {	// solo para TGA
@@ -884,4 +930,64 @@ bool criterio_nombre_archivo_proceso(t_archivoAbierto* archivo) {	// solo para l
 	}
 	return true;
 }
+
+void bloqueando_por_filesystem(PCB_t* pcb){
+	int i = 0;
+	op_code cop;
+	sem_wait(&s_blocked);
+	INSTRUCCION* inst = list_get(pcb->instrucciones, pcb->pc - 1);
+
+	log_info(logger, "Instruccion numer %d",(pcb->pc-1));
+
+	if(!strcmp(inst->comando,"F_TRUNCATE") || !strcmp(inst->comando,"F_READ") || !strcmp(inst->comando,"F_WRITE")){
+		esperar_filesystem(pcb);
+	}
+
+}
+
+
+void esperar_filesystem(PCB_t* pcb){
+
+	op_code mensaje;
+
+	recv(file_system_fd, &mensaje , sizeof(op_code), 0);
+
+	if(mensaje == F_TRUNCATE_OK){
+
+		pcb->tiempo_llegada_a_ready = temporal_gettime(reloj_inicio);
+		pthread_mutex_lock(&mx_cola_ready);
+		queue_push(cola_ready, pcb);
+		pthread_mutex_unlock(&mx_cola_ready);
+
+		sem_post(&s_ready_execute);
+		sem_post(&s_cont_ready);
+	}else{
+		char* motivoExit = "ERROR de TRUNCATE";
+		execute_a_exit(pcb,motivoExit);
+
+		sem_post(&s_ready_execute);
+
+	}
+
+
+
+}
+
+
+
+void liberar_archivo(PCB_t* pcb){
+	//TODO
+	if(!list_is_empty(pcb->archivos_abiertos)){
+
+	}
+}
+
+
+// TODO
+void liberar_recursos(pcb){
+}
+
+
+
+
 

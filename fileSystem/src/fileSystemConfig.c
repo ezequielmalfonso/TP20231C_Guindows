@@ -12,6 +12,8 @@ t_config_file_system * configuracion;
 t_config * fd_configuracion;
 t_log * logger;
 
+t_config* FCB;
+
 int configValida(t_config* fd_configuracion) {
 	return (config_has_property(fd_configuracion,  "IP_MEMORIA")
 		&& config_has_property(fd_configuracion,  "PUERTO_MEMORIA")
@@ -68,6 +70,47 @@ int cargarConfiguracion() {
 
 	return 0;
 }
+
+
+int configuracionValidaFCB(t_config* FCB){
+	return (config_has_property(FCB,"NOMBRE_ARCHIVO")
+			&& config_has_property(FCB,"TAMANIO_ARCHIVO")
+			&& config_has_property(FCB,"PUNTERO_DIRECTO")
+			&& config_has_property(FCB,"PUNTERO_INDIRECTO")
+			);
+}
+
+int datosFCB(char* path){
+
+	FCB_archivo = malloc(sizeof(t_FCB));
+
+	FCB = config_create(path);
+	if(FCB == NULL){
+		FCB = config_create(path);
+	}
+	if(FCB == NULL || !configuracionValidaFCB(FCB)){
+		log_error(logger,"FCB invalido");
+	}
+
+	FCB_archivo->nombre_archivo = config_get_string_value (FCB,"NOMBRE_ARCHIVO");
+	FCB_archivo->tamanio_archivo = config_get_int_value (FCB,"TAMANIO_ARCHIVO");
+	FCB_archivo->puntero_directo = config_get_int_value (FCB, "PUNTERO_DIRECTO");
+	FCB_archivo->puntero_indirecto = config_get_int_value (FCB,"PUNTERO_INDIRECTO");
+
+	log_info(logger,
+			"\nNOMBRE_ARCHIVO: %s \n"
+			"TAMANIO_ARCHIVO: %d"
+			"PUNTERO_DIRECTO: %d"
+			"PUNTERO_INDIRECTO: %d",
+			FCB_archivo->nombre_archivo,
+			FCB_archivo->tamanio_archivo,
+			FCB_archivo->puntero_directo,
+			FCB_archivo->puntero_indirecto
+	);
+
+	return 0;
+}
+
 
 void limpiarConfiguracion() {
 	free(configuracion);
