@@ -26,16 +26,12 @@ typedef struct {
 	uint32_t BLOCK_COUNT;
 } t_super_bloque;
 
-typedef struct {
-	char nombre_archivo[20];
-	uint32_t tamanio_archivo;
-	uint32_t puntero_directo;
-	uint32_t puntero_indirecto;
-} t_FCB;
 
 extern t_super_bloque* configuracionSuperBloque;
 
 int fileExiste(char* nombreArchivo);
+int cargarArchivoBloques(char *path, int BLOCK_SIZE, int BLOCK_COUNT);
+int cargarSuperBloque(char *path);
 
 extern int fileSystemServer;
 extern void* fileData;
