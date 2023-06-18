@@ -32,8 +32,9 @@ extern t_super_bloque* configuracionSuperBloque;
 int fileExiste(char* nombreArchivo);
 int cargarArchivoBloques(char *path, int BLOCK_SIZE, int BLOCK_COUNT);
 int cargarSuperBloque(char *path);
+int iniciarBitmap (char* path ,uint32_t block_count );
 
 extern int fileSystemServer;
-extern void* fileData;
+
 
 #endif /* FILESYSTEM_H_ */

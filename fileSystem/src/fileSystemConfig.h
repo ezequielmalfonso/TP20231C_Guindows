@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
+#include <string.h>
 #include "commons/log.h"
 #include "commons/config.h"
 #include "commons/bitarray.h"
@@ -38,10 +39,10 @@ extern t_config_file_system * configuracion;
 extern t_config * fd_configuracion;
 extern t_log * logger;
 extern t_config* FCB;
-//extern void* fileData;
 extern t_FCB* FCB_archivo;//repetido
 
 
+int datosFCB(char* path);
 int cargarConfiguracion();
 
 #endif /* FILESYSTEMCONFIG_H_ */

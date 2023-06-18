@@ -87,7 +87,7 @@ static void procesar_conexion(void* void_args) {
 
 			 if(fileExiste(pathArchivo)) {
 				 log_error(logger, "Ya existe %s", pathArchivo);
-				 cop = F_CREATE_FAIL;
+				 cop = F_CREATE_FAIL;	//No debe entrar nunca por este
 				 send(cliente_socket, &cop, sizeof(op_code), 0);
 				 break;
 			 }
@@ -98,7 +98,7 @@ static void procesar_conexion(void* void_args) {
 			 }
 
 			 free(pathArchivo);
-			 char* linea = string_from_format("NOMRE_ARCHIVO=%s\n", nombre);
+			 char* linea = string_from_format("NOMBRE_ARCHIVO=%s\n", nombre);
 			 fwrite(linea, sizeof(char), string_length(linea), fcb_new);
 			 free(linea);
 			 linea = string_from_format("TAMANIO_ARCHIVO=%s\n", "0");
@@ -110,6 +110,7 @@ static void procesar_conexion(void* void_args) {
 			 linea = string_from_format("PUNTERO_INDIRECTO=%s", "hola");
 			 fwrite(linea, sizeof(char), string_length(linea), fcb_new);
 			 free(linea);
+
 			 fclose(fcb_new);
 
 			 log_info(logger, "FCB de %s creado correctamente", nombre);
@@ -139,7 +140,13 @@ static void procesar_conexion(void* void_args) {
 			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
 			 log_info(logger, "Se recibio F_TRUNCATE con parametros %s, %s y %s", parametro1, parametro2, parametro3);
 			 sleep(3);
-			 datosFCB(pathArchivo);
+			 int p = datosFCB(pathArchivo);
+			 if(p == -1) {	// No deberia entrar nunca
+				log_error(logger, "Error inesperado antes de cargar FCB");
+				cop=F_TRUNCATE_FAIL;
+				send(cliente_socket, &cop, sizeof(op_code), 0);
+				break;
+			 }
 
 			 // 1 - determinar cantidad de bloques que necesita el archivo con el nuevo tamaño
 			 // 2 TAMAÑO_NUEVO - TAMAÑO ACTUAL,
@@ -149,11 +156,12 @@ static void procesar_conexion(void* void_args) {
 			 // 3 - Determinar cuantos bloques libres hay en el bitmap
 			 int i;
 			 int bloques_libres = 0;
-			 int tamano_bitmap = bitarray_get_max_bit(fileData);
+			 long int tamano_bitmap = bitarray_get_max_bit(s_bitmap);	// tambien se puede saber con la cantidad de bloques / 8
+			 log_info(logger, "El tamanio del bitmap en bits es: %d", tamano_bitmap);
 
 			 for(i = 0; i <  tamano_bitmap ; i++ )
 			 {
-				 if( !bitarray_test_bit(fileData,  i)){
+				 if( !bitarray_test_bit(s_bitmap,  i)){
 					 bloques_libres++;
 				 }
 			 }
@@ -164,19 +172,16 @@ static void procesar_conexion(void* void_args) {
 
 
 
-
-
-/*
-
-
 			 //Guarda los datos de la variable struct en FCB del archivo
+			 /*
 			 config_set_value (FCB, "NOMBRE_ARCHIVO", FCB_archivo->nombre_archivo);
 			 config_set_value (FCB, "TAMANIO_ARCHIVO", FCB_archivo->tamanio_archivo);
 			 config_set_value (FCB, "PUNTERO_DIRECTO", FCB_archivo->puntero_directo);
-			 config_set_value (FCB, "PUNTERO_INDIRECTO", FCB_archivo->puntero_indirecto);*/
-
-		//	 FCB_archivo->tamanio_archivo = atoi(strtok(parametro3, "\n"));
+			 config_set_value (FCB, "PUNTERO_INDIRECTO", FCB_archivo->puntero_indirecto);
 			 config_save_in_file(FCB, pathArchivo);
+			 */
+		//	 FCB_archivo->tamanio_archivo = atoi(strtok(parametro3, "\n"));
+
 
 			 cop = F_TRUNCATE_OK;
 			 send(cliente_socket, &cop, sizeof(op_code), 0);

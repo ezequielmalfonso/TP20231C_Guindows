@@ -84,31 +84,34 @@ int datosFCB(char* path){
 
 	FCB_archivo = malloc(sizeof(t_FCB));
 
+	log_info(logger, "Cargando fcb %s", path);
 	FCB = config_create(path);
 	if(FCB == NULL){
 		FCB = config_create(path);
 	}
 	if(FCB == NULL || !configuracionValidaFCB(FCB)){
 		log_error(logger,"FCB invalido");
+		return -1;
 	}
 
 	strcpy(FCB_archivo->nombre_archivo, config_get_string_value (FCB,"NOMBRE_ARCHIVO"));
-	strcpy(FCB_archivo->tamanio_archivo, config_get_int_value (FCB,"TAMANIO_ARCHIVO"));
-	strcpy(FCB_archivo->puntero_directo, config_get_int_value (FCB, "PUNTERO_DIRECTO"));
-	strcpy(FCB_archivo->puntero_indirecto, config_get_int_value (FCB,"PUNTERO_INDIRECTO"));
+	FCB_archivo->tamanio_archivo = config_get_int_value (FCB,"TAMANIO_ARCHIVO");
+	FCB_archivo->puntero_directo = config_get_int_value (FCB, "PUNTERO_DIRECTO");
+	FCB_archivo->puntero_indirecto = config_get_int_value (FCB,"PUNTERO_INDIRECTO");
 
 	log_info(logger,
-			"\nNOMBRE_ARCHIVO: %s \n"
-			"TAMANIO_ARCHIVO: %d"
-			"PUNTERO_DIRECTO: %d"
-			"PUNTERO_INDIRECTO: %d",
+			"FCB Cargado:"
+			"		\nNOMBRE_ARCHIVO: %s\n"
+			"		TAMANIO_ARCHIVO: %d\n"
+			"		PUNTERO_DIRECTO: %d\n"
+			"		PUNTERO_INDIRECTO: %d\n",
 			FCB_archivo->nombre_archivo,
 			FCB_archivo->tamanio_archivo,
 			FCB_archivo->puntero_directo,
 			FCB_archivo->puntero_indirecto
 	);
 
-	return 0;
+	return 0; // TODO: destroy_config cuando se termine de usar el fcb y se haya cargado
 }
 
 
@@ -116,5 +119,5 @@ void limpiarConfiguracion() {
 	free(configuracion);
 	config_destroy(fd_configuracion);
 	log_destroy(logger);
-
+	//bitarray_destroy(s_bitmap);
 }

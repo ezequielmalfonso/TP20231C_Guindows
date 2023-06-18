@@ -707,7 +707,7 @@ void esperar_cpu(){
 				break;
 			case F_TRUNCATE:
 				log_info(logger, "PID: %d - Recibo pedido de F_TRUNCATE por: %s", pcb->pid, instruccion->parametro1);
-				sem_post(&s_blocked_fs);
+				//sem_post(&s_blocked_fs);
 				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_TRUNCATE);
 
 				while( aux_list_raf_ant!=NULL )
@@ -934,7 +934,7 @@ bool criterio_nombre_archivo_proceso(t_archivoAbierto* archivo) {	// solo para l
 void bloqueando_por_filesystem(PCB_t* pcb){
 	int i = 0;
 	op_code cop;
-	sem_wait(&s_blocked);
+	//sem_wait(&s_blocked);
 	INSTRUCCION* inst = list_get(pcb->instrucciones, pcb->pc - 1);
 
 	log_info(logger, "Instruccion numer %d",(pcb->pc-1));

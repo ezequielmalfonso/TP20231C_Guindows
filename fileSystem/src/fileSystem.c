@@ -26,11 +26,11 @@ t_super_bloque* configuracionSuperBloque;
 //BITMAP
 int bitmap;
 size_t bitmapSize;
-
+t_bitarray* s_bitmap;
+//void* fileData;
 // FCB
 
 
-void* fileData;
 
 int main(void) {
 	// Configuracion gral
@@ -139,20 +139,21 @@ int iniciarBitmap (char* path ,uint32_t block_count ){
 	}
 
 	// void * mmap (void *address, size_t length, int protect, int flags, int filedes, off_t offset)
-	void* fileData = mmap(NULL,bitmapSize,PROT_READ | PROT_WRITE,MAP_PRIVATE, bitmap,0);
+
+	char* fileData = mmap(NULL,bitmapSize,PROT_READ | PROT_WRITE,MAP_PRIVATE, bitmap,0);
 
 	if (fileData == MAP_FAILED) {
 	     log_info(logger, "Error al mapear el archivo");
 	     close(bitmap);
 	     return 1;
 	}
-
-	memset(fileData, 0, bitmapSize); // ESTO SE DEBERIA IR DSP DE CORRER
+	s_bitmap = bitarray_create_with_mode(fileData, bitmapSize, LSB_FIRST);
+	//memset(fileData, 0, bitmapSize); // TODO: ESTO SE DEBERIA IR DSP DE CORRER
 
 
 	//Sincronizo los datos en memoria con el archivo bitmap.dat
-	msync(fileData, bitmapSize, MS_SYNC); //Podriamos verificar con un if si se sincronizo
-	munmap(fileData, bitmapSize);
+	//msync(fileData, bitmapSize, MS_SYNC); //Podriamos verificar con un if si se sincronizo
+	//munmap(fileData, bitmapSize);
 	close(bitmap);
 
 	return 0;

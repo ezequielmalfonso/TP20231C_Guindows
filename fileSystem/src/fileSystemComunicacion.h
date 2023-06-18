@@ -24,6 +24,8 @@
 
 extern int cliente_socket;
 extern t_FCB* FCB_archivo;
+//extern void* fileData;
+extern t_bitarray* s_bitmap;
 
 
 #endif /* FILESYSTEMCOMUNICACION_H_ */
