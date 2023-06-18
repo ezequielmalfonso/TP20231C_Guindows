@@ -33,6 +33,8 @@ static void procesar_conexion(void* void_args) {
 	 char* pathArchivo;
 	 char* nombre;
 
+	 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
+	 nombre = strtok(parametro1, "\n");
 	 pathArchivo = string_from_format("%s/%s", configuracion->PATH_FCB, nombre);
 
 	 switch (cop) {
@@ -42,8 +44,8 @@ static void procesar_conexion(void* void_args) {
 	 		 break;
 
 	 	 case F_EXISTS:
-	 		 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
-	 		 nombre = strtok(parametro1, "\n");
+	 		 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
+	 		 //nombre = strtok(parametro1, "\n");
 			 log_info(logger, "Se recibio F_EXISTS para archivo %s", parametro1);
 
 			 //if(recorrerFCBs(configuracion->PATH_FCB,strtok(parametro1, "\n")) == -1){
@@ -59,8 +61,8 @@ static void procesar_conexion(void* void_args) {
 
 	 		  break;
 		 case F_OPEN:
-			 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
-			 nombre = strtok(parametro1, "\n");
+			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
+			 //nombre = strtok(parametro1, "\n");
 			 log_info(logger, "Se recibio F_OPEN para archivo %s", parametro1);
 
 
@@ -79,8 +81,8 @@ static void procesar_conexion(void* void_args) {
 
 		 case F_CREATE:
 			 log_info(logger, "F_CREATE");
-			 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
-			 nombre = strtok(parametro1, "\n");
+			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
+			 //nombre = strtok(parametro1, "\n");
 			 log_info(logger, "Crear archivo: %s", parametro1);
 
 			 if(fileExiste(pathArchivo)) {
@@ -124,17 +126,17 @@ static void procesar_conexion(void* void_args) {
 			 break;
 
 		 case F_CLOSE:
-			 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
+			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
 			 log_info(logger, "Se recibio F_CLOSE con parametros %s, %s y %s", parametro1, parametro2, parametro3);
 			 break;
 
 		 case F_SEEK:
-			 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
+			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
 			 log_info(logger, "Se recibio F_SEEK con parametros %s, %s y %s", parametro1, parametro2, parametro3);
 			 break;
 
 		 case F_TRUNCATE:
-			 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
+			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
 			 log_info(logger, "Se recibio F_TRUNCATE con parametros %s, %s y %s", parametro1, parametro2, parametro3);
 			 sleep(3);
 			 datosFCB(pathArchivo);
@@ -181,12 +183,12 @@ static void procesar_conexion(void* void_args) {
 			 break;
 
 		 case F_READ:
-			 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
+			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
 			 log_info(logger, "Se recibio F_READ con parametros %s, %s y %s", parametro1, parametro2, parametro3);
 			 break;
 
 		 case F_WRITE:
-			 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
+			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
 			 log_info(logger, "Se recibio F_WRITE con parametros %s, %s y %s", parametro1, parametro2, parametro3);
 			 break;
 
