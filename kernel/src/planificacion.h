@@ -26,6 +26,7 @@ typedef struct {
     uint32_t pid;
     int64_t tiempo_in_exec;
     int64_t tiempo_out_exec;
+    t_list* recursosAsignados; // Llevar este registro solo sirve para poder liberarlos si el proceso termino sin SIGNAL (por instrucciones sin signal o exit por error)
 }t_tiempos_rafaga_anterior;
 
 typedef struct{
@@ -66,6 +67,10 @@ bool criterio_nombre_archivo(t_archivo_abierto* archivo);
 bool criterio_nombre_archivo_proceso(t_archivoAbierto* archivo);
 void esperar_filesystem(PCB_t* pcb);
 void liberar_archivos(PCB_t* pcb);
+void ejecutar_io(PCB_t* pcb,int numero);
+bool criterio_nombre_recurso(char* recurso);
+void liberar_recursos(PCB_t* pcb);
+bool criterio_nombre_recurso_lista_recursos(t_recurso* recurso);
 
 
 

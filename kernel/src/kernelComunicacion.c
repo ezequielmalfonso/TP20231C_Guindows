@@ -63,6 +63,7 @@ static void procesar_conexion(void* void_args) {
 	rafaga_inicial->pid = pid_nuevo;
 	rafaga_inicial->tiempo_in_exec = 0;
 	rafaga_inicial->tiempo_out_exec = 0;
+	rafaga_inicial->recursosAsignados = list_create();	// Solo para eliminar si quedo alguno en un exit - Es una lista de strings
 	list_add(list_rafa_anterior, rafaga_inicial);
 	pid_nuevo++;
 	//fin semaforo

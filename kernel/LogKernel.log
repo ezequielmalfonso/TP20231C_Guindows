@@ -206,3 +206,546 @@ GRADO_MAX_MULTIPROGRAMACION: 4
 [WARNING] 16:52:53:721 Kernel/(58204:58206): PID 0 - Fue a exit con un archivo abierto
 [INFO] 16:52:53:721 Kernel/(58204:58206): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
 [INFO] 16:52:53:721 Kernel/(58204:58206): Finaliza el proceso 0 - Motivo: WAIT por Recurso Inexistente
+[INFO] 18:15:04:262 Kernel/(60701:60701): Probando hora 0
+[INFO] 18:15:04:286 Kernel/(60701:60701): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 18:15:04:287 Kernel/(60701:60701): RECURSO: DISCO con 1 instancias
+[INFO] 18:15:04:287 Kernel/(60701:60701): Cantidad total de recursos disponibles: 1 
+[INFO] 18:15:04:287 Kernel/(60701:60701): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 18:15:04:288 Kernel/(60701:60701): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 18:15:04:290 Kernel/(60701:60701): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:15:04:293 Kernel/(60701:60701): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 18:15:04:293 Kernel/(60701:60701): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 18:15:07:496 Kernel/(60701:60701): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 18:15:07:497 Kernel/(60701:60707): No hay asignacion tamaño de registros
+[INFO] 18:15:07:498 Kernel/(60701:60707): Envio solicitud a MEMORIA
+[INFO] 18:15:07:499 Kernel/(60701:60707): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 18:15:07:499 Kernel/(60701:60707): Se crea el proceso 0 en NEW
+[INFO] 18:15:07:500 Kernel/(60701:60707): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:15:07:500 Kernel/(60701:60707): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 18:15:07:501 Kernel/(60701:60702): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 18:15:07:501 Kernel/(60701:60703): PID: 0 - Recibo pedido de WAIT por RECURSO: LOL
+
+[ERROR] 18:15:07:501 Kernel/(60701:60703): PID: 0 - Recibo pedido de WAIT por recurso desconocido: LOL
+[INFO] 18:15:07:501 Kernel/(60701:60703): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 18:15:07:501 Kernel/(60701:60703): Finaliza el proceso 0 - Motivo: WAIT por Recurso Inexistente
+[INFO] 18:16:11:845 Kernel/(60715:60715): Probando hora 0
+[INFO] 18:16:11:886 Kernel/(60715:60715): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 18:16:11:887 Kernel/(60715:60715): RECURSO: DISCO con 1 instancias
+[INFO] 18:16:11:887 Kernel/(60715:60715): Cantidad total de recursos disponibles: 1 
+[INFO] 18:16:11:888 Kernel/(60715:60715): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 18:16:11:889 Kernel/(60715:60715): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 18:16:11:890 Kernel/(60715:60715): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:16:11:891 Kernel/(60715:60715): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 18:16:11:891 Kernel/(60715:60715): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 18:16:15:755 Kernel/(60715:60715): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 18:16:15:757 Kernel/(60715:60721): No hay asignacion tamaño de registros
+[INFO] 18:16:15:758 Kernel/(60715:60721): Envio solicitud a MEMORIA
+[INFO] 18:16:15:759 Kernel/(60715:60721): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 18:16:15:760 Kernel/(60715:60721): Se crea el proceso 0 en NEW
+[INFO] 18:16:15:760 Kernel/(60715:60721): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:16:15:761 Kernel/(60715:60721): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 18:16:15:762 Kernel/(60715:60716): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 18:16:15:762 Kernel/(60715:60717): PID: 0 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 18:16:15:763 Kernel/(60715:60717): Para RECURSO DISCO hay 1 instancias disponibles antes de ejecutar
+[INFO] 18:16:15:763 Kernel/(60715:60717): PID: 0 - Wait: DISCO - Instancias: 0 
+[INFO] 18:16:15:763 Kernel/(60715:60717): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 18:16:15:764 Kernel/(60715:60717): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 18:17:18:574 Kernel/(60766:60766): Probando hora 0
+[INFO] 18:17:19:294 Kernel/(60766:60766): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 18:17:19:294 Kernel/(60766:60766): RECURSO: DISCO con 1 instancias
+[INFO] 18:17:19:294 Kernel/(60766:60766): Cantidad total de recursos disponibles: 1 
+[INFO] 18:17:19:294 Kernel/(60766:60766): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 18:17:19:295 Kernel/(60766:60766): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 18:17:19:296 Kernel/(60766:60766): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:17:19:296 Kernel/(60766:60766): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 18:17:19:296 Kernel/(60766:60766): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 18:17:20:819 Kernel/(60766:60766): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 18:17:20:819 Kernel/(60766:60772): No hay asignacion tamaño de registros
+[INFO] 18:17:20:820 Kernel/(60766:60772): Envio solicitud a MEMORIA
+[INFO] 18:17:20:820 Kernel/(60766:60772): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 18:17:20:820 Kernel/(60766:60772): Se crea el proceso 0 en NEW
+[INFO] 18:17:20:820 Kernel/(60766:60772): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:17:20:820 Kernel/(60766:60772): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 18:17:20:821 Kernel/(60766:60767): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 18:17:20:821 Kernel/(60766:60768): PID: 0 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 18:17:20:821 Kernel/(60766:60768): Para RECURSO DISCO hay 1 instancias disponibles antes de ejecutar
+[INFO] 18:17:20:821 Kernel/(60766:60768): PID: 0 - Wait: DISCO - Instancias: 0 
+[INFO] 18:17:20:821 Kernel/(60766:60768): PID: 0 - SIGNAL: DISCO - Instancias: 1 
+[INFO] 18:17:20:821 Kernel/(60766:60768): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 18:17:20:822 Kernel/(60766:60768): Finaliza el proceso 0 - Motivo: POR FIN
+[ERROR] 18:17:25:173 Kernel/(60766:60768): DISCONNECT FAILURE!
+[INFO] 18:19:42:758 Kernel/(60839:60839): Probando hora 0
+[INFO] 18:19:42:761 Kernel/(60839:60839): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 18:19:42:763 Kernel/(60839:60839): RECURSO: DISCO con 1 instancias
+[INFO] 18:19:42:763 Kernel/(60839:60839): Cantidad total de recursos disponibles: 1 
+[INFO] 18:19:42:766 Kernel/(60839:60839): ALGORITMO_PLANIFICACION HRRN!!!!
+[ERROR] 18:19:42:767 Kernel/(60839:60839): Error al conectar (a CPU)
+
+[INFO] 18:19:42:768 Kernel/(60839:60839): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:19:42:770 Kernel/(60839:60839): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 18:19:42:771 Kernel/(60839:60839): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 18:19:57:757 Kernel/(60849:60849): Probando hora 0
+[INFO] 18:19:57:758 Kernel/(60849:60849): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 18:19:57:759 Kernel/(60849:60849): RECURSO: DISCO con 1 instancias
+[INFO] 18:19:57:759 Kernel/(60849:60849): Cantidad total de recursos disponibles: 1 
+[INFO] 18:19:57:759 Kernel/(60849:60849): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 18:19:57:760 Kernel/(60849:60849): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 18:19:57:760 Kernel/(60849:60849): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:19:57:761 Kernel/(60849:60849): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 18:19:57:761 Kernel/(60849:60849): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 18:19:59:883 Kernel/(60849:60849): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 18:19:59:884 Kernel/(60849:60855): No hay asignacion tamaño de registros
+[INFO] 18:19:59:885 Kernel/(60849:60855): Envio solicitud a MEMORIA
+[INFO] 18:19:59:885 Kernel/(60849:60855): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 18:19:59:886 Kernel/(60849:60855): Se crea el proceso 0 en NEW
+[INFO] 18:19:59:886 Kernel/(60849:60855): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:19:59:886 Kernel/(60849:60855): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 18:19:59:887 Kernel/(60849:60850): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 18:19:59:888 Kernel/(60849:60851): PID: 0 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 18:19:59:888 Kernel/(60849:60851): Para RECURSO DISCO hay 1 instancias disponibles antes de ejecutar
+[INFO] 18:19:59:888 Kernel/(60849:60851): PID: 0 - Wait: DISCO - Instancias: 0 
+[WARNING] 18:19:59:888 Kernel/(60849:60851): PID: 0 - SIGNAL por exit sin signal: DISCO - Instancias: 1 
+[INFO] 18:19:59:888 Kernel/(60849:60851): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 18:19:59:888 Kernel/(60849:60851): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 18:24:01:394 Kernel/(60867:60867): Probando hora 0
+[INFO] 18:24:01:491 Kernel/(60867:60867): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 18:24:01:492 Kernel/(60867:60867): RECURSO: DISCO con 1 instancias
+[INFO] 18:24:01:492 Kernel/(60867:60867): RECURSO: MODEM con 1 instancias
+[INFO] 18:24:01:492 Kernel/(60867:60867): Cantidad total de recursos disponibles: 2 
+[INFO] 18:24:01:492 Kernel/(60867:60867): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 18:24:01:493 Kernel/(60867:60867): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 18:24:01:493 Kernel/(60867:60867): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:24:01:493 Kernel/(60867:60867): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 18:24:01:494 Kernel/(60867:60867): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 18:24:04:434 Kernel/(60867:60867): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 18:24:04:434 Kernel/(60867:60873): No hay asignacion tamaño de registros
+[INFO] 18:24:04:435 Kernel/(60867:60873): Envio solicitud a MEMORIA
+[INFO] 18:24:04:435 Kernel/(60867:60873): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 18:24:04:435 Kernel/(60867:60873): Se crea el proceso 0 en NEW
+[INFO] 18:24:04:435 Kernel/(60867:60873): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:24:04:435 Kernel/(60867:60873): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 18:24:04:436 Kernel/(60867:60868): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 18:24:04:436 Kernel/(60867:60869): PID: 0 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 18:24:04:436 Kernel/(60867:60869): Para RECURSO DISCO hay 1 instancias disponibles antes de ejecutar
+[INFO] 18:24:04:436 Kernel/(60867:60869): PID: 0 - Wait: DISCO - Instancias: 0 
+[INFO] 18:24:04:436 Kernel/(60867:60869): PID: 0 - Recibo pedido de WAIT por RECURSO: MODEM
+
+[INFO] 18:24:04:436 Kernel/(60867:60869): Para RECURSO MODEM hay 1 instancias disponibles antes de ejecutar
+[INFO] 18:24:04:436 Kernel/(60867:60869): PID: 0 - Wait: MODEM - Instancias: 0 
+[INFO] 18:24:04:436 Kernel/(60867:60869): PID: 0 - Recibo pedido de SIGNAL por RECURSO: MODEM
+
+[INFO] 18:24:04:436 Kernel/(60867:60869): Para RECURSO MODEM hay 0 instancias disponibles antes de ejecutar
+[INFO] 18:24:04:436 Kernel/(60867:60869): PID: 0 - SIGNAL: MODEM - Instancias: 1 
+[INFO] 18:24:35:241 Kernel/(60876:60876): Probando hora 0
+[INFO] 18:24:35:241 Kernel/(60876:60876): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 18:24:35:242 Kernel/(60876:60876): RECURSO: DISCO con 1 instancias
+[INFO] 18:24:35:242 Kernel/(60876:60876): RECURSO: MODEM con 1 instancias
+[INFO] 18:24:35:242 Kernel/(60876:60876): Cantidad total de recursos disponibles: 2 
+[INFO] 18:24:35:242 Kernel/(60876:60876): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 18:24:35:243 Kernel/(60876:60876): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 18:24:35:243 Kernel/(60876:60876): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:24:35:244 Kernel/(60876:60876): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 18:24:35:244 Kernel/(60876:60876): Cliente conectado (a KERNEL_SV)
+
+[INFO] 18:24:39:110 Kernel/(60881:60881): Probando hora 0
+[INFO] 18:24:39:110 Kernel/(60881:60881): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 18:24:39:111 Kernel/(60881:60881): RECURSO: DISCO con 1 instancias
+[INFO] 18:24:39:111 Kernel/(60881:60881): RECURSO: MODEM con 1 instancias
+[INFO] 18:24:39:112 Kernel/(60881:60881): Cantidad total de recursos disponibles: 2 
+[INFO] 18:24:39:112 Kernel/(60881:60881): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 18:24:39:112 Kernel/(60881:60881): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 18:24:39:113 Kernel/(60881:60881): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:24:39:113 Kernel/(60881:60881): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 18:24:39:113 Kernel/(60881:60881): Cliente conectado (a KERNEL_SV)
+
+[INFO] 18:24:43:206 Kernel/(60886:60886): Probando hora 0
+[INFO] 18:24:43:206 Kernel/(60886:60886): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 18:24:43:207 Kernel/(60886:60886): RECURSO: DISCO con 1 instancias
+[INFO] 18:24:43:208 Kernel/(60886:60886): RECURSO: MODEM con 1 instancias
+[INFO] 18:24:43:208 Kernel/(60886:60886): Cantidad total de recursos disponibles: 2 
+[INFO] 18:24:43:208 Kernel/(60886:60886): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 18:24:43:208 Kernel/(60886:60886): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 18:24:43:209 Kernel/(60886:60886): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:24:43:209 Kernel/(60886:60886): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 18:24:43:209 Kernel/(60886:60886): Cliente conectado (a KERNEL_SV)
+
+[INFO] 18:24:50:576 Kernel/(60892:60892): Probando hora 0
+[INFO] 18:24:50:577 Kernel/(60892:60892): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 18:24:50:578 Kernel/(60892:60892): RECURSO: DISCO con 1 instancias
+[INFO] 18:24:50:578 Kernel/(60892:60892): RECURSO: MODEM con 1 instancias
+[INFO] 18:24:50:578 Kernel/(60892:60892): Cantidad total de recursos disponibles: 2 
+[INFO] 18:24:50:578 Kernel/(60892:60892): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 18:24:50:579 Kernel/(60892:60892): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 18:24:50:579 Kernel/(60892:60892): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:24:50:579 Kernel/(60892:60892): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 18:24:50:579 Kernel/(60892:60892): Cliente conectado (a KERNEL_SV)
+
+[INFO] 18:25:30:059 Kernel/(60900:60900): Probando hora 0
+[INFO] 18:25:30:059 Kernel/(60900:60900): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 18:25:30:061 Kernel/(60900:60900): RECURSO: DISCO con 1 instancias
+[INFO] 18:25:30:061 Kernel/(60900:60900): RECURSO: MODEM con 1 instancias
+[INFO] 18:25:30:061 Kernel/(60900:60900): Cantidad total de recursos disponibles: 2 
+[INFO] 18:25:30:061 Kernel/(60900:60900): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 18:25:30:062 Kernel/(60900:60900): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 18:25:30:062 Kernel/(60900:60900): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:25:30:062 Kernel/(60900:60900): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 18:25:30:062 Kernel/(60900:60900): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 18:25:34:947 Kernel/(60900:60900): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 18:25:34:947 Kernel/(60900:60906): No hay asignacion tamaño de registros
+[INFO] 18:25:34:948 Kernel/(60900:60906): Envio solicitud a MEMORIA
+[INFO] 18:25:34:948 Kernel/(60900:60906): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 18:25:34:948 Kernel/(60900:60906): Se crea el proceso 0 en NEW
+[INFO] 18:25:34:948 Kernel/(60900:60906): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:25:34:948 Kernel/(60900:60906): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 18:25:34:949 Kernel/(60900:60901): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 18:25:34:949 Kernel/(60900:60902): PID: 0 - Recibo pedido de WAIT por RECURSO: DISCO
+
+[INFO] 18:25:34:949 Kernel/(60900:60902): Para RECURSO DISCO hay 1 instancias disponibles antes de ejecutar
+[INFO] 18:25:34:949 Kernel/(60900:60902): PID: 0 - Wait: DISCO - Instancias: 0 
+[INFO] 18:25:34:949 Kernel/(60900:60902): PID: 0 - Recibo pedido de WAIT por RECURSO: MODEM
+
+[INFO] 18:25:34:949 Kernel/(60900:60902): Para RECURSO MODEM hay 1 instancias disponibles antes de ejecutar
+[INFO] 18:25:34:949 Kernel/(60900:60902): PID: 0 - Wait: MODEM - Instancias: 0 
+[INFO] 18:25:34:949 Kernel/(60900:60902): PID: 0 - Recibo pedido de SIGNAL por RECURSO: MODEM
+
+[INFO] 18:25:34:949 Kernel/(60900:60902): Para RECURSO MODEM hay 0 instancias disponibles antes de ejecutar
+[INFO] 18:25:34:949 Kernel/(60900:60902): PID: 0 - SIGNAL: MODEM - Instancias: 1 
+[INFO] 18:35:36:722 Kernel/(61020:61020): Probando hora 0
+[INFO] 18:35:36:816 Kernel/(61020:61020): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 18:35:36:819 Kernel/(61020:61020): RECURSO: DISCO con 1 instancias
+[INFO] 18:35:36:819 Kernel/(61020:61020): RECURSO: MODEM con 1 instancias
+[INFO] 18:35:36:819 Kernel/(61020:61020): Cantidad total de recursos disponibles: 2 
+[INFO] 18:35:36:820 Kernel/(61020:61020): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 18:35:36:821 Kernel/(61020:61020): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 18:35:36:821 Kernel/(61020:61020): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:35:36:822 Kernel/(61020:61020): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 18:35:36:822 Kernel/(61020:61020): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 18:35:40:632 Kernel/(61020:61020): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 18:35:40:712 Kernel/(61020:61026): No hay asignacion tamaño de registros
+[INFO] 18:35:40:712 Kernel/(61020:61026): Envio solicitud a MEMORIA
+[INFO] 18:35:40:713 Kernel/(61020:61026): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 18:35:40:713 Kernel/(61020:61026): Se crea el proceso 0 en NEW
+[INFO] 18:35:40:713 Kernel/(61020:61026): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:35:40:713 Kernel/(61020:61026): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 18:35:40:713 Kernel/(61020:61021): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 18:35:40:714 Kernel/(61020:61022): PID: 0 - Recibo pedido de WAIT por RECURSO: DISCO
+[INFO] 18:35:40:714 Kernel/(61020:61022): Para RECURSO DISCO hay 1 instancias disponibles antes de ejecutar
+[INFO] 18:35:40:714 Kernel/(61020:61022): PID: 0 - Wait: DISCO - Instancias: 0 
+[INFO] 18:35:40:714 Kernel/(61020:61022): PID: 0 - Recibo pedido de WAIT por RECURSO: MODEM
+[INFO] 18:35:40:714 Kernel/(61020:61022): Para RECURSO MODEM hay 1 instancias disponibles antes de ejecutar
+[INFO] 18:35:40:714 Kernel/(61020:61022): PID: 0 - Wait: MODEM - Instancias: 0 
+[INFO] 18:35:40:714 Kernel/(61020:61022): PID: 0 - Recibo pedido de SIGNAL por RECURSO: MODEM
+[INFO] 18:35:40:715 Kernel/(61020:61022): Para RECURSO MODEM hay 0 instancias disponibles antes de ejecutar
+[INFO] 18:35:40:715 Kernel/(61020:61022): PID: 0 - SIGNAL: MODEM - Instancias: 1 
+[INFO] 18:39:17:102 Kernel/(61174:61174): Probando hora 0
+[INFO] 18:39:17:104 Kernel/(61174:61174): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 18:39:17:105 Kernel/(61174:61174): RECURSO: DISCO con 1 instancias
+[INFO] 18:39:17:105 Kernel/(61174:61174): RECURSO: MODEM con 1 instancias
+[INFO] 18:39:17:105 Kernel/(61174:61174): Cantidad total de recursos disponibles: 2 
+[INFO] 18:39:17:106 Kernel/(61174:61174): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 18:39:17:106 Kernel/(61174:61174): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 18:39:17:106 Kernel/(61174:61174): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:39:17:110 Kernel/(61174:61174): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 18:39:17:110 Kernel/(61174:61174): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 18:39:19:860 Kernel/(61174:61174): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 18:39:19:864 Kernel/(61174:61180): No hay asignacion tamaño de registros
+[INFO] 18:39:19:865 Kernel/(61174:61180): Envio solicitud a MEMORIA
+[INFO] 18:39:19:866 Kernel/(61174:61180): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 18:39:19:867 Kernel/(61174:61180): Se crea el proceso 0 en NEW
+[INFO] 18:39:19:868 Kernel/(61174:61180): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:39:19:870 Kernel/(61174:61180): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 18:39:19:870 Kernel/(61174:61175): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 18:39:19:871 Kernel/(61174:61176): PID: 0 - Recibo pedido de WAIT por RECURSO: DISCO
+[INFO] 18:39:19:871 Kernel/(61174:61176): Para RECURSO DISCO hay 1 instancias disponibles antes de ejecutar
+[INFO] 18:39:19:871 Kernel/(61174:61176): PID: 0 - Wait: DISCO - Instancias: 0 
+[INFO] 18:39:19:872 Kernel/(61174:61176): PID: 0 - Recibo pedido de WAIT por RECURSO: MODEM
+[INFO] 18:39:19:872 Kernel/(61174:61176): Para RECURSO MODEM hay 1 instancias disponibles antes de ejecutar
+[INFO] 18:39:19:873 Kernel/(61174:61176): PID: 0 - Wait: MODEM - Instancias: 0 
+[INFO] 18:39:19:873 Kernel/(61174:61176): PID: 0 - Recibo pedido de SIGNAL por RECURSO: MODEM
+[INFO] 18:39:19:873 Kernel/(61174:61176): Para RECURSO MODEM hay 0 instancias disponibles antes de ejecutar
+[INFO] 18:39:19:874 Kernel/(61174:61176): PID: 0 - SIGNAL: MODEM - Instancias: 1 
+[INFO] 18:39:19:874 Kernel/(61174:61176): PID: 0 - Recibo pedido de WAIT por RECURSO: MODEM
+[INFO] 18:39:19:874 Kernel/(61174:61176): Para RECURSO MODEM hay 1 instancias disponibles antes de ejecutar
+[INFO] 18:39:19:874 Kernel/(61174:61176): PID: 0 - Wait: MODEM - Instancias: 0 
+[WARNING] 18:39:19:875 Kernel/(61174:61176): PID: 0 - SIGNAL por exit sin signal: DISCO - Instancias: 1 
+[WARNING] 18:39:19:875 Kernel/(61174:61176): PID: 0 - SIGNAL por exit sin signal: MODEM - Instancias: 1 
+[INFO] 18:39:19:876 Kernel/(61174:61176): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 18:39:19:877 Kernel/(61174:61176): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 18:40:14:407 Kernel/(61183:61183): Probando hora 0
+[INFO] 18:40:14:407 Kernel/(61183:61183): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 18:40:14:408 Kernel/(61183:61183): RECURSO: DISCO con 1 instancias
+[INFO] 18:40:14:408 Kernel/(61183:61183): RECURSO: MODEM con 1 instancias
+[INFO] 18:40:14:408 Kernel/(61183:61183): Cantidad total de recursos disponibles: 2 
+[INFO] 18:40:14:408 Kernel/(61183:61183): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 18:40:14:409 Kernel/(61183:61183): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 18:40:14:409 Kernel/(61183:61183): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:40:14:410 Kernel/(61183:61183): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 18:40:14:410 Kernel/(61183:61183): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 18:40:17:211 Kernel/(61183:61183): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 18:40:17:211 Kernel/(61183:61189): No hay asignacion tamaño de registros
+[INFO] 18:40:17:211 Kernel/(61183:61189): Envio solicitud a MEMORIA
+[INFO] 18:40:17:211 Kernel/(61183:61189): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 18:40:17:212 Kernel/(61183:61189): Se crea el proceso 0 en NEW
+[INFO] 18:40:17:212 Kernel/(61183:61189): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:40:17:212 Kernel/(61183:61189): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 18:40:17:212 Kernel/(61183:61184): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 18:40:17:212 Kernel/(61183:61185): PID: 0 - Recibo pedido de WAIT por RECURSO: DISCO
+[INFO] 18:40:17:212 Kernel/(61183:61185): Para RECURSO DISCO hay 1 instancias disponibles antes de ejecutar
+[INFO] 18:40:17:212 Kernel/(61183:61185): PID: 0 - Wait: DISCO - Instancias: 0 
+[INFO] 18:40:17:212 Kernel/(61183:61185): PID: 0 - Recibo pedido de WAIT por RECURSO: MODEM
+[INFO] 18:40:17:212 Kernel/(61183:61185): Para RECURSO MODEM hay 1 instancias disponibles antes de ejecutar
+[INFO] 18:40:17:212 Kernel/(61183:61185): PID: 0 - Wait: MODEM - Instancias: 0 
+[INFO] 18:40:17:212 Kernel/(61183:61185): PID: 0 - Recibo pedido de SIGNAL por RECURSO: MODEM
+[INFO] 18:40:17:213 Kernel/(61183:61185): Para RECURSO MODEM hay 0 instancias disponibles antes de ejecutar
+[INFO] 18:40:17:213 Kernel/(61183:61185): PID: 0 - SIGNAL: MODEM - Instancias: 1 
+[INFO] 18:40:17:213 Kernel/(61183:61185): PID: 0 - Recibo pedido de WAIT por RECURSO: MODEM
+[INFO] 18:40:17:213 Kernel/(61183:61185): Para RECURSO MODEM hay 1 instancias disponibles antes de ejecutar
+[INFO] 18:40:17:213 Kernel/(61183:61185): PID: 0 - Wait: MODEM - Instancias: 0 
+[INFO] 18:40:17:213 Kernel/(61183:61185): PID: 0 - Recibo pedido de F_OPEN por: JOHN
+
+[INFO] 18:40:17:213 Kernel/(61183:61185): PID: 0 - Abrir Archivo: JOHN
+
+[WARNING] 18:40:17:213 Kernel/(61183:61185): La tabla global de archivos esta vacia
+[WARNING] 18:40:17:213 Kernel/(61183:61185): Archivo JOHN
+ no esta abierto
+[WARNING] 18:40:17:278 Kernel/(61183:61185): Existencia=1
+[WARNING] 18:40:17:278 Kernel/(61183:61185): El archivo JOHN fue abierto y cargado a la tabla global de archivos abiertos
+[INFO] 18:40:17:278 Kernel/(61183:61185): PID: 0 - Se agrego JOHN a la tabla de archivos abiertos
+[WARNING] 18:40:17:278 Kernel/(61183:61185): PID: 0 - SIGNAL por exit sin signal: DISCO - Instancias: 1 
+[WARNING] 18:40:17:278 Kernel/(61183:61185): PID: 0 - SIGNAL por exit sin signal: MODEM - Instancias: 1 
+[WARNING] 18:40:17:278 Kernel/(61183:61185): PID 0 - Fue a exit con un archivo abierto
+[WARNING] 18:40:17:278 Kernel/(61183:61185): El archivo JOHN fue eliminado de la tabla global de archivos abiertos
+[INFO] 18:40:17:278 Kernel/(61183:61185): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 18:40:17:278 Kernel/(61183:61185): Finaliza el proceso 0 - Motivo: POR FIN

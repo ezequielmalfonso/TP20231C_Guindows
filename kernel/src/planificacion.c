@@ -42,6 +42,7 @@ t_list* tabla_global_archivos;
 char* archivoABuscar;
 t_archivo_abierto* archivo;
 t_archivoAbierto* archivo_proceso;
+char* recursoABuscar;
 
 op_code cop;
 
@@ -247,7 +248,7 @@ void esperar_cpu(){
 		switch (cop) {
 
 			case WAIT:
-				 log_info(logger, "PID: %d - Recibo pedido de WAIT por RECURSO: %s", pcb->pid, instruccion->parametro1 );
+				 log_info(logger, "PID: %d - Recibo pedido de WAIT por RECURSO: %s", pcb->pid, strtok(instruccion->parametro1, "\n"));
 
 
 				 t_link_element* aux_rec1 = lista_de_recursos->head;
@@ -265,6 +266,7 @@ void esperar_cpu(){
 						 log_info(logger, "Para RECURSO %s hay %d instancias disponibles antes de ejecutar", aux_rec2->recurso, aux_rec2->instancias );
 						 //instancias = aux_rec2->instancias;
 
+						 t_tiempos_rafaga_anterior * tiemposRafaga = list_get(list_rafa_anterior, pcb->pid);
 						 if(aux_rec2->instancias > 0)
 						 { // Si entra es pq va ejecutar la instancia del recurso y resto 1 a la instancia
 							 pthread_mutex_lock(&mx_instancias);	// TODO: hacen falta estos semaforos? se ejecutan de a una
@@ -290,7 +292,7 @@ void esperar_cpu(){
 							 pthread_mutex_unlock(&mx_instancias);
 							 //------
 
-							 t_tiempos_rafaga_anterior * tiemposRafaga = list_get(list_rafa_anterior, pcb->pid);
+
 							 tiemposRafaga->tiempo_out_exec = temporal_gettime(reloj_inicio);
 							 double estimadorNuevo = obtenerEstimadoRafaga(pcb, configuracion->ESTIMACION_INICIAL, configuracion->HRRN_ALFA);
 							 pcb->estimado_proxima_rafaga = estimadorNuevo;
@@ -306,8 +308,12 @@ void esperar_cpu(){
 							 sem_post(&s_cpu_desocupado);
 							 sem_post(&s_esperar_cpu);
 
-						 }
-						 break;
+						}
+						char* recurso = malloc(sizeof(char) * 20);	// Todo: ojo aca
+						strcpy(recurso, aux_rec2->recurso);
+
+						list_add(tiemposRafaga->recursosAsignados, recurso);
+						break;	// del while
 					 }
 
 					 aux_rec1 = aux_rec1->next;
@@ -323,7 +329,7 @@ void esperar_cpu(){
 				 }
 
 			case SIGNAL:
-				log_info(logger, "PID: %d - Recibo pedido de SIGNAL por RECURSO: %s", pcb->pid, instruccion->parametro1 );
+				log_info(logger, "PID: %d - Recibo pedido de SIGNAL por RECURSO: %s", pcb->pid, strtok(instruccion->parametro1, "\n"));
 
 				t_link_element* aux_rec1_s = lista_de_recursos->head;
 				// uint16_t instancias;
@@ -345,7 +351,7 @@ void esperar_cpu(){
 
 						 if(aux_rec2_s->instancias < 0)
 						 {
-							 log_info(logger, "entro al if instancias");
+							 //log_info(logger, "entro al if instancias");
 
 							 pthread_mutex_lock(&mx_instancias);
 							 aux_rec2_s->instancias += 1;
@@ -398,6 +404,14 @@ void esperar_cpu(){
 							 sem_post(&s_esperar_cpu);
 
 						   }
+						 // esto solo para eliminarlos si quedan tras un exit
+						 t_tiempos_rafaga_anterior * tiemposRafaga = list_get(list_rafa_anterior, pcb->pid);
+						 bool (*aux)(void* x) = criterio_nombre_recurso;
+						 char* auxrecurso = malloc(sizeof(char) * 20);	//xd
+						 strcpy(auxrecurso, aux_rec2_s->recurso);
+						 recursoABuscar = auxrecurso;
+						 char* remover = list_find(tiemposRafaga->recursosAsignados, aux);
+						 list_remove_element(tiemposRafaga->recursosAsignados, remover);
 						 break;
 					 }
 					 aux_rec1_s = aux_rec1_s->next;
@@ -612,7 +626,7 @@ void esperar_cpu(){
 					bool (*aux1)(void* x) = criterio_nombre_archivo;	// se puede meter como parametro directamente de alguna forma y no tener que usar aux1
 					archivo = list_find(tabla_global_archivos, aux1);
 				} else {	// No esta en la TGA
-					log_error(logger, "PID: %d - Pedido de F_CLOSE por archivo no abierto"); // No esta abierto. Tambien puede que no exista
+					log_error(logger, "PID: %d - Pedido de F_CLOSE por archivo no abierto", pcb->pid); // No esta abierto. Tambien puede que no exista
 					motivoExit = "No esta abierto en tabla global";
 					execute_a_exit(pcb,motivoExit);
 					break;
@@ -705,6 +719,7 @@ void esperar_cpu(){
 				sem_post(&s_cpu_desocupado);
 				sem_post(&s_esperar_cpu);
 				break;
+
 			case F_TRUNCATE:
 				log_info(logger, "PID: %d - Recibo pedido de F_TRUNCATE por: %s", pcb->pid, instruccion->parametro1);
 				//sem_post(&s_blocked_fs);
@@ -786,7 +801,7 @@ void esperar_cpu(){
 void execute_a_exit(PCB_t* pcb, char* motivoExit){
 	cop = EXIT;
 
-	// TODO liberar_recursos(pcb);  PEGARLO A LA LISTA DE TIEMPOS
+	liberar_recursos(pcb);
 	liberar_archivos(pcb);
 
 	send(pcb->cliente_fd,&cop,sizeof(op_code),0);
@@ -918,6 +933,18 @@ void esperarRespuestaFS(){
 	}
 }
 
+bool criterio_nombre_recurso(char* recurso) {	// solo para TGA
+	if(strcmp(recurso, recursoABuscar)){
+		return false;
+	}
+	return true;
+}
+bool criterio_nombre_recurso_lista_recursos(t_recurso* recurso) {	// solo para TGA
+	if(strcmp(recurso->recurso, recursoABuscar)){
+		return false;
+	}
+	return true;
+}
 bool criterio_nombre_archivo(t_archivo_abierto* archivo) {	// solo para TGA
 	if(strcmp(archivo->nombre, archivoABuscar)){
 		return false;
@@ -976,7 +1003,6 @@ void esperar_filesystem(PCB_t* pcb){
 
 
 void liberar_archivos(PCB_t* pcb){
-	//TODO
 	if(!list_is_empty(pcb->archivos_abiertos)){
 		int i;
 		int tamanio = list_size(pcb->archivos_abiertos);
@@ -994,7 +1020,7 @@ void liberar_archivos(PCB_t* pcb){
 						log_warning(logger, "El archivo %s fue eliminado de la tabla global de archivos abiertos", archivo->nombre);
 					} else {	// Si hay procesos bloqueados mando el primer bloqueado a ready
 						PCB_t* procesoBloqueado = queue_pop(archivo->c_proc_bloqueados);
-						procesoBloqueado->tiempo_llegada_a_ready = temporal_gettime(reloj);	// hrrn
+						procesoBloqueado->tiempo_llegada_a_ready = temporal_gettime(reloj_inicio);	// hrrn
 						pthread_mutex_lock(&mx_cola_ready);
 						queue_push(cola_ready, procesoBloqueado);
 						pthread_mutex_unlock(&mx_cola_ready);
@@ -1014,7 +1040,74 @@ void liberar_archivos(PCB_t* pcb){
 }
 
 // TODO
-void liberar_recursos(pcb){
+void liberar_recursos(PCB_t* pcb){
+	t_tiempos_rafaga_anterior* elemento = list_get(list_rafa_anterior, pcb->pid); // estan ordenados por pid entonces se puede usar como index
+	if(!list_is_empty(elemento->recursosAsignados)) {
+		// parecido a signal
+		int i;
+		int length = list_size(elemento->recursosAsignados);
+		PCB_t* pcb_blocked;
+		for(i = 0; i < length; i++) {
+			recursoABuscar = list_get(elemento->recursosAsignados, i);
+			bool (*aux)(void* x) = criterio_nombre_recurso_lista_recursos;
+			t_recurso* aux_rec2_s = list_find(lista_de_recursos, aux);
+
+			if(aux_rec2_s->instancias < 0)
+			 {
+				 //log_info(logger, "entro al if instancias");
+
+				 pthread_mutex_lock(&mx_instancias);
+				 aux_rec2_s->instancias += 1;
+				 pthread_mutex_unlock(&mx_instancias);
+
+				 log_warning(logger,"PID: %d - SIGNAL por exit sin signal: %s - Instancias: %d ", pcb->pid, recursoABuscar, aux_rec2_s->instancias);
+
+				 if(!queue_is_empty(aux_rec2_s->cola_bloqueados_recurso))
+				 {
+					 pthread_mutex_lock(&mx_cola_blocked);
+					 pcb_blocked = queue_pop(aux_rec2_s->cola_bloqueados_recurso);
+					 pthread_mutex_unlock(&mx_cola_blocked);
+					 log_info(logger, "PID: %d que se  desbloqueo", pcb_blocked->pid );
+				 }else {
+					 log_error(logger, "Ocurrio un error con las instancias del recurso %d: ", pcb->pid);
+				 }
+				 // listado de pids despues de entrar a ready
+				 char* pids = procesosEnReady(cola_ready);
+				 log_info(logger, "Ingreso a Ready algoritmo %s - PIDS: [%s] ", configuracion->ALGORITMO_PLANIFICACION, pids);
+
+				 log_info(logger, "PID: %d - Estado Anterior: BLOCKED - Estado Actual: READY - PROGRAM COINTER: %d", pcb_blocked->pid, pcb_blocked->pc );
+
+				 pcb_blocked->tiempo_llegada_a_ready = temporal_gettime(reloj_inicio);
+
+				 pthread_mutex_lock(&mx_cola_ready);
+				 queue_push(cola_ready,pcb_blocked);
+				 send_proceso(cpu_fd, pcb,DISPATCH);
+				 pthread_mutex_unlock(&mx_cola_ready);
+
+				 sem_post(&s_cont_ready);
+				 sem_post(&s_ready_execute);
+				 sem_post(&s_cpu_desocupado);
+				 sem_post(&s_esperar_cpu);
+
+			 } else{
+				 pthread_mutex_lock(&mx_instancias);
+				 aux_rec2_s->instancias += 1;
+				 pthread_mutex_unlock(&mx_instancias);
+				 log_warning(logger,"PID: %d - SIGNAL por exit sin signal: %s - Instancias: %d ", pcb->pid, recursoABuscar, aux_rec2_s->instancias);
+
+				 /*
+				 pthread_mutex_lock(&mx_cola_ready);
+				 send_proceso(cpu_fd, pcb,DISPATCH);
+				 pthread_mutex_unlock(&mx_cola_ready);
+
+				 sem_post(&s_ready_execute);
+				 sem_post(&s_cpu_desocupado);
+				 sem_post(&s_esperar_cpu);*/
+
+			   }
+
+			}
+		}
 }
 
 
