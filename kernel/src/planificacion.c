@@ -588,7 +588,7 @@ void esperar_cpu(){
 								// no deberia entrar nunca
 							}
 
-						}else{
+						} else{
 							log_error(logger, "PID: %d - F_OPEN ERROR: No se pudo hacer el F_CREATE del archivo nuevo: %s", pcb->pid, instruccion->parametro1);
 							// TODO ?falta de espacio o se intento crear un archivo ya existente (error)
 							motivoExit = "Falta de espacio en FS";
@@ -609,11 +609,12 @@ void esperar_cpu(){
 					pthread_mutex_lock(&mx_cola_ready);
 					send_proceso(cpu_fd, pcb, DISPATCH);
 					pthread_mutex_unlock(&mx_cola_ready);
-
+					sem_post(&s_cpu_desocupado);
+					sem_post(&s_esperar_cpu);
 				}
+				//sem_post(&s_cpu_desocupado);
+				//sem_post(&s_esperar_cpu);
 
-				sem_post(&s_cpu_desocupado);
-				sem_post(&s_esperar_cpu);
 				break;
 
 			case F_CLOSE:
@@ -787,7 +788,7 @@ void esperar_cpu(){
 					execute_a_exit(pcb, motivoExit);
 				}
 				sem_post(&s_cpu_desocupado);
-				sem_post(&s_esperar_cpu);
+				//sem_post(&s_esperar_cpu);
 
 				break;
 			default:
@@ -993,11 +994,7 @@ void esperar_filesystem(PCB_t* pcb){
 		execute_a_exit(pcb,motivoExit);
 
 		sem_post(&s_ready_execute);
-
 	}
-
-
-
 }
 
 
@@ -1029,7 +1026,7 @@ void liberar_archivos(PCB_t* pcb){
 						log_info(logger, "Ingreso a Ready algoritmo %s - PIDS: [%s] ", configuracion->ALGORITMO_PLANIFICACION, pids);
 						log_info(logger, "PID: %d - Estado anterior: Blocked por archivo - Estado actual: READY", procesoBloqueado->pid);//TODO: listar cola ready?##########
 						sem_post(&s_cont_ready);
-						sem_post(&s_ready_execute);
+						//sem_post(&s_ready_execute);
 					}
 				} else { // no deberia entrar nunca
 					log_error(logger, "PID %d - Fue a exit con procesos en su tabla que no estaban en la global", pcb->pid);
@@ -1039,7 +1036,6 @@ void liberar_archivos(PCB_t* pcb){
 	}
 }
 
-// TODO
 void liberar_recursos(PCB_t* pcb){
 	t_tiempos_rafaga_anterior* elemento = list_get(list_rafa_anterior, pcb->pid); // estan ordenados por pid entonces se puede usar como index
 	if(!list_is_empty(elemento->recursosAsignados)) {
@@ -1081,13 +1077,12 @@ void liberar_recursos(PCB_t* pcb){
 
 				 pthread_mutex_lock(&mx_cola_ready);
 				 queue_push(cola_ready,pcb_blocked);
-				 send_proceso(cpu_fd, pcb,DISPATCH);
 				 pthread_mutex_unlock(&mx_cola_ready);
 
 				 sem_post(&s_cont_ready);
-				 sem_post(&s_ready_execute);
-				 sem_post(&s_cpu_desocupado);
-				 sem_post(&s_esperar_cpu);
+				 //sem_post(&s_ready_execute);
+				 //sem_post(&s_cpu_desocupado);
+				 //sem_post(&s_esperar_cpu);
 
 			 } else{
 				 pthread_mutex_lock(&mx_instancias);

@@ -233,3 +233,99 @@ TAM_MAX_SEGMENTO: 128
 [INFO] 18:40:17:278 Cpu/(61172:61186): Recibi PCB id: 0
 [INFO] 18:40:17:278 Cpu/(61172:61186): PID: 0 - Ejecutando EXIT
 [INFO] 18:41:53:821 Cpu/(61172:61186): Se ha finalizado la conexion
+[INFO] 18:44:57:362 Cpu/(61214:61214): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 18:44:57:363 Cpu/(61214:61214): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:44:57:364 Cpu/(61214:61214): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 18:45:02:687 Cpu/(61214:61214): Cliente conectado (a CPU_SV)
+
+[INFO] 18:45:04:784 Cpu/(61214:61219): Recibi PCB id: 0
+[INFO] 18:45:04:784 Cpu/(61214:61219): PID: 0 - Ejecutando WAIT a Kernel por recurso: DISCO
+ 
+[INFO] 18:45:04:784 Cpu/(61214:61219): Recibi PCB id: 0
+[INFO] 18:45:04:784 Cpu/(61214:61219): PID: 0 - Ejecutando WAIT a Kernel por recurso: MODEM
+ 
+[INFO] 18:45:04:784 Cpu/(61214:61219): Recibi PCB id: 0
+[INFO] 18:45:04:784 Cpu/(61214:61219): PID: 0 - Ejecutando SIGNAL a kernel por recurso: MODEM
+ 
+[INFO] 18:45:04:785 Cpu/(61214:61219): Recibi PCB id: 0
+[INFO] 18:45:04:785 Cpu/(61214:61219): PID: 0 - Ejecutando WAIT a Kernel por recurso: MODEM
+ 
+[INFO] 18:45:04:785 Cpu/(61214:61219): Recibi PCB id: 0
+[INFO] 18:45:04:785 Cpu/(61214:61219): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 18:45:04:785 Cpu/(61214:61219): Recibi PCB id: 0
+[INFO] 18:45:04:785 Cpu/(61214:61219): PID: 0 - Ejecutando EXIT
+[INFO] 18:45:07:463 Cpu/(61214:61219): Recibi PCB id: 1
+[INFO] 18:45:07:463 Cpu/(61214:61219): PID: 1 - Ejecutando WAIT a Kernel por recurso: DISCO
+ 
+[INFO] 18:45:07:463 Cpu/(61214:61219): Recibi PCB id: 1
+[INFO] 18:45:07:463 Cpu/(61214:61219): PID: 1 - Ejecutando WAIT a Kernel por recurso: MODEM
+ 
+[INFO] 18:45:07:464 Cpu/(61214:61219): Recibi PCB id: 1
+[INFO] 18:45:07:464 Cpu/(61214:61219): PID: 1 - Ejecutando SIGNAL a kernel por recurso: MODEM
+ 
+[INFO] 18:45:07:464 Cpu/(61214:61219): Recibi PCB id: 1
+[INFO] 18:45:07:464 Cpu/(61214:61219): PID: 1 - Ejecutando WAIT a Kernel por recurso: MODEM
+ 
+[INFO] 18:45:07:465 Cpu/(61214:61219): Recibi PCB id: 1
+[INFO] 18:45:07:465 Cpu/(61214:61219): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 18:45:07:467 Cpu/(61214:61219): Recibi PCB id: 1
+[INFO] 18:45:07:467 Cpu/(61214:61219): PID: 1 - Ejecutando EXIT
+[INFO] 18:45:23:073 Cpu/(61214:61219): Se ha finalizado la conexion
+[INFO] 19:43:33:270 Cpu/(61517:61517): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 19:43:33:279 Cpu/(61517:61517): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 19:43:33:280 Cpu/(61517:61517): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 19:43:39:253 Cpu/(61517:61517): Cliente conectado (a CPU_SV)
+
+[INFO] 19:43:42:401 Cpu/(61517:61522): Recibi PCB id: 0
+[INFO] 19:43:42:401 Cpu/(61517:61522): PID: 0 - Ejecutando WAIT a Kernel por recurso: DISCO
+ 
+[INFO] 19:43:42:407 Cpu/(61517:61522): Recibi PCB id: 0
+[INFO] 19:43:42:407 Cpu/(61517:61522): PID: 0 - Ejecutando WAIT a Kernel por recurso: MODEM
+ 
+[INFO] 19:43:42:409 Cpu/(61517:61522): Recibi PCB id: 0
+[INFO] 19:43:42:409 Cpu/(61517:61522): PID: 0 - Ejecutando SIGNAL a kernel por recurso: MODEM
+ 
+[INFO] 19:43:42:427 Cpu/(61517:61522): Recibi PCB id: 0
+[INFO] 19:43:42:427 Cpu/(61517:61522): PID: 0 - Ejecutando WAIT a Kernel por recurso: MODEM
+ 
+[INFO] 19:43:42:430 Cpu/(61517:61522): Recibi PCB id: 0
+[INFO] 19:43:42:430 Cpu/(61517:61522): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 19:43:42:434 Cpu/(61517:61522): Recibi PCB id: 0
+[INFO] 19:43:42:434 Cpu/(61517:61522): PID: 0 - Ejecutando EXIT
+[INFO] 19:43:52:388 Cpu/(61517:61522): Recibi PCB id: 1
+[INFO] 19:43:52:388 Cpu/(61517:61522): PID: 1 - Ejecutando WAIT a Kernel por recurso: DISCO
+ 
+[INFO] 19:43:52:388 Cpu/(61517:61522): Recibi PCB id: 1
+[INFO] 19:43:52:388 Cpu/(61517:61522): PID: 1 - Ejecutando WAIT a Kernel por recurso: MODEM
+ 
+[INFO] 19:43:52:388 Cpu/(61517:61522): Recibi PCB id: 1
+[INFO] 19:43:52:388 Cpu/(61517:61522): PID: 1 - Ejecutando SIGNAL a kernel por recurso: MODEM
+ 
+[INFO] 19:43:52:389 Cpu/(61517:61522): Recibi PCB id: 1
+[INFO] 19:43:52:389 Cpu/(61517:61522): PID: 1 - Ejecutando WAIT a Kernel por recurso: MODEM
+ 
+[INFO] 19:43:52:389 Cpu/(61517:61522): Recibi PCB id: 1
+[INFO] 19:43:52:389 Cpu/(61517:61522): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 19:43:52:390 Cpu/(61517:61522): Recibi PCB id: 1
+[INFO] 19:43:52:390 Cpu/(61517:61522): PID: 1 - Ejecutando EXIT
+[INFO] 19:43:55:199 Cpu/(61517:61522): Se ha finalizado la conexion

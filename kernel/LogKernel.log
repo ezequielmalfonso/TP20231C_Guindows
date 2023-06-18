@@ -749,3 +749,203 @@ GRADO_MAX_MULTIPROGRAMACION: 4
 [WARNING] 18:40:17:278 Kernel/(61183:61185): El archivo JOHN fue eliminado de la tabla global de archivos abiertos
 [INFO] 18:40:17:278 Kernel/(61183:61185): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
 [INFO] 18:40:17:278 Kernel/(61183:61185): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 18:45:02:685 Kernel/(61216:61216): Probando hora 0
+[INFO] 18:45:02:685 Kernel/(61216:61216): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 18:45:02:686 Kernel/(61216:61216): RECURSO: DISCO con 1 instancias
+[INFO] 18:45:02:686 Kernel/(61216:61216): RECURSO: MODEM con 1 instancias
+[INFO] 18:45:02:686 Kernel/(61216:61216): Cantidad total de recursos disponibles: 2 
+[INFO] 18:45:02:687 Kernel/(61216:61216): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 18:45:02:687 Kernel/(61216:61216): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 18:45:02:688 Kernel/(61216:61216): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:45:02:688 Kernel/(61216:61216): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 18:45:02:688 Kernel/(61216:61216): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 18:45:04:782 Kernel/(61216:61216): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 18:45:04:783 Kernel/(61216:61222): No hay asignacion tamaño de registros
+[INFO] 18:45:04:783 Kernel/(61216:61222): Envio solicitud a MEMORIA
+[INFO] 18:45:04:783 Kernel/(61216:61222): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 18:45:04:784 Kernel/(61216:61222): Se crea el proceso 0 en NEW
+[INFO] 18:45:04:784 Kernel/(61216:61222): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:45:04:784 Kernel/(61216:61222): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 18:45:04:784 Kernel/(61216:61217): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 18:45:04:784 Kernel/(61216:61218): PID: 0 - Recibo pedido de WAIT por RECURSO: DISCO
+[INFO] 18:45:04:784 Kernel/(61216:61218): Para RECURSO DISCO hay 1 instancias disponibles antes de ejecutar
+[INFO] 18:45:04:784 Kernel/(61216:61218): PID: 0 - Wait: DISCO - Instancias: 0 
+[INFO] 18:45:04:784 Kernel/(61216:61218): PID: 0 - Recibo pedido de WAIT por RECURSO: MODEM
+[INFO] 18:45:04:784 Kernel/(61216:61218): Para RECURSO MODEM hay 1 instancias disponibles antes de ejecutar
+[INFO] 18:45:04:784 Kernel/(61216:61218): PID: 0 - Wait: MODEM - Instancias: 0 
+[INFO] 18:45:04:784 Kernel/(61216:61218): PID: 0 - Recibo pedido de SIGNAL por RECURSO: MODEM
+[INFO] 18:45:04:784 Kernel/(61216:61218): Para RECURSO MODEM hay 0 instancias disponibles antes de ejecutar
+[INFO] 18:45:04:784 Kernel/(61216:61218): PID: 0 - SIGNAL: MODEM - Instancias: 1 
+[INFO] 18:45:04:785 Kernel/(61216:61218): PID: 0 - Recibo pedido de WAIT por RECURSO: MODEM
+[INFO] 18:45:04:785 Kernel/(61216:61218): Para RECURSO MODEM hay 1 instancias disponibles antes de ejecutar
+[INFO] 18:45:04:785 Kernel/(61216:61218): PID: 0 - Wait: MODEM - Instancias: 0 
+[INFO] 18:45:04:785 Kernel/(61216:61218): PID: 0 - Recibo pedido de F_OPEN por: JOHN
+
+[INFO] 18:45:04:785 Kernel/(61216:61218): PID: 0 - Abrir Archivo: JOHN
+
+[WARNING] 18:45:04:785 Kernel/(61216:61218): La tabla global de archivos esta vacia
+[WARNING] 18:45:04:785 Kernel/(61216:61218): Archivo JOHN
+ no esta abierto
+[WARNING] 18:45:04:785 Kernel/(61216:61218): Existencia=1
+[WARNING] 18:45:04:785 Kernel/(61216:61218): El archivo JOHN fue abierto y cargado a la tabla global de archivos abiertos
+[INFO] 18:45:04:785 Kernel/(61216:61218): PID: 0 - Se agrego JOHN a la tabla de archivos abiertos
+[WARNING] 18:45:04:785 Kernel/(61216:61218): PID: 0 - SIGNAL por exit sin signal: DISCO - Instancias: 1 
+[WARNING] 18:45:04:785 Kernel/(61216:61218): PID: 0 - SIGNAL por exit sin signal: MODEM - Instancias: 1 
+[WARNING] 18:45:04:785 Kernel/(61216:61218): PID 0 - Fue a exit con un archivo abierto
+[WARNING] 18:45:04:785 Kernel/(61216:61218): El archivo JOHN fue eliminado de la tabla global de archivos abiertos
+[INFO] 18:45:04:785 Kernel/(61216:61218): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 18:45:04:786 Kernel/(61216:61218): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 18:45:07:418 Kernel/(61216:61216): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 18:45:07:419 Kernel/(61216:61224): No hay asignacion tamaño de registros
+[INFO] 18:45:07:419 Kernel/(61216:61224): Envio solicitud a MEMORIA
+[INFO] 18:45:07:463 Kernel/(61216:61224): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 18:45:07:463 Kernel/(61216:61224): Se crea el proceso 1 en NEW
+[INFO] 18:45:07:463 Kernel/(61216:61224): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:45:07:463 Kernel/(61216:61224): Ingreso a Ready algoritmo HRRN - PIDS: [1] 
+[INFO] 18:45:07:463 Kernel/(61216:61217): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 18:45:07:463 Kernel/(61216:61218): PID: 1 - Recibo pedido de WAIT por RECURSO: DISCO
+[INFO] 18:45:07:463 Kernel/(61216:61218): Para RECURSO DISCO hay 1 instancias disponibles antes de ejecutar
+[INFO] 18:45:07:463 Kernel/(61216:61218): PID: 1 - Wait: DISCO - Instancias: 0 
+[INFO] 18:45:07:463 Kernel/(61216:61218): PID: 1 - Recibo pedido de WAIT por RECURSO: MODEM
+[INFO] 18:45:07:463 Kernel/(61216:61218): Para RECURSO MODEM hay 1 instancias disponibles antes de ejecutar
+[INFO] 18:45:07:464 Kernel/(61216:61218): PID: 1 - Wait: MODEM - Instancias: 0 
+[INFO] 18:45:07:464 Kernel/(61216:61218): PID: 1 - Recibo pedido de SIGNAL por RECURSO: MODEM
+[INFO] 18:45:07:464 Kernel/(61216:61218): Para RECURSO MODEM hay 0 instancias disponibles antes de ejecutar
+[INFO] 18:45:07:464 Kernel/(61216:61218): PID: 1 - SIGNAL: MODEM - Instancias: 1 
+[INFO] 18:45:07:464 Kernel/(61216:61218): PID: 1 - Recibo pedido de WAIT por RECURSO: MODEM
+[INFO] 18:45:07:464 Kernel/(61216:61218): Para RECURSO MODEM hay 1 instancias disponibles antes de ejecutar
+[INFO] 18:45:07:465 Kernel/(61216:61218): PID: 1 - Wait: MODEM - Instancias: 0 
+[INFO] 18:45:07:465 Kernel/(61216:61218): PID: 1 - Recibo pedido de F_OPEN por: JOHN
+
+[INFO] 18:45:07:465 Kernel/(61216:61218): PID: 1 - Abrir Archivo: JOHN
+
+[WARNING] 18:45:07:465 Kernel/(61216:61218): La tabla global de archivos esta vacia
+[WARNING] 18:45:07:465 Kernel/(61216:61218): Archivo JOHN
+ no esta abierto
+[WARNING] 18:45:07:466 Kernel/(61216:61218): Existencia=1
+[WARNING] 18:45:07:466 Kernel/(61216:61218): El archivo JOHN fue abierto y cargado a la tabla global de archivos abiertos
+[INFO] 18:45:07:466 Kernel/(61216:61218): PID: 1 - Se agrego JOHN a la tabla de archivos abiertos
+[WARNING] 18:45:07:467 Kernel/(61216:61218): PID: 1 - SIGNAL por exit sin signal: DISCO - Instancias: 1 
+[WARNING] 18:45:07:467 Kernel/(61216:61218): PID: 1 - SIGNAL por exit sin signal: MODEM - Instancias: 1 
+[WARNING] 18:45:07:467 Kernel/(61216:61218): PID 1 - Fue a exit con un archivo abierto
+[WARNING] 18:45:07:467 Kernel/(61216:61218): El archivo JOHN fue eliminado de la tabla global de archivos abiertos
+[INFO] 18:45:07:467 Kernel/(61216:61218): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 18:45:07:467 Kernel/(61216:61218): Finaliza el proceso 1 - Motivo: POR FIN
+[INFO] 19:43:39:243 Kernel/(61519:61519): Probando hora 0
+[INFO] 19:43:39:247 Kernel/(61519:61519): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 19:43:39:250 Kernel/(61519:61519): RECURSO: DISCO con 1 instancias
+[INFO] 19:43:39:250 Kernel/(61519:61519): RECURSO: MODEM con 1 instancias
+[INFO] 19:43:39:250 Kernel/(61519:61519): Cantidad total de recursos disponibles: 2 
+[INFO] 19:43:39:251 Kernel/(61519:61519): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 19:43:39:254 Kernel/(61519:61519): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 19:43:39:254 Kernel/(61519:61519): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 19:43:39:255 Kernel/(61519:61519): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 19:43:39:255 Kernel/(61519:61519): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 19:43:42:383 Kernel/(61519:61519): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 19:43:42:395 Kernel/(61519:61525): No hay asignacion tamaño de registros
+[INFO] 19:43:42:396 Kernel/(61519:61525): Envio solicitud a MEMORIA
+[INFO] 19:43:42:398 Kernel/(61519:61525): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 19:43:42:399 Kernel/(61519:61525): Se crea el proceso 0 en NEW
+[INFO] 19:43:42:399 Kernel/(61519:61525): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:43:42:399 Kernel/(61519:61525): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 19:43:42:399 Kernel/(61519:61520): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 19:43:42:403 Kernel/(61519:61521): PID: 0 - Recibo pedido de WAIT por RECURSO: DISCO
+[INFO] 19:43:42:404 Kernel/(61519:61521): Para RECURSO DISCO hay 1 instancias disponibles antes de ejecutar
+[INFO] 19:43:42:407 Kernel/(61519:61521): PID: 0 - Wait: DISCO - Instancias: 0 
+[INFO] 19:43:42:408 Kernel/(61519:61521): PID: 0 - Recibo pedido de WAIT por RECURSO: MODEM
+[INFO] 19:43:42:409 Kernel/(61519:61521): Para RECURSO MODEM hay 1 instancias disponibles antes de ejecutar
+[INFO] 19:43:42:409 Kernel/(61519:61521): PID: 0 - Wait: MODEM - Instancias: 0 
+[INFO] 19:43:42:414 Kernel/(61519:61521): PID: 0 - Recibo pedido de SIGNAL por RECURSO: MODEM
+[INFO] 19:43:42:414 Kernel/(61519:61521): Para RECURSO MODEM hay 0 instancias disponibles antes de ejecutar
+[INFO] 19:43:42:414 Kernel/(61519:61521): PID: 0 - SIGNAL: MODEM - Instancias: 1 
+[INFO] 19:43:42:428 Kernel/(61519:61521): PID: 0 - Recibo pedido de WAIT por RECURSO: MODEM
+[INFO] 19:43:42:428 Kernel/(61519:61521): Para RECURSO MODEM hay 1 instancias disponibles antes de ejecutar
+[INFO] 19:43:42:429 Kernel/(61519:61521): PID: 0 - Wait: MODEM - Instancias: 0 
+[INFO] 19:43:42:430 Kernel/(61519:61521): PID: 0 - Recibo pedido de F_OPEN por: JOHN
+
+[INFO] 19:43:42:430 Kernel/(61519:61521): PID: 0 - Abrir Archivo: JOHN
+
+[WARNING] 19:43:42:430 Kernel/(61519:61521): La tabla global de archivos esta vacia
+[WARNING] 19:43:42:430 Kernel/(61519:61521): Archivo JOHN
+ no esta abierto
+[WARNING] 19:43:42:433 Kernel/(61519:61521): Existencia=1
+[WARNING] 19:43:42:434 Kernel/(61519:61521): El archivo JOHN fue abierto y cargado a la tabla global de archivos abiertos
+[INFO] 19:43:42:434 Kernel/(61519:61521): PID: 0 - Se agrego JOHN a la tabla de archivos abiertos
+[WARNING] 19:43:42:434 Kernel/(61519:61521): PID: 0 - SIGNAL por exit sin signal: DISCO - Instancias: 1 
+[WARNING] 19:43:42:434 Kernel/(61519:61521): PID: 0 - SIGNAL por exit sin signal: MODEM - Instancias: 1 
+[WARNING] 19:43:42:434 Kernel/(61519:61521): PID 0 - Fue a exit con un archivo abierto
+[WARNING] 19:43:42:434 Kernel/(61519:61521): El archivo JOHN fue eliminado de la tabla global de archivos abiertos
+[INFO] 19:43:42:435 Kernel/(61519:61521): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 19:43:42:435 Kernel/(61519:61521): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 19:43:52:344 Kernel/(61519:61519): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 19:43:52:345 Kernel/(61519:61527): No hay asignacion tamaño de registros
+[INFO] 19:43:52:345 Kernel/(61519:61527): Envio solicitud a MEMORIA
+[INFO] 19:43:52:387 Kernel/(61519:61527): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 19:43:52:388 Kernel/(61519:61527): Se crea el proceso 1 en NEW
+[INFO] 19:43:52:388 Kernel/(61519:61527): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:43:52:388 Kernel/(61519:61527): Ingreso a Ready algoritmo HRRN - PIDS: [1] 
+[INFO] 19:43:52:388 Kernel/(61519:61520): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 19:43:52:388 Kernel/(61519:61521): PID: 1 - Recibo pedido de WAIT por RECURSO: DISCO
+[INFO] 19:43:52:388 Kernel/(61519:61521): Para RECURSO DISCO hay 1 instancias disponibles antes de ejecutar
+[INFO] 19:43:52:388 Kernel/(61519:61521): PID: 1 - Wait: DISCO - Instancias: 0 
+[INFO] 19:43:52:388 Kernel/(61519:61521): PID: 1 - Recibo pedido de WAIT por RECURSO: MODEM
+[INFO] 19:43:52:388 Kernel/(61519:61521): Para RECURSO MODEM hay 1 instancias disponibles antes de ejecutar
+[INFO] 19:43:52:388 Kernel/(61519:61521): PID: 1 - Wait: MODEM - Instancias: 0 
+[INFO] 19:43:52:388 Kernel/(61519:61521): PID: 1 - Recibo pedido de SIGNAL por RECURSO: MODEM
+[INFO] 19:43:52:388 Kernel/(61519:61521): Para RECURSO MODEM hay 0 instancias disponibles antes de ejecutar
+[INFO] 19:43:52:389 Kernel/(61519:61521): PID: 1 - SIGNAL: MODEM - Instancias: 1 
+[INFO] 19:43:52:389 Kernel/(61519:61521): PID: 1 - Recibo pedido de WAIT por RECURSO: MODEM
+[INFO] 19:43:52:389 Kernel/(61519:61521): Para RECURSO MODEM hay 1 instancias disponibles antes de ejecutar
+[INFO] 19:43:52:389 Kernel/(61519:61521): PID: 1 - Wait: MODEM - Instancias: 0 
+[INFO] 19:43:52:389 Kernel/(61519:61521): PID: 1 - Recibo pedido de F_OPEN por: JOHN
+
+[INFO] 19:43:52:389 Kernel/(61519:61521): PID: 1 - Abrir Archivo: JOHN
+
+[WARNING] 19:43:52:389 Kernel/(61519:61521): La tabla global de archivos esta vacia
+[WARNING] 19:43:52:389 Kernel/(61519:61521): Archivo JOHN
+ no esta abierto
+[WARNING] 19:43:52:389 Kernel/(61519:61521): Existencia=1
+[WARNING] 19:43:52:390 Kernel/(61519:61521): El archivo JOHN fue abierto y cargado a la tabla global de archivos abiertos
+[INFO] 19:43:52:390 Kernel/(61519:61521): PID: 1 - Se agrego JOHN a la tabla de archivos abiertos
+[WARNING] 19:43:52:390 Kernel/(61519:61521): PID: 1 - SIGNAL por exit sin signal: DISCO - Instancias: 1 
+[WARNING] 19:43:52:390 Kernel/(61519:61521): PID: 1 - SIGNAL por exit sin signal: MODEM - Instancias: 1 
+[WARNING] 19:43:52:391 Kernel/(61519:61521): PID 1 - Fue a exit con un archivo abierto
+[WARNING] 19:43:52:391 Kernel/(61519:61521): El archivo JOHN fue eliminado de la tabla global de archivos abiertos
+[INFO] 19:43:52:391 Kernel/(61519:61521): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 19:43:52:391 Kernel/(61519:61521): Finaliza el proceso 1 - Motivo: POR FIN
