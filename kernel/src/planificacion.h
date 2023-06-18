@@ -65,7 +65,7 @@ char* procesosEnReady(t_queue*);
 bool criterio_nombre_archivo(t_archivo_abierto* archivo);
 bool criterio_nombre_archivo_proceso(t_archivoAbierto* archivo);
 void esperar_filesystem(PCB_t* pcb);
-
+void liberar_archivos(PCB_t* pcb);
 
 
 

@@ -619,7 +619,7 @@ void esperar_cpu(){
 				}
 
 				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_CLOSE);
-				// TODO: hace falta que responda un f_close_ok/fail y evaluar?
+				// TODO: ni hay que mandarlo al fs
 
 				// Tabla de archivos del proceso
 				if(!list_is_empty(pcb->archivos_abiertos)) {	//
@@ -787,7 +787,7 @@ void execute_a_exit(PCB_t* pcb, char* motivoExit){
 	cop = EXIT;
 
 	// TODO liberar_recursos(pcb);  PEGARLO A LA LISTA DE TIEMPOS
-	// TODO liberar_archivo(pcb);
+	liberar_archivos(pcb);
 
 	send(pcb->cliente_fd,&cop,sizeof(op_code),0);
 	//pthread_mutex_lock(&mx_log);
@@ -975,13 +975,43 @@ void esperar_filesystem(PCB_t* pcb){
 
 
 
-void liberar_archivo(PCB_t* pcb){
+void liberar_archivos(PCB_t* pcb){
 	//TODO
 	if(!list_is_empty(pcb->archivos_abiertos)){
-
+		int i;
+		int tamanio = list_size(pcb->archivos_abiertos);
+		t_archivoAbierto* archivoACerrar;
+		for(i = 0; i < tamanio; i++) {
+			archivoACerrar = list_get(pcb->archivos_abiertos, i);
+			archivoABuscar = archivoACerrar->nombre_archivo;
+			if(!list_is_empty(tabla_global_archivos)) {	// Reviso que este el archivo en la TGA
+				bool (*aux1)(void* x) = criterio_nombre_archivo;	// se puede meter como parametro directamente de alguna forma y no tener que usar aux1
+				archivo = list_find(tabla_global_archivos, aux1);
+				if(archivo != NULL) {
+					log_warning(logger, "PID %d - Fue a exit con un archivo abierto", pcb->pid);
+					if(queue_is_empty(archivo->c_proc_bloqueados)) {	// Igual a fclose
+						list_remove_element(tabla_global_archivos, archivo);
+						log_warning(logger, "El archivo %s fue eliminado de la tabla global de archivos abiertos", archivo->nombre);
+					} else {	// Si hay procesos bloqueados mando el primer bloqueado a ready
+						PCB_t* procesoBloqueado = queue_pop(archivo->c_proc_bloqueados);
+						procesoBloqueado->tiempo_llegada_a_ready = temporal_gettime(reloj);	// hrrn
+						pthread_mutex_lock(&mx_cola_ready);
+						queue_push(cola_ready, procesoBloqueado);
+						pthread_mutex_unlock(&mx_cola_ready);
+						// Lista los pids despues de entrar a ready
+						char* pids = procesosEnReady(cola_ready);
+						log_info(logger, "Ingreso a Ready algoritmo %s - PIDS: [%s] ", configuracion->ALGORITMO_PLANIFICACION, pids);
+						log_info(logger, "PID: %d - Estado anterior: Blocked por archivo - Estado actual: READY", procesoBloqueado->pid);//TODO: listar cola ready?##########
+						sem_post(&s_cont_ready);
+						sem_post(&s_ready_execute);
+					}
+				} else { // no deberia entrar nunca
+					log_error(logger, "PID %d - Fue a exit con procesos en su tabla que no estaban en la global", pcb->pid);
+				}
+			}
+		}
 	}
 }
-
 
 // TODO
 void liberar_recursos(pcb){

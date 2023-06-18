@@ -1,0 +1,208 @@
+[INFO] 16:43:10:127 Kernel/(58013:58013): Probando hora 0
+[INFO] 16:43:10:128 Kernel/(58013:58013): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 16:43:10:129 Kernel/(58013:58013): RECURSO: DISCO con 1 instancias
+[INFO] 16:43:10:129 Kernel/(58013:58013): Cantidad total de recursos disponibles: 1 
+[INFO] 16:43:10:129 Kernel/(58013:58013): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 16:43:10:130 Kernel/(58013:58013): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 16:43:10:130 Kernel/(58013:58013): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 16:43:10:130 Kernel/(58013:58013): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 16:43:10:130 Kernel/(58013:58013): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 16:44:22:471 Kernel/(58013:58013): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 16:44:22:472 Kernel/(58013:58020): No hay asignacion tamaño de registros
+[INFO] 16:44:22:473 Kernel/(58013:58020): Envio solicitud a MEMORIA
+[INFO] 16:44:22:474 Kernel/(58013:58020): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 16:44:22:475 Kernel/(58013:58020): Se crea el proceso 0 en NEW
+[INFO] 16:44:22:475 Kernel/(58013:58020): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:44:22:476 Kernel/(58013:58020): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 16:44:22:477 Kernel/(58013:58014): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 16:44:22:477 Kernel/(58013:58015): PID: 0 - Recibo pedido de F_OPEN por: JOHN
+
+[INFO] 16:44:22:477 Kernel/(58013:58015): PID: 0 - Abrir Archivo: JOHN
+
+[WARNING] 16:44:22:477 Kernel/(58013:58015): La tabla global de archivos esta vacia
+[WARNING] 16:44:22:478 Kernel/(58013:58015): Archivo JOHN
+ no esta abierto
+[WARNING] 16:44:22:478 Kernel/(58013:58015): Existencia=1
+[WARNING] 16:44:22:479 Kernel/(58013:58015): El archivo JOHN fue abierto y cargado a la tabla global de archivos abiertos
+[INFO] 16:44:22:479 Kernel/(58013:58015): PID: 0 - Se agrego JOHN a la tabla de archivos abiertos
+[INFO] 16:44:22:484 Kernel/(58013:58015): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O
+[INFO] 16:44:22:488 Kernel/(58013:58021): Instruccion numer 1
+[INFO] 16:44:22:489 Kernel/(58013:58021):  PID: 0 - Bloqueado por: I/O durante: 10
+
+[INFO] 16:44:24:650 Kernel/(58013:58013): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 16:44:24:651 Kernel/(58013:58023): No hay asignacion tamaño de registros
+[INFO] 16:44:24:651 Kernel/(58013:58023): Envio solicitud a MEMORIA
+[INFO] 16:44:24:695 Kernel/(58013:58023): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 16:44:24:695 Kernel/(58013:58023): Se crea el proceso 1 en NEW
+[INFO] 16:44:24:695 Kernel/(58013:58023): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:44:24:695 Kernel/(58013:58023): Ingreso a Ready algoritmo HRRN - PIDS: [1] 
+[INFO] 16:44:24:695 Kernel/(58013:58014): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 16:44:24:695 Kernel/(58013:58015): PID: 1 - Recibo pedido de F_OPEN por: JOHN
+
+[INFO] 16:44:24:695 Kernel/(58013:58015): PID: 1 - Abrir Archivo: JOHN
+
+[WARNING] 16:44:24:695 Kernel/(58013:58015): Hay elementos en la tabla global de archivos. Busco el JOHN
+
+[WARNING] 16:44:24:695 Kernel/(58013:58015): El archivo JOHN ya estaba abierto en la TGA
+[INFO] 16:44:24:695 Kernel/(58013:58015): PID: 1 - Se agrego JOHN a la tabla de archivos abiertos (ya en TGA)
+[WARNING] 16:44:24:695 Kernel/(58013:58015): PID: 1 - Bloqueado esperando archivo JOHN
+[INFO] 16:44:27:023 Kernel/(58013:58013): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 16:44:27:025 Kernel/(58013:58025): No hay asignacion tamaño de registros
+[INFO] 16:44:27:026 Kernel/(58013:58025): Envio solicitud a MEMORIA
+[INFO] 16:44:27:067 Kernel/(58013:58025): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 16:44:27:067 Kernel/(58013:58025): Se crea el proceso 2 en NEW
+[INFO] 16:44:27:067 Kernel/(58013:58025): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:44:27:068 Kernel/(58013:58025): Ingreso a Ready algoritmo HRRN - PIDS: [2] 
+[INFO] 16:44:27:068 Kernel/(58013:58014): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 16:44:27:068 Kernel/(58013:58015): PID: 2 - Recibo pedido de F_OPEN por: JOHN
+
+[INFO] 16:44:27:068 Kernel/(58013:58015): PID: 2 - Abrir Archivo: JOHN
+
+[WARNING] 16:44:27:068 Kernel/(58013:58015): Hay elementos en la tabla global de archivos. Busco el JOHN
+
+[WARNING] 16:44:27:068 Kernel/(58013:58015): El archivo JOHN ya estaba abierto en la TGA
+[INFO] 16:44:27:068 Kernel/(58013:58015): PID: 2 - Se agrego JOHN a la tabla de archivos abiertos (ya en TGA)
+[WARNING] 16:44:27:068 Kernel/(58013:58015): PID: 2 - Bloqueado esperando archivo JOHN
+[INFO] 16:44:32:489 Kernel/(58013:58021): PID: 0 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 16:44:32:490 Kernel/(58013:58021): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 16:44:32:490 Kernel/(58013:58014): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 16:44:32:491 Kernel/(58013:58015): PID: 0 - Recibo pedido de F_CLOSE por: JOHN
+
+[INFO] 16:44:32:491 Kernel/(58013:58015): PID: 0 - Se elimino JOHN de la tabla de archivos abiertos
+[INFO] 16:44:32:491 Kernel/(58013:58015): Ingreso a Ready algoritmo HRRN - PIDS: [1] 
+[INFO] 16:44:32:491 Kernel/(58013:58015): PID: 1 - Estado anterior: Blocked por archivo - Estado actual: READY
+[INFO] 16:44:32:491 Kernel/(58013:58014): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 16:44:32:492 Kernel/(58013:58015): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 16:44:32:493 Kernel/(58013:58015): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 16:44:32:493 Kernel/(58013:58015): PID: 1 - Recibo pedido de F_CLOSE por: JOHN
+
+[INFO] 16:44:32:493 Kernel/(58013:58015): PID: 1 - Se elimino JOHN de la tabla de archivos abiertos
+[INFO] 16:44:32:493 Kernel/(58013:58015): Ingreso a Ready algoritmo HRRN - PIDS: [2] 
+[INFO] 16:44:32:493 Kernel/(58013:58015): PID: 2 - Estado anterior: Blocked por archivo - Estado actual: READY
+[INFO] 16:44:32:493 Kernel/(58013:58014): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 16:44:32:494 Kernel/(58013:58015): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 16:44:32:495 Kernel/(58013:58015): Finaliza el proceso 1 - Motivo: POR FIN
+[INFO] 16:44:32:495 Kernel/(58013:58015): PID: 2 - Recibo pedido de F_CLOSE por: JOHN
+
+[INFO] 16:44:32:495 Kernel/(58013:58015): PID: 2 - Se elimino JOHN de la tabla de archivos abiertos
+[WARNING] 16:44:32:495 Kernel/(58013:58015): El archivo JOHN fue eliminado de la tabla global de archivos abiertos
+[INFO] 16:44:32:497 Kernel/(58013:58015): PID: 2 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 16:44:32:497 Kernel/(58013:58015): Finaliza el proceso 2 - Motivo: POR FIN
+[INFO] 16:47:24:747 Kernel/(58043:58043): Probando hora 0
+[INFO] 16:47:24:747 Kernel/(58043:58043): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 16:47:24:747 Kernel/(58043:58043): RECURSO: DISCO con 1 instancias
+[INFO] 16:47:24:747 Kernel/(58043:58043): Cantidad total de recursos disponibles: 1 
+[INFO] 16:47:24:747 Kernel/(58043:58043): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 16:47:24:747 Kernel/(58043:58043): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 16:47:24:747 Kernel/(58043:58043): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 16:47:24:748 Kernel/(58043:58043): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 16:47:24:748 Kernel/(58043:58043): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 16:47:31:343 Kernel/(58043:58043): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 16:47:31:343 Kernel/(58043:58049): No hay asignacion tamaño de registros
+[INFO] 16:47:31:343 Kernel/(58043:58049): Envio solicitud a MEMORIA
+[INFO] 16:47:31:344 Kernel/(58043:58049): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 16:47:31:344 Kernel/(58043:58049): Se crea el proceso 0 en NEW
+[INFO] 16:47:31:344 Kernel/(58043:58049): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:47:31:344 Kernel/(58043:58049): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 16:47:31:344 Kernel/(58043:58044): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 16:47:31:345 Kernel/(58043:58045): PID: 0 - Recibo pedido de F_OPEN por: JOHN
+
+[INFO] 16:47:31:345 Kernel/(58043:58045): PID: 0 - Abrir Archivo: JOHN
+
+[WARNING] 16:47:31:345 Kernel/(58043:58045): La tabla global de archivos esta vacia
+[WARNING] 16:47:31:345 Kernel/(58043:58045): Archivo JOHN
+ no esta abierto
+[WARNING] 16:47:31:345 Kernel/(58043:58045): Existencia=1
+[WARNING] 16:47:31:345 Kernel/(58043:58045): El archivo JOHN fue abierto y cargado a la tabla global de archivos abiertos
+[INFO] 16:47:31:345 Kernel/(58043:58045): PID: 0 - Se agrego JOHN a la tabla de archivos abiertos
+[INFO] 16:47:31:345 Kernel/(58043:58045): PID: 0 - Recibo pedido de WAIT por RECURSO: LOL
+
+[ERROR] 16:47:31:345 Kernel/(58043:58045): PID: 0 - Recibo pedido de WAIT por recurso desconocido: LOL
+[INFO] 16:47:31:345 Kernel/(58043:58045): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 16:47:31:345 Kernel/(58043:58045): Finaliza el proceso 0 - Motivo: WAIT por Recurso Inexistente
+[INFO] 16:52:51:071 Kernel/(58204:58204): Probando hora 0
+[INFO] 16:52:51:252 Kernel/(58204:58204): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 16:52:51:256 Kernel/(58204:58204): RECURSO: DISCO con 1 instancias
+[INFO] 16:52:51:256 Kernel/(58204:58204): Cantidad total de recursos disponibles: 1 
+[INFO] 16:52:51:259 Kernel/(58204:58204): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 16:52:51:261 Kernel/(58204:58204): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 16:52:51:263 Kernel/(58204:58204): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 16:52:51:264 Kernel/(58204:58204): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 16:52:51:264 Kernel/(58204:58204): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 16:52:53:705 Kernel/(58204:58204): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 16:52:53:708 Kernel/(58204:58210): No hay asignacion tamaño de registros
+[INFO] 16:52:53:713 Kernel/(58204:58210): Envio solicitud a MEMORIA
+[INFO] 16:52:53:714 Kernel/(58204:58210): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 16:52:53:714 Kernel/(58204:58210): Se crea el proceso 0 en NEW
+[INFO] 16:52:53:714 Kernel/(58204:58210): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:52:53:714 Kernel/(58204:58210): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 16:52:53:714 Kernel/(58204:58205): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 16:52:53:716 Kernel/(58204:58206): PID: 0 - Recibo pedido de F_OPEN por: JOHN
+
+[INFO] 16:52:53:716 Kernel/(58204:58206): PID: 0 - Abrir Archivo: JOHN
+
+[WARNING] 16:52:53:716 Kernel/(58204:58206): La tabla global de archivos esta vacia
+[WARNING] 16:52:53:716 Kernel/(58204:58206): Archivo JOHN
+ no esta abierto
+[WARNING] 16:52:53:720 Kernel/(58204:58206): Existencia=1
+[WARNING] 16:52:53:720 Kernel/(58204:58206): El archivo JOHN fue abierto y cargado a la tabla global de archivos abiertos
+[INFO] 16:52:53:720 Kernel/(58204:58206): PID: 0 - Se agrego JOHN a la tabla de archivos abiertos
+[INFO] 16:52:53:721 Kernel/(58204:58206): PID: 0 - Recibo pedido de WAIT por RECURSO: LOL
+
+[ERROR] 16:52:53:721 Kernel/(58204:58206): PID: 0 - Recibo pedido de WAIT por recurso desconocido: LOL
+[WARNING] 16:52:53:721 Kernel/(58204:58206): PID 0 - Fue a exit con un archivo abierto
+[INFO] 16:52:53:721 Kernel/(58204:58206): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 16:52:53:721 Kernel/(58204:58206): Finaliza el proceso 0 - Motivo: WAIT por Recurso Inexistente
