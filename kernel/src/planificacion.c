@@ -33,7 +33,7 @@ t_queue* cola_ready_sec;
 t_list* list_blocked;
 t_queue* cola_blocked_respuesta_fs;
 t_queue* cola_blocked_fs_libre;
-//t_tiempos_rafaga_anterior raf_anterior;
+t_tiempos_rafaga_anterior* rafAnteriorAux;
 t_list* list_rafa_anterior;
 int64_t reloj = 1;
 
@@ -45,6 +45,7 @@ char* archivoABuscar;
 t_archivo_abierto* archivo;
 t_archivoAbierto* archivo_proceso;
 char* recursoABuscar;
+double estimadorNuevo;
 
 op_code cop;
 
@@ -182,12 +183,12 @@ void inicializarPlanificacion(){
 
 	tabla_global_archivos = list_create();
 
-	sem_init(&s_ready_execute,0,0);
+	sem_init(&s_ready_execute,0,1);
 	sem_init(&s_cpu_desocupado, 0, 1);
 	sem_init(&s_esperar_cpu, 0, 0);
 	sem_init(&s_cont_ready,0,0);
 	sem_init(&s_io, 0, 1);
-	sem_init(&s_blocked_fs, 0, 1);	// no se usa
+	sem_init(&s_blocked_fs, 0, 1);
 
 
 /*	for(int i=0;i<10;i++){
@@ -285,7 +286,7 @@ void esperar_cpu(){
 							 send_proceso(cpu_fd, pcb,DISPATCH);
 							 pthread_mutex_unlock(&mx_cola_ready);
 
-							 sem_post(&s_ready_execute);
+							 //sem_post(&s_ready_execute);
 							 //sem_post(&s_cpu_desocupado);
 							 sem_post(&s_esperar_cpu);
 
@@ -297,7 +298,7 @@ void esperar_cpu(){
 
 
 							 tiemposRafaga->tiempo_out_exec = temporal_gettime(reloj_inicio);
-							 double estimadorNuevo = obtenerEstimadoRafaga(pcb, configuracion->ESTIMACION_INICIAL, configuracion->HRRN_ALFA);
+							 estimadorNuevo = obtenerEstimadoRafaga(pcb, configuracion->ESTIMACION_INICIAL, configuracion->HRRN_ALFA);
 							 pcb->estimado_proxima_rafaga = estimadorNuevo;
 							 //---
 
@@ -389,7 +390,7 @@ void esperar_cpu(){
 							 pthread_mutex_unlock(&mx_cola_ready);
 
 							 sem_post(&s_cont_ready);
-							 sem_post(&s_ready_execute);
+							 //sem_post(&s_ready_execute);
 							 //sem_post(&s_cpu_desocupado);
 							 sem_post(&s_esperar_cpu);
 
@@ -403,7 +404,7 @@ void esperar_cpu(){
 							 send_proceso(cpu_fd, pcb,DISPATCH);
 							 pthread_mutex_unlock(&mx_cola_ready);
 
-							 sem_post(&s_ready_execute);
+							 //sem_post(&s_ready_execute);
 							 //sem_post(&s_cpu_desocupado);
 							 sem_post(&s_esperar_cpu);
 
@@ -444,7 +445,7 @@ void esperar_cpu(){
 				 int tiempo = temporal_gettime(reloj_inicio);
 				 t_tiempos_rafaga_anterior* lista = list_get(list_rafa_anterior, pcb->pid);
 				 lista->tiempo_out_exec = tiempo;
-				 double estimadorNuevo = obtenerEstimadoRafaga(pcb, configuracion->ESTIMACION_INICIAL, configuracion->HRRN_ALFA);
+				 estimadorNuevo = obtenerEstimadoRafaga(pcb, configuracion->ESTIMACION_INICIAL, configuracion->HRRN_ALFA);
 				 pcb->estimado_proxima_rafaga = estimadorNuevo;
 				 /*
 				 t_link_element* aux_list_raf_ant = list_rafa_anterior->head;
@@ -498,7 +499,7 @@ void esperar_cpu(){
 				   if( aux_list_raf_ant2->pid ==  pcb->pid)
 				   {
 					 aux_list_raf_ant2->tiempo_out_exec =  temporal_gettime(reloj_inicio);
-					 double estimadorNuevo = obtenerEstimadoRafaga(pcb, configuracion->ESTIMACION_INICIAL, configuracion->HRRN_ALFA);
+					 estimadorNuevo = obtenerEstimadoRafaga(pcb, configuracion->ESTIMACION_INICIAL, configuracion->HRRN_ALFA);
 					 pcb->estimado_proxima_rafaga = estimadorNuevo;
 					 break;
 				   }
@@ -518,16 +519,21 @@ void esperar_cpu(){
 				// LOG obligatorio
 				log_info(logger, "PID: %d - Abrir Archivo: %s", pcb->pid, instruccion->parametro1);
 
-				///////
+				//sem_wait(&s_blocked_fs);
+				while(!fs_desocupado) {	// Espera activa XD
+					// do nothing
+				}fs_desocupado = false;
+				/* parece que el f_open no se bloquea, sino que se queda esperando
 				if(!fs_desocupado) {
 					pthread_mutex_lock(&mx_cola_blocked_fs);
 					queue_push(cola_blocked_fs_libre, pcb);
 					pthread_mutex_lock(&mx_cola_blocked_fs);
 					log_info(logger, "PID: %d - Estado anterior: Execute - Estado Actual: BLOCKED por FS ocupado", pcb->pid);
 					sem_post(&s_cpu_desocupado);
+					sem_post(&s_ready_execute);
 					break;
 				}
-				//////
+				*/
 
 				// Verifico si la tabla global esta vacia
 				if(!list_is_empty(tabla_global_archivos)){
@@ -558,7 +564,8 @@ void esperar_cpu(){
 					// El proceso se bloquea hasta que se libere el archivo (fclose)
 					log_warning(logger, "PID: %d - Bloqueado esperando archivo %s", pcb->pid, instruccion->parametro1);
 					queue_push(archivo->c_proc_bloqueados,pcb);
-
+					sem_post(&s_ready_execute);
+					sem_post(&s_cpu_desocupado);
 
 				}else { // El archivo no esta abierto
 					log_warning(logger, "Archivo %s no esta abierto",instruccion->parametro1);
@@ -633,7 +640,8 @@ void esperar_cpu(){
 				}
 				//sem_post(&s_cpu_desocupado);
 				//sem_post(&s_esperar_cpu);
-
+				//sem_post(&s_blocked_fs);
+				fs_desocupado = true;
 				break;
 
 			case F_CLOSE:	// no interactua con fs
@@ -748,6 +756,13 @@ void esperar_cpu(){
 			case F_TRUNCATE:
 				log_info(logger, "PID: %d - Recibo pedido de F_TRUNCATE por: %s", pcb->pid, instruccion->parametro1);
 
+				// Tiempos hrrn
+				rafAnteriorAux = list_get(list_rafa_anterior, pcb->pid);
+				rafAnteriorAux->tiempo_out_exec = temporal_gettime(reloj_inicio);
+				estimadorNuevo = obtenerEstimadoRafaga(pcb, configuracion->ESTIMACION_INICIAL, configuracion->HRRN_ALFA);
+				pcb->estimado_proxima_rafaga = estimadorNuevo;
+				//log_warning(logger, "PID: %d estimador nuevo %f ftruncante", pcb->pid, estimadorNuevo);
+
 				///////
 				if(!fs_desocupado) {
 					pthread_mutex_lock(&mx_cola_blocked_fs);
@@ -755,37 +770,31 @@ void esperar_cpu(){
 					pthread_mutex_lock(&mx_cola_blocked_fs);
 					log_info(logger, "PID: %d - Estado anterior: Execute - Estado Actual: BLOCKED por FS ocupado", pcb->pid);
 					sem_post(&s_cpu_desocupado);
+					sem_post(&s_ready_execute);
 					break;
-				}
+				}fs_desocupado = false;
 				//////
-
-				//sem_post(&s_blocked_fs);
 				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_TRUNCATE);
+				log_info(logger, "PID: %d - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS", pcb->pid);
 
-				while( aux_list_raf_ant!=NULL )
-				{
-				   t_tiempos_rafaga_anterior* aux_list_raf_ant2 = aux_list_raf_ant->data;
-
-				   if( aux_list_raf_ant2->pid ==  pcb->pid)
-				   {
-					 aux_list_raf_ant2->tiempo_out_exec =  temporal_gettime(reloj_inicio);
-					 double estimadorNuevo = obtenerEstimadoRafaga(pcb, configuracion->ESTIMACION_INICIAL, configuracion->HRRN_ALFA);
-					 pcb->estimado_proxima_rafaga = estimadorNuevo;
-					 break;
-				   }
-				   aux_list_raf_ant = aux_list_raf_ant->next;
-				}
-
+				// Hilo de espera a respuesta
 				pthread_t hilo_bloqueado_truncate;
 				pthread_create(&hilo_bloqueado_truncate,NULL,(void*)bloqueando_por_filesystem,pcb);
 				pthread_detach(hilo_bloqueado_truncate);
 
 				sem_post(&s_ready_execute);
-				sem_post(&s_cpu_desocupado);
+				sem_post(&s_cpu_desocupado);;
 
 				break;
+
 			case F_READ:
 				log_info(logger, "PID: %d - Recibo pedido de F_READ por: %s", pcb->pid, instruccion->parametro1);
+
+				// Tiempos hrrn
+				rafAnteriorAux = list_get(list_rafa_anterior, pcb->pid);
+				rafAnteriorAux->tiempo_out_exec = temporal_gettime(reloj_inicio);
+				estimadorNuevo = obtenerEstimadoRafaga(pcb, configuracion->ESTIMACION_INICIAL, configuracion->HRRN_ALFA);
+				pcb->estimado_proxima_rafaga = estimadorNuevo;
 
 				///////
 				if(!fs_desocupado) {
@@ -794,24 +803,41 @@ void esperar_cpu(){
 					pthread_mutex_lock(&mx_cola_blocked_fs);
 					log_info(logger, "PID: %d - Estado anterior: Execute - Estado Actual: BLOCKED por FS ocupado", pcb->pid);
 					sem_post(&s_cpu_desocupado);
+					sem_post(&s_ready_execute);
 					break;
-				}
+				}fs_desocupado = false;
 				//////
+
+				/*recv(file_system_fd, &mensaje , sizeof(op_code), 0);
+				if(mensaje == F_READ_FAIL) {
+					motivoExit = "Error al hacer F_READ";
+					execute_a_exit(pcb);
+					sem_post(&s_ready_execute);
+					break;
+				}*/
 
 				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_READ);
 
-				pthread_mutex_lock(&mx_cola_ready);
-				send_proceso(cpu_fd, pcb,DISPATCH);
-				pthread_mutex_unlock(&mx_cola_ready);
+				// Hilo de espera a respuesta
+				pthread_t hilo_bloqueado_read;
+				pthread_create(&hilo_bloqueado_read,NULL,(void*)bloqueando_por_filesystem,pcb);
+				pthread_detach(hilo_bloqueado_read);
 
-				//sem_post(&s_cpu_desocupado);
-				sem_post(&s_esperar_cpu);
+				sem_post(&s_ready_execute);
+				sem_post(&s_cpu_desocupado);
+
 				break;
 
 			case F_WRITE:
 				log_info(logger, "PID: %d - Recibo pedido de F_WRITE por: %s", pcb->pid, instruccion->parametro1);
 
-				///////
+				// Tiempos hrrn
+				rafAnteriorAux = list_get(list_rafa_anterior, pcb->pid);
+				rafAnteriorAux->tiempo_out_exec = temporal_gettime(reloj_inicio);
+				estimadorNuevo = obtenerEstimadoRafaga(pcb, configuracion->ESTIMACION_INICIAL, configuracion->HRRN_ALFA);
+				pcb->estimado_proxima_rafaga = estimadorNuevo;
+
+				/////// Si el fs esta ocupado bloqueo el proceso. Lo desbloquea el que lo esta usando
 				if(!fs_desocupado) {
 					pthread_mutex_lock(&mx_cola_blocked_fs);
 					queue_push(cola_blocked_fs_libre, pcb);
@@ -819,17 +845,26 @@ void esperar_cpu(){
 					log_info(logger, "PID: %d - Estado anterior: Execute - Estado Actual: BLOCKED por FS ocupado", pcb->pid);
 					sem_post(&s_cpu_desocupado);
 					break;
-				}
+				}fs_desocupado = false;
 				//////
+
+				/*recv(file_system_fd, &mensaje , sizeof(op_code), 0);
+				if(mensaje == F_WRITE_FAIL) {
+					motivoExit = "Error al hacer F_WRITE";
+					execute_a_exit(pcb);
+					sem_post(&s_ready_execute);
+					break;
+				}*/
 
 				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_WRITE);
 
-				pthread_mutex_lock(&mx_cola_ready);
-				send_proceso(cpu_fd, pcb,DISPATCH);
-				pthread_mutex_unlock(&mx_cola_ready);
+				// Hilo de espera a respuesta
+				pthread_t hilo_bloqueado_write;
+				pthread_create(&hilo_bloqueado_write,NULL,(void*)bloqueando_por_filesystem,pcb);
+				pthread_detach(hilo_bloqueado_write);
 
-				//sem_post(&s_cpu_desocupado);
-				sem_post(&s_esperar_cpu);
+				sem_post(&s_ready_execute);
+				sem_post(&s_cpu_desocupado);
 				break;
 
 			/*case F_CREATE:	// Este case no deberia existir -> no es una instruccion que llegue por archivo
@@ -1037,40 +1072,112 @@ void bloqueando_por_filesystem(PCB_t* pcb){	// Esperando respuesta del fs
 	//INSTRUCCION* inst = list_get(pcb->instrucciones, pcb->pc - 1);
 
 	//log_info(logger, "Instruccion numer %d",(pcb->pc-1));
-
+	//log_info(logger, "Bloqueando_por_filesystem %d", pcb->pid);
 	//if(!strcmp(inst->comando,"F_TRUNCATE") || !strcmp(inst->comando,"F_READ") || !strcmp(inst->comando,"F_WRITE")){
-		esperar_filesystem(pcb);
+	esperar_filesystem(pcb);
 	//}
 
 }
 
+void execute_fread(PCB_t* pcb) {
+	INSTRUCCION* instruccion = list_get(pcb->instrucciones, pcb->pc - 1);
+	send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_READ);
+	// Hilo de espera a respuesta
+	pthread_t hilo_bloqueado_read;
+	pthread_create(&hilo_bloqueado_read,NULL,(void*)bloqueando_por_filesystem,pcb);
+	pthread_detach(hilo_bloqueado_read);
+}
+void execute_fwrite(PCB_t* pcb) {
+	INSTRUCCION* instruccion = list_get(pcb->instrucciones, pcb->pc - 1);
+	send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_WRITE);
+	// Hilo de espera a respuesta
+	pthread_t hilo_bloqueado_write;
+	pthread_create(&hilo_bloqueado_write,NULL,(void*)bloqueando_por_filesystem,pcb);
+	pthread_detach(hilo_bloqueado_write);
+}
+void execute_ftruncate(PCB_t* pcb) {
+	INSTRUCCION* instruccion = list_get(pcb->instrucciones, pcb->pc - 1);
+	send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_TRUNCATE);
+	// Hilo de espera a respuesta
+	pthread_t hilo_bloqueado_truncate;
+	pthread_create(&hilo_bloqueado_truncate,NULL,(void*)bloqueando_por_filesystem,pcb);
+	pthread_detach(hilo_bloqueado_truncate);
+}
 
 void esperar_filesystem(PCB_t* pcb){	// Solo instrucciones con demora
 
 	op_code mensaje;
+	//log_info(logger, "PID: %d - En hilo esperando respuesta de FS", pcb->pid);
 
 	recv(file_system_fd, &mensaje , sizeof(op_code), 0);
 
-	if(mensaje == F_TRUNCATE_OK){
+	switch(mensaje) {
+		case F_TRUNCATE_OK:
+		case F_READ_OK:
+		case F_WRITE_OK:
+			pcb->tiempo_llegada_a_ready = temporal_gettime(reloj_inicio);
+			log_info(logger, "PID: %d - Estado anterior BLOCKED por respuesta FS - Estado actual READY %d", pcb->pid, fs_desocupado); // TODO: listar ready
+			pthread_mutex_lock(&mx_cola_ready);
+			queue_push(cola_ready, pcb);
+			pthread_mutex_unlock(&mx_cola_ready);
+			sem_post(&s_cont_ready);
 
+			break;
+		case F_TRUNCATE_FAIL:
+		case F_READ_FAIL:
+		case F_WRITE_FAIL:
+			char motivoExit[] = "Fallo una instruccion al FS";
+			execute_a_exit(pcb,motivoExit);	// no hace el signal de ready_execute xq ya lo hizo antes
+			break;
+		default:	// no deberia entrar nunca
+			log_error(logger, "Error en case de hilo de espera a respuesta del FS");
+			char motivoExit2[] = "ERROR inesperado con operacion con demora del FS";
+			execute_a_exit(pcb,motivoExit2);	// no hace el signal de ready_execute xq ya lo hizo antes
+			break;
+	}
+	/*
+	if(mensaje == F_TRUNCATE_OK || mensaje == F_READ_OK || mensaje == F_WRITE_OK){
 		pcb->tiempo_llegada_a_ready = temporal_gettime(reloj_inicio);
 		pthread_mutex_lock(&mx_cola_ready);
 		queue_push(cola_ready, pcb);
 		pthread_mutex_unlock(&mx_cola_ready);
 
 		sem_post(&s_cont_ready);
-	}else{	// TODO: se puede hacer un switch case porque hay que recibir varias instrucciones
-		char* motivoExit = "ERROR de TRUNCATE";
+	} else{	// nunca deberia entrar
+		char* motivoExit = "ERROR con operacion con demora del FS";
 		execute_a_exit(pcb,motivoExit);	// no hace el signal de ready_execute xq ya lo hizo antes
-	}
+	}*/
 
 	if(queue_is_empty(cola_blocked_fs_libre)) {
 		fs_desocupado = true;
 	} else {
-		// TODO: hacer un hilo de un tipo que depende de la instruccion
+		pthread_mutex_lock(&mx_cola_blocked_fs);
+		PCB_t* pcb_blocked = queue_pop(cola_blocked_fs_libre);
+		pthread_mutex_lock(&mx_cola_blocked_fs);
+
+		INSTRUCCION* instruccion = list_get(pcb_blocked->instrucciones, pcb_blocked->pc - 1);
+
+		//
+		//pthread_t hilo_bloqueado_espera_fs;
+		//if(strcmp(instruccion->comando, "F_OPEN") == 0)
+		//{
+			//execute_fopen(pcb);
+		//}
+		// Aca se crea recursivamente el siguiente hilo si hay alguien esperando
+		if(strcmp(instruccion->comando, "F_READ") == 0)
+		{
+			execute_fread(pcb);
+		}
+		if(strcmp(instruccion->comando, "F_WRITE") == 0)
+		{
+			execute_fwrite(pcb);
+		}
+		if(strcmp(instruccion->comando, "F_TRUNCATE") == 0)
+		{
+			execute_ftruncate(pcb);
+		}
 	}
 }
-
 
 
 void liberar_archivos(PCB_t* pcb){

@@ -62,7 +62,11 @@ typedef enum {
 	F_CREATE_OK,
 	F_EXISTS,
 	F_TRUNCATE_OK,
-	F_TRUNCATE_FAIL
+	F_TRUNCATE_FAIL,
+	F_WRITE_OK,
+	F_WRITE_FAIL,
+	F_READ_OK,
+	F_READ_FAIL
 	}op_code;
 
 typedef struct {

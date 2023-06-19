@@ -122,7 +122,7 @@ static void procesar_conexion(void* void_args) {
 	log_info(logger, "Ingreso a Ready algoritmo %s - PIDS: [%s] ", configuracion->ALGORITMO_PLANIFICACION, pids);
 
 	sem_post(&s_cont_ready);
-	sem_post(&s_ready_execute);
+	//sem_post(&s_ready_execute);
 
 	//log_info(logger,"Se crea el proceso %d en NEW", proceso->pid);
 
