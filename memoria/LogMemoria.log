@@ -270,3 +270,33 @@ ALGORITMO_ASIGNACION: BEST
 [INFO] 19:43:55:199 Memoria/(61513:61516): Se ha finalizado la conexion
 [INFO] 19:43:56:461 Memoria/(61513:61515): Se ha finalizado la conexion
 [INFO] 19:43:57:668 Memoria/(61513:61514): Se ha finalizado la conexion
+[INFO] 12:33:08:994 Memoria/(63220:63220): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 4096
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 12:33:09:014 Memoria/(63220:63220): Algoritmo BEST configurado
+[INFO] 12:33:09:015 Memoria/(63220:63220): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 12:33:09:018 Memoria/(63220:63220): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 12:33:12:685 Memoria/(63220:63221): Cliente conectado (a memoria_sv)
+
+[INFO] 12:33:12:686 Memoria/(63220:63221): RESPUESTA AL CONECTAR CPU
+[INFO] 12:33:15:836 Memoria/(63220:63222): Cliente conectado (a memoria_sv)
+
+[INFO] 12:33:15:836 Memoria/(63220:63222): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 12:33:18:747 Memoria/(63220:63223): Cliente conectado (a memoria_sv)
+
+[INFO] 12:33:18:747 Memoria/(63220:63223): RESPUESTA AL CONECTAR KERNEL
+[INFO] 12:33:49:043 Memoria/(63220:63223): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 12:33:49:043 Memoria/(63220:63223): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 12:33:51:224 Memoria/(63220:63223): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 12:33:51:224 Memoria/(63220:63223): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 12:33:54:245 Memoria/(63220:63223): [KERNEL] Recibiendo solicitud de segmento para programa 2
+[INFO] 12:33:54:245 Memoria/(63220:63223): [KERNEL] Envio de segmento 0 para programa 2
+[INFO] 12:36:49:494 Memoria/(63220:63223): Se ha finalizado la conexion
+[INFO] 12:36:51:404 Memoria/(63220:63222): Se ha finalizado la conexion
+[INFO] 12:36:53:314 Memoria/(63220:63221): Se ha finalizado la conexion

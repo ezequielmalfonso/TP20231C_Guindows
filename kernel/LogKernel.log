@@ -949,3 +949,110 @@ GRADO_MAX_MULTIPROGRAMACION: 4
 [WARNING] 19:43:52:391 Kernel/(61519:61521): El archivo JOHN fue eliminado de la tabla global de archivos abiertos
 [INFO] 19:43:52:391 Kernel/(61519:61521): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: EXIT
 [INFO] 19:43:52:391 Kernel/(61519:61521): Finaliza el proceso 1 - Motivo: POR FIN
+[INFO] 12:33:18:741 Kernel/(63226:63226): Probando hora 0
+[INFO] 12:33:18:745 Kernel/(63226:63226): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 12:33:18:746 Kernel/(63226:63226): RECURSO: DISCO con 1 instancias
+[INFO] 12:33:18:746 Kernel/(63226:63226): RECURSO: MODEM con 1 instancias
+[INFO] 12:33:18:746 Kernel/(63226:63226): Cantidad total de recursos disponibles: 2 
+[INFO] 12:33:18:747 Kernel/(63226:63226): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 12:33:18:747 Kernel/(63226:63226): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 12:33:18:747 Kernel/(63226:63226): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 12:33:18:748 Kernel/(63226:63226): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 12:33:18:748 Kernel/(63226:63226): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 12:33:49:011 Kernel/(63226:63226): Cliente conectado (a KERNEL_SV)
+
+[INFO] 12:33:49:043 Kernel/(63226:63232): Envio solicitud a MEMORIA
+[INFO] 12:33:49:043 Kernel/(63226:63232): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 12:33:49:043 Kernel/(63226:63232): Se crea el proceso 0 en NEW
+[INFO] 12:33:49:043 Kernel/(63226:63232): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 12:33:49:043 Kernel/(63226:63232): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 12:33:49:044 Kernel/(63226:63227): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 12:33:51:179 Kernel/(63226:63226): Cliente conectado (a KERNEL_SV)
+
+[INFO] 12:33:51:181 Kernel/(63226:63234): Envio solicitud a MEMORIA
+[INFO] 12:33:51:225 Kernel/(63226:63234): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 12:33:51:225 Kernel/(63226:63234): Se crea el proceso 1 en NEW
+[INFO] 12:33:51:225 Kernel/(63226:63234): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 12:33:51:225 Kernel/(63226:63234): Ingreso a Ready algoritmo HRRN - PIDS: [1] 
+[INFO] 12:33:54:194 Kernel/(63226:63226): Cliente conectado (a KERNEL_SV)
+
+[INFO] 12:33:54:197 Kernel/(63226:63236): Envio solicitud a MEMORIA
+[INFO] 12:33:54:246 Kernel/(63226:63236): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 12:33:54:246 Kernel/(63226:63236): Se crea el proceso 2 en NEW
+[INFO] 12:33:54:246 Kernel/(63226:63236): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 12:33:54:246 Kernel/(63226:63236): Ingreso a Ready algoritmo HRRN - PIDS: [1 2] 
+[INFO] 12:34:01:059 Kernel/(63226:63228): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 12:34:01:059 Kernel/(63226:63228): Ingreso a Ready algoritmo HRRN - PIDS: [1 2 0] 
+[INFO] 12:34:01:059 Kernel/(63226:63227): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 12:34:03:062 Kernel/(63226:63228): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 12:34:03:063 Kernel/(63226:63228): Ingreso a Ready algoritmo HRRN - PIDS: [2 0 1] 
+[INFO] 12:34:03:063 Kernel/(63226:63227): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 12:34:05:067 Kernel/(63226:63228): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 12:34:05:067 Kernel/(63226:63228): Ingreso a Ready algoritmo HRRN - PIDS: [0 1 2] 
+[INFO] 12:34:05:068 Kernel/(63226:63227): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 12:34:07:072 Kernel/(63226:63228): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 12:34:07:073 Kernel/(63226:63228): Ingreso a Ready algoritmo HRRN - PIDS: [0 2 1] 
+[INFO] 12:34:07:073 Kernel/(63226:63227): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 12:34:09:076 Kernel/(63226:63228): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 12:34:09:077 Kernel/(63226:63228): Ingreso a Ready algoritmo HRRN - PIDS: [0 1 2] 
+[INFO] 12:34:09:077 Kernel/(63226:63227): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 12:34:11:082 Kernel/(63226:63228): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 12:34:11:084 Kernel/(63226:63228): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 12:34:11:084 Kernel/(63226:63227): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 12:34:13:088 Kernel/(63226:63228): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 12:34:13:089 Kernel/(63226:63228): Ingreso a Ready algoritmo HRRN - PIDS: [2 1] 
+[INFO] 12:34:13:089 Kernel/(63226:63227): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 12:34:15:092 Kernel/(63226:63228): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 12:34:15:092 Kernel/(63226:63228): Ingreso a Ready algoritmo HRRN - PIDS: [1 2] 
+[INFO] 12:34:15:092 Kernel/(63226:63227): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 12:34:17:095 Kernel/(63226:63228): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 12:34:17:095 Kernel/(63226:63228): Ingreso a Ready algoritmo HRRN - PIDS: [2 1] 
+[INFO] 12:34:17:097 Kernel/(63226:63227): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 12:34:19:103 Kernel/(63226:63228): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 12:34:19:103 Kernel/(63226:63228): Ingreso a Ready algoritmo HRRN - PIDS: [1 2] 
+[INFO] 12:34:19:103 Kernel/(63226:63227): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 12:34:21:107 Kernel/(63226:63228): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 12:34:21:107 Kernel/(63226:63228): Ingreso a Ready algoritmo HRRN - PIDS: [2 1] 
+[INFO] 12:34:21:108 Kernel/(63226:63227): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 12:34:23:112 Kernel/(63226:63228): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 12:34:23:114 Kernel/(63226:63228): Ingreso a Ready algoritmo HRRN - PIDS: [1 2] 
+[INFO] 12:34:23:114 Kernel/(63226:63227): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 12:34:25:117 Kernel/(63226:63228): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 12:34:25:117 Kernel/(63226:63228): Ingreso a Ready algoritmo HRRN - PIDS: [2 1] 
+[INFO] 12:34:25:117 Kernel/(63226:63227): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 12:34:27:172 Kernel/(63226:63228): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 12:34:27:172 Kernel/(63226:63228): Ingreso a Ready algoritmo HRRN - PIDS: [1 2] 
+[INFO] 12:34:27:172 Kernel/(63226:63227): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 12:34:29:175 Kernel/(63226:63228): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 12:34:29:175 Kernel/(63226:63228): Ingreso a Ready algoritmo HRRN - PIDS: [2 1] 
+[INFO] 12:34:29:176 Kernel/(63226:63227): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 12:34:31:180 Kernel/(63226:63228): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 12:34:31:181 Kernel/(63226:63228): Ingreso a Ready algoritmo HRRN - PIDS: [1 2] 
+[INFO] 12:34:31:181 Kernel/(63226:63227): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 12:34:32:183 Kernel/(63226:63228): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 12:34:32:183 Kernel/(63226:63228): Ingreso a Ready algoritmo HRRN - PIDS: [2 1] 
+[INFO] 12:34:32:183 Kernel/(63226:63227): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 12:34:33:186 Kernel/(63226:63228): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 12:34:33:186 Kernel/(63226:63228): Ingreso a Ready algoritmo HRRN - PIDS: [1 2] 
+[INFO] 12:34:33:186 Kernel/(63226:63227): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 12:34:34:189 Kernel/(63226:63228): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 12:34:34:191 Kernel/(63226:63228): Finaliza el proceso 1 - Motivo: POR FIN
+[INFO] 12:34:34:191 Kernel/(63226:63227): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 12:34:35:193 Kernel/(63226:63228): PID: 2 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 12:34:35:195 Kernel/(63226:63228): Finaliza el proceso 2 - Motivo: POR FIN

@@ -23,6 +23,7 @@ pthread_mutex_t mx_instancias       = PTHREAD_MUTEX_INITIALIZER;
 //pthread_mutex_t mx_pageFault 		= PTHREAD_MUTEX_INITIALIZER;
 //pthread_mutex_t mx_interrupt 		= PTHREAD_MUTEX_INITIALIZER;
 //pthread_mutex_t mx_hilo_pageFault 	= PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t mx_cola_blocked_fs 	= PTHREAD_MUTEX_INITIALIZER;
 
 sem_t s_pasaje_a_ready, s_ready_execute,s_cpu_desocupado,s_cont_ready,s_multiprogramacion_actual,s_esperar_cpu,s_pcb_desalojado,s_blocked,s_io, s_blocked_fs;
 sem_t s_blocked_rec;
@@ -37,6 +38,7 @@ t_list* list_rafa_anterior;
 int64_t reloj = 1;
 
 bool cpu_desocupado=true;
+bool fs_desocupado = true;
 
 t_list* tabla_global_archivos;
 char* archivoABuscar;
@@ -74,7 +76,7 @@ void hrrn_ready_execute(){
 	while(1){
 		//log_info(logger,"PID: hrrn_ready_execute");
 		sem_wait(&s_ready_execute);
-		sem_wait(&s_cpu_desocupado); // Para que no ejecute cada vez que un proceso llega a ready
+		sem_wait(&s_cpu_desocupado); // Para que no ejecute cada vez que un proceso llega a ready TODO: el hrrn si se ejecuta cada vez que llega a ready
 		sem_wait(&s_cont_ready); // Para que no intente ejecutar si la lista de ready esta vacia
 
 		reloj = temporal_gettime(reloj_inicio);
@@ -175,8 +177,8 @@ void inicializarPlanificacion(){
 	cola_new		= queue_create();
 	cola_ready		= queue_create();
 	cola_ready_sec	= queue_create();
-	cola_blocked_respuesta_fs = queue_create();
-	cola_blocked_fs_libre     = queue_create();
+	cola_blocked_respuesta_fs = queue_create();	// no se usa --> borrar
+	cola_blocked_fs_libre     = queue_create();	// procesos que esperan fs libre
 
 	tabla_global_archivos = list_create();
 
@@ -185,6 +187,7 @@ void inicializarPlanificacion(){
 	sem_init(&s_esperar_cpu, 0, 0);
 	sem_init(&s_cont_ready,0,0);
 	sem_init(&s_io, 0, 1);
+	sem_init(&s_blocked_fs, 0, 1);	// no se usa
 
 
 /*	for(int i=0;i<10;i++){
@@ -214,7 +217,7 @@ void inicializarPlanificacion(){
 
 void esperar_cpu(){
 	while(1){
-		sem_wait(&s_esperar_cpu); //--> se bloquea
+		sem_wait(&s_esperar_cpu); //--> se bloquea     Hago el signal si mando algo al cpu
 
 		PCB_t* pcb         = pcb_create();
 		PCB_t* pcb_blocked = pcb_create();
@@ -283,7 +286,7 @@ void esperar_cpu(){
 							 pthread_mutex_unlock(&mx_cola_ready);
 
 							 sem_post(&s_ready_execute);
-							 sem_post(&s_cpu_desocupado);
+							 //sem_post(&s_cpu_desocupado);
 							 sem_post(&s_esperar_cpu);
 
 						 }else{
@@ -386,7 +389,7 @@ void esperar_cpu(){
 
 							 sem_post(&s_cont_ready);
 							 sem_post(&s_ready_execute);
-							 sem_post(&s_cpu_desocupado);
+							 //sem_post(&s_cpu_desocupado);
 							 sem_post(&s_esperar_cpu);
 
 						 } else{
@@ -400,7 +403,7 @@ void esperar_cpu(){
 							 pthread_mutex_unlock(&mx_cola_ready);
 
 							 sem_post(&s_ready_execute);
-							 sem_post(&s_cpu_desocupado);
+							 //sem_post(&s_cpu_desocupado);
 							 sem_post(&s_esperar_cpu);
 
 						   }
@@ -418,7 +421,7 @@ void esperar_cpu(){
 					 pos_recurso++;
 				}
 
-				if(recurso_existe) {	// Si es null no se encontro el recurso
+				if(recurso_existe) {	// Si no es null se encontro el recurso
 					break;
 				} else {
 					log_error(logger, "PID: %d - Recibo pedido de SIGNAL por recurso desconocido: %s", pcb->pid, instruccion->parametro1);
@@ -475,7 +478,7 @@ void esperar_cpu(){
 
 			case INTERRUPT: // para hrrn
 
-					break;
+					break;	// es sin desalojo, no va este case
 
 			case IO:
 				pthread_t hilo_bloqueado;
@@ -502,6 +505,7 @@ void esperar_cpu(){
 				//pthread_mutex_lock(&mx_log);
 				log_info(logger, "PID: %d - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O", pcb->pid);
 				 //pthread_mutex_unlock(&mx_log);
+				sem_post(&s_ready_execute);
 				sem_post(&s_cpu_desocupado);
 
 				break;
@@ -510,6 +514,17 @@ void esperar_cpu(){
 				log_info(logger, "PID: %d - Recibo pedido de F_OPEN por: %s", pcb->pid, instruccion->parametro1);
 				// LOG obligatorio
 				log_info(logger, "PID: %d - Abrir Archivo: %s", pcb->pid, instruccion->parametro1);
+
+				///////
+				if(!fs_desocupado) {
+					pthread_mutex_lock(&mx_cola_blocked_fs);
+					queue_push(cola_blocked_fs_libre, pcb);
+					pthread_mutex_lock(&mx_cola_blocked_fs);
+					log_info(logger, "PID: %d - Estado anterior: Execute - Estado Actual: BLOCKED por FS ocupado", pcb->pid);
+					sem_post(&s_cpu_desocupado);
+					break;
+				}
+				//////
 
 				// Verifico si la tabla global esta vacia
 				if(!list_is_empty(tabla_global_archivos)){
@@ -609,7 +624,8 @@ void esperar_cpu(){
 					pthread_mutex_lock(&mx_cola_ready);
 					send_proceso(cpu_fd, pcb, DISPATCH);
 					pthread_mutex_unlock(&mx_cola_ready);
-					sem_post(&s_cpu_desocupado);
+					//sem_post(&s_cpu_desocupado);
+					//sem_post(&s_ready_execute);
 					sem_post(&s_esperar_cpu);
 				}
 				//sem_post(&s_cpu_desocupado);
@@ -617,7 +633,7 @@ void esperar_cpu(){
 
 				break;
 
-			case F_CLOSE:
+			case F_CLOSE:	// no interactua con fs
 				// Saca el archivo de tabla global de archivos abiertos y de la tabla de archivos abiertos del proceso
 				log_info(logger, "PID: %d - Recibo pedido de F_CLOSE por: %s", pcb->pid, instruccion->parametro1);
 
@@ -633,7 +649,7 @@ void esperar_cpu(){
 					break;
 				}
 
-				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_CLOSE);
+				//send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_CLOSE);
 				// TODO: ni hay que mandarlo al fs
 
 				// Tabla de archivos del proceso
@@ -681,11 +697,11 @@ void esperar_cpu(){
 				send_proceso(cpu_fd, pcb,DISPATCH);
 				pthread_mutex_unlock(&mx_cola_ready);
 
-  			    sem_post(&s_cpu_desocupado);
+  			    //sem_post(&s_cpu_desocupado);
 				sem_post(&s_esperar_cpu);
 
 				break;
-			case F_SEEK:
+			case F_SEEK:	// no interactua con fs
 				//log_info(logger, "PID: %d - Recibo pedido de F_SEEK por: %s - puntero %s", pcb->pid, instruccion->parametro1, instruccion->parametro2);
 				// LOG obligatorio
 				log_info(logger, "PID: %d - Actualizar puntero Archivo:: %s - Puntero: %s", pcb->pid, instruccion->parametro1, instruccion->parametro2);
@@ -717,12 +733,25 @@ void esperar_cpu(){
 				send_proceso(cpu_fd, pcb,DISPATCH);
 				pthread_mutex_unlock(&mx_cola_ready);
 
-				sem_post(&s_cpu_desocupado);
+				//sem_post(&s_cpu_desocupado);
 				sem_post(&s_esperar_cpu);
 				break;
 
 			case F_TRUNCATE:
 				log_info(logger, "PID: %d - Recibo pedido de F_TRUNCATE por: %s", pcb->pid, instruccion->parametro1);
+
+				// todo: hacer esto en todas las operaciones
+				///////
+				if(!fs_desocupado) {
+					pthread_mutex_lock(&mx_cola_blocked_fs);
+					queue_push(cola_blocked_fs_libre, pcb);
+					pthread_mutex_lock(&mx_cola_blocked_fs);
+					log_info(logger, "PID: %d - Estado anterior: Execute - Estado Actual: BLOCKED por FS ocupado", pcb->pid);
+					sem_post(&s_cpu_desocupado);
+					break;
+				}
+				//////
+
 				//sem_post(&s_blocked_fs);
 				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_TRUNCATE);
 
@@ -750,18 +779,40 @@ void esperar_cpu(){
 			case F_READ:
 				log_info(logger, "PID: %d - Recibo pedido de F_READ por: %s", pcb->pid, instruccion->parametro1);
 
+				///////
+				if(!fs_desocupado) {
+					pthread_mutex_lock(&mx_cola_blocked_fs);
+					queue_push(cola_blocked_fs_libre, pcb);
+					pthread_mutex_lock(&mx_cola_blocked_fs);
+					log_info(logger, "PID: %d - Estado anterior: Execute - Estado Actual: BLOCKED por FS ocupado", pcb->pid);
+					sem_post(&s_cpu_desocupado);
+					break;
+				}
+				//////
+
 				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_READ);
 
 				pthread_mutex_lock(&mx_cola_ready);
 				send_proceso(cpu_fd, pcb,DISPATCH);
 				pthread_mutex_unlock(&mx_cola_ready);
 
-				sem_post(&s_cpu_desocupado);
+				//sem_post(&s_cpu_desocupado);
 				sem_post(&s_esperar_cpu);
 				break;
 
 			case F_WRITE:
 				log_info(logger, "PID: %d - Recibo pedido de F_WRITE por: %s", pcb->pid, instruccion->parametro1);
+
+				///////
+				if(!fs_desocupado) {
+					pthread_mutex_lock(&mx_cola_blocked_fs);
+					queue_push(cola_blocked_fs_libre, pcb);
+					pthread_mutex_lock(&mx_cola_blocked_fs);
+					log_info(logger, "PID: %d - Estado anterior: Execute - Estado Actual: BLOCKED por FS ocupado", pcb->pid);
+					sem_post(&s_cpu_desocupado);
+					break;
+				}
+				//////
 
 				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_WRITE);
 
@@ -769,12 +820,23 @@ void esperar_cpu(){
 				send_proceso(cpu_fd, pcb,DISPATCH);
 				pthread_mutex_unlock(&mx_cola_ready);
 
-				sem_post(&s_cpu_desocupado);
+				//sem_post(&s_cpu_desocupado);
 				sem_post(&s_esperar_cpu);
 				break;
 
-			case F_CREATE:
+			/*case F_CREATE:	// Este case no deberia existir -> no es una instruccion que llegue por archivo
 				log_info(logger, "PID: %d - Recibo pedido de F_CREATE por: %s", pcb->pid, instruccion->parametro1);
+
+				/////// por las dudas pero no
+				if(!fs_desocupado) {
+					pthread_mutex_lock(&mx_cola_blocked_fs);
+					queue_push(cola_blocked_fs_libre, pcb);
+					pthread_mutex_lock(&mx_cola_blocked_fs);
+					log_info(logger, "PID: %d - Estado anterior: Execute - Estado Actual: BLOCKED por FS ocupado", pcb->pid);
+					sem_post(&s_cpu_desocupado);
+					break;
+				}
+				//////
 
 				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_CREATE);
 
@@ -788,9 +850,10 @@ void esperar_cpu(){
 					execute_a_exit(pcb, motivoExit);
 				}
 				sem_post(&s_cpu_desocupado);
-				//sem_post(&s_esperar_cpu);
+				sem_post(&s_esperar_cpu);
 
 				break;
+			*/
 			default:
 				log_error(logger, "AAAlgo anduvo mal en el server del kernel\n Cop: %d",cop);
 		}
@@ -869,7 +932,7 @@ void ejecutar_io(PCB_t* pcb,int numero) {
 		// TODO para listar los pids despues de entrar a ready
 		char* pids = procesosEnReady(cola_ready);
 		log_info(logger, "Ingreso a Ready algoritmo %s - PIDS: [%s] ", configuracion->ALGORITMO_PLANIFICACION, pids);
-		sem_post(&s_ready_execute);
+		//sem_post(&s_ready_execute);
 		sem_post(&s_cont_ready);
 		sem_post(&s_io);
 		//log_info(logger, "PID: %d - probando como queda", pcb->pid);
@@ -921,7 +984,7 @@ char* procesosEnReady(t_queue* cola_ready){
 
 }
 
-void esperarRespuestaFS(){
+void esperarRespuestaFS(){	// no se de donde salio esto
 	op_code mensaje;
 	recv(cliente_socket, &mensaje, sizeof(op_code), 0);
 
@@ -934,13 +997,13 @@ void esperarRespuestaFS(){
 	}
 }
 
-bool criterio_nombre_recurso(char* recurso) {	// solo para TGA
+bool criterio_nombre_recurso(char* recurso) {	// solo para lista de recursos en lista de rafagas
 	if(strcmp(recurso, recursoABuscar)){
 		return false;
 	}
 	return true;
 }
-bool criterio_nombre_recurso_lista_recursos(t_recurso* recurso) {	// solo para TGA
+bool criterio_nombre_recurso_lista_recursos(t_recurso* recurso) {	// solo para
 	if(strcmp(recurso->recurso, recursoABuscar)){
 		return false;
 	}
@@ -959,13 +1022,13 @@ bool criterio_nombre_archivo_proceso(t_archivoAbierto* archivo) {	// solo para l
 	return true;
 }
 
-void bloqueando_por_filesystem(PCB_t* pcb){
+void bloqueando_por_filesystem(PCB_t* pcb){	// Esperando respuesta del fs
 	int i = 0;
 	op_code cop;
 	//sem_wait(&s_blocked);
 	INSTRUCCION* inst = list_get(pcb->instrucciones, pcb->pc - 1);
 
-	log_info(logger, "Instruccion numer %d",(pcb->pc-1));
+	//log_info(logger, "Instruccion numer %d",(pcb->pc-1));
 
 	if(!strcmp(inst->comando,"F_TRUNCATE") || !strcmp(inst->comando,"F_READ") || !strcmp(inst->comando,"F_WRITE")){
 		esperar_filesystem(pcb);
@@ -974,7 +1037,7 @@ void bloqueando_por_filesystem(PCB_t* pcb){
 }
 
 
-void esperar_filesystem(PCB_t* pcb){
+void esperar_filesystem(PCB_t* pcb){	// Solo instrucciones con demora
 
 	op_code mensaje;
 
@@ -989,7 +1052,7 @@ void esperar_filesystem(PCB_t* pcb){
 
 		sem_post(&s_ready_execute);
 		sem_post(&s_cont_ready);
-	}else{
+	}else{	// TODO: se puede hacer un switch case porque hay que recibir varias instrucciones
 		char* motivoExit = "ERROR de TRUNCATE";
 		execute_a_exit(pcb,motivoExit);
 
