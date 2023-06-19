@@ -521,3 +521,399 @@ TAM_MAX_SEGMENTO: 128
 
 [INFO] 12:34:35:193 Cpu/(63224:63229): PID: 2 - Ejecutando EXIT
 [INFO] 12:36:49:495 Cpu/(63224:63229): Se ha finalizado la conexion
+[INFO] 12:51:59:395 Cpu/(63508:63508): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 12:51:59:399 Cpu/(63508:63508): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 12:51:59:399 Cpu/(63508:63508): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 12:52:02:758 Cpu/(63508:63508): Cliente conectado (a CPU_SV)
+
+[INFO] 12:53:29:891 Cpu/(63508:63514): Recibi PCB id: 0
+[INFO] 12:53:29:892 Cpu/(63508:63514): En CPU
+[INFO] 12:53:30:892 Cpu/(63508:63514): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: AAAA
+
+[INFO] 12:53:30:892 Cpu/(63508:63514): En CPU
+[INFO] 12:53:31:893 Cpu/(63508:63514): PID: 0 - Ejecutando SET parametro 1: BX parametro 2: BBBB
+
+[INFO] 12:53:31:893 Cpu/(63508:63514): En CPU
+[INFO] 12:53:32:893 Cpu/(63508:63514): PID: 0 - Ejecutando SET parametro 1: CX parametro 2: CCCC
+
+[INFO] 12:53:32:893 Cpu/(63508:63514): En CPU
+[INFO] 12:53:33:894 Cpu/(63508:63514): PID: 0 - Ejecutando SET parametro 1: DX parametro 2: DDDD
+
+[INFO] 12:53:33:894 Cpu/(63508:63514): En CPU
+[INFO] 12:53:34:894 Cpu/(63508:63514): PID: 0 - Ejecutando SET parametro 1: EAX parametro 2: AAAAAAAA
+
+[INFO] 12:53:34:895 Cpu/(63508:63514): En CPU
+[INFO] 12:53:35:895 Cpu/(63508:63514): PID: 0 - Ejecutando SET parametro 1: EBX parametro 2: BBBBBBBB
+
+[INFO] 12:53:35:896 Cpu/(63508:63514): En CPU
+[INFO] 12:53:36:897 Cpu/(63508:63514): PID: 0 - Ejecutando SET parametro 1: ECX parametro 2: CCCCCCCC
+
+[INFO] 12:53:36:897 Cpu/(63508:63514): En CPU
+[INFO] 12:53:37:899 Cpu/(63508:63514): PID: 0 - Ejecutando SET parametro 1: EDX parametro 2: DDDDDDDD
+
+[INFO] 12:53:37:901 Cpu/(63508:63514): En CPU
+[INFO] 12:53:38:901 Cpu/(63508:63514): PID: 0 - Ejecutando SET parametro 1: RAX parametro 2: AAAAAAAAAAAAAAAA
+
+[INFO] 12:53:38:902 Cpu/(63508:63514): En CPU
+[INFO] 12:53:39:902 Cpu/(63508:63514): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: BBBBBBBBBBBBBBBB
+
+[INFO] 12:53:39:903 Cpu/(63508:63514): En CPU
+[INFO] 12:53:40:903 Cpu/(63508:63514): PID: 0 - Ejecutando SET parametro 1: RCX parametro 2: CCCCCCCCCCCCCCCC
+
+[INFO] 12:53:40:904 Cpu/(63508:63514): En CPU
+[INFO] 12:53:41:904 Cpu/(63508:63514): PID: 0 - Ejecutando SET parametro 1: RDX parametro 2: DDDDDDDDDDDDDDDD
+
+[INFO] 12:53:41:905 Cpu/(63508:63514): PID: 0 - Ejecutando YIELD 
+[INFO] 12:53:41:906 Cpu/(63508:63514): Recibi PCB id: 1
+[INFO] 12:53:41:907 Cpu/(63508:63514): En CPU
+[INFO] 12:53:42:907 Cpu/(63508:63514): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: ARG0
+
+[INFO] 12:53:42:908 Cpu/(63508:63514): En CPU
+[INFO] 12:53:43:908 Cpu/(63508:63514): PID: 1 - Ejecutando SET parametro 1: BX parametro 2: FRA0
+
+[INFO] 12:53:43:909 Cpu/(63508:63514): PID: 1 - Ejecutando YIELD 
+[INFO] 12:53:43:910 Cpu/(63508:63514): Recibi PCB id: 2
+[INFO] 12:53:43:910 Cpu/(63508:63514): En CPU
+[INFO] 12:53:44:910 Cpu/(63508:63514): PID: 2 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 12:53:44:911 Cpu/(63508:63514): PID: 2 - Ejecutando WAIT a Kernel por recurso: LA_TERCERA_DE_FRANCIA
+ 
+[INFO] 12:53:44:914 Cpu/(63508:63514): Recibi PCB id: 3
+[INFO] 12:53:44:914 Cpu/(63508:63514): En CPU
+[INFO] 12:53:45:915 Cpu/(63508:63514): PID: 3 - Ejecutando SET parametro 1: AX parametro 2: ARG0
+
+[INFO] 12:53:45:916 Cpu/(63508:63514): En CPU
+[INFO] 12:53:46:916 Cpu/(63508:63514): PID: 3 - Ejecutando SET parametro 1: BX parametro 2: FRA0
+
+[INFO] 12:53:46:916 Cpu/(63508:63514): PID: 3 - Ejecutando YIELD 
+[INFO] 12:53:46:918 Cpu/(63508:63514): Recibi PCB id: 1
+[INFO] 12:53:46:918 Cpu/(63508:63514): En CPU
+[INFO] 12:53:47:918 Cpu/(63508:63514): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: ARG1
+
+[INFO] 12:53:47:920 Cpu/(63508:63514): En CPU
+[INFO] 12:53:48:920 Cpu/(63508:63514): PID: 1 - Ejecutando SET parametro 1: BX parametro 2: FRA0
+
+[INFO] 12:53:48:921 Cpu/(63508:63514): PID: 1 - Ejecutando YIELD 
+[INFO] 12:53:48:922 Cpu/(63508:63514): Recibi PCB id: 0
+[INFO] 12:53:48:922 Cpu/(63508:63514): En CPU
+[INFO] 12:53:49:923 Cpu/(63508:63514): PID: 0 - Ejecutando SET parametro 1: RAX parametro 2: TCHOUAMENIAFUERA
+
+[INFO] 12:53:49:923 Cpu/(63508:63514): En CPU
+[INFO] 12:53:50:924 Cpu/(63508:63514): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SEGUNDO_FRANCIA_
+
+[INFO] 12:53:50:925 Cpu/(63508:63514): PID: 0 - Ejecutando EXIT
+[INFO] 12:53:50:928 Cpu/(63508:63514): Recibi PCB id: 3
+[INFO] 12:53:50:928 Cpu/(63508:63514): En CPU
+[INFO] 12:53:51:930 Cpu/(63508:63514): PID: 3 - Ejecutando SET parametro 1: AX parametro 2: ARG1
+
+[INFO] 12:53:51:931 Cpu/(63508:63514): En CPU
+[INFO] 12:53:52:931 Cpu/(63508:63514): PID: 3 - Ejecutando SET parametro 1: BX parametro 2: FRA0
+
+[INFO] 12:53:52:932 Cpu/(63508:63514): PID: 3 - Ejecutando YIELD 
+[INFO] 12:53:52:933 Cpu/(63508:63514): Recibi PCB id: 1
+[INFO] 12:53:52:934 Cpu/(63508:63514): En CPU
+[INFO] 12:53:53:935 Cpu/(63508:63514): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: ARG2
+
+[INFO] 12:53:53:935 Cpu/(63508:63514): En CPU
+[INFO] 12:53:54:935 Cpu/(63508:63514): PID: 1 - Ejecutando SET parametro 1: BX parametro 2: FRA0
+
+[INFO] 12:53:54:936 Cpu/(63508:63514): PID: 1 - Ejecutando YIELD 
+[INFO] 12:53:54:937 Cpu/(63508:63514): Recibi PCB id: 3
+[INFO] 12:53:54:937 Cpu/(63508:63514): En CPU
+[INFO] 12:53:55:938 Cpu/(63508:63514): PID: 3 - Ejecutando SET parametro 1: AX parametro 2: ARG2
+
+[INFO] 12:53:55:938 Cpu/(63508:63514): En CPU
+[INFO] 12:53:56:939 Cpu/(63508:63514): PID: 3 - Ejecutando SET parametro 1: BX parametro 2: FRA0
+
+[INFO] 12:53:56:939 Cpu/(63508:63514): PID: 3 - Ejecutando YIELD 
+[INFO] 12:53:56:940 Cpu/(63508:63514): Recibi PCB id: 1
+[INFO] 12:53:56:940 Cpu/(63508:63514): En CPU
+[INFO] 12:53:57:941 Cpu/(63508:63514): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: ARG2
+
+[INFO] 12:53:57:943 Cpu/(63508:63514): En CPU
+[INFO] 12:53:58:943 Cpu/(63508:63514): PID: 1 - Ejecutando SET parametro 1: BX parametro 2: FRA1
+
+[INFO] 12:53:58:943 Cpu/(63508:63514): PID: 1 - Ejecutando YIELD 
+[INFO] 12:53:58:945 Cpu/(63508:63514): Recibi PCB id: 3
+[INFO] 12:53:58:945 Cpu/(63508:63514): En CPU
+[INFO] 12:53:59:946 Cpu/(63508:63514): PID: 3 - Ejecutando SET parametro 1: AX parametro 2: ARG2
+
+[INFO] 12:53:59:947 Cpu/(63508:63514): En CPU
+[INFO] 12:54:00:947 Cpu/(63508:63514): PID: 3 - Ejecutando SET parametro 1: BX parametro 2: FRA1
+
+[INFO] 12:54:00:948 Cpu/(63508:63514): PID: 3 - Ejecutando YIELD 
+[INFO] 12:54:00:949 Cpu/(63508:63514): Recibi PCB id: 1
+[INFO] 12:54:00:949 Cpu/(63508:63514): En CPU
+[INFO] 12:54:01:950 Cpu/(63508:63514): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: ARG2
+
+[INFO] 12:54:01:950 Cpu/(63508:63514): En CPU
+[INFO] 12:54:02:951 Cpu/(63508:63514): PID: 1 - Ejecutando SET parametro 1: BX parametro 2: FRA2
+
+[INFO] 12:54:02:953 Cpu/(63508:63514): PID: 1 - Ejecutando YIELD 
+[INFO] 12:54:02:954 Cpu/(63508:63514): Recibi PCB id: 3
+[INFO] 12:54:02:954 Cpu/(63508:63514): En CPU
+[INFO] 12:54:03:954 Cpu/(63508:63514): PID: 3 - Ejecutando SET parametro 1: AX parametro 2: ARG2
+
+[INFO] 12:54:03:955 Cpu/(63508:63514): En CPU
+[INFO] 12:54:04:955 Cpu/(63508:63514): PID: 3 - Ejecutando SET parametro 1: BX parametro 2: FRA2
+
+[INFO] 12:54:04:956 Cpu/(63508:63514): PID: 3 - Ejecutando YIELD 
+[INFO] 12:54:04:957 Cpu/(63508:63514): Recibi PCB id: 1
+[INFO] 12:54:04:957 Cpu/(63508:63514): En CPU
+[INFO] 12:54:05:958 Cpu/(63508:63514): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: ARG3
+
+[INFO] 12:54:05:958 Cpu/(63508:63514): En CPU
+[INFO] 12:54:06:959 Cpu/(63508:63514): PID: 1 - Ejecutando SET parametro 1: BX parametro 2: FRA2
+
+[INFO] 12:54:06:959 Cpu/(63508:63514): PID: 1 - Ejecutando YIELD 
+[INFO] 12:54:06:960 Cpu/(63508:63514): Recibi PCB id: 3
+[INFO] 12:54:06:960 Cpu/(63508:63514): En CPU
+[INFO] 12:54:07:961 Cpu/(63508:63514): PID: 3 - Ejecutando SET parametro 1: AX parametro 2: ARG3
+
+[INFO] 12:54:07:962 Cpu/(63508:63514): En CPU
+[INFO] 12:54:08:963 Cpu/(63508:63514): PID: 3 - Ejecutando SET parametro 1: BX parametro 2: FRA2
+
+[INFO] 12:54:08:963 Cpu/(63508:63514): PID: 3 - Ejecutando YIELD 
+[INFO] 12:54:08:965 Cpu/(63508:63514): Recibi PCB id: 1
+[INFO] 12:54:08:965 Cpu/(63508:63514): En CPU
+[INFO] 12:54:09:966 Cpu/(63508:63514): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: ARG3
+
+[INFO] 12:54:09:966 Cpu/(63508:63514): En CPU
+[INFO] 12:54:10:967 Cpu/(63508:63514): PID: 1 - Ejecutando SET parametro 1: BX parametro 2: FRA3
+
+[INFO] 12:54:10:968 Cpu/(63508:63514): PID: 1 - Ejecutando YIELD 
+[INFO] 12:54:10:969 Cpu/(63508:63514): Recibi PCB id: 3
+[INFO] 12:54:10:969 Cpu/(63508:63514): En CPU
+[INFO] 12:54:11:970 Cpu/(63508:63514): PID: 3 - Ejecutando SET parametro 1: AX parametro 2: ARG3
+
+[INFO] 12:54:11:971 Cpu/(63508:63514): En CPU
+[INFO] 12:54:12:972 Cpu/(63508:63514): PID: 3 - Ejecutando SET parametro 1: BX parametro 2: FRA3
+
+[INFO] 12:54:12:974 Cpu/(63508:63514): PID: 3 - Ejecutando YIELD 
+[INFO] 12:54:12:975 Cpu/(63508:63514): Recibi PCB id: 1
+[INFO] 12:54:12:976 Cpu/(63508:63514): En CPU
+[INFO] 12:54:13:976 Cpu/(63508:63514): PID: 1 - Ejecutando SET parametro 1: RDX parametro 2: VAMOSALOSPENALES
+
+[INFO] 12:54:13:977 Cpu/(63508:63514): PID: 1 - Ejecutando YIELD 
+[INFO] 12:54:13:978 Cpu/(63508:63514): Recibi PCB id: 3
+[INFO] 12:54:13:978 Cpu/(63508:63514): En CPU
+[INFO] 12:54:14:978 Cpu/(63508:63514): PID: 3 - Ejecutando SET parametro 1: RDX parametro 2: VAMOSALOSPENALES
+
+[INFO] 12:54:14:979 Cpu/(63508:63514): PID: 3 - Ejecutando YIELD 
+[INFO] 12:54:14:980 Cpu/(63508:63514): Recibi PCB id: 1
+[INFO] 12:54:14:980 Cpu/(63508:63514): En CPU
+[INFO] 12:54:15:980 Cpu/(63508:63514): PID: 1 - Ejecutando SET parametro 1: RAX parametro 2: ARGENTINACAMPEON
+
+[INFO] 12:54:15:981 Cpu/(63508:63514): PID: 1 - Ejecutando EXIT
+[INFO] 12:54:15:984 Cpu/(63508:63514): Recibi PCB id: 3
+[INFO] 12:54:15:985 Cpu/(63508:63514): En CPU
+[INFO] 12:54:16:985 Cpu/(63508:63514): PID: 3 - Ejecutando SET parametro 1: RAX parametro 2: ARGENTINACAMPEON
+
+[INFO] 12:54:16:985 Cpu/(63508:63514): PID: 3 - Ejecutando EXIT
+[INFO] 12:54:24:206 Cpu/(63508:63514): Se ha finalizado la conexion
+[INFO] 12:57:10:190 Cpu/(63576:63576): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 12:57:10:211 Cpu/(63576:63576): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 12:57:10:211 Cpu/(63576:63576): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 12:57:14:891 Cpu/(63576:63576): Cliente conectado (a CPU_SV)
+
+[INFO] 12:57:23:372 Cpu/(63576:63582): Recibi PCB id: 0
+[INFO] 12:57:23:372 Cpu/(63576:63582): En CPU
+[INFO] 12:57:24:372 Cpu/(63576:63582): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: AAAA
+
+[INFO] 12:57:24:373 Cpu/(63576:63582): En CPU
+[INFO] 12:57:25:373 Cpu/(63576:63582): PID: 0 - Ejecutando SET parametro 1: BX parametro 2: BBBB
+
+[INFO] 12:57:25:373 Cpu/(63576:63582): En CPU
+[INFO] 12:57:26:374 Cpu/(63576:63582): PID: 0 - Ejecutando SET parametro 1: CX parametro 2: CCCC
+
+[INFO] 12:57:26:375 Cpu/(63576:63582): En CPU
+[INFO] 12:57:27:375 Cpu/(63576:63582): PID: 0 - Ejecutando SET parametro 1: DX parametro 2: DDDD
+
+[INFO] 12:57:27:375 Cpu/(63576:63582): En CPU
+[INFO] 12:57:28:375 Cpu/(63576:63582): PID: 0 - Ejecutando SET parametro 1: EAX parametro 2: AAAAAAAA
+
+[INFO] 12:57:28:376 Cpu/(63576:63582): En CPU
+[INFO] 12:57:29:377 Cpu/(63576:63582): PID: 0 - Ejecutando SET parametro 1: EBX parametro 2: BBBBBBBB
+
+[INFO] 12:57:29:377 Cpu/(63576:63582): En CPU
+[INFO] 12:57:30:377 Cpu/(63576:63582): PID: 0 - Ejecutando SET parametro 1: ECX parametro 2: CCCCCCCC
+
+[INFO] 12:57:30:378 Cpu/(63576:63582): En CPU
+[INFO] 12:57:31:378 Cpu/(63576:63582): PID: 0 - Ejecutando SET parametro 1: EDX parametro 2: DDDDDDDD
+
+[INFO] 12:57:31:378 Cpu/(63576:63582): En CPU
+[INFO] 12:57:32:379 Cpu/(63576:63582): PID: 0 - Ejecutando SET parametro 1: RAX parametro 2: AAAAAAAAAAAAAAAA
+
+[INFO] 12:57:32:379 Cpu/(63576:63582): En CPU
+[INFO] 12:57:33:379 Cpu/(63576:63582): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: BBBBBBBBBBBBBBBB
+
+[INFO] 12:57:33:381 Cpu/(63576:63582): En CPU
+[INFO] 12:57:34:382 Cpu/(63576:63582): PID: 0 - Ejecutando SET parametro 1: RCX parametro 2: CCCCCCCCCCCCCCCC
+
+[INFO] 12:57:34:383 Cpu/(63576:63582): En CPU
+[INFO] 12:57:35:385 Cpu/(63576:63582): PID: 0 - Ejecutando SET parametro 1: RDX parametro 2: DDDDDDDDDDDDDDDD
+
+[INFO] 12:57:35:385 Cpu/(63576:63582): PID: 0 - Ejecutando YIELD 
+[INFO] 12:57:35:386 Cpu/(63576:63582): Recibi PCB id: 1
+[INFO] 12:57:35:387 Cpu/(63576:63582): En CPU
+[INFO] 12:57:36:387 Cpu/(63576:63582): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: ARG0
+
+[INFO] 12:57:36:388 Cpu/(63576:63582): En CPU
+[INFO] 12:57:37:389 Cpu/(63576:63582): PID: 1 - Ejecutando SET parametro 1: BX parametro 2: FRA0
+
+[INFO] 12:57:37:389 Cpu/(63576:63582): PID: 1 - Ejecutando YIELD 
+[INFO] 12:57:37:390 Cpu/(63576:63582): Recibi PCB id: 2
+[INFO] 12:57:37:391 Cpu/(63576:63582): En CPU
+[INFO] 12:57:38:391 Cpu/(63576:63582): PID: 2 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 12:57:38:393 Cpu/(63576:63582): PID: 2 - Ejecutando WAIT a Kernel por recurso: LA_TERCERA_DE_FRANCIA
+ 
+[INFO] 12:57:38:396 Cpu/(63576:63582): Recibi PCB id: 3
+[INFO] 12:57:38:397 Cpu/(63576:63582): En CPU
+[INFO] 12:57:39:397 Cpu/(63576:63582): PID: 3 - Ejecutando SET parametro 1: AX parametro 2: ARG0
+
+[INFO] 12:57:39:397 Cpu/(63576:63582): En CPU
+[INFO] 12:57:40:397 Cpu/(63576:63582): PID: 3 - Ejecutando SET parametro 1: BX parametro 2: FRA0
+
+[INFO] 12:57:40:398 Cpu/(63576:63582): PID: 3 - Ejecutando YIELD 
+[INFO] 12:57:40:399 Cpu/(63576:63582): Recibi PCB id: 1
+[INFO] 12:57:40:399 Cpu/(63576:63582): En CPU
+[INFO] 12:57:41:400 Cpu/(63576:63582): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: ARG1
+
+[INFO] 12:57:41:400 Cpu/(63576:63582): En CPU
+[INFO] 12:57:42:401 Cpu/(63576:63582): PID: 1 - Ejecutando SET parametro 1: BX parametro 2: FRA0
+
+[INFO] 12:57:42:401 Cpu/(63576:63582): PID: 1 - Ejecutando YIELD 
+[INFO] 12:57:42:402 Cpu/(63576:63582): Recibi PCB id: 0
+[INFO] 12:57:42:403 Cpu/(63576:63582): En CPU
+[INFO] 12:57:43:403 Cpu/(63576:63582): PID: 0 - Ejecutando SET parametro 1: RAX parametro 2: TCHOUAMENIAFUERA
+
+[INFO] 12:57:43:405 Cpu/(63576:63582): En CPU
+[INFO] 12:57:44:405 Cpu/(63576:63582): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SEGUNDO_FRANCIA_
+
+[INFO] 12:57:44:406 Cpu/(63576:63582): PID: 0 - Ejecutando EXIT
+[INFO] 12:57:44:409 Cpu/(63576:63582): Recibi PCB id: 3
+[INFO] 12:57:44:410 Cpu/(63576:63582): En CPU
+[INFO] 12:57:45:410 Cpu/(63576:63582): PID: 3 - Ejecutando SET parametro 1: AX parametro 2: ARG1
+
+[INFO] 12:57:45:410 Cpu/(63576:63582): En CPU
+[INFO] 12:57:46:411 Cpu/(63576:63582): PID: 3 - Ejecutando SET parametro 1: BX parametro 2: FRA0
+
+[INFO] 12:57:46:412 Cpu/(63576:63582): PID: 3 - Ejecutando YIELD 
+[INFO] 12:57:46:413 Cpu/(63576:63582): Recibi PCB id: 1
+[INFO] 12:57:46:413 Cpu/(63576:63582): En CPU
+[INFO] 12:57:47:414 Cpu/(63576:63582): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: ARG2
+
+[INFO] 12:57:47:414 Cpu/(63576:63582): En CPU
+[INFO] 12:57:48:415 Cpu/(63576:63582): PID: 1 - Ejecutando SET parametro 1: BX parametro 2: FRA0
+
+[INFO] 12:57:48:417 Cpu/(63576:63582): PID: 1 - Ejecutando YIELD 
+[INFO] 12:57:48:419 Cpu/(63576:63582): Recibi PCB id: 3
+[INFO] 12:57:48:419 Cpu/(63576:63582): En CPU
+[INFO] 12:57:49:420 Cpu/(63576:63582): PID: 3 - Ejecutando SET parametro 1: AX parametro 2: ARG2
+
+[INFO] 12:57:49:420 Cpu/(63576:63582): En CPU
+[INFO] 12:57:50:421 Cpu/(63576:63582): PID: 3 - Ejecutando SET parametro 1: BX parametro 2: FRA0
+
+[INFO] 12:57:50:422 Cpu/(63576:63582): PID: 3 - Ejecutando YIELD 
+[INFO] 12:57:50:423 Cpu/(63576:63582): Recibi PCB id: 1
+[INFO] 12:57:50:424 Cpu/(63576:63582): En CPU
+[INFO] 12:57:51:424 Cpu/(63576:63582): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: ARG2
+
+[INFO] 12:57:51:425 Cpu/(63576:63582): En CPU
+[INFO] 12:57:52:426 Cpu/(63576:63582): PID: 1 - Ejecutando SET parametro 1: BX parametro 2: FRA1
+
+[INFO] 12:57:52:426 Cpu/(63576:63582): PID: 1 - Ejecutando YIELD 
+[INFO] 12:57:52:428 Cpu/(63576:63582): Recibi PCB id: 3
+[INFO] 12:57:52:428 Cpu/(63576:63582): En CPU
+[INFO] 12:57:53:429 Cpu/(63576:63582): PID: 3 - Ejecutando SET parametro 1: AX parametro 2: ARG2
+
+[INFO] 12:57:53:431 Cpu/(63576:63582): En CPU
+[INFO] 12:57:54:431 Cpu/(63576:63582): PID: 3 - Ejecutando SET parametro 1: BX parametro 2: FRA1
+
+[INFO] 12:57:54:431 Cpu/(63576:63582): PID: 3 - Ejecutando YIELD 
+[INFO] 12:57:54:433 Cpu/(63576:63582): Recibi PCB id: 1
+[INFO] 12:57:54:433 Cpu/(63576:63582): En CPU
+[INFO] 12:57:55:433 Cpu/(63576:63582): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: ARG2
+
+[INFO] 12:57:55:434 Cpu/(63576:63582): En CPU
+[INFO] 12:57:56:435 Cpu/(63576:63582): PID: 1 - Ejecutando SET parametro 1: BX parametro 2: FRA2
+
+[INFO] 12:57:56:435 Cpu/(63576:63582): PID: 1 - Ejecutando YIELD 
+[INFO] 12:57:56:436 Cpu/(63576:63582): Recibi PCB id: 3
+[INFO] 12:57:56:436 Cpu/(63576:63582): En CPU
+[INFO] 12:57:57:436 Cpu/(63576:63582): PID: 3 - Ejecutando SET parametro 1: AX parametro 2: ARG2
+
+[INFO] 12:57:57:437 Cpu/(63576:63582): En CPU
+[INFO] 12:57:58:438 Cpu/(63576:63582): PID: 3 - Ejecutando SET parametro 1: BX parametro 2: FRA2
+
+[INFO] 12:57:58:439 Cpu/(63576:63582): PID: 3 - Ejecutando YIELD 
+[INFO] 12:57:58:440 Cpu/(63576:63582): Recibi PCB id: 1
+[INFO] 12:57:58:441 Cpu/(63576:63582): En CPU
+[INFO] 12:57:59:441 Cpu/(63576:63582): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: ARG3
+
+[INFO] 12:57:59:442 Cpu/(63576:63582): En CPU
+[INFO] 12:58:00:442 Cpu/(63576:63582): PID: 1 - Ejecutando SET parametro 1: BX parametro 2: FRA2
+
+[INFO] 12:58:00:443 Cpu/(63576:63582): PID: 1 - Ejecutando YIELD 
+[INFO] 12:58:00:445 Cpu/(63576:63582): Recibi PCB id: 3
+[INFO] 12:58:00:445 Cpu/(63576:63582): En CPU
+[INFO] 12:58:01:445 Cpu/(63576:63582): PID: 3 - Ejecutando SET parametro 1: AX parametro 2: ARG3
+
+[INFO] 12:58:01:446 Cpu/(63576:63582): En CPU
+[INFO] 12:58:02:447 Cpu/(63576:63582): PID: 3 - Ejecutando SET parametro 1: BX parametro 2: FRA2
+
+[INFO] 12:58:02:447 Cpu/(63576:63582): PID: 3 - Ejecutando YIELD 
+[INFO] 12:58:02:448 Cpu/(63576:63582): Recibi PCB id: 1
+[INFO] 12:58:02:449 Cpu/(63576:63582): En CPU
+[INFO] 12:58:03:449 Cpu/(63576:63582): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: ARG3
+
+[INFO] 12:58:03:451 Cpu/(63576:63582): En CPU
+[INFO] 12:58:04:452 Cpu/(63576:63582): PID: 1 - Ejecutando SET parametro 1: BX parametro 2: FRA3
+
+[INFO] 12:58:04:452 Cpu/(63576:63582): PID: 1 - Ejecutando YIELD 
+[INFO] 12:58:04:454 Cpu/(63576:63582): Recibi PCB id: 3
+[INFO] 12:58:04:454 Cpu/(63576:63582): En CPU
+[INFO] 12:58:05:454 Cpu/(63576:63582): PID: 3 - Ejecutando SET parametro 1: AX parametro 2: ARG3
+
+[INFO] 12:58:05:455 Cpu/(63576:63582): En CPU
+[INFO] 12:58:06:456 Cpu/(63576:63582): PID: 3 - Ejecutando SET parametro 1: BX parametro 2: FRA3
+
+[INFO] 12:58:06:456 Cpu/(63576:63582): PID: 3 - Ejecutando YIELD 
+[INFO] 12:58:06:457 Cpu/(63576:63582): Recibi PCB id: 1
+[INFO] 12:58:06:457 Cpu/(63576:63582): En CPU
+[INFO] 12:58:07:458 Cpu/(63576:63582): PID: 1 - Ejecutando SET parametro 1: RDX parametro 2: VAMOSALOSPENALES
+
+[INFO] 12:58:07:458 Cpu/(63576:63582): PID: 1 - Ejecutando YIELD 
+[INFO] 12:58:07:460 Cpu/(63576:63582): Recibi PCB id: 3
+[INFO] 12:58:07:460 Cpu/(63576:63582): En CPU
+[INFO] 12:58:08:460 Cpu/(63576:63582): PID: 3 - Ejecutando SET parametro 1: RDX parametro 2: VAMOSALOSPENALES
+
+[INFO] 12:58:08:461 Cpu/(63576:63582): PID: 3 - Ejecutando YIELD 
+[INFO] 12:58:08:463 Cpu/(63576:63582): Recibi PCB id: 1
+[INFO] 12:58:08:463 Cpu/(63576:63582): En CPU
+[INFO] 12:58:09:464 Cpu/(63576:63582): PID: 1 - Ejecutando SET parametro 1: RAX parametro 2: ARGENTINACAMPEON
+
+[INFO] 12:58:09:464 Cpu/(63576:63582): PID: 1 - Ejecutando EXIT
+[INFO] 12:58:09:467 Cpu/(63576:63582): Recibi PCB id: 3
+[INFO] 12:58:09:468 Cpu/(63576:63582): En CPU
+[INFO] 12:58:10:468 Cpu/(63576:63582): PID: 3 - Ejecutando SET parametro 1: RAX parametro 2: ARGENTINACAMPEON
+
+[INFO] 12:58:10:469 Cpu/(63576:63582): PID: 3 - Ejecutando EXIT
+[INFO] 12:58:16:169 Cpu/(63576:63582): Se ha finalizado la conexion

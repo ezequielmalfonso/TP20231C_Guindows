@@ -328,6 +328,7 @@ void esperar_cpu(){
 					 log_error(logger, "PID: %d - Recibo pedido de WAIT por recurso desconocido: %s", pcb->pid, instruccion->parametro1);
 					 motivoExit = "WAIT por Recurso Inexistente";
 					 execute_a_exit(pcb,motivoExit);
+					 sem_post(&s_ready_execute);
 					 break;
 				 }
 
@@ -427,12 +428,14 @@ void esperar_cpu(){
 					log_error(logger, "PID: %d - Recibo pedido de SIGNAL por recurso desconocido: %s", pcb->pid, instruccion->parametro1);
 					motivoExit = "SIGNAL por Recurso Inexistente";
 					execute_a_exit(pcb,motivoExit);
+					sem_post(&s_ready_execute);
 					break;
 				}
 
-			case EXIT:	// Segundo exit
+			case EXIT:	// Cada exit debe incluir estas tres lineas. El motivo seria mejor pasarlo por parametro.
 				motivoExit = "POR FIN";
 				execute_a_exit(pcb,motivoExit);
+				sem_post(&s_ready_execute);
 				break;
 
 			case YIELD:
@@ -599,15 +602,15 @@ void esperar_cpu(){
 								list_add(tabla_global_archivos, archivo_nuevo);
 								log_warning(logger, "El archivo %s fue creado, abierto y cargado a la tabla global de archivos abiertos", instruccion->parametro1);
 							} else{
-								log_warning(logger, "PID: %d - F_OPEN ERROR: El archivo %s fue creado pero no se pudo abrir", pcb->pid, instruccion->parametro1);
+								log_error(logger, "PID: %d - F_OPEN ERROR: El archivo %s fue creado pero no se pudo abrir", pcb->pid, instruccion->parametro1);
 								// no deberia entrar nunca
 							}
 
-						} else{
+						} else{	// No deberia entrar nunca
 							log_error(logger, "PID: %d - F_OPEN ERROR: No se pudo hacer el F_CREATE del archivo nuevo: %s", pcb->pid, instruccion->parametro1);
-							// TODO ?falta de espacio o se intento crear un archivo ya existente (error)
-							motivoExit = "Falta de espacio en FS";
-							execute_a_exit(pcb,motivoExit);
+							//motivoExit = "Se intento crear un archivo existente";
+							//execute_a_exit(pcb,motivoExit);
+							//sem_post(&s_ready_execute);
 
 						}
 
@@ -646,6 +649,7 @@ void esperar_cpu(){
 					log_error(logger, "PID: %d - Pedido de F_CLOSE por archivo no abierto", pcb->pid); // No esta abierto. Tambien puede que no exista
 					motivoExit = "No esta abierto en tabla global";
 					execute_a_exit(pcb,motivoExit);
+					sem_post(&s_ready_execute);
 					break;
 				}
 
@@ -662,6 +666,7 @@ void esperar_cpu(){
 						log_error(logger, "PID: %d - Pedido de F_CLOSE por archivo no abierto por el proceso: %s", pcb->pid, instruccion->parametro1);
 						motivoExit = "No esta abierto en tabla del proceso";
 						execute_a_exit(pcb,motivoExit);
+						sem_post(&s_ready_execute);
 						break;
 					}
 					// Si lo encuentro, saco el archivo de la tabla de archivos del proceso
@@ -671,6 +676,7 @@ void esperar_cpu(){
 					log_error(logger, "PID: %d - Pedido de F_CLOSE sin archivos abiertos (tabla vacia)", pcb->pid);
 					motivoExit = "Tabla global vacia";
 					execute_a_exit(pcb,motivoExit);
+					sem_post(&s_ready_execute);
 					break;
 				}
 
@@ -717,6 +723,7 @@ void esperar_cpu(){
 						log_error(logger, "PID: %d - Pedido de F_SEEK por archivo no abierto por el proceso: %s", pcb->pid, instruccion->parametro1);
 						motivoExit = "No esta abierto en tabla del proceso";
 						execute_a_exit(pcb,motivoExit);
+						sem_post(&s_ready_execute);
 						break;
 					}
 					// Si lo encuentro, actualizo el puntero puntero en la lista de archivos abiertos del proceso
@@ -726,6 +733,7 @@ void esperar_cpu(){
 					log_error(logger, "PID: %d - Pedido de F_CLOSE sin archivos abiertos (tabla vacia)", pcb->pid);
 					motivoExit = "Tabla global vacia";
 					execute_a_exit(pcb,motivoExit);
+					sem_post(&s_ready_execute);
 					break;
 				}
 
@@ -740,7 +748,6 @@ void esperar_cpu(){
 			case F_TRUNCATE:
 				log_info(logger, "PID: %d - Recibo pedido de F_TRUNCATE por: %s", pcb->pid, instruccion->parametro1);
 
-				// todo: hacer esto en todas las operaciones
 				///////
 				if(!fs_desocupado) {
 					pthread_mutex_lock(&mx_cola_blocked_fs);
@@ -773,6 +780,7 @@ void esperar_cpu(){
 				pthread_create(&hilo_bloqueado_truncate,NULL,(void*)bloqueando_por_filesystem,pcb);
 				pthread_detach(hilo_bloqueado_truncate);
 
+				sem_post(&s_ready_execute);
 				sem_post(&s_cpu_desocupado);
 
 				break;
@@ -878,7 +886,7 @@ void execute_a_exit(PCB_t* pcb, char* motivoExit){
     pcb_destroy(pcb);
     //avisar_consola_finalizacion(); Funcion que le avisa a la consola que se finalizo correctamente
     sem_post(&s_cpu_desocupado);
-    sem_post(&s_ready_execute);
+    //sem_post(&s_ready_execute);
 }
 
 void bloqueando(PCB_t* pcb){
@@ -1025,14 +1033,14 @@ bool criterio_nombre_archivo_proceso(t_archivoAbierto* archivo) {	// solo para l
 void bloqueando_por_filesystem(PCB_t* pcb){	// Esperando respuesta del fs
 	int i = 0;
 	op_code cop;
-	//sem_wait(&s_blocked);
-	INSTRUCCION* inst = list_get(pcb->instrucciones, pcb->pc - 1);
+	////sem_wait(&s_blocked);
+	//INSTRUCCION* inst = list_get(pcb->instrucciones, pcb->pc - 1);
 
 	//log_info(logger, "Instruccion numer %d",(pcb->pc-1));
 
-	if(!strcmp(inst->comando,"F_TRUNCATE") || !strcmp(inst->comando,"F_READ") || !strcmp(inst->comando,"F_WRITE")){
+	//if(!strcmp(inst->comando,"F_TRUNCATE") || !strcmp(inst->comando,"F_READ") || !strcmp(inst->comando,"F_WRITE")){
 		esperar_filesystem(pcb);
-	}
+	//}
 
 }
 
@@ -1050,13 +1058,16 @@ void esperar_filesystem(PCB_t* pcb){	// Solo instrucciones con demora
 		queue_push(cola_ready, pcb);
 		pthread_mutex_unlock(&mx_cola_ready);
 
-		sem_post(&s_ready_execute);
 		sem_post(&s_cont_ready);
 	}else{	// TODO: se puede hacer un switch case porque hay que recibir varias instrucciones
 		char* motivoExit = "ERROR de TRUNCATE";
-		execute_a_exit(pcb,motivoExit);
+		execute_a_exit(pcb,motivoExit);	// no hace el signal de ready_execute xq ya lo hizo antes
+	}
 
-		sem_post(&s_ready_execute);
+	if(queue_is_empty(cola_blocked_fs_libre)) {
+		fs_desocupado = true;
+	} else {
+		// TODO: hacer un hilo de un tipo que depende de la instruccion
 	}
 }
 

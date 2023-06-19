@@ -269,3 +269,49 @@ BLOCK_COUNT: 65536
 [INFO] 12:33:18:748 FileSystem/(63225:63225): Cliente conectado (a FILESYSTEM_SV)
 
 [INFO] 12:36:49:495 FileSystem/(63225:63230): Se ha finalizado la conexion
+[INFO] 12:52:00:869 FileSystem/(63510:63510): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 12:52:00:873 FileSystem/(63510:63510): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 12:52:00:875 FileSystem/(63510:63510): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 12:52:00:875 FileSystem/(63510:63510): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 12:52:00:877 FileSystem/(63510:63510): Archivo de Bloques Cargado
+[INFO] 12:52:00:878 FileSystem/(63510:63510): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 12:52:01:030 FileSystem/(63510:63510): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 12:52:02:759 FileSystem/(63510:63510): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 12:54:24:206 FileSystem/(63510:63515): Se ha finalizado la conexion
+[INFO] 12:57:12:752 FileSystem/(63578:63578): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 12:57:12:755 FileSystem/(63578:63578): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 12:57:12:756 FileSystem/(63578:63578): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 12:57:12:757 FileSystem/(63578:63578): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 12:57:12:757 FileSystem/(63578:63578): Archivo de Bloques Cargado
+[INFO] 12:57:12:757 FileSystem/(63578:63578): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 12:57:12:759 FileSystem/(63578:63578): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 12:57:14:892 FileSystem/(63578:63578): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 12:58:16:168 FileSystem/(63578:63583): Se ha finalizado la conexion
