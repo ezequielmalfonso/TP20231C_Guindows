@@ -128,8 +128,8 @@ int iniciarBitmap (char* path ,uint32_t block_count ){
 
 	bitmapSize = block_count / 8; //Calculo el tamanio
 	//TODO creo que solo va el de leer, pq nos dicen qu e lo podemos tener creado de antemano
-	//bitmap = open(path, O_RDWR | O_CREAT, 0777); // Paso la ruta absoluta
-	bitmap = open(path, O_RDWR , 0777); // Paso la ruta absoluta
+	bitmap = open(path, O_RDWR | O_CREAT, 0777); // Paso la ruta absoluta
+	//bitmap = open(path, O_RDWR , 0777); // Paso la ruta absoluta
 
 	if(bitmap == -1){
 		log_info(logger, "No existe el BITMAP"); // Si falla FOPEN muestro error
@@ -137,10 +137,10 @@ int iniciarBitmap (char* path ,uint32_t block_count ){
 		// Aca tenemos 2 opciones, truncar el tamanio del archivo a fileSize o darle un tamanio mucho mayor
 		ftruncate(bitmap,bitmapSize); // Podriamos verificar si se trunco con un if
 	}
-
+	//ftruncate(bitmap,bitmapSize); // Podriamos verificar si se trunco con un if
 	// void * mmap (void *address, size_t length, int protect, int flags, int filedes, off_t offset)
 
-	char* fileData = mmap(NULL,bitmapSize,PROT_READ | PROT_WRITE,MAP_PRIVATE, bitmap,0);
+	char* fileData = mmap(NULL,bitmapSize,PROT_READ | PROT_WRITE,MAP_SHARED, bitmap,0);
 
 	if (fileData == MAP_FAILED) {
 	     log_info(logger, "Error al mapear el archivo");
@@ -153,7 +153,7 @@ int iniciarBitmap (char* path ,uint32_t block_count ){
 
 	//Sincronizo los datos en memoria con el archivo bitmap.dat
 	//msync(fileData, bitmapSize, MS_SYNC); //Podriamos verificar con un if si se sincronizo
-	//munmap(fileData, bitmapSize);
+	munmap(fileData, bitmapSize);
 	close(bitmap);
 
 	return 0;
@@ -196,8 +196,8 @@ void leerBloque (int fd_ArchivoBloque, int numeroBloque, const void *datos){
 	write(fd_ArchivoBloque, datos, configuracionSuperBloque->BLOCK_SIZE);
 }
 
-/*
-int buscarPrimerBloqueVacio (void* fileData, uint32_t BLOCK_SIZE){
+
+/*int buscarPrimerBloqueVacio (char* fileData, uint32_t BLOCK_SIZE){
 	for(int i = 0 ; i < BLOCK_SIZE; i++){
 		if( (fileData[i/8]) & (1 << (i % 8)) == 0){
 			return i; // RETORNO EL INDICE DEL PRIMER BLOQUE VACIO
@@ -205,6 +205,23 @@ int buscarPrimerBloqueVacio (void* fileData, uint32_t BLOCK_SIZE){
 	}
 	return -1; // TODOS LOS BLOQUES OCUPADOS
 }*/
+
+int buscarPrimerBloqueVacio (t_bitarray* s_bitmap, uint32_t BLOCK_SIZE){
+	int posicion_libre;
+	long int tamano_bitmap = bitarray_get_max_bit(s_bitmap);
+	printf("\n");
+
+	for(posicion_libre = 1; posicion_libre <  tamano_bitmap ; posicion_libre++ )
+	 {
+		 if( !bitarray_test_bit(s_bitmap,  posicion_libre)){
+			 //printf("Valor bit: %d ",bitarray_test_bit(s_bitmap,  posicion_libre));
+			 return posicion_libre;
+		 }
+	 }
+	printf("\n");
+	return -1;
+}
+
 
 int fileExiste(char* nombreArchivo) {
 	FILE* archivo;

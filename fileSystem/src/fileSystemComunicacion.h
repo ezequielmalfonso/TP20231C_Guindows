@@ -21,6 +21,7 @@
 #include "fileSystem.h"
 #include <semaphore.h>
 #include <dirent.h>
+#include <math.h>
 
 extern int cliente_socket;
 extern t_FCB* FCB_archivo;

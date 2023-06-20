@@ -34,6 +34,9 @@ int cargarArchivoBloques(char *path, int BLOCK_SIZE, int BLOCK_COUNT);
 int cargarSuperBloque(char *path);
 int iniciarBitmap (char* path ,uint32_t block_count );
 
+int buscarPrimerBloqueVacio (t_bitarray* s_bitmap, uint32_t BLOCK_SIZE);
+
+
 extern int fileSystemServer;
 
 

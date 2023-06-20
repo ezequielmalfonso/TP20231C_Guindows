@@ -84,6 +84,7 @@ static void procesar_conexion(void* void_args) {
 			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
 			 //nombre = strtok(parametro1, "\n");
 			 log_info(logger, "Crear archivo: %s", parametro1);
+			 //t_config *config_create(char *path);
 
 			 if(fileExiste(pathArchivo)) {
 				 log_error(logger, "Ya existe %s", pathArchivo);
@@ -104,16 +105,16 @@ static void procesar_conexion(void* void_args) {
 			 linea = string_from_format("TAMANIO_ARCHIVO=%s\n", "0");
 			 fwrite(linea, sizeof(char), string_length(linea), fcb_new);
 			 free(linea);
-			 linea = string_from_format("PUNTERO_DIRECTO=%s\n", "hola");	//TODO: agregar esto al FCB
+			 linea = string_from_format("PUNTERO_DIRECTO=%s\n", "0");	//TODO: agregar esto al FCB
 			 fwrite(linea, sizeof(char), string_length(linea), fcb_new);
 			 free(linea);
-			 linea = string_from_format("PUNTERO_INDIRECTO=%s", "hola");
+			 linea = string_from_format("PUNTERO_INDIRECTO=%s", "0");
 			 fwrite(linea, sizeof(char), string_length(linea), fcb_new);
 			 free(linea);
 
 			 fclose(fcb_new);
 
-			 log_info(logger, "FCB de %s creado correctamente", nombre);
+			 //log_info(logger, "FCB de %s creado correctamente",);
 			 //free(nombre) no se si va o no
 			 cop = F_CREATE_OK;
 			 send(cliente_socket, &cop, sizeof(op_code), 0);
@@ -137,46 +138,95 @@ static void procesar_conexion(void* void_args) {
 			 break;
 
 		 case F_TRUNCATE:
-		 			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
-		 			 log_info(logger, "Se recibio F_TRUNCATE con parametros %s, %s y %s", parametro1, parametro2, parametro3);
-		 			 sleep(3);
-		 			 int p = datosFCB(pathArchivo);
-		 			 if(p == -1) {	// No deberia entrar nunca
-		 				log_error(logger, "Error inesperado antes de cargar FCB");
-		 				cop=F_TRUNCATE_FAIL;
-		 				send(cliente_socket, &cop, sizeof(op_code), 0);
-		 				break;
-		 			 }
+			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
+			 log_info(logger, "Se recibio F_TRUNCATE con parametros %s, %s y %s", parametro1, parametro2, parametro3);
+			 sleep(3);
+			 int p = datosFCB(pathArchivo);
+			 if(p == -1) {	// No deberia entrar nunca
+				log_error(logger, "Error inesperado antes de cargar FCB");
+				cop=F_TRUNCATE_FAIL;
+				send(cliente_socket, &cop, sizeof(op_code), 0);
+				break;
+			 }
 
-		 			 int nuevoTamanioArchivo = atoi(parametro2);
-		 			 // 1 - determinar cantidad de bloques que necesita el archivo con el nuevo tamaño
-		 			 // 2 TAMAÑO_NUEVO - TAMAÑO ACTUAL,
-		 			 //   SI la diferencia es < 0 ==> resto bloques
-		 			 //   SI la diferencia es > 0 ==> SUMO bloques
-		 			 //   SI es cero no hago nada
-		 			 // 3 - Determinar cuantos bloques libres hay en el bitmap
-		 			 int i;
-		 			 int bloques_libres = 0;
-		 			 long int tamano_bitmap = bitarray_get_max_bit(s_bitmap);	// tambien se puede saber con la cantidad de bloques / 8
-		 			 log_info(logger, "El tamanio del bitmap en bits es: %d", tamano_bitmap);
+			 int nuevoTamanioArchivo = atoi(parametro2);
+			 // 1 - determinar cantidad de bloques que necesita el archivo con el nuevo tamaño
+			 // 2 TAMAÑO_NUEVO - TAMAÑO ACTUAL,
+			 //   SI la diferencia es < 0 ==> resto bloques
+			 //   SI la diferencia es > 0 ==> SUMO bloques
+			 //   SI es cero no hago nada
+			 // 3 - Determinar cuantos bloques libres hay en el bitmap
+			 int i;
+			 int bloques_libres = 0;
+			 long int tamano_bitmap = bitarray_get_max_bit(s_bitmap);	// tambien se puede saber con la cantidad de bloques / 8
+			 //log_info(logger, "El tamanio del bitmap en bits es: %d", tamano_bitmap);
 
-		 			 for(i = 0; i <  tamano_bitmap ; i++ )
-		 			 {
-		 				 if( !bitarray_test_bit(s_bitmap,  i)){
-		 					 bloques_libres++;
-		 				 }
-		 			 }
-		 			 log_warning(logger, "bloques libres: %d" , bloques_libres );
-		 			 log_warning(logger, "Tamaño nuevo: %d" ,  nuevoTamanioArchivo );
 
-		 			 //Guarda los datos de la variable struct en FCB del archivo
-		 			 t_config* config_fcb = config_create(pathArchivo);
-		 			 config_set_value(config_fcb, "TAMANIO_ARCHIVO", string_itoa(nuevoTamanioArchivo));
-		 			 config_save_in_file(config_fcb, pathArchivo);
+			 for(i = 0; i <  tamano_bitmap ; i++ )
+			 {
+				 log_warning(logger, "recorriendo bitarray " );
+				 if( !bitarray_test_bit(s_bitmap,  i)){
+					 log_warning(logger, "en el fi bitarray " );
+					 bloques_libres++;
+				 }
 
-		 			 cop = F_TRUNCATE_OK;
-		 			 send(cliente_socket, &cop, sizeof(op_code), 0);
-		 			 break;
+			 }
+			 log_warning(logger, "bloques libres: %d" , bloques_libres );
+
+			 if(nuevoTamanioArchivo == 0){
+				 //TODO madarlo a exit o ver que se hace liberar todos los bloques si tenia
+				 log_warning(logger, "Tamaño de archivo 0");
+				 break;
+			 }
+			 int bloques_necesarios =  ceil(nuevoTamanioArchivo / configuracionSuperBloque->BLOCK_SIZE);
+
+			 if(bloques_necesarios > 1 )
+				 bloques_necesarios++;
+
+			 // Verifico si hay bloques suficientes
+			 if(bloques_necesarios > bloques_libres){
+				 //TODO madarlo a exit o ver que se hace liberar todos los bloques si tenia
+				 // Hacer sen dal kernel de error
+				 log_warning(logger, "Tamaño de archivo 0");
+				 break;
+			 }
+
+
+			 if(nuevoTamanioArchivo < FCB_archivo->tamanio_archivo){
+				 // Liberamos bloques si fuera necesario
+			 }else{
+				 // Asignar nuevos bloques
+				 if(FCB_archivo->tamanio_archivo == 0){
+					bitarray_set_bit(s_bitmap, 0);
+					bitarray_set_bit(s_bitmap, 1);
+					int indice_bitmap    = buscarPrimerBloqueVacio (s_bitmap->bitarray, configuracionSuperBloque->BLOCK_SIZE);
+					int puntero_directo  = indice_bitmap * configuracionSuperBloque->BLOCK_SIZE;
+					//asumiendo q cambio el bit de 0 a 1 o 1 a 0
+
+					if(indice_bitmap == -1){
+						log_error(logger, "Error con indice de bitmap");
+					}
+
+					log_info(logger, "Primer bloque vacio: %d", indice_bitmap);
+					bitarray_set_bit(s_bitmap, indice_bitmap);
+					FCB_archivo->puntero_directo = puntero_directo;
+					log_info(logger, "Puntero directo asignado: %d", puntero_directo);
+				 }
+			 }
+
+
+			 log_warning(logger, "Cantidad bloq q necesita el archivo: %d" ,  bloques_necesarios );
+			 log_warning(logger, "Tamaño nuevo: %d" ,  nuevoTamanioArchivo );
+
+
+			 //Guarda los datos de la variable struct en FCB del archivo
+			 config_set_value(FCB, "TAMANIO_ARCHIVO", string_itoa(nuevoTamanioArchivo));
+			 config_set_value(FCB, "PUNTERO_DIRECTO", string_from_format("%.0lf", FCB_archivo->puntero_directo) );
+			 config_save_in_file(FCB, pathArchivo);
+
+			 cop = F_TRUNCATE_OK;
+			 send(cliente_socket, &cop, sizeof(op_code), 0);
+			 break;
 
 		 case F_READ:
 			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
