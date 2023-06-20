@@ -6920,3 +6920,2226 @@ GRADO_MAX_MULTIPROGRAMACION: 4
 [WARNING] 04:51:27:241 Kernel/(72928:72930): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
 [INFO] 04:51:27:242 Kernel/(72928:72930): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
 [INFO] 04:51:27:243 Kernel/(72928:72930): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 15:43:20:240 Kernel/(67870:67870): Probando hora 0
+[INFO] 15:43:20:241 Kernel/(67870:67870): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 15:43:20:242 Kernel/(67870:67870): RECURSO: DISCO con 1 instancias
+[INFO] 15:43:20:243 Kernel/(67870:67870): RECURSO: MODEM con 1 instancias
+[INFO] 15:43:20:243 Kernel/(67870:67870): Cantidad total de recursos disponibles: 2 
+[INFO] 15:43:20:243 Kernel/(67870:67870): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 15:43:20:244 Kernel/(67870:67870): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 15:43:20:245 Kernel/(67870:67870): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 15:43:20:246 Kernel/(67870:67870): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 15:43:20:246 Kernel/(67870:67870): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 15:43:21:294 Kernel/(67870:67870): Cliente conectado (a KERNEL_SV)
+
+[INFO] 15:43:21:295 Kernel/(67870:67876): Envio solicitud a MEMORIA
+[INFO] 15:43:21:296 Kernel/(67870:67876): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:43:21:296 Kernel/(67870:67876): Se crea el proceso 0 en NEW
+[INFO] 15:43:21:296 Kernel/(67870:67876): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 15:43:21:296 Kernel/(67870:67876): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 15:43:21:296 Kernel/(67870:67871): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 15:43:22:298 Kernel/(67870:67872): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 15:43:22:298 Kernel/(67870:67872): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 15:43:22:298 Kernel/(67870:67872): La tabla global de archivos esta vacia
+[WARNING] 15:43:22:298 Kernel/(67870:67872): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 15:43:22:298 Kernel/(67870:67872): Existencia=0
+[INFO] 15:43:22:298 Kernel/(67870:67872): PID: 0 - Recibo pedido de F_CREATE por archivo inexistente: ARCHIVO
+
+[WARNING] 15:43:22:301 Kernel/(67870:67872): El archivo ARCHIVO fue creado, abierto y cargado a la tabla global de archivos abiertos
+[INFO] 15:43:22:301 Kernel/(67870:67872): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 15:43:22:301 Kernel/(67870:67872): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 15:43:22:301 Kernel/(67870:67872): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 15:43:22:301 Kernel/(67870:67871): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 15:43:22:301 Kernel/(67870:67872): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 15:43:22:301 Kernel/(67870:67872): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 15:43:25:311 Kernel/(67870:67877): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 15:43:25:311 Kernel/(67870:67871): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 15:43:25:311 Kernel/(67870:67872): PID: 0 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 15:43:25:311 Kernel/(67870:67872): Entro al if
+[INFO] 15:43:25:311 Kernel/(67870:67872): PID: 0 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 15:43:28:313 Kernel/(67870:67878): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 15:43:28:313 Kernel/(67870:67871): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 15:43:28:313 Kernel/(67870:67872): PID: 0 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 15:43:31:314 Kernel/(67870:67879): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 15:43:31:314 Kernel/(67870:67871): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 15:43:31:315 Kernel/(67870:67872): PID: 0 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 15:43:31:315 Kernel/(67870:67872): PID: 0 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 15:43:31:315 Kernel/(67870:67872): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 15:43:31:317 Kernel/(67870:67872): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 15:43:31:320 Kernel/(67870:67872): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 15:45:07:511 Kernel/(67870:67870): Cliente conectado (a KERNEL_SV)
+
+[INFO] 15:45:07:511 Kernel/(67870:67887): Envio solicitud a MEMORIA
+[INFO] 15:45:07:552 Kernel/(67870:67887): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:45:07:552 Kernel/(67870:67887): Se crea el proceso 1 en NEW
+[INFO] 15:45:07:552 Kernel/(67870:67887): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 15:45:07:552 Kernel/(67870:67887): Ingreso a Ready algoritmo HRRN - PIDS: [1] 
+[INFO] 15:45:07:553 Kernel/(67870:67871): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 15:45:08:557 Kernel/(67870:67872): PID: 1 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 15:45:08:557 Kernel/(67870:67872): PID: 1 - Abrir Archivo: ARCHIVO
+
+[WARNING] 15:45:08:557 Kernel/(67870:67872): La tabla global de archivos esta vacia
+[WARNING] 15:45:08:557 Kernel/(67870:67872): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 15:45:08:558 Kernel/(67870:67872): Existencia=1
+[WARNING] 15:45:08:558 Kernel/(67870:67872): El archivo ARCHIVO fue abierto y cargado a la tabla global de archivos abiertos
+[INFO] 15:45:08:559 Kernel/(67870:67872): PID: 1 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 15:45:08:559 Kernel/(67870:67872): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 15:45:08:560 Kernel/(67870:67872): Ingreso a Ready algoritmo HRRN - PIDS: [1] 
+[INFO] 15:45:08:560 Kernel/(67870:67871): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 15:45:08:561 Kernel/(67870:67872): PID: 1 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 15:45:08:561 Kernel/(67870:67872): PID: 1 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 15:45:11:568 Kernel/(67870:67888): PID: 1 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 15:45:11:568 Kernel/(67870:67871): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 15:45:11:568 Kernel/(67870:67872): PID: 1 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 15:45:11:568 Kernel/(67870:67872): Entro al if
+[INFO] 15:45:11:569 Kernel/(67870:67872): PID: 1 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 15:45:14:570 Kernel/(67870:67889): PID: 1 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 15:45:14:570 Kernel/(67870:67871): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 15:45:14:571 Kernel/(67870:67872): PID: 1 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 15:45:17:572 Kernel/(67870:67891): PID: 1 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 15:45:17:572 Kernel/(67870:67871): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 15:45:17:574 Kernel/(67870:67872): PID: 1 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 15:45:17:574 Kernel/(67870:67872): PID: 1 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 15:45:17:574 Kernel/(67870:67872): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 15:45:17:575 Kernel/(67870:67872): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 15:45:17:577 Kernel/(67870:67872): Finaliza el proceso 1 - Motivo: POR FIN
+[INFO] 15:54:37:721 Kernel/(67870:67870): Cliente conectado (a KERNEL_SV)
+
+[INFO] 15:54:37:722 Kernel/(67870:67979): Envio solicitud a MEMORIA
+[INFO] 15:54:37:765 Kernel/(67870:67979): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:54:37:765 Kernel/(67870:67979): Se crea el proceso 2 en NEW
+[INFO] 15:54:37:765 Kernel/(67870:67979): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 15:54:37:765 Kernel/(67870:67979): Ingreso a Ready algoritmo HRRN - PIDS: [2] 
+[INFO] 15:54:37:765 Kernel/(67870:67871): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 15:54:38:767 Kernel/(67870:67872): PID: 2 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 15:54:38:768 Kernel/(67870:67872): PID: 2 - Abrir Archivo: ARCHIVO
+
+[WARNING] 15:54:38:768 Kernel/(67870:67872): La tabla global de archivos esta vacia
+[WARNING] 15:54:38:768 Kernel/(67870:67872): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 15:54:38:769 Kernel/(67870:67872): Existencia=1
+[WARNING] 15:54:38:769 Kernel/(67870:67872): El archivo ARCHIVO fue abierto y cargado a la tabla global de archivos abiertos
+[INFO] 15:54:38:770 Kernel/(67870:67872): PID: 2 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 15:54:38:770 Kernel/(67870:67872): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 15:54:38:771 Kernel/(67870:67872): Ingreso a Ready algoritmo HRRN - PIDS: [2] 
+[INFO] 15:54:38:771 Kernel/(67870:67871): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 15:54:38:771 Kernel/(67870:67872): PID: 2 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 15:54:38:772 Kernel/(67870:67872): PID: 2 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 15:54:41:794 Kernel/(67870:67980): PID: 2 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 15:54:41:794 Kernel/(67870:67871): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 15:54:41:795 Kernel/(67870:67872): PID: 2 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 15:54:41:796 Kernel/(67870:67872): Entro al if
+[INFO] 15:54:41:797 Kernel/(67870:67872): PID: 2 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 15:54:44:797 Kernel/(67870:67981): PID: 2 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 15:54:44:797 Kernel/(67870:67871): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 15:54:44:798 Kernel/(67870:67872): PID: 2 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 15:54:47:798 Kernel/(67870:67982): PID: 2 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 15:54:47:799 Kernel/(67870:67871): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 15:54:47:800 Kernel/(67870:67872): PID: 2 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 15:54:47:800 Kernel/(67870:67872): PID: 2 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 15:54:47:800 Kernel/(67870:67872): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 15:54:47:801 Kernel/(67870:67872): PID: 2 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 15:54:47:804 Kernel/(67870:67872): Finaliza el proceso 2 - Motivo: POR FIN
+[INFO] 19:50:01:047 Kernel/(69384:69384): Probando hora 0
+[INFO] 19:50:01:047 Kernel/(69384:69384): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 19:50:01:050 Kernel/(69384:69384): RECURSO: DISCO con 1 instancias
+[INFO] 19:50:01:050 Kernel/(69384:69384): RECURSO: MODEM con 1 instancias
+[INFO] 19:50:01:051 Kernel/(69384:69384): Cantidad total de recursos disponibles: 2 
+[INFO] 19:50:01:051 Kernel/(69384:69384): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 19:50:01:051 Kernel/(69384:69384): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 19:50:01:052 Kernel/(69384:69384): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 19:50:01:053 Kernel/(69384:69384): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 19:50:01:053 Kernel/(69384:69384): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 19:50:02:175 Kernel/(69384:69384): Cliente conectado (a KERNEL_SV)
+
+[INFO] 19:50:02:175 Kernel/(69384:69390): Envio solicitud a MEMORIA
+[INFO] 19:50:02:176 Kernel/(69384:69390): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 19:50:02:176 Kernel/(69384:69390): Se crea el proceso 0 en NEW
+[INFO] 19:50:02:176 Kernel/(69384:69390): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:50:02:176 Kernel/(69384:69390): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 19:50:02:177 Kernel/(69384:69385): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 19:50:03:178 Kernel/(69384:69386): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 19:50:03:178 Kernel/(69384:69386): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 19:50:03:178 Kernel/(69384:69386): La tabla global de archivos esta vacia
+[WARNING] 19:50:03:178 Kernel/(69384:69386): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 19:50:03:178 Kernel/(69384:69386): Existencia=1
+[WARNING] 19:50:03:178 Kernel/(69384:69386): El archivo ARCHIVO fue abierto y cargado a la tabla global de archivos abiertos
+[INFO] 19:50:03:178 Kernel/(69384:69386): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 19:50:03:179 Kernel/(69384:69386): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 19:50:03:179 Kernel/(69384:69386): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 19:50:03:179 Kernel/(69384:69385): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 19:50:03:179 Kernel/(69384:69386): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 19:50:03:179 Kernel/(69384:69386): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 19:50:06:183 Kernel/(69384:69392): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 19:50:06:183 Kernel/(69384:69385): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 19:50:06:183 Kernel/(69384:69386): PID: 0 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 19:50:06:184 Kernel/(69384:69386): Entro al if
+[INFO] 19:50:06:184 Kernel/(69384:69386): PID: 0 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 19:50:09:185 Kernel/(69384:69393): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 19:50:09:185 Kernel/(69384:69385): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 19:50:09:185 Kernel/(69384:69386): PID: 0 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 19:50:12:185 Kernel/(69384:69394): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 19:50:12:186 Kernel/(69384:69385): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 19:50:12:186 Kernel/(69384:69386): PID: 0 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 19:50:12:186 Kernel/(69384:69386): PID: 0 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 19:50:12:186 Kernel/(69384:69386): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 19:50:12:187 Kernel/(69384:69386): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 19:50:12:189 Kernel/(69384:69386): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 20:17:42:883 Kernel/(71056:71056): Probando hora 0
+[INFO] 20:17:42:883 Kernel/(71056:71056): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 20:17:42:884 Kernel/(71056:71056): RECURSO: DISCO con 1 instancias
+[INFO] 20:17:42:885 Kernel/(71056:71056): RECURSO: MODEM con 1 instancias
+[INFO] 20:17:42:885 Kernel/(71056:71056): Cantidad total de recursos disponibles: 2 
+[INFO] 20:17:42:885 Kernel/(71056:71056): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 20:17:42:886 Kernel/(71056:71056): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 20:17:42:886 Kernel/(71056:71056): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 20:17:42:887 Kernel/(71056:71056): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 20:17:42:887 Kernel/(71056:71056): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 20:17:45:893 Kernel/(71056:71056): Cliente conectado (a KERNEL_SV)
+
+[INFO] 20:17:45:894 Kernel/(71056:71062): Envio solicitud a MEMORIA
+[INFO] 20:17:45:895 Kernel/(71056:71062): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 20:17:45:895 Kernel/(71056:71062): Se crea el proceso 0 en NEW
+[INFO] 20:17:45:895 Kernel/(71056:71062): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:17:45:895 Kernel/(71056:71062): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 20:17:45:896 Kernel/(71056:71057): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 20:17:46:897 Kernel/(71056:71058): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 20:17:46:897 Kernel/(71056:71058): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 20:17:46:897 Kernel/(71056:71058): La tabla global de archivos esta vacia
+[WARNING] 20:17:46:897 Kernel/(71056:71058): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 20:17:46:898 Kernel/(71056:71058): Existencia=0
+[INFO] 20:17:46:898 Kernel/(71056:71058): PID: 0 - Recibo pedido de F_CREATE por archivo inexistente: ARCHIVO
+
+[WARNING] 20:17:46:898 Kernel/(71056:71058): El archivo ARCHIVO fue creado, abierto y cargado a la tabla global de archivos abiertos
+[INFO] 20:17:46:898 Kernel/(71056:71058): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 20:17:46:899 Kernel/(71056:71058): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 20:17:46:899 Kernel/(71056:71058): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 20:17:46:899 Kernel/(71056:71057): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 20:17:46:899 Kernel/(71056:71058): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 20:17:46:899 Kernel/(71056:71058): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[ERROR] 20:17:50:130 Kernel/(71056:71063): Error en case de hilo de espera a respuesta del FS
+[WARNING] 20:17:50:130 Kernel/(71056:71063): PID 0 - Fue a exit con un archivo abierto
+[WARNING] 20:17:50:130 Kernel/(71056:71063): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 20:17:50:130 Kernel/(71056:71063): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 20:17:50:130 Kernel/(71056:71063): Finaliza el proceso 0 - Motivo: ERROR inesperado con operacion con demora del FS
+[INFO] 20:21:08:414 Kernel/(71293:71293): Probando hora 0
+[INFO] 20:21:08:414 Kernel/(71293:71293): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 20:21:08:416 Kernel/(71293:71293): RECURSO: DISCO con 1 instancias
+[INFO] 20:21:08:416 Kernel/(71293:71293): RECURSO: MODEM con 1 instancias
+[INFO] 20:21:08:416 Kernel/(71293:71293): Cantidad total de recursos disponibles: 2 
+[INFO] 20:21:08:417 Kernel/(71293:71293): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 20:21:08:417 Kernel/(71293:71293): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 20:21:08:418 Kernel/(71293:71293): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 20:21:08:419 Kernel/(71293:71293): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 20:21:08:419 Kernel/(71293:71293): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 20:21:10:381 Kernel/(71293:71293): Cliente conectado (a KERNEL_SV)
+
+[INFO] 20:21:10:381 Kernel/(71293:71299): Envio solicitud a MEMORIA
+[INFO] 20:21:10:382 Kernel/(71293:71299): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 20:21:10:382 Kernel/(71293:71299): Se crea el proceso 0 en NEW
+[INFO] 20:21:10:382 Kernel/(71293:71299): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:21:10:383 Kernel/(71293:71299): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 20:21:10:383 Kernel/(71293:71294): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 20:21:11:384 Kernel/(71293:71295): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 20:21:11:384 Kernel/(71293:71295): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 20:21:11:384 Kernel/(71293:71295): La tabla global de archivos esta vacia
+[WARNING] 20:21:11:384 Kernel/(71293:71295): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 20:21:11:385 Kernel/(71293:71295): Existencia=0
+[INFO] 20:21:11:385 Kernel/(71293:71295): PID: 0 - Recibo pedido de F_CREATE por archivo inexistente: ARCHIVO
+
+[WARNING] 20:21:11:386 Kernel/(71293:71295): El archivo ARCHIVO fue creado, abierto y cargado a la tabla global de archivos abiertos
+[INFO] 20:21:11:386 Kernel/(71293:71295): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 20:21:11:386 Kernel/(71293:71295): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 20:21:11:386 Kernel/(71293:71295): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 20:21:11:386 Kernel/(71293:71294): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 20:21:11:386 Kernel/(71293:71295): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 20:21:11:387 Kernel/(71293:71295): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[ERROR] 20:21:14:625 Kernel/(71293:71300): Error en case de hilo de espera a respuesta del FS
+[WARNING] 20:21:14:625 Kernel/(71293:71300): PID 0 - Fue a exit con un archivo abierto
+[WARNING] 20:21:14:625 Kernel/(71293:71300): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 20:21:14:626 Kernel/(71293:71300): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 20:21:14:626 Kernel/(71293:71300): Finaliza el proceso 0 - Motivo: ERROR inesperado con operacion con demora del FS
+[INFO] 20:22:30:500 Kernel/(71404:71404): Probando hora 0
+[INFO] 20:22:30:500 Kernel/(71404:71404): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 20:22:30:502 Kernel/(71404:71404): RECURSO: DISCO con 1 instancias
+[INFO] 20:22:30:502 Kernel/(71404:71404): RECURSO: MODEM con 1 instancias
+[INFO] 20:22:30:502 Kernel/(71404:71404): Cantidad total de recursos disponibles: 2 
+[INFO] 20:22:30:503 Kernel/(71404:71404): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 20:22:30:503 Kernel/(71404:71404): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 20:22:30:504 Kernel/(71404:71404): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 20:22:30:504 Kernel/(71404:71404): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 20:22:30:505 Kernel/(71404:71404): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 20:22:32:679 Kernel/(71404:71404): Cliente conectado (a KERNEL_SV)
+
+[INFO] 20:22:32:679 Kernel/(71404:71410): Envio solicitud a MEMORIA
+[INFO] 20:22:32:680 Kernel/(71404:71410): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 20:22:32:680 Kernel/(71404:71410): Se crea el proceso 0 en NEW
+[INFO] 20:22:32:680 Kernel/(71404:71410): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:22:32:681 Kernel/(71404:71410): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 20:22:32:681 Kernel/(71404:71405): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 20:22:33:683 Kernel/(71404:71406): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 20:22:33:683 Kernel/(71404:71406): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 20:22:33:683 Kernel/(71404:71406): La tabla global de archivos esta vacia
+[WARNING] 20:22:33:683 Kernel/(71404:71406): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 20:22:33:683 Kernel/(71404:71406): Existencia=0
+[INFO] 20:22:33:683 Kernel/(71404:71406): PID: 0 - Recibo pedido de F_CREATE por archivo inexistente: ARCHIVO
+
+[WARNING] 20:22:33:684 Kernel/(71404:71406): El archivo ARCHIVO fue creado, abierto y cargado a la tabla global de archivos abiertos
+[INFO] 20:22:33:684 Kernel/(71404:71406): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 20:22:33:685 Kernel/(71404:71406): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 20:22:33:685 Kernel/(71404:71406): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 20:22:33:685 Kernel/(71404:71405): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 20:22:33:685 Kernel/(71404:71406): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 20:22:33:685 Kernel/(71404:71406): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 20:22:36:690 Kernel/(71404:71411): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 20:22:36:690 Kernel/(71404:71405): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 20:22:36:691 Kernel/(71404:71406): PID: 0 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 20:22:36:691 Kernel/(71404:71406): Entro al if
+[INFO] 20:22:36:691 Kernel/(71404:71406): PID: 0 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 20:22:39:692 Kernel/(71404:71413): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 20:22:39:692 Kernel/(71404:71405): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 20:22:39:692 Kernel/(71404:71406): PID: 0 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 20:22:42:693 Kernel/(71404:71414): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 20:22:42:694 Kernel/(71404:71405): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 20:22:42:694 Kernel/(71404:71406): PID: 0 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 20:22:42:694 Kernel/(71404:71406): PID: 0 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 20:22:42:694 Kernel/(71404:71406): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 20:22:42:694 Kernel/(71404:71406): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 20:22:42:696 Kernel/(71404:71406): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 20:54:13:847 Kernel/(72684:72684): Probando hora 0
+[INFO] 20:54:13:847 Kernel/(72684:72684): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 20:54:13:850 Kernel/(72684:72684): RECURSO: DISCO con 1 instancias
+[INFO] 20:54:13:850 Kernel/(72684:72684): RECURSO: MODEM con 1 instancias
+[INFO] 20:54:13:850 Kernel/(72684:72684): Cantidad total de recursos disponibles: 2 
+[INFO] 20:54:13:851 Kernel/(72684:72684): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 20:54:13:851 Kernel/(72684:72684): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 20:54:13:852 Kernel/(72684:72684): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 20:54:13:853 Kernel/(72684:72684): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 20:54:13:853 Kernel/(72684:72684): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 20:54:15:647 Kernel/(72684:72684): Cliente conectado (a KERNEL_SV)
+
+[INFO] 20:54:15:648 Kernel/(72684:72690): Envio solicitud a MEMORIA
+[INFO] 20:54:15:648 Kernel/(72684:72690): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 20:54:15:648 Kernel/(72684:72690): Se crea el proceso 0 en NEW
+[INFO] 20:54:15:649 Kernel/(72684:72690): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:54:15:649 Kernel/(72684:72690): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 20:54:15:649 Kernel/(72684:72685): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 20:54:16:651 Kernel/(72684:72686): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 20:54:16:651 Kernel/(72684:72686): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 20:54:16:651 Kernel/(72684:72686): La tabla global de archivos esta vacia
+[WARNING] 20:54:16:651 Kernel/(72684:72686): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 20:54:16:651 Kernel/(72684:72686): Existencia=1
+[WARNING] 20:54:16:652 Kernel/(72684:72686): El archivo ARCHIVO fue abierto y cargado a la tabla global de archivos abiertos
+[INFO] 20:54:16:652 Kernel/(72684:72686): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 20:54:16:652 Kernel/(72684:72686): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 20:54:16:652 Kernel/(72684:72686): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 20:54:16:652 Kernel/(72684:72685): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 20:54:16:653 Kernel/(72684:72686): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 20:54:16:653 Kernel/(72684:72686): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 20:57:18:707 Kernel/(72831:72831): Probando hora 0
+[INFO] 20:57:18:708 Kernel/(72831:72831): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 20:57:18:711 Kernel/(72831:72831): RECURSO: DISCO con 1 instancias
+[INFO] 20:57:18:711 Kernel/(72831:72831): RECURSO: MODEM con 1 instancias
+[INFO] 20:57:18:711 Kernel/(72831:72831): Cantidad total de recursos disponibles: 2 
+[INFO] 20:57:18:712 Kernel/(72831:72831): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 20:57:18:712 Kernel/(72831:72831): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 20:57:18:713 Kernel/(72831:72831): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 20:57:18:713 Kernel/(72831:72831): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 20:57:18:714 Kernel/(72831:72831): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 20:57:19:765 Kernel/(72831:72831): Cliente conectado (a KERNEL_SV)
+
+[INFO] 20:57:19:765 Kernel/(72831:72837): Envio solicitud a MEMORIA
+[INFO] 20:57:19:766 Kernel/(72831:72837): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 20:57:19:766 Kernel/(72831:72837): Se crea el proceso 0 en NEW
+[INFO] 20:57:19:766 Kernel/(72831:72837): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:57:19:767 Kernel/(72831:72837): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 20:57:19:767 Kernel/(72831:72832): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 20:57:20:768 Kernel/(72831:72833): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 20:57:20:768 Kernel/(72831:72833): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 20:57:20:768 Kernel/(72831:72833): La tabla global de archivos esta vacia
+[WARNING] 20:57:20:768 Kernel/(72831:72833): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 20:57:20:769 Kernel/(72831:72833): Existencia=1
+[WARNING] 20:57:20:769 Kernel/(72831:72833): El archivo ARCHIVO fue abierto y cargado a la tabla global de archivos abiertos
+[INFO] 20:57:20:769 Kernel/(72831:72833): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 20:57:20:770 Kernel/(72831:72833): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 20:57:20:770 Kernel/(72831:72833): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 20:57:20:770 Kernel/(72831:72832): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 20:57:20:770 Kernel/(72831:72833): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 20:57:20:770 Kernel/(72831:72833): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 21:02:12:156 Kernel/(73071:73071): Probando hora 0
+[INFO] 21:02:12:156 Kernel/(73071:73071): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 21:02:12:158 Kernel/(73071:73071): RECURSO: DISCO con 1 instancias
+[INFO] 21:02:12:158 Kernel/(73071:73071): RECURSO: MODEM con 1 instancias
+[INFO] 21:02:12:158 Kernel/(73071:73071): Cantidad total de recursos disponibles: 2 
+[INFO] 21:02:12:159 Kernel/(73071:73071): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 21:02:12:159 Kernel/(73071:73071): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 21:02:12:159 Kernel/(73071:73071): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:02:12:160 Kernel/(73071:73071): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 21:02:12:160 Kernel/(73071:73071): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 21:02:32:967 Kernel/(73071:73071): Cliente conectado (a KERNEL_SV)
+
+[INFO] 21:02:32:967 Kernel/(73071:73086): Envio solicitud a MEMORIA
+[INFO] 21:02:32:968 Kernel/(73071:73086): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 21:02:32:968 Kernel/(73071:73086): Se crea el proceso 0 en NEW
+[INFO] 21:02:32:968 Kernel/(73071:73086): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:02:32:969 Kernel/(73071:73086): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 21:02:32:969 Kernel/(73071:73072): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:02:33:970 Kernel/(73071:73073): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 21:02:33:970 Kernel/(73071:73073): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 21:02:33:970 Kernel/(73071:73073): La tabla global de archivos esta vacia
+[WARNING] 21:02:33:970 Kernel/(73071:73073): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 21:02:33:971 Kernel/(73071:73073): Existencia=0
+[INFO] 21:02:33:971 Kernel/(73071:73073): PID: 0 - Recibo pedido de F_CREATE por archivo inexistente: ARCHIVO
+
+[WARNING] 21:02:33:972 Kernel/(73071:73073): El archivo ARCHIVO fue creado, abierto y cargado a la tabla global de archivos abiertos
+[INFO] 21:02:33:972 Kernel/(73071:73073): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 21:02:33:972 Kernel/(73071:73073): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 21:02:33:972 Kernel/(73071:73073): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 21:02:33:972 Kernel/(73071:73072): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:02:33:972 Kernel/(73071:73073): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 21:02:33:973 Kernel/(73071:73073): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 21:02:36:977 Kernel/(73071:73087): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:02:36:977 Kernel/(73071:73072): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:02:36:977 Kernel/(73071:73073): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 21:02:36:977 Kernel/(73071:73073): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 21:09:08:446 Kernel/(73413:73413): Probando hora 0
+[INFO] 21:09:08:447 Kernel/(73413:73413): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 21:09:08:448 Kernel/(73413:73413): RECURSO: DISCO con 1 instancias
+[INFO] 21:09:08:448 Kernel/(73413:73413): RECURSO: MODEM con 1 instancias
+[INFO] 21:09:08:448 Kernel/(73413:73413): Cantidad total de recursos disponibles: 2 
+[INFO] 21:09:08:449 Kernel/(73413:73413): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 21:09:08:449 Kernel/(73413:73413): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 21:09:08:450 Kernel/(73413:73413): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:09:08:450 Kernel/(73413:73413): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 21:09:08:451 Kernel/(73413:73413): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 21:09:09:599 Kernel/(73413:73413): Cliente conectado (a KERNEL_SV)
+
+[INFO] 21:09:09:600 Kernel/(73413:73419): Envio solicitud a MEMORIA
+[INFO] 21:09:09:600 Kernel/(73413:73419): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 21:09:09:601 Kernel/(73413:73419): Se crea el proceso 0 en NEW
+[INFO] 21:09:09:601 Kernel/(73413:73419): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:09:09:601 Kernel/(73413:73419): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 21:09:09:601 Kernel/(73413:73414): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:09:10:602 Kernel/(73413:73415): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 21:09:10:602 Kernel/(73413:73415): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 21:09:10:602 Kernel/(73413:73415): La tabla global de archivos esta vacia
+[WARNING] 21:09:10:602 Kernel/(73413:73415): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 21:09:10:602 Kernel/(73413:73415): Existencia=1
+[WARNING] 21:09:10:603 Kernel/(73413:73415): El archivo ARCHIVO fue abierto y cargado a la tabla global de archivos abiertos
+[INFO] 21:09:10:603 Kernel/(73413:73415): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 21:09:10:603 Kernel/(73413:73415): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 21:09:10:603 Kernel/(73413:73415): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 21:09:10:603 Kernel/(73413:73414): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:09:10:603 Kernel/(73413:73415): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 21:09:10:604 Kernel/(73413:73415): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 21:09:13:609 Kernel/(73413:73420): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:09:13:609 Kernel/(73413:73414): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:09:13:609 Kernel/(73413:73415): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 21:09:13:610 Kernel/(73413:73415): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 21:09:16:615 Kernel/(73413:73421): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:09:16:615 Kernel/(73413:73414): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:09:16:615 Kernel/(73413:73415): PID: 0 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 21:09:16:615 Kernel/(73413:73415): Entro al if
+[INFO] 21:09:16:615 Kernel/(73413:73415): PID: 0 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 21:09:19:616 Kernel/(73413:73422): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:09:19:616 Kernel/(73413:73414): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:09:19:617 Kernel/(73413:73415): PID: 0 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 21:09:22:617 Kernel/(73413:73423): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:09:22:617 Kernel/(73413:73414): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:09:22:618 Kernel/(73413:73415): PID: 0 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 21:09:22:618 Kernel/(73413:73415): PID: 0 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 21:09:22:618 Kernel/(73413:73415): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 21:09:22:618 Kernel/(73413:73415): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 21:09:22:620 Kernel/(73413:73415): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 21:12:27:873 Kernel/(73597:73597): Probando hora 0
+[INFO] 21:12:27:874 Kernel/(73597:73597): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 21:12:27:877 Kernel/(73597:73597): RECURSO: DISCO con 1 instancias
+[INFO] 21:12:27:877 Kernel/(73597:73597): RECURSO: MODEM con 1 instancias
+[INFO] 21:12:27:877 Kernel/(73597:73597): Cantidad total de recursos disponibles: 2 
+[INFO] 21:12:27:878 Kernel/(73597:73597): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 21:12:27:878 Kernel/(73597:73597): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 21:12:27:879 Kernel/(73597:73597): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:12:27:879 Kernel/(73597:73597): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 21:12:27:880 Kernel/(73597:73597): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 21:12:47:570 Kernel/(73597:73597): Cliente conectado (a KERNEL_SV)
+
+[INFO] 21:12:47:571 Kernel/(73597:73611): Envio solicitud a MEMORIA
+[INFO] 21:12:47:571 Kernel/(73597:73611): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 21:12:47:571 Kernel/(73597:73611): Se crea el proceso 0 en NEW
+[INFO] 21:12:47:571 Kernel/(73597:73611): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:12:47:572 Kernel/(73597:73611): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 21:12:47:572 Kernel/(73597:73598): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:12:48:574 Kernel/(73597:73599): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 21:12:48:574 Kernel/(73597:73599): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 21:12:48:574 Kernel/(73597:73599): La tabla global de archivos esta vacia
+[WARNING] 21:12:48:574 Kernel/(73597:73599): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 21:12:48:574 Kernel/(73597:73599): Existencia=0
+[INFO] 21:12:48:575 Kernel/(73597:73599): PID: 0 - Recibo pedido de F_CREATE por archivo inexistente: ARCHIVO
+
+[WARNING] 21:12:48:577 Kernel/(73597:73599): El archivo ARCHIVO fue creado, abierto y cargado a la tabla global de archivos abiertos
+[INFO] 21:12:48:577 Kernel/(73597:73599): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 21:12:48:578 Kernel/(73597:73599): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 21:12:48:578 Kernel/(73597:73599): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 21:12:48:578 Kernel/(73597:73598): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:12:48:578 Kernel/(73597:73599): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 21:12:48:580 Kernel/(73597:73599): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 21:12:51:589 Kernel/(73597:73612): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:12:51:589 Kernel/(73597:73598): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:12:51:589 Kernel/(73597:73599): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 21:12:51:590 Kernel/(73597:73599): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 21:12:54:600 Kernel/(73597:73613): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:12:54:600 Kernel/(73597:73598): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:12:54:600 Kernel/(73597:73599): PID: 0 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 21:12:54:600 Kernel/(73597:73599): Entro al if
+[INFO] 21:12:54:601 Kernel/(73597:73599): PID: 0 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 21:12:57:605 Kernel/(73597:73614): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:12:57:605 Kernel/(73597:73598): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:12:57:606 Kernel/(73597:73599): PID: 0 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 21:13:00:606 Kernel/(73597:73619): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:13:00:607 Kernel/(73597:73598): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:13:00:607 Kernel/(73597:73599): PID: 0 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 21:13:00:607 Kernel/(73597:73599): PID: 0 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 21:13:00:607 Kernel/(73597:73599): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 21:13:00:608 Kernel/(73597:73599): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 21:13:00:609 Kernel/(73597:73599): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 21:18:02:729 Kernel/(73660:73660): Probando hora 0
+[INFO] 21:18:02:729 Kernel/(73660:73660): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 21:18:02:731 Kernel/(73660:73660): RECURSO: DISCO con 1 instancias
+[INFO] 21:18:02:731 Kernel/(73660:73660): RECURSO: MODEM con 1 instancias
+[INFO] 21:18:02:731 Kernel/(73660:73660): Cantidad total de recursos disponibles: 2 
+[INFO] 21:18:02:732 Kernel/(73660:73660): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 21:18:02:732 Kernel/(73660:73660): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 21:18:02:733 Kernel/(73660:73660): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:18:02:733 Kernel/(73660:73660): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 21:18:02:734 Kernel/(73660:73660): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 21:18:04:386 Kernel/(73660:73660): Cliente conectado (a KERNEL_SV)
+
+[INFO] 21:18:04:387 Kernel/(73660:73666): Envio solicitud a MEMORIA
+[INFO] 21:18:04:388 Kernel/(73660:73666): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 21:18:04:388 Kernel/(73660:73666): Se crea el proceso 0 en NEW
+[INFO] 21:18:04:388 Kernel/(73660:73666): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:18:04:388 Kernel/(73660:73666): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 21:18:04:389 Kernel/(73660:73661): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:18:05:389 Kernel/(73660:73662): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 21:18:05:389 Kernel/(73660:73662): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 21:18:05:389 Kernel/(73660:73662): La tabla global de archivos esta vacia
+[WARNING] 21:18:05:389 Kernel/(73660:73662): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 21:18:05:389 Kernel/(73660:73662): Existencia=0
+[INFO] 21:18:05:389 Kernel/(73660:73662): PID: 0 - Recibo pedido de F_CREATE por archivo inexistente: ARCHIVO
+
+[WARNING] 21:18:05:390 Kernel/(73660:73662): El archivo ARCHIVO fue creado, abierto y cargado a la tabla global de archivos abiertos
+[INFO] 21:18:05:390 Kernel/(73660:73662): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 21:18:05:390 Kernel/(73660:73662): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 21:18:05:390 Kernel/(73660:73662): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 21:18:05:390 Kernel/(73660:73661): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:18:05:391 Kernel/(73660:73662): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 21:18:05:391 Kernel/(73660:73662): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 21:18:08:396 Kernel/(73660:73667): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:18:08:396 Kernel/(73660:73661): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:18:08:396 Kernel/(73660:73662): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 21:18:08:397 Kernel/(73660:73662): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 21:18:11:401 Kernel/(73660:73668): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:18:11:402 Kernel/(73660:73661): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:18:11:402 Kernel/(73660:73662): PID: 0 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 21:18:11:402 Kernel/(73660:73662): Entro al if
+[INFO] 21:18:11:402 Kernel/(73660:73662): PID: 0 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 21:18:14:403 Kernel/(73660:73670): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:18:14:403 Kernel/(73660:73661): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:18:14:403 Kernel/(73660:73662): PID: 0 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 21:18:17:404 Kernel/(73660:73675): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:18:17:404 Kernel/(73660:73661): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:18:17:405 Kernel/(73660:73662): PID: 0 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 21:18:17:405 Kernel/(73660:73662): PID: 0 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 21:18:17:405 Kernel/(73660:73662): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 21:18:17:405 Kernel/(73660:73662): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 21:18:17:406 Kernel/(73660:73662): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 21:23:41:296 Kernel/(73936:73936): Probando hora 0
+[INFO] 21:23:41:298 Kernel/(73936:73936): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 21:23:41:299 Kernel/(73936:73936): RECURSO: DISCO con 1 instancias
+[INFO] 21:23:41:300 Kernel/(73936:73936): RECURSO: MODEM con 1 instancias
+[INFO] 21:23:41:300 Kernel/(73936:73936): Cantidad total de recursos disponibles: 2 
+[INFO] 21:23:41:301 Kernel/(73936:73936): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 21:23:41:301 Kernel/(73936:73936): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 21:23:41:302 Kernel/(73936:73936): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:23:41:302 Kernel/(73936:73936): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 21:23:41:303 Kernel/(73936:73936): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 21:24:00:536 Kernel/(73960:73960): Probando hora 0
+[INFO] 21:24:00:537 Kernel/(73960:73960): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 21:24:00:538 Kernel/(73960:73960): RECURSO: DISCO con 1 instancias
+[INFO] 21:24:00:538 Kernel/(73960:73960): RECURSO: MODEM con 1 instancias
+[INFO] 21:24:00:539 Kernel/(73960:73960): Cantidad total de recursos disponibles: 2 
+[INFO] 21:24:00:539 Kernel/(73960:73960): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 21:24:00:539 Kernel/(73960:73960): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 21:24:00:540 Kernel/(73960:73960): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:24:00:540 Kernel/(73960:73960): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 21:24:00:541 Kernel/(73960:73960): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 21:24:02:156 Kernel/(73960:73960): Cliente conectado (a KERNEL_SV)
+
+[INFO] 21:24:02:157 Kernel/(73960:73966): Envio solicitud a MEMORIA
+[INFO] 21:24:02:157 Kernel/(73960:73966): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 21:24:02:158 Kernel/(73960:73966): Se crea el proceso 0 en NEW
+[INFO] 21:24:02:158 Kernel/(73960:73966): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:24:02:158 Kernel/(73960:73966): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 21:24:02:158 Kernel/(73960:73961): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:24:03:160 Kernel/(73960:73962): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 21:24:03:160 Kernel/(73960:73962): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 21:24:03:160 Kernel/(73960:73962): La tabla global de archivos esta vacia
+[WARNING] 21:24:03:160 Kernel/(73960:73962): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 21:24:03:161 Kernel/(73960:73962): Existencia=0
+[INFO] 21:24:03:161 Kernel/(73960:73962): PID: 0 - Recibo pedido de F_CREATE por archivo inexistente: ARCHIVO
+
+[WARNING] 21:24:03:167 Kernel/(73960:73962): El archivo ARCHIVO fue creado, abierto y cargado a la tabla global de archivos abiertos
+[INFO] 21:24:03:167 Kernel/(73960:73962): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 21:24:03:167 Kernel/(73960:73962): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 21:24:03:167 Kernel/(73960:73962): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 21:24:03:167 Kernel/(73960:73961): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:24:03:168 Kernel/(73960:73962): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 21:24:03:168 Kernel/(73960:73962): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 21:24:06:177 Kernel/(73960:73967): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:24:06:179 Kernel/(73960:73961): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:24:06:181 Kernel/(73960:73962): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 21:24:06:181 Kernel/(73960:73962): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 21:24:09:205 Kernel/(73960:73968): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:24:09:205 Kernel/(73960:73961): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:24:09:206 Kernel/(73960:73962): PID: 0 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 21:24:09:206 Kernel/(73960:73962): Entro al if
+[INFO] 21:24:09:206 Kernel/(73960:73962): PID: 0 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 21:24:12:206 Kernel/(73960:73969): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:24:12:207 Kernel/(73960:73961): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:24:12:207 Kernel/(73960:73962): PID: 0 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 21:24:15:207 Kernel/(73960:73971): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:24:15:208 Kernel/(73960:73961): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:24:15:208 Kernel/(73960:73962): PID: 0 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 21:24:15:208 Kernel/(73960:73962): PID: 0 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 21:24:15:208 Kernel/(73960:73962): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 21:24:15:209 Kernel/(73960:73962): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 21:24:15:210 Kernel/(73960:73962): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 21:32:46:739 Kernel/(74328:74328): Probando hora 0
+[INFO] 21:32:46:740 Kernel/(74328:74328): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 21:32:46:741 Kernel/(74328:74328): RECURSO: DISCO con 1 instancias
+[INFO] 21:32:46:741 Kernel/(74328:74328): RECURSO: MODEM con 1 instancias
+[INFO] 21:32:46:742 Kernel/(74328:74328): Cantidad total de recursos disponibles: 2 
+[INFO] 21:32:46:742 Kernel/(74328:74328): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 21:32:46:742 Kernel/(74328:74328): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 21:32:46:743 Kernel/(74328:74328): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:32:46:743 Kernel/(74328:74328): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 21:32:46:744 Kernel/(74328:74328): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 21:32:48:208 Kernel/(74328:74328): Cliente conectado (a KERNEL_SV)
+
+[INFO] 21:32:48:210 Kernel/(74328:74334): Envio solicitud a MEMORIA
+[INFO] 21:32:48:211 Kernel/(74328:74334): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 21:32:48:211 Kernel/(74328:74334): Se crea el proceso 0 en NEW
+[INFO] 21:32:48:212 Kernel/(74328:74334): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:32:48:213 Kernel/(74328:74334): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 21:32:48:213 Kernel/(74328:74329): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:32:49:214 Kernel/(74328:74330): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 21:32:49:214 Kernel/(74328:74330): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 21:32:49:214 Kernel/(74328:74330): La tabla global de archivos esta vacia
+[WARNING] 21:32:49:214 Kernel/(74328:74330): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 21:32:49:215 Kernel/(74328:74330): Existencia=0
+[INFO] 21:32:49:215 Kernel/(74328:74330): PID: 0 - Recibo pedido de F_CREATE por archivo inexistente: ARCHIVO
+
+[WARNING] 21:32:49:215 Kernel/(74328:74330): El archivo ARCHIVO fue creado, abierto y cargado a la tabla global de archivos abiertos
+[INFO] 21:32:49:216 Kernel/(74328:74330): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 21:32:49:216 Kernel/(74328:74330): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 21:32:49:216 Kernel/(74328:74330): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 21:32:49:216 Kernel/(74328:74329): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:32:49:217 Kernel/(74328:74330): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 21:32:49:217 Kernel/(74328:74330): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 21:32:52:222 Kernel/(74328:74335): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:32:52:222 Kernel/(74328:74329): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:32:52:223 Kernel/(74328:74330): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 21:32:52:223 Kernel/(74328:74330): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[ERROR] 21:32:55:471 Kernel/(74328:74336): Error en case de hilo de espera a respuesta del FS
+[WARNING] 21:32:55:471 Kernel/(74328:74336): PID 0 - Fue a exit con un archivo abierto
+[WARNING] 21:32:55:471 Kernel/(74328:74336): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 21:32:55:471 Kernel/(74328:74336): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 21:32:55:471 Kernel/(74328:74336): Finaliza el proceso 0 - Motivo: ERROR inesperado con operacion con demora del FS
+[INFO] 21:43:16:597 Kernel/(74765:74765): Probando hora 0
+[INFO] 21:43:16:598 Kernel/(74765:74765): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 21:43:16:600 Kernel/(74765:74765): RECURSO: DISCO con 1 instancias
+[INFO] 21:43:16:600 Kernel/(74765:74765): RECURSO: MODEM con 1 instancias
+[INFO] 21:43:16:600 Kernel/(74765:74765): Cantidad total de recursos disponibles: 2 
+[INFO] 21:43:16:601 Kernel/(74765:74765): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 21:43:16:601 Kernel/(74765:74765): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 21:43:16:602 Kernel/(74765:74765): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:43:16:603 Kernel/(74765:74765): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 21:43:16:603 Kernel/(74765:74765): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 21:43:17:902 Kernel/(74765:74765): Cliente conectado (a KERNEL_SV)
+
+[INFO] 21:43:17:903 Kernel/(74765:74771): Envio solicitud a MEMORIA
+[INFO] 21:43:17:903 Kernel/(74765:74771): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 21:43:17:903 Kernel/(74765:74771): Se crea el proceso 0 en NEW
+[INFO] 21:43:17:904 Kernel/(74765:74771): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:43:17:904 Kernel/(74765:74771): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 21:43:17:904 Kernel/(74765:74766): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:43:18:905 Kernel/(74765:74767): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 21:43:18:905 Kernel/(74765:74767): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 21:43:18:905 Kernel/(74765:74767): La tabla global de archivos esta vacia
+[WARNING] 21:43:18:905 Kernel/(74765:74767): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 21:43:18:906 Kernel/(74765:74767): Existencia=0
+[INFO] 21:43:18:906 Kernel/(74765:74767): PID: 0 - Recibo pedido de F_CREATE por archivo inexistente: ARCHIVO
+
+[WARNING] 21:43:18:908 Kernel/(74765:74767): El archivo ARCHIVO fue creado, abierto y cargado a la tabla global de archivos abiertos
+[INFO] 21:43:18:909 Kernel/(74765:74767): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 21:43:18:909 Kernel/(74765:74767): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 21:43:18:909 Kernel/(74765:74767): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 21:43:18:910 Kernel/(74765:74766): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:43:18:910 Kernel/(74765:74767): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 21:43:18:910 Kernel/(74765:74767): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 21:43:21:920 Kernel/(74765:74772): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:43:21:920 Kernel/(74765:74766): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:43:21:921 Kernel/(74765:74767): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 21:43:21:921 Kernel/(74765:74767): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[ERROR] 21:43:25:127 Kernel/(74765:74773): Error en case de hilo de espera a respuesta del FS
+[WARNING] 21:43:25:127 Kernel/(74765:74773): PID 0 - Fue a exit con un archivo abierto
+[WARNING] 21:43:25:127 Kernel/(74765:74773): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 21:43:25:127 Kernel/(74765:74773): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 21:43:25:127 Kernel/(74765:74773): Finaliza el proceso 0 - Motivo: ERROR inesperado con operacion con demora del FS
+[INFO] 21:49:24:862 Kernel/(75041:75041): Probando hora 0
+[INFO] 21:49:24:862 Kernel/(75041:75041): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 21:49:24:864 Kernel/(75041:75041): RECURSO: DISCO con 1 instancias
+[INFO] 21:49:24:864 Kernel/(75041:75041): RECURSO: MODEM con 1 instancias
+[INFO] 21:49:24:864 Kernel/(75041:75041): Cantidad total de recursos disponibles: 2 
+[INFO] 21:49:24:865 Kernel/(75041:75041): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 21:49:24:865 Kernel/(75041:75041): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 21:49:24:866 Kernel/(75041:75041): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:49:24:867 Kernel/(75041:75041): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 21:49:24:867 Kernel/(75041:75041): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 21:49:26:458 Kernel/(75041:75041): Cliente conectado (a KERNEL_SV)
+
+[INFO] 21:49:26:459 Kernel/(75041:75047): Envio solicitud a MEMORIA
+[INFO] 21:49:26:460 Kernel/(75041:75047): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 21:49:26:460 Kernel/(75041:75047): Se crea el proceso 0 en NEW
+[INFO] 21:49:26:460 Kernel/(75041:75047): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:49:26:461 Kernel/(75041:75047): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 21:49:26:461 Kernel/(75041:75042): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:49:27:463 Kernel/(75041:75043): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 21:49:27:463 Kernel/(75041:75043): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 21:49:27:463 Kernel/(75041:75043): La tabla global de archivos esta vacia
+[WARNING] 21:49:27:463 Kernel/(75041:75043): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 21:49:27:463 Kernel/(75041:75043): Existencia=0
+[INFO] 21:49:27:463 Kernel/(75041:75043): PID: 0 - Recibo pedido de F_CREATE por archivo inexistente: ARCHIVO
+
+[WARNING] 21:49:27:464 Kernel/(75041:75043): El archivo ARCHIVO fue creado, abierto y cargado a la tabla global de archivos abiertos
+[INFO] 21:49:27:464 Kernel/(75041:75043): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 21:49:27:464 Kernel/(75041:75043): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 21:49:27:464 Kernel/(75041:75043): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 21:49:27:464 Kernel/(75041:75042): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:49:27:465 Kernel/(75041:75043): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 21:49:27:465 Kernel/(75041:75043): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 21:49:30:469 Kernel/(75041:75048): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:49:30:469 Kernel/(75041:75042): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:49:30:470 Kernel/(75041:75043): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 21:49:30:470 Kernel/(75041:75043): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 21:49:33:475 Kernel/(75041:75049): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:49:33:475 Kernel/(75041:75042): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:49:33:476 Kernel/(75041:75043): PID: 0 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 21:49:33:476 Kernel/(75041:75043): Entro al if
+[INFO] 21:49:33:476 Kernel/(75041:75043): PID: 0 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 21:49:36:477 Kernel/(75041:75050): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:49:36:477 Kernel/(75041:75042): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:49:36:477 Kernel/(75041:75043): PID: 0 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 21:49:39:478 Kernel/(75041:75051): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:49:39:479 Kernel/(75041:75042): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:49:39:479 Kernel/(75041:75043): PID: 0 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 21:49:39:479 Kernel/(75041:75043): PID: 0 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 21:49:39:479 Kernel/(75041:75043): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 21:49:39:479 Kernel/(75041:75043): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 21:49:39:481 Kernel/(75041:75043): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 21:53:29:847 Kernel/(75253:75253): Probando hora 0
+[INFO] 21:53:29:847 Kernel/(75253:75253): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 21:53:29:849 Kernel/(75253:75253): RECURSO: DISCO con 1 instancias
+[INFO] 21:53:29:849 Kernel/(75253:75253): RECURSO: MODEM con 1 instancias
+[INFO] 21:53:29:849 Kernel/(75253:75253): Cantidad total de recursos disponibles: 2 
+[INFO] 21:53:29:849 Kernel/(75253:75253): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 21:53:29:850 Kernel/(75253:75253): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 21:53:29:851 Kernel/(75253:75253): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:53:29:851 Kernel/(75253:75253): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 21:53:29:852 Kernel/(75253:75253): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 21:53:32:186 Kernel/(75253:75253): Cliente conectado (a KERNEL_SV)
+
+[INFO] 21:53:32:187 Kernel/(75253:75259): Envio solicitud a MEMORIA
+[INFO] 21:53:32:188 Kernel/(75253:75259): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 21:53:32:189 Kernel/(75253:75259): Se crea el proceso 0 en NEW
+[INFO] 21:53:32:189 Kernel/(75253:75259): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:53:32:189 Kernel/(75253:75259): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 21:53:32:190 Kernel/(75253:75254): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:53:33:192 Kernel/(75253:75255): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 21:53:33:192 Kernel/(75253:75255): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 21:53:33:192 Kernel/(75253:75255): La tabla global de archivos esta vacia
+[WARNING] 21:53:33:192 Kernel/(75253:75255): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 21:53:33:193 Kernel/(75253:75255): Existencia=0
+[INFO] 21:53:33:193 Kernel/(75253:75255): PID: 0 - Recibo pedido de F_CREATE por archivo inexistente: ARCHIVO
+
+[WARNING] 21:53:33:199 Kernel/(75253:75255): El archivo ARCHIVO fue creado, abierto y cargado a la tabla global de archivos abiertos
+[INFO] 21:53:33:199 Kernel/(75253:75255): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 21:53:33:200 Kernel/(75253:75255): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 21:53:33:200 Kernel/(75253:75255): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 21:53:33:200 Kernel/(75253:75254): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:53:33:201 Kernel/(75253:75255): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 21:53:33:201 Kernel/(75253:75255): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 21:53:36:212 Kernel/(75253:75260): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:53:36:212 Kernel/(75253:75254): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:53:36:212 Kernel/(75253:75255): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 21:53:36:212 Kernel/(75253:75255): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 21:53:39:227 Kernel/(75253:75261): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:53:39:227 Kernel/(75253:75254): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:53:39:227 Kernel/(75253:75255): PID: 0 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 21:53:39:227 Kernel/(75253:75255): Entro al if
+[INFO] 21:53:39:227 Kernel/(75253:75255): PID: 0 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 21:53:42:229 Kernel/(75253:75262): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:53:42:230 Kernel/(75253:75254): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:53:42:230 Kernel/(75253:75255): PID: 0 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 21:53:45:231 Kernel/(75253:75263): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:53:45:231 Kernel/(75253:75254): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:53:45:231 Kernel/(75253:75255): PID: 0 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 21:53:45:231 Kernel/(75253:75255): PID: 0 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 21:53:45:232 Kernel/(75253:75255): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 21:53:45:232 Kernel/(75253:75255): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 21:53:45:233 Kernel/(75253:75255): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 21:55:20:351 Kernel/(75425:75425): Probando hora 0
+[INFO] 21:55:20:352 Kernel/(75425:75425): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 21:55:20:353 Kernel/(75425:75425): RECURSO: DISCO con 1 instancias
+[INFO] 21:55:20:353 Kernel/(75425:75425): RECURSO: MODEM con 1 instancias
+[INFO] 21:55:20:354 Kernel/(75425:75425): Cantidad total de recursos disponibles: 2 
+[INFO] 21:55:20:354 Kernel/(75425:75425): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 21:55:20:355 Kernel/(75425:75425): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 21:55:20:355 Kernel/(75425:75425): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:55:20:356 Kernel/(75425:75425): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 21:55:20:356 Kernel/(75425:75425): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 21:55:21:939 Kernel/(75425:75425): Cliente conectado (a KERNEL_SV)
+
+[INFO] 21:55:21:939 Kernel/(75425:75431): Envio solicitud a MEMORIA
+[INFO] 21:55:21:940 Kernel/(75425:75431): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 21:55:21:940 Kernel/(75425:75431): Se crea el proceso 0 en NEW
+[INFO] 21:55:21:940 Kernel/(75425:75431): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:55:21:941 Kernel/(75425:75431): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 21:55:21:941 Kernel/(75425:75426): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:55:22:942 Kernel/(75425:75427): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 21:55:22:942 Kernel/(75425:75427): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 21:55:22:942 Kernel/(75425:75427): La tabla global de archivos esta vacia
+[WARNING] 21:55:22:942 Kernel/(75425:75427): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 21:55:22:943 Kernel/(75425:75427): Existencia=0
+[INFO] 21:55:22:943 Kernel/(75425:75427): PID: 0 - Recibo pedido de F_CREATE por archivo inexistente: ARCHIVO
+
+[WARNING] 21:55:22:943 Kernel/(75425:75427): El archivo ARCHIVO fue creado, abierto y cargado a la tabla global de archivos abiertos
+[INFO] 21:55:22:943 Kernel/(75425:75427): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 21:55:22:944 Kernel/(75425:75427): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 21:55:22:944 Kernel/(75425:75427): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 21:55:22:944 Kernel/(75425:75426): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:55:22:944 Kernel/(75425:75427): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 21:55:22:944 Kernel/(75425:75427): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 21:55:25:948 Kernel/(75425:75432): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:55:25:948 Kernel/(75425:75426): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:55:25:949 Kernel/(75425:75427): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 21:55:25:949 Kernel/(75425:75427): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 21:55:28:954 Kernel/(75425:75433): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:55:28:955 Kernel/(75425:75426): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:55:28:955 Kernel/(75425:75427): PID: 0 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 21:55:28:955 Kernel/(75425:75427): Entro al if
+[INFO] 21:55:28:955 Kernel/(75425:75427): PID: 0 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 21:55:31:956 Kernel/(75425:75434): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:55:31:957 Kernel/(75425:75426): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:55:31:957 Kernel/(75425:75427): PID: 0 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 21:55:34:958 Kernel/(75425:75435): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:55:34:958 Kernel/(75425:75426): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:55:34:959 Kernel/(75425:75427): PID: 0 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 21:55:34:959 Kernel/(75425:75427): PID: 0 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 21:55:34:959 Kernel/(75425:75427): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 21:55:34:959 Kernel/(75425:75427): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 21:55:34:960 Kernel/(75425:75427): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 21:57:30:216 Kernel/(75562:75562): Probando hora 0
+[INFO] 21:57:30:217 Kernel/(75562:75562): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 21:57:30:218 Kernel/(75562:75562): RECURSO: DISCO con 1 instancias
+[INFO] 21:57:30:218 Kernel/(75562:75562): RECURSO: MODEM con 1 instancias
+[INFO] 21:57:30:219 Kernel/(75562:75562): Cantidad total de recursos disponibles: 2 
+[INFO] 21:57:30:219 Kernel/(75562:75562): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 21:57:30:220 Kernel/(75562:75562): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 21:57:30:221 Kernel/(75562:75562): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:57:30:222 Kernel/(75562:75562): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 21:57:30:223 Kernel/(75562:75562): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 21:57:31:497 Kernel/(75562:75562): Cliente conectado (a KERNEL_SV)
+
+[INFO] 21:57:31:498 Kernel/(75562:75568): Envio solicitud a MEMORIA
+[INFO] 21:57:31:498 Kernel/(75562:75568): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 21:57:31:498 Kernel/(75562:75568): Se crea el proceso 0 en NEW
+[INFO] 21:57:31:499 Kernel/(75562:75568): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:57:31:499 Kernel/(75562:75568): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 21:57:31:499 Kernel/(75562:75563): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:57:32:501 Kernel/(75562:75564): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 21:57:32:501 Kernel/(75562:75564): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 21:57:32:501 Kernel/(75562:75564): La tabla global de archivos esta vacia
+[WARNING] 21:57:32:501 Kernel/(75562:75564): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 21:57:32:502 Kernel/(75562:75564): Existencia=0
+[INFO] 21:57:32:502 Kernel/(75562:75564): PID: 0 - Recibo pedido de F_CREATE por archivo inexistente: ARCHIVO
+
+[WARNING] 21:57:32:505 Kernel/(75562:75564): El archivo ARCHIVO fue creado, abierto y cargado a la tabla global de archivos abiertos
+[INFO] 21:57:32:506 Kernel/(75562:75564): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 21:57:32:506 Kernel/(75562:75564): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 21:57:32:507 Kernel/(75562:75564): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 21:57:32:507 Kernel/(75562:75563): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:57:32:507 Kernel/(75562:75564): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 21:57:32:507 Kernel/(75562:75564): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 21:57:35:527 Kernel/(75562:75569): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:57:35:527 Kernel/(75562:75563): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:57:35:527 Kernel/(75562:75564): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 21:57:35:527 Kernel/(75562:75564): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 21:57:38:538 Kernel/(75562:75570): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:57:38:538 Kernel/(75562:75563): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:57:38:539 Kernel/(75562:75564): PID: 0 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 21:57:38:539 Kernel/(75562:75564): Entro al if
+[INFO] 21:57:38:539 Kernel/(75562:75564): PID: 0 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 21:57:41:544 Kernel/(75562:75571): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:57:41:544 Kernel/(75562:75563): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:57:41:545 Kernel/(75562:75564): PID: 0 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 21:57:44:546 Kernel/(75562:75572): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 21:57:44:546 Kernel/(75562:75563): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:57:44:546 Kernel/(75562:75564): PID: 0 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 21:57:44:546 Kernel/(75562:75564): PID: 0 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 21:57:44:546 Kernel/(75562:75564): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 21:57:44:547 Kernel/(75562:75564): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 21:57:44:548 Kernel/(75562:75564): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 22:03:22:730 Kernel/(75894:75894): Probando hora 0
+[INFO] 22:03:22:731 Kernel/(75894:75894): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 22:03:22:732 Kernel/(75894:75894): RECURSO: DISCO con 1 instancias
+[INFO] 22:03:22:732 Kernel/(75894:75894): RECURSO: MODEM con 1 instancias
+[INFO] 22:03:22:733 Kernel/(75894:75894): Cantidad total de recursos disponibles: 2 
+[INFO] 22:03:22:733 Kernel/(75894:75894): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 22:03:22:733 Kernel/(75894:75894): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 22:03:22:734 Kernel/(75894:75894): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:03:22:735 Kernel/(75894:75894): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 22:03:22:735 Kernel/(75894:75894): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 22:03:23:811 Kernel/(75894:75894): Cliente conectado (a KERNEL_SV)
+
+[INFO] 22:03:23:811 Kernel/(75894:75900): Envio solicitud a MEMORIA
+[INFO] 22:03:23:812 Kernel/(75894:75900): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 22:03:23:813 Kernel/(75894:75900): Se crea el proceso 0 en NEW
+[INFO] 22:03:23:813 Kernel/(75894:75900): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 22:03:23:813 Kernel/(75894:75900): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 22:03:23:813 Kernel/(75894:75895): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:03:24:814 Kernel/(75894:75896): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 22:03:24:814 Kernel/(75894:75896): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 22:03:24:814 Kernel/(75894:75896): La tabla global de archivos esta vacia
+[WARNING] 22:03:24:814 Kernel/(75894:75896): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 22:03:24:814 Kernel/(75894:75896): Existencia=0
+[INFO] 22:03:24:814 Kernel/(75894:75896): PID: 0 - Recibo pedido de F_CREATE por archivo inexistente: ARCHIVO
+
+[WARNING] 22:03:24:816 Kernel/(75894:75896): El archivo ARCHIVO fue creado, abierto y cargado a la tabla global de archivos abiertos
+[INFO] 22:03:24:816 Kernel/(75894:75896): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 22:03:24:816 Kernel/(75894:75896): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 22:03:24:816 Kernel/(75894:75896): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 22:03:24:816 Kernel/(75894:75895): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:03:24:817 Kernel/(75894:75896): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 22:03:24:817 Kernel/(75894:75896): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 22:03:27:828 Kernel/(75894:75901): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:03:27:828 Kernel/(75894:75895): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:03:27:828 Kernel/(75894:75896): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 22:03:27:828 Kernel/(75894:75896): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 22:03:30:845 Kernel/(75894:75902): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:03:30:847 Kernel/(75894:75895): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:03:30:848 Kernel/(75894:75896): PID: 0 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 22:03:30:848 Kernel/(75894:75896): Entro al if
+[INFO] 22:03:30:849 Kernel/(75894:75896): PID: 0 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 22:03:33:857 Kernel/(75894:75903): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:03:33:858 Kernel/(75894:75895): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:03:33:858 Kernel/(75894:75896): PID: 0 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 22:03:36:858 Kernel/(75894:75904): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:03:36:860 Kernel/(75894:75895): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:03:36:860 Kernel/(75894:75896): PID: 0 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 22:03:36:860 Kernel/(75894:75896): PID: 0 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 22:03:36:860 Kernel/(75894:75896): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 22:03:36:861 Kernel/(75894:75896): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 22:03:36:862 Kernel/(75894:75896): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 22:06:37:266 Kernel/(76200:76200): Probando hora 0
+[INFO] 22:06:37:266 Kernel/(76200:76200): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 22:06:37:268 Kernel/(76200:76200): RECURSO: DISCO con 1 instancias
+[INFO] 22:06:37:269 Kernel/(76200:76200): RECURSO: MODEM con 1 instancias
+[INFO] 22:06:37:269 Kernel/(76200:76200): Cantidad total de recursos disponibles: 2 
+[INFO] 22:06:37:269 Kernel/(76200:76200): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 22:06:37:270 Kernel/(76200:76200): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 22:06:37:270 Kernel/(76200:76200): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:06:37:271 Kernel/(76200:76200): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 22:06:37:271 Kernel/(76200:76200): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 22:06:39:181 Kernel/(76200:76200): Cliente conectado (a KERNEL_SV)
+
+[INFO] 22:06:39:181 Kernel/(76200:76206): Envio solicitud a MEMORIA
+[INFO] 22:06:39:182 Kernel/(76200:76206): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 22:06:39:183 Kernel/(76200:76206): Se crea el proceso 0 en NEW
+[INFO] 22:06:39:183 Kernel/(76200:76206): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 22:06:39:183 Kernel/(76200:76206): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 22:06:39:184 Kernel/(76200:76201): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:06:40:185 Kernel/(76200:76202): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 22:06:40:185 Kernel/(76200:76202): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 22:06:40:185 Kernel/(76200:76202): La tabla global de archivos esta vacia
+[WARNING] 22:06:40:185 Kernel/(76200:76202): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 22:06:40:185 Kernel/(76200:76202): Existencia=0
+[INFO] 22:06:40:185 Kernel/(76200:76202): PID: 0 - Recibo pedido de F_CREATE por archivo inexistente: ARCHIVO
+
+[WARNING] 22:06:40:186 Kernel/(76200:76202): El archivo ARCHIVO fue creado, abierto y cargado a la tabla global de archivos abiertos
+[INFO] 22:06:40:186 Kernel/(76200:76202): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 22:06:40:186 Kernel/(76200:76202): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 22:06:40:186 Kernel/(76200:76202): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 22:06:40:186 Kernel/(76200:76201): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:06:40:187 Kernel/(76200:76202): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 22:06:40:187 Kernel/(76200:76202): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 22:06:43:193 Kernel/(76200:76207): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:06:43:194 Kernel/(76200:76201): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:06:43:194 Kernel/(76200:76202): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 22:06:43:194 Kernel/(76200:76202): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 22:06:46:199 Kernel/(76200:76208): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:06:46:199 Kernel/(76200:76201): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:06:46:199 Kernel/(76200:76202): PID: 0 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 22:06:46:199 Kernel/(76200:76202): Entro al if
+[INFO] 22:06:46:200 Kernel/(76200:76202): PID: 0 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 22:06:49:200 Kernel/(76200:76209): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:06:49:200 Kernel/(76200:76201): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:06:49:201 Kernel/(76200:76202): PID: 0 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 22:06:52:201 Kernel/(76200:76210): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:06:52:201 Kernel/(76200:76201): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:06:52:202 Kernel/(76200:76202): PID: 0 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 22:06:52:202 Kernel/(76200:76202): PID: 0 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 22:06:52:202 Kernel/(76200:76202): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 22:06:52:202 Kernel/(76200:76202): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 22:06:52:203 Kernel/(76200:76202): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 22:10:02:188 Kernel/(76387:76387): Probando hora 0
+[INFO] 22:10:02:189 Kernel/(76387:76387): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 22:10:02:192 Kernel/(76387:76387): RECURSO: DISCO con 1 instancias
+[INFO] 22:10:02:192 Kernel/(76387:76387): RECURSO: MODEM con 1 instancias
+[INFO] 22:10:02:192 Kernel/(76387:76387): Cantidad total de recursos disponibles: 2 
+[INFO] 22:10:02:193 Kernel/(76387:76387): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 22:10:02:194 Kernel/(76387:76387): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 22:10:02:195 Kernel/(76387:76387): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:10:02:195 Kernel/(76387:76387): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 22:10:02:196 Kernel/(76387:76387): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 22:10:03:028 Kernel/(76387:76387): Cliente conectado (a KERNEL_SV)
+
+[INFO] 22:10:03:029 Kernel/(76387:76393): Envio solicitud a MEMORIA
+[INFO] 22:10:03:029 Kernel/(76387:76393): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 22:10:03:030 Kernel/(76387:76393): Se crea el proceso 0 en NEW
+[INFO] 22:10:03:030 Kernel/(76387:76393): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 22:10:03:030 Kernel/(76387:76393): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 22:10:03:030 Kernel/(76387:76388): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:10:04:031 Kernel/(76387:76389): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 22:10:04:031 Kernel/(76387:76389): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 22:10:04:031 Kernel/(76387:76389): La tabla global de archivos esta vacia
+[WARNING] 22:10:04:031 Kernel/(76387:76389): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 22:10:04:032 Kernel/(76387:76389): Existencia=0
+[INFO] 22:10:04:032 Kernel/(76387:76389): PID: 0 - Recibo pedido de F_CREATE por archivo inexistente: ARCHIVO
+
+[WARNING] 22:10:04:036 Kernel/(76387:76389): El archivo ARCHIVO fue creado, abierto y cargado a la tabla global de archivos abiertos
+[INFO] 22:10:04:036 Kernel/(76387:76389): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 22:10:04:036 Kernel/(76387:76389): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 22:10:04:036 Kernel/(76387:76389): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 22:10:04:037 Kernel/(76387:76388): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:10:04:037 Kernel/(76387:76389): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 22:10:04:037 Kernel/(76387:76389): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 22:10:07:049 Kernel/(76387:76394): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:10:07:050 Kernel/(76387:76388): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:10:07:050 Kernel/(76387:76389): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 22:10:07:050 Kernel/(76387:76389): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 22:10:10:063 Kernel/(76387:76395): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:10:10:063 Kernel/(76387:76388): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:10:10:063 Kernel/(76387:76389): PID: 0 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 22:10:10:063 Kernel/(76387:76389): Entro al if
+[INFO] 22:10:10:064 Kernel/(76387:76389): PID: 0 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 22:10:13:064 Kernel/(76387:76402): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:10:13:065 Kernel/(76387:76388): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:10:13:066 Kernel/(76387:76389): PID: 0 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 22:10:16:066 Kernel/(76387:76403): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:10:16:066 Kernel/(76387:76388): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:10:16:066 Kernel/(76387:76389): PID: 0 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 22:10:16:067 Kernel/(76387:76389): PID: 0 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 22:10:16:067 Kernel/(76387:76389): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 22:10:16:067 Kernel/(76387:76389): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 22:10:16:068 Kernel/(76387:76389): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 22:13:44:628 Kernel/(76769:76769): Probando hora 0
+[INFO] 22:13:44:628 Kernel/(76769:76769): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 22:13:44:631 Kernel/(76769:76769): RECURSO: DISCO con 1 instancias
+[INFO] 22:13:44:631 Kernel/(76769:76769): RECURSO: MODEM con 1 instancias
+[INFO] 22:13:44:632 Kernel/(76769:76769): Cantidad total de recursos disponibles: 2 
+[INFO] 22:13:44:632 Kernel/(76769:76769): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 22:13:44:633 Kernel/(76769:76769): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 22:13:44:633 Kernel/(76769:76769): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:13:44:634 Kernel/(76769:76769): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 22:13:44:634 Kernel/(76769:76769): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 22:13:45:645 Kernel/(76769:76769): Cliente conectado (a KERNEL_SV)
+
+[INFO] 22:13:45:645 Kernel/(76769:76775): Envio solicitud a MEMORIA
+[INFO] 22:13:45:646 Kernel/(76769:76775): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 22:13:45:646 Kernel/(76769:76775): Se crea el proceso 0 en NEW
+[INFO] 22:13:45:646 Kernel/(76769:76775): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 22:13:45:647 Kernel/(76769:76775): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 22:13:45:647 Kernel/(76769:76770): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:13:46:648 Kernel/(76769:76771): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 22:13:46:648 Kernel/(76769:76771): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 22:13:46:648 Kernel/(76769:76771): La tabla global de archivos esta vacia
+[WARNING] 22:13:46:648 Kernel/(76769:76771): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 22:13:46:649 Kernel/(76769:76771): Existencia=1
+[WARNING] 22:13:46:649 Kernel/(76769:76771): El archivo ARCHIVO fue abierto y cargado a la tabla global de archivos abiertos
+[INFO] 22:13:46:649 Kernel/(76769:76771): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 22:13:46:649 Kernel/(76769:76771): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 22:13:46:649 Kernel/(76769:76771): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 22:13:46:649 Kernel/(76769:76770): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:13:46:650 Kernel/(76769:76771): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 22:13:46:650 Kernel/(76769:76771): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 22:13:49:657 Kernel/(76769:76776): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:13:49:657 Kernel/(76769:76770): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:13:49:657 Kernel/(76769:76771): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 22:13:49:657 Kernel/(76769:76771): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 22:13:52:668 Kernel/(76769:76777): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:13:52:668 Kernel/(76769:76770): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:13:52:668 Kernel/(76769:76771): PID: 0 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 22:13:52:668 Kernel/(76769:76771): Entro al if
+[INFO] 22:13:52:669 Kernel/(76769:76771): PID: 0 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 22:13:55:672 Kernel/(76769:76787): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:13:55:673 Kernel/(76769:76770): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:13:55:673 Kernel/(76769:76771): PID: 0 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 22:13:58:673 Kernel/(76769:76788): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:13:58:674 Kernel/(76769:76770): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:13:58:674 Kernel/(76769:76771): PID: 0 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 22:13:58:674 Kernel/(76769:76771): PID: 0 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 22:13:58:674 Kernel/(76769:76771): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 22:13:58:675 Kernel/(76769:76771): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 22:13:58:676 Kernel/(76769:76771): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 22:17:51:845 Kernel/(76930:76930): Probando hora 0
+[INFO] 22:17:51:845 Kernel/(76930:76930): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 22:17:51:847 Kernel/(76930:76930): RECURSO: DISCO con 1 instancias
+[INFO] 22:17:51:847 Kernel/(76930:76930): RECURSO: MODEM con 1 instancias
+[INFO] 22:17:51:847 Kernel/(76930:76930): Cantidad total de recursos disponibles: 2 
+[INFO] 22:17:51:847 Kernel/(76930:76930): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 22:17:51:848 Kernel/(76930:76930): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 22:17:51:849 Kernel/(76930:76930): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:17:51:850 Kernel/(76930:76930): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 22:17:51:851 Kernel/(76930:76930): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 22:17:52:958 Kernel/(76930:76930): Cliente conectado (a KERNEL_SV)
+
+[INFO] 22:17:52:959 Kernel/(76930:76936): Envio solicitud a MEMORIA
+[INFO] 22:17:52:960 Kernel/(76930:76936): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 22:17:52:960 Kernel/(76930:76936): Se crea el proceso 0 en NEW
+[INFO] 22:17:52:960 Kernel/(76930:76936): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 22:17:52:960 Kernel/(76930:76936): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 22:17:52:961 Kernel/(76930:76931): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:17:53:962 Kernel/(76930:76932): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 22:17:53:962 Kernel/(76930:76932): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 22:17:53:962 Kernel/(76930:76932): La tabla global de archivos esta vacia
+[WARNING] 22:17:53:962 Kernel/(76930:76932): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 22:17:53:962 Kernel/(76930:76932): Existencia=1
+[WARNING] 22:17:53:963 Kernel/(76930:76932): El archivo ARCHIVO fue abierto y cargado a la tabla global de archivos abiertos
+[INFO] 22:17:53:963 Kernel/(76930:76932): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 22:17:53:963 Kernel/(76930:76932): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 22:17:53:963 Kernel/(76930:76932): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 22:17:53:964 Kernel/(76930:76931): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:17:53:964 Kernel/(76930:76932): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 22:17:53:964 Kernel/(76930:76932): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 22:17:56:977 Kernel/(76930:76937): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:17:56:978 Kernel/(76930:76931): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:17:56:978 Kernel/(76930:76932): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 22:17:56:978 Kernel/(76930:76932): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 22:17:59:983 Kernel/(76930:76938): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:17:59:984 Kernel/(76930:76931): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:17:59:984 Kernel/(76930:76932): PID: 0 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 22:17:59:984 Kernel/(76930:76932): Entro al if
+[INFO] 22:17:59:984 Kernel/(76930:76932): PID: 0 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 22:18:02:985 Kernel/(76930:76952): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:18:02:985 Kernel/(76930:76931): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:18:02:986 Kernel/(76930:76932): PID: 0 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 22:18:05:986 Kernel/(76930:76953): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:18:05:987 Kernel/(76930:76931): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:18:05:987 Kernel/(76930:76932): PID: 0 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 22:18:05:987 Kernel/(76930:76932): PID: 0 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 22:18:05:987 Kernel/(76930:76932): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 22:18:05:988 Kernel/(76930:76932): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 22:18:05:989 Kernel/(76930:76932): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 22:22:59:326 Kernel/(77166:77166): Probando hora 0
+[INFO] 22:22:59:326 Kernel/(77166:77166): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 22:22:59:327 Kernel/(77166:77166): RECURSO: DISCO con 1 instancias
+[INFO] 22:22:59:328 Kernel/(77166:77166): RECURSO: MODEM con 1 instancias
+[INFO] 22:22:59:328 Kernel/(77166:77166): Cantidad total de recursos disponibles: 2 
+[INFO] 22:22:59:328 Kernel/(77166:77166): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 22:22:59:329 Kernel/(77166:77166): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 22:22:59:329 Kernel/(77166:77166): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:22:59:330 Kernel/(77166:77166): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 22:22:59:330 Kernel/(77166:77166): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 22:23:00:424 Kernel/(77166:77166): Cliente conectado (a KERNEL_SV)
+
+[INFO] 22:23:00:425 Kernel/(77166:77172): Envio solicitud a MEMORIA
+[INFO] 22:23:00:426 Kernel/(77166:77172): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 22:23:00:426 Kernel/(77166:77172): Se crea el proceso 0 en NEW
+[INFO] 22:23:00:426 Kernel/(77166:77172): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 22:23:00:426 Kernel/(77166:77172): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 22:23:00:427 Kernel/(77166:77167): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:23:01:428 Kernel/(77166:77168): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 22:23:01:428 Kernel/(77166:77168): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 22:23:01:428 Kernel/(77166:77168): La tabla global de archivos esta vacia
+[WARNING] 22:23:01:428 Kernel/(77166:77168): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 22:23:01:428 Kernel/(77166:77168): Existencia=0
+[INFO] 22:23:01:428 Kernel/(77166:77168): PID: 0 - Recibo pedido de F_CREATE por archivo inexistente: ARCHIVO
+
+[WARNING] 22:23:01:429 Kernel/(77166:77168): El archivo ARCHIVO fue creado, abierto y cargado a la tabla global de archivos abiertos
+[INFO] 22:23:01:429 Kernel/(77166:77168): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 22:23:01:429 Kernel/(77166:77168): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 22:23:01:429 Kernel/(77166:77168): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 22:23:01:429 Kernel/(77166:77167): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:23:01:430 Kernel/(77166:77168): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 22:23:01:430 Kernel/(77166:77168): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 22:23:04:435 Kernel/(77166:77173): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:23:04:435 Kernel/(77166:77167): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:23:04:435 Kernel/(77166:77168): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 22:23:04:435 Kernel/(77166:77168): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 22:23:07:440 Kernel/(77166:77174): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:23:07:440 Kernel/(77166:77167): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:23:07:440 Kernel/(77166:77168): PID: 0 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 22:23:07:440 Kernel/(77166:77168): Entro al if
+[INFO] 22:23:07:441 Kernel/(77166:77168): PID: 0 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 22:23:10:441 Kernel/(77166:77175): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:23:10:442 Kernel/(77166:77167): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:23:10:442 Kernel/(77166:77168): PID: 0 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 22:23:13:442 Kernel/(77166:77176): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:23:13:443 Kernel/(77166:77167): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:23:13:443 Kernel/(77166:77168): PID: 0 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 22:23:13:443 Kernel/(77166:77168): PID: 0 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 22:23:13:443 Kernel/(77166:77168): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 22:23:13:443 Kernel/(77166:77168): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 22:23:13:445 Kernel/(77166:77168): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 22:26:47:598 Kernel/(77473:77473): Probando hora 0
+[INFO] 22:26:47:599 Kernel/(77473:77473): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 22:26:47:601 Kernel/(77473:77473): RECURSO: DISCO con 1 instancias
+[INFO] 22:26:47:601 Kernel/(77473:77473): RECURSO: MODEM con 1 instancias
+[INFO] 22:26:47:601 Kernel/(77473:77473): Cantidad total de recursos disponibles: 2 
+[INFO] 22:26:47:602 Kernel/(77473:77473): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 22:26:47:602 Kernel/(77473:77473): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 22:26:47:603 Kernel/(77473:77473): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:26:47:604 Kernel/(77473:77473): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 22:26:47:604 Kernel/(77473:77473): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 22:26:48:840 Kernel/(77473:77473): Cliente conectado (a KERNEL_SV)
+
+[INFO] 22:26:48:841 Kernel/(77473:77479): Envio solicitud a MEMORIA
+[INFO] 22:26:48:842 Kernel/(77473:77479): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 22:26:48:842 Kernel/(77473:77479): Se crea el proceso 0 en NEW
+[INFO] 22:26:48:842 Kernel/(77473:77479): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 22:26:48:842 Kernel/(77473:77479): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 22:26:48:842 Kernel/(77473:77474): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:26:49:845 Kernel/(77473:77475): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 22:26:49:845 Kernel/(77473:77475): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 22:26:49:845 Kernel/(77473:77475): La tabla global de archivos esta vacia
+[WARNING] 22:26:49:845 Kernel/(77473:77475): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 22:26:49:846 Kernel/(77473:77475): Existencia=0
+[INFO] 22:26:49:846 Kernel/(77473:77475): PID: 0 - Recibo pedido de F_CREATE por archivo inexistente: ARCHIVO
+
+[WARNING] 22:26:49:846 Kernel/(77473:77475): El archivo ARCHIVO fue creado, abierto y cargado a la tabla global de archivos abiertos
+[INFO] 22:26:49:847 Kernel/(77473:77475): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 22:26:49:847 Kernel/(77473:77475): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 22:26:49:847 Kernel/(77473:77475): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 22:26:49:847 Kernel/(77473:77474): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:26:49:847 Kernel/(77473:77475): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 22:26:49:848 Kernel/(77473:77475): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 22:26:52:861 Kernel/(77473:77480): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:26:52:861 Kernel/(77473:77474): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:26:52:861 Kernel/(77473:77475): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 22:26:52:861 Kernel/(77473:77475): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 22:26:55:870 Kernel/(77473:77481): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:26:55:870 Kernel/(77473:77474): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:26:55:870 Kernel/(77473:77475): PID: 0 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 22:26:55:870 Kernel/(77473:77475): Entro al if
+[INFO] 22:26:55:870 Kernel/(77473:77475): PID: 0 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 22:26:58:871 Kernel/(77473:77500): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:26:58:871 Kernel/(77473:77474): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:26:58:872 Kernel/(77473:77475): PID: 0 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 22:27:01:872 Kernel/(77473:77501): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:27:01:872 Kernel/(77473:77474): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:27:01:873 Kernel/(77473:77475): PID: 0 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 22:27:01:873 Kernel/(77473:77475): PID: 0 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 22:27:01:873 Kernel/(77473:77475): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 22:27:01:873 Kernel/(77473:77475): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 22:27:01:874 Kernel/(77473:77475): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 22:29:08:527 Kernel/(77573:77573): Probando hora 0
+[INFO] 22:29:08:527 Kernel/(77573:77573): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 22:29:08:529 Kernel/(77573:77573): RECURSO: DISCO con 1 instancias
+[INFO] 22:29:08:529 Kernel/(77573:77573): RECURSO: MODEM con 1 instancias
+[INFO] 22:29:08:529 Kernel/(77573:77573): Cantidad total de recursos disponibles: 2 
+[INFO] 22:29:08:529 Kernel/(77573:77573): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 22:29:08:530 Kernel/(77573:77573): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 22:29:08:531 Kernel/(77573:77573): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:29:08:531 Kernel/(77573:77573): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 22:29:08:531 Kernel/(77573:77573): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 22:29:11:616 Kernel/(77573:77573): Cliente conectado (a KERNEL_SV)
+
+[INFO] 22:29:11:616 Kernel/(77573:77579): Envio solicitud a MEMORIA
+[INFO] 22:29:11:617 Kernel/(77573:77579): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 22:29:11:617 Kernel/(77573:77579): Se crea el proceso 0 en NEW
+[INFO] 22:29:11:617 Kernel/(77573:77579): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 22:29:11:618 Kernel/(77573:77579): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 22:29:11:618 Kernel/(77573:77574): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:29:12:619 Kernel/(77573:77575): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 22:29:12:619 Kernel/(77573:77575): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 22:29:12:619 Kernel/(77573:77575): La tabla global de archivos esta vacia
+[WARNING] 22:29:12:619 Kernel/(77573:77575): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 22:29:12:619 Kernel/(77573:77575): Existencia=0
+[INFO] 22:29:12:619 Kernel/(77573:77575): PID: 0 - Recibo pedido de F_CREATE por archivo inexistente: ARCHIVO
+
+[WARNING] 22:29:12:623 Kernel/(77573:77575): El archivo ARCHIVO fue creado, abierto y cargado a la tabla global de archivos abiertos
+[INFO] 22:29:12:623 Kernel/(77573:77575): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 22:29:12:623 Kernel/(77573:77575): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 22:29:12:623 Kernel/(77573:77575): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 22:29:12:624 Kernel/(77573:77574): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:29:12:624 Kernel/(77573:77575): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 22:29:12:624 Kernel/(77573:77575): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 22:29:15:638 Kernel/(77573:77580): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:29:15:639 Kernel/(77573:77574): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:29:15:639 Kernel/(77573:77575): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 22:29:15:639 Kernel/(77573:77575): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 22:29:18:647 Kernel/(77573:77590): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:29:18:647 Kernel/(77573:77574): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:29:18:647 Kernel/(77573:77575): PID: 0 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 22:29:18:647 Kernel/(77573:77575): Entro al if
+[INFO] 22:29:18:647 Kernel/(77573:77575): PID: 0 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 22:29:21:648 Kernel/(77573:77601): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:29:21:648 Kernel/(77573:77574): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:29:21:648 Kernel/(77573:77575): PID: 0 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 22:29:24:649 Kernel/(77573:77602): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:29:24:649 Kernel/(77573:77574): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:29:24:649 Kernel/(77573:77575): PID: 0 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 22:29:24:649 Kernel/(77573:77575): PID: 0 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 22:29:24:650 Kernel/(77573:77575): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 22:29:24:650 Kernel/(77573:77575): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 22:29:24:651 Kernel/(77573:77575): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 22:32:57:575 Kernel/(77805:77805): Probando hora 0
+[INFO] 22:32:57:575 Kernel/(77805:77805): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 22:32:57:577 Kernel/(77805:77805): RECURSO: DISCO con 1 instancias
+[INFO] 22:32:57:577 Kernel/(77805:77805): RECURSO: MODEM con 1 instancias
+[INFO] 22:32:57:577 Kernel/(77805:77805): Cantidad total de recursos disponibles: 2 
+[INFO] 22:32:57:578 Kernel/(77805:77805): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 22:32:57:578 Kernel/(77805:77805): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 22:32:57:579 Kernel/(77805:77805): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:32:57:580 Kernel/(77805:77805): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 22:32:57:581 Kernel/(77805:77805): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 22:32:59:155 Kernel/(77805:77805): Cliente conectado (a KERNEL_SV)
+
+[INFO] 22:32:59:156 Kernel/(77805:77820): Envio solicitud a MEMORIA
+[INFO] 22:32:59:157 Kernel/(77805:77820): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 22:32:59:157 Kernel/(77805:77820): Se crea el proceso 0 en NEW
+[INFO] 22:32:59:157 Kernel/(77805:77820): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 22:32:59:158 Kernel/(77805:77820): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 22:32:59:158 Kernel/(77805:77806): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:33:00:159 Kernel/(77805:77807): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 22:33:00:159 Kernel/(77805:77807): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 22:33:00:159 Kernel/(77805:77807): La tabla global de archivos esta vacia
+[WARNING] 22:33:00:159 Kernel/(77805:77807): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 22:33:00:159 Kernel/(77805:77807): Existencia=0
+[INFO] 22:33:00:159 Kernel/(77805:77807): PID: 0 - Recibo pedido de F_CREATE por archivo inexistente: ARCHIVO
+
+[WARNING] 22:33:00:160 Kernel/(77805:77807): El archivo ARCHIVO fue creado, abierto y cargado a la tabla global de archivos abiertos
+[INFO] 22:33:00:160 Kernel/(77805:77807): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 22:33:00:160 Kernel/(77805:77807): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 22:33:00:160 Kernel/(77805:77807): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 22:33:00:160 Kernel/(77805:77806): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:33:00:161 Kernel/(77805:77807): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 22:33:00:161 Kernel/(77805:77807): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 22:33:03:177 Kernel/(77805:77821): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:33:03:178 Kernel/(77805:77806): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:33:03:178 Kernel/(77805:77807): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 22:33:03:178 Kernel/(77805:77807): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 22:33:06:183 Kernel/(77805:77822): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:33:06:184 Kernel/(77805:77806): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:33:06:184 Kernel/(77805:77807): PID: 0 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 22:33:06:184 Kernel/(77805:77807): Entro al if
+[INFO] 22:33:06:184 Kernel/(77805:77807): PID: 0 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 22:33:09:185 Kernel/(77805:77841): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:33:09:185 Kernel/(77805:77806): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:33:09:185 Kernel/(77805:77807): PID: 0 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 22:33:12:186 Kernel/(77805:77842): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:33:12:186 Kernel/(77805:77806): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:33:12:187 Kernel/(77805:77807): PID: 0 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 22:33:12:187 Kernel/(77805:77807): PID: 0 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 22:33:12:187 Kernel/(77805:77807): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 22:33:12:187 Kernel/(77805:77807): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 22:33:12:189 Kernel/(77805:77807): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 22:34:49:106 Kernel/(77805:77805): Cliente conectado (a KERNEL_SV)
+
+[INFO] 22:34:49:106 Kernel/(77805:77860): Envio solicitud a MEMORIA
+[INFO] 22:34:49:148 Kernel/(77805:77860): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 22:34:49:148 Kernel/(77805:77860): Se crea el proceso 1 en NEW
+[INFO] 22:34:49:148 Kernel/(77805:77860): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 22:34:49:149 Kernel/(77805:77860): Ingreso a Ready algoritmo HRRN - PIDS: [1] 
+[INFO] 22:34:49:149 Kernel/(77805:77806): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:34:50:150 Kernel/(77805:77807): PID: 1 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 22:34:50:150 Kernel/(77805:77807): PID: 1 - Abrir Archivo: ARCHIVO
+
+[WARNING] 22:34:50:151 Kernel/(77805:77807): La tabla global de archivos esta vacia
+[WARNING] 22:34:50:151 Kernel/(77805:77807): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 22:34:50:151 Kernel/(77805:77807): Existencia=1
+[WARNING] 22:34:50:151 Kernel/(77805:77807): El archivo ARCHIVO fue abierto y cargado a la tabla global de archivos abiertos
+[INFO] 22:34:50:151 Kernel/(77805:77807): PID: 1 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 22:34:50:151 Kernel/(77805:77807): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 22:34:50:151 Kernel/(77805:77807): Ingreso a Ready algoritmo HRRN - PIDS: [1] 
+[INFO] 22:34:50:152 Kernel/(77805:77806): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:34:50:152 Kernel/(77805:77807): PID: 1 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 22:34:50:152 Kernel/(77805:77807): PID: 1 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 22:34:53:164 Kernel/(77805:77861): PID: 1 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:34:53:164 Kernel/(77805:77806): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:34:53:164 Kernel/(77805:77807): PID: 1 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 22:34:53:164 Kernel/(77805:77807): PID: 1 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 22:34:56:170 Kernel/(77805:77862): PID: 1 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:34:56:170 Kernel/(77805:77806): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:34:56:170 Kernel/(77805:77807): PID: 1 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 22:34:56:170 Kernel/(77805:77807): Entro al if
+[INFO] 22:34:56:170 Kernel/(77805:77807): PID: 1 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 22:34:59:171 Kernel/(77805:77882): PID: 1 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:34:59:172 Kernel/(77805:77806): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:34:59:172 Kernel/(77805:77807): PID: 1 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 22:35:02:174 Kernel/(77805:77883): PID: 1 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:35:02:174 Kernel/(77805:77806): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:35:02:175 Kernel/(77805:77807): PID: 1 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 22:35:02:175 Kernel/(77805:77807): PID: 1 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 22:35:02:175 Kernel/(77805:77807): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 22:35:02:175 Kernel/(77805:77807): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 22:35:02:176 Kernel/(77805:77807): Finaliza el proceso 1 - Motivo: POR FIN
+[INFO] 22:38:27:042 Kernel/(78046:78046): Probando hora 0
+[INFO] 22:38:27:042 Kernel/(78046:78046): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 22:38:27:044 Kernel/(78046:78046): RECURSO: DISCO con 1 instancias
+[INFO] 22:38:27:044 Kernel/(78046:78046): RECURSO: MODEM con 1 instancias
+[INFO] 22:38:27:044 Kernel/(78046:78046): Cantidad total de recursos disponibles: 2 
+[INFO] 22:38:27:045 Kernel/(78046:78046): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 22:38:27:045 Kernel/(78046:78046): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 22:38:27:046 Kernel/(78046:78046): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:38:27:047 Kernel/(78046:78046): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 22:38:27:047 Kernel/(78046:78046): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 22:38:33:282 Kernel/(78046:78046): Cliente conectado (a KERNEL_SV)
+
+[INFO] 22:38:33:282 Kernel/(78046:78052): Envio solicitud a MEMORIA
+[INFO] 22:38:33:283 Kernel/(78046:78052): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 22:38:33:283 Kernel/(78046:78052): Se crea el proceso 0 en NEW
+[INFO] 22:38:33:284 Kernel/(78046:78052): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 22:38:33:284 Kernel/(78046:78052): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 22:38:33:284 Kernel/(78046:78047): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:38:34:285 Kernel/(78046:78048): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 22:38:34:285 Kernel/(78046:78048): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 22:38:34:285 Kernel/(78046:78048): La tabla global de archivos esta vacia
+[WARNING] 22:38:34:285 Kernel/(78046:78048): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 22:38:34:285 Kernel/(78046:78048): Existencia=0
+[INFO] 22:38:34:285 Kernel/(78046:78048): PID: 0 - Recibo pedido de F_CREATE por archivo inexistente: ARCHIVO
+
+[WARNING] 22:38:34:288 Kernel/(78046:78048): El archivo ARCHIVO fue creado, abierto y cargado a la tabla global de archivos abiertos
+[INFO] 22:38:34:288 Kernel/(78046:78048): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 22:38:34:288 Kernel/(78046:78048): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 22:38:34:288 Kernel/(78046:78048): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 22:38:34:289 Kernel/(78046:78047): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:38:34:289 Kernel/(78046:78048): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 22:38:34:289 Kernel/(78046:78048): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 22:38:37:299 Kernel/(78046:78053): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:38:37:299 Kernel/(78046:78047): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:38:37:299 Kernel/(78046:78048): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 22:38:37:299 Kernel/(78046:78048): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 22:38:40:314 Kernel/(78046:78054): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:38:40:314 Kernel/(78046:78047): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:38:40:315 Kernel/(78046:78048): PID: 0 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 22:38:40:315 Kernel/(78046:78048): Entro al if
+[INFO] 22:38:40:319 Kernel/(78046:78048): PID: 0 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 22:38:43:320 Kernel/(78046:78074): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:38:43:320 Kernel/(78046:78047): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:38:43:321 Kernel/(78046:78048): PID: 0 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 22:38:46:321 Kernel/(78046:78075): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:38:46:322 Kernel/(78046:78047): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:38:46:322 Kernel/(78046:78048): PID: 0 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 22:38:46:322 Kernel/(78046:78048): PID: 0 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 22:38:46:322 Kernel/(78046:78048): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 22:38:46:323 Kernel/(78046:78048): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 22:38:46:324 Kernel/(78046:78048): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 22:39:00:043 Kernel/(78046:78046): Cliente conectado (a KERNEL_SV)
+
+[INFO] 22:39:00:044 Kernel/(78046:78081): Envio solicitud a MEMORIA
+[INFO] 22:39:00:088 Kernel/(78046:78081): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 22:39:00:088 Kernel/(78046:78081): Se crea el proceso 1 en NEW
+[INFO] 22:39:00:089 Kernel/(78046:78081): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 22:39:00:089 Kernel/(78046:78081): Ingreso a Ready algoritmo HRRN - PIDS: [1] 
+[INFO] 22:39:00:089 Kernel/(78046:78047): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:39:01:091 Kernel/(78046:78048): PID: 1 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 22:39:01:091 Kernel/(78046:78048): PID: 1 - Abrir Archivo: ARCHIVO
+
+[WARNING] 22:39:01:091 Kernel/(78046:78048): La tabla global de archivos esta vacia
+[WARNING] 22:39:01:091 Kernel/(78046:78048): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 22:39:01:091 Kernel/(78046:78048): Existencia=1
+[WARNING] 22:39:01:091 Kernel/(78046:78048): El archivo ARCHIVO fue abierto y cargado a la tabla global de archivos abiertos
+[INFO] 22:39:01:091 Kernel/(78046:78048): PID: 1 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 22:39:01:092 Kernel/(78046:78048): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 22:39:01:092 Kernel/(78046:78048): Ingreso a Ready algoritmo HRRN - PIDS: [1] 
+[INFO] 22:39:01:092 Kernel/(78046:78047): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:39:01:092 Kernel/(78046:78048): PID: 1 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 22:39:01:092 Kernel/(78046:78048): PID: 1 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 22:39:04:104 Kernel/(78046:78082): PID: 1 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:39:04:104 Kernel/(78046:78047): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:39:04:104 Kernel/(78046:78048): PID: 1 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 22:39:04:104 Kernel/(78046:78048): PID: 1 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 22:39:07:121 Kernel/(78046:78083): PID: 1 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:39:07:124 Kernel/(78046:78047): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:39:07:124 Kernel/(78046:78048): PID: 1 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 22:39:07:125 Kernel/(78046:78048): Entro al if
+[INFO] 22:39:07:125 Kernel/(78046:78048): PID: 1 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 22:39:10:127 Kernel/(78046:78103): PID: 1 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:39:10:127 Kernel/(78046:78047): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:39:10:128 Kernel/(78046:78048): PID: 1 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 22:39:13:129 Kernel/(78046:78104): PID: 1 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 22:39:13:129 Kernel/(78046:78047): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:39:13:129 Kernel/(78046:78048): PID: 1 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 22:39:13:129 Kernel/(78046:78048): PID: 1 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 22:39:13:129 Kernel/(78046:78048): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 22:39:13:130 Kernel/(78046:78048): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 22:39:13:131 Kernel/(78046:78048): Finaliza el proceso 1 - Motivo: POR FIN
+[INFO] 23:01:25:110 Kernel/(78900:78900): Probando hora 0
+[INFO] 23:01:25:111 Kernel/(78900:78900): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 23:01:25:112 Kernel/(78900:78900): RECURSO: DISCO con 1 instancias
+[INFO] 23:01:25:116 Kernel/(78900:78900): RECURSO: MODEM con 1 instancias
+[INFO] 23:01:25:117 Kernel/(78900:78900): Cantidad total de recursos disponibles: 2 
+[INFO] 23:01:25:118 Kernel/(78900:78900): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 23:01:25:119 Kernel/(78900:78900): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 23:01:25:119 Kernel/(78900:78900): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:01:25:120 Kernel/(78900:78900): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 23:01:25:120 Kernel/(78900:78900): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 23:01:28:137 Kernel/(78900:78900): Cliente conectado (a KERNEL_SV)
+
+[INFO] 23:01:28:138 Kernel/(78900:78906): Envio solicitud a MEMORIA
+[INFO] 23:01:28:138 Kernel/(78900:78906): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 23:01:28:138 Kernel/(78900:78906): Se crea el proceso 0 en NEW
+[INFO] 23:01:28:139 Kernel/(78900:78906): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:01:28:139 Kernel/(78900:78906): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 23:01:28:139 Kernel/(78900:78901): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:01:29:141 Kernel/(78900:78902): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 23:01:29:141 Kernel/(78900:78902): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 23:01:29:141 Kernel/(78900:78902): La tabla global de archivos esta vacia
+[WARNING] 23:01:29:141 Kernel/(78900:78902): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 23:01:29:141 Kernel/(78900:78902): Existencia=0
+[INFO] 23:01:29:141 Kernel/(78900:78902): PID: 0 - Recibo pedido de F_CREATE por archivo inexistente: ARCHIVO
+
+[WARNING] 23:01:29:142 Kernel/(78900:78902): El archivo ARCHIVO fue creado, abierto y cargado a la tabla global de archivos abiertos
+[INFO] 23:01:29:142 Kernel/(78900:78902): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 23:01:29:142 Kernel/(78900:78902): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:01:29:142 Kernel/(78900:78902): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 23:01:29:142 Kernel/(78900:78901): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:01:29:143 Kernel/(78900:78902): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 23:01:29:143 Kernel/(78900:78902): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 23:01:32:157 Kernel/(78900:78909): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 23:01:32:160 Kernel/(78900:78901): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:01:32:160 Kernel/(78900:78902): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 23:01:32:160 Kernel/(78900:78902): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 23:01:35:167 Kernel/(78900:78910): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 23:01:35:167 Kernel/(78900:78901): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:01:35:167 Kernel/(78900:78902): PID: 0 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 23:01:35:167 Kernel/(78900:78902): Entro al if
+[INFO] 23:01:35:167 Kernel/(78900:78902): PID: 0 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 23:01:38:168 Kernel/(78900:78929): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 23:01:38:168 Kernel/(78900:78901): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:01:38:169 Kernel/(78900:78902): PID: 0 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 23:01:41:170 Kernel/(78900:78930): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 23:01:41:170 Kernel/(78900:78901): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:01:41:170 Kernel/(78900:78902): PID: 0 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 23:01:41:170 Kernel/(78900:78902): PID: 0 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 23:01:41:170 Kernel/(78900:78902): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 23:01:41:171 Kernel/(78900:78902): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 23:01:41:173 Kernel/(78900:78902): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 23:03:08:128 Kernel/(78900:78900): Cliente conectado (a KERNEL_SV)
+
+[INFO] 23:03:08:129 Kernel/(78900:79006): Envio solicitud a MEMORIA
+[INFO] 23:03:08:172 Kernel/(78900:79006): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 23:03:08:172 Kernel/(78900:79006): Se crea el proceso 1 en NEW
+[INFO] 23:03:08:173 Kernel/(78900:79006): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:03:08:173 Kernel/(78900:79006): Ingreso a Ready algoritmo HRRN - PIDS: [1] 
+[INFO] 23:03:08:173 Kernel/(78900:78901): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:03:09:174 Kernel/(78900:78902): PID: 1 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 23:03:09:174 Kernel/(78900:78902): PID: 1 - Abrir Archivo: ARCHIVO
+
+[WARNING] 23:03:09:174 Kernel/(78900:78902): La tabla global de archivos esta vacia
+[WARNING] 23:03:09:174 Kernel/(78900:78902): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 23:03:09:175 Kernel/(78900:78902): Existencia=1
+[WARNING] 23:03:09:175 Kernel/(78900:78902): El archivo ARCHIVO fue abierto y cargado a la tabla global de archivos abiertos
+[INFO] 23:03:09:175 Kernel/(78900:78902): PID: 1 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 23:03:09:175 Kernel/(78900:78902): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:03:09:176 Kernel/(78900:78902): Ingreso a Ready algoritmo HRRN - PIDS: [1] 
+[INFO] 23:03:09:176 Kernel/(78900:78901): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:03:09:176 Kernel/(78900:78902): PID: 1 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 23:03:09:176 Kernel/(78900:78902): PID: 1 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 23:03:12:185 Kernel/(78900:79007): PID: 1 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 23:03:12:185 Kernel/(78900:78901): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:03:12:186 Kernel/(78900:78902): PID: 1 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 23:03:12:186 Kernel/(78900:78902): Entro al if
+[INFO] 23:03:12:186 Kernel/(78900:78902): PID: 1 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 23:03:15:187 Kernel/(78900:79008): PID: 1 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 23:03:15:188 Kernel/(78900:78901): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:03:15:188 Kernel/(78900:78902): PID: 1 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 23:03:18:188 Kernel/(78900:79009): PID: 1 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 23:03:18:189 Kernel/(78900:78901): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:03:18:189 Kernel/(78900:78902): PID: 1 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 23:03:18:189 Kernel/(78900:78902): PID: 1 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 23:03:18:189 Kernel/(78900:78902): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 23:03:18:190 Kernel/(78900:78902): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 23:03:18:191 Kernel/(78900:78902): Finaliza el proceso 1 - Motivo: POR FIN
+[INFO] 23:11:55:097 Kernel/(78900:78900): Cliente conectado (a KERNEL_SV)
+
+[INFO] 23:11:55:098 Kernel/(78900:79163): Envio solicitud a MEMORIA
+[INFO] 23:11:55:140 Kernel/(78900:79163): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 23:11:55:140 Kernel/(78900:79163): Se crea el proceso 2 en NEW
+[INFO] 23:11:55:140 Kernel/(78900:79163): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:11:55:141 Kernel/(78900:79163): Ingreso a Ready algoritmo HRRN - PIDS: [2] 
+[INFO] 23:11:55:141 Kernel/(78900:78901): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:11:56:144 Kernel/(78900:78902): PID: 2 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 23:11:56:144 Kernel/(78900:78902): PID: 2 - Abrir Archivo: ARCHIVO
+
+[WARNING] 23:11:56:144 Kernel/(78900:78902): La tabla global de archivos esta vacia
+[WARNING] 23:11:56:144 Kernel/(78900:78902): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 23:11:56:145 Kernel/(78900:78902): Existencia=1
+[WARNING] 23:11:56:145 Kernel/(78900:78902): El archivo ARCHIVO fue abierto y cargado a la tabla global de archivos abiertos
+[INFO] 23:11:56:145 Kernel/(78900:78902): PID: 2 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 23:11:56:145 Kernel/(78900:78902): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:11:56:146 Kernel/(78900:78902): Ingreso a Ready algoritmo HRRN - PIDS: [2] 
+[INFO] 23:11:56:146 Kernel/(78900:78901): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:11:56:146 Kernel/(78900:78902): PID: 2 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 23:11:56:146 Kernel/(78900:78902): PID: 2 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 23:11:59:154 Kernel/(78900:79164): PID: 2 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 23:11:59:155 Kernel/(78900:78901): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:11:59:155 Kernel/(78900:78902): PID: 2 - Actualizar puntero Archivo:: ARCHIVO - Puntero: 10
+
+[ERROR] 23:11:59:155 Kernel/(78900:78902): Entro al if
+[INFO] 23:11:59:155 Kernel/(78900:78902): PID: 2 - Recibo pedido de F_WRITE por: ARCHIVO
+[INFO] 23:12:02:157 Kernel/(78900:79165): PID: 2 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 23:12:02:157 Kernel/(78900:78901): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:12:02:157 Kernel/(78900:78902): PID: 2 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 23:12:05:159 Kernel/(78900:79171): PID: 2 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 23:12:05:159 Kernel/(78900:78901): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:12:05:159 Kernel/(78900:78902): PID: 2 - Recibo pedido de F_CLOSE por: ARCHIVO
+
+[INFO] 23:12:05:159 Kernel/(78900:78902): PID: 2 - Se elimino ARCHIVO de la tabla de archivos abiertos
+[WARNING] 23:12:05:159 Kernel/(78900:78902): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 23:12:05:160 Kernel/(78900:78902): PID: 2 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 23:12:05:161 Kernel/(78900:78902): Finaliza el proceso 2 - Motivo: POR FIN

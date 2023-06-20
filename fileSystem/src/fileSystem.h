@@ -20,6 +20,7 @@
 #include "socket.h"
 #include "fileSystemConfig.h"
 #include "sys/mman.h"
+#include "math.h"
 
 typedef struct {
 	uint32_t BLOCK_SIZE;
@@ -31,6 +32,9 @@ extern t_super_bloque* configuracionSuperBloque;
 
 int fileExiste(char* nombreArchivo);
 int cargarArchivoBloques(char *path, int BLOCK_SIZE, int BLOCK_COUNT);
+int cerrarArchivoBloques(int fd);
+void escribirBloque(int fd_ArchivoBloque, int numeroBloque, const void *datos);
+int leerBloqueIndirecto(int descriptor, int offset);
 int cargarSuperBloque(char *path);
 int iniciarBitmap (char* path ,uint32_t block_count );
 
@@ -38,6 +42,8 @@ int buscarPrimerBloqueVacio (t_bitarray* s_bitmap, uint32_t BLOCK_SIZE);
 
 
 extern int fileSystemServer;
+extern int descriptor_archivo_bloque;
+extern int tamanio_puntero;
 
 
 #endif /* FILESYSTEM_H_ */

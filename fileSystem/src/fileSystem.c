@@ -30,14 +30,15 @@ t_bitarray* s_bitmap;
 //void* fileData;
 // FCB
 
-
+int descriptor_archivo_bloque;
+int tamanio_puntero;
 
 int main(void) {
 	// Configuracion gral
 	cargarConfiguracion();
 	//log_warning(logger, "PATH: %s",configuracion->PATH_SUPERBLOQUE );
 	cargarSuperBloque(configuracion->PATH_SUPERBLOQUE);
-	cargarArchivoBloques(configuracion->PATH_BLOQUES, configuracionSuperBloque->BLOCK_SIZE, configuracionSuperBloque->BLOCK_COUNT);
+	descriptor_archivo_bloque = cargarArchivoBloques(configuracion->PATH_BLOQUES, configuracionSuperBloque->BLOCK_SIZE, configuracionSuperBloque->BLOCK_COUNT);
 
 	t_config* config_ips = config_create("../ips.conf");
 	char* ip = config_get_string_value(config_ips,"IP_FILESYSTEM");
@@ -87,6 +88,10 @@ int cargarSuperBloque(char *path){
 		log_error(logger, "PATH: %s",configuracion->PATH_SUPERBLOQUE );
 		configuracionSuperBloque->BLOCK_SIZE = config_get_int_value(superBloque, "BLOCK_SIZE");
 		configuracionSuperBloque->BLOCK_COUNT = config_get_int_value(superBloque, "BLOCK_COUNT");
+
+		tamanio_puntero = ceil(log2(configuracionSuperBloque->BLOCK_COUNT * configuracionSuperBloque->BLOCK_SIZE));
+
+		log_warning(logger, "Tamanio puntero: %d", tamanio_puntero);
 
 		log_info(logger,
 			"\nBLOCK_SIZE: %d\n"
@@ -159,17 +164,18 @@ int iniciarBitmap (char* path ,uint32_t block_count ){
 	return 0;
 }
 
-
-
-
 // FUNCIONES PARA TRABAJAR CON BLOQUES PARA NO USAR MMAP CON ALGEBRA DE PUNTEROS XD
 
-int fd_ArchivoBloques;
+
 // Aca falta todavia crear estructura de tipo bloque, y dsp falta relacionar todo, BITMAP, ARCHIVO DE BLOQUES Y FCBS
 
 int cargarArchivoBloques(char *path, int BLOCK_SIZE, int BLOCK_COUNT){
-	if (open(path, O_RDWR) == -1){
-		fd_ArchivoBloques = open(path, O_CREAT | O_RDWR);
+	int fd_ArchivoBloques;
+
+    fd_ArchivoBloques = open(path, O_RDWR, 0777);
+
+	if (fd_ArchivoBloques == -1){
+		fd_ArchivoBloques = open(path, O_CREAT | O_RDWR, 0777);
 		ftruncate(fd_ArchivoBloques, BLOCK_SIZE * BLOCK_COUNT);
 	}
 	else {
@@ -183,10 +189,41 @@ int cerrarArchivoBloques(int fd){
 	return close(fd);
 }
 
-void escribirBloque(int fd_ArchivoBloque, int numeroBloque, const void *datos){
-	off_t offset = numeroBloque * configuracionSuperBloque->BLOCK_SIZE;
-	lseek(fd_ArchivoBloque, offset, SEEK_SET);
-	write(fd_ArchivoBloque, datos, configuracionSuperBloque->BLOCK_SIZE);
+void escribirBloqueIndirecto(int descriptor, int offset, int direccion){
+
+	lseek(descriptor, offset, SEEK_SET);
+	char* dir = string_from_format("%d", direccion);
+	char* dir_reverse = string_reverse(dir);
+	int i;
+	int longitud_inicial = string_length(dir);
+
+	for(i = longitud_inicial ; i < tamanio_puntero ; i++ ){
+		string_append(&dir_reverse, "0");
+	}
+	char* dir_final = string_reverse(dir_reverse);
+	log_error(logger, "Dir a escribir : %s ", dir);
+	write(descriptor, dir_final, tamanio_puntero);
+
+}
+int leerBloqueIndirecto(int descriptor, int offset){
+
+	log_warning(logger, "Entre leerBloqueIndirecto, offset: %d", offset);
+
+	lseek(descriptor, offset, SEEK_SET);
+	char* buffer = malloc(1+sizeof(char)*tamanio_puntero);
+
+	read(descriptor, buffer, tamanio_puntero);
+//	buffer[sizeof(char)*tamanio_puntero] = '\0';
+
+	log_error(logger, "Buffer : %s", buffer);
+
+	int dir = atoi(buffer);
+
+	int direccion = floor(dir / configuracionSuperBloque->BLOCK_SIZE);
+
+	log_warning(logger, "obtuvo la direccion %d: ",direccion);
+	return direccion;
+
 }
 
 
@@ -195,16 +232,6 @@ void leerBloque (int fd_ArchivoBloque, int numeroBloque, const void *datos){
 	lseek(fd_ArchivoBloque, offset, SEEK_SET);
 	write(fd_ArchivoBloque, datos, configuracionSuperBloque->BLOCK_SIZE);
 }
-
-
-/*int buscarPrimerBloqueVacio (char* fileData, uint32_t BLOCK_SIZE){
-	for(int i = 0 ; i < BLOCK_SIZE; i++){
-		if( (fileData[i/8]) & (1 << (i % 8)) == 0){
-			return i; // RETORNO EL INDICE DEL PRIMER BLOQUE VACIO
-		}
-	}
-	return -1; // TODOS LOS BLOQUES OCUPADOS
-}*/
 
 int buscarPrimerBloqueVacio (t_bitarray* s_bitmap, uint32_t BLOCK_SIZE){
 	long int posicion_libre;
@@ -217,7 +244,6 @@ int buscarPrimerBloqueVacio (t_bitarray* s_bitmap, uint32_t BLOCK_SIZE){
 	 }
 	return -1;
 }
-
 
 int fileExiste(char* nombreArchivo) {
 	FILE* archivo;
