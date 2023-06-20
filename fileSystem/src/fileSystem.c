@@ -128,8 +128,8 @@ int iniciarBitmap (char* path ,uint32_t block_count ){
 
 	bitmapSize = block_count / 8; //Calculo el tamanio
 	//TODO creo que solo va el de leer, pq nos dicen qu e lo podemos tener creado de antemano
-	bitmap = open(path, O_RDWR | O_CREAT, 0777); // Paso la ruta absoluta
-	//bitmap = open(path, O_RDWR , 0777); // Paso la ruta absoluta
+	//bitmap = open(path, O_RDWR | O_CREAT, 0777); // Paso la ruta absoluta
+	bitmap = open(path, O_RDWR , 0777); // Paso la ruta absoluta
 
 	if(bitmap == -1){
 		log_info(logger, "No existe el BITMAP"); // Si falla FOPEN muestro error
@@ -153,8 +153,8 @@ int iniciarBitmap (char* path ,uint32_t block_count ){
 
 	//Sincronizo los datos en memoria con el archivo bitmap.dat
 	//msync(fileData, bitmapSize, MS_SYNC); //Podriamos verificar con un if si se sincronizo
-	munmap(fileData, bitmapSize);
-	close(bitmap);
+	//munmap(fileData, bitmapSize);
+	//close(bitmap);
 
 	return 0;
 }
@@ -207,18 +207,14 @@ void leerBloque (int fd_ArchivoBloque, int numeroBloque, const void *datos){
 }*/
 
 int buscarPrimerBloqueVacio (t_bitarray* s_bitmap, uint32_t BLOCK_SIZE){
-	int posicion_libre;
+	long int posicion_libre;
 	long int tamano_bitmap = bitarray_get_max_bit(s_bitmap);
-	printf("\n");
-
-	for(posicion_libre = 1; posicion_libre <  tamano_bitmap ; posicion_libre++ )
+	for(posicion_libre = 0; posicion_libre <  tamano_bitmap ; posicion_libre++ )
 	 {
-		 if( !bitarray_test_bit(s_bitmap,  posicion_libre)){
-			 //printf("Valor bit: %d ",bitarray_test_bit(s_bitmap,  posicion_libre));
+		 if(!bitarray_test_bit(s_bitmap,  posicion_libre)){
 			 return posicion_libre;
 		 }
 	 }
-	printf("\n");
 	return -1;
 }
 

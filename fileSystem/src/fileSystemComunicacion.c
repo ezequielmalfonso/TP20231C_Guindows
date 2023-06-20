@@ -156,72 +156,96 @@ static void procesar_conexion(void* void_args) {
 			 //   SI la diferencia es > 0 ==> SUMO bloques
 			 //   SI es cero no hago nada
 			 // 3 - Determinar cuantos bloques libres hay en el bitmap
+
+			 long int tamano_bitmap = bitarray_get_max_bit(s_bitmap);
+
+			 // Contador de libres
 			 int i;
 			 int bloques_libres = 0;
-			 long int tamano_bitmap = bitarray_get_max_bit(s_bitmap);	// tambien se puede saber con la cantidad de bloques / 8
-			 //log_info(logger, "El tamanio del bitmap en bits es: %d", tamano_bitmap);
-
-
 			 for(i = 0; i <  tamano_bitmap ; i++ )
 			 {
-				 log_warning(logger, "recorriendo bitarray " );
-				 if( !bitarray_test_bit(s_bitmap,  i)){
-					 log_warning(logger, "en el fi bitarray " );
-					 bloques_libres++;
-				 }
-
+				 if(!bitarray_test_bit(s_bitmap,  i)) bloques_libres++;
 			 }
-			 log_warning(logger, "bloques libres: %d" , bloques_libres );
+			 log_warning(logger, "Bloques libres segun bitmap: %d de %d (ocupados=%d)" , bloques_libres, tamano_bitmap, tamano_bitmap-bloques_libres);
 
 			 if(nuevoTamanioArchivo == 0){
-				 //TODO madarlo a exit o ver que se hace liberar todos los bloques si tenia
-				 log_warning(logger, "Tamaño de archivo 0");
+				 //TODO liberar todos los bloques en el bitmap
+				 log_warning(logger, "Trunc a 0");
 				 break;
 			 }
-			 int bloques_necesarios =  ceil(nuevoTamanioArchivo / configuracionSuperBloque->BLOCK_SIZE);
-
-			 if(bloques_necesarios > 1 )
-				 bloques_necesarios++;
+			 // Redondeamos para arriba
+			 int bloques_totales =  ceil(nuevoTamanioArchivo / configuracionSuperBloque->BLOCK_SIZE);
+			 int bloques_actuales = FCB_archivo->tamanio_archivo / configuracionSuperBloque->BLOCK_SIZE;	// Deberia ser siempre un numero redondo
+			 int diferenciaBloques = bloques_totales - bloques_actuales;
+			 log_warning(logger, "El archivo ocupa: %d bloques - Debe pasar a ocupar: %d bloques" , bloques_actuales, bloques_totales);
 
 			 // Verifico si hay bloques suficientes
-			 if(bloques_necesarios > bloques_libres){
-				 //TODO madarlo a exit o ver que se hace liberar todos los bloques si tenia
-				 // Hacer sen dal kernel de error
-				 log_warning(logger, "Tamaño de archivo 0");
+			 if(diferenciaBloques > bloques_libres){
+				 //TODO send F_CREATE_FAIL
+				 log_warning(logger, "Cantidad de bloques insuficiente");
 				 break;
 			 }
-
-
-			 if(nuevoTamanioArchivo < FCB_archivo->tamanio_archivo){
-				 // Liberamos bloques si fuera necesario
-			 }else{
-				 // Asignar nuevos bloques
+			 int indice_bitmap = 0;
+			 // Trunc a menos size -> Liberamos bloques si fuera necesario
+			 if(diferenciaBloques < 0){
+				 // TODO liberar bloques. Si se queda con un solo bloque hay que liberar el bloque de puntero indirecto
+			 }
+			 // Trunc a mas size --> Asignamos nuevos bloques si fuera necesario
+			 if(diferenciaBloques > 0){
+				 // Si su size es 0 y lo agrando -> Siempre asigno un puntero directo, independientemente del size
 				 if(FCB_archivo->tamanio_archivo == 0){
-					bitarray_set_bit(s_bitmap, 0);
-					bitarray_set_bit(s_bitmap, 1);
-					int indice_bitmap    = buscarPrimerBloqueVacio (s_bitmap->bitarray, configuracionSuperBloque->BLOCK_SIZE);
-					int puntero_directo  = indice_bitmap * configuracionSuperBloque->BLOCK_SIZE;
-					//asumiendo q cambio el bit de 0 a 1 o 1 a 0
+					indice_bitmap = buscarPrimerBloqueVacio (s_bitmap, configuracionSuperBloque->BLOCK_SIZE);
+					int puntero_directo = indice_bitmap * configuracionSuperBloque->BLOCK_SIZE;
 
 					if(indice_bitmap == -1){
 						log_error(logger, "Error con indice de bitmap");
+						break;	// No deberia entrar nunca
 					}
 
-					log_info(logger, "Primer bloque vacio: %d", indice_bitmap);
+					log_info(logger, "Se encontro un bloque en la posicion nro: %d", indice_bitmap);
+					// Lo marco ocupado en el bitmap
 					bitarray_set_bit(s_bitmap, indice_bitmap);
+					// Guardo el puntero directo
 					FCB_archivo->puntero_directo = puntero_directo;
 					log_info(logger, "Puntero directo asignado: %d", puntero_directo);
+					bloques_actuales++;
 				 }
+				 // Si se necesita mas de uno y no tiene bloque en puntero indirecto -> Asigno puntero indirecto
+				 if(bloques_actuales == 1 && bloques_actuales < bloques_totales) {
+					 indice_bitmap = buscarPrimerBloqueVacio (s_bitmap, configuracionSuperBloque->BLOCK_SIZE);
+					 int puntero_indirecto = indice_bitmap * configuracionSuperBloque->BLOCK_SIZE;
+					 if(indice_bitmap == -1){
+						log_error(logger, "Error con indice de bitmap");
+						break;	// No deberia entrar nunca
+					 }
+					 log_info(logger, "Se encontro un bloque en la posicion nro: %d", indice_bitmap);
+					// Lo marco ocupado en el bitmap
+					bitarray_set_bit(s_bitmap, indice_bitmap);
+					// Guardo el puntero indirecto
+					FCB_archivo->puntero_indirecto = puntero_indirecto;
+					log_info(logger, "Puntero indirecto asignado: %d", puntero_indirecto);
+				 }
+
+				 // Solo entra si ya hay puntero directo y puntero indirecto
+				 int i;
+				 int puntero_nuevo;
+				 for(i = bloques_actuales; i < bloques_totales; i++) {
+					 indice_bitmap = buscarPrimerBloqueVacio (s_bitmap, configuracionSuperBloque->BLOCK_SIZE);
+					 puntero_nuevo = indice_bitmap * configuracionSuperBloque->BLOCK_SIZE;
+					 bitarray_set_bit(s_bitmap, indice_bitmap);
+					 // TODO: escribir puntero_nuevo en el bloque de puntero_indirecto. Tener en cuenta demora en lectura y escritura
+				 }
+
+
 			 }
-
-
-			 log_warning(logger, "Cantidad bloq q necesita el archivo: %d" ,  bloques_necesarios );
 			 log_warning(logger, "Tamaño nuevo: %d" ,  nuevoTamanioArchivo );
 
 
 			 //Guarda los datos de la variable struct en FCB del archivo
 			 config_set_value(FCB, "TAMANIO_ARCHIVO", string_itoa(nuevoTamanioArchivo));
-			 config_set_value(FCB, "PUNTERO_DIRECTO", string_from_format("%.0lf", FCB_archivo->puntero_directo) );
+			 //config_set_value(FCB, "PUNTERO_DIRECTO", string_from_format("%.0lf", FCB_archivo->puntero_directo) );
+			 config_set_value(FCB, "PUNTERO_DIRECTO", string_itoa(FCB_archivo->puntero_directo));
+			 config_set_value(FCB, "PUNTERO_INDIRECTO", string_itoa(FCB_archivo->puntero_indirecto));
 			 config_save_in_file(FCB, pathArchivo);
 
 			 cop = F_TRUNCATE_OK;
@@ -231,11 +255,17 @@ static void procesar_conexion(void* void_args) {
 		 case F_READ:
 			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
 			 log_info(logger, "Se recibio F_READ con parametros %s, %s y %s", parametro1, parametro2, parametro3);
+			 sleep(3); // borrar
+			 cop = F_READ_OK;
+			 send(cliente_socket, &cop, sizeof(op_code), 0);
 			 break;
 
 		 case F_WRITE:
 			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
 			 log_info(logger, "Se recibio F_WRITE con parametros %s, %s y %s", parametro1, parametro2, parametro3);
+			 sleep(3);	// borrar
+			 cop = F_WRITE_OK;
+			 send(cliente_socket, &cop, sizeof(op_code), 0);
 			 break;
 
 		 // Errores
