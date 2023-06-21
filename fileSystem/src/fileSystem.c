@@ -89,7 +89,8 @@ int cargarSuperBloque(char *path){
 		configuracionSuperBloque->BLOCK_SIZE = config_get_int_value(superBloque, "BLOCK_SIZE");
 		configuracionSuperBloque->BLOCK_COUNT = config_get_int_value(superBloque, "BLOCK_COUNT");
 
-		tamanio_puntero = ceil(log2(configuracionSuperBloque->BLOCK_COUNT * configuracionSuperBloque->BLOCK_SIZE));
+		//tamanio_puntero = ceil(log2(configuracionSuperBloque->BLOCK_COUNT * configuracionSuperBloque->BLOCK_SIZE));
+		tamanio_puntero = ceil(log10(configuracionSuperBloque->BLOCK_COUNT * configuracionSuperBloque->BLOCK_SIZE));
 
 		log_warning(logger, "Tamanio puntero: %d", tamanio_puntero);
 

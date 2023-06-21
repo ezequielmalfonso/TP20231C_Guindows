@@ -127,6 +127,7 @@ int execute(INSTRUCCION* instruccion_ejecutar,char* registros,uint16_t pid, uint
 		}else if(!strcmp(instruccion_ejecutar->comando,"F_READ") ){
 
 			log_info(logger,"PID: %d - Listo para ejecutar F_READ ", pid);
+
 			return F_READ;
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"DELETE_SEGMENT") ){

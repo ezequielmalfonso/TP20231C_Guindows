@@ -788,7 +788,14 @@ void esperar_cpu(){
 				break;
 
 			case F_READ:
+				/*
+				  F_READ (Nombre Archivo, Dirección Lógica, Cantidad de Bytes):
+				  Esta instrucción solicita al Kernel que se lea del archivo indicado,
+				  la cantidad de bytes pasada por parámetro y se escriba en la dirección física de Memoria la información leída.
+				 */
 				log_info(logger, "PID: %d - Recibo pedido de F_READ por: %s", pcb->pid, instruccion->parametro1);
+				// LOG OBligatorio
+				log_info(logger, "PID: < %d >- Leer Archivo: <%s> - Puntero <PUNTERO> - Dirección Memoria <DIRECCIÓN MEMORIA> - Tamaño <TAMAÑO>", pcb->pid, instruccion->parametro1);
 
 				// Tiempos hrrn
 				rafAnteriorAux = list_get(list_rafa_anterior, pcb->pid);
