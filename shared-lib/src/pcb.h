@@ -18,6 +18,22 @@ typedef struct{
   uint32_t id_tabla_pagina;
 }TABLA_SEGMENTO;
 
+struct s_registros{	// No deberian tener \0 pero por las dudas sumo uno
+	char ax[5];
+	char bx[5];
+	char cx[5];
+	char dx[5];
+	char eax[9];
+	char ebx[9];
+	char ecx[9];
+	char edx[9];
+	char rax[17];
+	char rbx[17];
+	char rcx[17];
+	char rdx[17];
+}__attribute__((packed));	// Para que no use padding
+typedef struct s_registros registros_t;
+
 /*
 	uint32_t registro_cpu[4];
 	t_list* segmentos;
@@ -27,7 +43,7 @@ typedef struct {
 	uint16_t pid;
 	t_list* instrucciones;
 	uint32_t pc; 				// Program counter
-	char* registro_cpu;
+	registros_t registro_cpu;
 	t_list* tabla_de_segmentos;
 	double estimado_proxima_rafaga;
 	int tiempo_llegada_a_ready;
@@ -51,7 +67,7 @@ void pcb_set(PCB_t*   pcb,
 		     uint16_t pid,
 			 t_list* instrucciones,
 			 uint32_t pc,
-			 char* registros_cpu,
+			 registros_t registros_cpu,
 			 //t_list* tabla_de_segmentos,
 			// t_list* archivos_abiertos,
 			 double   estimado_proxima_rafaga,

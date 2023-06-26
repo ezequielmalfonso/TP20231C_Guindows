@@ -101,5 +101,20 @@ static void* serializar_instruccion(size_t* size, char* param1, char* param2, ch
 bool recv_instruccion(int fd, char* param1, char* param2, char* param3);
 static void deserializar_instruccion(void* stream, char* param1, char* param2, char* param3);
 
+//ENVIO INSTRUCCIONES KERNEL-FILESYSTEM
+bool send_archivo(int fd, char*, char*, char*, op_code codigo);
+static void* serializar_instruccion(size_t* size, char* param1, char* param2, char* param3, op_code codigo);
+bool recv_instruccion(int fd, char* param1, char* param2, char* param3);
+static void deserializar_instruccion(void* stream, char* param1, char* param2, char* param3);
+//Envio instruccion CPU - MEMORIA
+static void deserializar_instruccion_memoria(void* stream, uint32_t param1, uint32_t param2, uint32_t param3,int param4);
+bool recv_instruccion_memoria(int fd, uint32_t num_seg, uint32_t desplazamiento, uint32_t pid,int tamanio);
+static void* serializar_instruccion_memoria(size_t* size, uint32_t param1, uint32_t param2, uint32_t param3,int param4, op_code codigo);
+bool send_pedido_memoria(int fd, uint32_t num_seg, uint32_t desplazamiento, uint32_t pid,int tamanio, op_code codigo);
+//escribir
+bool recv_escribir_memoria(int fd, uint32_t num_seg, uint32_t desplazamiento, uint32_t pid,int tamanio, void* escribir) ;
+static void deserializar_escribir_memoria(void* stream, uint32_t param1, uint32_t param2, uint32_t param3,int param4, void* escribir) ;
+static void deserializar_escribir_memoria(void* stream, uint32_t param1, uint32_t param2, uint32_t param3,int param4, void* escribir) ;
+static void* serializar_escribir_memoria(size_t* size, uint32_t param1, uint32_t param2, uint32_t param3,void* param4, int tam, op_code codigo) ;
 
 #endif /* SRC_PROTOCOLO_H_ */

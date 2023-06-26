@@ -146,7 +146,7 @@ static void* serializar_proceso(size_t* size, PCB_t *proceso, op_code codigo) {
 		   sizeof(uint32_t)+ 		//SIZE elementosLista
 		   sizeof(INSTRUCCION)* elementosLista+ 	//SIZE LISTA INSTRUCCIONES
 		   sizeof(uint32_t)+ 		//SIZE PC
-		   (sizeof(char)*16)+ 	//SIZE REGISTROS
+		   sizeof(registros_t)+ 	//SIZE REGISTROS
 		   sizeof(uint32_t)+ 		//SIZE tablaSegmento
 		   sizeof(t_segmento)*tablaSegmentos+//((25)*tablaSegmentos)+   //sizeof(uint32_t)+//SIZE cantListaSegmentos
 		   sizeof(double)+         	// Estimado rafaga
@@ -192,8 +192,8 @@ static void* serializar_proceso(size_t* size, PCB_t *proceso, op_code codigo) {
 	memcpy(stream + offset, &proceso->pc, sizeof(uint32_t));
 	offset+= sizeof(uint32_t);
 
-	memcpy(stream + offset, &proceso->registro_cpu, sizeof(char)*16);
-	offset+= sizeof(char)*16;
+	memcpy(stream + offset, &proceso->registro_cpu, sizeof(registros_t));
+	offset+= sizeof(registros_t);
 /*	memcpy(stream + offset, &proceso->registro_cpu, sizeof(char*));
 	offset+= sizeof(char*);
 	memcpy(stream + offset, &proceso->registro_cpu, sizeof(char*));
@@ -297,8 +297,8 @@ static void deserializar_proceso(void* stream, PCB_t* proceso) {
 	stream+=sizeof(uint32_t);
 //printf("PC: %s", proceso->pc);
 
-	memcpy(&(proceso->registro_cpu),stream, sizeof(char)*16);
-	stream+=sizeof(char)*16;
+	memcpy(&(proceso->registro_cpu),stream, sizeof(registros_t));
+	stream+=sizeof(registros_t);
 /*	memcpy(&(proceso->registro_cpu),stream, sizeof(char*));
 	stream+=sizeof(char*);
 	memcpy(&(proceso->registro_cpu),stream, sizeof(char*));
@@ -407,3 +407,118 @@ static void deserializar_instruccion(void* stream, char* param1, char* param2, c
 	memcpy(param3, stream, char20size);
 }
 
+// ENVIO DE INSTRUCCION CPU-Memoria
+bool send_pedido_memoria(int fd, uint32_t num_seg, uint32_t desplazamiento, uint32_t pid,int tamanio, op_code codigo) {
+	size_t size;
+	void* stream = serializar_instruccion_memoria(&size, num_seg, desplazamiento, pid,tamanio, codigo);
+	if (send(fd, stream, size, 0) != size) {
+		free(stream);
+		return false;
+	}
+	free(stream);
+	return true;
+}
+
+static void* serializar_instruccion_memoria(size_t* size, uint32_t param1, uint32_t param2, uint32_t param3,int param4, op_code codigo) {
+	size_t opcodesize = sizeof(op_code);
+	*size = 4 *sizeof(uint32_t) + opcodesize + sizeof(size_t);
+	void * stream = malloc(*size);
+	size_t size_load = *size- opcodesize - sizeof(size_t);	// El size no incluye el size ni el opcode (se saca antes)
+
+	memcpy(stream, &codigo, opcodesize);
+	int offset = opcodesize;
+	memcpy(stream + offset, &size_load, sizeof(size_t));
+	offset += sizeof(size_t);
+	memcpy(stream + offset, &param1,sizeof(uint32_t));
+	offset += sizeof(uint32_t);
+	memcpy(stream + offset, &param2,sizeof(uint32_t));
+	offset += sizeof(uint32_t);
+	memcpy(stream + offset, &param3,sizeof(uint32_t));
+	offset += sizeof(uint32_t);
+	memcpy(stream + offset, &param4,sizeof(int));
+	return stream;
+}
+
+bool recv_instruccion_memoria(int fd, uint32_t num_seg, uint32_t desplazamiento, uint32_t pid,int tamanio) {
+	size_t size_payload;
+	if (recv(fd, &size_payload, sizeof(size_t), MSG_WAITALL) != sizeof(size_t))
+		return false;
+	void* stream = malloc(size_payload);
+	if (recv(fd, stream, size_payload, MSG_WAITALL) != size_payload) {
+		free(stream);
+	    return false;
+	}
+	    deserializar_instruccion_memoria(stream, num_seg,desplazamiento,pid,tamanio);
+	    free(stream);
+	    return true;
+}
+
+static void deserializar_instruccion_memoria(void* stream, uint32_t param1, uint32_t param2, uint32_t param3,int param4) {
+	memcpy(&param1, stream, sizeof(uint32_t));
+	stream += sizeof(uint32_t);
+	memcpy(&param2, stream, sizeof(uint32_t));
+	stream += sizeof(uint32_t);
+	memcpy(&param3, stream, sizeof(uint32_t));
+	stream += sizeof(uint32_t);
+	memcpy(&param4, stream, sizeof(int));
+
+}
+bool send_escribir_memoria(int fd, uint32_t num_seg, uint32_t desplazamiento, uint32_t pid,void* escribir,int tamanio, op_code codigo) {
+	size_t size;
+	void* stream = serializar_escribir_memoria(&size, num_seg, desplazamiento, pid,escribir,tamanio, codigo);
+	if (send(fd, stream, size, 0) != size) {
+		free(stream);
+		return false;
+	}
+	free(stream);
+	return true;
+}
+
+static void* serializar_escribir_memoria(size_t* size, uint32_t param1, uint32_t param2, uint32_t param3,void* param4, int tam, op_code codigo) {
+	size_t opcodesize = sizeof(op_code);
+	*size = 4 *sizeof(uint32_t) + opcodesize + sizeof(size_t);
+	void * stream = malloc(*size);
+	size_t size_load = *size- opcodesize - sizeof(size_t);	// El size no incluye el size ni el opcode (se saca antes)
+
+	memcpy(stream, &codigo, opcodesize);
+	int offset = opcodesize;
+	memcpy(stream + offset, &size_load, sizeof(size_t));
+	offset += sizeof(size_t);
+	memcpy(stream + offset, &param1,sizeof(uint32_t));
+	offset += sizeof(uint32_t);
+	memcpy(stream + offset, &param2,sizeof(uint32_t));
+	offset += sizeof(uint32_t);
+	memcpy(stream + offset, &param3,sizeof(uint32_t));
+	offset += sizeof(uint32_t);
+	memcpy(stream + offset, &param4,tam);
+	memcpy(stream + offset, &tam,sizeof(int));
+	offset += sizeof(int);
+	memcpy(stream + offset, &param4,tam);
+	return stream;
+}
+
+static void deserializar_escribir_memoria(void* stream, uint32_t param1, uint32_t param2, uint32_t param3,int param4, void* escribir) {
+	memcpy(&param1, stream, sizeof(uint32_t));
+	stream += sizeof(uint32_t);
+	memcpy(&param2, stream, sizeof(uint32_t));
+	stream += sizeof(uint32_t);
+	memcpy(&param3, stream, sizeof(uint32_t));
+	stream += sizeof(uint32_t);
+	memcpy(&param4, stream, sizeof(int));
+	stream += sizeof(int);
+	memcpy(escribir, stream, param4);
+
+}
+bool recv_escribir_memoria(int fd, uint32_t num_seg, uint32_t desplazamiento, uint32_t pid,int tamanio, void* escribir) {
+	size_t size_payload;
+	if (recv(fd, &size_payload, sizeof(size_t), MSG_WAITALL) != sizeof(size_t))
+		return false;
+	void* stream = malloc(size_payload);
+	if (recv(fd, stream, size_payload, MSG_WAITALL) != size_payload) {
+		free(stream);
+	    return false;
+	}
+	    deserializar_escribir_memoria(stream, num_seg,desplazamiento,pid,tamanio,escribir);
+	    free(stream);
+	    return true;
+}
