@@ -4091,3 +4091,602 @@ TAM_MAX_SEGMENTO: 128
 [INFO] 22:25:14:719 Cpu/(81716:81721): PID: 1 - Listo para ejecutar F_CLOSE 
 [INFO] 22:25:14:720 Cpu/(81716:81721): Recibi PCB id: 1
 [INFO] 22:25:14:720 Cpu/(81716:81721): PID: 1 - Ejecutando EXIT
+[INFO] 04:17:07:273 Cpu/(75537:75537): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 04:17:07:292 Cpu/(75537:75537): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 04:17:07:293 Cpu/(75537:75537): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 04:17:22:631 Cpu/(75537:75537): Cliente conectado (a CPU_SV)
+
+[INFO] 04:17:35:035 Cpu/(75537:75543): Recibi PCB id: 0
+[INFO] 04:17:35:035 Cpu/(75537:75543): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:17:35:035 Cpu/(75537:75543): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:17:35:036 Cpu/(75537:75543): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:17:35:036 Cpu/(75537:75543): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:17:35:036 Cpu/(75537:75543): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:17:35:036 Cpu/(75537:75543): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:17:35:036 Cpu/(75537:75543): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:17:35:036 Cpu/(75537:75543): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 04:17:35:044 Cpu/(75537:75543): Recibi PCB id: 0
+[INFO] 04:17:35:045 Cpu/(75537:75543): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 04:18:17:155 Cpu/(75537:75543): Se ha finalizado la conexion
+[INFO] 04:18:20:221 Cpu/(75537:75537): Cliente conectado (a CPU_SV)
+
+[INFO] 04:18:27:447 Cpu/(75537:75553): Recibi PCB id: 0
+[INFO] 04:18:27:447 Cpu/(75537:75553): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:18:27:447 Cpu/(75537:75553): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:18:27:447 Cpu/(75537:75553): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:18:27:447 Cpu/(75537:75553): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:18:27:447 Cpu/(75537:75553): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:18:27:447 Cpu/(75537:75553): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:18:27:447 Cpu/(75537:75553): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:18:27:447 Cpu/(75537:75553): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 04:18:27:448 Cpu/(75537:75553): Recibi PCB id: 0
+[INFO] 04:18:27:448 Cpu/(75537:75553): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 04:22:14:363 Cpu/(75537:75553): Se ha finalizado la conexion
+[INFO] 04:22:18:192 Cpu/(75537:75537): Cliente conectado (a CPU_SV)
+
+[INFO] 04:22:22:563 Cpu/(75537:75638): Recibi PCB id: 0
+[INFO] 04:22:22:563 Cpu/(75537:75638): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:22:22:563 Cpu/(75537:75638): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:22:22:563 Cpu/(75537:75638): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:22:22:564 Cpu/(75537:75638): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:22:22:564 Cpu/(75537:75638): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:22:22:564 Cpu/(75537:75638): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:22:22:564 Cpu/(75537:75638): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:22:22:564 Cpu/(75537:75638): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 04:22:22:566 Cpu/(75537:75638): Recibi PCB id: 0
+[INFO] 04:22:22:566 Cpu/(75537:75638): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 04:22:23:960 Cpu/(75537:75638): Recibi PCB id: 1
+[INFO] 04:22:23:960 Cpu/(75537:75638): En CPU
+[INFO] 04:22:24:960 Cpu/(75537:75638): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: 10
+
+[INFO] 04:22:24:960 Cpu/(75537:75638): En CPU
+[INFO] 04:22:25:961 Cpu/(75537:75638): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: 11
+
+[INFO] 04:22:25:961 Cpu/(75537:75638): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 04:22:25:962 Cpu/(75537:75638): Recibi PCB id: 0
+[INFO] 04:22:25:962 Cpu/(75537:75638): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:22:25:962 Cpu/(75537:75638): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:22:25:963 Cpu/(75537:75638): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:22:25:963 Cpu/(75537:75638): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:22:25:963 Cpu/(75537:75638): PID: 0 - Ejecutando EXIT
+[INFO] 04:22:25:965 Cpu/(75537:75638): Recibi PCB id: 1
+[INFO] 04:22:25:965 Cpu/(75537:75638): PID: 1 - Ejecutando EXIT
+[INFO] 04:24:11:085 Cpu/(75537:75638): Recibi PCB id: 2
+[INFO] 04:24:11:085 Cpu/(75537:75638): PID: 2 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:24:11:085 Cpu/(75537:75638): PID: 2 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:24:11:085 Cpu/(75537:75638): PID: 2 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:24:11:085 Cpu/(75537:75638): PID: 2 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:24:11:085 Cpu/(75537:75638): PID: 2 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:24:11:085 Cpu/(75537:75638): PID: 2 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:24:11:085 Cpu/(75537:75638): PID: 2 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:24:11:085 Cpu/(75537:75638): PID: 2 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 04:24:11:086 Cpu/(75537:75638): Recibi PCB id: 2
+[INFO] 04:24:11:086 Cpu/(75537:75638): PID: 2 - Listo para ejecutar F_TRUNCATE 
+[INFO] 04:24:14:099 Cpu/(75537:75638): Recibi PCB id: 2
+[INFO] 04:24:14:099 Cpu/(75537:75638): PID: 2 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:24:14:099 Cpu/(75537:75638): PID: 2 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:24:14:099 Cpu/(75537:75638): PID: 2 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:24:14:099 Cpu/(75537:75638): PID: 2 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:24:14:099 Cpu/(75537:75638): PID: 2 - Ejecutando EXIT
+[INFO] 04:24:54:354 Cpu/(75537:75638): Se ha finalizado la conexion
+[INFO] 04:25:04:937 Cpu/(75652:75652): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 04:25:04:940 Cpu/(75652:75652): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 04:25:04:940 Cpu/(75652:75652): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 04:25:09:016 Cpu/(75652:75652): Cliente conectado (a CPU_SV)
+
+[INFO] 04:25:15:440 Cpu/(75652:75657): Recibi PCB id: 0
+[INFO] 04:25:15:440 Cpu/(75652:75657): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:25:15:440 Cpu/(75652:75657): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:25:15:440 Cpu/(75652:75657): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:25:15:440 Cpu/(75652:75657): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:25:15:440 Cpu/(75652:75657): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:25:15:440 Cpu/(75652:75657): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:25:15:440 Cpu/(75652:75657): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:25:15:440 Cpu/(75652:75657): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 04:25:15:441 Cpu/(75652:75657): Recibi PCB id: 0
+[INFO] 04:25:15:441 Cpu/(75652:75657): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 04:25:16:916 Cpu/(75652:75657): Recibi PCB id: 1
+[INFO] 04:25:16:916 Cpu/(75652:75657): En CPU
+[INFO] 04:25:17:916 Cpu/(75652:75657): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: 10
+
+[INFO] 04:25:17:916 Cpu/(75652:75657): En CPU
+[INFO] 04:25:18:917 Cpu/(75652:75657): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: 11
+
+[INFO] 04:25:18:918 Cpu/(75652:75657): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 04:25:18:920 Cpu/(75652:75657): Recibi PCB id: 0
+[INFO] 04:25:18:920 Cpu/(75652:75657): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:25:18:920 Cpu/(75652:75657): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:25:18:920 Cpu/(75652:75657): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:25:18:921 Cpu/(75652:75657): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:25:18:921 Cpu/(75652:75657): PID: 0 - Ejecutando EXIT
+[INFO] 04:25:18:924 Cpu/(75652:75657): Recibi PCB id: 1
+[INFO] 04:25:18:924 Cpu/(75652:75657): PID: 1 - Ejecutando EXIT
+[INFO] 04:26:04:509 Cpu/(75652:75657): Se ha finalizado la conexion
+[INFO] 04:26:11:650 Cpu/(75716:75716): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 04:26:11:651 Cpu/(75716:75716): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 04:26:11:651 Cpu/(75716:75716): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 04:26:15:558 Cpu/(75716:75716): Cliente conectado (a CPU_SV)
+
+[INFO] 04:26:21:180 Cpu/(75716:75721): Recibi PCB id: 0
+[INFO] 04:26:21:181 Cpu/(75716:75721): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:26:21:181 Cpu/(75716:75721): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:26:21:181 Cpu/(75716:75721): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:26:21:181 Cpu/(75716:75721): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:26:21:181 Cpu/(75716:75721): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:26:21:181 Cpu/(75716:75721): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:26:21:181 Cpu/(75716:75721): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:26:21:181 Cpu/(75716:75721): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 04:26:21:185 Cpu/(75716:75721): Recibi PCB id: 0
+[INFO] 04:26:21:186 Cpu/(75716:75721): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 04:26:22:464 Cpu/(75716:75721): Recibi PCB id: 1
+[INFO] 04:26:22:464 Cpu/(75716:75721): En CPU
+[INFO] 04:26:23:464 Cpu/(75716:75721): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: 10
+
+[INFO] 04:26:23:464 Cpu/(75716:75721): En CPU
+[INFO] 04:26:24:465 Cpu/(75716:75721): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: 11
+
+[INFO] 04:26:24:465 Cpu/(75716:75721): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 04:26:31:210 Cpu/(75716:75721): Recibi PCB id: 0
+[INFO] 04:26:31:210 Cpu/(75716:75721): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:26:31:210 Cpu/(75716:75721): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:26:31:210 Cpu/(75716:75721): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:26:31:210 Cpu/(75716:75721): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:26:31:210 Cpu/(75716:75721): PID: 0 - Ejecutando EXIT
+[INFO] 04:26:31:213 Cpu/(75716:75721): Recibi PCB id: 1
+[INFO] 04:26:31:213 Cpu/(75716:75721): PID: 1 - Ejecutando EXIT
+[INFO] 04:28:14:347 Cpu/(75716:75721): Se ha finalizado la conexion
+[INFO] 04:28:20:203 Cpu/(75716:75716): Cliente conectado (a CPU_SV)
+
+[INFO] 04:28:26:362 Cpu/(75716:75740): Recibi PCB id: 0
+[INFO] 04:28:26:362 Cpu/(75716:75740): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:28:26:362 Cpu/(75716:75740): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:28:26:362 Cpu/(75716:75740): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:28:26:362 Cpu/(75716:75740): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:28:26:363 Cpu/(75716:75740): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:28:26:363 Cpu/(75716:75740): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:28:26:363 Cpu/(75716:75740): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:28:26:363 Cpu/(75716:75740): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 04:28:26:365 Cpu/(75716:75740): Recibi PCB id: 0
+[INFO] 04:28:26:365 Cpu/(75716:75740): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 04:28:27:577 Cpu/(75716:75740): Recibi PCB id: 1
+[INFO] 04:28:27:577 Cpu/(75716:75740): En CPU
+[INFO] 04:28:28:577 Cpu/(75716:75740): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: 10
+
+[INFO] 04:28:28:578 Cpu/(75716:75740): En CPU
+[INFO] 04:28:29:578 Cpu/(75716:75740): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: 11
+
+[INFO] 04:28:29:579 Cpu/(75716:75740): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 04:28:36:384 Cpu/(75716:75740): Recibi PCB id: 1
+[INFO] 04:28:36:384 Cpu/(75716:75740): PID: 1 - Ejecutando EXIT
+[INFO] 04:28:36:386 Cpu/(75716:75740): Recibi PCB id: 0
+[INFO] 04:28:36:386 Cpu/(75716:75740): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:28:36:386 Cpu/(75716:75740): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:28:36:386 Cpu/(75716:75740): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:28:36:386 Cpu/(75716:75740): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:28:36:386 Cpu/(75716:75740): PID: 0 - Ejecutando EXIT
+[INFO] 04:28:48:023 Cpu/(75716:75740): Se ha finalizado la conexion
+[INFO] 04:30:14:906 Cpu/(75765:75765): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 04:30:14:907 Cpu/(75765:75765): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 04:30:14:908 Cpu/(75765:75765): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 04:30:18:102 Cpu/(75765:75765): Cliente conectado (a CPU_SV)
+
+[INFO] 04:30:54:319 Cpu/(75765:75770): Recibi PCB id: 0
+[INFO] 04:30:54:319 Cpu/(75765:75770): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:30:54:319 Cpu/(75765:75770): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:30:54:319 Cpu/(75765:75770): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:30:54:319 Cpu/(75765:75770): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:30:54:319 Cpu/(75765:75770): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:30:54:319 Cpu/(75765:75770): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:30:54:319 Cpu/(75765:75770): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:30:54:319 Cpu/(75765:75770): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 04:30:54:320 Cpu/(75765:75770): Recibi PCB id: 0
+[INFO] 04:30:54:320 Cpu/(75765:75770): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 04:30:56:168 Cpu/(75765:75770): Recibi PCB id: 1
+[INFO] 04:30:56:168 Cpu/(75765:75770): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: HOLA
+ 
+[INFO] 04:31:04:341 Cpu/(75765:75770): Recibi PCB id: 1
+[INFO] 04:31:04:341 Cpu/(75765:75770): PID: 1 - Listo para ejecutar F_TRUNCATE 
+[INFO] 04:31:04:342 Cpu/(75765:75770): Recibi PCB id: 2
+[INFO] 04:31:04:342 Cpu/(75765:75770): En CPU
+[INFO] 04:31:05:342 Cpu/(75765:75770): PID: 2 - Ejecutando SET parametro 1: AX parametro 2: 10
+
+[INFO] 04:31:05:343 Cpu/(75765:75770): En CPU
+[INFO] 04:31:06:344 Cpu/(75765:75770): PID: 2 - Ejecutando SET parametro 1: AX parametro 2: 11
+
+[INFO] 04:31:06:344 Cpu/(75765:75770): PID: 2 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 04:31:14:551 Cpu/(75765:75770): Recibi PCB id: 2
+[INFO] 04:31:14:552 Cpu/(75765:75770): PID: 2 - Ejecutando EXIT
+[INFO] 04:31:14:554 Cpu/(75765:75770): Recibi PCB id: 0
+[INFO] 04:31:14:554 Cpu/(75765:75770): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:31:14:554 Cpu/(75765:75770): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:31:14:554 Cpu/(75765:75770): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:31:14:554 Cpu/(75765:75770): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:31:14:554 Cpu/(75765:75770): PID: 0 - Ejecutando EXIT
+[INFO] 04:31:14:557 Cpu/(75765:75770): Recibi PCB id: 1
+[INFO] 04:31:14:557 Cpu/(75765:75770): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 04:31:17:558 Cpu/(75765:75770): Recibi PCB id: 1
+[INFO] 04:31:17:559 Cpu/(75765:75770): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 04:36:14:963 Cpu/(75765:75770): Se ha finalizado la conexion
+[INFO] 04:36:25:010 Cpu/(75765:75765): Cliente conectado (a CPU_SV)
+
+[INFO] 04:36:32:318 Cpu/(75765:75799): Recibi PCB id: 0
+[INFO] 04:36:32:318 Cpu/(75765:75799): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:36:32:318 Cpu/(75765:75799): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:36:32:318 Cpu/(75765:75799): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:36:32:318 Cpu/(75765:75799): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:36:32:319 Cpu/(75765:75799): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:36:32:319 Cpu/(75765:75799): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:36:32:319 Cpu/(75765:75799): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:36:32:319 Cpu/(75765:75799): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 04:36:32:323 Cpu/(75765:75799): Recibi PCB id: 0
+[INFO] 04:36:32:324 Cpu/(75765:75799): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 04:36:33:580 Cpu/(75765:75799): Recibi PCB id: 1
+[INFO] 04:36:33:580 Cpu/(75765:75799): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: HOLA
+ 
+[INFO] 04:36:42:610 Cpu/(75765:75799): Recibi PCB id: 1
+[INFO] 04:36:42:610 Cpu/(75765:75799): PID: 1 - Listo para ejecutar F_TRUNCATE 
+[INFO] 04:36:42:611 Cpu/(75765:75799): Recibi PCB id: 2
+[INFO] 04:36:42:611 Cpu/(75765:75799): En CPU
+[INFO] 04:36:43:611 Cpu/(75765:75799): PID: 2 - Ejecutando SET parametro 1: AX parametro 2: 10
+
+[INFO] 04:36:43:612 Cpu/(75765:75799): En CPU
+[INFO] 04:36:44:612 Cpu/(75765:75799): PID: 2 - Ejecutando SET parametro 1: AX parametro 2: 11
+
+[INFO] 04:36:44:613 Cpu/(75765:75799): PID: 2 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 04:36:52:671 Cpu/(75765:75799): Recibi PCB id: 2
+[INFO] 04:36:52:671 Cpu/(75765:75799): PID: 2 - Ejecutando EXIT
+[INFO] 04:36:52:673 Cpu/(75765:75799): Recibi PCB id: 0
+[INFO] 04:36:52:673 Cpu/(75765:75799): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:36:52:673 Cpu/(75765:75799): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:36:52:673 Cpu/(75765:75799): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:36:52:673 Cpu/(75765:75799): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:36:52:673 Cpu/(75765:75799): PID: 0 - Ejecutando EXIT
+[INFO] 04:36:52:675 Cpu/(75765:75799): Recibi PCB id: 1
+[INFO] 04:36:52:675 Cpu/(75765:75799): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 04:36:55:681 Cpu/(75765:75799): Recibi PCB id: 1
+[INFO] 04:36:55:681 Cpu/(75765:75799): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 04:37:32:759 Cpu/(75765:75799): Se ha finalizado la conexion
+[INFO] 04:37:37:588 Cpu/(75765:75765): Cliente conectado (a CPU_SV)
+
+[INFO] 04:38:38:591 Cpu/(75765:75823): Recibi PCB id: 0
+[INFO] 04:38:38:591 Cpu/(75765:75823): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:38:38:591 Cpu/(75765:75823): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:38:38:591 Cpu/(75765:75823): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:38:38:591 Cpu/(75765:75823): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:38:38:591 Cpu/(75765:75823): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:38:38:591 Cpu/(75765:75823): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:38:38:591 Cpu/(75765:75823): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:38:38:591 Cpu/(75765:75823): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 04:38:38:592 Cpu/(75765:75823): Recibi PCB id: 0
+[INFO] 04:38:38:592 Cpu/(75765:75823): PID: 0 - Ejecutando YIELD 
+[INFO] 04:38:38:592 Cpu/(75765:75823): Recibi PCB id: 0
+[INFO] 04:38:38:592 Cpu/(75765:75823): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 04:38:39:925 Cpu/(75765:75823): Recibi PCB id: 1
+[INFO] 04:38:39:925 Cpu/(75765:75823): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: HOLA
+ 
+[INFO] 04:38:48:611 Cpu/(75765:75823): Recibi PCB id: 1
+[INFO] 04:38:48:611 Cpu/(75765:75823): PID: 1 - Listo para ejecutar F_TRUNCATE 
+[INFO] 04:38:48:612 Cpu/(75765:75823): Recibi PCB id: 2
+[INFO] 04:38:48:612 Cpu/(75765:75823): En CPU
+[INFO] 04:38:49:612 Cpu/(75765:75823): PID: 2 - Ejecutando SET parametro 1: AX parametro 2: 10
+
+[INFO] 04:38:49:613 Cpu/(75765:75823): En CPU
+[INFO] 04:38:50:614 Cpu/(75765:75823): PID: 2 - Ejecutando SET parametro 1: AX parametro 2: 11
+
+[INFO] 04:38:50:614 Cpu/(75765:75823): PID: 2 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 04:38:58:634 Cpu/(75765:75823): Recibi PCB id: 2
+[INFO] 04:38:58:634 Cpu/(75765:75823): PID: 2 - Ejecutando EXIT
+[INFO] 04:38:58:636 Cpu/(75765:75823): Recibi PCB id: 0
+[INFO] 04:38:58:637 Cpu/(75765:75823): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:38:58:637 Cpu/(75765:75823): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:38:58:637 Cpu/(75765:75823): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:38:58:637 Cpu/(75765:75823): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:38:58:637 Cpu/(75765:75823): PID: 0 - Ejecutando EXIT
+[INFO] 04:38:58:639 Cpu/(75765:75823): Recibi PCB id: 1
+[INFO] 04:38:58:640 Cpu/(75765:75823): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 04:39:01:642 Cpu/(75765:75823): Recibi PCB id: 1
+[INFO] 04:39:01:642 Cpu/(75765:75823): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 04:39:01:643 Cpu/(75765:75823): Recibi PCB id: 1
+[INFO] 04:39:01:643 Cpu/(75765:75823): PID: 1 - Ejecutando EXIT
+[INFO] 04:40:54:052 Cpu/(75765:75823): Recibi PCB id: 3
+[INFO] 04:40:54:052 Cpu/(75765:75823): PID: 3 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:40:54:052 Cpu/(75765:75823): PID: 3 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:40:54:052 Cpu/(75765:75823): PID: 3 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:40:54:052 Cpu/(75765:75823): PID: 3 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:40:54:052 Cpu/(75765:75823): PID: 3 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:40:54:052 Cpu/(75765:75823): PID: 3 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:40:54:052 Cpu/(75765:75823): PID: 3 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:40:54:052 Cpu/(75765:75823): PID: 3 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 04:40:54:052 Cpu/(75765:75823): Recibi PCB id: 3
+[INFO] 04:40:54:052 Cpu/(75765:75823): PID: 3 - Ejecutando IO parametro 1: 3
+ 
+[INFO] 04:40:55:968 Cpu/(75765:75823): Recibi PCB id: 4
+[INFO] 04:40:55:968 Cpu/(75765:75823): PID: 4 - Ejecutando F_OPEN - Solicita a kernel abrir: HOLA
+ 
+[INFO] 04:40:55:968 Cpu/(75765:75823): Recibi PCB id: 4
+[INFO] 04:40:55:968 Cpu/(75765:75823): PID: 4 - Listo para ejecutar F_TRUNCATE 
+[INFO] 04:40:57:054 Cpu/(75765:75823): Recibi PCB id: 3
+[INFO] 04:40:57:054 Cpu/(75765:75823): PID: 3 - Listo para ejecutar F_TRUNCATE 
+[INFO] 04:41:45:090 Cpu/(75765:75823): Se ha finalizado la conexion
+[INFO] 04:41:53:656 Cpu/(75857:75857): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 04:41:53:660 Cpu/(75857:75857): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 04:41:53:662 Cpu/(75857:75857): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 04:42:04:304 Cpu/(75857:75857): Cliente conectado (a CPU_SV)
+
+[INFO] 04:42:29:491 Cpu/(75857:75863): Recibi PCB id: 0
+[INFO] 04:42:29:491 Cpu/(75857:75863): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:42:29:491 Cpu/(75857:75863): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:42:29:491 Cpu/(75857:75863): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:42:29:491 Cpu/(75857:75863): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:42:29:491 Cpu/(75857:75863): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:42:29:492 Cpu/(75857:75863): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:42:29:492 Cpu/(75857:75863): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:42:29:492 Cpu/(75857:75863): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 04:42:29:492 Cpu/(75857:75863): Recibi PCB id: 0
+[INFO] 04:42:29:492 Cpu/(75857:75863): PID: 0 - Ejecutando IO parametro 1: 3
+ 
+[INFO] 04:42:31:256 Cpu/(75857:75863): Recibi PCB id: 1
+[INFO] 04:42:31:256 Cpu/(75857:75863): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: HOLA
+ 
+[INFO] 04:42:31:256 Cpu/(75857:75863): Recibi PCB id: 1
+[INFO] 04:42:31:256 Cpu/(75857:75863): PID: 1 - Listo para ejecutar F_TRUNCATE 
+[INFO] 04:42:32:493 Cpu/(75857:75863): Recibi PCB id: 0
+[INFO] 04:42:32:493 Cpu/(75857:75863): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 04:50:26:955 Cpu/(75857:75863): Se ha finalizado la conexion
+[INFO] 04:50:28:475 Cpu/(75857:75857): Cliente conectado (a CPU_SV)
+
+[INFO] 04:50:35:540 Cpu/(75857:75934): Recibi PCB id: 0
+[INFO] 04:50:35:540 Cpu/(75857:75934): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:50:35:540 Cpu/(75857:75934): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:50:35:540 Cpu/(75857:75934): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:50:35:540 Cpu/(75857:75934): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:50:35:541 Cpu/(75857:75934): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:50:35:541 Cpu/(75857:75934): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:50:35:541 Cpu/(75857:75934): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 04:50:35:541 Cpu/(75857:75934): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 04:50:35:574 Cpu/(75857:75934): Recibi PCB id: 0
+[INFO] 04:50:35:574 Cpu/(75857:75934): PID: 0 - Ejecutando IO parametro 1: 3
+ 
+[INFO] 04:50:36:624 Cpu/(75857:75934): Recibi PCB id: 1
+[INFO] 04:50:36:624 Cpu/(75857:75934): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: HOLA
+ 
+[INFO] 04:50:36:624 Cpu/(75857:75934): Recibi PCB id: 1
+[INFO] 04:50:36:624 Cpu/(75857:75934): PID: 1 - Listo para ejecutar F_TRUNCATE 
+[INFO] 04:50:38:578 Cpu/(75857:75934): Recibi PCB id: 0
+[INFO] 04:50:38:578 Cpu/(75857:75934): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 05:00:32:508 Cpu/(75857:75934): Se ha finalizado la conexion
+[INFO] 05:00:34:789 Cpu/(75857:75857): Cliente conectado (a CPU_SV)
+
+[INFO] 05:00:34:796 Cpu/(75857:76050): Se ha finalizado la conexion
+[INFO] 05:00:42:054 Cpu/(75857:75857): Cliente conectado (a CPU_SV)
+
+[INFO] 05:00:42:056 Cpu/(75857:76055): Se ha finalizado la conexion
+[INFO] 05:01:01:979 Cpu/(75857:75857): Cliente conectado (a CPU_SV)
+
+[INFO] 05:01:01:980 Cpu/(75857:76062): Se ha finalizado la conexion
+[INFO] 05:01:40:452 Cpu/(75857:75857): Cliente conectado (a CPU_SV)
+
+[INFO] 05:01:47:259 Cpu/(75857:76072): Recibi PCB id: 0
+[INFO] 05:01:47:259 Cpu/(75857:76072): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:01:47:260 Cpu/(75857:76072): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:01:47:260 Cpu/(75857:76072): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:01:47:260 Cpu/(75857:76072): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:01:47:260 Cpu/(75857:76072): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:01:47:260 Cpu/(75857:76072): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:01:47:260 Cpu/(75857:76072): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:01:47:260 Cpu/(75857:76072): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 05:01:47:270 Cpu/(75857:76072): Recibi PCB id: 0
+[INFO] 05:01:47:270 Cpu/(75857:76072): PID: 0 - Ejecutando IO parametro 1: 3
+ 
+[INFO] 05:01:48:880 Cpu/(75857:76072): Recibi PCB id: 1
+[INFO] 05:01:48:880 Cpu/(75857:76072): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: HOLA
+ 
+[INFO] 05:01:48:883 Cpu/(75857:76072): Recibi PCB id: 1
+[INFO] 05:01:48:883 Cpu/(75857:76072): PID: 1 - Listo para ejecutar F_TRUNCATE 
+[INFO] 05:01:50:275 Cpu/(75857:76072): Recibi PCB id: 0
+[INFO] 05:01:50:276 Cpu/(75857:76072): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 05:10:18:166 Cpu/(75857:76072): Se ha finalizado la conexion
+[INFO] 05:10:21:655 Cpu/(75857:75857): Cliente conectado (a CPU_SV)
+
+[INFO] 05:10:32:763 Cpu/(75857:76189): Recibi PCB id: 0
+[INFO] 05:10:32:763 Cpu/(75857:76189): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:10:32:763 Cpu/(75857:76189): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:10:32:763 Cpu/(75857:76189): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:10:32:763 Cpu/(75857:76189): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:10:32:763 Cpu/(75857:76189): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:10:32:763 Cpu/(75857:76189): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:10:32:763 Cpu/(75857:76189): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:10:32:763 Cpu/(75857:76189): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 05:10:32:824 Cpu/(75857:76189): Recibi PCB id: 0
+[INFO] 05:10:32:824 Cpu/(75857:76189): PID: 0 - Ejecutando IO parametro 1: 3
+ 
+[INFO] 05:10:34:564 Cpu/(75857:76189): Recibi PCB id: 1
+[INFO] 05:10:34:564 Cpu/(75857:76189): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: HOLA
+ 
+[INFO] 05:10:34:614 Cpu/(75857:76189): Recibi PCB id: 1
+[INFO] 05:10:34:614 Cpu/(75857:76189): PID: 1 - Listo para ejecutar F_TRUNCATE 
+[INFO] 05:10:35:827 Cpu/(75857:76189): Recibi PCB id: 0
+[INFO] 05:10:35:827 Cpu/(75857:76189): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 05:11:10:608 Cpu/(75857:76189): Se ha finalizado la conexion
+[INFO] 05:12:30:219 Cpu/(75857:75857): Cliente conectado (a CPU_SV)
+
+[INFO] 05:12:32:536 Cpu/(75857:76250): Recibi PCB id: 0
+[INFO] 05:12:32:536 Cpu/(75857:76250): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:12:32:536 Cpu/(75857:76250): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:12:32:536 Cpu/(75857:76250): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:12:32:536 Cpu/(75857:76250): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:12:32:536 Cpu/(75857:76250): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:12:32:536 Cpu/(75857:76250): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:12:32:536 Cpu/(75857:76250): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:12:32:536 Cpu/(75857:76250): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 05:12:32:537 Cpu/(75857:76250): Recibi PCB id: 0
+[INFO] 05:12:32:538 Cpu/(75857:76250): PID: 0 - Ejecutando IO parametro 1: 3
+ 
+[INFO] 05:12:33:876 Cpu/(75857:76250): Recibi PCB id: 1
+[INFO] 05:12:33:876 Cpu/(75857:76250): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: HOLA
+ 
+[INFO] 05:12:33:876 Cpu/(75857:76250): Recibi PCB id: 1
+[INFO] 05:12:33:876 Cpu/(75857:76250): PID: 1 - Listo para ejecutar F_TRUNCATE 
+[INFO] 05:12:35:543 Cpu/(75857:76250): Recibi PCB id: 0
+[INFO] 05:12:35:543 Cpu/(75857:76250): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 05:14:06:084 Cpu/(75857:76250): Se ha finalizado la conexion
+[INFO] 05:14:11:022 Cpu/(75857:75857): Cliente conectado (a CPU_SV)
+
+[INFO] 05:14:11:036 Cpu/(75857:76320): Se ha finalizado la conexion
+[INFO] 05:14:17:137 Cpu/(75857:75857): Cliente conectado (a CPU_SV)
+
+[INFO] 05:14:17:142 Cpu/(75857:76325): Se ha finalizado la conexion
+[INFO] 05:14:20:861 Cpu/(75857:75857): Cliente conectado (a CPU_SV)
+
+[INFO] 05:14:20:863 Cpu/(75857:76330): Se ha finalizado la conexion
+[INFO] 05:14:25:469 Cpu/(75857:75857): Cliente conectado (a CPU_SV)
+
+[INFO] 05:14:25:471 Cpu/(75857:76335): Se ha finalizado la conexion
+[INFO] 05:15:42:792 Cpu/(75857:75857): Cliente conectado (a CPU_SV)
+
+[INFO] 05:15:46:248 Cpu/(75857:76343): Recibi PCB id: 0
+[INFO] 05:15:46:248 Cpu/(75857:76343): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:15:46:248 Cpu/(75857:76343): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:15:46:248 Cpu/(75857:76343): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:15:46:248 Cpu/(75857:76343): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:15:46:248 Cpu/(75857:76343): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:15:46:249 Cpu/(75857:76343): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:15:46:249 Cpu/(75857:76343): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:15:46:249 Cpu/(75857:76343): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 05:15:46:249 Cpu/(75857:76343): Recibi PCB id: 0
+[INFO] 05:15:46:249 Cpu/(75857:76343): PID: 0 - Ejecutando IO parametro 1: 3
+ 
+[INFO] 05:15:48:328 Cpu/(75857:76343): Recibi PCB id: 1
+[INFO] 05:15:48:328 Cpu/(75857:76343): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: HOLA
+ 
+[INFO] 05:15:48:328 Cpu/(75857:76343): Recibi PCB id: 1
+[INFO] 05:15:48:328 Cpu/(75857:76343): PID: 1 - Listo para ejecutar F_TRUNCATE 
+[INFO] 05:15:49:251 Cpu/(75857:76343): Recibi PCB id: 0
+[INFO] 05:15:49:251 Cpu/(75857:76343): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 05:15:58:833 Cpu/(75857:76343): Recibi PCB id: 1
+[INFO] 05:15:58:833 Cpu/(75857:76343): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 05:16:40:966 Cpu/(75857:76343): Se ha finalizado la conexion
+[INFO] 05:23:29:542 Cpu/(75857:75857): Cliente conectado (a CPU_SV)
+
+[INFO] 05:23:31:222 Cpu/(75857:76427): Recibi PCB id: 0
+[INFO] 05:23:31:222 Cpu/(75857:76427): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:23:31:222 Cpu/(75857:76427): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:23:31:222 Cpu/(75857:76427): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:23:31:222 Cpu/(75857:76427): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:23:31:222 Cpu/(75857:76427): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:23:31:222 Cpu/(75857:76427): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:23:31:222 Cpu/(75857:76427): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:23:31:222 Cpu/(75857:76427): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 05:23:31:223 Cpu/(75857:76427): Recibi PCB id: 0
+[INFO] 05:23:31:223 Cpu/(75857:76427): PID: 0 - Ejecutando IO parametro 1: 3
+ 
+[INFO] 05:23:33:076 Cpu/(75857:76427): Recibi PCB id: 1
+[INFO] 05:23:33:076 Cpu/(75857:76427): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: HOLA
+ 
+[INFO] 05:23:33:076 Cpu/(75857:76427): Recibi PCB id: 1
+[INFO] 05:23:33:076 Cpu/(75857:76427): PID: 1 - Listo para ejecutar F_TRUNCATE 
+[INFO] 05:23:34:226 Cpu/(75857:76427): Recibi PCB id: 0
+[INFO] 05:23:34:226 Cpu/(75857:76427): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 05:23:43:334 Cpu/(75857:76427): Recibi PCB id: 1
+[INFO] 05:23:43:334 Cpu/(75857:76427): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 05:27:43:645 Cpu/(75857:76427): Se ha finalizado la conexion
+[INFO] 05:27:47:707 Cpu/(75857:75857): Cliente conectado (a CPU_SV)
+
+[INFO] 05:27:52:455 Cpu/(75857:76548): Recibi PCB id: 0
+[INFO] 05:27:52:455 Cpu/(75857:76548): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:27:52:455 Cpu/(75857:76548): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:27:52:455 Cpu/(75857:76548): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:27:52:455 Cpu/(75857:76548): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:27:52:455 Cpu/(75857:76548): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:27:52:455 Cpu/(75857:76548): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:27:52:455 Cpu/(75857:76548): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:27:52:455 Cpu/(75857:76548): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 05:27:52:512 Cpu/(75857:76548): Recibi PCB id: 0
+[INFO] 05:27:52:512 Cpu/(75857:76548): PID: 0 - Ejecutando IO parametro 1: 3
+ 
+[INFO] 05:27:54:864 Cpu/(75857:76548): Recibi PCB id: 1
+[INFO] 05:27:54:864 Cpu/(75857:76548): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: HOLA
+ 
+[INFO] 05:27:54:865 Cpu/(75857:76548): Recibi PCB id: 1
+[INFO] 05:27:54:865 Cpu/(75857:76548): PID: 1 - Listo para ejecutar F_TRUNCATE 
+[INFO] 05:27:55:514 Cpu/(75857:76548): Recibi PCB id: 0
+[INFO] 05:27:55:514 Cpu/(75857:76548): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 05:28:04:918 Cpu/(75857:76548): Recibi PCB id: 1
+[INFO] 05:28:04:918 Cpu/(75857:76548): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 05:28:15:024 Cpu/(75857:76548): Recibi PCB id: 0
+[INFO] 05:28:15:024 Cpu/(75857:76548): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:28:15:024 Cpu/(75857:76548): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:28:15:024 Cpu/(75857:76548): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:28:15:024 Cpu/(75857:76548): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 05:28:15:024 Cpu/(75857:76548): PID: 0 - Ejecutando EXIT
+[INFO] 05:28:18:027 Cpu/(75857:76548): Recibi PCB id: 1
+[INFO] 05:28:18:028 Cpu/(75857:76548): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 05:28:18:028 Cpu/(75857:76548): Recibi PCB id: 1
+[INFO] 05:28:18:029 Cpu/(75857:76548): PID: 1 - Ejecutando EXIT
+[INFO] 05:32:23:767 Cpu/(75857:76548): Se ha finalizado la conexion

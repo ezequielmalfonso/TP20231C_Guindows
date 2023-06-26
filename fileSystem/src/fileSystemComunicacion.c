@@ -140,7 +140,7 @@ static void procesar_conexion(void* void_args) {
 		 case F_TRUNCATE:
 			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
 			 log_info(logger, "Se recibio F_TRUNCATE con parametros %s, %s y %s", parametro1, parametro2, parametro3);
-			 sleep(3);
+			 sleep(5);
 			 int p = datosFCB(pathArchivo);
 			 if(p == -1) {	// No deberia entrar nunca
 				log_error(logger, "Error inesperado antes de cargar FCB");

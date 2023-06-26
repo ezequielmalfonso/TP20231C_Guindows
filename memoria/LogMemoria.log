@@ -2809,3 +2809,281 @@ ALGORITMO_ASIGNACION: BEST
 [INFO] 22:24:28:555 Memoria/(81712:81715): [KERNEL] Envio de segmento 0 para programa 0
 [INFO] 22:25:04:687 Memoria/(81712:81715): [KERNEL] Recibiendo solicitud de segmento para programa 1
 [INFO] 22:25:04:688 Memoria/(81712:81715): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 04:16:56:756 Memoria/(75527:75527): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 4096
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 04:16:56:781 Memoria/(75527:75527): Algoritmo BEST configurado
+[INFO] 04:16:56:782 Memoria/(75527:75527): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 04:16:56:808 Memoria/(75527:75527): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 04:17:07:291 Memoria/(75527:75528): Cliente conectado (a memoria_sv)
+
+[INFO] 04:17:07:292 Memoria/(75527:75528): RESPUESTA AL CONECTAR CPU
+[INFO] 04:17:12:150 Memoria/(75527:75529): Cliente conectado (a memoria_sv)
+
+[INFO] 04:17:12:150 Memoria/(75527:75529): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 04:17:22:634 Memoria/(75527:75530): Cliente conectado (a memoria_sv)
+
+[INFO] 04:17:22:635 Memoria/(75527:75530): RESPUESTA AL CONECTAR KERNEL
+[INFO] 04:17:35:029 Memoria/(75527:75530): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 04:17:35:030 Memoria/(75527:75530): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 04:17:37:817 Memoria/(75527:75530): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 04:17:37:817 Memoria/(75527:75530): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 04:18:17:155 Memoria/(75527:75530): Se ha finalizado la conexion
+[INFO] 04:18:20:222 Memoria/(75527:75530): Cliente conectado (a memoria_sv)
+
+[INFO] 04:18:20:223 Memoria/(75527:75530): RESPUESTA AL CONECTAR KERNEL
+[INFO] 04:18:27:446 Memoria/(75527:75530): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 04:18:27:446 Memoria/(75527:75530): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 04:22:15:278 Memoria/(75527:75530): Se ha finalizado la conexion
+[INFO] 04:22:18:193 Memoria/(75527:75530): Cliente conectado (a memoria_sv)
+
+[INFO] 04:22:18:193 Memoria/(75527:75530): RESPUESTA AL CONECTAR KERNEL
+[INFO] 04:22:22:560 Memoria/(75527:75530): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 04:22:22:560 Memoria/(75527:75530): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 04:22:23:959 Memoria/(75527:75530): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 04:22:23:959 Memoria/(75527:75530): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 04:24:11:083 Memoria/(75527:75530): [KERNEL] Recibiendo solicitud de segmento para programa 2
+[INFO] 04:24:11:083 Memoria/(75527:75530): [KERNEL] Envio de segmento 0 para programa 2
+[INFO] 04:24:54:353 Memoria/(75527:75530): Se ha finalizado la conexion
+[INFO] 04:24:56:076 Memoria/(75527:75529): Se ha finalizado la conexion
+[INFO] 04:24:57:779 Memoria/(75527:75528): Se ha finalizado la conexion
+[INFO] 04:25:01:937 Memoria/(75648:75648): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 4096
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 04:25:01:939 Memoria/(75648:75648): Algoritmo BEST configurado
+[INFO] 04:25:01:939 Memoria/(75648:75648): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 04:25:01:940 Memoria/(75648:75648): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 04:25:04:940 Memoria/(75648:75649): Cliente conectado (a memoria_sv)
+
+[INFO] 04:25:04:940 Memoria/(75648:75649): RESPUESTA AL CONECTAR CPU
+[INFO] 04:25:07:650 Memoria/(75648:75650): Cliente conectado (a memoria_sv)
+
+[INFO] 04:25:07:650 Memoria/(75648:75650): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 04:25:09:017 Memoria/(75648:75651): Cliente conectado (a memoria_sv)
+
+[INFO] 04:25:09:017 Memoria/(75648:75651): RESPUESTA AL CONECTAR KERNEL
+[INFO] 04:25:15:439 Memoria/(75648:75651): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 04:25:15:439 Memoria/(75648:75651): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 04:25:16:915 Memoria/(75648:75651): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 04:25:16:915 Memoria/(75648:75651): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 04:26:04:509 Memoria/(75648:75651): Se ha finalizado la conexion
+[INFO] 04:26:06:893 Memoria/(75648:75650): Se ha finalizado la conexion
+[INFO] 04:26:07:911 Memoria/(75648:75649): Se ha finalizado la conexion
+[INFO] 04:26:10:176 Memoria/(75712:75712): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 4096
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 04:26:10:178 Memoria/(75712:75712): Algoritmo BEST configurado
+[INFO] 04:26:10:178 Memoria/(75712:75712): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 04:26:10:179 Memoria/(75712:75712): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 04:26:11:651 Memoria/(75712:75713): Cliente conectado (a memoria_sv)
+
+[INFO] 04:26:11:651 Memoria/(75712:75713): RESPUESTA AL CONECTAR CPU
+[INFO] 04:26:13:865 Memoria/(75712:75714): Cliente conectado (a memoria_sv)
+
+[INFO] 04:26:13:865 Memoria/(75712:75714): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 04:26:15:559 Memoria/(75712:75715): Cliente conectado (a memoria_sv)
+
+[INFO] 04:26:15:559 Memoria/(75712:75715): RESPUESTA AL CONECTAR KERNEL
+[INFO] 04:26:21:177 Memoria/(75712:75715): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 04:26:21:177 Memoria/(75712:75715): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 04:26:22:463 Memoria/(75712:75715): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 04:26:22:463 Memoria/(75712:75715): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 04:28:14:347 Memoria/(75712:75715): Se ha finalizado la conexion
+[INFO] 04:28:20:204 Memoria/(75712:75715): Cliente conectado (a memoria_sv)
+
+[INFO] 04:28:20:205 Memoria/(75712:75715): RESPUESTA AL CONECTAR KERNEL
+[INFO] 04:28:26:358 Memoria/(75712:75715): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 04:28:26:358 Memoria/(75712:75715): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 04:28:27:575 Memoria/(75712:75715): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 04:28:27:576 Memoria/(75712:75715): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 04:28:48:023 Memoria/(75712:75715): Se ha finalizado la conexion
+[INFO] 04:28:49:946 Memoria/(75712:75714): Se ha finalizado la conexion
+[INFO] 04:28:51:514 Memoria/(75712:75713): Se ha finalizado la conexion
+[INFO] 04:30:12:899 Memoria/(75761:75761): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 4096
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 04:30:12:900 Memoria/(75761:75761): Algoritmo BEST configurado
+[INFO] 04:30:12:900 Memoria/(75761:75761): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 04:30:12:901 Memoria/(75761:75761): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 04:30:14:907 Memoria/(75761:75762): Cliente conectado (a memoria_sv)
+
+[INFO] 04:30:14:907 Memoria/(75761:75762): RESPUESTA AL CONECTAR CPU
+[INFO] 04:30:16:485 Memoria/(75761:75763): Cliente conectado (a memoria_sv)
+
+[INFO] 04:30:16:486 Memoria/(75761:75763): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 04:30:18:102 Memoria/(75761:75764): Cliente conectado (a memoria_sv)
+
+[INFO] 04:30:18:103 Memoria/(75761:75764): RESPUESTA AL CONECTAR KERNEL
+[INFO] 04:30:54:318 Memoria/(75761:75764): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 04:30:54:318 Memoria/(75761:75764): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 04:30:56:167 Memoria/(75761:75764): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 04:30:56:167 Memoria/(75761:75764): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 04:30:57:635 Memoria/(75761:75764): [KERNEL] Recibiendo solicitud de segmento para programa 2
+[INFO] 04:30:57:635 Memoria/(75761:75764): [KERNEL] Envio de segmento 0 para programa 2
+[INFO] 04:36:15:520 Memoria/(75761:75764): Se ha finalizado la conexion
+[INFO] 04:36:25:011 Memoria/(75761:75764): Cliente conectado (a memoria_sv)
+
+[INFO] 04:36:25:012 Memoria/(75761:75764): RESPUESTA AL CONECTAR KERNEL
+[INFO] 04:36:32:317 Memoria/(75761:75764): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 04:36:32:317 Memoria/(75761:75764): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 04:36:33:579 Memoria/(75761:75764): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 04:36:33:579 Memoria/(75761:75764): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 04:36:34:992 Memoria/(75761:75764): [KERNEL] Recibiendo solicitud de segmento para programa 2
+[INFO] 04:36:34:992 Memoria/(75761:75764): [KERNEL] Envio de segmento 0 para programa 2
+[INFO] 04:37:32:758 Memoria/(75761:75764): Se ha finalizado la conexion
+[INFO] 04:37:37:588 Memoria/(75761:75764): Cliente conectado (a memoria_sv)
+
+[INFO] 04:37:37:589 Memoria/(75761:75764): RESPUESTA AL CONECTAR KERNEL
+[INFO] 04:38:38:590 Memoria/(75761:75764): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 04:38:38:590 Memoria/(75761:75764): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 04:38:39:923 Memoria/(75761:75764): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 04:38:39:924 Memoria/(75761:75764): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 04:38:42:051 Memoria/(75761:75764): [KERNEL] Recibiendo solicitud de segmento para programa 2
+[INFO] 04:38:42:051 Memoria/(75761:75764): [KERNEL] Envio de segmento 0 para programa 2
+[INFO] 04:40:54:051 Memoria/(75761:75764): [KERNEL] Recibiendo solicitud de segmento para programa 3
+[INFO] 04:40:54:051 Memoria/(75761:75764): [KERNEL] Envio de segmento 0 para programa 3
+[INFO] 04:40:55:967 Memoria/(75761:75764): [KERNEL] Recibiendo solicitud de segmento para programa 4
+[INFO] 04:40:55:967 Memoria/(75761:75764): [KERNEL] Envio de segmento 0 para programa 4
+[INFO] 04:40:58:783 Memoria/(75761:75764): [KERNEL] Recibiendo solicitud de segmento para programa 5
+[INFO] 04:40:58:783 Memoria/(75761:75764): [KERNEL] Envio de segmento 0 para programa 5
+[INFO] 04:41:45:090 Memoria/(75761:75764): Se ha finalizado la conexion
+[INFO] 04:41:46:914 Memoria/(75761:75763): Se ha finalizado la conexion
+[INFO] 04:41:48:638 Memoria/(75761:75762): Se ha finalizado la conexion
+[INFO] 04:41:52:106 Memoria/(75853:75853): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 4096
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 04:41:52:111 Memoria/(75853:75853): Algoritmo BEST configurado
+[INFO] 04:41:52:111 Memoria/(75853:75853): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 04:41:52:112 Memoria/(75853:75853): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 04:41:53:660 Memoria/(75853:75854): Cliente conectado (a memoria_sv)
+
+[INFO] 04:41:53:661 Memoria/(75853:75854): RESPUESTA AL CONECTAR CPU
+[INFO] 04:41:57:887 Memoria/(75853:75855): Cliente conectado (a memoria_sv)
+
+[INFO] 04:41:57:887 Memoria/(75853:75855): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 04:42:04:304 Memoria/(75853:75856): Cliente conectado (a memoria_sv)
+
+[INFO] 04:42:04:304 Memoria/(75853:75856): RESPUESTA AL CONECTAR KERNEL
+[INFO] 04:42:29:490 Memoria/(75853:75856): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 04:42:29:490 Memoria/(75853:75856): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 04:42:31:255 Memoria/(75853:75856): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 04:42:31:255 Memoria/(75853:75856): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 04:42:34:879 Memoria/(75853:75856): [KERNEL] Recibiendo solicitud de segmento para programa 2
+[INFO] 04:42:34:879 Memoria/(75853:75856): [KERNEL] Envio de segmento 0 para programa 2
+[INFO] 04:50:26:984 Memoria/(75853:75856): Se ha finalizado la conexion
+[INFO] 04:50:28:476 Memoria/(75853:75856): Cliente conectado (a memoria_sv)
+
+[INFO] 04:50:28:476 Memoria/(75853:75856): RESPUESTA AL CONECTAR KERNEL
+[INFO] 04:50:35:537 Memoria/(75853:75856): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 04:50:35:537 Memoria/(75853:75856): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 04:50:36:623 Memoria/(75853:75856): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 04:50:36:623 Memoria/(75853:75856): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 05:00:32:494 Memoria/(75853:75856): Se ha finalizado la conexion
+[INFO] 05:00:34:785 Memoria/(75853:75856): Cliente conectado (a memoria_sv)
+
+[INFO] 05:00:34:786 Memoria/(75853:75856): RESPUESTA AL CONECTAR KERNEL
+[INFO] 05:00:34:791 Memoria/(75853:75856): Se ha finalizado la conexion
+[INFO] 05:00:42:054 Memoria/(75853:75856): Cliente conectado (a memoria_sv)
+
+[INFO] 05:00:42:055 Memoria/(75853:75856): RESPUESTA AL CONECTAR KERNEL
+[INFO] 05:00:42:056 Memoria/(75853:75856): Se ha finalizado la conexion
+[INFO] 05:01:01:979 Memoria/(75853:75856): Cliente conectado (a memoria_sv)
+
+[INFO] 05:01:01:979 Memoria/(75853:75856): RESPUESTA AL CONECTAR KERNEL
+[INFO] 05:01:01:980 Memoria/(75853:75856): Se ha finalizado la conexion
+[INFO] 05:01:40:452 Memoria/(75853:75856): Cliente conectado (a memoria_sv)
+
+[INFO] 05:01:40:452 Memoria/(75853:75856): RESPUESTA AL CONECTAR KERNEL
+[INFO] 05:01:47:094 Memoria/(75853:75856): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 05:01:47:095 Memoria/(75853:75856): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 05:01:48:879 Memoria/(75853:75856): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 05:01:48:879 Memoria/(75853:75856): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 05:10:18:159 Memoria/(75853:75856): Se ha finalizado la conexion
+[INFO] 05:10:21:655 Memoria/(75853:75856): Cliente conectado (a memoria_sv)
+
+[INFO] 05:10:21:656 Memoria/(75853:75856): RESPUESTA AL CONECTAR KERNEL
+[INFO] 05:10:32:762 Memoria/(75853:75856): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 05:10:32:762 Memoria/(75853:75856): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 05:10:34:563 Memoria/(75853:75856): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 05:10:34:563 Memoria/(75853:75856): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 05:11:10:607 Memoria/(75853:75856): Se ha finalizado la conexion
+[INFO] 05:12:30:221 Memoria/(75853:75856): Cliente conectado (a memoria_sv)
+
+[INFO] 05:12:30:251 Memoria/(75853:75856): RESPUESTA AL CONECTAR KERNEL
+[INFO] 05:12:32:535 Memoria/(75853:75856): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 05:12:32:535 Memoria/(75853:75856): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 05:12:33:875 Memoria/(75853:75856): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 05:12:33:875 Memoria/(75853:75856): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 05:14:06:084 Memoria/(75853:75856): Se ha finalizado la conexion
+[INFO] 05:14:11:023 Memoria/(75853:75856): Cliente conectado (a memoria_sv)
+
+[INFO] 05:14:11:023 Memoria/(75853:75856): RESPUESTA AL CONECTAR KERNEL
+[INFO] 05:14:11:036 Memoria/(75853:75856): Se ha finalizado la conexion
+[INFO] 05:14:17:137 Memoria/(75853:75856): Cliente conectado (a memoria_sv)
+
+[INFO] 05:14:17:138 Memoria/(75853:75856): RESPUESTA AL CONECTAR KERNEL
+[INFO] 05:14:17:142 Memoria/(75853:75856): Se ha finalizado la conexion
+[INFO] 05:14:20:861 Memoria/(75853:75856): Cliente conectado (a memoria_sv)
+
+[INFO] 05:14:20:861 Memoria/(75853:75856): RESPUESTA AL CONECTAR KERNEL
+[INFO] 05:14:20:863 Memoria/(75853:75856): Se ha finalizado la conexion
+[INFO] 05:14:25:469 Memoria/(75853:75856): Cliente conectado (a memoria_sv)
+
+[INFO] 05:14:25:470 Memoria/(75853:75856): RESPUESTA AL CONECTAR KERNEL
+[INFO] 05:14:25:471 Memoria/(75853:75856): Se ha finalizado la conexion
+[INFO] 05:15:42:792 Memoria/(75853:75856): Cliente conectado (a memoria_sv)
+
+[INFO] 05:15:42:793 Memoria/(75853:75856): RESPUESTA AL CONECTAR KERNEL
+[INFO] 05:15:46:247 Memoria/(75853:75856): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 05:15:46:247 Memoria/(75853:75856): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 05:15:48:327 Memoria/(75853:75856): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 05:15:48:327 Memoria/(75853:75856): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 05:16:40:966 Memoria/(75853:75856): Se ha finalizado la conexion
+[INFO] 05:23:29:545 Memoria/(75853:75856): Cliente conectado (a memoria_sv)
+
+[INFO] 05:23:29:560 Memoria/(75853:75856): RESPUESTA AL CONECTAR KERNEL
+[INFO] 05:23:31:221 Memoria/(75853:75856): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 05:23:31:221 Memoria/(75853:75856): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 05:23:33:075 Memoria/(75853:75856): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 05:23:33:075 Memoria/(75853:75856): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 05:27:43:647 Memoria/(75853:75856): Se ha finalizado la conexion
+[INFO] 05:27:47:705 Memoria/(75853:75856): Cliente conectado (a memoria_sv)
+
+[INFO] 05:27:47:709 Memoria/(75853:75856): RESPUESTA AL CONECTAR KERNEL
+[INFO] 05:27:52:454 Memoria/(75853:75856): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 05:27:52:454 Memoria/(75853:75856): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 05:27:54:863 Memoria/(75853:75856): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 05:27:54:863 Memoria/(75853:75856): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 05:32:23:767 Memoria/(75853:75856): Se ha finalizado la conexion
+[INFO] 05:32:29:074 Memoria/(75853:75855): Se ha finalizado la conexion
+[INFO] 05:32:32:790 Memoria/(75853:75854): Se ha finalizado la conexion
