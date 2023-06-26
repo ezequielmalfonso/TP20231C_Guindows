@@ -63,11 +63,11 @@ int decode(INSTRUCCION* instruccion_ejecutar ){
 }
 
 
-int execute(INSTRUCCION* instruccion_ejecutar,char* registros,uint16_t pid, uint32_t pc){
+int execute(INSTRUCCION* instruccion_ejecutar, registros_t registros, uint16_t pid, uint32_t pc){
 
 	if(!strcmp(instruccion_ejecutar->comando,"SET") ){
 			log_info(logger,"PID: %d - Ejecutando SET parametro 1: %s parametro 2: %s", pid,instruccion_ejecutar->parametro1,instruccion_ejecutar->parametro2);
-			registros = instruccion_ejecutar->parametro2;
+			//registros = instruccion_ejecutar->parametro2;
 
 		}else if(!strcmp(instruccion_ejecutar->comando,"MOV_OUT") ){
 

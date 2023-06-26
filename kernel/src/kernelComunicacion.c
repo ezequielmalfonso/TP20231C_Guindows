@@ -14,7 +14,7 @@ typedef struct {
 } t_procesar_conexion_args;
 //pthread_mutex_t pid_xd = PTHREAD_MUTEX_INITIALIZER;
 int cliente_socket;
-char* registros;
+registros_t registros;
 
 static void procesar_conexion(void* void_args) {
 	t_procesar_conexion_args* args = (t_procesar_conexion_args*) void_args;

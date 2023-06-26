@@ -12,6 +12,7 @@
 #include<stdlib.h>
 #include<stdint.h>
 #include<commons/collections/list.h>
+//#include "estructuras.h"
 
 typedef struct{
   uint32_t tamSegmento;
@@ -34,11 +35,7 @@ struct s_registros{	// No deberian tener \0 pero por las dudas sumo uno
 }__attribute__((packed));	// Para que no use padding
 typedef struct s_registros registros_t;
 
-/*
-	uint32_t registro_cpu[4];
-	t_list* segmentos;
-	t_list* nros_segmentos;
-	int cliente_fd;*/
+
 typedef struct {
 	uint16_t pid;
 	t_list* instrucciones;

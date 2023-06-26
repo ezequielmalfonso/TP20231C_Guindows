@@ -24,6 +24,3 @@ typedef struct{
 	uint32_t tamanio_segmento;
 }t_segmento;
 
-
-
-

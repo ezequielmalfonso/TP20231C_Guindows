@@ -23,7 +23,7 @@ extern int cpuServer;
 op_code iniciar_ciclo_instruccion(PCB_t* pcb);
 INSTRUCCION* fetch(t_list* instrucciones, uint32_t pc);
 int decode(INSTRUCCION* instruccion_ejecutar );
-int execute(INSTRUCCION* instruccion_ejecutar,char* registros, uint16_t pid,uint32_t pc);
+int execute(INSTRUCCION* instruccion_ejecutar, registros_t registros, uint16_t pid,uint32_t pc);
 
 
 
