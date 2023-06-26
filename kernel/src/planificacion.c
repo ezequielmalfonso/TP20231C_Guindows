@@ -24,6 +24,7 @@ pthread_mutex_t mx_instancias       = PTHREAD_MUTEX_INITIALIZER;
 //pthread_mutex_t mx_interrupt 		= PTHREAD_MUTEX_INITIALIZER;
 //pthread_mutex_t mx_hilo_pageFault 	= PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_cola_blocked_fs 	= PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t mx_cola_blocked_io 	= PTHREAD_MUTEX_INITIALIZER;
 
 sem_t s_pasaje_a_ready, s_ready_execute,s_cpu_desocupado,s_cont_ready,s_multiprogramacion_actual,s_esperar_cpu,s_pcb_desalojado,s_blocked,s_io, s_blocked_fs;
 sem_t s_blocked_rec;
@@ -31,14 +32,16 @@ t_queue* cola_new;
 t_queue* cola_ready;
 t_queue* cola_ready_sec;
 t_list* list_blocked;
-t_queue* cola_blocked_respuesta_fs;
+t_queue* cola_blocked_respuesta_fs;	// no se usa
 t_queue* cola_blocked_fs_libre;
+t_queue* cola_blocked_io;
 t_tiempos_rafaga_anterior* rafAnteriorAux;
 t_list* list_rafa_anterior;
 int64_t reloj = 1;
 
 bool cpu_desocupado=true;
 bool fs_desocupado = true;
+bool haciendo_io = false;
 
 t_list* tabla_global_archivos;
 char* archivoABuscar;
@@ -180,6 +183,7 @@ void inicializarPlanificacion(){
 	cola_ready_sec	= queue_create();
 	cola_blocked_respuesta_fs = queue_create();	// no se usa --> borrar
 	cola_blocked_fs_libre     = queue_create();	// procesos que esperan fs libre
+	cola_blocked_io = queue_create();
 
 	tabla_global_archivos = list_create();
 
@@ -485,14 +489,18 @@ void esperar_cpu(){
 					break;	// es sin desalojo, no va este case
 
 			case IO:
-				pthread_t hilo_bloqueado;
+				/*pthread_t hilo_bloqueado;
 				sem_post(&s_blocked);
 				pthread_create(&hilo_bloqueado,NULL,(void*)bloqueando,pcb);
 				pthread_detach(hilo_bloqueado);								// Hace y me aseguro el hilo no se va a joinear con el hilo principal
-				//------
+				//------*/
 				// t_link_element* aux_list_raf_ant = list_rafa_anterior->head;
+				rafAnteriorAux = list_get(list_rafa_anterior, pcb->pid);
+				rafAnteriorAux->tiempo_out_exec = temporal_gettime(reloj_inicio);
+				estimadorNuevo = obtenerEstimadoRafaga(pcb, configuracion->ESTIMACION_INICIAL, configuracion->HRRN_ALFA);
+				pcb->estimado_proxima_rafaga = estimadorNuevo;
 
-				while( aux_list_raf_ant!=NULL )
+				/*while( aux_list_raf_ant!=NULL )
 				{
 				   t_tiempos_rafaga_anterior* aux_list_raf_ant2 = aux_list_raf_ant->data;
 
@@ -504,11 +512,24 @@ void esperar_cpu(){
 					 break;
 				   }
 				   aux_list_raf_ant = aux_list_raf_ant->next;
-				}
+				}*/
+				if(haciendo_io) {
+					pthread_mutex_lock(&mx_cola_blocked_io);
+					queue_push(cola_blocked_io, pcb);
+					pthread_mutex_unlock(&mx_cola_blocked_io);
+					log_info(logger, "PID: %d - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O ocupado", pcb->pid);
+					sem_post(&s_ready_execute);
+					sem_post(&s_cpu_desocupado);
+					break;
+				} haciendo_io = true;	// se podria aplicar un mutex
+
 				//---
 				//pthread_mutex_lock(&mx_log);
 				log_info(logger, "PID: %d - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O", pcb->pid);
-				 //pthread_mutex_unlock(&mx_log);
+				pthread_t hilo_bloqueado;
+				//sem_post(&s_blocked);	// TODO: revisar este sem
+				pthread_create(&hilo_bloqueado,NULL, (void*) ejecutar_io, pcb);
+				pthread_detach(hilo_bloqueado);
 				sem_post(&s_ready_execute);
 				sem_post(&s_cpu_desocupado);
 
@@ -765,8 +786,7 @@ void esperar_cpu(){
 				//log_warning(logger, "PID: %d estimador nuevo %f ftruncante", pcb->pid, estimadorNuevo);
 
 				/////// Puede traer problemas de sincronizacion utilizar el bool fs_desocupado en lugar de una implementacion con semaforos
-				if(!fs_desocupado) {	//TODO: se podria preguntar si la cola esta vacia
-					log_info(logger, "hola?");
+				if(!fs_desocupado) {
 					pthread_mutex_lock(&mx_cola_blocked_fs);
 					queue_push(cola_blocked_fs_libre, pcb);
 					pthread_mutex_unlock(&mx_cola_blocked_fs);
@@ -939,7 +959,7 @@ void execute_a_exit(PCB_t* pcb, char* motivoExit){
     //sem_post(&s_ready_execute);
 }
 
-void bloqueando(PCB_t* pcb){
+/*void bloqueando(PCB_t* pcb){
 	int i = 0;
 	op_code cop;
 	sem_wait(&s_blocked);
@@ -954,12 +974,10 @@ void bloqueando(PCB_t* pcb){
 		//sem_wait(&s_ios[i]);
 		sem_wait(&s_io);
 		ejecutar_io(pcb,i);
-	}else if(!strcmp(inst->comando,"F_TRUNCATE")){
-		esperar_filesystem(pcb);
 	}
-}
+}*/
 
-void ejecutar_io(PCB_t* pcb,int numero) {
+void ejecutar_io(PCB_t* pcb) {
 		//pthread_mutex_lock(&mx_log);
 		//log_info(logger, " ejecutar io");
 		//pthread_mutex_unlock(&mx_log);
@@ -974,7 +992,7 @@ void ejecutar_io(PCB_t* pcb,int numero) {
 		INSTRUCCION* inst = list_get(pcb->instrucciones, pcb->pc - 1); //-1 porque ya se incremento el PC
 		uint32_t tiempo = atoi(inst->parametro1);
 		//pthread_mutex_lock(&mx_log);
-		log_info(logger, " PID: %d - Bloqueado por: %s durante: %s", pcb->pid, inst->comando, inst->parametro1);
+		log_info(logger, " PID: %d - Bloqueado por I/O durante: %s", pcb->pid, inst->parametro1);
 		//pthread_mutex_unlock(&mx_log);
 		sleep(tiempo);
 		//pthread_mutex_lock(&mx_log);
@@ -992,7 +1010,19 @@ void ejecutar_io(PCB_t* pcb,int numero) {
 		log_info(logger, "Ingreso a Ready algoritmo %s - PIDS: [%s] ", configuracion->ALGORITMO_PLANIFICACION, pids);
 		//sem_post(&s_ready_execute);
 		sem_post(&s_cont_ready);
-		sem_post(&s_io);
+
+		if(!queue_is_empty(cola_blocked_io)) {
+			pthread_mutex_lock(&mx_cola_blocked_io);
+			PCB_t* pcb_blocked = queue_pop(cola_blocked_io);
+			pthread_mutex_unlock(&mx_cola_blocked_io);
+			pthread_t hilo_bloqueado_io;
+			pthread_create(&hilo_bloqueado_io,NULL, (void*) ejecutar_io, pcb_blocked);
+			pthread_detach(hilo_bloqueado_io);
+			log_info(logger, "PID: %d - Estado Anterior: BLOCKED por I/O ocupado - Estado Actual: BLOCKED por I/O", pcb->pid);
+		} else {
+			haciendo_io = false;
+		}
+		//sem_post(&s_io);
 		//log_info(logger, "PID: %d - probando como queda", pcb->pid);
 }
 
