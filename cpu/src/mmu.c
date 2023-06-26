@@ -9,7 +9,7 @@ uint32_t desplazamiento(int logica){
 	return logica%configuracion->TAM_MAX_SEGMENTO;
 }
 
-void mov_in(char* direccion_logica,char registro[20],PCB_t* pcb){
+void mov_in(char* direccion_logica, char registro[20], PCB_t* pcb){
 	uint32_t desplazamiento1 = desplazamiento(atoi(direccion_logica));
 	uint32_t n_segmento = num_seg(atoi(direccion_logica));
 
@@ -62,42 +62,43 @@ void set_registro(char registro[20],char registro_recibido[20], PCB_t* pcb){
 	//log_warning(logger,"Registro: %s", registro_recibido);
 	//pcb->registro_cpu = malloc(sizeof(registros_t));
 	if(!strcmp(registro,"AX")){
-		memcpy(&regAX, registro_recibido, sizeof(char) * 4);
+		memcpy(regAX, registro_recibido, sizeof(char) * 4);
 		//parseo_registro(registro_recibido, pcb,4);
 	}else if(!strcmp(registro,"BX")){
-		memcpy(&regBX, registro_recibido, sizeof(char) * 4);
+		memcpy(regBX, registro_recibido, sizeof(char) * 4);
 		//parseo_registro(registro_recibido, pcb,4);
 	}else if(!strcmp(registro,"CX")){
-		memcpy(&regCX, registro_recibido, sizeof(char) * 4);
+		memcpy(regCX, registro_recibido, sizeof(char) * 4);
 		//parseo_registro(registro_recibido, pcb,4);
 	}else if(!strcmp(registro,"DX")){
-		memcpy(&regDX, registro_recibido, sizeof(char) * 4);
+		memcpy(regDX, registro_recibido, sizeof(char) * 4);
 		//parseo_registro(registro_recibido, pcb,4);
 	}else if(!strcmp(registro,"EAX")){
-		memcpy(&regEAX, registro_recibido, sizeof(char) * 8);
+		memcpy(regEAX, registro_recibido, sizeof(char) * 8);
 		//parseo_registro(registro_recibido, pcb,8);
 	}else if(!strcmp(registro,"EBX")){
-		memcpy(&regEBX, registro_recibido, sizeof(char) * 8);
+		memcpy(regEBX, registro_recibido, sizeof(char) * 8);
 		//parseo_registro(registro_recibido, pcb,8);
 	}else if(!strcmp(registro,"ECX")){
-		memcpy(&regECX, registro_recibido, sizeof(char) * 8);
+		memcpy(regECX, registro_recibido, sizeof(char) * 8);
 		//parseo_registro(registro_recibido, pcb,8);
 	}else if(!strcmp(registro,"EDX")){
-		memcpy(&regEDX, registro_recibido, sizeof(char) * 8);
+		memcpy(regEDX, registro_recibido, sizeof(char) * 8);
 		//parseo_registro(registro_recibido, pcb,16);
 	}else if(!strcmp(registro,"RAX")){
-		memcpy(&regRAX, registro_recibido, sizeof(char) * 16);
+		memcpy(regRAX, registro_recibido, sizeof(char) * 16);
 		//parseo_registro(registro_recibido, pcb,16);
 	}else if(!strcmp(registro,"RBX")){
-		memcpy(&regRBX, registro_recibido, sizeof(char) * 16);
+		memcpy(regRBX, registro_recibido, sizeof(char) * 16);
 		//parseo_registro(registro_recibido, pcb,16);
 	}else if(!strcmp(registro,"RCX")){
-		memcpy(&regRCX, registro_recibido, sizeof(char) * 16);
+		memcpy(regRCX, registro_recibido, sizeof(char) * 16);
 		//parseo_registro(registro_recibido, pcb,16);
 	}else if(!strcmp(registro,"RDX")){
-		memcpy(&regRDX, registro_recibido, sizeof(char) * 16);
+		memcpy(regRDX, registro_recibido, sizeof(char) * 16);
 		//parseo_registro(registro_recibido, pcb,16);
 	}
+	log_info(logger, "Realizado SET del registro %s con valor %s", registro, strtok(registro_recibido, "\n"));
 }
 
 /*void parseo_registro(char registro_recibido[20], PCB_t* pcb,int tamanio){

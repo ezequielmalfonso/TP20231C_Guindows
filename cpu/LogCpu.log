@@ -4882,3 +4882,182 @@ TAM_MAX_SEGMENTO: 128
 
 [INFO] 07:49:01:456 Cpu/(109070:109075): PID: 1 - Ejecutando EXIT
 [INFO] 07:49:08:391 Cpu/(109070:109075): Se ha finalizado la conexion
+[INFO] 20:52:04:835 Cpu/(114147:114147): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 20:52:04:849 Cpu/(114147:114147): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 20:52:04:850 Cpu/(114147:114147): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 20:52:16:941 Cpu/(114147:114147): Cliente conectado (a CPU_SV)
+
+[INFO] 20:52:39:310 Cpu/(114147:114152): Recibi PCB id: 0
+[INFO] 20:52:39:311 Cpu/(114147:114152): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 20:52:39:311 Cpu/(114147:114152): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 20:52:39:311 Cpu/(114147:114152): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 20:52:39:311 Cpu/(114147:114152): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 20:52:39:311 Cpu/(114147:114152): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 20:52:39:311 Cpu/(114147:114152): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 20:52:39:311 Cpu/(114147:114152): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 20:52:39:311 Cpu/(114147:114152): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 20:52:39:320 Cpu/(114147:114152): Recibi PCB id: 0
+[INFO] 20:52:39:320 Cpu/(114147:114152): PID: 0 - Ejecutando IO parametro 1: 3
+ 
+[INFO] 20:52:40:844 Cpu/(114147:114152): Recibi PCB id: 1
+[INFO] 20:52:40:844 Cpu/(114147:114152): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: HOLA
+ 
+[INFO] 20:52:40:845 Cpu/(114147:114152): Recibi PCB id: 1
+[INFO] 20:52:40:845 Cpu/(114147:114152): PID: 1 - Listo para ejecutar F_TRUNCATE 
+[INFO] 20:52:42:329 Cpu/(114147:114152): Recibi PCB id: 0
+[INFO] 20:52:42:330 Cpu/(114147:114152): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 20:52:43:336 Cpu/(114147:114152): Recibi PCB id: 2
+[INFO] 20:52:43:336 Cpu/(114147:114152): PID: 2 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 20:52:45:862 Cpu/(114147:114152): Recibi PCB id: 1
+[INFO] 20:52:45:862 Cpu/(114147:114152): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 20:52:50:879 Cpu/(114147:114152): Recibi PCB id: 0
+[INFO] 20:52:50:879 Cpu/(114147:114152): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 20:52:50:879 Cpu/(114147:114152): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 20:52:50:879 Cpu/(114147:114152): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 20:52:50:879 Cpu/(114147:114152): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 20:52:50:879 Cpu/(114147:114152): PID: 0 - Ejecutando EXIT
+[INFO] 20:52:53:338 Cpu/(114147:114152): Recibi PCB id: 2
+[INFO] 20:52:53:338 Cpu/(114147:114152): En CPU
+[INFO] 20:52:54:338 Cpu/(114147:114152): PID: 2 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[ERROR] 20:52:54:339 Cpu/(114147:114152): Se seteo el registro:  ÐR¡
+[INFO] 20:52:54:339 Cpu/(114147:114152): PID: 2 - Ejecutando EXIT
+[INFO] 20:52:54:340 Cpu/(114147:114152): Recibi PCB id: 1
+[INFO] 20:52:54:341 Cpu/(114147:114152): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 20:52:54:342 Cpu/(114147:114152): Recibi PCB id: 1
+[INFO] 20:52:54:342 Cpu/(114147:114152): PID: 1 - Ejecutando EXIT
+[INFO] 20:53:19:112 Cpu/(114147:114152): Se ha finalizado la conexion
+[INFO] 20:56:33:836 Cpu/(114248:114248): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 20:56:33:839 Cpu/(114248:114248): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 20:56:33:840 Cpu/(114248:114248): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 20:56:37:751 Cpu/(114248:114248): Cliente conectado (a CPU_SV)
+
+[INFO] 20:56:42:173 Cpu/(114248:114253): Recibi PCB id: 0
+[INFO] 20:56:42:173 Cpu/(114248:114253): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 20:56:42:173 Cpu/(114248:114253): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 20:56:42:173 Cpu/(114248:114253): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 20:56:42:173 Cpu/(114248:114253): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 20:56:42:173 Cpu/(114248:114253): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 20:56:42:173 Cpu/(114248:114253): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 20:56:42:173 Cpu/(114248:114253): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 20:56:42:173 Cpu/(114248:114253): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: JOHN
+ 
+[INFO] 20:56:42:175 Cpu/(114248:114253): Recibi PCB id: 0
+[INFO] 20:56:42:175 Cpu/(114248:114253): PID: 0 - Ejecutando IO parametro 1: 3
+ 
+[INFO] 20:56:45:177 Cpu/(114248:114253): Recibi PCB id: 0
+[INFO] 20:56:45:178 Cpu/(114248:114253): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 20:56:50:303 Cpu/(114248:114253): Recibi PCB id: 0
+[INFO] 20:56:50:303 Cpu/(114248:114253): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 20:56:50:303 Cpu/(114248:114253): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 20:56:50:303 Cpu/(114248:114253): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 20:56:50:303 Cpu/(114248:114253): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 20:56:50:303 Cpu/(114248:114253): PID: 0 - Ejecutando EXIT
+[INFO] 20:56:59:104 Cpu/(114248:114253): Recibi PCB id: 1
+[INFO] 20:56:59:105 Cpu/(114248:114253): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: HOLA
+ 
+[INFO] 20:56:59:105 Cpu/(114248:114253): Recibi PCB id: 1
+[INFO] 20:56:59:105 Cpu/(114248:114253): PID: 1 - Listo para ejecutar F_TRUNCATE 
+[INFO] 20:57:04:324 Cpu/(114248:114253): Recibi PCB id: 1
+[INFO] 20:57:04:324 Cpu/(114248:114253): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 20:57:07:325 Cpu/(114248:114253): Recibi PCB id: 1
+[INFO] 20:57:07:325 Cpu/(114248:114253): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 20:57:07:326 Cpu/(114248:114253): Recibi PCB id: 1
+[INFO] 20:57:07:326 Cpu/(114248:114253): PID: 1 - Ejecutando EXIT
+[INFO] 20:57:13:196 Cpu/(114248:114253): Recibi PCB id: 2
+[INFO] 20:57:13:196 Cpu/(114248:114253): PID: 2 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 20:57:23:198 Cpu/(114248:114253): Recibi PCB id: 2
+[INFO] 20:57:23:198 Cpu/(114248:114253): En CPU
+[INFO] 20:57:24:199 Cpu/(114248:114253): Realizado SET del registro AX con valor HOLA
+
+[INFO] 20:57:24:199 Cpu/(114248:114253): PID: 2 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 20:57:24:199 Cpu/(114248:114253): PID: 2 - Ejecutando EXIT
+[INFO] 21:09:57:686 Cpu/(114248:114253): Se ha finalizado la conexion
+[INFO] 21:10:15:018 Cpu/(114674:114674): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 21:10:15:021 Cpu/(114674:114674): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:10:15:022 Cpu/(114674:114674): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 21:10:23:048 Cpu/(114674:114674): Cliente conectado (a CPU_SV)
+
+[INFO] 21:10:31:150 Cpu/(114674:114679): Recibi PCB id: 0
+[INFO] 21:10:31:150 Cpu/(114674:114679): PID: 0 - Ejecutando IO parametro 1: 10
+ 
+[INFO] 21:10:41:152 Cpu/(114674:114679): Recibi PCB id: 0
+[INFO] 21:10:41:153 Cpu/(114674:114679): En CPU
+[INFO] 21:10:42:153 Cpu/(114674:114679): Realizado SET del registro AX con valor HOLA
+[INFO] 21:10:42:153 Cpu/(114674:114679): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+[INFO] 21:10:42:154 Cpu/(114674:114679): PID: 0 - Ejecutando EXIT
+[INFO] 21:11:22:773 Cpu/(114674:114679): Recibi PCB id: 1
+[INFO] 21:11:22:773 Cpu/(114674:114679): En CPU
+[INFO] 21:11:23:773 Cpu/(114674:114679): Realizado SET del registro AX con valor AAAA
+[INFO] 21:11:23:774 Cpu/(114674:114679): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: AAAA
+[INFO] 21:11:23:774 Cpu/(114674:114679): En CPU
+[INFO] 21:11:24:774 Cpu/(114674:114679): Realizado SET del registro BX con valor BBBB
+[INFO] 21:11:24:775 Cpu/(114674:114679): PID: 1 - Ejecutando SET parametro 1: BX parametro 2: BBBB
+[INFO] 21:11:24:775 Cpu/(114674:114679): En CPU
+[INFO] 21:11:25:776 Cpu/(114674:114679): Realizado SET del registro CX con valor CCCC
+[INFO] 21:11:25:776 Cpu/(114674:114679): PID: 1 - Ejecutando SET parametro 1: CX parametro 2: CCCC
+[INFO] 21:11:25:777 Cpu/(114674:114679): En CPU
+[INFO] 21:11:26:777 Cpu/(114674:114679): Realizado SET del registro DX con valor DDDD
+[INFO] 21:11:26:778 Cpu/(114674:114679): PID: 1 - Ejecutando SET parametro 1: DX parametro 2: DDDD
+[INFO] 21:11:26:778 Cpu/(114674:114679): En CPU
+[INFO] 21:11:27:778 Cpu/(114674:114679): Realizado SET del registro EAX con valor AAAAAAAA
+[INFO] 21:11:27:779 Cpu/(114674:114679): PID: 1 - Ejecutando SET parametro 1: EAX parametro 2: AAAAAAAA
+[INFO] 21:11:27:779 Cpu/(114674:114679): En CPU
+[INFO] 21:11:28:780 Cpu/(114674:114679): Realizado SET del registro EBX con valor BBBBBBBB
+[INFO] 21:11:28:780 Cpu/(114674:114679): PID: 1 - Ejecutando SET parametro 1: EBX parametro 2: BBBBBBBB
+[INFO] 21:11:28:781 Cpu/(114674:114679): En CPU
+[INFO] 21:11:29:781 Cpu/(114674:114679): Realizado SET del registro ECX con valor CCCCCCCC
+[INFO] 21:11:29:781 Cpu/(114674:114679): PID: 1 - Ejecutando SET parametro 1: ECX parametro 2: CCCCCCCC
+[INFO] 21:11:29:782 Cpu/(114674:114679): En CPU
+[INFO] 21:11:30:783 Cpu/(114674:114679): Realizado SET del registro EDX con valor DDDDDDDD
+[INFO] 21:11:30:783 Cpu/(114674:114679): PID: 1 - Ejecutando SET parametro 1: EDX parametro 2: DDDDDDDD
+[INFO] 21:11:30:784 Cpu/(114674:114679): En CPU
+[INFO] 21:11:31:784 Cpu/(114674:114679): Realizado SET del registro RAX con valor AAAAAAAAAAAAAAAA
+[INFO] 21:11:31:785 Cpu/(114674:114679): PID: 1 - Ejecutando SET parametro 1: RAX parametro 2: AAAAAAAAAAAAAAAA
+[INFO] 21:11:31:785 Cpu/(114674:114679): En CPU
+[INFO] 21:11:32:785 Cpu/(114674:114679): Realizado SET del registro RBX con valor BBBBBBBBBBBBBBBB
+[INFO] 21:11:32:787 Cpu/(114674:114679): PID: 1 - Ejecutando SET parametro 1: RBX parametro 2: BBBBBBBBBBBBBBBB
+[INFO] 21:11:32:787 Cpu/(114674:114679): En CPU
+[INFO] 21:11:33:788 Cpu/(114674:114679): Realizado SET del registro RCX con valor CCCCCCCCCCCCCCCC
+[INFO] 21:11:33:788 Cpu/(114674:114679): PID: 1 - Ejecutando SET parametro 1: RCX parametro 2: CCCCCCCCCCCCCCCC
+[INFO] 21:11:33:789 Cpu/(114674:114679): En CPU
+[INFO] 21:11:34:789 Cpu/(114674:114679): Realizado SET del registro RDX con valor DDDDDDDDDDDDDDDD
+[INFO] 21:11:34:789 Cpu/(114674:114679): PID: 1 - Ejecutando SET parametro 1: RDX parametro 2: DDDDDDDDDDDDDDDD
+[INFO] 21:11:34:789 Cpu/(114674:114679): PID: 1 - Ejecutando YIELD 
+[INFO] 21:11:34:791 Cpu/(114674:114679): Recibi PCB id: 1
+[INFO] 21:11:34:791 Cpu/(114674:114679): En CPU
+[INFO] 21:11:35:791 Cpu/(114674:114679): Realizado SET del registro RAX con valor TCHOUAMENIAFUERA
+[INFO] 21:11:35:792 Cpu/(114674:114679): PID: 1 - Ejecutando SET parametro 1: RAX parametro 2: TCHOUAMENIAFUERA
+[INFO] 21:11:35:792 Cpu/(114674:114679): En CPU
+[INFO] 21:11:36:792 Cpu/(114674:114679): Realizado SET del registro RBX con valor SEGUNDO_FRANCIA_
+[INFO] 21:11:36:793 Cpu/(114674:114679): PID: 1 - Ejecutando SET parametro 1: RBX parametro 2: SEGUNDO_FRANCIA_
+[INFO] 21:11:36:793 Cpu/(114674:114679): PID: 1 - Ejecutando EXIT
+[INFO] 21:12:01:517 Cpu/(114674:114679): Se ha finalizado la conexion

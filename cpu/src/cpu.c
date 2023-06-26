@@ -92,12 +92,22 @@ int decode(INSTRUCCION* instruccion_ejecutar ){
 
 
 int execute(INSTRUCCION* instruccion_ejecutar, registros_t registros, uint16_t pid, uint32_t pc, PCB_t* pcb){
+	// Cargar contexto de ejecucion
+	memcpy(regAX, pcb->registro_cpu.ax, 4);		memcpy(regBX, pcb->registro_cpu.bx, 4);
+	memcpy(regCX, pcb->registro_cpu.cx, 4);		memcpy(regDX, pcb->registro_cpu.dx, 4);
+	memcpy(regEAX, pcb->registro_cpu.eax, 8);	memcpy(regEBX, pcb->registro_cpu.ebx, 8);
+	memcpy(regECX, pcb->registro_cpu.ecx, 8);	memcpy(regEDX, pcb->registro_cpu.edx, 8);
+	memcpy(regRAX, pcb->registro_cpu.rax, 16);	memcpy(regRBX, pcb->registro_cpu.rbx, 16);
+	memcpy(regRCX, pcb->registro_cpu.rcx, 16);	memcpy(regRDX, pcb->registro_cpu.rdx, 16);
+
+
 
 	if(!strcmp(instruccion_ejecutar->comando,"SET") ){
 		//log_info(logger,"PID: %d - Ejecutando SET parametro 1: %s parametro 2: %s", pid,instruccion_ejecutar->parametro1,instruccion_ejecutar->parametro2);
-		set_registro(instruccion_ejecutar->parametro1, instruccion_ejecutar->parametro2, pcb);
 		log_info(logger,"PID: %d - Ejecutando SET parametro 1: %s parametro 2: %s", pid,instruccion_ejecutar->parametro1,instruccion_ejecutar->parametro2);
-		log_error(logger,"Se seteo el registro: %s",pcb->registro_cpu.ax );	// NO solo el ax
+		set_registro(instruccion_ejecutar->parametro1, instruccion_ejecutar->parametro2, pcb);
+
+		//log_error(logger,"Se seteo el registro: %s",pcb->registro_cpu.ax );	// NO solo el ax
 
 	}else if(!strcmp(instruccion_ejecutar->comando,"MOV_OUT") ){
 
