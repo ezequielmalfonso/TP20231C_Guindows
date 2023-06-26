@@ -11,7 +11,7 @@ typedef struct {
   char * server_name;
 }
 t_procesar_conexion_args;
-
+int cpu_fd;
 pthread_mutex_t mx_kernel= PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_cpu = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_pagefault = PTHREAD_MUTEX_INITIALIZER;
@@ -50,7 +50,7 @@ static void procesar_kernel(void * void_args) {
       recv(cliente_socket, & pid, sizeof(uint16_t), 0);
       pthread_mutex_unlock(&mx_kernel);
 
-      t_list* tabla_de_segmentos = list_create();
+      t_list* tabla_de_segmentos = cargarProceso(pid);
 
       log_info(logger, "[KERNEL] Recibiendo solicitud de segmento para programa %d", pid);
 
@@ -85,6 +85,7 @@ static void procesar_kernel(void * void_args) {
 static void procesar_cpu(void * void_args) {
   t_procesar_conexion_args * args = (t_procesar_conexion_args * ) void_args;
   int cliente_socket = args -> fd;
+  cpu_fd = cliente_socket;
   char * server_name = args -> server_name;
   free(args);
   uint32_t nro_marco;
@@ -104,6 +105,7 @@ static void procesar_cpu(void * void_args) {
       log_info(logger, "debug");
       break;
     case CPU: log_info(logger, "RESPUESTA AL CONECTAR CPU");
+    				atenderCpu();
     				//pthread_mutex_lock(&mx_cpu);
     				//send(cliente_socket, &(configuracion -> ENTRADAS_POR_TABLA), sizeof(uint16_t), 0);
     				//send(cliente_socket, &(configuracion -> TAM_PAGINA), sizeof(uint16_t), 0);
@@ -203,5 +205,40 @@ int fileSystem_escuchar(char * server_name, int server_socket) {
   }
   return 0;
 }
+
+
+void atenderCpu(){
+	op_code cop;
+	recv(cpu_fd, & cop, sizeof(op_code), 0);
+	int tamanio;
+		uint32_t num_seg;
+		uint32_t desplazamiento;
+		uint32_t pid;
+	switch(cop){
+	case MOV_IN:
+
+		recv_instruccion_memoria(cpu_fd, num_seg, desplazamiento, pid,tamanio);
+		void* leido = leerMemoria( num_seg,  desplazamiento,  pid,  tamanio);
+		send(cpu_fd, leido,tamanio,0);
+		break;
+	case MOV_OUT:
+				char* ok = "OK";
+				void* escribir;
+				recv_escribir_memoria(cpu_fd, num_seg, desplazamiento, pid,tamanio,escribir);
+				if(escribirEnMemoria( num_seg,  desplazamiento,  pid,  tamanio,escribir)){
+				send(cpu_fd, ok,strlen(ok),0);
+				}
+				break;
+		break;
+	 default:
+		 break;
+	}
+}
+
+
+
+
+
+
 
 
