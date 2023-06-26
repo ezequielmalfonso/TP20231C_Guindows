@@ -1018,7 +1018,7 @@ void ejecutar_io(PCB_t* pcb) {
 			pthread_t hilo_bloqueado_io;
 			pthread_create(&hilo_bloqueado_io,NULL, (void*) ejecutar_io, pcb_blocked);
 			pthread_detach(hilo_bloqueado_io);
-			log_info(logger, "PID: %d - Estado Anterior: BLOCKED por I/O ocupado - Estado Actual: BLOCKED por I/O", pcb->pid);
+			log_info(logger, "PID: %d - Estado Anterior: BLOCKED por I/O ocupado - Estado Actual: BLOCKED por I/O", pcb_blocked->pid);
 		} else {
 			haciendo_io = false;
 		}
