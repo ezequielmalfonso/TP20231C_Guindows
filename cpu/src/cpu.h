@@ -17,13 +17,16 @@
 
 #include "cpuComunicacion.h"
 #include "cpuConfig.h"
+#include "mmu.h"
 
 extern int cpuServer;
+extern int memoria_fd;
+extern void *regAX, *regBX, *regCX, *regDX, *regEAX, *regEBX, *regECX, *regEDX, *regRAX, *regRBX, *regRCX, *regRDX;	// REGISTROS
 
 op_code iniciar_ciclo_instruccion(PCB_t* pcb);
 INSTRUCCION* fetch(t_list* instrucciones, uint32_t pc);
 int decode(INSTRUCCION* instruccion_ejecutar );
-int execute(INSTRUCCION* instruccion_ejecutar, registros_t registros, uint16_t pid,uint32_t pc);
+int execute(INSTRUCCION* instruccion_ejecutar, registros_t registros, uint16_t pid,uint32_t pc, PCB_t* pcb);
 
 
 

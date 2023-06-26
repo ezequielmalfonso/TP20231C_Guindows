@@ -39,6 +39,13 @@ static void procesar_conexion(void* void_args) {
 			 	    	log_info(logger, "Recibi PCB id: %d", proceso->pid);
 			 	    	op_code codigo=iniciar_ciclo_instruccion(proceso);
 			 	    	//log_info(logger, "Cop: %d ", codigo);
+			 	    	// Actualizo contexto de ejecucion del proceso
+			 	    	memcpy(proceso->registro_cpu.ax, &regAX, 4);	memcpy(proceso->registro_cpu.bx, &regBX, 4);
+			 	    	memcpy(proceso->registro_cpu.cx, &regCX, 4);	memcpy(proceso->registro_cpu.dx, &regDX, 4);
+			 	    	memcpy(proceso->registro_cpu.eax, &regEAX, 8);	memcpy(proceso->registro_cpu.ebx, &regEBX, 8);
+			 	    	memcpy(proceso->registro_cpu.ecx, &regECX, 8);	memcpy(proceso->registro_cpu.edx, &regEDX, 8);
+			 	    	memcpy(proceso->registro_cpu.rax, &regRAX, 16);	memcpy(proceso->registro_cpu.rbx, &regRBX, 16);
+			 	    	memcpy(proceso->registro_cpu.rcx, &regRCX, 16);	memcpy(proceso->registro_cpu.rdx, &regRDX, 16);
 			 	    	send_proceso(cliente_socket,proceso,codigo);			// envio proceso al kenel
 			 	    	break;
 		 // Errores

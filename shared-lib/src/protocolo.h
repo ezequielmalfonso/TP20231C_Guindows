@@ -54,7 +54,6 @@ typedef enum {
 	KERNEL,
 	CPU,
 	FS,
-	AX,
 	F_OPEN_OK,
 	F_OPEN_FAIL,
 	OK,

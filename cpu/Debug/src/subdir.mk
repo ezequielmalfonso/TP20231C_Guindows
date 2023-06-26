@@ -6,17 +6,20 @@
 C_SRCS += \
 ../src/cpu.c \
 ../src/cpuComunicacion.c \
-../src/cpuConfig.c 
+../src/cpuConfig.c \
+../src/mmu.c 
 
 C_DEPS += \
 ./src/cpu.d \
 ./src/cpuComunicacion.d \
-./src/cpuConfig.d 
+./src/cpuConfig.d \
+./src/mmu.d 
 
 OBJS += \
 ./src/cpu.o \
 ./src/cpuComunicacion.o \
-./src/cpuConfig.o 
+./src/cpuConfig.o \
+./src/mmu.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -31,7 +34,7 @@ src/%.o: ../src/%.c src/subdir.mk
 clean: clean-src
 
 clean-src:
-	-$(RM) ./src/cpu.d ./src/cpu.o ./src/cpuComunicacion.d ./src/cpuComunicacion.o ./src/cpuConfig.d ./src/cpuConfig.o
+	-$(RM) ./src/cpu.d ./src/cpu.o ./src/cpuComunicacion.d ./src/cpuComunicacion.o ./src/cpuConfig.d ./src/cpuConfig.o ./src/mmu.d ./src/mmu.o
 
 .PHONY: clean-src
 
