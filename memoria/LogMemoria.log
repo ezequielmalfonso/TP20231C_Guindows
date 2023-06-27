@@ -3838,3 +3838,387 @@ ALGORITMO_ASIGNACION: BEST
 [INFO] 03:55:07:728 Memoria/(4109:4110): hola
 [INFO] 03:55:07:728 Memoria/(4109:4110): chau
 [INFO] 03:55:07:729 Memoria/(4109:4110): llegue
+[INFO] 14:47:49:625 Memoria/(4109:4112): Se ha finalizado la conexion
+[INFO] 14:47:51:443 Memoria/(4109:4111): Se ha finalizado la conexion
+[INFO] 14:47:53:179 Memoria/(4109:4110): Recibido pedido de MOV_IN
+[INFO] 14:47:53:179 Memoria/(4109:4110): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 14:47:53:179 Memoria/(4109:4110): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 14:47:53:179 Memoria/(4109:4110): hola
+[INFO] 14:47:53:180 Memoria/(4109:4110): chau
+[INFO] 14:47:53:180 Memoria/(4109:4110): llegue
+[INFO] 14:47:53:180 Memoria/(4109:4110): Recibido pedido de MOV_IN
+[INFO] 14:47:53:180 Memoria/(4109:4110): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 14:47:53:180 Memoria/(4109:4110): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 14:47:53:180 Memoria/(4109:4110): hola
+[INFO] 14:47:53:180 Memoria/(4109:4110): chau
+[INFO] 14:48:10:103 Memoria/(4293:4293): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 4096
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 14:48:10:105 Memoria/(4293:4293): Algoritmo BEST configurado
+[INFO] 14:48:10:106 Memoria/(4293:4293): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 14:48:10:110 Memoria/(4293:4293): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 14:48:12:292 Memoria/(4293:4294): Cliente conectado (a memoria_sv)
+
+[INFO] 14:48:12:294 Memoria/(4293:4294): RESPUESTA AL CONECTAR CPU
+[INFO] 14:48:14:164 Memoria/(4293:4295): Cliente conectado (a memoria_sv)
+
+[INFO] 14:48:14:165 Memoria/(4293:4295): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 14:48:16:914 Memoria/(4293:4296): Cliente conectado (a memoria_sv)
+
+[INFO] 14:48:16:915 Memoria/(4293:4296): RESPUESTA AL CONECTAR KERNEL
+[INFO] 14:48:30:178 Memoria/(4293:4296): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 14:48:30:178 Memoria/(4293:4296): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 14:48:31:180 Memoria/(4293:4294): Recibido pedido de MOV_IN
+[INFO] 14:48:31:180 Memoria/(4293:4294): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 14:48:31:180 Memoria/(4293:4294): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 14:48:31:181 Memoria/(4293:4294): hola
+[INFO] 14:48:31:181 Memoria/(4293:4294): chau
+[INFO] 14:48:31:181 Memoria/(4293:4294): llegue
+[INFO] 15:05:59:513 Memoria/(4293:4296): Se ha finalizado la conexion
+[INFO] 15:06:01:374 Memoria/(4293:4295): Se ha finalizado la conexion
+[INFO] 15:06:02:851 Memoria/(4293:4294): Recibido pedido de MOV_IN
+[INFO] 15:06:02:852 Memoria/(4293:4294): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:06:02:852 Memoria/(4293:4294): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:06:02:853 Memoria/(4293:4294): hola
+[INFO] 15:06:02:855 Memoria/(4293:4294): chau
+[INFO] 15:06:02:856 Memoria/(4293:4294): llegue
+[INFO] 15:06:02:856 Memoria/(4293:4294): Recibido pedido de MOV_IN
+[INFO] 15:06:02:859 Memoria/(4293:4294): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:06:02:859 Memoria/(4293:4294): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:06:02:860 Memoria/(4293:4294): hola
+[INFO] 15:06:02:860 Memoria/(4293:4294): chau
+[INFO] 15:06:17:542 Memoria/(4447:4447): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 4096
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 15:06:17:563 Memoria/(4447:4447): Algoritmo BEST configurado
+[INFO] 15:06:17:563 Memoria/(4447:4447): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:06:17:577 Memoria/(4447:4447): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 15:06:21:704 Memoria/(4447:4448): Cliente conectado (a memoria_sv)
+
+[INFO] 15:06:21:705 Memoria/(4447:4448): RESPUESTA AL CONECTAR CPU
+[INFO] 15:06:36:406 Memoria/(4447:4449): Cliente conectado (a memoria_sv)
+
+[INFO] 15:06:36:407 Memoria/(4447:4449): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 15:06:39:970 Memoria/(4447:4450): Cliente conectado (a memoria_sv)
+
+[INFO] 15:06:39:971 Memoria/(4447:4450): RESPUESTA AL CONECTAR KERNEL
+[INFO] 15:06:44:732 Memoria/(4447:4450): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 15:06:44:732 Memoria/(4447:4450): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 15:06:45:740 Memoria/(4447:4448): Recibido pedido de MOV_IN
+[INFO] 15:06:45:741 Memoria/(4447:4448): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:06:45:741 Memoria/(4447:4448): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:06:45:741 Memoria/(4447:4448): hola
+[INFO] 15:06:45:741 Memoria/(4447:4448): chau
+[INFO] 15:06:45:741 Memoria/(4447:4448): llegue
+[INFO] 15:15:59:898 Memoria/(4447:4450): Se ha finalizado la conexion
+[INFO] 15:16:01:327 Memoria/(4447:4449): Se ha finalizado la conexion
+[INFO] 15:16:02:826 Memoria/(4447:4448): Recibido pedido de MOV_IN
+[INFO] 15:16:02:826 Memoria/(4447:4448): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:16:02:826 Memoria/(4447:4448): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:16:02:827 Memoria/(4447:4448): hola
+[INFO] 15:16:02:827 Memoria/(4447:4448): chau
+[INFO] 15:16:02:827 Memoria/(4447:4448): llegue
+[INFO] 15:16:02:827 Memoria/(4447:4448): Recibido pedido de MOV_IN
+[INFO] 15:16:02:827 Memoria/(4447:4448): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:16:02:827 Memoria/(4447:4448): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:16:02:828 Memoria/(4447:4448): hola
+[INFO] 15:16:02:828 Memoria/(4447:4448): chau
+[INFO] 15:16:06:004 Memoria/(4606:4606): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 4096
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 15:16:06:022 Memoria/(4606:4606): Algoritmo BEST configurado
+[INFO] 15:16:06:022 Memoria/(4606:4606): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:16:06:033 Memoria/(4606:4606): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 15:16:08:686 Memoria/(4606:4607): Cliente conectado (a memoria_sv)
+
+[INFO] 15:16:08:687 Memoria/(4606:4607): RESPUESTA AL CONECTAR CPU
+[INFO] 15:16:10:574 Memoria/(4606:4608): Cliente conectado (a memoria_sv)
+
+[INFO] 15:16:10:574 Memoria/(4606:4608): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 15:16:12:974 Memoria/(4606:4609): Cliente conectado (a memoria_sv)
+
+[INFO] 15:16:12:975 Memoria/(4606:4609): RESPUESTA AL CONECTAR KERNEL
+[INFO] 15:16:14:810 Memoria/(4606:4609): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 15:16:14:810 Memoria/(4606:4609): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 15:16:15:814 Memoria/(4606:4607): Recibido pedido de MOV_IN
+[INFO] 15:16:15:815 Memoria/(4606:4607): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:16:15:815 Memoria/(4606:4607): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:16:15:815 Memoria/(4606:4607): hola
+[INFO] 15:16:15:815 Memoria/(4606:4607): chau
+[INFO] 15:16:15:815 Memoria/(4606:4607): llegue
+[INFO] 15:19:15:787 Memoria/(4606:4609): Se ha finalizado la conexion
+[INFO] 15:19:17:440 Memoria/(4606:4608): Se ha finalizado la conexion
+[INFO] 15:19:19:447 Memoria/(4606:4607): Recibido pedido de MOV_IN
+[INFO] 15:19:19:448 Memoria/(4606:4607): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:19:19:448 Memoria/(4606:4607): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:19:19:448 Memoria/(4606:4607): hola
+[INFO] 15:19:19:448 Memoria/(4606:4607): chau
+[INFO] 15:19:19:448 Memoria/(4606:4607): llegue
+[INFO] 15:19:19:449 Memoria/(4606:4607): Recibido pedido de MOV_IN
+[INFO] 15:19:19:449 Memoria/(4606:4607): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:19:19:450 Memoria/(4606:4607): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:19:19:450 Memoria/(4606:4607): hola
+[INFO] 15:19:19:450 Memoria/(4606:4607): chau
+[INFO] 15:19:31:505 Memoria/(4701:4701): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 4096
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 15:19:31:508 Memoria/(4701:4701): Algoritmo BEST configurado
+[INFO] 15:19:31:508 Memoria/(4701:4701): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:19:31:509 Memoria/(4701:4701): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 15:19:34:277 Memoria/(4701:4702): Cliente conectado (a memoria_sv)
+
+[INFO] 15:19:34:278 Memoria/(4701:4702): RESPUESTA AL CONECTAR CPU
+[INFO] 15:19:40:064 Memoria/(4706:4706): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 4096
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 15:19:40:065 Memoria/(4706:4706): Algoritmo BEST configurado
+[INFO] 15:19:40:065 Memoria/(4706:4706): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:19:40:065 Memoria/(4706:4706): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 15:19:42:516 Memoria/(4706:4707): Cliente conectado (a memoria_sv)
+
+[INFO] 15:19:42:516 Memoria/(4706:4707): RESPUESTA AL CONECTAR CPU
+[INFO] 15:19:45:641 Memoria/(4706:4708): Cliente conectado (a memoria_sv)
+
+[INFO] 15:19:45:642 Memoria/(4706:4708): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 15:19:47:762 Memoria/(4706:4709): Cliente conectado (a memoria_sv)
+
+[INFO] 15:19:47:763 Memoria/(4706:4709): RESPUESTA AL CONECTAR KERNEL
+[INFO] 15:19:49:638 Memoria/(4706:4709): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 15:19:49:638 Memoria/(4706:4709): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 15:19:50:644 Memoria/(4706:4707): Recibido pedido de MOV_IN
+[INFO] 15:19:50:644 Memoria/(4706:4707): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:19:50:644 Memoria/(4706:4707): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:19:50:644 Memoria/(4706:4707): hola
+[INFO] 15:19:50:645 Memoria/(4706:4707): chau
+[INFO] 15:19:50:645 Memoria/(4706:4707): llegue
+[INFO] 15:20:06:441 Memoria/(4706:4709): Se ha finalizado la conexion
+[INFO] 15:20:07:953 Memoria/(4706:4708): Se ha finalizado la conexion
+[INFO] 15:20:09:577 Memoria/(4706:4707): Recibido pedido de MOV_IN
+[INFO] 15:20:09:577 Memoria/(4706:4707): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:20:09:577 Memoria/(4706:4707): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:20:09:578 Memoria/(4706:4707): hola
+[INFO] 15:20:09:578 Memoria/(4706:4707): chau
+[INFO] 15:20:09:578 Memoria/(4706:4707): llegue
+[INFO] 15:20:09:578 Memoria/(4706:4707): Recibido pedido de MOV_IN
+[INFO] 15:20:09:578 Memoria/(4706:4707): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:20:09:579 Memoria/(4706:4707): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:20:09:579 Memoria/(4706:4707): hola
+[INFO] 15:20:09:579 Memoria/(4706:4707): chau
+[INFO] 15:20:48:875 Memoria/(4724:4724): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 4096
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 15:20:48:878 Memoria/(4724:4724): Algoritmo BEST configurado
+[INFO] 15:20:48:878 Memoria/(4724:4724): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:20:48:879 Memoria/(4724:4724): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 15:20:51:630 Memoria/(4724:4725): Cliente conectado (a memoria_sv)
+
+[INFO] 15:20:51:631 Memoria/(4724:4725): RESPUESTA AL CONECTAR CPU
+[INFO] 15:20:53:398 Memoria/(4724:4726): Cliente conectado (a memoria_sv)
+
+[INFO] 15:20:53:402 Memoria/(4724:4726): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 15:20:55:349 Memoria/(4724:4727): Cliente conectado (a memoria_sv)
+
+[INFO] 15:20:55:349 Memoria/(4724:4727): RESPUESTA AL CONECTAR KERNEL
+[INFO] 15:20:57:283 Memoria/(4724:4727): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 15:20:57:283 Memoria/(4724:4727): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 15:20:58:286 Memoria/(4724:4725): Recibido pedido de MOV_IN
+[INFO] 15:20:58:287 Memoria/(4724:4725): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:20:58:287 Memoria/(4724:4725): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:20:58:287 Memoria/(4724:4725): hola
+[INFO] 15:20:58:287 Memoria/(4724:4725): chau
+[INFO] 15:20:58:287 Memoria/(4724:4725): llegue
+[INFO] 15:44:47:667 Memoria/(4724:4727): Se ha finalizado la conexion
+[INFO] 15:44:49:417 Memoria/(4724:4726): Se ha finalizado la conexion
+[INFO] 15:44:51:096 Memoria/(4724:4725): Recibido pedido de MOV_IN
+[INFO] 15:44:51:097 Memoria/(4724:4725): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:44:51:097 Memoria/(4724:4725): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:44:51:097 Memoria/(4724:4725): hola
+[INFO] 15:44:51:097 Memoria/(4724:4725): chau
+[INFO] 15:44:51:098 Memoria/(4724:4725): llegue
+[INFO] 15:44:51:098 Memoria/(4724:4725): Recibido pedido de MOV_IN
+[INFO] 15:44:51:098 Memoria/(4724:4725): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:44:51:098 Memoria/(4724:4725): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:44:51:098 Memoria/(4724:4725): hola
+[INFO] 15:44:51:098 Memoria/(4724:4725): chau
+[INFO] 15:45:12:403 Memoria/(4893:4893): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 4096
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 15:45:12:407 Memoria/(4893:4893): Algoritmo BEST configurado
+[INFO] 15:45:12:408 Memoria/(4893:4893): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:45:12:563 Memoria/(4893:4893): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 15:45:15:327 Memoria/(4893:4894): Cliente conectado (a memoria_sv)
+
+[INFO] 15:45:15:328 Memoria/(4893:4894): RESPUESTA AL CONECTAR CPU
+[INFO] 15:45:17:322 Memoria/(4893:4895): Cliente conectado (a memoria_sv)
+
+[INFO] 15:45:17:323 Memoria/(4893:4895): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 15:45:19:142 Memoria/(4893:4896): Cliente conectado (a memoria_sv)
+
+[INFO] 15:45:19:142 Memoria/(4893:4896): RESPUESTA AL CONECTAR KERNEL
+[INFO] 15:45:21:453 Memoria/(4893:4896): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 15:45:21:456 Memoria/(4893:4896): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 15:45:22:459 Memoria/(4893:4894): Recibido pedido de MOV_IN
+[INFO] 15:45:22:460 Memoria/(4893:4894): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:45:22:460 Memoria/(4893:4894): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:45:22:460 Memoria/(4893:4894): hola
+[INFO] 15:45:22:460 Memoria/(4893:4894): chau
+[INFO] 15:45:22:460 Memoria/(4893:4894): llegue
+[INFO] 15:48:34:599 Memoria/(4893:4896): Se ha finalizado la conexion
+[INFO] 15:48:36:840 Memoria/(4893:4895): Se ha finalizado la conexion
+[INFO] 15:48:39:251 Memoria/(4893:4894): Recibido pedido de MOV_IN
+[INFO] 15:48:39:252 Memoria/(4893:4894): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:48:39:252 Memoria/(4893:4894): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:48:39:252 Memoria/(4893:4894): hola
+[INFO] 15:48:39:252 Memoria/(4893:4894): chau
+[INFO] 15:48:39:253 Memoria/(4893:4894): llegue
+[INFO] 15:48:39:253 Memoria/(4893:4894): Recibido pedido de MOV_IN
+[INFO] 15:48:39:253 Memoria/(4893:4894): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:48:39:253 Memoria/(4893:4894): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:48:39:253 Memoria/(4893:4894): hola
+[INFO] 15:48:39:253 Memoria/(4893:4894): chau
+[INFO] 15:48:42:930 Memoria/(4989:4989): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 4096
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 15:48:42:931 Memoria/(4989:4989): Algoritmo BEST configurado
+[INFO] 15:48:42:931 Memoria/(4989:4989): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:48:42:931 Memoria/(4989:4989): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 15:48:44:735 Memoria/(4989:4990): Cliente conectado (a memoria_sv)
+
+[INFO] 15:48:44:735 Memoria/(4989:4990): RESPUESTA AL CONECTAR CPU
+[INFO] 15:48:46:373 Memoria/(4989:4991): Cliente conectado (a memoria_sv)
+
+[INFO] 15:48:46:379 Memoria/(4989:4991): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 15:48:48:522 Memoria/(4989:4992): Cliente conectado (a memoria_sv)
+
+[INFO] 15:48:48:522 Memoria/(4989:4992): RESPUESTA AL CONECTAR KERNEL
+[INFO] 15:48:51:393 Memoria/(4989:4992): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 15:48:51:393 Memoria/(4989:4992): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 15:48:52:397 Memoria/(4989:4990): Recibido pedido de MOV_IN
+[INFO] 15:48:52:397 Memoria/(4989:4990): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:48:52:397 Memoria/(4989:4990): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:48:52:397 Memoria/(4989:4990): hola
+[INFO] 15:48:52:397 Memoria/(4989:4990): chau
+[INFO] 15:48:52:397 Memoria/(4989:4990): llegue
+[INFO] 15:51:08:862 Memoria/(4989:4992): Se ha finalizado la conexion
+[INFO] 15:51:10:264 Memoria/(4989:4991): Se ha finalizado la conexion
+[INFO] 15:51:11:675 Memoria/(4989:4990): Recibido pedido de MOV_IN
+[INFO] 15:51:11:676 Memoria/(4989:4990): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:51:11:676 Memoria/(4989:4990): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:51:11:676 Memoria/(4989:4990): hola
+[INFO] 15:51:11:676 Memoria/(4989:4990): chau
+[INFO] 15:51:11:677 Memoria/(4989:4990): llegue
+[INFO] 15:51:11:677 Memoria/(4989:4990): Recibido pedido de MOV_IN
+[INFO] 15:51:11:677 Memoria/(4989:4990): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:51:11:677 Memoria/(4989:4990): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:51:11:677 Memoria/(4989:4990): hola
+[INFO] 15:51:11:677 Memoria/(4989:4990): chau
+[INFO] 15:51:14:251 Memoria/(5088:5088): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 4096
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 15:51:14:251 Memoria/(5088:5088): Algoritmo BEST configurado
+[INFO] 15:51:14:251 Memoria/(5088:5088): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:51:14:252 Memoria/(5088:5088): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 15:51:16:322 Memoria/(5088:5089): Cliente conectado (a memoria_sv)
+
+[INFO] 15:51:16:322 Memoria/(5088:5089): RESPUESTA AL CONECTAR CPU
+[INFO] 15:51:18:207 Memoria/(5088:5090): Cliente conectado (a memoria_sv)
+
+[INFO] 15:51:18:207 Memoria/(5088:5090): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 15:51:21:387 Memoria/(5088:5091): Cliente conectado (a memoria_sv)
+
+[INFO] 15:51:21:388 Memoria/(5088:5091): RESPUESTA AL CONECTAR KERNEL
+[INFO] 15:51:23:225 Memoria/(5088:5091): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 15:51:23:225 Memoria/(5088:5091): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 15:51:24:229 Memoria/(5088:5089): Recibido pedido de MOV_IN
+[INFO] 15:51:24:229 Memoria/(5088:5089): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:51:24:229 Memoria/(5088:5089): xPID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:51:49:307 Memoria/(5088:5091): Se ha finalizado la conexion
+[INFO] 15:51:50:776 Memoria/(5088:5090): Se ha finalizado la conexion
+[INFO] 15:51:52:314 Memoria/(5088:5089): Recibido pedido de MOV_IN
+[INFO] 15:51:52:315 Memoria/(5088:5089): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:51:52:315 Memoria/(5088:5089): xPID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:51:52:315 Memoria/(5088:5089): Recibido pedido de MOV_IN
+[INFO] 15:51:52:316 Memoria/(5088:5089): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:51:52:316 Memoria/(5088:5089): xPID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:53:01:590 Memoria/(5160:5160): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 4096
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 15:53:01:591 Memoria/(5160:5160): Algoritmo BEST configurado
+[INFO] 15:53:01:591 Memoria/(5160:5160): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:53:01:591 Memoria/(5160:5160): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 15:53:03:792 Memoria/(5160:5161): Cliente conectado (a memoria_sv)
+
+[INFO] 15:53:03:793 Memoria/(5160:5161): RESPUESTA AL CONECTAR CPU
+[INFO] 15:53:05:574 Memoria/(5160:5162): Cliente conectado (a memoria_sv)
+
+[INFO] 15:53:05:575 Memoria/(5160:5162): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 15:53:07:596 Memoria/(5160:5163): Cliente conectado (a memoria_sv)
+
+[INFO] 15:53:07:597 Memoria/(5160:5163): RESPUESTA AL CONECTAR KERNEL
+[INFO] 15:53:09:402 Memoria/(5160:5163): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 15:53:09:402 Memoria/(5160:5163): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 15:53:10:404 Memoria/(5160:5161): Recibido pedido de MOV_IN
+[INFO] 15:53:10:404 Memoria/(5160:5161): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 4
+[INFO] 15:53:26:863 Memoria/(5160:5163): Se ha finalizado la conexion
+[INFO] 15:53:28:265 Memoria/(5160:5162): Se ha finalizado la conexion
+[INFO] 15:53:29:820 Memoria/(5160:5161): Se ha finalizado la conexion

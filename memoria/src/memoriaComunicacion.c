@@ -115,7 +115,7 @@ static void procesar_cpu(void * void_args) {
       log_info(logger, "debug");
       break;
     case CPU: log_info(logger, "RESPUESTA AL CONECTAR CPU");
-    				while(1) atenderCpu();
+    				atenderCpu();
     				//pthread_mutex_lock(&mx_cpu);
     				//send(cliente_socket, &(configuracion -> ENTRADAS_POR_TABLA), sizeof(uint16_t), 0);
     				//send(cliente_socket, &(configuracion -> TAM_PAGINA), sizeof(uint16_t), 0);
@@ -225,7 +225,7 @@ void atenderCpu(){
 		log_info(logger, "Recibido pedido de MOV_IN");
 		recv_instruccion_memoria(cpu_fd, num_seg, desplazamiento1, pid, tamanio);
 		log_info(logger, "PID: %d - N° Segmento: %d, Desplazamiento: %d, Tamanio: %d", *pid, *num_seg, *desplazamiento1, *tamanio);
-		log_info(logger, "xPID: %lu - N° Segmento: %lu, Desplazamiento: %lu, Tamanio: %d", *pid, *num_seg, *desplazamiento1, *tamanio);
+		//log_info(logger, "xPID: %lu - N° Segmento: %lu, Desplazamiento: %lu, Tamanio: %d", *pid, *num_seg, *desplazamiento1, *tamanio);
 		void* leido = leerMemoria(*num_seg, *desplazamiento1, *pid, *tamanio);
 		send(cpu_fd, leido, *tamanio, 0);
 		break;
