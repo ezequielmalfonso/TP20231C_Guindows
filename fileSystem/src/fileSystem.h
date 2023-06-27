@@ -34,12 +34,13 @@ int fileExiste(char* nombreArchivo);
 int cargarArchivoBloques(char *path, int BLOCK_SIZE, int BLOCK_COUNT);
 int cerrarArchivoBloques(int fd);
 void escribirBloque(int fd_ArchivoBloque, int numeroBloque, const void *datos);
-int leerBloqueIndirecto(int descriptor, int offset);
+
 int cargarSuperBloque(char *path);
 int iniciarBitmap (char* path ,uint32_t block_count );
 
 int buscarPrimerBloqueVacio (t_bitarray* s_bitmap, uint32_t BLOCK_SIZE);
-
+uint32_t leerBloqueIndirecto(int descriptor, int offset);
+void escribirBloqueIndirecto(int descriptor, int offset, uint32_t direccion);
 
 extern int fileSystemServer;
 extern int descriptor_archivo_bloque;

@@ -9,18 +9,18 @@ uint32_t desplazamiento(int logica){
 	return logica%configuracion->TAM_MAX_SEGMENTO;
 }
 
-void mov_in(char* direccion_logica, char registro[20], PCB_t* pcb){
+void mov_in(char direccion_logica[20], char registro[20], PCB_t* pcb){
 	uint32_t desplazamiento1 = desplazamiento(atoi(direccion_logica));
 	uint32_t n_segmento = num_seg(atoi(direccion_logica));
 
-	int tamanio = calcularTam(registro);//TODO
+	int tamanio = calcularTam(registro);
 	/*if(checkSegmentetitonFault(desplazamiento1, n_segmento,pcb)){
 		//log error segmentation fault
 	}*/
 	char registro_recibido[20];
-	send_pedido_memoria(memoria_fd,n_segmento,desplazamiento1,(pcb->pid),tamanio,MOV_IN);
-	recv(memoria_fd,registro_recibido,tamanio,0);
-	set_registro(registro, registro_recibido,pcb);
+	send_pedido_memoria(memoria_fd,n_segmento,desplazamiento1,(pcb->pid),tamanio, MOV_IN);
+	recv(memoria_fd, registro_recibido ,tamanio, 0);
+	set_registro(registro, registro_recibido, pcb);
 //	log_info(logger,"PID: %d - Ejecutando SET parametro 1: %s parametro 2: %s", pid,instruccion_ejecutar->parametro1,instruccion_ejecutar->parametro2);
 //	bool recv_instruccion(memoria_fd, tam, respuestaMemoria, char* param3);
 //enviar pedido a memoria TODO
@@ -35,11 +35,11 @@ void mov_out(char* direccion_logica, char* registro,PCB_t* pcb){
 			//log error segmentation fault
 		}
 		send_escribir_memoria(memoria_fd,n_segmento,desplazamiento1,(pcb->pid),escribir,tamanio,MOV_OUT);
-		char* msj;
-		recv(memoria_fd,msj,2,0);
-			log_info(logger,"se escribio en memoria:  %s",msj);
+		char* msj = malloc(sizeof(char) * 20);
+		recv(memoria_fd, msj, 3, 0);
+		log_info(logger,"se escribio en memoria:  %s",msj);
 		//enviar pedido a memoria TODO
-			free(escribir);
+		free(escribir);
 }
 
 int checkSegmentetitonFault(uint32_t desplazamiento, uint32_t n_segmento,PCB_t* pcb){

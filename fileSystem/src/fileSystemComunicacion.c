@@ -177,7 +177,7 @@ static void procesar_conexion(void* void_args) {
 
 				 if(bloques_actuales > 1){
 					 for(i = 0; i < (bloques_actuales - 1) ; i++ ){
-						 direccion_donde_leer = FCB_archivo->puntero_indirecto + (i * tamanio_puntero);
+						 direccion_donde_leer = FCB_archivo->puntero_indirecto + (i * sizeof(uint32_t) /*tamanio_puntero*/);
 						 nro_bloque = leerBloqueIndirecto(descriptor_archivo_bloque, direccion_donde_leer);
 						 bitarray_clean_bit(s_bitmap,nro_bloque);
 					 }
@@ -208,7 +208,7 @@ static void procesar_conexion(void* void_args) {
 
 				 if(bloques_actuales > 1){
 					 for(i = bloques_actuales ; i > bloques_totales ; i--){
-						 direccion_donde_leer = FCB_archivo->puntero_indirecto + (i * tamanio_puntero);
+						 direccion_donde_leer = FCB_archivo->puntero_indirecto + (i * sizeof(uint32_t)/*tamanio_puntero*/);
 						 nro_bloque = leerBloqueIndirecto(descriptor_archivo_bloque, direccion_donde_leer);
 						 bitarray_clean_bit(s_bitmap,nro_bloque);
 						 log_error(logger, "Bloque borrado");
@@ -265,14 +265,14 @@ static void procesar_conexion(void* void_args) {
 
 				 // Solo entra si ya hay puntero directo y puntero indirecto
 				 int i;
-				 int puntero_nuevo;
+				 uint32_t puntero_nuevo;
 				 int direccion_donde_escribir;
 				 for(i = bloques_actuales; i < bloques_totales; i++) {
 					 indice_bitmap = buscarPrimerBloqueVacio (s_bitmap, configuracionSuperBloque->BLOCK_SIZE);
 					 puntero_nuevo = indice_bitmap * configuracionSuperBloque->BLOCK_SIZE;
 					 bitarray_set_bit(s_bitmap, indice_bitmap);
 					 // TODO: escribir puntero_nuevo en el bloque de puntero_indirecto. Tener en cuenta demora en lectura y escritura
-					 direccion_donde_escribir = FCB_archivo->puntero_indirecto + (i * tamanio_puntero);
+					 direccion_donde_escribir = FCB_archivo->puntero_indirecto + (i * sizeof(uint32_t)/*tamanio_puntero*/);
 					 escribirBloqueIndirecto( descriptor_archivo_bloque, direccion_donde_escribir, puntero_nuevo);
 				 }
 			 }

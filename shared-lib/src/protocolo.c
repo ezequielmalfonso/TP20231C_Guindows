@@ -419,7 +419,7 @@ bool send_pedido_memoria(int fd, uint32_t num_seg, uint32_t desplazamiento, uint
 	return true;
 }
 
-static void* serializar_instruccion_memoria(size_t* size, uint32_t param1, uint32_t param2, uint32_t param3,int param4, op_code codigo) {
+static void* serializar_instruccion_memoria(size_t* size, uint32_t param1, uint32_t param2, uint32_t param3, int param4, op_code codigo) {
 	size_t opcodesize = sizeof(op_code);
 	*size = 4 *sizeof(uint32_t) + opcodesize + sizeof(size_t);
 	void * stream = malloc(*size);
@@ -439,7 +439,7 @@ static void* serializar_instruccion_memoria(size_t* size, uint32_t param1, uint3
 	return stream;
 }
 
-bool recv_instruccion_memoria(int fd, uint32_t num_seg, uint32_t desplazamiento, uint32_t pid,int tamanio) {
+bool recv_instruccion_memoria(int fd, uint32_t* num_seg, uint32_t* desplazamiento, uint32_t* pid,int* tamanio) {
 	size_t size_payload;
 	if (recv(fd, &size_payload, sizeof(size_t), MSG_WAITALL) != sizeof(size_t))
 		return false;
@@ -453,14 +453,14 @@ bool recv_instruccion_memoria(int fd, uint32_t num_seg, uint32_t desplazamiento,
 	    return true;
 }
 
-static void deserializar_instruccion_memoria(void* stream, uint32_t param1, uint32_t param2, uint32_t param3,int param4) {
-	memcpy(&param1, stream, sizeof(uint32_t));
+static void deserializar_instruccion_memoria(void* stream, uint32_t* param1, uint32_t* param2, uint32_t* param3, int* param4) {
+	memcpy(param1, stream, sizeof(uint32_t));
 	stream += sizeof(uint32_t);
-	memcpy(&param2, stream, sizeof(uint32_t));
+	memcpy(param2, stream, sizeof(uint32_t));
 	stream += sizeof(uint32_t);
-	memcpy(&param3, stream, sizeof(uint32_t));
+	memcpy(param3, stream, sizeof(uint32_t));
 	stream += sizeof(uint32_t);
-	memcpy(&param4, stream, sizeof(int));
+	memcpy(param4, stream, sizeof(int));
 
 }
 bool send_escribir_memoria(int fd, uint32_t num_seg, uint32_t desplazamiento, uint32_t pid,void* escribir,int tamanio, op_code codigo) {

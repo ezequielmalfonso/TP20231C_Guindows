@@ -89,10 +89,10 @@ int cargarSuperBloque(char *path){
 		configuracionSuperBloque->BLOCK_SIZE = config_get_int_value(superBloque, "BLOCK_SIZE");
 		configuracionSuperBloque->BLOCK_COUNT = config_get_int_value(superBloque, "BLOCK_COUNT");
 
-		//tamanio_puntero = ceil(log2(configuracionSuperBloque->BLOCK_COUNT * configuracionSuperBloque->BLOCK_SIZE));
-		tamanio_puntero = ceil(log10(configuracionSuperBloque->BLOCK_COUNT * configuracionSuperBloque->BLOCK_SIZE));
-
-		log_warning(logger, "Tamanio puntero: %d", tamanio_puntero);
+		//tamanio_puntero = ceil(log2(configuracionSuperBloque->BLOCK_COUNT * configuracionSuperBloque->BLOCK_SIZE)); binario
+		//tamanio_puntero = ceil(log10(configuracionSuperBloque->BLOCK_COUNT * configuracionSuperBloque->BLOCK_SIZE)); decimal
+		// Nota: los punteros se deben almacenas como uint32
+		//log_warning(logger, "Tamanio puntero: %d", tamanio_puntero);
 
 		log_info(logger,
 			"\nBLOCK_SIZE: %d\n"
@@ -190,9 +190,10 @@ int cerrarArchivoBloques(int fd){
 	return close(fd);
 }
 
-void escribirBloqueIndirecto(int descriptor, int offset, int direccion){
+void escribirBloqueIndirecto(int descriptor, int offset, uint32_t direccion){
 
 	lseek(descriptor, offset, SEEK_SET);
+	/* Esto es si el tamanio de direccion debe variar
 	char* dir = string_from_format("%d", direccion);
 	char* dir_reverse = string_reverse(dir);
 	int i;
@@ -203,28 +204,29 @@ void escribirBloqueIndirecto(int descriptor, int offset, int direccion){
 	}
 	char* dir_final = string_reverse(dir_reverse);
 	log_error(logger, "Dir a escribir : %s ", dir);
-	write(descriptor, dir_final, tamanio_puntero);
+	write(descriptor, dir_final, tamanio_puntero);*/
+	write(descriptor, &direccion, sizeof(uint32_t));
 
 }
-int leerBloqueIndirecto(int descriptor, int offset){
+uint32_t leerBloqueIndirecto(int descriptor, int offset){
 
 	log_warning(logger, "Entre leerBloqueIndirecto, offset: %d", offset);
 
 	lseek(descriptor, offset, SEEK_SET);
-	char* buffer = malloc(1+sizeof(char)*tamanio_puntero);
-
-	read(descriptor, buffer, tamanio_puntero);
+	//char* buffer = malloc(1+sizeof(char)*tamanio_puntero);
+	char* buffer = malloc(sizeof(uint32_t));
+	//read(descriptor, buffer, tamanio_puntero);
 //	buffer[sizeof(char)*tamanio_puntero] = '\0';
+	read(descriptor, buffer, sizeof(uint32_t));
+	log_warning(logger, "Buffer : %s", buffer);
 
-	log_error(logger, "Buffer : %s", buffer);
+	//int dir = atoi(buffer);
+	char* ptr;	// No se usa
+	uint32_t direccion = strtoul(buffer, &ptr, 10);	// unsigned long ocupa lo mismo que uint_32
+	//int direccion = floor(dir / configuracionSuperBloque->BLOCK_SIZE);
 
-	int dir = atoi(buffer);
-
-	int direccion = floor(dir / configuracionSuperBloque->BLOCK_SIZE);
-
-	log_warning(logger, "obtuvo la direccion %d: ",direccion);
+	log_warning(logger, "Se obtuvo la direccion %d: ", direccion);
 	return direccion;
-
 }
 
 

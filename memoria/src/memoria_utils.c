@@ -65,7 +65,7 @@ t_list* cargarProceso(uint32_t pid){
 	nodo->id_proceso=pid;
 	list_add(tabla_de_paginas,nodo);
 	tabla = nodo->tablaDelProceso;
-	free(nodo);
+	//free(nodo);TODO ver esto
 	return tabla;
 }
 
@@ -103,9 +103,16 @@ int escribirEnMemoria(uint32_t id_seg,uint32_t  desplazamiento,uint32_t  pid, in
 
 }
 t_list* buscarTabla(uint32_t pid){
+	if(list_is_empty(tabla_de_paginas)) {	// no deberia entrar nunca?
+		log_error(logger, "La tabla de paginas esta vacia");
+	}
 	int i=0;
 	t_nodoDePagina* aux = list_get(tabla_de_paginas,i);
-	while(pid==aux->id_proceso){
+	while(pid!=aux->id_proceso){
+		if(i >= list_size(tabla_de_paginas)) {
+			log_error(logger, "Error en la busqueda de tabla");
+			break;
+		}
 	aux	= list_get(tabla_de_paginas,i);
 	i++;
 	}
@@ -113,7 +120,8 @@ t_list* buscarTabla(uint32_t pid){
 	}
 t_segmento* buscarSegmento(t_list* tabla, uint32_t id){
 	t_segmento* segmentoN;
-			for(int i;i<list_size(tabla);i++){
+	int i;
+			for(i=0;i<list_size(tabla);i++){
 			segmentoN = list_get(tabla,i);
 			if(segmentoN->id_segmento == id)break;
 		}

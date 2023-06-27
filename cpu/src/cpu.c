@@ -132,7 +132,7 @@ int execute(INSTRUCCION* instruccion_ejecutar, registros_t registros, uint16_t p
 	}else if(!strcmp(instruccion_ejecutar->comando,"MOV_IN") ){
 		log_info(logger,"PID: %d -  Listo para ejecutar MOV_IN ", pid);
 		mov_in(instruccion_ejecutar->parametro1,instruccion_ejecutar->parametro2, pcb);
-		log_info(logger,"PID: %d - Ejecutando MOV_IN parametro 1: %s parametro 2: %s", pid,instruccion_ejecutar->parametro1,instruccion_ejecutar->parametro2);
+		log_info(logger,"PID: %d - Se ha ejecutado MOV_IN parametro 1: %s parametro 2: %s", pid,instruccion_ejecutar->parametro1,instruccion_ejecutar->parametro2);
 
 
 	}else if(!strcmp(instruccion_ejecutar->comando,"F_OPEN") ){
