@@ -127,12 +127,12 @@ static void procesar_conexion(void* void_args) {
 			 */
 			 break;
 
-		 case F_CLOSE:
+		 case F_CLOSE:	// No llega, se ocupa kernel
 			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
 			 log_info(logger, "Se recibio F_CLOSE con parametros %s, %s y %s", parametro1, parametro2, parametro3);
 			 break;
 
-		 case F_SEEK:
+		 case F_SEEK:	// No llega, se ocupa kernel
 			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
 			 log_info(logger, "Se recibio F_SEEK con parametros %s, %s y %s", parametro1, parametro2, parametro3);
 			 break;
@@ -283,6 +283,7 @@ static void procesar_conexion(void* void_args) {
 			 config_set_value(FCB, "PUNTERO_DIRECTO", string_itoa(FCB_archivo->puntero_directo));
 			 config_set_value(FCB, "PUNTERO_INDIRECTO", string_itoa(FCB_archivo->puntero_indirecto));
 			 config_save_in_file(FCB, pathArchivo);
+			 config_destroy(FCB);
 
 			 cop = F_TRUNCATE_OK;
 			 send(cliente_socket, &cop, sizeof(op_code), 0);
@@ -291,7 +292,24 @@ static void procesar_conexion(void* void_args) {
 		 case F_READ:
 			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
 			 log_info(logger, "Se recibio F_READ con parametros %s, %s, %s y %s", parametro1, parametro2, parametro3, posicion);
+
+			 {int p = datosFCB(pathArchivo);
+			 if(p == -1) {	// No deberia entrar nunca
+				log_error(logger, "Error inesperado antes de cargar FCB");
+				cop=F_TRUNCATE_FAIL;
+				send(cliente_socket, &cop, sizeof(op_code), 0);
+				break;
+			 }}
+
 			 sleep(3); // borrar
+			 int nro_bloque_archivo = floor(atoi(posicion)/configuracionSuperBloque->BLOCK_SIZE);	// Bloque donde empieza la lectura
+			 uint32_t puntero_primer_bloque;
+			 if(nro_bloque_archivo == 0)	{puntero_primer_bloque = FCB_archivo->puntero_directo;}
+			 else {
+				 uint32_t direccion = FCB_archivo->puntero_indirecto + tamanio_puntero * nro_bloque_archivo;
+				 puntero_primer_bloque = leerBloqueIndirecto(descriptor_archivo_bloque, direccion);
+			 }
+			 log_info(logger, "La lectura comienza en el bloque de puntero %d", puntero_primer_bloque);
 			 // leer archivo de bloque segun la posicon y los bloques del archivo
 			 //send leido a memoria
 			 //recv ok de memoria
