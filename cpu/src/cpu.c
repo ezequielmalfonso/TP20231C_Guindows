@@ -92,13 +92,6 @@ int decode(INSTRUCCION* instruccion_ejecutar ){
 
 
 int execute(INSTRUCCION* instruccion_ejecutar, registros_t registros, uint16_t pid, uint32_t pc, PCB_t* pcb){
-	// Cargar contexto de ejecucion
-	memcpy(regAX, pcb->registro_cpu.ax, 4);		memcpy(regBX, pcb->registro_cpu.bx, 4);
-	memcpy(regCX, pcb->registro_cpu.cx, 4);		memcpy(regDX, pcb->registro_cpu.dx, 4);
-	memcpy(regEAX, pcb->registro_cpu.eax, 8);	memcpy(regEBX, pcb->registro_cpu.ebx, 8);
-	memcpy(regECX, pcb->registro_cpu.ecx, 8);	memcpy(regEDX, pcb->registro_cpu.edx, 8);
-	memcpy(regRAX, pcb->registro_cpu.rax, 16);	memcpy(regRBX, pcb->registro_cpu.rbx, 16);
-	memcpy(regRCX, pcb->registro_cpu.rcx, 16);	memcpy(regRDX, pcb->registro_cpu.rdx, 16);
 
 
 
@@ -112,6 +105,9 @@ int execute(INSTRUCCION* instruccion_ejecutar, registros_t registros, uint16_t p
 	}else if(!strcmp(instruccion_ejecutar->comando,"MOV_OUT") ){
 
 		log_info(logger,"PID: %d -  Listo para ejecutar MOV_OUT ", pid);
+		log_info(logger,"PID: %d - Se ha ejecutado MOV_OUT parametro 1: %s parametro 2: %s", pid,instruccion_ejecutar->parametro1,instruccion_ejecutar->parametro2);
+		mov_out(instruccion_ejecutar->parametro1, instruccion_ejecutar->parametro2, pcb);
+		log_info(logger,"PID: %d - Se ha ejecutado MOV_OUT parametro 1: %s parametro 2: %s", pid,instruccion_ejecutar->parametro1,instruccion_ejecutar->parametro2);
 
 	}else if(!strcmp(instruccion_ejecutar->comando,"WAIT") ){
 
@@ -131,7 +127,7 @@ int execute(INSTRUCCION* instruccion_ejecutar, registros_t registros, uint16_t p
 
 	}else if(!strcmp(instruccion_ejecutar->comando,"MOV_IN") ){
 		log_info(logger,"PID: %d -  Listo para ejecutar MOV_IN ", pid);
-		mov_in(instruccion_ejecutar->parametro1,instruccion_ejecutar->parametro2, pcb);
+		mov_in(instruccion_ejecutar->parametro2,instruccion_ejecutar->parametro1, pcb);
 		log_info(logger,"PID: %d - Se ha ejecutado MOV_IN parametro 1: %s parametro 2: %s", pid,instruccion_ejecutar->parametro1,instruccion_ejecutar->parametro2);
 
 

@@ -65,7 +65,8 @@ typedef enum {
 	F_WRITE_OK,
 	F_WRITE_FAIL,
 	F_READ_OK,
-	F_READ_FAIL
+	F_READ_FAIL,
+	MOV_OUT_OK
 	}op_code;
 
 typedef struct {
@@ -108,8 +109,8 @@ bool recv_instruccion_memoria(int fd, uint32_t* num_seg, uint32_t* desplazamient
 static void* serializar_instruccion_memoria(size_t* size, uint32_t param1, uint32_t param2, uint32_t param3,int param4, op_code codigo);
 bool send_pedido_memoria(int fd, uint32_t num_seg, uint32_t desplazamiento, uint32_t pid,int tamanio, op_code codigo);
 //escribir
-bool recv_escribir_memoria(int fd, uint32_t num_seg, uint32_t desplazamiento, uint32_t pid,int tamanio, void* escribir) ;
-static void deserializar_escribir_memoria(void* stream, uint32_t param1, uint32_t param2, uint32_t param3,int param4, void* escribir) ;
+bool recv_escribir_memoria(int fd, uint32_t* num_seg, uint32_t* desplazamiento, uint32_t* pid,int* tamanio, void* escribir) ;
+static void deserializar_escribir_memoria(void* stream, uint32_t* param1, uint32_t* param2, uint32_t* param3,int* param4, void* escribir) ;
 static void* serializar_escribir_memoria(size_t* size, uint32_t param1, uint32_t param2, uint32_t param3,void* param4, int tam, op_code codigo) ;
 bool send_escribir_memoria(int fd, uint32_t num_seg, uint32_t desplazamiento, uint32_t pid,void* escribir,int tamanio, op_code codigo);
 

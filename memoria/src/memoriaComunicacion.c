@@ -115,7 +115,9 @@ static void procesar_cpu(void * void_args) {
       log_info(logger, "debug");
       break;
     case CPU: log_info(logger, "RESPUESTA AL CONECTAR CPU");
+    				while(1){
     				atenderCpu();
+    				}
     				//pthread_mutex_lock(&mx_cpu);
     				//send(cliente_socket, &(configuracion -> ENTRADAS_POR_TABLA), sizeof(uint16_t), 0);
     				//send(cliente_socket, &(configuracion -> TAM_PAGINA), sizeof(uint16_t), 0);
@@ -231,13 +233,14 @@ void atenderCpu(){
 		break;
 	case MOV_OUT:
 		log_info(logger, "Recibido pedido de MOV_OUT");
-		char* ok = "OK";
-		void* escribir;
-		//recv_escribir_memoria(cpu_fd, num_seg, desplazamiento, pid,tamanio,escribir);	OJO que ahora num_seg, desplazamiento y pid son punteros
-		//if(escribirEnMemoria( num_seg,  desplazamiento,  pid,  tamanio,escribir)){
-		//send(cpu_fd, ok, 3, 0); // hubieran usado op_codes :v
-				//}	// else?
-				//break;
+		cop = MOV_OUT_OK;
+		void* escribir=malloc(20);
+		recv_escribir_memoria(cpu_fd, num_seg, desplazamiento1, pid, tamanio, escribir);	//OJO que ahora num_seg, desplazamiento y pid son punteros
+		log_info(logger, "PID: %d - N° Segmento: %d, Desplazamiento: %d, Tamanio: %d, Escribir: %s", *pid, *num_seg, *desplazamiento1, *tamanio, escribir);
+		if(escribirEnMemoria( *num_seg,  *desplazamiento1,  *pid,  *tamanio,escribir)){
+		send(cpu_fd, &cop, sizeof(cop), 0); // hubieran usado op_codes :v
+				}	// else?
+
 		break;
 	 default:
 		 break;

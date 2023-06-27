@@ -480,7 +480,7 @@ bool send_escribir_memoria(int fd, uint32_t num_seg, uint32_t desplazamiento, ui
 
 static void* serializar_escribir_memoria(size_t* size, uint32_t param1, uint32_t param2, uint32_t param3,void* param4, int tam, op_code codigo) {
 	size_t opcodesize = sizeof(op_code);
-	*size = 4 *sizeof(uint32_t) + opcodesize + sizeof(size_t);
+	*size = 4 *sizeof(uint32_t) + opcodesize + sizeof(size_t)+ sizeof(int);
 	void * stream = malloc(*size);
 	size_t size_load = *size- opcodesize - sizeof(size_t);	// El size no incluye el size ni el opcode (se saca antes)
 
@@ -494,26 +494,28 @@ static void* serializar_escribir_memoria(size_t* size, uint32_t param1, uint32_t
 	offset += sizeof(uint32_t);
 	memcpy(stream + offset, &param3,sizeof(uint32_t));
 	offset += sizeof(uint32_t);
-	memcpy(stream + offset, &param4,tam);
 	memcpy(stream + offset, &tam,sizeof(int));
 	offset += sizeof(int);
-	memcpy(stream + offset, &param4,tam);
+	memcpy(stream + offset, param4,tam);
+	printf("\n escribir desde serializacion: %s \n", param4);
 	return stream;
 }
 
-static void deserializar_escribir_memoria(void* stream, uint32_t param1, uint32_t param2, uint32_t param3,int param4, void* escribir) {
-	memcpy(&param1, stream, sizeof(uint32_t));
+static void deserializar_escribir_memoria(void* stream, uint32_t* param1, uint32_t* param2, uint32_t* param3,int* param4, void* escribir) {
+	memcpy(param1, stream, sizeof(uint32_t));
 	stream += sizeof(uint32_t);
-	memcpy(&param2, stream, sizeof(uint32_t));
+	memcpy(param2, stream, sizeof(uint32_t));
 	stream += sizeof(uint32_t);
-	memcpy(&param3, stream, sizeof(uint32_t));
+	memcpy(param3, stream, sizeof(uint32_t));
 	stream += sizeof(uint32_t);
-	memcpy(&param4, stream, sizeof(int));
+	memcpy(param4, stream, sizeof(int));
 	stream += sizeof(int);
-	memcpy(escribir, stream, param4);
+	printf("tamanio de void desde la serializacion %d",*param4);
+	memcpy(escribir, stream, *param4);
+	printf("\n\n escribir: %p",escribir);
 
 }
-bool recv_escribir_memoria(int fd, uint32_t num_seg, uint32_t desplazamiento, uint32_t pid,int tamanio, void* escribir) {
+bool recv_escribir_memoria(int fd, uint32_t* num_seg, uint32_t* desplazamiento, uint32_t* pid,int* tamanio, void* escribir) {
 	size_t size_payload;
 	if (recv(fd, &size_payload, sizeof(size_t), MSG_WAITALL) != sizeof(size_t))
 		return false;
