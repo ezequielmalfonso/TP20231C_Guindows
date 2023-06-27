@@ -29,11 +29,11 @@ static void procesar_conexion(void* void_args) {
 		 return;
 	 }
 
-	 char parametro1[20], parametro2[20], parametro3[20];
+	 char parametro1[20], parametro2[20], parametro3[20], posicion[20];
 	 char* pathArchivo;
 	 char* nombre;
 
-	 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
+	 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3, posicion);	// la posicion es para fwrite y fread
 	 nombre = strtok(parametro1, "\n");
 	 pathArchivo = string_from_format("%s/%s", configuracion->PATH_FCB, nombre);
 

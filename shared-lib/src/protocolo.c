@@ -354,9 +354,9 @@ static void deserializar_proceso(void* stream, PCB_t* proceso) {
 }
 
 // ENVIO DE INSTRUCCION KERNEL-FILESYSTEM
-bool send_archivo(int fd, char* param1, char* param2, char* param3, op_code codigo) {
+bool send_archivo(int fd, char* param1, char* param2, char* param3, char* posicion, op_code codigo) {
 	size_t size;
-	void* stream = serializar_instruccion(&size, param1, param2, param3, codigo);
+	void* stream = serializar_instruccion(&size, param1, param2, param3, posicion, codigo);
 	if (send(fd, stream, size, 0) != size) {
 		free(stream);
 		return false;
@@ -365,10 +365,10 @@ bool send_archivo(int fd, char* param1, char* param2, char* param3, op_code codi
 	return true;
 }
 
-static void* serializar_instruccion(size_t* size, char* param1, char* param2, char* param3, op_code codigo) {
+static void* serializar_instruccion(size_t* size, char* param1, char* param2, char* param3, char* posicion, op_code codigo) {
 	size_t char20size = sizeof(char) * 20;
 	size_t opcodesize = sizeof(op_code);
-	*size = 3 * char20size + opcodesize + sizeof(size_t);
+	*size = 4 * char20size + opcodesize + sizeof(size_t);
 	void * stream = malloc(*size);
 	size_t size_load = *size- opcodesize - sizeof(size_t);	// El size no incluye el size ni el opcode (se saca antes)
 
@@ -381,10 +381,12 @@ static void* serializar_instruccion(size_t* size, char* param1, char* param2, ch
 	memcpy(stream + offset, param2, char20size);
 	offset += char20size;
 	memcpy(stream + offset, param3, char20size);
+	offset += char20size;
+	memcpy(stream + offset, posicion, char20size);
 	return stream;
 }
 
-bool recv_instruccion(int fd, char* param1, char* param2, char* param3) {
+bool recv_instruccion(int fd, char* param1, char* param2, char* param3, char* posicion) {
 	size_t size_payload;
 	if (recv(fd, &size_payload, sizeof(size_t), MSG_WAITALL) != sizeof(size_t))
 		return false;
@@ -393,18 +395,20 @@ bool recv_instruccion(int fd, char* param1, char* param2, char* param3) {
 		free(stream);
 	    return false;
 	}
-	    deserializar_instruccion(stream, param1, param2, param3);
+	    deserializar_instruccion(stream, param1, param2, param3, posicion);
 	    free(stream);
 	    return true;
 }
 
-static void deserializar_instruccion(void* stream, char* param1, char* param2, char* param3) {
+static void deserializar_instruccion(void* stream, char* param1, char* param2, char* param3, char* posicion) {
 	size_t char20size = sizeof(char) * 20;
 	memcpy(param1, stream, char20size);
 	stream += char20size;
 	memcpy(param2, stream, char20size);
 	stream += char20size;
 	memcpy(param3, stream, char20size);
+	stream += char20size;
+	memcpy(posicion, stream, char20size);
 }
 
 // ENVIO DE INSTRUCCION CPU-Memoria

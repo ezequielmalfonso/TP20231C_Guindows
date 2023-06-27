@@ -591,7 +591,7 @@ void esperar_cpu(){
 
 				}else { // El archivo no esta abierto
 					log_warning(logger, "Archivo %s no esta abierto",instruccion->parametro1);
-					send_archivo(file_system_fd,instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_EXISTS);
+					send_archivo(file_system_fd,instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, "", F_EXISTS);
 					recv(file_system_fd, &mensaje , sizeof(op_code), 0);
 
 					log_warning(logger, "Existencia=%d", mensaje);
@@ -600,7 +600,7 @@ void esperar_cpu(){
 					if(mensaje)
 					{
 						// El archivo existe -> lo abro
-						send_archivo(file_system_fd,instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_OPEN);
+						send_archivo(file_system_fd,instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, "", F_OPEN);
 						recv(file_system_fd, &mensaje , sizeof(op_code), 0);
 
 						if(mensaje == F_OPEN_OK) {
@@ -616,13 +616,13 @@ void esperar_cpu(){
 
 					} else{	// El archivo no existe -> lo creo
 						log_info(logger, "PID: %d - Recibo pedido de F_CREATE por archivo inexistente: %s", pcb->pid, instruccion->parametro1);
-						send_archivo(file_system_fd,instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_CREATE);
+						send_archivo(file_system_fd,instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, "", F_CREATE);
 						recv(file_system_fd, &mensaje , sizeof(op_code), 0);
 
 						if(mensaje == F_CREATE_OK)
 						{
 							// PRIMER ENVIO PARA APERTURA DEL ARCHIVO NUEVO
-							send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_OPEN);
+							send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, "", F_OPEN);
 							recv(file_system_fd, &mensaje , sizeof(op_code), 0);
 							if(mensaje == F_OPEN_OK) {
 								t_archivo_abierto* archivo_nuevo = malloc(sizeof(t_archivo_abierto));
@@ -798,7 +798,7 @@ void esperar_cpu(){
 				fs_desocupado = false;
 				sem_wait(&s_blocked_fs);	// Solo para que el fopen espere
 				//////
-				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_TRUNCATE);
+				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, "", F_TRUNCATE);
 				log_info(logger, "PID: %d - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS", pcb->pid);
 
 				// Hilo de espera a respuesta
@@ -849,7 +849,7 @@ void esperar_cpu(){
 					break;
 				}*/
 
-				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_READ);
+				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, "", F_READ);
 
 				// Hilo de espera a respuesta
 				pthread_t hilo_bloqueado_read;
@@ -891,7 +891,7 @@ void esperar_cpu(){
 					break;
 				}*/
 
-				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_WRITE);
+				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, "", F_WRITE);
 
 				// Hilo de espera a respuesta
 				pthread_t hilo_bloqueado_write;
@@ -1126,7 +1126,7 @@ void bloqueando_por_filesystem(PCB_t* pcb){	// Esperando respuesta del fs
 
 void execute_fread(PCB_t* pcb) {
 	INSTRUCCION* instruccion = list_get(pcb->instrucciones, pcb->pc - 1);
-	send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_READ);
+	send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, "", F_READ);
 	// Hilo de espera a respuesta
 	pthread_t hilo_bloqueado_read;
 	pthread_create(&hilo_bloqueado_read,NULL,(void*)bloqueando_por_filesystem,pcb);
@@ -1134,7 +1134,7 @@ void execute_fread(PCB_t* pcb) {
 }
 void execute_fwrite(PCB_t* pcb) {
 	INSTRUCCION* instruccion = list_get(pcb->instrucciones, pcb->pc - 1);
-	send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_WRITE);
+	send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, "", F_WRITE);
 	// Hilo de espera a respuesta
 	pthread_t hilo_bloqueado_write;
 	pthread_create(&hilo_bloqueado_write,NULL,(void*)bloqueando_por_filesystem,pcb);
@@ -1142,7 +1142,7 @@ void execute_fwrite(PCB_t* pcb) {
 }
 void execute_ftruncate(PCB_t* pcb) {
 	INSTRUCCION* instruccion = list_get(pcb->instrucciones, pcb->pc - 1);
-	send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, F_TRUNCATE);
+	send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, "", F_TRUNCATE);
 	// Hilo de espera a respuesta
 	pthread_t hilo_bloqueado_truncate;
 	pthread_create(&hilo_bloqueado_truncate,NULL,(void*)bloqueando_por_filesystem,pcb);

@@ -94,17 +94,13 @@ static void* serializar_proceso(size_t* size, PCB_t *proceso, op_code codigo);
 bool recv_proceso(int fd, PCB_t* proceso);
 static void deserializar_proceso(void* stream, PCB_t* proceso);
 
-//ENVIO INSTRUCCIONES KERNEL-FILESYSTEM
-bool send_archivo(int fd, char*, char*, char*, op_code codigo);
-static void* serializar_instruccion(size_t* size, char* param1, char* param2, char* param3, op_code codigo);
-bool recv_instruccion(int fd, char* param1, char* param2, char* param3);
-static void deserializar_instruccion(void* stream, char* param1, char* param2, char* param3);
+
 
 //ENVIO INSTRUCCIONES KERNEL-FILESYSTEM
-bool send_archivo(int fd, char*, char*, char*, op_code codigo);
-static void* serializar_instruccion(size_t* size, char* param1, char* param2, char* param3, op_code codigo);
-bool recv_instruccion(int fd, char* param1, char* param2, char* param3);
-static void deserializar_instruccion(void* stream, char* param1, char* param2, char* param3);
+bool send_archivo(int fd, char*, char*, char*, char*, op_code codigo);
+static void* serializar_instruccion(size_t* size, char* param1, char* param2, char* param3, char* posicion, op_code codigo);
+bool recv_instruccion(int fd, char* param1, char* param2, char* param3, char* posicion);
+static void deserializar_instruccion(void* stream, char* param1, char* param2, char* param3, char* posicion);
 
 //Envio instruccion CPU - MEMORIA
 static void deserializar_instruccion_memoria(void* stream, uint32_t* param1, uint32_t* param2, uint32_t* param3,int* param4);
