@@ -290,16 +290,22 @@ static void procesar_conexion(void* void_args) {
 
 		 case F_READ:
 			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
-			 log_info(logger, "Se recibio F_READ con parametros %s, %s y %s", parametro1, parametro2, parametro3);
+			 log_info(logger, "Se recibio F_READ con parametros %s, %s, %s y %s", parametro1, parametro2, parametro3, posicion);
 			 sleep(3); // borrar
+			 // leer archivo de bloque segun la posicon y los bloques del archivo
+			 //send leido a memoria
+			 //recv ok de memoria
 			 cop = F_READ_OK;
 			 send(cliente_socket, &cop, sizeof(op_code), 0);
 			 break;
 
 		 case F_WRITE:
 			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
-			 log_info(logger, "Se recibio F_WRITE con parametros %s, %s y %s", parametro1, parametro2, parametro3);
+			 log_info(logger, "Se recibio F_WRITE con parametros %s, %s, %s y %s", parametro1, parametro2, parametro3, posicion);
 			 sleep(3);	// borrar
+			 //send pedido a memoria
+			 //recv pedido de memoria
+			 //escribir en archivo de bloque en segun la posicion y los bloques del archivo
 			 cop = F_WRITE_OK;
 			 send(cliente_socket, &cop, sizeof(op_code), 0);
 			 break;

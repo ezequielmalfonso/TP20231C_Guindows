@@ -6188,3 +6188,45 @@ TAM_MAX_SEGMENTO: 128
 [INFO] 16:21:44:495 Cpu/(5917:5930): Recibi PCB id: 0
 [INFO] 16:21:44:495 Cpu/(5917:5930): PID: 0 - Ejecutando EXIT
 [INFO] 16:21:51:276 Cpu/(5917:5930): Se ha finalizado la conexion
+[INFO] 16:32:27:157 Cpu/(6259:6259): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 16:32:27:202 Cpu/(6259:6259): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 16:32:27:203 Cpu/(6259:6259): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 16:32:32:116 Cpu/(6259:6259): Cliente conectado (a CPU_SV)
+
+[INFO] 16:32:33:443 Cpu/(6259:6264): Recibi PCB id: 0
+[INFO] 16:32:33:443 Cpu/(6259:6264): En CPU
+[INFO] 16:32:34:443 Cpu/(6259:6264): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 16:32:34:444 Cpu/(6259:6264): Realizado SET del registro AX con valor HOLA
+[INFO] 16:32:34:444 Cpu/(6259:6264): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 16:32:34:444 Cpu/(6259:6264): PID: 0 -  Listo para ejecutar MOV_IN 
+[INFO] 16:32:34:445 Cpu/(6259:6264): Realizado SET del registro 120
+ con valor (null)
+[INFO] 16:32:34:446 Cpu/(6259:6264): PID: 0 - Se ha ejecutado MOV_IN parametro 1: BX parametro 2: 120
+
+[INFO] 16:32:34:446 Cpu/(6259:6264): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 16:32:34:491 Cpu/(6259:6264): Recibi PCB id: 0
+[INFO] 16:32:34:491 Cpu/(6259:6264): PID: 0 - Ejecutando YIELD 
+[INFO] 16:32:34:493 Cpu/(6259:6264): Recibi PCB id: 0
+[INFO] 16:32:34:494 Cpu/(6259:6264): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 16:32:39:583 Cpu/(6259:6264): Recibi PCB id: 0
+[INFO] 16:32:39:583 Cpu/(6259:6264): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 16:32:39:584 Cpu/(6259:6264): Recibi PCB id: 0
+[INFO] 16:32:39:584 Cpu/(6259:6264): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 16:32:39:584 Cpu/(6259:6264): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 16:32:42:587 Cpu/(6259:6264): Recibi PCB id: 0
+[INFO] 16:32:42:587 Cpu/(6259:6264): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 16:32:45:589 Cpu/(6259:6264): Recibi PCB id: 0
+[INFO] 16:32:45:589 Cpu/(6259:6264): PID: 0 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 16:32:45:590 Cpu/(6259:6264): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 16:32:45:590 Cpu/(6259:6264): Recibi PCB id: 0
+[INFO] 16:32:45:591 Cpu/(6259:6264): PID: 0 - Ejecutando EXIT

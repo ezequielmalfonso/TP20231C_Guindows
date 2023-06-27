@@ -849,7 +849,14 @@ void esperar_cpu(){
 					break;
 				}*/
 
-				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, "", F_READ);
+				{	// lo pongo en un bloque para que no joda con redeclarar variables
+				archivoABuscar = strtok(instruccion->parametro1, "\n");	// global
+				bool (*aux3)(void* x) = criterio_nombre_archivo_proceso;	// se puede meter como parametro directamente de alguna forma y no tener que usar aux2
+				t_archivoAbierto* archivoAux2 = NULL;
+				archivoAux2 = list_find(pcb->archivos_abiertos, aux3);
+				int posicion = archivoAux2->puntero;
+				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, string_itoa(posicion), F_READ);
+				}
 
 				// Hilo de espera a respuesta
 				pthread_t hilo_bloqueado_read;
@@ -890,9 +897,14 @@ void esperar_cpu(){
 					sem_post(&s_ready_execute);
 					break;
 				}*/
-
-				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, "", F_WRITE);
-
+				{	// lo pongo en un bloque para que no joda con redeclarar variables
+				archivoABuscar = strtok(instruccion->parametro1, "\n");	// global
+				bool (*aux3)(void* x) = criterio_nombre_archivo_proceso;	// se puede meter como parametro directamente de alguna forma y no tener que usar aux2
+				t_archivoAbierto* archivoAux2 = NULL;
+				archivoAux2 = list_find(pcb->archivos_abiertos, aux3);
+				int posicion = archivoAux2->puntero;
+				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, string_itoa(posicion), F_WRITE);
+				}
 				// Hilo de espera a respuesta
 				pthread_t hilo_bloqueado_write;
 				pthread_create(&hilo_bloqueado_write,NULL,(void*)bloqueando_por_filesystem,pcb);
