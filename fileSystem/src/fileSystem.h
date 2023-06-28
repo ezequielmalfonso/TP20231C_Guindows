@@ -29,6 +29,8 @@ typedef struct {
 
 
 extern t_super_bloque* configuracionSuperBloque;
+void cargarBloqueIndirecto(int descriptor, int offset);
+void guardarBloqueIndirecto(int descriptor, int offset);
 
 int fileExiste(char* nombreArchivo);
 int cargarArchivoBloques(char *path, int BLOCK_SIZE, int BLOCK_COUNT);

@@ -139,8 +139,8 @@ static void procesar_conexion(void* void_args) {
 
 		 case F_TRUNCATE:
 			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
-			 log_info(logger, "Se recibio F_TRUNCATE con parametros %s, %s y %s", parametro1, parametro2, parametro3);
-			 sleep(5);
+			 log_info(logger, "Se recibio F_TRUNCATE con parametros archivo: %s, nuevo tamaño: %s", parametro1, parametro2);
+			 //sleep(5);
 			 int p = datosFCB(pathArchivo);
 			 if(p == -1) {	// No deberia entrar nunca
 				log_error(logger, "Error inesperado antes de cargar FCB");
@@ -168,21 +168,32 @@ static void procesar_conexion(void* void_args) {
 
 			 // Trunc a 0
 			 if(nuevoTamanioArchivo == 0){
-				 log_warning(logger, "Trunc a 0");
+				 log_warning(logger, "F_TRUNC a tamaño 0");
+
+				 if(FCB_archivo->tamanio_archivo == 0) {
+					 cop = F_TRUNCATE_OK;
+					 send(cliente_socket, &cop, sizeof(op_code), 0);
+					 break;
+				 }
+
 				 int bloque_liberar = FCB_archivo->puntero_directo / configuracionSuperBloque->BLOCK_SIZE;
 				 bitarray_clean_bit(s_bitmap,bloque_liberar);
+				 log_error(logger, "Elimando bloque de puntero directo (nro: %d)", bloque_liberar);
 				 int i;
 				 int nro_bloque;
 				 int direccion_donde_leer;
 
 				 if(bloques_actuales > 1){
+					 cargarBloqueIndirecto(descriptor_archivo_bloque, FCB_archivo->puntero_indirecto);
 					 for(i = 0; i < (bloques_actuales - 1) ; i++ ){
 						 direccion_donde_leer = FCB_archivo->puntero_indirecto + (i * tamanio_puntero);
-						 nro_bloque = leerBloqueIndirecto(descriptor_archivo_bloque, direccion_donde_leer);
-						 bitarray_clean_bit(s_bitmap,nro_bloque);
+						 nro_bloque = leerBloqueIndirecto(descriptor_archivo_bloque, direccion_donde_leer) / configuracionSuperBloque->BLOCK_SIZE;
+						 bitarray_clean_bit(s_bitmap, nro_bloque);
 					 }
+					 guardarBloqueIndirecto(descriptor_archivo_bloque, FCB_archivo->puntero_indirecto);
 					 int bloque_liberar_indirecto = FCB_archivo->puntero_indirecto / configuracionSuperBloque->BLOCK_SIZE;
 					 bitarray_clean_bit(s_bitmap,bloque_liberar_indirecto);
+
 				 }
 
 				 log_error(logger, "Terminando trunc a 0");
@@ -194,8 +205,9 @@ static void procesar_conexion(void* void_args) {
 
 			 // Verifico si hay bloques suficientes
 			 if(diferenciaBloques > bloques_libres){
-				 //TODO send F_CREATE_FAIL
 				 log_warning(logger, "Cantidad de bloques insuficiente");
+				 cop = F_CREATE_FAIL;
+				 send(cliente_socket, &cop, sizeof(op_code), 0);
 				 break;
 			 }
 			 int indice_bitmap = 0;
@@ -207,17 +219,19 @@ static void procesar_conexion(void* void_args) {
 				 int direccion_donde_leer;
 
 				 if(bloques_actuales > 1){
+					 cargarBloqueIndirecto(descriptor_archivo_bloque, FCB_archivo->puntero_indirecto);
 					 for(i = bloques_actuales ; i > bloques_totales ; i--){
-						 direccion_donde_leer = FCB_archivo->puntero_indirecto + (i * tamanio_puntero);
-						 nro_bloque = leerBloqueIndirecto(descriptor_archivo_bloque, direccion_donde_leer);
+						 direccion_donde_leer = i*tamanio_puntero;
+						 //direccion_donde_leer = FCB_archivo->puntero_indirecto + (i * tamanio_puntero);
+						 nro_bloque = leerBloqueIndirecto(descriptor_archivo_bloque, direccion_donde_leer) / configuracionSuperBloque->BLOCK_SIZE;
 						 bitarray_clean_bit(s_bitmap,nro_bloque);
-						 log_error(logger, "Bloque borrado");
+						 log_error(logger, "Se ha borrado el bloque nro: %d", nro_bloque);
 					 }
 					 if(bloques_totales == 1 ){
 					   int bloque_liberar_indirecto = FCB_archivo->puntero_indirecto / configuracionSuperBloque->BLOCK_SIZE;
 					   bitarray_clean_bit(s_bitmap,bloque_liberar_indirecto);
 					   FCB_archivo->puntero_indirecto = 0;
-					   log_error(logger, "Puntero indirecto ELIMINADO");
+					   log_error(logger, "Puntero indirecto ELIMINADO (nro: %d)", bloque_liberar_indirecto);
 					 }
 
 				 }
@@ -244,6 +258,7 @@ static void procesar_conexion(void* void_args) {
 					bitarray_set_bit(s_bitmap, indice_bitmap);
 					// Guardo el puntero directo
 					FCB_archivo->puntero_directo = puntero_directo;
+					usleep(configuracion->RETARDO_ACCESO_BLOQUE);
 					log_info(logger, "Puntero directo asignado: %d", puntero_directo);
 					bloques_actuales++;
 				 }
@@ -267,14 +282,19 @@ static void procesar_conexion(void* void_args) {
 				 int i;
 				 uint32_t puntero_nuevo;
 				 int direccion_donde_escribir;
-				 for(i = bloques_actuales; i < bloques_totales; i++) {
-					 indice_bitmap = buscarPrimerBloqueVacio (s_bitmap, configuracionSuperBloque->BLOCK_SIZE);
-					 puntero_nuevo = indice_bitmap * configuracionSuperBloque->BLOCK_SIZE;
-					 bitarray_set_bit(s_bitmap, indice_bitmap);
-					 // TODO: escribir puntero_nuevo en el bloque de puntero_indirecto. Tener en cuenta demora en lectura y escritura
-					 log_info(logger, "Puntero guardado en direccion: %d", FCB_archivo->puntero_indirecto + ((i-1) * tamanio_puntero));
-					 direccion_donde_escribir = FCB_archivo->puntero_indirecto + ((i-1) * tamanio_puntero);
-					 escribirBloqueIndirecto( descriptor_archivo_bloque, direccion_donde_escribir, puntero_nuevo);
+				 if(bloques_totales > bloques_actuales) {
+					 cargarBloqueIndirecto(descriptor_archivo_bloque, FCB_archivo->puntero_indirecto);
+					 for(i = bloques_actuales; i < bloques_totales; i++) {
+						 indice_bitmap = buscarPrimerBloqueVacio (s_bitmap, configuracionSuperBloque->BLOCK_SIZE);
+						 puntero_nuevo = indice_bitmap * configuracionSuperBloque->BLOCK_SIZE;
+						 bitarray_set_bit(s_bitmap, indice_bitmap);
+						 // TODO: escribir puntero_nuevo en el bloque de puntero_indirecto. Tener en cuenta demora en lectura y escritura
+						 log_info(logger, "Puntero guardado en direccion: %d", FCB_archivo->puntero_indirecto + ((i-1) * tamanio_puntero));
+						 //direccion_donde_escribir = FCB_archivo->puntero_indirecto + ((i-1) * tamanio_puntero);
+						 direccion_donde_escribir = (i-1) * tamanio_puntero;
+						 escribirBloqueIndirecto( descriptor_archivo_bloque, direccion_donde_escribir, puntero_nuevo);
+					 }
+					 guardarBloqueIndirecto(descriptor_archivo_bloque, FCB_archivo->puntero_indirecto);
 				 }
 			 }
 			 log_warning(logger, "Tamaño nuevo: %d" ,  nuevoTamanioArchivo );
@@ -292,13 +312,14 @@ static void procesar_conexion(void* void_args) {
 
 		 case F_READ:
 			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
-			 log_info(logger, "Se recibio F_READ con parametros Archivo: %s, Tamaño: %s, Direccion Fisica: %s y Posicion: %s", parametro1, parametro2, parametro3, pos);
+			 log_info(logger, "Se recibio F_READ con parametros Archivo: %s, Tamaño: %s, Direccion Fisica: %s y Posicion: %s", parametro1, parametro2, strtok(parametro3, "\n"), pos);
 			 int tamanioTotalALeer = atoi(parametro2);
 			 sleep(2);
 			 int posicion = atoi(pos);
 			 if (tamanioTotalALeer == 0) {
 				 cop=F_READ_FAIL;
 				 send(cliente_socket, &cop, sizeof(op_code), 0);
+				 break;
 			 }
 			 {int p = datosFCB(pathArchivo);
 			 if(p == -1) {	// No deberia entrar nunca
@@ -307,13 +328,22 @@ static void procesar_conexion(void* void_args) {
 				send(cliente_socket, &cop, sizeof(op_code), 0);
 				break;
 			 }}
+			 if(posicion+tamanioTotalALeer > FCB_archivo->tamanio_archivo) {
+				 log_error(logger, "Intento de lectura por fuera del tamaño del archivo: %s", FCB_archivo->nombre_archivo);
+				 cop=F_READ_FAIL;
+				 send(cliente_socket, &cop, sizeof(op_code), 0);
+				 break;
+			 }
 
-			 sleep(3); // borrar
+			 //sleep(3); // borrar
 
 			 int indice_nro_bloque = 0;
 			 int nro_bloque_archivo = floor((double)posicion/configuracionSuperBloque->BLOCK_SIZE);	// Bloque donde empieza la lectura
 			 uint32_t puntero_primer_bloque;
-			 uint32_t direccion_indirecto = FCB_archivo->puntero_indirecto + tamanio_puntero * (nro_bloque_archivo-1);
+			 uint32_t direccion_indirecto = /*FCB_archivo->puntero_indirecto +*/ tamanio_puntero * (nro_bloque_archivo-1);
+
+			 // Lo carga siempre, se podria ver de que solo lo cargue si lo necesita
+			 cargarBloqueIndirecto(descriptor_archivo_bloque, FCB_archivo->puntero_indirecto);
 
 			 if(nro_bloque_archivo == 0) {
 				 puntero_primer_bloque = FCB_archivo->puntero_directo;
@@ -331,7 +361,7 @@ static void procesar_conexion(void* void_args) {
 			 log_info(logger,"Tamaño a leer: %d, Tamaño Bloque: %u", tamanioTotalALeer,configuracionSuperBloque->BLOCK_SIZE);
 			 log_info(logger, "Se deben leer %d bloques", cantidad_bloques_a_leer);
 
-			 sleep(1);//borrar
+			 //sleep(1);//borrar
 
 			 int posEnPrimerBloque = posicion % configuracionSuperBloque->BLOCK_SIZE;
 			 int tamanioALeerPrimerBloque = configuracionSuperBloque->BLOCK_SIZE - posEnPrimerBloque;
@@ -340,6 +370,7 @@ static void procesar_conexion(void* void_args) {
 			 char* buffer = malloc(configuracionSuperBloque->BLOCK_SIZE);
 			 lseek(descriptor_archivo_bloque, posEnPrimerBloque + puntero_primer_bloque, SEEK_SET);
 			 read(descriptor_archivo_bloque, buffer, tamanioALeerPrimerBloque);
+			 usleep(configuracion->RETARDO_ACCESO_BLOQUE);
 			 tamanioTotalALeer -= tamanioALeerPrimerBloque;
 			 string_append(&leido, buffer);
 			 free(buffer);
@@ -350,26 +381,28 @@ static void procesar_conexion(void* void_args) {
 			 int tamanioALeer;
 			 int pointer_a_leer;
 			 // Si entra ya leyo un bloque (solo debe recorrer los indirectos restantes)
-			 for(j = 0; j < tamanioTotalALeer; j += configuracionSuperBloque->BLOCK_SIZE) {			/////////////////AISDAISDIABDUIABSIUDBASIUBDIAL
-				 tamanioALeer = max(tamanioTotalALeer, configuracionSuperBloque->BLOCK_SIZE);		//////////////////////AUIDHUIASDHUIAHSDUAHSOUDHAOUHDSOU
-				 pointer_a_leer = leerBloqueIndirecto(descriptor_archivo_bloque, direccion_indirecto);		//TODO: EL BLOQUE INDIRECTO SE CARGA EN MEMORIA NO SE RECORRE TODO EL TIEMPO
+			 for(j = 1; j <= tamanioTotalALeer; j += configuracionSuperBloque->BLOCK_SIZE) {
+				 tamanioALeer = max(tamanioTotalALeer, configuracionSuperBloque->BLOCK_SIZE);
+				 pointer_a_leer = leerBloqueIndirecto(descriptor_archivo_bloque, j*tamanio_puntero);
 				 lseek(descriptor_archivo_bloque, pointer_a_leer, SEEK_SET);
 				 char* buffer = malloc(tamanioALeer);
+				 usleep(configuracion->RETARDO_ACCESO_BLOQUE);
 				 read(descriptor_archivo_bloque, buffer, tamanioALeer);
 				 string_append(&leido, buffer);
 				 log_info(logger, "Se leyo en un bloque %s", buffer);
 				 free(buffer);
 			 }
-			 log_info(logger, "Se ha leido: %s", leido);
+			 log_info(logger, "Lectura completa: %s, listo para enviar a memoria", leido);
 			 //send leido a memoria
 			 //recv ok de memoria
 			 cop = F_READ_OK;
+			 config_destroy(FCB);
 			 send(cliente_socket, &cop, sizeof(op_code), 0);
 			 break;
 
 		 case F_WRITE:
 			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
-			 log_info(logger, "Se recibio F_WRITE con parametros %s, %s, %s y %s", parametro1, parametro2, parametro3, posicion);
+			 log_info(logger, "Se recibio F_WRITE con parametros %s, %s, %s y %d", parametro1, parametro2, parametro3, posicion);
 			 sleep(3);	// borrar
 			 //send pedido a memoria
 			 //recv pedido de memoria

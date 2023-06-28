@@ -29,6 +29,7 @@ extern t_FCB* FCB_archivo;
 extern t_bitarray* s_bitmap;
 int max(int a, int b);
 int min(int a, int b);
+extern char* bloqueIndirectoBuffer;
 
 
 #endif /* FILESYSTEMCOMUNICACION_H_ */

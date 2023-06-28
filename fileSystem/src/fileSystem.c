@@ -22,6 +22,7 @@ struct t_fcb *lista;
 
 int fileSystemServer;
 int memoria_fd;
+char* bloqueIndirectoBuffer;
 t_super_bloque* configuracionSuperBloque;
 //BITMAP
 int bitmap;
@@ -39,7 +40,7 @@ int main(void) {
 	//log_warning(logger, "PATH: %s",configuracion->PATH_SUPERBLOQUE );
 	cargarSuperBloque(configuracion->PATH_SUPERBLOQUE);
 	descriptor_archivo_bloque = cargarArchivoBloques(configuracion->PATH_BLOQUES, configuracionSuperBloque->BLOCK_SIZE, configuracionSuperBloque->BLOCK_COUNT);
-
+	bloqueIndirectoBuffer = malloc(configuracionSuperBloque->BLOCK_SIZE);
 	t_config* config_ips = config_create("../ips.conf");
 	char* ip = config_get_string_value(config_ips,"IP_FILESYSTEM");
 
@@ -193,7 +194,7 @@ int cerrarArchivoBloques(int fd){
 
 void escribirBloqueIndirecto(int descriptor, int offset, uint32_t direccion){
 
-	lseek(descriptor, offset, SEEK_SET);
+	//lseek(descriptor, offset, SEEK_SET);
 	//Esto es si el tamanio de direccion debe variar
 	char* dir = string_from_format("%d", direccion);
 	char* dir_reverse = string_reverse(dir);
@@ -205,20 +206,23 @@ void escribirBloqueIndirecto(int descriptor, int offset, uint32_t direccion){
 	}
 	char* dir_final = string_reverse(dir_reverse);
 	log_error(logger, "Dir a escribir : %s ", dir);
-	write(descriptor, dir_final, tamanio_puntero);
+	//write(descriptor, dir_final, tamanio_puntero);
+	memcpy(bloqueIndirectoBuffer+offset, dir_final, tamanio_puntero);
 	//write(descriptor, &direccion, sizeof(uint32_t));
 
 }
 uint32_t leerBloqueIndirecto(int descriptor, int offset){
 
-	log_warning(logger, "Buscando puntero en direccion, offset: %d", offset);
+	log_warning(logger, "Buscando puntero en offset: %d", offset);
 
-	lseek(descriptor, offset, SEEK_SET);
+	//lseek(descriptor, offset, SEEK_SET);
 	//char* buffer = malloc(1+sizeof(char)*tamanio_puntero);
 	char* buffer = malloc(tamanio_puntero);
+	memcpy(buffer, bloqueIndirectoBuffer+offset, tamanio_puntero);
 	//read(descriptor, buffer, tamanio_puntero);
 //	buffer[sizeof(char)*tamanio_puntero] = '\0';
-	read(descriptor, buffer, tamanio_puntero);
+	//read(descriptor, buffer, tamanio_puntero);
+
 	//log_warning(logger, "Buffer : %s", buffer);
 
 	//int dir = atoi(buffer);
@@ -231,6 +235,20 @@ uint32_t leerBloqueIndirecto(int descriptor, int offset){
 	return direccion;
 }
 
+
+void cargarBloqueIndirecto(int descriptor, int offset) {
+	log_info(logger, "Cargando bloque indirecto con direccion %d", offset);
+	lseek(descriptor, offset, SEEK_SET);
+	read(descriptor, bloqueIndirectoBuffer, configuracionSuperBloque->BLOCK_SIZE);
+	usleep(configuracion->RETARDO_ACCESO_BLOQUE);
+}
+
+void guardarBloqueIndirecto(int descriptor, int offset) {
+	log_info(logger, "Sincronizando los cambios en el bloque indirecto");
+	lseek(descriptor, offset, SEEK_SET);
+	write(descriptor, bloqueIndirectoBuffer, configuracionSuperBloque->BLOCK_SIZE);
+	usleep(configuracion->RETARDO_ACCESO_BLOQUE);
+}
 
 void leerBloque (int fd_ArchivoBloque, int numeroBloque, const void *datos){
 	off_t offset = numeroBloque * configuracionSuperBloque->BLOCK_SIZE;
