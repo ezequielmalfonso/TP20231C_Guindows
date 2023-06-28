@@ -312,8 +312,8 @@ static void procesar_conexion(void* void_args) {
 
 		 case F_READ:
 			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
-			 log_info(logger, "Se recibio F_READ con parametros Archivo: %s, Tamaño: %s, Direccion Fisica: %s y Posicion: %s", parametro1, parametro2, strtok(parametro3, "\n"), pos);
-			 int tamanioTotalALeer = atoi(parametro2);
+			 log_info(logger, "Se recibio F_READ con parametros Archivo: %s, Tamaño: %s, Direccion Fisica: %s y Posicion: %s", parametro1, strtok(parametro3, "\n"), parametro2, pos);
+			 int tamanioTotalALeer = atoi(parametro3);
 			 sleep(2);
 			 int posicion = atoi(pos);
 			 if (tamanioTotalALeer == 0) {
@@ -393,7 +393,9 @@ static void procesar_conexion(void* void_args) {
 				 free(buffer);
 			 }
 			 log_info(logger, "Lectura completa: %s, listo para enviar a memoria", leido);
+			 // TODO
 			 //send leido a memoria
+			 // 		NOTA: creo que al fs le debe llegar la direccion fisica.
 			 //recv ok de memoria
 			 cop = F_READ_OK;
 			 config_destroy(FCB);
@@ -402,12 +404,72 @@ static void procesar_conexion(void* void_args) {
 
 		 case F_WRITE:
 			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
-			 log_info(logger, "Se recibio F_WRITE con parametros %s, %s, %s y %d", parametro1, parametro2, parametro3, posicion);
+			 log_info(logger, "Se recibio F_WRITE con parametros Archivo: %s, Tamaño: %s, Direccion Fisica: %s y Posicion: %s", parametro1, strtok(parametro3, "\n"), parametro2, pos);
+			 {int p = datosFCB(pathArchivo);
+			 if(p == -1) {	// No deberia entrar nunca
+				log_error(logger, "Error inesperado antes de cargar FCB");
+				cop=F_WRITE_FAIL;
+				send(cliente_socket, &cop, sizeof(op_code), 0);
+				break;
+			 }}
 			 sleep(3);	// borrar
+			 int tamanio_a_escribir  = atoi(parametro3);
+			 if(tamanio_a_escribir + posicion > FCB_archivo->tamanio_archivo) {	// Debe entrar en el archivo partiendo de la posicion
+				 log_error(logger, "El tamaño que se desea escribir (%d) no entra en el archivo: %s", tamanio_a_escribir, parametro1);
+				 cop = F_WRITE_FAIL;
+				 send(cliente_socket, &cop, sizeof(cop), 0);
+			 }
+
+			 //void* escribirBuffer = malloc(tamanio_a_escribir);
+			 //TODO
 			 //send pedido a memoria
-			 //recv pedido de memoria
-			 //escribir en archivo de bloque en segun la posicion y los bloques del archivo
+			 //recv datos de memoria
+			 // if memo fail -> send kernel F_WRITE_FAIL
+			 void* escribirBuffer = "holachauaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";	// borrar
+
+			 int bloques_necesarios = ceil((double)tamanio_a_escribir / configuracionSuperBloque->BLOCK_SIZE);
+			 int bloque_inicial = floor((double)posicion / configuracionSuperBloque->BLOCK_SIZE);
+			 int offset_inicial = posicion % configuracionSuperBloque->BLOCK_SIZE;
+			 int puntero;
+			 int nro_indirecto = 0;
+			 int size = min(tamanio_a_escribir, configuracionSuperBloque->BLOCK_SIZE - posicion);
+
+			 // Primer bloque: debo tener en cuenta el offset inicial
+			 if(bloque_inicial == 0) {	//Primer bloque es el directo
+				 puntero = FCB_archivo->puntero_directo;
+			 }
+			 else {	// Primer bloque es el indirecto
+				 puntero = leerBloqueIndirecto(descriptor_archivo_bloque, FCB_archivo->puntero_indirecto + (bloque_inicial-1) * tamanio_puntero);
+				 nro_indirecto++;
+			 }
+			 puntero += offset_inicial;
+			 usleep(configuracion->RETARDO_ACCESO_BLOQUE);
+			 lseek(descriptor_archivo_bloque, puntero, SEEK_SET);
+			 write(descriptor_archivo_bloque, escribirBuffer, size);
+			 tamanio_a_escribir -= size;
+			 escribirBuffer += size;
+			 log_info(logger, "Se ha escrito en el bloque con puntero %d, partiendo de la posicion %d", puntero, posicion);
+			 bloques_necesarios--;
+
+			 // Demas bloques
+			 if(nro_indirecto < bloques_necesarios) {	// solo para que no cargue el bloque indirecto si no lo necesita
+				 cargarBloqueIndirecto(descriptor_archivo_bloque, FCB_archivo->puntero_indirecto);
+				 int l;
+				 for(l = nro_indirecto; l < bloques_necesarios; l++) {
+					 puntero = leerBloqueIndirecto(descriptor_archivo_bloque,l*tamanio_puntero);
+					 size = min(tamanio_a_escribir, configuracionSuperBloque->BLOCK_SIZE);
+					 usleep(configuracion->RETARDO_ACCESO_BLOQUE);
+					 lseek(descriptor_archivo_bloque, puntero, SEEK_SET);
+					 write(descriptor_archivo_bloque, escribirBuffer, size);
+					 tamanio_a_escribir -= size;
+					 escribirBuffer += size;
+					 log_info(logger, "Se ha escrito en el bloque con puntero %d", puntero);
+				 }
+			 }
+
+			 //free(escribirBuffer);	descomentar cuando se descomente el malloc
 			 cop = F_WRITE_OK;
+			 config_destroy(FCB);
 			 send(cliente_socket, &cop, sizeof(op_code), 0);
 			 break;
 
