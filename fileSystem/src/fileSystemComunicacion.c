@@ -443,7 +443,7 @@ static void procesar_conexion(void* void_args) {
 			 }
 			 else {	// Primer bloque es el indirecto
 				 puntero = leerBloqueIndirecto(descriptor_archivo_bloque, (bloque_inicial-1) * tamanio_puntero);
-				 nro_indirecto++;
+				 nro_indirecto = bloque_inicial;
 				 bloques_necesarios++;
 			 }
 			 puntero += offset_inicial;

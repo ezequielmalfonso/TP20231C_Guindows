@@ -10761,3 +10761,47 @@ TAM_MAX_SEGMENTO: 128
 [INFO] 07:55:39:697 Cpu/(18960:18972): PID: 0 - Listo para ejecutar F_CLOSE 
 [INFO] 07:55:39:698 Cpu/(18960:18972): Recibi PCB id: 0
 [INFO] 07:55:39:698 Cpu/(18960:18972): PID: 0 - Ejecutando EXIT
+[INFO] 07:58:35:033 Cpu/(18960:18972): Recibi PCB id: 1
+[INFO] 07:58:35:037 Cpu/(18960:18972): En CPU
+[INFO] 07:58:36:038 Cpu/(18960:18972): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 07:58:36:038 Cpu/(18960:18972): registro recibido: HOLA
+
+[INFO] 07:58:36:038 Cpu/(18960:18972): reg AX: HOLA‚U
+[INFO] 07:58:36:038 Cpu/(18960:18972): Realizado SET del registro AX con valor HOLA‚U
+[INFO] 07:58:36:038 Cpu/(18960:18972): Realizado SET del registro AX con valor 
+[INFO] 07:58:36:038 Cpu/(18960:18972): PID: 1 -  Listo para ejecutar MOV_OUT 
+[INFO] 07:58:36:038 Cpu/(18960:18972): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+
+[ERROR] 07:58:36:038 Cpu/(18960:18972): registro : AX
+[ERROR] 07:58:36:038 Cpu/(18960:18972): registro AX : HOLA‚U
+[INFO] 07:58:36:039 Cpu/(18960:18972): Realizado lectura del registro AX con valor HOLA‡
+[INFO] 07:58:36:039 Cpu/(18960:18972): estamos mandando a memoria: HOLA‡
+[INFO] 07:58:36:039 Cpu/(18960:18972): se escribio en memoria:  115
+[INFO] 07:58:36:039 Cpu/(18960:18972): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+[INFO] 07:58:36:039 Cpu/(18960:18972): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 07:58:36:040 Cpu/(18960:18972): estamos recibiendo de memoria: HOLA‡
+[INFO] 07:58:36:040 Cpu/(18960:18972): registro recibido: HOLA‡
+[INFO] 07:58:36:040 Cpu/(18960:18972): Realizado SET del registro BX con valor HOLA‚U
+[INFO] 07:58:36:041 Cpu/(18960:18972): Realizado SET del registro BX con valor HOLA‚U
+[INFO] 07:58:36:041 Cpu/(18960:18972): PID: 1 - Se ha ejecutado MOV_IN parametro 1: BX parametro 2: 120
+
+[INFO] 07:58:36:041 Cpu/(18960:18972): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 07:58:36:349 Cpu/(18960:18972): Recibi PCB id: 1
+[INFO] 07:58:36:349 Cpu/(18960:18972): PID: 1 - Ejecutando YIELD 
+[INFO] 07:58:36:350 Cpu/(18960:18972): Recibi PCB id: 1
+[INFO] 07:58:36:350 Cpu/(18960:18972): PID: 1 - Listo para ejecutar F_TRUNCATE 
+[INFO] 07:58:36:484 Cpu/(18960:18972): Recibi PCB id: 1
+[INFO] 07:58:36:484 Cpu/(18960:18972): PID: 1 - Listo para ejecutar F_SEEK 
+[INFO] 07:58:36:485 Cpu/(18960:18972): Recibi PCB id: 1
+[INFO] 07:58:36:485 Cpu/(18960:18972): PID: 1 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 07:58:36:485 Cpu/(18960:18972): PID: 1 - Listo para ejecutar F_WRITE 
+[INFO] 07:58:39:572 Cpu/(18960:18972): Recibi PCB id: 1
+[INFO] 07:58:39:572 Cpu/(18960:18972): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 07:58:41:611 Cpu/(18960:18972): Recibi PCB id: 1
+[INFO] 07:58:41:611 Cpu/(18960:18972): PID: 1 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 07:58:41:611 Cpu/(18960:18972): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 07:58:41:612 Cpu/(18960:18972): Recibi PCB id: 1
+[INFO] 07:58:41:612 Cpu/(18960:18972): PID: 1 - Ejecutando EXIT
+[INFO] 07:59:21:037 Cpu/(18960:18972): Se ha finalizado la conexion
