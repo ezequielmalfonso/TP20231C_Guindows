@@ -29,11 +29,11 @@ static void procesar_conexion(void* void_args) {
 		 return;
 	 }
 
-	 char parametro1[20], parametro2[20], parametro3[20], posicion[20];
+	 char parametro1[20], parametro2[20], parametro3[20], pos[20];
 	 char* pathArchivo;
 	 char* nombre;
 
-	 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3, posicion);	// la posicion es para fwrite y fread
+	 recv_instruccion(cliente_socket, parametro1, parametro2, parametro3, pos);	// la posicion es para fwrite y fread
 	 nombre = strtok(parametro1, "\n");
 	 pathArchivo = string_from_format("%s/%s", configuracion->PATH_FCB, nombre);
 
@@ -272,7 +272,8 @@ static void procesar_conexion(void* void_args) {
 					 puntero_nuevo = indice_bitmap * configuracionSuperBloque->BLOCK_SIZE;
 					 bitarray_set_bit(s_bitmap, indice_bitmap);
 					 // TODO: escribir puntero_nuevo en el bloque de puntero_indirecto. Tener en cuenta demora en lectura y escritura
-					 direccion_donde_escribir = FCB_archivo->puntero_indirecto + (i * tamanio_puntero);
+					 log_info(logger, "Puntero guardado en direccion: %d", FCB_archivo->puntero_indirecto + ((i-1) * tamanio_puntero));
+					 direccion_donde_escribir = FCB_archivo->puntero_indirecto + ((i-1) * tamanio_puntero);
 					 escribirBloqueIndirecto( descriptor_archivo_bloque, direccion_donde_escribir, puntero_nuevo);
 				 }
 			 }
@@ -291,26 +292,75 @@ static void procesar_conexion(void* void_args) {
 
 		 case F_READ:
 			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
-			 log_info(logger, "Se recibio F_READ con parametros %s, %s, %s y %s", parametro1, parametro2, parametro3, posicion);
-
+			 log_info(logger, "Se recibio F_READ con parametros Archivo: %s, Tamaño: %s, Direccion Fisica: %s y Posicion: %s", parametro1, parametro2, parametro3, pos);
+			 int tamanioTotalALeer = atoi(parametro2);
+			 sleep(2);
+			 int posicion = atoi(pos);
+			 if (tamanioTotalALeer == 0) {
+				 cop=F_READ_FAIL;
+				 send(cliente_socket, &cop, sizeof(op_code), 0);
+			 }
 			 {int p = datosFCB(pathArchivo);
 			 if(p == -1) {	// No deberia entrar nunca
 				log_error(logger, "Error inesperado antes de cargar FCB");
-				cop=F_TRUNCATE_FAIL;
+				cop=F_READ_FAIL;
 				send(cliente_socket, &cop, sizeof(op_code), 0);
 				break;
 			 }}
 
 			 sleep(3); // borrar
-			 int nro_bloque_archivo = floor(atoi(posicion)/configuracionSuperBloque->BLOCK_SIZE);	// Bloque donde empieza la lectura
+
+			 int indice_nro_bloque = 0;
+			 int nro_bloque_archivo = floor((double)posicion/configuracionSuperBloque->BLOCK_SIZE);	// Bloque donde empieza la lectura
 			 uint32_t puntero_primer_bloque;
-			 if(nro_bloque_archivo == 0)	{puntero_primer_bloque = FCB_archivo->puntero_directo;}
-			 else {
-				 uint32_t direccion = FCB_archivo->puntero_indirecto + tamanio_puntero * nro_bloque_archivo;
-				 puntero_primer_bloque = leerBloqueIndirecto(descriptor_archivo_bloque, direccion);
+			 uint32_t direccion_indirecto = FCB_archivo->puntero_indirecto + tamanio_puntero * (nro_bloque_archivo-1);
+
+			 if(nro_bloque_archivo == 0) {
+				 puntero_primer_bloque = FCB_archivo->puntero_directo;
+				 log_info(logger, "Se debe empezar por el puntero directo");
 			 }
-			 log_info(logger, "La lectura comienza en el bloque de puntero %d", puntero_primer_bloque);
-			 // leer archivo de bloque segun la posicon y los bloques del archivo
+			 else {
+				 log_info(logger, "Se debe empezar por el puntero indirecto");
+				 puntero_primer_bloque = leerBloqueIndirecto(descriptor_archivo_bloque, direccion_indirecto);
+				 indice_nro_bloque++;
+				 direccion_indirecto += tamanio_puntero;
+
+			 }
+			 log_info(logger, "La lectura comienza en el bloque de puntero %d, perteneciente al bloque nro: %d", puntero_primer_bloque, nro_bloque_archivo);
+			 int cantidad_bloques_a_leer = ceil((double)(tamanioTotalALeer) / configuracionSuperBloque->BLOCK_SIZE);
+			 log_info(logger,"Tamaño a leer: %d, Tamaño Bloque: %u", tamanioTotalALeer,configuracionSuperBloque->BLOCK_SIZE);
+			 log_info(logger, "Se deben leer %d bloques", cantidad_bloques_a_leer);
+
+			 sleep(1);//borrar
+
+			 int posEnPrimerBloque = posicion % configuracionSuperBloque->BLOCK_SIZE;
+			 int tamanioALeerPrimerBloque = configuracionSuperBloque->BLOCK_SIZE - posEnPrimerBloque;
+			 tamanioALeerPrimerBloque = min(tamanioALeerPrimerBloque, tamanioTotalALeer);
+			 char* leido = string_new();
+			 char* buffer = malloc(configuracionSuperBloque->BLOCK_SIZE);
+			 lseek(descriptor_archivo_bloque, posEnPrimerBloque + puntero_primer_bloque, SEEK_SET);
+			 read(descriptor_archivo_bloque, buffer, tamanioALeerPrimerBloque);
+			 tamanioTotalALeer -= tamanioALeerPrimerBloque;
+			 string_append(&leido, buffer);
+			 free(buffer);
+			 log_info(logger, "Se leyo a partir del offset %d dentro del bloque. Informacion del primer bloque leido: %s", posEnPrimerBloque, leido);
+			 log_info(logger, "Tamaño leido en primer bloque: %d, tamaño restante por leer: %d", tamanioALeerPrimerBloque, tamanioTotalALeer);
+			 // Ya tengo en buffer la informacion del primer bloque
+			 int j;
+			 int tamanioALeer;
+			 int pointer_a_leer;
+			 // Si entra ya leyo un bloque (solo debe recorrer los indirectos restantes)
+			 for(j = 0; j < tamanioTotalALeer; j += configuracionSuperBloque->BLOCK_SIZE) {			/////////////////AISDAISDIABDUIABSIUDBASIUBDIAL
+				 tamanioALeer = max(tamanioTotalALeer, configuracionSuperBloque->BLOCK_SIZE);		//////////////////////AUIDHUIASDHUIAHSDUAHSOUDHAOUHDSOU
+				 pointer_a_leer = leerBloqueIndirecto(descriptor_archivo_bloque, direccion_indirecto);		//TODO: EL BLOQUE INDIRECTO SE CARGA EN MEMORIA NO SE RECORRE TODO EL TIEMPO
+				 lseek(descriptor_archivo_bloque, pointer_a_leer, SEEK_SET);
+				 char* buffer = malloc(tamanioALeer);
+				 read(descriptor_archivo_bloque, buffer, tamanioALeer);
+				 string_append(&leido, buffer);
+				 log_info(logger, "Se leyo en un bloque %s", buffer);
+				 free(buffer);
+			 }
+			 log_info(logger, "Se ha leido: %s", leido);
 			 //send leido a memoria
 			 //recv ok de memoria
 			 cop = F_READ_OK;
@@ -395,3 +445,17 @@ log_warning(logger, "RUta: %s - Nombre: %s", PATH, nombre_Archivo);
 
 	return -1;
 }
+
+int max(int a, int b) {
+	if(a > b) {
+		return a;
+	}
+	else return b;
+}
+int min(int a, int b) {
+	if(a < b) {
+		return a;
+	}
+	else return b;
+}
+

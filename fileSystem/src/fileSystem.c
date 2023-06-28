@@ -211,20 +211,20 @@ void escribirBloqueIndirecto(int descriptor, int offset, uint32_t direccion){
 }
 uint32_t leerBloqueIndirecto(int descriptor, int offset){
 
-	log_warning(logger, "Entre leerBloqueIndirecto, offset: %d", offset);
+	log_warning(logger, "Buscando puntero en direccion, offset: %d", offset);
 
 	lseek(descriptor, offset, SEEK_SET);
 	//char* buffer = malloc(1+sizeof(char)*tamanio_puntero);
-	char* buffer = malloc(sizeof(uint32_t));
+	char* buffer = malloc(tamanio_puntero);
 	//read(descriptor, buffer, tamanio_puntero);
 //	buffer[sizeof(char)*tamanio_puntero] = '\0';
-	read(descriptor, buffer, sizeof(uint32_t));
-	log_warning(logger, "Buffer : %s", buffer);
+	read(descriptor, buffer, tamanio_puntero);
+	//log_warning(logger, "Buffer : %s", buffer);
 
 	//int dir = atoi(buffer);
 	char* ptr;	// No se usa
 	uint32_t direccion = strtoul(buffer, &ptr, 10);	// unsigned long ocupa lo mismo que uint_32
-	printf(logger, "Direccion de lectura &d", direccion);
+	//printf(logger, "Direccion de lectura &d", direccion);
 	//int direccion = floor(dir / configuracionSuperBloque->BLOCK_SIZE);
 
 	log_warning(logger, "Se obtuvo la direccion %d: ", direccion);
