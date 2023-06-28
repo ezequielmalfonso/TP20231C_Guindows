@@ -14,6 +14,7 @@ typedef struct {
 } t_procesar_conexion_args;
 
 t_FCB* FCB_archivo;
+int posicion;
 
 static void procesar_conexion(void* void_args) {
  t_procesar_conexion_args* args = (t_procesar_conexion_args*) void_args;
@@ -315,7 +316,7 @@ static void procesar_conexion(void* void_args) {
 			 log_info(logger, "Se recibio F_READ con parametros Archivo: %s, Tamaño: %s, Direccion Fisica: %s y Posicion: %s", parametro1, strtok(parametro3, "\n"), parametro2, pos);
 			 int tamanioTotalALeer = atoi(parametro3);
 			 sleep(2);
-			 int posicion = atoi(pos);
+			 posicion = atoi(pos);
 			 if (tamanioTotalALeer == 0) {
 				 cop=F_READ_FAIL;
 				 send(cliente_socket, &cop, sizeof(op_code), 0);
@@ -413,6 +414,7 @@ static void procesar_conexion(void* void_args) {
 				break;
 			 }}
 			 sleep(3);	// borrar
+			 posicion = atoi(pos);
 			 int tamanio_a_escribir  = atoi(parametro3);
 			 if(tamanio_a_escribir + posicion > FCB_archivo->tamanio_archivo) {	// Debe entrar en el archivo partiendo de la posicion
 				 log_error(logger, "El tamaño que se desea escribir (%d) no entra en el archivo: %s", tamanio_a_escribir, parametro1);
@@ -429,18 +431,20 @@ static void procesar_conexion(void* void_args) {
 
 			 int bloques_necesarios = ceil((double)tamanio_a_escribir / configuracionSuperBloque->BLOCK_SIZE);
 			 int bloque_inicial = floor((double)posicion / configuracionSuperBloque->BLOCK_SIZE);
-			 int offset_inicial = posicion % configuracionSuperBloque->BLOCK_SIZE;
+			 int offset_inicial = (uint32_t)posicion % configuracionSuperBloque->BLOCK_SIZE;
+			 log_info(logger, "Bloque inicial: %d, Offset en este bloque: %d, bloques necesarios totales: %d", bloque_inicial, offset_inicial, bloques_necesarios);
 			 int puntero;
 			 int nro_indirecto = 0;
-			 int size = min(tamanio_a_escribir, configuracionSuperBloque->BLOCK_SIZE - posicion);
+			 int size = min(tamanio_a_escribir, configuracionSuperBloque->BLOCK_SIZE - offset_inicial);
 
 			 // Primer bloque: debo tener en cuenta el offset inicial
 			 if(bloque_inicial == 0) {	//Primer bloque es el directo
 				 puntero = FCB_archivo->puntero_directo;
 			 }
 			 else {	// Primer bloque es el indirecto
-				 puntero = leerBloqueIndirecto(descriptor_archivo_bloque, FCB_archivo->puntero_indirecto + (bloque_inicial-1) * tamanio_puntero);
+				 puntero = leerBloqueIndirecto(descriptor_archivo_bloque, (bloque_inicial-1) * tamanio_puntero);
 				 nro_indirecto++;
+				 bloques_necesarios++;
 			 }
 			 puntero += offset_inicial;
 			 usleep(configuracion->RETARDO_ACCESO_BLOQUE);
@@ -448,7 +452,7 @@ static void procesar_conexion(void* void_args) {
 			 write(descriptor_archivo_bloque, escribirBuffer, size);
 			 tamanio_a_escribir -= size;
 			 escribirBuffer += size;
-			 log_info(logger, "Se ha escrito en el bloque con puntero %d, partiendo de la posicion %d", puntero, posicion);
+			 log_info(logger, "Se ha escrito en el bloque con puntero %d un tamaño de %d, partiendo de la posicion del archivo %d", puntero, size, posicion);
 			 bloques_necesarios--;
 
 			 // Demas bloques
