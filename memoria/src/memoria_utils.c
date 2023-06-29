@@ -81,7 +81,19 @@ void crearSegmento(uint32_t pid, uint32_t id_seg, int tam){
 	t_segmento* seg;
 	seg = malloc(sizeof(t_segmento));
 	seg->id_segmento      = id_seg;
-	seg->direccion_base   = firstFit(tam);//TODO aca es solo provisorio
+
+	if(!strcmp(configuracion->ALGORITMO_ASIGNACION, "BEST")){
+		seg->direccion_base   = bestFit(tam);
+	}else if(!strcmp(configuracion->ALGORITMO_ASIGNACION, "FIRST")){
+		seg->direccion_base   = firstFit(tam);
+	}else if(!strcmp(configuracion->ALGORITMO_ASIGNACION, "WORST")){
+		//TODO falta el WORST
+		//seg->direccion_base   = worstFit(tam); //
+	}
+	else{
+		log_error(logger, "Fallo al cargar algoritmo de asignación!!!");
+	}
+
 	seg->tamanio_segmento = tam;
 	list_add(tablaProceso,segmento);
 	free(seg);
@@ -130,9 +142,18 @@ t_segmento* buscarSegmento(t_list* tabla, uint32_t id){
 uint64_t firstFit(int tam){
 	int i=0;
 	t_segmento* segmentoAux = list_get(tabla_de_huecos,i);
-	while(tam<segmentoAux->tamanio_segmento || segmentoAux==NULL ){
+	while(tam<segmentoAux->tamanio_segmento || segmentoAux==NULL )
+	{
+		// NO termino de entender q hace realmente, esta el whilw no tenia corte
+		// y en replace esta queriendo reemplzar un posicion q no esta
+		// Aca creo que habria q recuperar antes el size de la lista
 		i++;
-		segmentoAux = list_get(tabla_de_huecos,i);
+		if( i < list_size(tabla_de_huecos)){
+			segmentoAux = list_get(tabla_de_huecos,i);
+		}else{
+			break;
+		}
+
 	}
 	uint64_t nuevaBase = segmentoAux->direccion_base;
 	if(segmentoAux==NULL){}// pedir acoplamiento}

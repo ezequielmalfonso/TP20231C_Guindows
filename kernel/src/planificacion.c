@@ -338,40 +338,51 @@ void esperar_cpu(){
 				 }
 			case CREATE_SEGMENT:
 				log_info(logger, "PID: %d - Crear segmento - ID:%s - Tamanio: :%s  ", pcb->pid, strtok(instruccion->parametro1, "\n"),strtok(instruccion->parametro2, "\n"));
-				uint32_t id = atoi(instruccion->parametro1);
-				uint32_t tam = atoi(instruccion->parametro2);
+				uint32_t id_seg  = atoi(instruccion->parametro1);
+				uint32_t tam_segmento = atoi(instruccion->parametro2);
 				op_code op = CREATE_SEGMENT;
-			    send(memoria_fd,&op,sizeof(op_code),0);
-			    send(memoria_fd,&op,sizeof(op_code),0);
 
-				//send_pedido_memoria(memoria_fd, id, tam , pcb->pid,0, CREATE_SEGMENT);
+				log_warning(logger, "Id_seg: %d - Tam seg: %d ", id_seg, tam_segmento);
+				//send(memoria_fd,&op,sizeof(op_code),0);
+			    //send(memoria_fd,&op,sizeof(op_code),0);
+
+				/*t_link_element* aux_seg = pcb->tabla_de_segmentos->head;
+				t_segmento* aux_seg2 = aux_seg->data;
+				log_error(logger, "PCB antes de enviar a memo: id_eg: %d - tam_seg:%d", aux_seg2->id_segmento, aux_seg2->tamanio_segmento );*/
+
+				//send_pedido_memoria(memoria_fd, id_seg, tam_segmento, pcb->pid,0, op);
+				pthread_mutex_lock(&mx_memoria);
+				send(memoria_fd,&op,sizeof(op_code),0);
+				send(memoria_fd,&(pcb->pid),sizeof(uint16_t),0);
+				send(memoria_fd,&(id_seg),sizeof(uint32_t),0);
+				send(memoria_fd,&(tam_segmento),sizeof(uint32_t),0);
+				pthread_mutex_unlock(&mx_memoria);
 				t_segmento* segmento = malloc(sizeof(t_segmento));
 
-					uint32_t id_segmento      = 0;
-					uint64_t direccion_base   = 0;
-					uint32_t tamanio_segmento = 0;
+				uint32_t id_segmento      = 0;
+				uint64_t direccion_base   = 0;
+				uint32_t tamanio_segmento = 0;
 
-					// Recibir el segmento 0 desde memoria y ponerlo en PCB
-					recv(memoria_fd, &id_segmento, sizeof(uint32_t), 0);
-					recv(memoria_fd, &direccion_base, sizeof(uint64_t), 0);
-					recv(memoria_fd, &tamanio_segmento, sizeof(uint32_t), 0);
+				// Recibir el segmento 0 desde memoria y ponerlo en PCB
+				recv(memoria_fd, &id_segmento, sizeof(uint32_t), 0);
+				recv(memoria_fd, &direccion_base, sizeof(uint64_t), 0);
+				recv(memoria_fd, &tamanio_segmento, sizeof(uint32_t), 0);
 
-					segmento->id_segmento      = id_segmento;
-					segmento->direccion_base   = direccion_base;
-					segmento->tamanio_segmento = tamanio_segmento;
+				segmento->id_segmento      = id_segmento;
+				segmento->direccion_base   = direccion_base;
+				segmento->tamanio_segmento = tamanio_segmento;
 
-					//agrego el PCB creado el segmento recibido desde memoria
-					// TODO preguntar
-					list_add(pcb->tabla_de_segmentos, segmento);
+				//agrego el PCB creado el segmento recibido desde memoria
+				// TODO preguntar
+				list_add(pcb->tabla_de_segmentos, segmento);
 
-					log_info(logger,"Recibiendo Segmento 0 (Compartido) creado: Id: %d - Dir Base: %d - Tamanio: %d", id_segmento, direccion_base, tamanio_segmento);
+				log_info(logger,"Recibiendo Segmento: Id: %d - Dir Base: %d - Tamanio: %d", id_segmento, direccion_base, tamanio_segmento);
 
+				pthread_mutex_lock(&mx_cola_ready);  // TODO hacer mas pruebas
+				send_proceso(cpu_fd, pcb,DISPATCH);
+				pthread_mutex_unlock(&mx_cola_ready);
 
-				 pthread_mutex_lock(&mx_cola_ready);  // TODO hacer mas pruebas
-				 send_proceso(cpu_fd, pcb,DISPATCH);
-				 pthread_mutex_unlock(&mx_cola_ready);
-
-					sem_post(&s_esperar_cpu);
+				sem_post(&s_esperar_cpu);
 
 				//sem_post(&s_cont_ready);
 				 //sem_post(&s_ready_execute);

@@ -38,12 +38,12 @@ static void procesar_conexion(void* void_args) {
 			 	    	recv_proceso(cliente_socket,proceso);
 			 	    	log_info(logger, "Recibi PCB id: %d", proceso->pid);
 			 	    	// Cargar contexto de ejecucion
-			 	    		memcpy(regAX, proceso->registro_cpu.ax, 4);		memcpy(regBX, proceso->registro_cpu.bx, 4);
-			 	    		memcpy(regCX, proceso->registro_cpu.cx, 4);		memcpy(regDX, proceso->registro_cpu.dx, 4);
-			 	    		memcpy(regEAX, proceso->registro_cpu.eax, 8);	memcpy(regEBX, proceso->registro_cpu.ebx, 8);
-			 	    		memcpy(regECX, proceso->registro_cpu.ecx, 8);	memcpy(regEDX, proceso->registro_cpu.edx, 8);
-			 	    		memcpy(regRAX, proceso->registro_cpu.rax, 16);	memcpy(regRBX, proceso->registro_cpu.rbx, 16);
-			 	    		memcpy(regRCX, proceso->registro_cpu.rcx, 16);	memcpy(regRDX, proceso->registro_cpu.rdx, 16);
+						memcpy(regAX, proceso->registro_cpu.ax, 4);		memcpy(regBX, proceso->registro_cpu.bx, 4);
+						memcpy(regCX, proceso->registro_cpu.cx, 4);		memcpy(regDX, proceso->registro_cpu.dx, 4);
+						memcpy(regEAX, proceso->registro_cpu.eax, 8);	memcpy(regEBX, proceso->registro_cpu.ebx, 8);
+						memcpy(regECX, proceso->registro_cpu.ecx, 8);	memcpy(regEDX, proceso->registro_cpu.edx, 8);
+						memcpy(regRAX, proceso->registro_cpu.rax, 16);	memcpy(regRBX, proceso->registro_cpu.rbx, 16);
+						memcpy(regRCX, proceso->registro_cpu.rcx, 16);	memcpy(regRDX, proceso->registro_cpu.rdx, 16);
 
 			 	    	op_code codigo=iniciar_ciclo_instruccion(proceso);
 			 	    	//log_info(logger, "Cop: %d ", codigo);

@@ -44,7 +44,7 @@ static void procesar_kernel(void * void_args) {
     			log_info(logger, "debug");
     			break;
     case KERNEL: log_info(logger, "RESPUESTA AL CONECTAR KERNEL");
-    				  break;
+    			 break;
     case CREAR_TABLA:
       pid = 0;
       id_segmento = 0;
@@ -72,26 +72,28 @@ static void procesar_kernel(void * void_args) {
       break;
     case CREATE_SEGMENT:
     		log_info(logger,"[KERNEL] recibido pedido crear segmento");
-    		/*uint32_t* id=malloc(sizeof(uint32_t));;
-    		uint32_t* tam=malloc(sizeof(uint32_t));*/
-    		op_code buffer;
-    		//recv(cliente_socket,&buffer,sizeof(op_code),0);
-			log_warning(logger,"recibiendo ");
-    		//recv_instruccion_memoria(cliente_socket, id, tam, pid,tamanio);
-    		//recv_instruccion_memoria(cliente_socket, num_seg, desplazamiento1, pid, tamanio);
+    		uint32_t id_seg;
+    		uint32_t tam_segmento;
+    		//int* nada;
 
-    		//log_info(logger,"id:%d -tamanio:%d - pid:%d ",id,tam,pid);
-    		/*crearSegmento(pid, id, tam);
+    		pthread_mutex_lock(&mx_kernel);
+			recv(cliente_socket, & pid, sizeof(uint16_t), 0);
+			recv(cliente_socket, & id_seg, sizeof(uint32_t), 0);
+			recv(cliente_socket, & tam_segmento, sizeof(uint32_t), 0);
+			pthread_mutex_unlock(&mx_kernel);
+
+			log_warning(logger,"Recibo: id:%d -tamanio:%d - pid:%d ",id_seg,tam_segmento,pid);
+    		crearSegmento(pid, id_seg, tam_segmento);
     		t_list* tabla_proceso = buscarTabla(pid);
-    		t_segmento* seg = buscarSegmento(tabla_proceso, id);
-    		 log_info(logger, "[KERNEL] Envio de segmento id:%d para programa %d",id, pid);
-    		      pthread_mutex_lock(&mx_kernel);
-    		      send(cliente_socket, &(seg->id_segmento), sizeof(uint32_t), MSG_WAITALL);
-    		      send(cliente_socket, &(seg->direccion_base), sizeof(uint64_t), MSG_WAITALL);
-    		      send(cliente_socket, &(seg->tamanio_segmento), sizeof(uint32_t), MSG_WAITALL);
-    		      pthread_mutex_unlock(&mx_kernel);
-*/
-    	break;
+    		t_segmento* seg = buscarSegmento(tabla_proceso, id_seg);
+    		log_info(logger, "[KERNEL] Envio de segmento id:%d para programa %d",id_seg, pid);
+			pthread_mutex_lock(&mx_kernel);
+			send(cliente_socket, &(seg->id_segmento), sizeof(uint32_t), MSG_WAITALL);
+			send(cliente_socket, &(seg->direccion_base), sizeof(uint64_t), MSG_WAITALL);
+			send(cliente_socket, &(seg->tamanio_segmento), sizeof(uint32_t), MSG_WAITALL);
+			pthread_mutex_unlock(&mx_kernel);
+
+			break;
     // Errores
     case -1:
       log_error(logger, "Cliente desconectado de %s...", server_name);
