@@ -10805,3 +10805,1719 @@ TAM_MAX_SEGMENTO: 128
 [INFO] 07:58:41:612 Cpu/(18960:18972): Recibi PCB id: 1
 [INFO] 07:58:41:612 Cpu/(18960:18972): PID: 1 - Ejecutando EXIT
 [INFO] 07:59:21:037 Cpu/(18960:18972): Se ha finalizado la conexion
+[INFO] 21:33:43:441 Cpu/(7862:7862): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 21:33:43:442 Cpu/(7862:7862): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:33:43:442 Cpu/(7862:7862): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 21:33:50:279 Cpu/(7862:7862): Cliente conectado (a CPU_SV)
+
+[INFO] 21:33:53:017 Cpu/(7862:7867): Recibi PCB id: 0
+[INFO] 21:33:53:017 Cpu/(7862:7867): En CPU
+[INFO] 21:33:54:018 Cpu/(7862:7867): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 21:33:54:018 Cpu/(7862:7867): registro recibido: HOLA
+
+[INFO] 21:33:54:018 Cpu/(7862:7867): reg AX: HOLA«U
+[INFO] 21:33:54:018 Cpu/(7862:7867): Realizado SET del registro AX con valor HOLA«U
+[INFO] 21:33:54:018 Cpu/(7862:7867): Realizado SET del registro AX con valor 
+[INFO] 21:33:54:018 Cpu/(7862:7867): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 21:33:54:018 Cpu/(7862:7867): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+
+[ERROR] 21:33:54:018 Cpu/(7862:7867): registro : AX
+[ERROR] 21:33:54:018 Cpu/(7862:7867): registro AX : HOLA«U
+[INFO] 21:33:54:018 Cpu/(7862:7867): Realizado lectura del registro AX con valor HOLA•
+[INFO] 21:33:54:018 Cpu/(7862:7867): estamos mandando a memoria: HOLA•
+[INFO] 21:33:54:018 Cpu/(7862:7867): se escribio en memoria:  115
+[INFO] 21:33:54:018 Cpu/(7862:7867): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+[INFO] 21:33:54:018 Cpu/(7862:7867): PID: 0 -  Listo para ejecutar MOV_IN 
+[INFO] 21:33:54:018 Cpu/(7862:7867): estamos recibiendo de memoria: HOLA•
+[INFO] 21:33:54:018 Cpu/(7862:7867): estamos seteando de memoria: HOLA•
+[INFO] 21:33:54:018 Cpu/(7862:7867): registro recibido: HOLA•
+[INFO] 21:33:54:018 Cpu/(7862:7867): Realizado SET del registro BX con valor HOLA«U
+[INFO] 21:33:54:018 Cpu/(7862:7867): Realizado SET del registro BX con valor HOLA«U
+[INFO] 21:33:54:018 Cpu/(7862:7867): PID: 0 - Se ha ejecutado MOV_IN parametro 1: BX parametro 2: 120
+
+[INFO] 21:33:54:018 Cpu/(7862:7867): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 21:33:54:025 Cpu/(7862:7867): Recibi PCB id: 0
+[INFO] 21:33:54:025 Cpu/(7862:7867): PID: 0 - Ejecutando YIELD 
+[INFO] 21:33:54:025 Cpu/(7862:7867): Recibi PCB id: 0
+[INFO] 21:33:54:025 Cpu/(7862:7867): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 21:33:54:032 Cpu/(7862:7867): Recibi PCB id: 0
+[INFO] 21:33:54:032 Cpu/(7862:7867): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 21:33:54:033 Cpu/(7862:7867): Recibi PCB id: 0
+[INFO] 21:33:54:033 Cpu/(7862:7867): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 21:33:54:033 Cpu/(7862:7867): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 21:33:57:081 Cpu/(7862:7867): Recibi PCB id: 0
+[INFO] 21:33:57:081 Cpu/(7862:7867): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 21:33:59:113 Cpu/(7862:7867): Recibi PCB id: 0
+[INFO] 21:33:59:113 Cpu/(7862:7867): PID: 0 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 21:33:59:113 Cpu/(7862:7867): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 21:33:59:113 Cpu/(7862:7867): Recibi PCB id: 0
+[INFO] 21:33:59:113 Cpu/(7862:7867): PID: 0 - Ejecutando EXIT
+[INFO] 21:36:36:800 Cpu/(7862:7867): Se ha finalizado la conexion
+[INFO] 21:38:13:554 Cpu/(8019:8019): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 21:38:13:556 Cpu/(8019:8019): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:38:13:556 Cpu/(8019:8019): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 21:38:19:404 Cpu/(8019:8019): Cliente conectado (a CPU_SV)
+
+[INFO] 21:38:21:802 Cpu/(8019:8026): Recibi PCB id: 0
+[INFO] 21:38:21:802 Cpu/(8019:8026): En CPU
+[INFO] 21:38:22:802 Cpu/(8019:8026): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 21:38:22:802 Cpu/(8019:8026): registro recibido: HOLA
+
+[INFO] 21:38:22:802 Cpu/(8019:8026): reg AX: HOLA>V
+[INFO] 21:38:22:802 Cpu/(8019:8026): Realizado SET del registro AX con valor HOLA>V
+[INFO] 21:38:22:802 Cpu/(8019:8026): Realizado SET del registro AX con valor 
+[INFO] 21:38:22:802 Cpu/(8019:8026): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 21:38:22:803 Cpu/(8019:8026): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+
+[ERROR] 21:38:22:803 Cpu/(8019:8026): registro : AX
+[ERROR] 21:38:22:803 Cpu/(8019:8026): registro AX : HOLA>V
+[INFO] 21:38:22:803 Cpu/(8019:8026): Realizado lectura del registro AX con valor HOLAœ
+[INFO] 21:38:22:803 Cpu/(8019:8026): estamos mandando a memoria: HOLAœ
+[INFO] 21:38:22:803 Cpu/(8019:8026): se escribio en memoria:  115
+[INFO] 21:38:22:803 Cpu/(8019:8026): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+[INFO] 21:38:22:803 Cpu/(8019:8026): PID: 0 -  Listo para ejecutar MOV_IN 
+[INFO] 21:38:22:804 Cpu/(8019:8026): estamos recibiendo de memoria: HOLA
+[INFO] 21:38:22:804 Cpu/(8019:8026): estamos seteando de memoria: HOLA
+[INFO] 21:38:22:804 Cpu/(8019:8026): registro recibido: HOLA
+[INFO] 21:38:22:804 Cpu/(8019:8026): Realizado SET del registro BX con valor HOLA>V
+[INFO] 21:38:22:804 Cpu/(8019:8026): Realizado SET del registro BX con valor HOLA>V
+[INFO] 21:38:22:804 Cpu/(8019:8026): PID: 0 - Se ha ejecutado MOV_IN parametro 1: BX parametro 2: 120
+
+[INFO] 21:38:22:804 Cpu/(8019:8026): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 21:38:22:805 Cpu/(8019:8026): Recibi PCB id: 0
+[INFO] 21:38:22:805 Cpu/(8019:8026): PID: 0 - Ejecutando YIELD 
+[INFO] 21:38:22:805 Cpu/(8019:8026): Recibi PCB id: 0
+[INFO] 21:38:22:805 Cpu/(8019:8026): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 21:38:22:807 Cpu/(8019:8026): Recibi PCB id: 0
+[INFO] 21:38:22:807 Cpu/(8019:8026): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 21:38:22:807 Cpu/(8019:8026): Recibi PCB id: 0
+[INFO] 21:38:22:807 Cpu/(8019:8026): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 21:38:22:807 Cpu/(8019:8026): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 21:38:25:857 Cpu/(8019:8026): Recibi PCB id: 0
+[INFO] 21:38:25:857 Cpu/(8019:8026): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 21:38:27:891 Cpu/(8019:8026): Recibi PCB id: 0
+[INFO] 21:38:27:891 Cpu/(8019:8026): PID: 0 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 21:38:27:891 Cpu/(8019:8026): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 21:38:27:891 Cpu/(8019:8026): Recibi PCB id: 0
+[INFO] 21:38:27:891 Cpu/(8019:8026): PID: 0 - Ejecutando EXIT
+[INFO] 21:39:01:332 Cpu/(8019:8026): Se ha finalizado la conexion
+[INFO] 21:41:57:315 Cpu/(8177:8177): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 21:41:57:316 Cpu/(8177:8177): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:41:57:316 Cpu/(8177:8177): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 21:42:10:389 Cpu/(8177:8177): Cliente conectado (a CPU_SV)
+
+[INFO] 21:42:12:830 Cpu/(8177:8182): Recibi PCB id: 0
+[INFO] 21:42:12:830 Cpu/(8177:8182): En CPU
+[INFO] 21:42:13:831 Cpu/(8177:8182): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 21:42:13:831 Cpu/(8177:8182): registro recibido: HOLA
+
+[INFO] 21:42:13:831 Cpu/(8177:8182): reg AX: HOLAKV
+[INFO] 21:42:13:831 Cpu/(8177:8182): Realizado SET del registro AX con valor HOLAKV
+[INFO] 21:42:13:831 Cpu/(8177:8182): Realizado SET del registro AX con valor 
+[INFO] 21:42:13:831 Cpu/(8177:8182): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 21:42:13:831 Cpu/(8177:8182): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+
+[ERROR] 21:42:13:831 Cpu/(8177:8182): registro : AX
+[ERROR] 21:42:13:831 Cpu/(8177:8182): registro AX : HOLAKV
+[INFO] 21:42:13:831 Cpu/(8177:8182): Realizado lectura del registro AX con valor HOLAh
+[INFO] 21:42:13:831 Cpu/(8177:8182): estamos mandando a memoria: HOLA
+[INFO] 21:42:13:831 Cpu/(8177:8182): se escribio en memoria:  115
+[INFO] 21:42:13:831 Cpu/(8177:8182): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+[INFO] 21:42:13:831 Cpu/(8177:8182): PID: 0 -  Listo para ejecutar MOV_IN 
+[INFO] 21:42:13:831 Cpu/(8177:8182): estamos recibiendo de memoria: HOLA
+[INFO] 21:42:13:831 Cpu/(8177:8182): estamos seteando de memoria: HOLA
+[INFO] 21:42:13:831 Cpu/(8177:8182): registro recibido: HOLA
+[INFO] 21:42:13:831 Cpu/(8177:8182): Realizado SET del registro BX con valor HOLAKV
+[INFO] 21:42:13:831 Cpu/(8177:8182): Realizado SET del registro BX con valor HOLAKV
+[INFO] 21:42:13:831 Cpu/(8177:8182): PID: 0 - Se ha ejecutado MOV_IN parametro 1: BX parametro 2: 120
+
+[INFO] 21:42:13:831 Cpu/(8177:8182): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 21:42:13:832 Cpu/(8177:8182): Recibi PCB id: 0
+[INFO] 21:42:13:832 Cpu/(8177:8182): PID: 0 - Ejecutando YIELD 
+[INFO] 21:42:13:832 Cpu/(8177:8182): Recibi PCB id: 0
+[INFO] 21:42:13:832 Cpu/(8177:8182): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 21:42:13:843 Cpu/(8177:8182): Recibi PCB id: 0
+[INFO] 21:42:13:843 Cpu/(8177:8182): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 21:42:13:843 Cpu/(8177:8182): Recibi PCB id: 0
+[INFO] 21:42:13:843 Cpu/(8177:8182): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 21:42:13:843 Cpu/(8177:8182): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 21:42:16:898 Cpu/(8177:8182): Recibi PCB id: 0
+[INFO] 21:42:16:898 Cpu/(8177:8182): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 21:42:18:929 Cpu/(8177:8182): Recibi PCB id: 0
+[INFO] 21:42:18:929 Cpu/(8177:8182): PID: 0 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 21:42:18:929 Cpu/(8177:8182): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 21:42:18:929 Cpu/(8177:8182): Recibi PCB id: 0
+[INFO] 21:42:18:929 Cpu/(8177:8182): PID: 0 - Ejecutando EXIT
+[INFO] 21:43:29:268 Cpu/(8177:8182): Se ha finalizado la conexion
+[INFO] 21:45:13:572 Cpu/(8265:8265): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 21:45:13:572 Cpu/(8265:8265): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:45:13:573 Cpu/(8265:8265): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 21:45:20:411 Cpu/(8265:8265): Cliente conectado (a CPU_SV)
+
+[INFO] 21:45:22:743 Cpu/(8265:8270): Recibi PCB id: 0
+[INFO] 21:45:22:743 Cpu/(8265:8270): En CPU
+[INFO] 21:45:23:744 Cpu/(8265:8270): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 21:45:23:744 Cpu/(8265:8270): registro recibido: HOLA
+
+[INFO] 21:45:23:744 Cpu/(8265:8270): reg AX: HOLA
+U
+[INFO] 21:45:23:744 Cpu/(8265:8270): Realizado SET del registro AX con valor HOLA
+U
+[INFO] 21:45:23:744 Cpu/(8265:8270): Realizado SET del registro AX con valor 
+[INFO] 21:45:23:744 Cpu/(8265:8270): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 21:45:23:744 Cpu/(8265:8270): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+
+[ERROR] 21:45:23:744 Cpu/(8265:8270): registro : AX
+[ERROR] 21:45:23:744 Cpu/(8265:8270): registro AX : HOLA
+U
+[INFO] 21:45:23:744 Cpu/(8265:8270): Realizado lectura del registro AX con valor HOLA¼
+[INFO] 21:45:23:744 Cpu/(8265:8270): estamos mandando a memoria: HOLA
+[INFO] 21:45:23:744 Cpu/(8265:8270): se escribio en memoria:  115
+[INFO] 21:45:23:744 Cpu/(8265:8270): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+[INFO] 21:45:23:744 Cpu/(8265:8270): PID: 0 -  Listo para ejecutar MOV_IN 
+[INFO] 21:45:23:744 Cpu/(8265:8270): estamos recibiendo de memoria: HOLA
+[INFO] 21:45:23:745 Cpu/(8265:8270): estamos seteando de memoria: HOLA
+[INFO] 21:45:23:745 Cpu/(8265:8270): registro recibido: HOLA
+[INFO] 21:45:23:745 Cpu/(8265:8270): Realizado SET del registro BX con valor HOLA
+U
+[INFO] 21:45:23:745 Cpu/(8265:8270): Realizado SET del registro BX con valor HOLAU
+[INFO] 21:45:23:745 Cpu/(8265:8270): PID: 0 - Se ha ejecutado MOV_IN parametro 1: BX parametro 2: 120
+
+[INFO] 21:45:23:745 Cpu/(8265:8270): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 21:45:23:745 Cpu/(8265:8270): Recibi PCB id: 0
+[INFO] 21:45:23:745 Cpu/(8265:8270): PID: 0 - Ejecutando YIELD 
+[INFO] 21:45:23:745 Cpu/(8265:8270): Recibi PCB id: 0
+[INFO] 21:45:23:745 Cpu/(8265:8270): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 21:45:23:747 Cpu/(8265:8270): Recibi PCB id: 0
+[INFO] 21:45:23:747 Cpu/(8265:8270): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 21:45:23:747 Cpu/(8265:8270): Recibi PCB id: 0
+[INFO] 21:45:23:747 Cpu/(8265:8270): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 21:45:23:747 Cpu/(8265:8270): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 21:45:26:799 Cpu/(8265:8270): Recibi PCB id: 0
+[INFO] 21:45:26:799 Cpu/(8265:8270): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 21:45:28:831 Cpu/(8265:8270): Recibi PCB id: 0
+[INFO] 21:45:28:831 Cpu/(8265:8270): PID: 0 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 21:45:28:831 Cpu/(8265:8270): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 21:45:28:832 Cpu/(8265:8270): Recibi PCB id: 0
+[INFO] 21:45:28:832 Cpu/(8265:8270): PID: 0 - Ejecutando EXIT
+[INFO] 21:46:22:444 Cpu/(8265:8270): Se ha finalizado la conexion
+[INFO] 21:48:22:264 Cpu/(8357:8357): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 21:48:22:265 Cpu/(8357:8357): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:48:22:265 Cpu/(8357:8357): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 21:48:28:272 Cpu/(8357:8357): Cliente conectado (a CPU_SV)
+
+[INFO] 21:48:31:112 Cpu/(8357:8364): Recibi PCB id: 0
+[INFO] 21:48:31:112 Cpu/(8357:8364): En CPU
+[INFO] 21:48:32:113 Cpu/(8357:8364): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 21:48:32:113 Cpu/(8357:8364): registro recibido: HOLA
+
+[INFO] 21:48:32:113 Cpu/(8357:8364): reg AX: HOLA
+U
+[INFO] 21:48:32:113 Cpu/(8357:8364): Realizado SET del registro AX con valor HOLA
+U
+[INFO] 21:48:32:113 Cpu/(8357:8364): Realizado SET del registro AX con valor 
+[INFO] 21:48:32:113 Cpu/(8357:8364): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 21:48:32:113 Cpu/(8357:8364): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+
+[ERROR] 21:48:32:113 Cpu/(8357:8364): registro : AX
+[ERROR] 21:48:32:113 Cpu/(8357:8364): registro AX : HOLA
+U
+[INFO] 21:48:32:113 Cpu/(8357:8364): Realizado lectura del registro AX con valor HOLAB
+[INFO] 21:48:32:113 Cpu/(8357:8364): estamos mandando a memoria: HOLA
+[INFO] 21:48:32:113 Cpu/(8357:8364): se escribio en memoria:  115
+[INFO] 21:48:32:113 Cpu/(8357:8364): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+[INFO] 21:48:32:113 Cpu/(8357:8364): PID: 0 -  Listo para ejecutar MOV_IN 
+[INFO] 21:48:32:113 Cpu/(8357:8364): estamos recibiendo de memoria: HOLA
+[INFO] 21:48:32:113 Cpu/(8357:8364): estamos seteando de memoria: HOLA
+[INFO] 21:48:32:113 Cpu/(8357:8364): registro recibido: HOLA
+[INFO] 21:48:32:113 Cpu/(8357:8364): Realizado SET del registro BX con valor HOLA
+U
+[INFO] 21:48:32:113 Cpu/(8357:8364): Realizado SET del registro BX con valor HOLAU
+[INFO] 21:48:32:113 Cpu/(8357:8364): PID: 0 - Se ha ejecutado MOV_IN parametro 1: BX parametro 2: 120
+
+[INFO] 21:48:32:113 Cpu/(8357:8364): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 21:48:32:120 Cpu/(8357:8364): Recibi PCB id: 0
+[INFO] 21:48:32:120 Cpu/(8357:8364): PID: 0 - Ejecutando YIELD 
+[INFO] 21:48:32:120 Cpu/(8357:8364): Recibi PCB id: 0
+[INFO] 21:48:32:120 Cpu/(8357:8364): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 21:48:32:126 Cpu/(8357:8364): Recibi PCB id: 0
+[INFO] 21:48:32:126 Cpu/(8357:8364): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 21:48:32:126 Cpu/(8357:8364): Recibi PCB id: 0
+[INFO] 21:48:32:126 Cpu/(8357:8364): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 21:48:32:126 Cpu/(8357:8364): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 21:48:35:179 Cpu/(8357:8364): Recibi PCB id: 0
+[INFO] 21:48:35:179 Cpu/(8357:8364): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 21:48:37:211 Cpu/(8357:8364): Recibi PCB id: 0
+[INFO] 21:48:37:211 Cpu/(8357:8364): PID: 0 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 21:48:37:211 Cpu/(8357:8364): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 21:48:37:211 Cpu/(8357:8364): Recibi PCB id: 0
+[INFO] 21:48:37:211 Cpu/(8357:8364): PID: 0 - Ejecutando EXIT
+[INFO] 21:51:39:241 Cpu/(8357:8364): Se ha finalizado la conexion
+[INFO] 21:56:13:416 Cpu/(8574:8574): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 21:56:13:417 Cpu/(8574:8574): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:56:13:417 Cpu/(8574:8574): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 21:56:19:011 Cpu/(8574:8574): Cliente conectado (a CPU_SV)
+
+[INFO] 21:56:21:773 Cpu/(8574:8580): Recibi PCB id: 0
+[INFO] 21:56:21:774 Cpu/(8574:8580): En CPU
+[INFO] 21:56:22:774 Cpu/(8574:8580): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 21:56:22:774 Cpu/(8574:8580): registro recibido: HOLA
+
+[INFO] 21:56:22:774 Cpu/(8574:8580): reg AX: HOLA
+V
+[INFO] 21:56:22:774 Cpu/(8574:8580): Realizado SET del registro AX con valor HOLA
+V
+[INFO] 21:56:22:774 Cpu/(8574:8580): Realizado SET del registro AX con valor 
+[INFO] 21:56:22:774 Cpu/(8574:8580): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 21:56:22:774 Cpu/(8574:8580): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+
+[ERROR] 21:56:22:774 Cpu/(8574:8580): registro : AX
+[ERROR] 21:56:22:774 Cpu/(8574:8580): registro AX : HOLA
+V
+[INFO] 21:56:22:774 Cpu/(8574:8580): Realizado lectura del registro AX con valor HOLA%
+[INFO] 21:56:22:774 Cpu/(8574:8580): estamos mandando a memoria: HOLA`
+[INFO] 21:56:22:774 Cpu/(8574:8580): se escribio en memoria:  115
+[INFO] 21:56:22:774 Cpu/(8574:8580): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+[INFO] 21:56:22:774 Cpu/(8574:8580): PID: 0 -  Listo para ejecutar MOV_IN 
+[INFO] 21:56:22:774 Cpu/(8574:8580): estamos recibiendo de memoria: HOLA`
+[INFO] 21:56:22:774 Cpu/(8574:8580): estamos seteando de memoria: HOLA`
+[INFO] 21:56:22:774 Cpu/(8574:8580): registro recibido: HOLA`
+[INFO] 21:56:22:774 Cpu/(8574:8580): Realizado SET del registro BX con valor HOLA
+V
+[INFO] 21:56:22:774 Cpu/(8574:8580): Realizado SET del registro BX con valor HOLA`V
+[INFO] 21:56:22:774 Cpu/(8574:8580): PID: 0 - Se ha ejecutado MOV_IN parametro 1: BX parametro 2: 120
+
+[INFO] 21:56:22:774 Cpu/(8574:8580): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 21:56:22:783 Cpu/(8574:8580): Recibi PCB id: 0
+[INFO] 21:56:22:783 Cpu/(8574:8580): PID: 0 - Ejecutando YIELD 
+[INFO] 21:56:22:783 Cpu/(8574:8580): Recibi PCB id: 0
+[INFO] 21:56:22:783 Cpu/(8574:8580): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 21:56:22:788 Cpu/(8574:8580): Recibi PCB id: 0
+[INFO] 21:56:22:788 Cpu/(8574:8580): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 21:56:22:788 Cpu/(8574:8580): Recibi PCB id: 0
+[INFO] 21:56:22:788 Cpu/(8574:8580): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 21:56:22:788 Cpu/(8574:8580): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 21:56:25:840 Cpu/(8574:8580): Recibi PCB id: 0
+[INFO] 21:56:25:840 Cpu/(8574:8580): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 21:56:27:873 Cpu/(8574:8580): Recibi PCB id: 0
+[INFO] 21:56:27:873 Cpu/(8574:8580): PID: 0 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 21:56:27:873 Cpu/(8574:8580): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 21:56:27:873 Cpu/(8574:8580): Recibi PCB id: 0
+[INFO] 21:56:27:873 Cpu/(8574:8580): PID: 0 - Ejecutando EXIT
+[INFO] 21:57:27:390 Cpu/(8574:8580): Se ha finalizado la conexion
+[INFO] 22:01:29:335 Cpu/(8698:8698): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 22:01:29:338 Cpu/(8698:8698): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:01:29:338 Cpu/(8698:8698): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:01:34:881 Cpu/(8698:8698): Cliente conectado (a CPU_SV)
+
+[INFO] 22:01:37:705 Cpu/(8698:8703): Recibi PCB id: 0
+[INFO] 22:01:37:705 Cpu/(8698:8703): En CPU
+[INFO] 22:01:38:705 Cpu/(8698:8703): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 22:01:38:705 Cpu/(8698:8703): registro recibido: HOLA
+
+[INFO] 22:01:38:705 Cpu/(8698:8703): reg AX: HOLA
+U
+[INFO] 22:01:38:705 Cpu/(8698:8703): Realizado SET del registro AX con valor HOLA
+U
+[INFO] 22:01:38:705 Cpu/(8698:8703): Realizado SET del registro AX con valor 
+[INFO] 22:01:38:705 Cpu/(8698:8703): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 22:01:38:705 Cpu/(8698:8703): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+
+[ERROR] 22:01:38:705 Cpu/(8698:8703): registro : AX
+[ERROR] 22:01:38:705 Cpu/(8698:8703): registro AX : HOLA
+U
+[INFO] 22:01:38:705 Cpu/(8698:8703): Realizado lectura del registro AX con valor HOLA:
+[INFO] 22:01:38:706 Cpu/(8698:8703): estamos mandando a memoria: HOLA`
+[INFO] 22:01:38:706 Cpu/(8698:8703): se escribio en memoria:  115
+[INFO] 22:01:38:706 Cpu/(8698:8703): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+[INFO] 22:01:38:706 Cpu/(8698:8703): PID: 0 -  Listo para ejecutar MOV_IN 
+[INFO] 22:01:38:706 Cpu/(8698:8703): estamos recibiendo de memoria: HOLA`
+[INFO] 22:06:02:639 Cpu/(8774:8774): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 22:06:02:640 Cpu/(8774:8774): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:06:02:640 Cpu/(8774:8774): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:06:07:813 Cpu/(8774:8774): Cliente conectado (a CPU_SV)
+
+[INFO] 22:06:10:766 Cpu/(8774:8780): Recibi PCB id: 0
+[INFO] 22:06:10:766 Cpu/(8774:8780): En CPU
+[INFO] 22:06:11:767 Cpu/(8774:8780): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 22:06:11:767 Cpu/(8774:8780): registro recibido: HOLA
+
+[INFO] 22:06:11:767 Cpu/(8774:8780): reg AX: HOLA
+V
+[INFO] 22:06:11:767 Cpu/(8774:8780): Realizado SET del registro AX con valor HOLA
+V
+[INFO] 22:06:11:767 Cpu/(8774:8780): Realizado SET del registro AX con valor 
+[INFO] 22:06:11:767 Cpu/(8774:8780): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 22:06:11:767 Cpu/(8774:8780): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+
+[ERROR] 22:06:11:767 Cpu/(8774:8780): registro : AX
+[ERROR] 22:06:11:767 Cpu/(8774:8780): registro AX : HOLA
+V
+[INFO] 22:06:11:767 Cpu/(8774:8780): Realizado lectura del registro AX con valor HOLAV
+[INFO] 22:06:11:767 Cpu/(8774:8780): estamos mandando a memoria: HOLA`
+[INFO] 22:06:11:767 Cpu/(8774:8780): se escribio en memoria:  115
+[INFO] 22:06:11:767 Cpu/(8774:8780): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+[INFO] 22:06:11:767 Cpu/(8774:8780): PID: 0 -  Listo para ejecutar MOV_IN 
+[INFO] 22:06:11:768 Cpu/(8774:8780): estamos recibiendo de memoria: HOLA`
+[INFO] 22:06:11:768 Cpu/(8774:8780): estamos seteando de memoria: 4
+[INFO] 22:06:11:768 Cpu/(8774:8780): registro recibido: HOLA`
+[INFO] 22:06:11:768 Cpu/(8774:8780): Realizado SET del registro BX con valor HOLA
+V
+[INFO] 22:06:11:768 Cpu/(8774:8780): Realizado SET del registro BX con valor HOLA`V
+[INFO] 22:06:11:768 Cpu/(8774:8780): PID: 0 - Se ha ejecutado MOV_IN parametro 1: BX parametro 2: 120
+
+[INFO] 22:06:11:768 Cpu/(8774:8780): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 22:06:11:774 Cpu/(8774:8780): Recibi PCB id: 0
+[INFO] 22:06:11:774 Cpu/(8774:8780): PID: 0 - Ejecutando YIELD 
+[INFO] 22:06:11:775 Cpu/(8774:8780): Recibi PCB id: 0
+[INFO] 22:06:11:775 Cpu/(8774:8780): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 22:06:11:778 Cpu/(8774:8780): Recibi PCB id: 0
+[INFO] 22:06:11:778 Cpu/(8774:8780): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 22:06:11:779 Cpu/(8774:8780): Recibi PCB id: 0
+[INFO] 22:06:11:779 Cpu/(8774:8780): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 22:06:11:779 Cpu/(8774:8780): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 22:06:14:828 Cpu/(8774:8780): Recibi PCB id: 0
+[INFO] 22:06:14:828 Cpu/(8774:8780): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 22:06:16:860 Cpu/(8774:8780): Recibi PCB id: 0
+[INFO] 22:06:16:860 Cpu/(8774:8780): PID: 0 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 22:06:16:860 Cpu/(8774:8780): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 22:06:16:861 Cpu/(8774:8780): Recibi PCB id: 0
+[INFO] 22:06:16:861 Cpu/(8774:8780): PID: 0 - Ejecutando EXIT
+[INFO] 22:10:20:987 Cpu/(8774:8780): Se ha finalizado la conexion
+[INFO] 22:10:26:940 Cpu/(8919:8919): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 22:10:26:941 Cpu/(8919:8919): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:10:26:941 Cpu/(8919:8919): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:10:31:244 Cpu/(8919:8919): Cliente conectado (a CPU_SV)
+
+[INFO] 22:10:33:731 Cpu/(8919:8924): Recibi PCB id: 0
+[INFO] 22:10:33:731 Cpu/(8919:8924): En CPU
+[INFO] 22:10:34:731 Cpu/(8919:8924): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 22:10:34:731 Cpu/(8919:8924): registro recibido: HOLA
+
+[INFO] 22:10:34:731 Cpu/(8919:8924): reg AX: HOLA
+U
+[INFO] 22:10:34:731 Cpu/(8919:8924): Realizado SET del registro AX con valor HOLA
+U
+[INFO] 22:10:34:731 Cpu/(8919:8924): Realizado SET del registro AX con valor 
+[INFO] 22:10:34:731 Cpu/(8919:8924): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 22:10:34:731 Cpu/(8919:8924): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+
+[ERROR] 22:10:34:731 Cpu/(8919:8924): registro : AX
+[ERROR] 22:10:34:731 Cpu/(8919:8924): registro AX : HOLA
+U
+[INFO] 22:10:34:731 Cpu/(8919:8924): Realizado lectura del registro AX con valor HOLA¢
+[INFO] 22:10:34:731 Cpu/(8919:8924): estamos mandando a memoria: HOLA°
+[INFO] 22:10:34:732 Cpu/(8919:8924): se escribio en memoria:  115
+[INFO] 22:10:34:732 Cpu/(8919:8924): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+[INFO] 22:10:34:732 Cpu/(8919:8924): PID: 0 -  Listo para ejecutar MOV_IN 
+[INFO] 22:10:34:732 Cpu/(8919:8924): estamos recibiendo de memoria: HOLA
+
+[INFO] 22:10:34:732 Cpu/(8919:8924): estamos seteando de memoria: 4
+[INFO] 22:10:34:732 Cpu/(8919:8924): registro recibido: HOLA
+
+[INFO] 22:10:34:732 Cpu/(8919:8924): Realizado SET del registro BX con valor HOLA
+U
+[INFO] 22:10:34:732 Cpu/(8919:8924): Realizado SET del registro BX con valor HOLA
+U
+[INFO] 22:10:34:732 Cpu/(8919:8924): PID: 0 - Se ha ejecutado MOV_IN parametro 1: BX parametro 2: 120
+
+[INFO] 22:10:34:732 Cpu/(8919:8924): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 22:10:34:733 Cpu/(8919:8924): Recibi PCB id: 0
+[INFO] 22:10:34:733 Cpu/(8919:8924): PID: 0 - Ejecutando YIELD 
+[INFO] 22:10:34:734 Cpu/(8919:8924): Recibi PCB id: 0
+[INFO] 22:10:34:734 Cpu/(8919:8924): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 22:10:34:737 Cpu/(8919:8924): Recibi PCB id: 0
+[INFO] 22:10:34:737 Cpu/(8919:8924): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 22:10:34:737 Cpu/(8919:8924): Recibi PCB id: 0
+[INFO] 22:10:34:737 Cpu/(8919:8924): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 22:10:34:737 Cpu/(8919:8924): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 22:10:37:785 Cpu/(8919:8924): Recibi PCB id: 0
+[INFO] 22:10:37:785 Cpu/(8919:8924): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 22:10:39:817 Cpu/(8919:8924): Recibi PCB id: 0
+[INFO] 22:10:39:817 Cpu/(8919:8924): PID: 0 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 22:10:39:817 Cpu/(8919:8924): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 22:10:39:817 Cpu/(8919:8924): Recibi PCB id: 0
+[INFO] 22:10:39:817 Cpu/(8919:8924): PID: 0 - Ejecutando EXIT
+[INFO] 22:13:29:892 Cpu/(8919:8924): Se ha finalizado la conexion
+[INFO] 22:13:36:741 Cpu/(9020:9020): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 22:13:36:741 Cpu/(9020:9020): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:13:36:742 Cpu/(9020:9020): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:13:42:241 Cpu/(9020:9020): Cliente conectado (a CPU_SV)
+
+[INFO] 22:13:45:224 Cpu/(9020:9025): Recibi PCB id: 0
+[INFO] 22:13:45:224 Cpu/(9020:9025): En CPU
+[INFO] 22:13:46:224 Cpu/(9020:9025): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 22:13:46:225 Cpu/(9020:9025): registro recibido: HOLA
+
+[INFO] 22:13:46:225 Cpu/(9020:9025): reg AX: HOLA
+[INFO] 22:13:46:225 Cpu/(9020:9025): Realizado SET del registro AX con valor HOLA
+[INFO] 22:13:46:225 Cpu/(9020:9025): Realizado SET del registro AX con valor 
+[INFO] 22:13:46:225 Cpu/(9020:9025): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 22:13:46:225 Cpu/(9020:9025): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+
+[ERROR] 22:13:46:225 Cpu/(9020:9025): registro : AX
+[ERROR] 22:13:46:225 Cpu/(9020:9025): registro AX : HOLA
+[INFO] 22:13:46:225 Cpu/(9020:9025): Realizado lectura del registro AX con valor HOLA
+[INFO] 22:13:46:225 Cpu/(9020:9025): estamos mandando a memoria: HOLA°
+[INFO] 22:13:46:225 Cpu/(9020:9025): se escribio en memoria:  115
+[INFO] 22:13:46:225 Cpu/(9020:9025): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+[INFO] 22:13:46:225 Cpu/(9020:9025): PID: 0 -  Listo para ejecutar MOV_IN 
+[INFO] 22:13:46:225 Cpu/(9020:9025): estamos recibiendo de memoria: HOLA
+
+[INFO] 22:13:46:225 Cpu/(9020:9025): estamos seteando de memoria: 4
+[INFO] 22:13:46:225 Cpu/(9020:9025): registro recibido: HOLA
+
+[INFO] 22:13:46:225 Cpu/(9020:9025): Realizado SET del registro BX con valor HOLA
+[INFO] 22:13:46:225 Cpu/(9020:9025): Realizado SET del registro BX con valor HOLA
+[INFO] 22:13:46:225 Cpu/(9020:9025): PID: 0 - Se ha ejecutado MOV_IN parametro 1: BX parametro 2: 120
+
+[INFO] 22:13:46:225 Cpu/(9020:9025): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 22:13:46:232 Cpu/(9020:9025): Recibi PCB id: 0
+[INFO] 22:13:46:232 Cpu/(9020:9025): PID: 0 - Ejecutando YIELD 
+[INFO] 22:13:46:232 Cpu/(9020:9025): Recibi PCB id: 0
+[INFO] 22:13:46:232 Cpu/(9020:9025): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 22:13:46:235 Cpu/(9020:9025): Recibi PCB id: 0
+[INFO] 22:13:46:235 Cpu/(9020:9025): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 22:13:46:235 Cpu/(9020:9025): Recibi PCB id: 0
+[INFO] 22:13:46:235 Cpu/(9020:9025): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 22:13:46:235 Cpu/(9020:9025): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 22:13:49:288 Cpu/(9020:9025): Recibi PCB id: 0
+[INFO] 22:13:49:288 Cpu/(9020:9025): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 22:13:51:321 Cpu/(9020:9025): Recibi PCB id: 0
+[INFO] 22:13:51:321 Cpu/(9020:9025): PID: 0 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 22:13:51:321 Cpu/(9020:9025): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 22:13:51:321 Cpu/(9020:9025): Recibi PCB id: 0
+[INFO] 22:13:51:321 Cpu/(9020:9025): PID: 0 - Ejecutando EXIT
+[INFO] 22:15:19:236 Cpu/(9020:9025): Se ha finalizado la conexion
+[INFO] 22:21:15:078 Cpu/(9372:9372): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 22:21:15:080 Cpu/(9372:9372): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:21:15:080 Cpu/(9372:9372): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:21:20:200 Cpu/(9372:9372): Cliente conectado (a CPU_SV)
+
+[INFO] 22:21:49:298 Cpu/(9372:9383): Recibi PCB id: 0
+[INFO] 22:21:49:298 Cpu/(9372:9383): En CPU
+[INFO] 22:21:50:298 Cpu/(9372:9383): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: ARG0
+
+[INFO] 22:21:50:298 Cpu/(9372:9383): registro recibido: ARG0
+
+[INFO] 22:21:50:298 Cpu/(9372:9383): reg AX: ARG0
+[INFO] 22:21:50:298 Cpu/(9372:9383): Realizado SET del registro AX con valor ARG0
+[INFO] 22:21:50:298 Cpu/(9372:9383): Realizado SET del registro AX con valor 
+[INFO] 22:21:50:298 Cpu/(9372:9383): En CPU
+[INFO] 22:21:51:299 Cpu/(9372:9383): PID: 0 - Ejecutando SET parametro 1: BX parametro 2: FRA0
+
+[INFO] 22:21:51:299 Cpu/(9372:9383): registro recibido: FRA0
+
+[INFO] 22:21:51:299 Cpu/(9372:9383): Realizado SET del registro BX con valor ARG0
+[INFO] 22:21:51:299 Cpu/(9372:9383): Realizado SET del registro BX con valor FRA0
+[INFO] 22:21:51:299 Cpu/(9372:9383): PID: 0 - Ejecutando YIELD 
+[INFO] 22:21:51:300 Cpu/(9372:9383): Recibi PCB id: 0
+[INFO] 22:21:51:300 Cpu/(9372:9383): En CPU
+[INFO] 22:21:52:300 Cpu/(9372:9383): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: ARG1
+
+[INFO] 22:21:52:300 Cpu/(9372:9383): registro recibido: ARG1
+
+[INFO] 22:21:52:300 Cpu/(9372:9383): reg AX: ARG1
+[INFO] 22:21:52:300 Cpu/(9372:9383): Realizado SET del registro AX con valor ARG1
+[INFO] 22:21:52:300 Cpu/(9372:9383): Realizado SET del registro AX con valor FRA0
+[INFO] 22:21:52:300 Cpu/(9372:9383): En CPU
+[INFO] 22:21:53:300 Cpu/(9372:9383): PID: 0 - Ejecutando SET parametro 1: BX parametro 2: FRA0
+
+[INFO] 22:21:53:300 Cpu/(9372:9383): registro recibido: FRA0
+
+[INFO] 22:21:53:300 Cpu/(9372:9383): Realizado SET del registro BX con valor ARG1
+[INFO] 22:21:53:300 Cpu/(9372:9383): Realizado SET del registro BX con valor FRA0
+[INFO] 22:21:53:300 Cpu/(9372:9383): PID: 0 - Ejecutando YIELD 
+[INFO] 22:21:53:300 Cpu/(9372:9383): Recibi PCB id: 0
+[INFO] 22:21:53:300 Cpu/(9372:9383): En CPU
+[INFO] 22:21:54:301 Cpu/(9372:9383): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: ARG2
+
+[INFO] 22:21:54:301 Cpu/(9372:9383): registro recibido: ARG2
+
+[INFO] 22:21:54:301 Cpu/(9372:9383): reg AX: ARG2
+[INFO] 22:21:54:301 Cpu/(9372:9383): Realizado SET del registro AX con valor ARG2
+[INFO] 22:21:54:301 Cpu/(9372:9383): Realizado SET del registro AX con valor FRA0
+[INFO] 22:21:54:301 Cpu/(9372:9383): En CPU
+[INFO] 22:21:55:301 Cpu/(9372:9383): PID: 0 - Ejecutando SET parametro 1: BX parametro 2: FRA0
+
+[INFO] 22:21:55:301 Cpu/(9372:9383): registro recibido: FRA0
+
+[INFO] 22:21:55:301 Cpu/(9372:9383): Realizado SET del registro BX con valor ARG2
+[INFO] 22:21:55:301 Cpu/(9372:9383): Realizado SET del registro BX con valor FRA0
+[INFO] 22:21:55:301 Cpu/(9372:9383): PID: 0 - Ejecutando YIELD 
+[INFO] 22:21:55:301 Cpu/(9372:9383): Recibi PCB id: 0
+[INFO] 22:21:55:301 Cpu/(9372:9383): En CPU
+[INFO] 22:21:56:302 Cpu/(9372:9383): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: ARG2
+
+[INFO] 22:21:56:302 Cpu/(9372:9383): registro recibido: ARG2
+
+[INFO] 22:21:56:302 Cpu/(9372:9383): reg AX: ARG2
+[INFO] 22:21:56:302 Cpu/(9372:9383): Realizado SET del registro AX con valor ARG2
+[INFO] 22:21:56:302 Cpu/(9372:9383): Realizado SET del registro AX con valor FRA0
+[INFO] 22:21:56:302 Cpu/(9372:9383): En CPU
+[INFO] 22:21:57:302 Cpu/(9372:9383): PID: 0 - Ejecutando SET parametro 1: BX parametro 2: FRA1
+
+[INFO] 22:21:57:302 Cpu/(9372:9383): registro recibido: FRA1
+
+[INFO] 22:21:57:302 Cpu/(9372:9383): Realizado SET del registro BX con valor ARG2
+[INFO] 22:21:57:302 Cpu/(9372:9383): Realizado SET del registro BX con valor FRA1
+[INFO] 22:21:57:302 Cpu/(9372:9383): PID: 0 - Ejecutando YIELD 
+[INFO] 22:21:57:303 Cpu/(9372:9383): Recibi PCB id: 0
+[INFO] 22:21:57:303 Cpu/(9372:9383): En CPU
+[INFO] 22:21:58:304 Cpu/(9372:9383): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: ARG2
+
+[INFO] 22:21:58:304 Cpu/(9372:9383): registro recibido: ARG2
+
+[INFO] 22:21:58:304 Cpu/(9372:9383): reg AX: ARG2
+[INFO] 22:21:58:304 Cpu/(9372:9383): Realizado SET del registro AX con valor ARG2
+[INFO] 22:21:58:304 Cpu/(9372:9383): Realizado SET del registro AX con valor FRA1
+[INFO] 22:21:58:304 Cpu/(9372:9383): En CPU
+[INFO] 22:21:59:305 Cpu/(9372:9383): PID: 0 - Ejecutando SET parametro 1: BX parametro 2: FRA2
+
+[INFO] 22:21:59:305 Cpu/(9372:9383): registro recibido: FRA2
+
+[INFO] 22:21:59:305 Cpu/(9372:9383): Realizado SET del registro BX con valor ARG2
+[INFO] 22:21:59:305 Cpu/(9372:9383): Realizado SET del registro BX con valor FRA2
+[INFO] 22:21:59:305 Cpu/(9372:9383): PID: 0 - Ejecutando YIELD 
+[INFO] 22:21:59:305 Cpu/(9372:9383): Recibi PCB id: 0
+[INFO] 22:21:59:305 Cpu/(9372:9383): En CPU
+[INFO] 22:22:00:305 Cpu/(9372:9383): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: ARG3
+
+[INFO] 22:22:00:305 Cpu/(9372:9383): registro recibido: ARG3
+
+[INFO] 22:22:00:305 Cpu/(9372:9383): reg AX: ARG3
+[INFO] 22:22:00:305 Cpu/(9372:9383): Realizado SET del registro AX con valor ARG3
+[INFO] 22:22:00:305 Cpu/(9372:9383): Realizado SET del registro AX con valor FRA2
+[INFO] 22:22:00:305 Cpu/(9372:9383): En CPU
+[INFO] 22:22:01:307 Cpu/(9372:9383): PID: 0 - Ejecutando SET parametro 1: BX parametro 2: FRA2
+
+[INFO] 22:22:01:307 Cpu/(9372:9383): registro recibido: FRA2
+
+[INFO] 22:22:01:307 Cpu/(9372:9383): Realizado SET del registro BX con valor ARG3
+[INFO] 22:22:01:307 Cpu/(9372:9383): Realizado SET del registro BX con valor FRA2
+[INFO] 22:22:01:307 Cpu/(9372:9383): PID: 0 - Ejecutando YIELD 
+[INFO] 22:22:01:307 Cpu/(9372:9383): Recibi PCB id: 0
+[INFO] 22:22:01:307 Cpu/(9372:9383): En CPU
+[INFO] 22:22:02:307 Cpu/(9372:9383): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: ARG3
+
+[INFO] 22:22:02:308 Cpu/(9372:9383): registro recibido: ARG3
+
+[INFO] 22:22:02:308 Cpu/(9372:9383): reg AX: ARG3
+[INFO] 22:22:02:308 Cpu/(9372:9383): Realizado SET del registro AX con valor ARG3
+[INFO] 22:22:02:308 Cpu/(9372:9383): Realizado SET del registro AX con valor FRA2
+[INFO] 22:22:02:308 Cpu/(9372:9383): En CPU
+[INFO] 22:22:03:311 Cpu/(9372:9383): PID: 0 - Ejecutando SET parametro 1: BX parametro 2: FRA3
+
+[INFO] 22:22:03:311 Cpu/(9372:9383): registro recibido: FRA3
+
+[INFO] 22:22:03:311 Cpu/(9372:9383): Realizado SET del registro BX con valor ARG3
+[INFO] 22:22:03:311 Cpu/(9372:9383): Realizado SET del registro BX con valor FRA3
+[INFO] 22:22:03:311 Cpu/(9372:9383): PID: 0 - Ejecutando YIELD 
+[INFO] 22:22:03:311 Cpu/(9372:9383): Recibi PCB id: 0
+[INFO] 22:22:03:311 Cpu/(9372:9383): En CPU
+[INFO] 22:22:04:312 Cpu/(9372:9383): PID: 0 - Ejecutando SET parametro 1: RDX parametro 2: VAMOSALOSPENALES
+
+[INFO] 22:22:04:312 Cpu/(9372:9383): registro recibido: VAMOSALOSPENALES
+
+[INFO] 22:22:04:312 Cpu/(9372:9383): Realizado SET del registro RDX con valor ARG3
+[INFO] 22:22:04:312 Cpu/(9372:9383): Realizado SET del registro RDX con valor FRA3
+[INFO] 22:22:04:312 Cpu/(9372:9383): PID: 0 - Ejecutando YIELD 
+[INFO] 22:22:04:312 Cpu/(9372:9383): Recibi PCB id: 0
+[INFO] 22:22:04:312 Cpu/(9372:9383): En CPU
+[INFO] 22:22:05:313 Cpu/(9372:9383): PID: 0 - Ejecutando SET parametro 1: RAX parametro 2: ARGENTINACAMPEON
+
+[INFO] 22:22:05:313 Cpu/(9372:9383): registro recibido: ARGENTINACAMPEON
+
+[INFO] 22:22:05:313 Cpu/(9372:9383): Realizado SET del registro RAX con valor ARG3
+[INFO] 22:22:05:313 Cpu/(9372:9383): Realizado SET del registro RAX con valor FRA3
+[INFO] 22:22:05:313 Cpu/(9372:9383): PID: 0 - Ejecutando EXIT
+[INFO] 22:48:50:986 Cpu/(9372:9383): Se ha finalizado la conexion
+[INFO] 22:48:59:091 Cpu/(9814:9814): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 22:48:59:093 Cpu/(9814:9814): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:48:59:094 Cpu/(9814:9814): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:49:04:381 Cpu/(9814:9814): Cliente conectado (a CPU_SV)
+
+[INFO] 22:49:07:044 Cpu/(9814:9819): Recibi PCB id: 0
+[INFO] 22:49:07:044 Cpu/(9814:9819): En CPU
+[INFO] 22:49:08:045 Cpu/(9814:9819): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: ARG0
+
+[INFO] 22:49:08:045 Cpu/(9814:9819): registro recibido: ARG0
+
+[INFO] 22:49:08:045 Cpu/(9814:9819): reg AX: ARG0
+[INFO] 22:49:08:045 Cpu/(9814:9819): Realizado SET del registro AX con valor ARG0
+[INFO] 22:49:08:045 Cpu/(9814:9819): Realizado SET del registro AX con valor 
+[INFO] 22:49:08:045 Cpu/(9814:9819): En CPU
+[INFO] 22:49:09:046 Cpu/(9814:9819): PID: 0 - Ejecutando SET parametro 1: BX parametro 2: FRA0
+
+[INFO] 22:49:09:047 Cpu/(9814:9819): registro recibido: FRA0
+
+[INFO] 22:49:09:047 Cpu/(9814:9819): Realizado SET del registro BX con valor ARG0
+[INFO] 22:49:09:047 Cpu/(9814:9819): Realizado SET del registro BX con valor FRA0
+[INFO] 22:49:09:047 Cpu/(9814:9819): PID: 0 - Ejecutando YIELD 
+[INFO] 22:49:09:047 Cpu/(9814:9819): Recibi PCB id: 0
+[INFO] 22:49:09:047 Cpu/(9814:9819): En CPU
+[INFO] 22:49:10:048 Cpu/(9814:9819): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: ARG1
+
+[INFO] 22:49:10:048 Cpu/(9814:9819): registro recibido: ARG1
+
+[INFO] 22:49:10:048 Cpu/(9814:9819): reg AX: ARG1
+[INFO] 22:49:10:048 Cpu/(9814:9819): Realizado SET del registro AX con valor ARG1
+[INFO] 22:49:10:048 Cpu/(9814:9819): Realizado SET del registro AX con valor FRA0
+[INFO] 22:49:10:048 Cpu/(9814:9819): En CPU
+[INFO] 22:49:11:048 Cpu/(9814:9819): PID: 0 - Ejecutando SET parametro 1: BX parametro 2: FRA0
+
+[INFO] 22:49:11:049 Cpu/(9814:9819): registro recibido: FRA0
+
+[INFO] 22:49:11:049 Cpu/(9814:9819): Realizado SET del registro BX con valor ARG1
+[INFO] 22:49:11:049 Cpu/(9814:9819): Realizado SET del registro BX con valor FRA0
+[INFO] 22:49:11:049 Cpu/(9814:9819): PID: 0 - Ejecutando YIELD 
+[INFO] 22:49:11:049 Cpu/(9814:9819): Recibi PCB id: 0
+[INFO] 22:49:11:049 Cpu/(9814:9819): En CPU
+[INFO] 22:49:12:049 Cpu/(9814:9819): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: ARG2
+
+[INFO] 22:49:12:049 Cpu/(9814:9819): registro recibido: ARG2
+
+[INFO] 22:49:12:049 Cpu/(9814:9819): reg AX: ARG2
+[INFO] 22:49:12:049 Cpu/(9814:9819): Realizado SET del registro AX con valor ARG2
+[INFO] 22:49:12:049 Cpu/(9814:9819): Realizado SET del registro AX con valor FRA0
+[INFO] 22:49:12:049 Cpu/(9814:9819): En CPU
+[INFO] 22:49:13:050 Cpu/(9814:9819): PID: 0 - Ejecutando SET parametro 1: BX parametro 2: FRA0
+
+[INFO] 22:49:13:050 Cpu/(9814:9819): registro recibido: FRA0
+
+[INFO] 22:49:13:050 Cpu/(9814:9819): Realizado SET del registro BX con valor ARG2
+[INFO] 22:49:13:050 Cpu/(9814:9819): Realizado SET del registro BX con valor FRA0
+[INFO] 22:49:13:050 Cpu/(9814:9819): PID: 0 - Ejecutando YIELD 
+[INFO] 22:49:13:050 Cpu/(9814:9819): Recibi PCB id: 0
+[INFO] 22:49:13:050 Cpu/(9814:9819): En CPU
+[INFO] 22:49:14:051 Cpu/(9814:9819): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: ARG2
+
+[INFO] 22:49:14:051 Cpu/(9814:9819): registro recibido: ARG2
+
+[INFO] 22:49:14:051 Cpu/(9814:9819): reg AX: ARG2
+[INFO] 22:49:14:051 Cpu/(9814:9819): Realizado SET del registro AX con valor ARG2
+[INFO] 22:49:14:051 Cpu/(9814:9819): Realizado SET del registro AX con valor FRA0
+[INFO] 22:49:14:051 Cpu/(9814:9819): En CPU
+[INFO] 22:49:15:051 Cpu/(9814:9819): PID: 0 - Ejecutando SET parametro 1: BX parametro 2: FRA1
+
+[INFO] 22:49:15:051 Cpu/(9814:9819): registro recibido: FRA1
+
+[INFO] 22:49:15:051 Cpu/(9814:9819): Realizado SET del registro BX con valor ARG2
+[INFO] 22:49:15:051 Cpu/(9814:9819): Realizado SET del registro BX con valor FRA1
+[INFO] 22:49:15:052 Cpu/(9814:9819): PID: 0 - Ejecutando YIELD 
+[INFO] 22:49:15:052 Cpu/(9814:9819): Recibi PCB id: 0
+[INFO] 22:49:15:052 Cpu/(9814:9819): En CPU
+[INFO] 22:49:16:053 Cpu/(9814:9819): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: ARG2
+
+[INFO] 22:49:16:053 Cpu/(9814:9819): registro recibido: ARG2
+
+[INFO] 22:49:16:053 Cpu/(9814:9819): reg AX: ARG2
+[INFO] 22:49:16:053 Cpu/(9814:9819): Realizado SET del registro AX con valor ARG2
+[INFO] 22:49:16:053 Cpu/(9814:9819): Realizado SET del registro AX con valor FRA1
+[INFO] 22:49:16:053 Cpu/(9814:9819): En CPU
+[INFO] 22:49:17:054 Cpu/(9814:9819): PID: 0 - Ejecutando SET parametro 1: BX parametro 2: FRA2
+
+[INFO] 22:49:17:054 Cpu/(9814:9819): registro recibido: FRA2
+
+[INFO] 22:49:17:054 Cpu/(9814:9819): Realizado SET del registro BX con valor ARG2
+[INFO] 22:49:17:054 Cpu/(9814:9819): Realizado SET del registro BX con valor FRA2
+[INFO] 22:49:17:054 Cpu/(9814:9819): PID: 0 - Ejecutando YIELD 
+[INFO] 22:49:17:054 Cpu/(9814:9819): Recibi PCB id: 0
+[INFO] 22:49:17:054 Cpu/(9814:9819): En CPU
+[INFO] 22:49:18:055 Cpu/(9814:9819): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: ARG3
+
+[INFO] 22:49:18:055 Cpu/(9814:9819): registro recibido: ARG3
+
+[INFO] 22:49:18:055 Cpu/(9814:9819): reg AX: ARG3
+[INFO] 22:49:18:056 Cpu/(9814:9819): Realizado SET del registro AX con valor ARG3
+[INFO] 22:49:18:056 Cpu/(9814:9819): Realizado SET del registro AX con valor FRA2
+[INFO] 22:49:18:056 Cpu/(9814:9819): En CPU
+[INFO] 22:49:19:056 Cpu/(9814:9819): PID: 0 - Ejecutando SET parametro 1: BX parametro 2: FRA2
+
+[INFO] 22:49:19:056 Cpu/(9814:9819): registro recibido: FRA2
+
+[INFO] 22:49:19:056 Cpu/(9814:9819): Realizado SET del registro BX con valor ARG3
+[INFO] 22:49:19:056 Cpu/(9814:9819): Realizado SET del registro BX con valor FRA2
+[INFO] 22:49:19:056 Cpu/(9814:9819): PID: 0 - Ejecutando YIELD 
+[INFO] 22:49:19:056 Cpu/(9814:9819): Recibi PCB id: 0
+[INFO] 22:49:19:056 Cpu/(9814:9819): En CPU
+[INFO] 22:49:20:057 Cpu/(9814:9819): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: ARG3
+
+[INFO] 22:49:20:057 Cpu/(9814:9819): registro recibido: ARG3
+
+[INFO] 22:49:20:057 Cpu/(9814:9819): reg AX: ARG3
+[INFO] 22:49:20:057 Cpu/(9814:9819): Realizado SET del registro AX con valor ARG3
+[INFO] 22:49:20:057 Cpu/(9814:9819): Realizado SET del registro AX con valor FRA2
+[INFO] 22:49:20:057 Cpu/(9814:9819): En CPU
+[INFO] 22:49:21:057 Cpu/(9814:9819): PID: 0 - Ejecutando SET parametro 1: BX parametro 2: FRA3
+
+[INFO] 22:49:21:057 Cpu/(9814:9819): registro recibido: FRA3
+
+[INFO] 22:49:21:057 Cpu/(9814:9819): Realizado SET del registro BX con valor ARG3
+[INFO] 22:49:21:057 Cpu/(9814:9819): Realizado SET del registro BX con valor FRA3
+[INFO] 22:49:21:058 Cpu/(9814:9819): PID: 0 - Ejecutando YIELD 
+[INFO] 22:49:21:058 Cpu/(9814:9819): Recibi PCB id: 0
+[INFO] 22:49:21:058 Cpu/(9814:9819): En CPU
+[INFO] 22:49:22:058 Cpu/(9814:9819): PID: 0 - Ejecutando SET parametro 1: RDX parametro 2: VAMOSALOSPENALES
+
+[INFO] 22:49:22:058 Cpu/(9814:9819): registro recibido: VAMOSALOSPENALES
+
+[INFO] 22:49:22:058 Cpu/(9814:9819): Realizado SET del registro RDX con valor ARG3
+[INFO] 22:49:22:058 Cpu/(9814:9819): Realizado SET del registro RDX con valor FRA3
+[INFO] 22:49:22:058 Cpu/(9814:9819): PID: 0 - Ejecutando YIELD 
+[INFO] 22:49:22:059 Cpu/(9814:9819): Recibi PCB id: 0
+[INFO] 22:49:22:059 Cpu/(9814:9819): En CPU
+[INFO] 22:49:23:059 Cpu/(9814:9819): PID: 0 - Ejecutando SET parametro 1: RAX parametro 2: ARGENTINACAMPEON
+
+[INFO] 22:49:23:059 Cpu/(9814:9819): registro recibido: ARGENTINACAMPEON
+
+[INFO] 22:49:23:059 Cpu/(9814:9819): Realizado SET del registro RAX con valor ARG3
+[INFO] 22:49:23:059 Cpu/(9814:9819): Realizado SET del registro RAX con valor FRA3
+[INFO] 22:49:23:059 Cpu/(9814:9819): PID: 0 - Ejecutando EXIT
+[INFO] 22:49:25:645 Cpu/(9814:9819): Se ha finalizado la conexion
+[INFO] 22:49:37:685 Cpu/(9829:9829): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 22:49:37:685 Cpu/(9829:9829): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:49:37:685 Cpu/(9829:9829): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:49:41:897 Cpu/(9829:9829): Cliente conectado (a CPU_SV)
+
+[INFO] 22:49:46:904 Cpu/(9829:9834): Recibi PCB id: 0
+[INFO] 22:49:46:904 Cpu/(9829:9834): En CPU
+[INFO] 22:49:47:905 Cpu/(9829:9834): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 22:49:47:905 Cpu/(9829:9834): registro recibido: HOLA
+
+[INFO] 22:49:47:905 Cpu/(9829:9834): reg AX: HOLA
+[INFO] 22:49:47:905 Cpu/(9829:9834): Realizado SET del registro AX con valor HOLA
+[INFO] 22:49:47:905 Cpu/(9829:9834): Realizado SET del registro AX con valor 
+[INFO] 22:49:47:905 Cpu/(9829:9834): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 22:49:47:905 Cpu/(9829:9834): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+
+[ERROR] 22:49:47:905 Cpu/(9829:9834): registro : AX
+[ERROR] 22:49:47:905 Cpu/(9829:9834): registro AX : HOLA
+[INFO] 22:49:47:905 Cpu/(9829:9834): Realizado lectura del registro AX con valor HOLAý
+[INFO] 22:49:47:905 Cpu/(9829:9834): estamos mandando a memoria: HOLÀý
+[INFO] 22:49:47:905 Cpu/(9829:9834): se escribio en memoria:  115
+[INFO] 22:49:47:905 Cpu/(9829:9834): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+[INFO] 22:49:47:905 Cpu/(9829:9834): PID: 0 -  Listo para ejecutar MOV_IN 
+[INFO] 22:49:47:906 Cpu/(9829:9834): estamos recibiendo de memoria: HOLÀ
+
+[INFO] 22:49:47:906 Cpu/(9829:9834): estamos seteando de memoria: 4
+[INFO] 22:49:47:906 Cpu/(9829:9834): registro recibido: HOLÀ
+
+[INFO] 22:49:47:906 Cpu/(9829:9834): Realizado SET del registro BX con valor HOLA
+[INFO] 22:49:47:906 Cpu/(9829:9834): Realizado SET del registro BX con valor HOLÀ
+[INFO] 22:49:47:906 Cpu/(9829:9834): PID: 0 - Se ha ejecutado MOV_IN parametro 1: BX parametro 2: 120
+
+[INFO] 22:49:47:906 Cpu/(9829:9834): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 22:49:47:917 Cpu/(9829:9834): Recibi PCB id: 0
+[INFO] 22:49:47:917 Cpu/(9829:9834): PID: 0 - Ejecutando YIELD 
+[INFO] 22:49:47:917 Cpu/(9829:9834): Recibi PCB id: 0
+[INFO] 22:49:47:917 Cpu/(9829:9834): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 22:49:47:929 Cpu/(9829:9834): Recibi PCB id: 0
+[INFO] 22:49:47:929 Cpu/(9829:9834): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 22:49:47:929 Cpu/(9829:9834): Recibi PCB id: 0
+[INFO] 22:49:47:929 Cpu/(9829:9834): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 22:49:47:929 Cpu/(9829:9834): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 22:49:50:980 Cpu/(9829:9834): Recibi PCB id: 0
+[INFO] 22:49:50:980 Cpu/(9829:9834): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 22:49:53:013 Cpu/(9829:9834): Recibi PCB id: 0
+[INFO] 22:49:53:013 Cpu/(9829:9834): PID: 0 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 22:49:53:013 Cpu/(9829:9834): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 22:49:53:013 Cpu/(9829:9834): Recibi PCB id: 0
+[INFO] 22:49:53:013 Cpu/(9829:9834): PID: 0 - Ejecutando EXIT
+[INFO] 22:53:37:924 Cpu/(9829:9834): Se ha finalizado la conexion
+[INFO] 22:53:50:194 Cpu/(9942:9942): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 22:53:50:198 Cpu/(9942:9942): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:53:50:200 Cpu/(9942:9942): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:54:05:170 Cpu/(9942:9942): Cliente conectado (a CPU_SV)
+
+[INFO] 22:54:08:803 Cpu/(9942:9949): Recibi PCB id: 0
+[INFO] 22:54:08:803 Cpu/(9942:9949): En CPU
+[INFO] 22:54:09:803 Cpu/(9942:9949): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 22:54:09:803 Cpu/(9942:9949): registro recibido: HOLA
+
+[INFO] 22:54:09:803 Cpu/(9942:9949): reg AX: HOLA
+[INFO] 22:54:09:803 Cpu/(9942:9949): Realizado SET del registro AX con valor HOLA
+[INFO] 22:54:09:803 Cpu/(9942:9949): Realizado SET del registro AX con valor 
+[INFO] 22:54:09:803 Cpu/(9942:9949): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 22:54:09:803 Cpu/(9942:9949): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+
+[ERROR] 22:54:09:803 Cpu/(9942:9949): registro : AX
+[ERROR] 22:54:09:803 Cpu/(9942:9949): registro AX : HOLA
+[INFO] 22:54:09:803 Cpu/(9942:9949): Realizado lectura del registro AX con valor HOLA²
+[INFO] 22:54:09:803 Cpu/(9942:9949): estamos mandando a memoria: HOLÀ²
+[INFO] 22:54:09:804 Cpu/(9942:9949): se escribio en memoria:  115
+[INFO] 22:54:09:804 Cpu/(9942:9949): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+[INFO] 22:54:09:804 Cpu/(9942:9949): PID: 0 -  Listo para ejecutar MOV_IN 
+[INFO] 22:54:09:804 Cpu/(9942:9949): estamos recibiendo de memoria: HOLÀ
+
+[INFO] 22:54:09:804 Cpu/(9942:9949): estamos seteando de memoria: 4
+[INFO] 22:54:09:804 Cpu/(9942:9949): registro recibido: HOLÀ
+
+[INFO] 22:54:09:804 Cpu/(9942:9949): Realizado SET del registro BX con valor HOLA
+[INFO] 22:54:09:804 Cpu/(9942:9949): Realizado SET del registro BX con valor HOLÀ
+[INFO] 22:54:09:804 Cpu/(9942:9949): PID: 0 - Se ha ejecutado MOV_IN parametro 1: BX parametro 2: 120
+
+[INFO] 22:54:09:804 Cpu/(9942:9949): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 22:54:09:805 Cpu/(9942:9949): Recibi PCB id: 0
+[INFO] 22:54:09:805 Cpu/(9942:9949): PID: 0 - Ejecutando YIELD 
+[INFO] 22:54:09:805 Cpu/(9942:9949): Recibi PCB id: 0
+[INFO] 22:54:09:805 Cpu/(9942:9949): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 22:54:09:817 Cpu/(9942:9949): Recibi PCB id: 0
+[INFO] 22:54:09:817 Cpu/(9942:9949): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 22:54:09:817 Cpu/(9942:9949): Recibi PCB id: 0
+[INFO] 22:54:09:817 Cpu/(9942:9949): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 22:54:10:641 Cpu/(9942:9949): Se ha finalizado la conexion
+[INFO] 22:55:53:688 Cpu/(10036:10036): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 22:55:53:690 Cpu/(10036:10036): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:55:53:690 Cpu/(10036:10036): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:56:01:221 Cpu/(10036:10036): Cliente conectado (a CPU_SV)
+
+[INFO] 22:56:04:414 Cpu/(10036:10042): Recibi PCB id: 0
+[INFO] 22:56:04:414 Cpu/(10036:10042): En CPU
+[INFO] 22:56:05:414 Cpu/(10036:10042): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 22:56:05:414 Cpu/(10036:10042): registro recibido: HOLA
+
+[INFO] 22:56:05:414 Cpu/(10036:10042): reg AX: HOLA
+[INFO] 22:56:05:414 Cpu/(10036:10042): Realizado SET del registro AX con valor HOLA
+[INFO] 22:56:05:414 Cpu/(10036:10042): Realizado SET del registro AX con valor 
+[INFO] 22:56:05:414 Cpu/(10036:10042): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 22:56:05:414 Cpu/(10036:10042): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+
+[ERROR] 22:56:05:414 Cpu/(10036:10042): registro : AX
+[ERROR] 22:56:05:414 Cpu/(10036:10042): registro AX : HOLA
+[INFO] 22:56:05:414 Cpu/(10036:10042): Realizado lectura del registro AX con valor HOLAj
+[INFO] 22:56:05:415 Cpu/(10036:10042): estamos mandando a memoria: HOLÀj
+[INFO] 22:56:05:415 Cpu/(10036:10042): se escribio en memoria:  115
+[INFO] 22:56:05:415 Cpu/(10036:10042): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+[INFO] 22:56:05:415 Cpu/(10036:10042): PID: 0 -  Listo para ejecutar MOV_IN 
+[ERROR] 22:56:05:415 Cpu/(10036:10042): segmentation fault
+[INFO] 22:56:05:415 Cpu/(10036:10042): estamos recibiendo de memoria: HOLÀ
+
+[INFO] 22:56:05:415 Cpu/(10036:10042): estamos seteando de memoria: 4
+[INFO] 22:56:05:415 Cpu/(10036:10042): registro recibido: HOLÀ
+
+[INFO] 22:56:05:415 Cpu/(10036:10042): Realizado SET del registro BX con valor HOLA
+[INFO] 22:56:05:415 Cpu/(10036:10042): Realizado SET del registro BX con valor HOLÀ
+[INFO] 22:56:05:415 Cpu/(10036:10042): PID: 0 - Se ha ejecutado MOV_IN parametro 1: BX parametro 2: 120
+
+[INFO] 22:56:05:415 Cpu/(10036:10042): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 22:56:05:424 Cpu/(10036:10042): Recibi PCB id: 0
+[INFO] 22:56:05:424 Cpu/(10036:10042): PID: 0 - Ejecutando YIELD 
+[INFO] 22:56:05:425 Cpu/(10036:10042): Recibi PCB id: 0
+[INFO] 22:56:05:425 Cpu/(10036:10042): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 22:56:05:433 Cpu/(10036:10042): Recibi PCB id: 0
+[INFO] 22:56:05:433 Cpu/(10036:10042): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 22:56:05:433 Cpu/(10036:10042): Recibi PCB id: 0
+[INFO] 22:56:05:433 Cpu/(10036:10042): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 22:56:24:112 Cpu/(10036:10042): Se ha finalizado la conexion
+[INFO] 23:00:08:354 Cpu/(10140:10140): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 23:00:08:357 Cpu/(10140:10140): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:00:08:358 Cpu/(10140:10140): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 23:00:14:676 Cpu/(10140:10140): Cliente conectado (a CPU_SV)
+
+[INFO] 23:00:17:418 Cpu/(10140:10145): Recibi PCB id: 0
+[INFO] 23:00:17:418 Cpu/(10140:10145): En CPU
+[INFO] 23:00:18:419 Cpu/(10140:10145): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 23:00:18:419 Cpu/(10140:10145): registro recibido: HOLA
+
+[INFO] 23:00:18:419 Cpu/(10140:10145): reg AX: HOLA
+[INFO] 23:00:18:419 Cpu/(10140:10145): Realizado SET del registro AX con valor HOLA
+[INFO] 23:00:18:419 Cpu/(10140:10145): Realizado SET del registro AX con valor 
+[INFO] 23:00:18:419 Cpu/(10140:10145): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:00:18:419 Cpu/(10140:10145): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+
+[ERROR] 23:00:18:419 Cpu/(10140:10145): registro : AX
+[ERROR] 23:00:18:419 Cpu/(10140:10145): registro AX : HOLA
+[INFO] 23:00:18:419 Cpu/(10140:10145): Realizado lectura del registro AX con valor HOLAÜ
+[INFO] 23:00:18:419 Cpu/(10140:10145): estamos mandando a memoria: HOLÀÜ
+[INFO] 23:00:18:420 Cpu/(10140:10145): se escribio en memoria:  115
+[INFO] 23:00:18:420 Cpu/(10140:10145): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+[INFO] 23:00:18:420 Cpu/(10140:10145): PID: 0 -  Listo para ejecutar MOV_IN 
+[ERROR] 23:00:18:420 Cpu/(10140:10145): segmentation fault
+[INFO] 23:00:18:420 Cpu/(10140:10145): estamos recibiendo de memoria: HOLÀ
+
+[INFO] 23:00:18:420 Cpu/(10140:10145): estamos seteando de memoria: 4
+[INFO] 23:00:18:420 Cpu/(10140:10145): registro recibido: HOLÀ
+
+[INFO] 23:00:18:420 Cpu/(10140:10145): Realizado SET del registro BX con valor HOLA
+[INFO] 23:00:18:420 Cpu/(10140:10145): Realizado SET del registro BX con valor HOLÀ
+[INFO] 23:00:18:420 Cpu/(10140:10145): PID: 0 - Se ha ejecutado MOV_IN parametro 1: BX parametro 2: 120
+
+[INFO] 23:00:18:420 Cpu/(10140:10145): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 23:00:18:422 Cpu/(10140:10145): Recibi PCB id: 0
+[INFO] 23:00:18:422 Cpu/(10140:10145): PID: 0 - Ejecutando YIELD 
+[INFO] 23:00:18:422 Cpu/(10140:10145): Recibi PCB id: 0
+[INFO] 23:00:18:422 Cpu/(10140:10145): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 23:00:18:428 Cpu/(10140:10145): Recibi PCB id: 0
+[INFO] 23:00:18:428 Cpu/(10140:10145): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 23:00:18:428 Cpu/(10140:10145): Recibi PCB id: 0
+[INFO] 23:00:18:428 Cpu/(10140:10145): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 23:00:18:428 Cpu/(10140:10145): Recibi PCB id: 0
+[INFO] 23:00:18:428 Cpu/(10140:10145): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 23:00:55:417 Cpu/(10140:10145): Se ha finalizado la conexion
+[INFO] 23:04:25:133 Cpu/(10254:10254): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 23:04:25:137 Cpu/(10254:10254): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:04:25:137 Cpu/(10254:10254): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 23:04:29:227 Cpu/(10254:10254): Cliente conectado (a CPU_SV)
+
+[INFO] 23:04:30:994 Cpu/(10254:10259): Recibi PCB id: 0
+[INFO] 23:04:30:994 Cpu/(10254:10259): En CPU
+[INFO] 23:04:31:995 Cpu/(10254:10259): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 23:04:31:995 Cpu/(10254:10259): registro recibido: HOLA
+
+[INFO] 23:04:31:995 Cpu/(10254:10259): reg AX: HOLA
+[INFO] 23:04:31:995 Cpu/(10254:10259): Realizado SET del registro AX con valor HOLA
+[INFO] 23:04:31:995 Cpu/(10254:10259): Realizado SET del registro AX con valor 
+[INFO] 23:04:31:995 Cpu/(10254:10259): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:04:31:995 Cpu/(10254:10259): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+
+[ERROR] 23:04:31:995 Cpu/(10254:10259): registro : AX
+[ERROR] 23:04:31:995 Cpu/(10254:10259): registro AX : HOLA
+[INFO] 23:04:31:995 Cpu/(10254:10259): Realizado lectura del registro AX con valor HOLA
+[INFO] 23:04:31:995 Cpu/(10254:10259): estamos mandando a memoria: HOLÀ
+[INFO] 23:04:31:996 Cpu/(10254:10259): se escribio en memoria:  115
+[INFO] 23:04:31:996 Cpu/(10254:10259): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+[INFO] 23:04:31:996 Cpu/(10254:10259): PID: 0 -  Listo para ejecutar MOV_IN 
+[ERROR] 23:04:31:996 Cpu/(10254:10259): segmentation fault
+[INFO] 23:04:31:996 Cpu/(10254:10259): estamos recibiendo de memoria: HOLÀ
+
+[INFO] 23:04:31:996 Cpu/(10254:10259): estamos seteando de memoria: 4
+[INFO] 23:04:31:996 Cpu/(10254:10259): registro recibido: HOLÀ
+
+[INFO] 23:04:31:996 Cpu/(10254:10259): Realizado SET del registro BX con valor HOLA
+[INFO] 23:04:31:996 Cpu/(10254:10259): Realizado SET del registro BX con valor HOLÀ
+[INFO] 23:04:31:996 Cpu/(10254:10259): PID: 0 - Se ha ejecutado MOV_IN parametro 1: BX parametro 2: 120
+
+[INFO] 23:04:31:996 Cpu/(10254:10259): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 23:04:31:998 Cpu/(10254:10259): Recibi PCB id: 0
+[INFO] 23:04:31:998 Cpu/(10254:10259): PID: 0 - Ejecutando YIELD 
+[INFO] 23:04:31:998 Cpu/(10254:10259): Recibi PCB id: 0
+[INFO] 23:04:31:998 Cpu/(10254:10259): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 23:04:32:004 Cpu/(10254:10259): Recibi PCB id: 0
+[INFO] 23:04:32:004 Cpu/(10254:10259): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 23:04:32:004 Cpu/(10254:10259): Recibi PCB id: 0
+[INFO] 23:04:32:004 Cpu/(10254:10259): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 23:04:32:004 Cpu/(10254:10259): Recibi PCB id: 0
+[INFO] 23:04:32:004 Cpu/(10254:10259): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 23:04:35:053 Cpu/(10254:10259): Recibi PCB id: 0
+[INFO] 23:04:35:053 Cpu/(10254:10259): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 23:04:37:085 Cpu/(10254:10259): Recibi PCB id: 0
+[INFO] 23:04:37:085 Cpu/(10254:10259): PID: 0 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 23:04:37:085 Cpu/(10254:10259): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 23:04:37:085 Cpu/(10254:10259): Recibi PCB id: 0
+[INFO] 23:04:37:085 Cpu/(10254:10259): PID: 0 - Ejecutando EXIT
+[INFO] 23:05:20:530 Cpu/(10254:10259): Se ha finalizado la conexion
+[INFO] 23:33:06:164 Cpu/(10977:10977): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 23:33:06:167 Cpu/(10977:10977): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:33:06:168 Cpu/(10977:10977): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 23:33:10:932 Cpu/(10977:10977): Cliente conectado (a CPU_SV)
+
+[INFO] 23:33:13:571 Cpu/(10977:10984): Recibi PCB id: 0
+[INFO] 23:33:13:571 Cpu/(10977:10984): En CPU
+[INFO] 23:33:14:572 Cpu/(10977:10984): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 23:33:14:572 Cpu/(10977:10984): registro recibido: HOLA
+
+[INFO] 23:33:14:572 Cpu/(10977:10984): reg AX: HOLA
+[INFO] 23:33:14:572 Cpu/(10977:10984): Realizado SET del registro AX con valor HOLA
+[INFO] 23:33:14:572 Cpu/(10977:10984): Realizado SET del registro AX con valor 
+[INFO] 23:33:14:572 Cpu/(10977:10984): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:33:14:572 Cpu/(10977:10984): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+
+[ERROR] 23:33:14:572 Cpu/(10977:10984): registro : AX
+[ERROR] 23:33:14:572 Cpu/(10977:10984): registro AX : HOLA
+[INFO] 23:33:14:572 Cpu/(10977:10984): Realizado lectura del registro AX con valor HOLAÑ
+[INFO] 23:33:14:572 Cpu/(10977:10984): estamos mandando a memoria: HOLÀÑ
+[INFO] 23:33:14:573 Cpu/(10977:10984): se escribio en memoria:  115
+[INFO] 23:33:14:573 Cpu/(10977:10984): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+[INFO] 23:33:14:573 Cpu/(10977:10984): PID: 0 -  Listo para ejecutar MOV_IN 
+[ERROR] 23:33:14:573 Cpu/(10977:10984): segmentation fault
+[INFO] 23:33:14:573 Cpu/(10977:10984): estamos recibiendo de memoria: HOLÀ
+
+[INFO] 23:33:14:573 Cpu/(10977:10984): estamos seteando de memoria: 4
+[INFO] 23:33:14:573 Cpu/(10977:10984): registro recibido: HOLÀ
+
+[INFO] 23:33:14:573 Cpu/(10977:10984): Realizado SET del registro BX con valor HOLA
+[INFO] 23:33:14:573 Cpu/(10977:10984): Realizado SET del registro BX con valor HOLÀ
+[INFO] 23:33:14:573 Cpu/(10977:10984): PID: 0 - Se ha ejecutado MOV_IN parametro 1: BX parametro 2: 120
+
+[INFO] 23:33:14:573 Cpu/(10977:10984): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 23:33:14:576 Cpu/(10977:10984): Recibi PCB id: 0
+[INFO] 23:33:14:576 Cpu/(10977:10984): PID: 0 - Ejecutando YIELD 
+[INFO] 23:33:14:576 Cpu/(10977:10984): Recibi PCB id: 0
+[INFO] 23:33:14:576 Cpu/(10977:10984): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 23:33:14:580 Cpu/(10977:10984): Recibi PCB id: 0
+[INFO] 23:33:14:580 Cpu/(10977:10984): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 23:33:14:580 Cpu/(10977:10984): Recibi PCB id: 0
+[INFO] 23:33:14:580 Cpu/(10977:10984): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 23:33:14:581 Cpu/(10977:10984): Recibi PCB id: 0
+[INFO] 23:33:14:581 Cpu/(10977:10984): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 23:33:17:635 Cpu/(10977:10984): Recibi PCB id: 0
+[INFO] 23:33:17:635 Cpu/(10977:10984): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 23:33:19:667 Cpu/(10977:10984): Recibi PCB id: 0
+[INFO] 23:33:19:667 Cpu/(10977:10984): PID: 0 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 23:33:19:667 Cpu/(10977:10984): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 23:33:19:668 Cpu/(10977:10984): Recibi PCB id: 0
+[INFO] 23:33:19:668 Cpu/(10977:10984): PID: 0 - Ejecutando EXIT
+[INFO] 23:33:59:567 Cpu/(10977:10984): Se ha finalizado la conexion
+[INFO] 23:52:26:509 Cpu/(11695:11695): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 23:52:26:512 Cpu/(11695:11695): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:52:26:513 Cpu/(11695:11695): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 23:52:32:341 Cpu/(11695:11695): Cliente conectado (a CPU_SV)
+
+[INFO] 23:52:35:014 Cpu/(11695:11700): Recibi PCB id: 0
+[INFO] 23:52:35:014 Cpu/(11695:11700): En CPU
+[INFO] 23:52:36:015 Cpu/(11695:11700): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 23:52:36:015 Cpu/(11695:11700): registro recibido: HOLA
+
+[INFO] 23:52:36:015 Cpu/(11695:11700): reg AX: HOLA
+[INFO] 23:52:36:015 Cpu/(11695:11700): Realizado SET del registro AX con valor HOLA
+[INFO] 23:52:36:015 Cpu/(11695:11700): Realizado SET del registro AX con valor 
+[INFO] 23:52:36:015 Cpu/(11695:11700): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:52:36:015 Cpu/(11695:11700): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+
+[ERROR] 23:52:36:015 Cpu/(11695:11700): registro : AX
+[ERROR] 23:52:36:015 Cpu/(11695:11700): registro AX : HOLA
+[INFO] 23:52:36:015 Cpu/(11695:11700): Realizado lectura del registro AX con valor HOLA}
+[INFO] 23:52:36:015 Cpu/(11695:11700): estamos mandando a memoria: HOLÀ}
+[INFO] 23:52:36:015 Cpu/(11695:11700): se escribio en memoria:  115
+[INFO] 23:52:36:015 Cpu/(11695:11700): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+[INFO] 23:52:36:015 Cpu/(11695:11700): PID: 0 -  Listo para ejecutar MOV_IN 
+[ERROR] 23:52:36:015 Cpu/(11695:11700): segmentation fault
+[INFO] 23:52:36:016 Cpu/(11695:11700): estamos recibiendo de memoria: HOLÀ
+
+[INFO] 23:52:36:016 Cpu/(11695:11700): estamos seteando de memoria: 4
+[INFO] 23:52:36:016 Cpu/(11695:11700): registro recibido: HOLÀ
+
+[INFO] 23:52:36:016 Cpu/(11695:11700): Realizado SET del registro BX con valor HOLA
+[INFO] 23:52:36:016 Cpu/(11695:11700): Realizado SET del registro BX con valor HOLÀ
+[INFO] 23:52:36:016 Cpu/(11695:11700): PID: 0 - Se ha ejecutado MOV_IN parametro 1: BX parametro 2: 120
+
+[INFO] 23:52:36:016 Cpu/(11695:11700): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 23:52:36:017 Cpu/(11695:11700): Recibi PCB id: 0
+[INFO] 23:52:36:017 Cpu/(11695:11700): PID: 0 - Ejecutando YIELD 
+[INFO] 23:52:36:018 Cpu/(11695:11700): Recibi PCB id: 0
+[INFO] 23:52:36:018 Cpu/(11695:11700): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 23:52:36:021 Cpu/(11695:11700): Recibi PCB id: 0
+[INFO] 23:52:36:021 Cpu/(11695:11700): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 23:52:36:022 Cpu/(11695:11700): Recibi PCB id: 0
+[INFO] 23:52:36:022 Cpu/(11695:11700): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 23:52:36:901 Cpu/(11695:11700): Recibi PCB id: 0
+[INFO] 23:52:36:901 Cpu/(11695:11700): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 23:52:39:950 Cpu/(11695:11700): Recibi PCB id: 0
+[INFO] 23:52:39:950 Cpu/(11695:11700): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 23:52:41:983 Cpu/(11695:11700): Recibi PCB id: 0
+[INFO] 23:52:41:984 Cpu/(11695:11700): PID: 0 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 23:52:41:984 Cpu/(11695:11700): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 23:52:41:984 Cpu/(11695:11700): Recibi PCB id: 0
+[INFO] 23:52:41:984 Cpu/(11695:11700): PID: 0 - Ejecutando EXIT
+[INFO] 23:52:48:143 Cpu/(11695:11700): Se ha finalizado la conexion
+[INFO] 23:58:31:960 Cpu/(11831:11831): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 23:58:31:962 Cpu/(11831:11831): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:58:31:963 Cpu/(11831:11831): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 23:58:37:182 Cpu/(11831:11831): Cliente conectado (a CPU_SV)
+
+[INFO] 23:58:39:680 Cpu/(11831:11836): Recibi PCB id: 0
+[INFO] 23:58:39:680 Cpu/(11831:11836): En CPU
+[INFO] 23:58:40:681 Cpu/(11831:11836): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 23:58:40:681 Cpu/(11831:11836): registro recibido: HOLA
+
+[INFO] 23:58:40:681 Cpu/(11831:11836): reg AX: HOLA
+[INFO] 23:58:40:681 Cpu/(11831:11836): Realizado SET del registro AX con valor HOLA
+[INFO] 23:58:40:681 Cpu/(11831:11836): Realizado SET del registro AX con valor 
+[INFO] 23:58:40:681 Cpu/(11831:11836): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:58:40:681 Cpu/(11831:11836): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+
+[ERROR] 23:58:40:681 Cpu/(11831:11836): registro : AX
+[ERROR] 23:58:40:681 Cpu/(11831:11836): registro AX : HOLA
+[INFO] 23:58:40:681 Cpu/(11831:11836): Realizado lectura del registro AX con valor HOLA}
+[INFO] 23:58:40:681 Cpu/(11831:11836): estamos mandando a memoria: HOLÀ}
+[INFO] 23:58:40:681 Cpu/(11831:11836): se escribio en memoria:  115
+[INFO] 23:58:40:681 Cpu/(11831:11836): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+[INFO] 23:58:40:681 Cpu/(11831:11836): PID: 0 -  Listo para ejecutar MOV_IN 
+[ERROR] 23:58:40:681 Cpu/(11831:11836): segmentation fault
+[INFO] 23:58:40:682 Cpu/(11831:11836): estamos recibiendo de memoria: HOLÀ
+
+[INFO] 23:58:40:682 Cpu/(11831:11836): estamos seteando de memoria: 4
+[INFO] 23:58:40:682 Cpu/(11831:11836): registro recibido: HOLÀ
+
+[INFO] 23:58:40:682 Cpu/(11831:11836): Realizado SET del registro BX con valor HOLA
+[INFO] 23:58:40:682 Cpu/(11831:11836): Realizado SET del registro BX con valor HOLÀ
+[INFO] 23:58:40:682 Cpu/(11831:11836): PID: 0 - Se ha ejecutado MOV_IN parametro 1: BX parametro 2: 120
+
+[INFO] 23:58:40:682 Cpu/(11831:11836): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 23:58:40:683 Cpu/(11831:11836): Recibi PCB id: 0
+[INFO] 23:58:40:683 Cpu/(11831:11836): PID: 0 - Ejecutando YIELD 
+[INFO] 23:58:40:684 Cpu/(11831:11836): Recibi PCB id: 0
+[INFO] 23:58:40:684 Cpu/(11831:11836): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 23:58:40:689 Cpu/(11831:11836): Recibi PCB id: 0
+[INFO] 23:58:40:689 Cpu/(11831:11836): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 23:58:40:689 Cpu/(11831:11836): Recibi PCB id: 0
+[INFO] 23:58:40:689 Cpu/(11831:11836): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 23:58:41:281 Cpu/(11831:11836): Recibi PCB id: 0
+[INFO] 23:58:41:281 Cpu/(11831:11836): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 23:58:44:330 Cpu/(11831:11836): Recibi PCB id: 0
+[INFO] 23:58:44:330 Cpu/(11831:11836): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 23:58:46:362 Cpu/(11831:11836): Recibi PCB id: 0
+[INFO] 23:58:46:362 Cpu/(11831:11836): PID: 0 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 23:58:46:362 Cpu/(11831:11836): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 23:58:46:363 Cpu/(11831:11836): Recibi PCB id: 0
+[INFO] 23:58:46:363 Cpu/(11831:11836): PID: 0 - Ejecutando EXIT
+[INFO] 00:04:18:940 Cpu/(11831:11836): Se ha finalizado la conexion
+[INFO] 00:04:49:293 Cpu/(12022:12022): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 00:04:49:294 Cpu/(12022:12022): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 00:04:49:294 Cpu/(12022:12022): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 00:04:56:030 Cpu/(12022:12022): Cliente conectado (a CPU_SV)
+
+[INFO] 00:05:00:091 Cpu/(12022:12027): Recibi PCB id: 0
+[INFO] 00:05:00:091 Cpu/(12022:12027): En CPU
+[INFO] 00:05:01:091 Cpu/(12022:12027): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 00:05:01:091 Cpu/(12022:12027): registro recibido: HOLA
+
+[INFO] 00:05:01:091 Cpu/(12022:12027): reg AX: HOLA
+[INFO] 00:05:01:091 Cpu/(12022:12027): Realizado SET del registro AX con valor HOLA
+[INFO] 00:05:01:091 Cpu/(12022:12027): Realizado SET del registro AX con valor 
+[INFO] 00:05:01:091 Cpu/(12022:12027): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 00:05:01:091 Cpu/(12022:12027): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+
+[ERROR] 00:05:01:091 Cpu/(12022:12027): registro : AX
+[ERROR] 00:05:01:091 Cpu/(12022:12027): registro AX : HOLA
+[INFO] 00:05:01:092 Cpu/(12022:12027): Realizado lectura del registro AX con valor HOLA
+[INFO] 00:05:01:092 Cpu/(12022:12027): estamos mandando a memoria: HOLÀ
+[INFO] 00:05:01:092 Cpu/(12022:12027): se escribio en memoria:  115
+[INFO] 00:05:01:092 Cpu/(12022:12027): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+[INFO] 00:05:01:092 Cpu/(12022:12027): PID: 0 -  Listo para ejecutar MOV_IN 
+[ERROR] 00:05:01:092 Cpu/(12022:12027): segmentation fault
+[INFO] 00:05:01:092 Cpu/(12022:12027): estamos recibiendo de memoria: HOLÀ
+
+[INFO] 00:05:01:092 Cpu/(12022:12027): estamos seteando de memoria: 4
+[INFO] 00:05:01:092 Cpu/(12022:12027): registro recibido: HOLÀ
+
+[INFO] 00:05:01:092 Cpu/(12022:12027): Realizado SET del registro BX con valor HOLA
+[INFO] 00:05:01:092 Cpu/(12022:12027): Realizado SET del registro BX con valor HOLÀ
+[INFO] 00:05:01:092 Cpu/(12022:12027): PID: 0 - Se ha ejecutado MOV_IN parametro 1: BX parametro 2: 120
+
+[INFO] 00:05:01:092 Cpu/(12022:12027): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 00:05:01:094 Cpu/(12022:12027): Recibi PCB id: 0
+[INFO] 00:05:01:094 Cpu/(12022:12027): PID: 0 - Ejecutando YIELD 
+[INFO] 00:05:01:095 Cpu/(12022:12027): Recibi PCB id: 0
+[INFO] 00:05:01:095 Cpu/(12022:12027): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 00:05:01:098 Cpu/(12022:12027): Recibi PCB id: 0
+[INFO] 00:05:01:098 Cpu/(12022:12027): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 00:05:01:099 Cpu/(12022:12027): Recibi PCB id: 0
+[INFO] 00:05:01:099 Cpu/(12022:12027): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 00:05:01:691 Cpu/(12022:12027): Recibi PCB id: 0
+[INFO] 00:05:01:691 Cpu/(12022:12027): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 00:05:04:758 Cpu/(12022:12027): Recibi PCB id: 0
+[INFO] 00:05:04:758 Cpu/(12022:12027): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 00:05:06:792 Cpu/(12022:12027): Recibi PCB id: 0
+[INFO] 00:05:06:792 Cpu/(12022:12027): PID: 0 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 00:05:06:792 Cpu/(12022:12027): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 00:05:06:793 Cpu/(12022:12027): Recibi PCB id: 0
+[INFO] 00:05:06:793 Cpu/(12022:12027): PID: 0 - Ejecutando EXIT
+[INFO] 00:05:09:057 Cpu/(12022:12027): Se ha finalizado la conexion
+[INFO] 00:06:49:598 Cpu/(12175:12175): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 00:06:49:599 Cpu/(12175:12175): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 00:06:49:599 Cpu/(12175:12175): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 00:06:54:205 Cpu/(12175:12175): Cliente conectado (a CPU_SV)
+
+[INFO] 00:06:56:481 Cpu/(12175:12180): Recibi PCB id: 0
+[INFO] 00:06:56:481 Cpu/(12175:12180): En CPU
+[INFO] 00:06:57:482 Cpu/(12175:12180): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 00:06:57:482 Cpu/(12175:12180): registro recibido: HOLA
+
+[INFO] 00:06:57:482 Cpu/(12175:12180): reg AX: HOLA
+[INFO] 00:06:57:482 Cpu/(12175:12180): Realizado SET del registro AX con valor HOLA
+[INFO] 00:06:57:482 Cpu/(12175:12180): Realizado SET del registro AX con valor 
+[INFO] 00:06:57:482 Cpu/(12175:12180): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 00:06:57:482 Cpu/(12175:12180): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+
+[ERROR] 00:06:57:482 Cpu/(12175:12180): registro : AX
+[ERROR] 00:06:57:482 Cpu/(12175:12180): registro AX : HOLA
+[INFO] 00:06:57:482 Cpu/(12175:12180): Realizado lectura del registro AX con valor HOLAö
+[INFO] 00:06:57:482 Cpu/(12175:12180): estamos mandando a memoria: HOLÀö
+[INFO] 00:06:57:486 Cpu/(12175:12180): se escribio en memoria:  115
+[INFO] 00:06:57:486 Cpu/(12175:12180): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+[INFO] 00:06:57:486 Cpu/(12175:12180): PID: 0 -  Listo para ejecutar MOV_IN 
+[ERROR] 00:06:57:486 Cpu/(12175:12180): segmentation fault
+[INFO] 00:06:57:486 Cpu/(12175:12180): estamos recibiendo de memoria: HOLÀ
+
+[INFO] 00:06:57:486 Cpu/(12175:12180): estamos seteando de memoria: 4
+[INFO] 00:06:57:486 Cpu/(12175:12180): registro recibido: HOLÀ
+
+[INFO] 00:06:57:486 Cpu/(12175:12180): Realizado SET del registro BX con valor HOLA
+[INFO] 00:06:57:486 Cpu/(12175:12180): Realizado SET del registro BX con valor HOLÀ
+[INFO] 00:06:57:486 Cpu/(12175:12180): PID: 0 - Se ha ejecutado MOV_IN parametro 1: BX parametro 2: 120
+
+[INFO] 00:06:57:486 Cpu/(12175:12180): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 00:06:57:487 Cpu/(12175:12180): Recibi PCB id: 0
+[INFO] 00:06:57:487 Cpu/(12175:12180): PID: 0 - Ejecutando YIELD 
+[INFO] 00:06:57:488 Cpu/(12175:12180): Recibi PCB id: 0
+[INFO] 00:06:57:488 Cpu/(12175:12180): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 00:06:57:507 Cpu/(12175:12180): Recibi PCB id: 0
+[INFO] 00:06:57:507 Cpu/(12175:12180): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 00:06:57:507 Cpu/(12175:12180): Recibi PCB id: 0
+[INFO] 00:06:57:507 Cpu/(12175:12180): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 00:06:58:368 Cpu/(12175:12180): Recibi PCB id: 0
+[INFO] 00:06:58:368 Cpu/(12175:12180): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 00:07:01:428 Cpu/(12175:12180): Recibi PCB id: 0
+[INFO] 00:07:01:428 Cpu/(12175:12180): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 00:07:03:460 Cpu/(12175:12180): Recibi PCB id: 0
+[INFO] 00:07:03:460 Cpu/(12175:12180): PID: 0 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 00:07:03:460 Cpu/(12175:12180): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 00:07:03:461 Cpu/(12175:12180): Recibi PCB id: 0
+[INFO] 00:07:03:461 Cpu/(12175:12180): PID: 0 - Ejecutando EXIT
+[INFO] 00:07:06:281 Cpu/(12175:12180): Se ha finalizado la conexion
+[INFO] 00:11:03:738 Cpu/(12352:12352): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 00:11:03:739 Cpu/(12352:12352): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 00:11:03:739 Cpu/(12352:12352): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 00:11:07:832 Cpu/(12352:12352): Cliente conectado (a CPU_SV)
+
+[INFO] 00:11:09:843 Cpu/(12352:12357): Recibi PCB id: 0
+[INFO] 00:11:09:843 Cpu/(12352:12357): En CPU
+[INFO] 00:11:10:844 Cpu/(12352:12357): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 00:11:10:844 Cpu/(12352:12357): registro recibido: HOLA
+
+[INFO] 00:11:10:844 Cpu/(12352:12357): reg AX: HOLA
+[INFO] 00:11:10:844 Cpu/(12352:12357): Realizado SET del registro AX con valor HOLA
+[INFO] 00:11:10:844 Cpu/(12352:12357): Realizado SET del registro AX con valor 
+[INFO] 00:11:10:844 Cpu/(12352:12357): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 00:11:10:844 Cpu/(12352:12357): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+
+[ERROR] 00:11:10:844 Cpu/(12352:12357): registro : AX
+[ERROR] 00:11:10:844 Cpu/(12352:12357): registro AX : HOLA
+[INFO] 00:11:10:844 Cpu/(12352:12357): Realizado lectura del registro AX con valor HOLA#
+[INFO] 00:11:10:844 Cpu/(12352:12357): estamos mandando a memoria: HOLÀ#
+[INFO] 00:11:10:844 Cpu/(12352:12357): se escribio en memoria:  115
+[INFO] 00:11:10:844 Cpu/(12352:12357): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+[INFO] 00:11:10:844 Cpu/(12352:12357): PID: 0 -  Listo para ejecutar MOV_IN 
+[ERROR] 00:11:10:844 Cpu/(12352:12357): segmentation fault
+[INFO] 00:11:10:845 Cpu/(12352:12357): estamos recibiendo de memoria: HOLÀ
+
+[INFO] 00:11:10:845 Cpu/(12352:12357): estamos seteando de memoria: 4
+[INFO] 00:11:10:845 Cpu/(12352:12357): registro recibido: HOLÀ
+
+[INFO] 00:11:10:845 Cpu/(12352:12357): Realizado SET del registro BX con valor HOLA
+[INFO] 00:11:10:845 Cpu/(12352:12357): Realizado SET del registro BX con valor HOLÀ
+[INFO] 00:11:10:845 Cpu/(12352:12357): PID: 0 - Se ha ejecutado MOV_IN parametro 1: BX parametro 2: 120
+
+[INFO] 00:11:10:845 Cpu/(12352:12357): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 00:11:10:845 Cpu/(12352:12357): Recibi PCB id: 0
+[INFO] 00:11:10:845 Cpu/(12352:12357): PID: 0 - Ejecutando YIELD 
+[INFO] 00:11:10:846 Cpu/(12352:12357): Recibi PCB id: 0
+[INFO] 00:11:10:846 Cpu/(12352:12357): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 00:11:10:855 Cpu/(12352:12357): Recibi PCB id: 0
+[INFO] 00:11:10:855 Cpu/(12352:12357): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 00:11:10:855 Cpu/(12352:12357): Recibi PCB id: 0
+[INFO] 00:11:10:855 Cpu/(12352:12357): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 00:11:11:476 Cpu/(12352:12357): Recibi PCB id: 0
+[INFO] 00:11:11:476 Cpu/(12352:12357): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 00:11:14:533 Cpu/(12352:12357): Recibi PCB id: 0
+[INFO] 00:11:14:533 Cpu/(12352:12357): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 00:11:16:567 Cpu/(12352:12357): Recibi PCB id: 0
+[INFO] 00:11:16:567 Cpu/(12352:12357): PID: 0 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 00:11:16:567 Cpu/(12352:12357): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 00:11:16:567 Cpu/(12352:12357): Recibi PCB id: 0
+[INFO] 00:11:16:567 Cpu/(12352:12357): PID: 0 - Ejecutando EXIT
+[INFO] 00:15:15:217 Cpu/(12352:12357): Se ha finalizado la conexion
+[INFO] 00:15:26:125 Cpu/(12579:12579): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 00:15:26:126 Cpu/(12579:12579): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 00:15:26:126 Cpu/(12579:12579): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 00:15:30:827 Cpu/(12579:12579): Cliente conectado (a CPU_SV)
+
+[INFO] 00:15:33:291 Cpu/(12579:12584): Recibi PCB id: 0
+[INFO] 00:15:33:291 Cpu/(12579:12584): En CPU
+[INFO] 00:15:34:292 Cpu/(12579:12584): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 00:15:34:292 Cpu/(12579:12584): registro recibido: HOLA
+
+[INFO] 00:15:34:292 Cpu/(12579:12584): reg AX: HOLA
+[INFO] 00:15:34:292 Cpu/(12579:12584): Realizado SET del registro AX con valor HOLA
+[INFO] 00:15:34:292 Cpu/(12579:12584): Realizado SET del registro AX con valor 
+[INFO] 00:15:34:292 Cpu/(12579:12584): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 00:15:34:292 Cpu/(12579:12584): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+
+[ERROR] 00:15:34:292 Cpu/(12579:12584): registro : AX
+[ERROR] 00:15:34:292 Cpu/(12579:12584): registro AX : HOLA
+[INFO] 00:15:34:292 Cpu/(12579:12584): Realizado lectura del registro AX con valor HOLAº
+[INFO] 00:15:34:292 Cpu/(12579:12584): estamos mandando a memoria: HOLÀº
+[INFO] 00:15:34:292 Cpu/(12579:12584): se escribio en memoria:  115
+[INFO] 00:15:34:292 Cpu/(12579:12584): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+[INFO] 00:15:34:292 Cpu/(12579:12584): PID: 0 -  Listo para ejecutar MOV_IN 
+[ERROR] 00:15:34:292 Cpu/(12579:12584): segmentation fault
+[INFO] 00:15:34:292 Cpu/(12579:12584): estamos recibiendo de memoria: HOLÀ
+
+[INFO] 00:15:34:292 Cpu/(12579:12584): estamos seteando de memoria: 4
+[INFO] 00:15:34:292 Cpu/(12579:12584): registro recibido: HOLÀ
+
+[INFO] 00:15:34:292 Cpu/(12579:12584): Realizado SET del registro BX con valor HOLA
+[INFO] 00:15:34:292 Cpu/(12579:12584): Realizado SET del registro BX con valor HOLÀ
+[INFO] 00:15:34:292 Cpu/(12579:12584): PID: 0 - Se ha ejecutado MOV_IN parametro 1: BX parametro 2: 120
+
+[INFO] 00:15:34:292 Cpu/(12579:12584): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 00:15:34:294 Cpu/(12579:12584): Recibi PCB id: 0
+[INFO] 00:15:34:294 Cpu/(12579:12584): PID: 0 - Ejecutando YIELD 
+[INFO] 00:15:34:294 Cpu/(12579:12584): Recibi PCB id: 0
+[INFO] 00:15:34:294 Cpu/(12579:12584): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 00:15:34:297 Cpu/(12579:12584): Recibi PCB id: 0
+[INFO] 00:15:34:297 Cpu/(12579:12584): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 00:15:34:298 Cpu/(12579:12584): Recibi PCB id: 0
+[INFO] 00:15:34:298 Cpu/(12579:12584): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 00:15:34:805 Cpu/(12579:12584): Recibi PCB id: 0
+[INFO] 00:15:34:805 Cpu/(12579:12584): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 00:15:37:859 Cpu/(12579:12584): Recibi PCB id: 0
+[INFO] 00:15:37:859 Cpu/(12579:12584): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 00:15:39:893 Cpu/(12579:12584): Recibi PCB id: 0
+[INFO] 00:15:39:893 Cpu/(12579:12584): PID: 0 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 00:15:39:893 Cpu/(12579:12584): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 00:15:39:894 Cpu/(12579:12584): Recibi PCB id: 0
+[INFO] 00:15:39:894 Cpu/(12579:12584): PID: 0 - Ejecutando EXIT
+[INFO] 00:21:52:822 Cpu/(12579:12584): Se ha finalizado la conexion
+[INFO] 00:22:02:059 Cpu/(13030:13030): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 00:22:02:061 Cpu/(13030:13030): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 00:22:02:064 Cpu/(13030:13030): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 00:22:06:662 Cpu/(13030:13030): Cliente conectado (a CPU_SV)
+
+[INFO] 00:22:08:812 Cpu/(13030:13038): Recibi PCB id: 0
+[INFO] 00:22:08:812 Cpu/(13030:13038): En CPU
+[INFO] 00:22:09:812 Cpu/(13030:13038): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 00:22:09:812 Cpu/(13030:13038): registro recibido: HOLA
+
+[INFO] 00:22:09:812 Cpu/(13030:13038): reg AX: HOLA
+[INFO] 00:22:09:813 Cpu/(13030:13038): Realizado SET del registro AX con valor HOLA
+[INFO] 00:22:09:813 Cpu/(13030:13038): Realizado SET del registro AX con valor 
+[INFO] 00:22:09:813 Cpu/(13030:13038): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 00:22:09:813 Cpu/(13030:13038): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+
+[ERROR] 00:22:09:813 Cpu/(13030:13038): registro : AX
+[ERROR] 00:22:09:813 Cpu/(13030:13038): registro AX : HOLA
+[INFO] 00:22:09:813 Cpu/(13030:13038): Realizado lectura del registro AX con valor HOLA(
+[INFO] 00:22:09:813 Cpu/(13030:13038): estamos mandando a memoria: HOLÀ(
+[INFO] 00:22:09:813 Cpu/(13030:13038): se escribio en memoria:  115
+[INFO] 00:22:09:813 Cpu/(13030:13038): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+[INFO] 00:22:09:813 Cpu/(13030:13038): PID: 0 -  Listo para ejecutar MOV_IN 
+[ERROR] 00:22:09:813 Cpu/(13030:13038): segmentation fault
+[INFO] 00:22:09:813 Cpu/(13030:13038): estamos recibiendo de memoria: HOLÀ
+
+[INFO] 00:22:09:813 Cpu/(13030:13038): estamos seteando de memoria: 4
+[INFO] 00:22:09:814 Cpu/(13030:13038): registro recibido: HOLÀ
+
+[INFO] 00:22:09:814 Cpu/(13030:13038): Realizado SET del registro BX con valor HOLA
+[INFO] 00:22:09:814 Cpu/(13030:13038): Realizado SET del registro BX con valor HOLÀ
+[INFO] 00:22:09:814 Cpu/(13030:13038): PID: 0 - Se ha ejecutado MOV_IN parametro 1: BX parametro 2: 120
+
+[INFO] 00:22:09:814 Cpu/(13030:13038): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 00:22:09:818 Cpu/(13030:13038): Recibi PCB id: 0
+[INFO] 00:22:09:818 Cpu/(13030:13038): PID: 0 - Ejecutando YIELD 
+[INFO] 00:22:09:819 Cpu/(13030:13038): Recibi PCB id: 0
+[INFO] 00:22:09:819 Cpu/(13030:13038): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 00:22:09:834 Cpu/(13030:13038): Recibi PCB id: 0
+[INFO] 00:22:09:834 Cpu/(13030:13038): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 00:22:09:834 Cpu/(13030:13038): Recibi PCB id: 0
+[INFO] 00:22:09:834 Cpu/(13030:13038): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 00:22:10:749 Cpu/(13030:13038): Recibi PCB id: 0
+[INFO] 00:22:10:749 Cpu/(13030:13038): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 00:22:13:807 Cpu/(13030:13038): Recibi PCB id: 0
+[INFO] 00:22:13:807 Cpu/(13030:13038): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 00:22:15:841 Cpu/(13030:13038): Recibi PCB id: 0
+[INFO] 00:22:15:841 Cpu/(13030:13038): PID: 0 - Listo para ejecutar DELETE_SEGMENT 
+[INFO] 00:22:15:842 Cpu/(13030:13038): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 00:22:15:843 Cpu/(13030:13038): Recibi PCB id: 0
+[INFO] 00:22:15:843 Cpu/(13030:13038): PID: 0 - Ejecutando EXIT
+[INFO] 00:22:23:918 Cpu/(13030:13038): Se ha finalizado la conexion
+[INFO] 00:24:14:836 Cpu/(13182:13182): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 00:24:14:838 Cpu/(13182:13182): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 00:24:14:838 Cpu/(13182:13182): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 00:24:19:569 Cpu/(13182:13182): Cliente conectado (a CPU_SV)
+
+[INFO] 00:24:21:798 Cpu/(13182:13188): Recibi PCB id: 0
+[INFO] 00:24:21:798 Cpu/(13182:13188): En CPU
+[INFO] 00:24:22:798 Cpu/(13182:13188): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 00:24:22:798 Cpu/(13182:13188): registro recibido: HOLA
+
+[INFO] 00:24:22:798 Cpu/(13182:13188): reg AX: HOLA
+[INFO] 00:24:22:798 Cpu/(13182:13188): Realizado SET del registro AX con valor HOLA
+[INFO] 00:24:22:798 Cpu/(13182:13188): Realizado SET del registro AX con valor 
+[INFO] 00:24:22:798 Cpu/(13182:13188): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 00:24:22:798 Cpu/(13182:13188): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+
+[ERROR] 00:24:22:798 Cpu/(13182:13188): registro : AX
+[ERROR] 00:24:22:798 Cpu/(13182:13188): registro AX : HOLA
+[INFO] 00:24:22:798 Cpu/(13182:13188): Realizado lectura del registro AX con valor HOLAö
+[INFO] 00:24:22:798 Cpu/(13182:13188): estamos mandando a memoria: HOLÀö
+[INFO] 00:24:22:799 Cpu/(13182:13188): se escribio en memoria:  115
+[INFO] 00:24:22:799 Cpu/(13182:13188): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: AX
+[INFO] 00:24:22:799 Cpu/(13182:13188): PID: 0 -  Listo para ejecutar MOV_IN 
+[ERROR] 00:24:22:799 Cpu/(13182:13188): segmentation fault
+[INFO] 00:24:22:799 Cpu/(13182:13188): estamos recibiendo de memoria: HOLÀ
+
+[INFO] 00:24:22:799 Cpu/(13182:13188): estamos seteando de memoria: 4
+[INFO] 00:24:22:799 Cpu/(13182:13188): registro recibido: HOLÀ
+
+[INFO] 00:24:22:799 Cpu/(13182:13188): Realizado SET del registro BX con valor HOLA
+[INFO] 00:24:22:799 Cpu/(13182:13188): Realizado SET del registro BX con valor HOLÀ
+[INFO] 00:24:22:799 Cpu/(13182:13188): PID: 0 - Se ha ejecutado MOV_IN parametro 1: BX parametro 2: 120
+
+[INFO] 00:24:22:799 Cpu/(13182:13188): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 00:24:22:800 Cpu/(13182:13188): Recibi PCB id: 0
+[INFO] 00:24:22:800 Cpu/(13182:13188): PID: 0 - Ejecutando YIELD 
+[INFO] 00:24:22:800 Cpu/(13182:13188): Recibi PCB id: 0
+[INFO] 00:24:22:800 Cpu/(13182:13188): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 00:24:22:808 Cpu/(13182:13188): Recibi PCB id: 0
+[INFO] 00:24:22:808 Cpu/(13182:13188): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 00:24:22:808 Cpu/(13182:13188): Recibi PCB id: 0
+[INFO] 00:24:22:808 Cpu/(13182:13188): PID: 0 - Listo para ejecutar CREATE_SEGMENT 
+[INFO] 00:24:48:465 Cpu/(13182:13188): Se ha finalizado la conexion

@@ -70,7 +70,28 @@ static void procesar_kernel(void * void_args) {
 
 
       break;
+    case CREATE_SEGMENT:
+    		log_info(logger,"[KERNEL] recibido pedido crear segmento");
+    		/*uint32_t* id=malloc(sizeof(uint32_t));;
+    		uint32_t* tam=malloc(sizeof(uint32_t));*/
+    		op_code buffer;
+    		//recv(cliente_socket,&buffer,sizeof(op_code),0);
+			log_warning(logger,"recibiendo ");
+    		//recv_instruccion_memoria(cliente_socket, id, tam, pid,tamanio);
+    		//recv_instruccion_memoria(cliente_socket, num_seg, desplazamiento1, pid, tamanio);
 
+    		//log_info(logger,"id:%d -tamanio:%d - pid:%d ",id,tam,pid);
+    		/*crearSegmento(pid, id, tam);
+    		t_list* tabla_proceso = buscarTabla(pid);
+    		t_segmento* seg = buscarSegmento(tabla_proceso, id);
+    		 log_info(logger, "[KERNEL] Envio de segmento id:%d para programa %d",id, pid);
+    		      pthread_mutex_lock(&mx_kernel);
+    		      send(cliente_socket, &(seg->id_segmento), sizeof(uint32_t), MSG_WAITALL);
+    		      send(cliente_socket, &(seg->direccion_base), sizeof(uint64_t), MSG_WAITALL);
+    		      send(cliente_socket, &(seg->tamanio_segmento), sizeof(uint32_t), MSG_WAITALL);
+    		      pthread_mutex_unlock(&mx_kernel);
+*/
+    	break;
     // Errores
     case -1:
       log_error(logger, "Cliente desconectado de %s...", server_name);
@@ -115,15 +136,32 @@ static void procesar_cpu(void * void_args) {
       log_info(logger, "debug");
       break;
     case CPU: log_info(logger, "RESPUESTA AL CONECTAR CPU");
-    				while(1){
-    				atenderCpu();
-    				}
+
     				//pthread_mutex_lock(&mx_cpu);
     				//send(cliente_socket, &(configuracion -> ENTRADAS_POR_TABLA), sizeof(uint16_t), 0);
     				//send(cliente_socket, &(configuracion -> TAM_PAGINA), sizeof(uint16_t), 0);
     				//pthread_mutex_unlock(&mx_cpu);
     				break;
     // Errores
+    case MOV_IN:
+    		log_info(logger, "Recibido pedido de MOV_IN");
+    		recv_instruccion_memoria(cpu_fd, num_seg, desplazamiento1, pid, tamanio);
+    		log_info(logger, "PID: %d - N° Segmento: %d, Desplazamiento: %d, Tamanio: %d", *pid, *num_seg, *desplazamiento1, *tamanio);
+    		//log_info(logger, "xPID: %lu - N° Segmento: %lu, Desplazamiento: %lu, Tamanio: %d", *pid, *num_seg, *desplazamiento1, *tamanio);
+    		void* leido = leerMemoria(*num_seg, *desplazamiento1, *pid, *tamanio);
+    		send(cpu_fd, leido, *tamanio, 0);
+    		break;
+    	case MOV_OUT:
+    		log_info(logger, "Recibido pedido de MOV_OUT");
+    		cop = MOV_OUT_OK;
+    		void* escribir=malloc(20);
+    		recv_escribir_memoria(cpu_fd, num_seg, desplazamiento1, pid, tamanio, escribir);	//OJO que ahora num_seg, desplazamiento y pid son punteros
+    		log_info(logger, "PID: %d - N° Segmento: %d, Desplazamiento: %d, Tamanio: %d, Escribir: %s", *pid, *num_seg, *desplazamiento1, *tamanio, escribir);
+    		if(escribirEnMemoria( *num_seg,  *desplazamiento1,  *pid,  *tamanio-1,escribir)){
+    		send(cpu_fd, &cop, sizeof(cop), 0); // hubieran usado op_codes :v
+    				}	// else?
+    			break;
+
     case -1:
     		log_error(logger, "Cliente desconectado de %s...", server_name);
     		return;
@@ -237,7 +275,7 @@ void atenderCpu(){
 		void* escribir=malloc(20);
 		recv_escribir_memoria(cpu_fd, num_seg, desplazamiento1, pid, tamanio, escribir);	//OJO que ahora num_seg, desplazamiento y pid son punteros
 		log_info(logger, "PID: %d - N° Segmento: %d, Desplazamiento: %d, Tamanio: %d, Escribir: %s", *pid, *num_seg, *desplazamiento1, *tamanio, escribir);
-		if(escribirEnMemoria( *num_seg,  *desplazamiento1,  *pid,  *tamanio,escribir)){
+		if(escribirEnMemoria( *num_seg,  *desplazamiento1,  *pid,  *tamanio-1,escribir)){
 		send(cpu_fd, &cop, sizeof(cop), 0); // hubieran usado op_codes :v
 				}	// else?
 

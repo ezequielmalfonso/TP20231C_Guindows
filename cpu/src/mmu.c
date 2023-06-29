@@ -14,13 +14,16 @@ void mov_in(char direccion_logica[20], char registro[20], PCB_t* pcb){
 	uint32_t n_segmento = num_seg(atoi(direccion_logica));
 
 	int tamanio = calcularTam(registro);
-	/*if(checkSegmentetitonFault(desplazamiento1, n_segmento,pcb)){
-		//log error segmentation fault
-	}*/
+	if(checkSegmentetitonFault(desplazamiento1, n_segmento,pcb)){
+		log_error(logger, "segmentation fault");
+	}
 	char* registro_recibido= malloc(20);
 	send_pedido_memoria(memoria_fd,n_segmento,desplazamiento1,(pcb->pid),tamanio, MOV_IN);
 	recv(memoria_fd, registro_recibido ,tamanio, MSG_WAITALL);
-	log_info(logger,"estamos recibiendo de memoria: %s", registro_recibido);
+	memcpy(registro_recibido+4,"\n",2);
+		log_info(logger,"estamos recibiendo de memoria: %s", registro_recibido);
+	log_info(logger,"estamos seteando de memoria: %d", tamanio);
+
 	set_registro(registro, registro_recibido, pcb);
 //	log_info(logger,"PID: %d - Ejecutando SET parametro 1: %s parametro 2: %s", pid,instruccion_ejecutar->parametro1,instruccion_ejecutar->parametro2);
 //	bool recv_instruccion(memoria_fd, tam, respuestaMemoria, char* param3);
@@ -32,11 +35,12 @@ void mov_out(char* direccion_logica, char* registro,PCB_t* pcb){
 		int tamanio = calcularTam(registro);
 		char* escribir = malloc(tamanio);
 		memcpy(escribir,leer_registro(registro),tamanio);
+		escribir[tamanio-1]="\0";
 		log_info(logger, "estamos mandando a memoria: %s", escribir);
 		if(checkSegmentetitonFault(desplazamiento1, n_segmento,pcb)){
-			//log error segmentation fault
+			log_error(logger, "segmentation fault");
 		}
-		send_escribir_memoria(memoria_fd,n_segmento,desplazamiento1,(pcb->pid),escribir,tamanio,MOV_OUT);
+		send_escribir_memoria(memoria_fd,n_segmento,desplazamiento1,(pcb->pid),escribir,tamanio+1,MOV_OUT);
 		op_code cop;
 		recv(memoria_fd, &cop, sizeof(cop), 0);
 		log_info(logger,"se escribio en memoria:  %d",cop);
@@ -65,42 +69,43 @@ void set_registro(char* registro1,char* registro_recibido, PCB_t* pcb){
 	//pcb->registro_cpu = malloc(sizeof(registros_t));
 	log_info(logger,"registro recibido: %s", registro_recibido);
 	char* registro = strtok(registro1,"\n");
+	registro_recibido = strtok(registro_recibido,"\n");
 	if(!strcmp(registro,"AX")){
-		memcpy(regAX, registro_recibido, sizeof(char) * 4);
+		memcpy(regAX, registro_recibido, sizeof(char) * 5);
 		log_info(logger, "reg AX: %s", regAX);
 		//parseo_registro(registro_recibido, pcb,4);
 	}else if(!strcmp(registro,"BX")){
-		memcpy(regBX, registro_recibido, sizeof(char) * 4);
+		memcpy(regBX, registro_recibido, sizeof(char) * 5);
 		//parseo_registro(registro_recibido, pcb,4);
 	}else if(!strcmp(registro,"CX")){
-		memcpy(regCX, registro_recibido, sizeof(char) * 4);
+		memcpy(regCX, registro_recibido, sizeof(char) * 5);
 		//parseo_registro(registro_recibido, pcb,4);
 	}else if(!strcmp(registro,"DX")){
-		memcpy(regDX, registro_recibido, sizeof(char) * 4);
+		memcpy(regDX, registro_recibido, sizeof(char) * 5);
 		//parseo_registro(registro_recibido, pcb,4);
 	}else if(!strcmp(registro,"EAX")){
-		memcpy(regEAX, registro_recibido, sizeof(char) * 8);
+		memcpy(regEAX, registro_recibido, sizeof(char) * 9);
 		//parseo_registro(registro_recibido, pcb,8);
 	}else if(!strcmp(registro,"EBX")){
-		memcpy(regEBX, registro_recibido, sizeof(char) * 8);
+		memcpy(regEBX, registro_recibido, sizeof(char) * 9);
 		//parseo_registro(registro_recibido, pcb,8);
 	}else if(!strcmp(registro,"ECX")){
-		memcpy(regECX, registro_recibido, sizeof(char) * 8);
+		memcpy(regECX, registro_recibido, sizeof(char) * 9);
 		//parseo_registro(registro_recibido, pcb,8);
 	}else if(!strcmp(registro,"EDX")){
-		memcpy(regEDX, registro_recibido, sizeof(char) * 8);
+		memcpy(regEDX, registro_recibido, sizeof(char) * 9);
 		//parseo_registro(registro_recibido, pcb,16);
 	}else if(!strcmp(registro,"RAX")){
-		memcpy(regRAX, registro_recibido, sizeof(char) * 16);
+		memcpy(regRAX, registro_recibido, sizeof(char) * 17);
 		//parseo_registro(registro_recibido, pcb,16);
 	}else if(!strcmp(registro,"RBX")){
-		memcpy(regRBX, registro_recibido, sizeof(char) * 16);
+		memcpy(regRBX, registro_recibido, sizeof(char) * 17);
 		//parseo_registro(registro_recibido, pcb,16);
 	}else if(!strcmp(registro,"RCX")){
-		memcpy(regRCX, registro_recibido, sizeof(char) * 16);
+		memcpy(regRCX, registro_recibido, sizeof(char) * 17);
 		//parseo_registro(registro_recibido, pcb,16);
 	}else if(!strcmp(registro,"RDX")){
-		memcpy(regRDX, registro_recibido, sizeof(char) * 16);
+		memcpy(regRDX, registro_recibido, sizeof(char) * 17);
 		//parseo_registro(registro_recibido, pcb,16);
 	}else{
 		log_error(logger,"me fui al else del set");
