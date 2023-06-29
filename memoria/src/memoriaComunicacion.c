@@ -74,7 +74,6 @@ static void procesar_kernel(void * void_args) {
     		log_info(logger,"[KERNEL] recibido pedido crear segmento");
     		uint32_t id_seg;
     		uint32_t tam_segmento;
-    		//int* nada;
 
     		pthread_mutex_lock(&mx_kernel);
 			recv(cliente_socket, & pid, sizeof(uint16_t), 0);
@@ -83,17 +82,56 @@ static void procesar_kernel(void * void_args) {
 			pthread_mutex_unlock(&mx_kernel);
 
 			log_warning(logger,"Recibo: id:%d -tamanio:%d - pid:%d ",id_seg,tam_segmento,pid);
-    		crearSegmento(pid, id_seg, tam_segmento);
-    		t_list* tabla_proceso = buscarTabla(pid);
-    		t_segmento* seg = buscarSegmento(tabla_proceso, id_seg);
-    		log_info(logger, "[KERNEL] Envio de segmento id:%d para programa %d",id_seg, pid);
-			pthread_mutex_lock(&mx_kernel);
-			send(cliente_socket, &(seg->id_segmento), sizeof(uint32_t), MSG_WAITALL);
-			send(cliente_socket, &(seg->direccion_base), sizeof(uint64_t), MSG_WAITALL);
-			send(cliente_socket, &(seg->tamanio_segmento), sizeof(uint32_t), MSG_WAITALL);
-			pthread_mutex_unlock(&mx_kernel);
 
-			break;
+			if(noHayEspacio(tam_segmento)){
+				log_error(logger, "NO HAY ESPACIO DISPONIBLE");
+				op_code cop = CREATE_SEGMENT_FAIL;
+				pthread_mutex_lock(&mx_kernel);
+				send(cliente_socket, &(cop), sizeof(uint32_t), MSG_WAITALL);
+				pthread_mutex_unlock(&mx_kernel);
+				break;
+			}else if(!hayEspacio(tam_segmento)){
+				log_error(logger, "SOLICITAR COMPACTACION");
+				op_code cop = CREATE_SEGMENT_COMPACTO;
+				pthread_mutex_lock(&mx_kernel);
+				send(cliente_socket, &(cop), sizeof(uint32_t), MSG_WAITALL);
+				pthread_mutex_unlock(&mx_kernel);
+				break;
+			}else{
+	    		crearSegmento(pid, id_seg, tam_segmento);
+	    		t_list* tabla_proceso = buscarTabla(pid);
+	    		t_segmento* seg = buscarSegmento(tabla_proceso, id_seg);
+	    		log_info(logger, "[KERNEL] Envio de segmento id:%d para programa %d",seg->id_segmento, pid);
+	    		op_code cop = CREATE_SEGMENT_OK;
+				pthread_mutex_lock(&mx_kernel);
+				send(cliente_socket, &(cop), sizeof(uint32_t), MSG_WAITALL);
+				send(cliente_socket, &(seg->id_segmento), sizeof(uint32_t), MSG_WAITALL);
+				send(cliente_socket, &(seg->direccion_base), sizeof(uint64_t), MSG_WAITALL);
+				send(cliente_socket, &(seg->tamanio_segmento), sizeof(uint32_t), MSG_WAITALL);
+				pthread_mutex_unlock(&mx_kernel);
+				break;
+			}
+
+    case DELETE_SEGMENT:
+        		log_info(logger,"[KERNEL] recibido pedido crear segmento");
+        		uint32_t id_seg_delete;
+
+        		pthread_mutex_lock(&mx_kernel);
+    			recv(cliente_socket, & pid, sizeof(uint16_t), 0);
+    			recv(cliente_socket, & id_seg_delete, sizeof(uint32_t), 0);
+    			pthread_mutex_unlock(&mx_kernel);
+
+    			log_warning(logger,"Recibo: id:%d - pid:%d ",id_seg_delete,pid);
+
+    			eliminarSegmentoProceso(pid, id_seg_delete);
+    			op_code cop = DELETE_SEGMENT_OK;
+				pthread_mutex_lock(&mx_kernel);
+				send(cliente_socket, &(cop), sizeof(uint32_t), MSG_WAITALL);
+				pthread_mutex_unlock(&mx_kernel);
+
+    			break;
+
+
     // Errores
     case -1:
       log_error(logger, "Cliente desconectado de %s...", server_name);

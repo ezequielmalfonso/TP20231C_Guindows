@@ -185,7 +185,7 @@ int execute(INSTRUCCION* instruccion_ejecutar, registros_t registros, uint16_t p
 
 	}else if(!strcmp(instruccion_ejecutar->comando,"DELETE_SEGMENT") ){
 			log_info(logger,"PID: %d - Ejecutando DELETE_SEGMENT", pid);
-			//return DELETE_SEGMENT;
+			return DELETE_SEGMENT;
 	}else{
 		//printf("Comando: %s | Par1: %s | Par2: %s | Par: %s\n\n", instruccion_ejecutar->comando, instruccion_ejecutar->parametro1, instruccion_ejecutar->parametro2 ,instruccion_ejecutar->parametro3);
 		log_error(logger,"Hubo un error en el ciclo de instruccion, ");

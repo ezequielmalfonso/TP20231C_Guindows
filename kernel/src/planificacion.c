@@ -362,25 +362,45 @@ void esperar_cpu(){
 				uint32_t id_segmento      = 0;
 				uint64_t direccion_base   = 0;
 				uint32_t tamanio_segmento = 0;
+				op_code cop_memo;
 
-				// Recibir el segmento 0 desde memoria y ponerlo en PCB
-				recv(memoria_fd, &id_segmento, sizeof(uint32_t), 0);
-				recv(memoria_fd, &direccion_base, sizeof(uint64_t), 0);
-				recv(memoria_fd, &tamanio_segmento, sizeof(uint32_t), 0);
+				recv(memoria_fd, &cop_memo, sizeof(op_code), 0);
 
-				segmento->id_segmento      = id_segmento;
-				segmento->direccion_base   = direccion_base;
-				segmento->tamanio_segmento = tamanio_segmento;
+				switch(cop_memo){
+				case CREATE_SEGMENT_OK:
+										// Recibir el segmento 0 desde memoria y ponerlo en PCB
+										recv(memoria_fd, &id_segmento, sizeof(uint32_t), 0);
+										recv(memoria_fd, &direccion_base, sizeof(uint64_t), 0);
+										recv(memoria_fd, &tamanio_segmento, sizeof(uint32_t), 0);
 
-				//agrego el PCB creado el segmento recibido desde memoria
-				// TODO preguntar
-				list_add(pcb->tabla_de_segmentos, segmento);
+										segmento->id_segmento      = id_segmento;
+										segmento->direccion_base   = direccion_base;
+										segmento->tamanio_segmento = tamanio_segmento;
 
-				log_info(logger,"Recibiendo Segmento: Id: %d - Dir Base: %d - Tamanio: %d", id_segmento, direccion_base, tamanio_segmento);
+										//agrego el PCB creado el segmento recibido desde memoria
+										// TODO preguntar
+										list_add(pcb->tabla_de_segmentos, segmento);
 
-				pthread_mutex_lock(&mx_cola_ready);  // TODO hacer mas pruebas
-				send_proceso(cpu_fd, pcb,DISPATCH);
-				pthread_mutex_unlock(&mx_cola_ready);
+										log_warning(logger,"Recibiendo Segmento: Id: %d - Dir Base: %d - Tamanio: %d", id_segmento, direccion_base, tamanio_segmento);
+
+										pthread_mutex_lock(&mx_cola_ready);  // TODO hacer mas pruebas
+										send_proceso(cpu_fd, pcb,DISPATCH);
+										pthread_mutex_unlock(&mx_cola_ready);
+										break;
+				case CREATE_SEGMENT_FAIL:
+										log_error(logger, "NO HAY SUFICIENTE");
+										break;
+				case CREATE_SEGMENT_COMPACTO:
+										log_warning(logger, "SOLICITAR COMPACTACION");
+										op = MAKE_COMPACTATION;
+										pthread_mutex_lock(&mx_memoria);
+										send(memoria_fd,&op,sizeof(op_code),0);
+										pthread_mutex_unlock(&mx_memoria);
+
+										// TODO Actualizar tablas de segmento de todos los procesos
+										// y enviar nuevamente la solicitud de CREATE_SEGMENTE para el proceso
+
+				}
 
 				sem_post(&s_esperar_cpu);
 
@@ -388,6 +408,33 @@ void esperar_cpu(){
 				 //sem_post(&s_ready_execute);
 				 //sem_post(&s_cpu_desocupado);
 				break;
+			case DELETE_SEGMENT:
+							log_info(logger, "PID: %d - Eliminar segmento - Id: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"));
+							uint32_t id_seg_del  = atoi(instruccion->parametro1);
+							op_code op_del = DELETE_SEGMENT;
+
+							log_warning(logger, "Id_seg a eliminar: %d  ", id_seg_del);
+
+							pthread_mutex_lock(&mx_memoria);
+							send(memoria_fd,&op_del,sizeof(op_code),0);
+							send(memoria_fd,&(pcb->pid),sizeof(uint16_t),0);
+							send(memoria_fd,&(id_seg_del),sizeof(uint32_t),0);
+							pthread_mutex_unlock(&mx_memoria);
+
+							op_code cop_memo_delete;
+
+							recv(memoria_fd, &cop_memo_delete, sizeof(op_code), 0);
+
+							if(cop_memo_delete == DELETE_SEGMENT_OK){
+								log_info(logger, "PID: %d - Eliminar Segmento - Id Segmento: %d", pcb->pid, id_seg);
+							}
+
+							pthread_mutex_lock(&mx_cola_ready);  // TODO hacer mas pruebas
+							send_proceso(cpu_fd, pcb,DISPATCH);
+							pthread_mutex_unlock(&mx_cola_ready);
+							sem_post(&s_esperar_cpu);
+							break;
+
 			case SIGNAL:
 				log_info(logger, "PID: %d - Recibo pedido de SIGNAL por RECURSO: %s", pcb->pid, strtok(instruccion->parametro1, "\n"));
 

@@ -24,11 +24,15 @@
 #include<commons/collections/dictionary.h>
 #include "memoriaConfig.h"
 
+
+
 extern t_segmento* segmento;
+extern int mensaje_error;
 void inicializar_memoria();
 void apagar_memoria();
 uint64_t firstFit(int tam);
 uint64_t bestFit(int tam);
+uint64_t worstFit(int tam);
 t_list* buscarTabla(uint32_t pid);
 t_segmento* buscarSegmento(t_list* tabla, uint32_t id);
 void crearSegmento(uint32_t pid, uint32_t id_seg, int tam);

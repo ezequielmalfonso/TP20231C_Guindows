@@ -21,6 +21,9 @@ t_list* tabla_de_segmentos;
 t_segmento* segmento;
 t_list* tabla_de_paginas;
 t_list* tabla_de_huecos;
+
+int mensaje_error;
+
 /*
  * Inicializacion de Estructuras administrativas de Memoria
  */
@@ -53,7 +56,7 @@ void inicializar_memoria(){
 	t_segmento* hueco = malloc(sizeof(t_segmento));;
 	hueco->id_segmento	 = 0;
 	hueco->direccion_base = segmento->direccion_base + segmento->tamanio_segmento;
-	hueco->tamanio_segmento = sizeof(memoria)-segmento->tamanio_segmento;
+	hueco->tamanio_segmento = configuracion->TAM_MEMORIA-segmento->tamanio_segmento;
 	list_add(tabla_de_huecos, hueco);
 }
 
@@ -87,16 +90,21 @@ void crearSegmento(uint32_t pid, uint32_t id_seg, int tam){
 	}else if(!strcmp(configuracion->ALGORITMO_ASIGNACION, "FIRST")){
 		seg->direccion_base   = firstFit(tam);
 	}else if(!strcmp(configuracion->ALGORITMO_ASIGNACION, "WORST")){
-		//TODO falta el WORST
-		//seg->direccion_base   = worstFit(tam); //
+		seg->direccion_base   = worstFit(tam); //
 	}
 	else{
 		log_error(logger, "Fallo al cargar algoritmo de asignación!!!");
 	}
 
-	seg->tamanio_segmento = tam;
-	list_add(tablaProceso,segmento);
-	free(seg);
+	if(seg->direccion_base != -1){
+		seg->tamanio_segmento = tam;
+		list_add(tablaProceso,seg);
+	}else{
+		mensaje_error = -1;
+	}
+
+
+	//free(seg);
 }
 void* leerMemoria(uint32_t id_seg, uint32_t desplazamiento, uint32_t pid, int tam){
 	t_segmento* seg = buscarSegmento(buscarTabla(pid),id_seg);
@@ -133,30 +141,24 @@ t_list* buscarTabla(uint32_t pid){
 t_segmento* buscarSegmento(t_list* tabla, uint32_t id){
 	t_segmento* segmentoN;
 	int i;
-			for(i=0;i<list_size(tabla);i++){
-			segmentoN = list_get(tabla,i);
-			if(segmentoN->id_segmento == id)break;
-		}
+	for(i=0;i<list_size(tabla);i++)
+	{
+		segmentoN = list_get(tabla,i);
+		if(segmentoN->id_segmento == id)
+			break;
+	}
 	return segmentoN;
 }
 uint64_t firstFit(int tam){
 	int i=0;
 	t_segmento* segmentoAux = list_get(tabla_de_huecos,i);
-	while(tam<segmentoAux->tamanio_segmento || segmentoAux==NULL )
+	while(tam > segmentoAux->tamanio_segmento && i <= list_size(tabla_de_huecos) )
 	{
-		// NO termino de entender q hace realmente, esta el whilw no tenia corte
-		// y en replace esta queriendo reemplzar un posicion q no esta
-		// Aca creo que habria q recuperar antes el size de la lista
 		i++;
-		if( i < list_size(tabla_de_huecos)){
-			segmentoAux = list_get(tabla_de_huecos,i);
-		}else{
-			break;
-		}
-
+		segmentoAux = list_get(tabla_de_huecos,i);
 	}
 	uint64_t nuevaBase = segmentoAux->direccion_base;
-	if(segmentoAux==NULL){}// pedir acoplamiento}
+	// TODO ver : if(segmentoAux==NULL){}// pedir acoplamiento}
 	segmentoAux->direccion_base=segmentoAux->direccion_base+tam;
 	segmentoAux->tamanio_segmento=segmentoAux->tamanio_segmento-tam;
 	if(segmentoAux->tamanio_segmento<0){
@@ -166,18 +168,21 @@ uint64_t firstFit(int tam){
 	}
 	return nuevaBase;
 }
-
 uint64_t bestFit(int tam){
-	if(noHayEspacio(tam)){
-		//logError
-	}
+
 	int i =0;
 	t_segmento* segmentoAux2 = NULL;
 	t_segmento* segmentoAux = list_get(tabla_de_huecos,0);
-	for(i = 0;i<list_size(tabla_de_huecos);i++){
+	for(i = 0;i<list_size(tabla_de_huecos);i++)
+	{
 		segmentoAux= list_get(tabla_de_huecos,i);
-		if(segmentoAux->tamanio_segmento>tam){
-			if(segmentoAux2==NULL || segmentoAux->tamanio_segmento<segmentoAux2->tamanio_segmento){
+
+		if(segmentoAux->tamanio_segmento>tam)
+		{
+			if(segmentoAux2 == NULL){
+				segmentoAux2 = segmentoAux;
+			}
+			if( segmentoAux->tamanio_segmento < segmentoAux2->tamanio_segmento){
 				segmentoAux2 = segmentoAux;
 			}
 		}
@@ -187,10 +192,41 @@ uint64_t bestFit(int tam){
 	segmentoAux2->direccion_base=segmentoAux->direccion_base+tam;
 	segmentoAux2->tamanio_segmento=segmentoAux->tamanio_segmento-tam;
 
-	if(segmentoAux->tamanio_segmento<0){
-		list_remove_and_destroy_element(tabla_de_huecos,i,free);
+	if(segmentoAux2->tamanio_segmento == 0){
+		list_remove_and_destroy_element(tabla_de_huecos,i-1,free);
 	}else{
-	list_replace(tabla_de_huecos,i,segmentoAux);
+	list_replace(tabla_de_huecos,i-1,segmentoAux2);
+	}
+	return nuevaBase;
+}
+uint64_t worstFit(int tam){
+
+	int i =0;
+	t_segmento* segmentoAux2 = NULL;
+	t_segmento* segmentoAux = list_get(tabla_de_huecos,0);
+	for(i = 0;i<list_size(tabla_de_huecos);i++)
+	{
+		segmentoAux= list_get(tabla_de_huecos,i);
+
+		if(segmentoAux->tamanio_segmento>tam)
+		{
+			if(segmentoAux2 == NULL){
+				segmentoAux2 = segmentoAux;
+			}
+			if( segmentoAux->tamanio_segmento > segmentoAux2->tamanio_segmento){
+				segmentoAux2 = segmentoAux;
+			}
+		}
+	}
+	uint64_t nuevaBase = segmentoAux2->direccion_base;
+	if(segmentoAux2==NULL){}// pedir acoplamiento}
+	segmentoAux2->direccion_base=segmentoAux->direccion_base+tam;
+	segmentoAux2->tamanio_segmento=segmentoAux->tamanio_segmento-tam;
+
+	if(segmentoAux2->tamanio_segmento == 0){
+		list_remove_and_destroy_element(tabla_de_huecos,i-1,free);
+	}else{
+	list_replace(tabla_de_huecos,i-1,segmentoAux2);
 	}
 	return nuevaBase;
 }
@@ -199,26 +235,41 @@ bool noHayEspacio(int tam){
 	t_segmento* segmentoAux = list_get(tabla_de_huecos,0);
 	int espacioLibre=0;
 	for(int i =0; i<list_size(tabla_de_huecos);i++){
-		segmentoAux =  list_get(tabla_de_huecos,0);
+		segmentoAux =  list_get(tabla_de_huecos,i);
 		espacioLibre += segmentoAux->tamanio_segmento;
 	}
 	return tam>espacioLibre;
+}
+
+bool hayEspacio(int tam){
+	t_segmento* segmentoAux = list_get(tabla_de_huecos,0);
+	int espacioLibre=0;
+	for(int i =0; i<list_size(tabla_de_huecos);i++){
+		segmentoAux =  list_get(tabla_de_huecos,i);
+
+		if(tam < segmentoAux->tamanio_segmento)
+		{
+			espacioLibre++;
+		}
+	}
+
+	return espacioLibre;
 }
 void eliminarSegmentoProceso(uint32_t pid, uint32_t sid){
 	t_list* tablaProceso = buscarTabla(pid);
 	int i=0;
 	t_segmento* segmentoAux = list_get(tablaProceso,i);
-	while(sid!=segmentoAux->id_segmento || i< list_size(tablaProceso)){//TODO resolver la variable CANT_SEGMENTOS
+	while(sid!=segmentoAux->id_segmento && i< list_size(tablaProceso)){//TODO resolver la variable CANT_SEGMENTOS
 		i++;
 		segmentoAux = list_get(tablaProceso,i);
 	}
 	if(segmentoAux==NULL){
 		//log de error segmento no existe
 	}
+
+	agregarHueco( segmentoAux);
 	list_remove_and_destroy_element(tablaProceso,i,free);
 
-	list_add(tabla_de_huecos,segmentoAux);
-	//log segmento borrado
 }
 
 void agregarHueco(t_segmento* seg){
