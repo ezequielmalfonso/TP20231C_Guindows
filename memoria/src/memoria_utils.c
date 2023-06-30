@@ -119,9 +119,8 @@ int escribirEnMemoria(uint32_t id_seg,uint32_t  desplazamiento,uint32_t  pid, in
 	void* direccion = memoria+seg->direccion_base+desplazamiento;
 	memcpy(direccion,escribir,tamanio);
 	return 1;
-
-
 }
+
 t_list* buscarTabla(uint32_t pid){
 	if(list_is_empty(tabla_de_paginas)) {	// no deberia entrar nunca?
 		log_error(logger, "La tabla de paginas esta vacia");
@@ -137,7 +136,8 @@ t_list* buscarTabla(uint32_t pid){
 	i++;
 	}
 	return aux->tablaDelProceso;
-	}
+}
+
 t_segmento* buscarSegmento(t_list* tabla, uint32_t id){
 	t_segmento* segmentoN;
 	int i;
@@ -234,6 +234,20 @@ uint64_t worstFit(int tam){
 bool noHayEspacio(int tam){
 	t_segmento* segmentoAux = list_get(tabla_de_huecos,0);
 	int espacioLibre=0;
+
+	//
+	/*
+	t_link_element* aux_h = tabla_de_huecos->head;
+	while(aux_h!=NULL)
+	{
+		t_segmento* aux_h2 = aux_h->data;
+		log_warning(logger, "Lista huecos: ID_seg: %d - tam_seg: %d ",aux_h2->id_segmento, aux_h2->tamanio_segmento );
+		aux_h = aux_h->next;
+	}
+	*/
+	//
+
+
 	for(int i =0; i<list_size(tabla_de_huecos);i++){
 		segmentoAux =  list_get(tabla_de_huecos,i);
 		espacioLibre += segmentoAux->tamanio_segmento;
@@ -276,6 +290,7 @@ void agregarHueco(t_segmento* seg){
 	bool hayQueAgregarlo;
 //	int breakcondition;
 	t_segmento* sAux = list_get(tabla_de_huecos,0);
+	// TODO ESTA BIEN Q en los dos if ponga la variable hayQueAgregarlo en false???
 	for(int i = 0;i<list_size(tabla_de_huecos);i++){
 		sAux = list_get(tabla_de_huecos,i);
 		if(seg->direccion_base==sAux->direccion_base+sAux->tamanio_segmento){
@@ -291,7 +306,22 @@ void agregarHueco(t_segmento* seg){
 		hayQueAgregarlo = false;
 		}
 	}
-	if(hayQueAgregarlo)list_add(tabla_de_huecos,seg);
+	if(!hayQueAgregarlo)
+	{
+		list_add(tabla_de_huecos,seg);
+	}
+
+
+	//
+	/*t_link_element* aux_h = tabla_de_huecos->head;
+	while(aux_h!=NULL)
+	{
+		t_segmento* aux_h2 = aux_h->data;
+		log_error(logger, "Lista huecos: ID_seg: %d - tam_seg: %d ",aux_h2->id_segmento, aux_h2->tamanio_segmento );
+		aux_h = aux_h->next;
+	}*/
+	//
+
 }
 t_segmento* unirHuecosAlfinal(t_segmento* hueco, t_segmento* huecoNuevo){
 	hueco->tamanio_segmento+=huecoNuevo->tamanio_segmento;

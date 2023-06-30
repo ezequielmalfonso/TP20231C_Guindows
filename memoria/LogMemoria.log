@@ -9787,3 +9787,1217 @@ ALGORITMO_ASIGNACION: WORST
 [INFO] 21:24:50:595 Memoria/(162622:162625): Se ha finalizado la conexion
 [INFO] 21:24:51:298 Memoria/(162622:162624): Se ha finalizado la conexion
 [INFO] 21:24:51:946 Memoria/(162622:162623): Se ha finalizado la conexion
+[INFO] 18:14:32:518 Memoria/(165264:165264): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 4096
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: WORST
+
+[INFO] 18:14:32:519 Memoria/(165264:165264): Algoritmo WORST configurado
+[INFO] 18:14:32:519 Memoria/(165264:165264): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 18:14:32:519 Memoria/(165264:165264): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 18:14:35:352 Memoria/(165264:165265): Cliente conectado (a memoria_sv)
+
+[INFO] 18:14:35:352 Memoria/(165264:165265): RESPUESTA AL CONECTAR CPU
+[INFO] 18:14:37:936 Memoria/(165264:165266): Cliente conectado (a memoria_sv)
+
+[INFO] 18:14:37:937 Memoria/(165264:165266): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 18:14:40:778 Memoria/(165264:165267): Cliente conectado (a memoria_sv)
+
+[INFO] 18:14:40:779 Memoria/(165264:165267): RESPUESTA AL CONECTAR KERNEL
+[INFO] 18:14:44:556 Memoria/(165264:165267): Se ha finalizado la conexion
+[INFO] 18:14:45:364 Memoria/(165264:165266): Se ha finalizado la conexion
+[INFO] 18:14:46:086 Memoria/(165264:165265): Se ha finalizado la conexion
+[INFO] 18:16:05:167 Memoria/(165311:165311): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 18:16:05:168 Memoria/(165311:165311): Algoritmo BEST configurado
+[INFO] 18:16:05:168 Memoria/(165311:165311): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 18:16:05:169 Memoria/(165311:165311): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 18:16:11:168 Memoria/(165311:165312): Cliente conectado (a memoria_sv)
+
+[INFO] 18:16:11:168 Memoria/(165311:165312): RESPUESTA AL CONECTAR CPU
+[INFO] 18:16:12:753 Memoria/(165311:165313): Cliente conectado (a memoria_sv)
+
+[INFO] 18:16:12:754 Memoria/(165311:165313): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 18:16:15:769 Memoria/(165311:165314): Cliente conectado (a memoria_sv)
+
+[INFO] 18:16:15:770 Memoria/(165311:165314): RESPUESTA AL CONECTAR KERNEL
+[INFO] 18:16:28:345 Memoria/(165311:165314): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 18:16:28:345 Memoria/(165311:165314): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 18:16:28:347 Memoria/(165311:165314): [KERNEL] recibido pedido crear segmento
+[WARNING] 18:16:28:389 Memoria/(165311:165314): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 18:16:28:389 Memoria/(165311:165314): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 18:16:28:433 Memoria/(165311:165314): [KERNEL] recibido pedido crear segmento
+[WARNING] 18:16:28:477 Memoria/(165311:165314): Recibo: id:2 -tamanio:32 - pid:0 
+[INFO] 18:16:28:477 Memoria/(165311:165314): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 18:16:28:522 Memoria/(165311:165314): [KERNEL] recibido pedido crear segmento
+[WARNING] 18:16:28:565 Memoria/(165311:165314): Recibo: id:1 - pid:0 
+[INFO] 18:16:28:565 Memoria/(165311:165314): [KERNEL] recibido pedido crear segmento
+[WARNING] 18:16:28:610 Memoria/(165311:165314): Recibo: id:3 -tamanio:60 - pid:0 
+[ERROR] 18:16:28:610 Memoria/(165311:165314): NO HAY ESPACIO DISPONIBLE
+[INFO] 18:16:38:669 Memoria/(165311:165314): Se ha finalizado la conexion
+[INFO] 18:16:39:260 Memoria/(165311:165313): Se ha finalizado la conexion
+[INFO] 18:16:39:900 Memoria/(165311:165312): Se ha finalizado la conexion
+[INFO] 18:24:22:891 Memoria/(165378:165378): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 18:24:22:891 Memoria/(165378:165378): Algoritmo BEST configurado
+[INFO] 18:24:22:891 Memoria/(165378:165378): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 18:24:22:891 Memoria/(165378:165378): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 18:24:29:481 Memoria/(165378:165398): Cliente conectado (a memoria_sv)
+
+[INFO] 18:24:29:482 Memoria/(165378:165398): RESPUESTA AL CONECTAR CPU
+[INFO] 18:24:31:051 Memoria/(165378:165399): Cliente conectado (a memoria_sv)
+
+[INFO] 18:24:31:052 Memoria/(165378:165399): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 18:24:36:028 Memoria/(165378:165400): Cliente conectado (a memoria_sv)
+
+[INFO] 18:24:36:028 Memoria/(165378:165400): RESPUESTA AL CONECTAR KERNEL
+[INFO] 18:24:40:508 Memoria/(165378:165400): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 18:24:40:508 Memoria/(165378:165400): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 18:24:44:688 Memoria/(165378:165400): [KERNEL] recibido pedido crear segmento
+[WARNING] 18:24:49:388 Memoria/(165378:165400): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 18:26:01:715 Memoria/(165378:165400): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 18:26:21:009 Memoria/(165378:165400): [KERNEL] recibido pedido crear segmento
+[WARNING] 18:26:52:530 Memoria/(165378:165400): Recibo: id:2 -tamanio:32 - pid:0 
+[INFO] 18:27:36:421 Memoria/(165378:165400): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 18:28:01:231 Memoria/(165378:165400): [KERNEL] recibido pedido crear segmento
+[WARNING] 18:28:08:019 Memoria/(165378:165400): Recibo: id:1 - pid:0 
+[INFO] 18:29:08:787 Memoria/(165378:165400): [KERNEL] recibido pedido crear segmento
+[WARNING] 18:29:13:736 Memoria/(165378:165400): Recibo: id:3 -tamanio:60 - pid:0 
+[ERROR] 18:30:30:539 Memoria/(165378:165400): NO HAY ESPACIO DISPONIBLE
+[INFO] 18:32:03:508 Memoria/(165697:165697): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 18:32:03:508 Memoria/(165697:165697): Algoritmo BEST configurado
+[INFO] 18:32:03:508 Memoria/(165697:165697): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 18:32:03:509 Memoria/(165697:165697): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 18:32:07:994 Memoria/(165697:165711): Cliente conectado (a memoria_sv)
+
+[INFO] 18:32:07:994 Memoria/(165697:165711): RESPUESTA AL CONECTAR CPU
+[INFO] 18:32:09:389 Memoria/(165697:165712): Cliente conectado (a memoria_sv)
+
+[INFO] 18:32:09:390 Memoria/(165697:165712): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 18:32:14:583 Memoria/(165697:165713): Cliente conectado (a memoria_sv)
+
+[INFO] 18:32:14:584 Memoria/(165697:165713): RESPUESTA AL CONECTAR KERNEL
+[INFO] 18:32:15:789 Memoria/(165697:165713): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 18:32:15:790 Memoria/(165697:165713): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 18:32:16:793 Memoria/(165697:165711): Recibido pedido de MOV_OUT
+[INFO] 18:32:16:793 Memoria/(165697:165711): PID: 0 - N° Segmento: 0, Desplazamiento: 120, Tamanio: 5, Escribir: HOL`
+[INFO] 18:32:16:793 Memoria/(165697:165711): Recibido pedido de MOV_IN
+[INFO] 18:32:16:793 Memoria/(165697:165711): PID: 0 - N° Segmento: 0, Desplazamiento: 120, Tamanio: 4
+[INFO] 18:32:27:022 Memoria/(165697:165713): [KERNEL] recibido pedido crear segmento
+[WARNING] 18:32:27:022 Memoria/(165697:165713): Recibo: id:1 -tamanio:128 - pid:0 
+[ERROR] 18:33:47:942 Memoria/(165697:165713): NO HAY ESPACIO DISPONIBLE
+[INFO] 18:35:25:000 Memoria/(165846:165846): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 18:35:25:004 Memoria/(165846:165846): Algoritmo BEST configurado
+[INFO] 18:35:25:005 Memoria/(165846:165846): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 18:35:25:005 Memoria/(165846:165846): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 18:35:28:394 Memoria/(165846:165864): Cliente conectado (a memoria_sv)
+
+[INFO] 18:35:28:395 Memoria/(165846:165864): RESPUESTA AL CONECTAR CPU
+[INFO] 18:35:30:492 Memoria/(165846:165865): Cliente conectado (a memoria_sv)
+
+[INFO] 18:35:30:492 Memoria/(165846:165865): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 18:35:32:854 Memoria/(165846:165866): Cliente conectado (a memoria_sv)
+
+[INFO] 18:35:32:854 Memoria/(165846:165866): RESPUESTA AL CONECTAR KERNEL
+[INFO] 18:35:41:044 Memoria/(165846:165866): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 18:35:41:044 Memoria/(165846:165866): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 18:35:44:809 Memoria/(165846:165866): [KERNEL] recibido pedido crear segmento
+[WARNING] 18:35:52:612 Memoria/(165846:165866): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 18:37:27:189 Memoria/(165846:165866): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 18:37:36:307 Memoria/(165846:165866): [KERNEL] recibido pedido crear segmento
+[WARNING] 18:37:42:283 Memoria/(165846:165866): Recibo: id:2 -tamanio:32 - pid:0 
+[INFO] 18:37:46:979 Memoria/(165846:165866): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 18:37:51:970 Memoria/(165846:165866): [KERNEL] recibido pedido crear segmento
+[WARNING] 18:37:53:802 Memoria/(165846:165866): Recibo: id:1 - pid:0 
+[INFO] 18:38:03:822 Memoria/(165846:165866): [KERNEL] recibido pedido crear segmento
+[WARNING] 18:38:07:275 Memoria/(165846:165866): Recibo: id:3 -tamanio:60 - pid:0 
+[ERROR] 18:39:16:816 Memoria/(165846:165866): NO HAY ESPACIO DISPONIBLE
+[INFO] 18:45:15:276 Memoria/(167052:167052): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 18:45:15:280 Memoria/(167052:167052): Algoritmo BEST configurado
+[INFO] 18:45:15:280 Memoria/(167052:167052): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 18:45:15:281 Memoria/(167052:167052): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 18:45:16:260 Memoria/(167052:167053): Cliente conectado (a memoria_sv)
+
+[INFO] 18:45:16:260 Memoria/(167052:167053): RESPUESTA AL CONECTAR CPU
+[INFO] 18:45:16:983 Memoria/(167052:167054): Cliente conectado (a memoria_sv)
+
+[INFO] 18:45:16:983 Memoria/(167052:167054): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 18:45:19:022 Memoria/(167052:167055): Cliente conectado (a memoria_sv)
+
+[INFO] 18:45:19:022 Memoria/(167052:167055): RESPUESTA AL CONECTAR KERNEL
+[INFO] 18:45:21:439 Memoria/(167052:167055): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 18:45:21:439 Memoria/(167052:167055): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 18:45:21:440 Memoria/(167052:167055): [KERNEL] recibido pedido crear segmento
+[WARNING] 18:45:21:481 Memoria/(167052:167055): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 18:45:21:481 Memoria/(167052:167055): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 18:45:21:526 Memoria/(167052:167055): [KERNEL] recibido pedido crear segmento
+[WARNING] 18:45:21:569 Memoria/(167052:167055): Recibo: id:2 -tamanio:32 - pid:0 
+[INFO] 18:45:21:569 Memoria/(167052:167055): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 18:45:21:614 Memoria/(167052:167055): [KERNEL] recibido pedido crear segmento
+[WARNING] 18:45:21:657 Memoria/(167052:167055): Recibo: id:1 - pid:0 
+[INFO] 18:45:21:657 Memoria/(167052:167055): [KERNEL] recibido pedido crear segmento
+[WARNING] 18:45:21:701 Memoria/(167052:167055): Recibo: id:3 -tamanio:60 - pid:0 
+[ERROR] 18:45:21:701 Memoria/(167052:167055): SOLICITAR COMPACTACION
+[ERROR] 18:45:21:701 Memoria/(167052:167055): Algo anduvo mal en el server KERNEL de memoria_sv
+[INFO] 18:45:21:701 Memoria/(167052:167055): Cop: 81
+[INFO] 18:47:16:812 Memoria/(167052:167054): Se ha finalizado la conexion
+[INFO] 18:47:17:658 Memoria/(167052:167053): Se ha finalizado la conexion
+[INFO] 19:11:56:823 Memoria/(170007:170007): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 19:11:56:824 Memoria/(170007:170007): Algoritmo BEST configurado
+[INFO] 19:11:56:824 Memoria/(170007:170007): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 19:11:56:824 Memoria/(170007:170007): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 19:11:57:745 Memoria/(170007:170008): Cliente conectado (a memoria_sv)
+
+[INFO] 19:11:57:746 Memoria/(170007:170008): RESPUESTA AL CONECTAR CPU
+[INFO] 19:11:58:483 Memoria/(170007:170009): Cliente conectado (a memoria_sv)
+
+[INFO] 19:11:58:484 Memoria/(170007:170009): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 19:12:00:763 Memoria/(170007:170010): Cliente conectado (a memoria_sv)
+
+[INFO] 19:12:00:763 Memoria/(170007:170010): RESPUESTA AL CONECTAR KERNEL
+[INFO] 19:12:02:651 Memoria/(170007:170010): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 19:12:02:651 Memoria/(170007:170010): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 19:12:02:652 Memoria/(170007:170010): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:12:02:693 Memoria/(170007:170010): Recibo: id:1 -tamanio:32 - pid:0 
+[WARNING] 19:12:02:693 Memoria/(170007:170010): Lista huecos: ID_seg: 0 - tam_seg: 96 
+[INFO] 19:12:02:693 Memoria/(170007:170010): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 19:12:02:737 Memoria/(170007:170010): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:12:02:782 Memoria/(170007:170010): Recibo: id:2 -tamanio:32 - pid:0 
+[WARNING] 19:12:02:782 Memoria/(170007:170010): Lista huecos: ID_seg: 0 - tam_seg: 64 
+[INFO] 19:12:02:782 Memoria/(170007:170010): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 19:12:02:826 Memoria/(170007:170010): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:12:02:869 Memoria/(170007:170010): Recibo: id:1 - pid:0 
+[INFO] 19:12:02:869 Memoria/(170007:170010): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:12:02:914 Memoria/(170007:170010): Recibo: id:3 -tamanio:60 - pid:0 
+[WARNING] 19:12:02:914 Memoria/(170007:170010): Lista huecos: ID_seg: 0 - tam_seg: 32 
+[ERROR] 19:12:02:914 Memoria/(170007:170010): NO HAY ESPACIO DISPONIBLE
+[INFO] 19:14:15:598 Memoria/(170007:170010): Se ha finalizado la conexion
+[INFO] 19:14:16:158 Memoria/(170007:170009): Se ha finalizado la conexion
+[INFO] 19:14:16:806 Memoria/(170007:170008): Se ha finalizado la conexion
+[INFO] 19:14:20:472 Memoria/(170332:170332): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 19:14:20:473 Memoria/(170332:170332): Algoritmo BEST configurado
+[INFO] 19:14:20:474 Memoria/(170332:170332): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 19:14:20:474 Memoria/(170332:170332): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 19:14:22:394 Memoria/(170332:170333): Cliente conectado (a memoria_sv)
+
+[INFO] 19:14:22:395 Memoria/(170332:170333): RESPUESTA AL CONECTAR CPU
+[INFO] 19:14:24:796 Memoria/(170332:170334): Cliente conectado (a memoria_sv)
+
+[INFO] 19:14:24:797 Memoria/(170332:170334): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 19:14:27:229 Memoria/(170332:170335): Cliente conectado (a memoria_sv)
+
+[INFO] 19:14:27:229 Memoria/(170332:170335): RESPUESTA AL CONECTAR KERNEL
+[INFO] 19:14:30:635 Memoria/(170332:170335): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 19:14:30:635 Memoria/(170332:170335): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 19:14:30:636 Memoria/(170332:170335): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:14:30:677 Memoria/(170332:170335): Recibo: id:1 -tamanio:32 - pid:0 
+[WARNING] 19:14:30:677 Memoria/(170332:170335): Lista huecos: ID_seg: 0 - tam_seg: 96 
+[INFO] 19:14:30:677 Memoria/(170332:170335): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 19:14:30:721 Memoria/(170332:170335): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:14:30:766 Memoria/(170332:170335): Recibo: id:2 -tamanio:32 - pid:0 
+[WARNING] 19:14:30:766 Memoria/(170332:170335): Lista huecos: ID_seg: 0 - tam_seg: 64 
+[INFO] 19:14:30:766 Memoria/(170332:170335): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 19:14:30:810 Memoria/(170332:170335): [KERNEL] Recibido pedido de Eliminar segmento
+[WARNING] 19:14:30:853 Memoria/(170332:170335): Recibo eliminar: id:1 - pid:0 
+[INFO] 19:14:30:854 Memoria/(170332:170335): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:14:30:897 Memoria/(170332:170335): Recibo: id:3 -tamanio:60 - pid:0 
+[WARNING] 19:14:30:897 Memoria/(170332:170335): Lista huecos: ID_seg: 0 - tam_seg: 32 
+[ERROR] 19:14:30:897 Memoria/(170332:170335): NO HAY ESPACIO DISPONIBLE
+[INFO] 19:26:34:339 Memoria/(170332:170335): Se ha finalizado la conexion
+[INFO] 19:26:34:936 Memoria/(170332:170334): Se ha finalizado la conexion
+[INFO] 19:26:35:640 Memoria/(170332:170333): Se ha finalizado la conexion
+[INFO] 19:26:37:754 Memoria/(171590:171590): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 19:26:37:755 Memoria/(171590:171590): Algoritmo BEST configurado
+[INFO] 19:26:37:756 Memoria/(171590:171590): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 19:26:37:756 Memoria/(171590:171590): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 19:26:38:544 Memoria/(171590:171591): Cliente conectado (a memoria_sv)
+
+[INFO] 19:26:38:544 Memoria/(171590:171591): RESPUESTA AL CONECTAR CPU
+[INFO] 19:26:39:260 Memoria/(171590:171592): Cliente conectado (a memoria_sv)
+
+[INFO] 19:26:39:261 Memoria/(171590:171592): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 19:26:40:173 Memoria/(171590:171593): Cliente conectado (a memoria_sv)
+
+[INFO] 19:26:40:173 Memoria/(171590:171593): RESPUESTA AL CONECTAR KERNEL
+[INFO] 19:26:42:053 Memoria/(171590:171593): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 19:26:42:053 Memoria/(171590:171593): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 19:26:42:054 Memoria/(171590:171593): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:26:42:097 Memoria/(171590:171593): Recibo: id:1 -tamanio:32 - pid:0 
+[WARNING] 19:26:42:097 Memoria/(171590:171593): Lista huecos: ID_seg: 0 - tam_seg: 96 
+[INFO] 19:26:42:097 Memoria/(171590:171593): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 19:26:42:141 Memoria/(171590:171593): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:26:42:186 Memoria/(171590:171593): Recibo: id:2 -tamanio:32 - pid:0 
+[WARNING] 19:26:42:186 Memoria/(171590:171593): Lista huecos: ID_seg: 0 - tam_seg: 64 
+[INFO] 19:26:42:186 Memoria/(171590:171593): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 19:26:42:230 Memoria/(171590:171593): [KERNEL] Recibido pedido de Eliminar segmento
+[WARNING] 19:26:42:273 Memoria/(171590:171593): Recibo eliminar: id:1 - pid:0 
+[WARNING] 19:26:42:273 Memoria/(171590:171593): Lista huecos: ID_seg: 0 - tam_seg: 32 
+[INFO] 19:26:42:273 Memoria/(171590:171593): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:26:42:318 Memoria/(171590:171593): Recibo: id:3 -tamanio:60 - pid:0 
+[WARNING] 19:26:42:318 Memoria/(171590:171593): Lista huecos: ID_seg: 0 - tam_seg: 32 
+[ERROR] 19:26:42:318 Memoria/(171590:171593): NO HAY ESPACIO DISPONIBLE
+[INFO] 19:27:00:672 Memoria/(171590:171593): Se ha finalizado la conexion
+[INFO] 19:27:01:488 Memoria/(171590:171592): Se ha finalizado la conexion
+[INFO] 19:27:03:128 Memoria/(171590:171591): Se ha finalizado la conexion
+[INFO] 19:27:27:231 Memoria/(171762:171762): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 19:27:27:232 Memoria/(171762:171762): Algoritmo BEST configurado
+[INFO] 19:27:27:232 Memoria/(171762:171762): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 19:27:27:232 Memoria/(171762:171762): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 19:27:29:885 Memoria/(171762:171763): Cliente conectado (a memoria_sv)
+
+[INFO] 19:27:29:885 Memoria/(171762:171763): RESPUESTA AL CONECTAR CPU
+[INFO] 19:27:31:068 Memoria/(171762:171764): Cliente conectado (a memoria_sv)
+
+[INFO] 19:27:31:068 Memoria/(171762:171764): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 19:27:32:918 Memoria/(171762:171765): Cliente conectado (a memoria_sv)
+
+[INFO] 19:27:32:918 Memoria/(171762:171765): RESPUESTA AL CONECTAR KERNEL
+[INFO] 19:27:35:231 Memoria/(171762:171765): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 19:27:35:231 Memoria/(171762:171765): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 19:27:35:232 Memoria/(171762:171765): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:27:35:273 Memoria/(171762:171765): Recibo: id:1 -tamanio:32 - pid:0 
+[WARNING] 19:27:35:273 Memoria/(171762:171765): Lista huecos: ID_seg: 0 - tam_seg: 96 
+[INFO] 19:27:35:273 Memoria/(171762:171765): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 19:27:35:317 Memoria/(171762:171765): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:27:35:362 Memoria/(171762:171765): Recibo: id:2 -tamanio:32 - pid:0 
+[WARNING] 19:27:35:362 Memoria/(171762:171765): Lista huecos: ID_seg: 0 - tam_seg: 64 
+[INFO] 19:27:35:362 Memoria/(171762:171765): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 19:27:35:405 Memoria/(171762:171765): [KERNEL] Recibido pedido de Eliminar segmento
+[WARNING] 19:27:35:449 Memoria/(171762:171765): Recibo eliminar: id:1 - pid:0 
+[ERROR] 19:27:35:450 Memoria/(171762:171765): Lista huecos: ID_seg: 0 - tam_seg: 32 
+[INFO] 19:27:35:450 Memoria/(171762:171765): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:27:35:493 Memoria/(171762:171765): Recibo: id:3 -tamanio:60 - pid:0 
+[WARNING] 19:27:35:493 Memoria/(171762:171765): Lista huecos: ID_seg: 0 - tam_seg: 32 
+[ERROR] 19:27:35:493 Memoria/(171762:171765): NO HAY ESPACIO DISPONIBLE
+[INFO] 19:27:48:888 Memoria/(171762:171764): Se ha finalizado la conexion
+[INFO] 19:27:49:544 Memoria/(171762:171763): Se ha finalizado la conexion
+[INFO] 19:27:49:544 Memoria/(171762:171765): Se ha finalizado la conexion
+[INFO] 19:34:02:485 Memoria/(172445:172445): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 19:34:02:486 Memoria/(172445:172445): Algoritmo BEST configurado
+[INFO] 19:34:02:486 Memoria/(172445:172445): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 19:34:02:486 Memoria/(172445:172445): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 19:34:12:828 Memoria/(172445:172468): Cliente conectado (a memoria_sv)
+
+[INFO] 19:34:12:829 Memoria/(172445:172468): RESPUESTA AL CONECTAR CPU
+[INFO] 19:34:14:102 Memoria/(172445:172469): Cliente conectado (a memoria_sv)
+
+[INFO] 19:34:14:102 Memoria/(172445:172469): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 19:34:18:706 Memoria/(172445:172470): Cliente conectado (a memoria_sv)
+
+[INFO] 19:34:18:706 Memoria/(172445:172470): RESPUESTA AL CONECTAR KERNEL
+[INFO] 19:34:20:037 Memoria/(172445:172470): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 19:34:20:037 Memoria/(172445:172470): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 19:34:24:176 Memoria/(172445:172470): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:34:26:607 Memoria/(172445:172470): Recibo: id:1 -tamanio:32 - pid:0 
+[WARNING] 19:34:26:873 Memoria/(172445:172470): Lista huecos: ID_seg: 0 - tam_seg: 96 
+[INFO] 19:34:28:047 Memoria/(172445:172470): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 19:34:34:696 Memoria/(172445:172470): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:34:36:391 Memoria/(172445:172470): Recibo: id:2 -tamanio:32 - pid:0 
+[WARNING] 19:34:36:596 Memoria/(172445:172470): Lista huecos: ID_seg: 0 - tam_seg: 64 
+[INFO] 19:34:40:486 Memoria/(172445:172470): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 19:34:48:360 Memoria/(172445:172470): [KERNEL] Recibido pedido de Eliminar segmento
+[WARNING] 19:34:52:536 Memoria/(172445:172470): Recibo eliminar: id:1 - pid:0 
+[INFO] 19:39:41:983 Memoria/(173321:173321): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 19:39:41:995 Memoria/(173321:173321): Algoritmo BEST configurado
+[INFO] 19:39:41:995 Memoria/(173321:173321): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 19:39:41:995 Memoria/(173321:173321): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 19:39:42:989 Memoria/(173321:173322): Cliente conectado (a memoria_sv)
+
+[INFO] 19:39:42:990 Memoria/(173321:173322): RESPUESTA AL CONECTAR CPU
+[INFO] 19:39:43:687 Memoria/(173321:173323): Cliente conectado (a memoria_sv)
+
+[INFO] 19:39:43:688 Memoria/(173321:173323): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 19:39:46:298 Memoria/(173321:173324): Cliente conectado (a memoria_sv)
+
+[INFO] 19:39:46:299 Memoria/(173321:173324): RESPUESTA AL CONECTAR KERNEL
+[INFO] 19:39:48:096 Memoria/(173321:173324): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 19:39:48:096 Memoria/(173321:173324): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 19:39:48:097 Memoria/(173321:173324): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:39:48:138 Memoria/(173321:173324): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 19:39:48:138 Memoria/(173321:173324): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 19:39:48:182 Memoria/(173321:173324): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:39:48:225 Memoria/(173321:173324): Recibo: id:2 -tamanio:32 - pid:0 
+[INFO] 19:39:48:225 Memoria/(173321:173324): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 19:39:48:269 Memoria/(173321:173324): [KERNEL] Recibido pedido de Eliminar segmento
+[WARNING] 19:39:48:313 Memoria/(173321:173324): Recibo eliminar: id:1 - pid:0 
+[ERROR] 19:39:48:313 Memoria/(173321:173324): Lista huecos: ID_seg: 0 - tam_seg: 32 
+[ERROR] 19:39:48:313 Memoria/(173321:173324): Lista huecos: ID_seg: 1 - tam_seg: 32 
+[INFO] 19:39:48:313 Memoria/(173321:173324): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:39:48:357 Memoria/(173321:173324): Recibo: id:3 -tamanio:60 - pid:0 
+[ERROR] 19:39:48:357 Memoria/(173321:173324): SOLICITAR COMPACTACION
+[ERROR] 19:39:48:357 Memoria/(173321:173324): Algo anduvo mal en el server KERNEL de memoria_sv
+[INFO] 19:39:48:357 Memoria/(173321:173324): Cop: 81
+[INFO] 19:41:48:586 Memoria/(173321:173323): Se ha finalizado la conexion
+[INFO] 19:41:49:210 Memoria/(173321:173322): Se ha finalizado la conexion
+[INFO] 19:43:51:242 Memoria/(173783:173783): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 19:43:51:243 Memoria/(173783:173783): Algoritmo BEST configurado
+[INFO] 19:43:51:244 Memoria/(173783:173783): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 19:43:51:244 Memoria/(173783:173783): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 19:43:52:273 Memoria/(173783:173784): Cliente conectado (a memoria_sv)
+
+[INFO] 19:43:52:274 Memoria/(173783:173784): RESPUESTA AL CONECTAR CPU
+[INFO] 19:43:53:149 Memoria/(173783:173785): Cliente conectado (a memoria_sv)
+
+[INFO] 19:43:53:152 Memoria/(173783:173785): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 19:43:57:500 Memoria/(173783:173786): Cliente conectado (a memoria_sv)
+
+[INFO] 19:43:57:500 Memoria/(173783:173786): RESPUESTA AL CONECTAR KERNEL
+[INFO] 19:44:03:472 Memoria/(173783:173786): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 19:44:03:472 Memoria/(173783:173786): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 19:44:03:473 Memoria/(173783:173786): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:44:03:518 Memoria/(173783:173786): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 19:44:03:518 Memoria/(173783:173786): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 19:44:03:561 Memoria/(173783:173786): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:44:03:605 Memoria/(173783:173786): Recibo: id:2 -tamanio:32 - pid:0 
+[INFO] 19:44:03:605 Memoria/(173783:173786): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 19:44:03:649 Memoria/(173783:173786): [KERNEL] Recibido pedido de Eliminar segmento
+[WARNING] 19:44:03:694 Memoria/(173783:173786): Recibo eliminar: id:1 - pid:0 
+[INFO] 19:44:03:694 Memoria/(173783:173786): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:44:03:737 Memoria/(173783:173786): Recibo: id:3 -tamanio:60 - pid:0 
+[ERROR] 19:44:03:738 Memoria/(173783:173786): SOLICITAR COMPACTACION
+[ERROR] 19:44:03:738 Memoria/(173783:173786): Algo anduvo mal en el server KERNEL de memoria_sv
+[INFO] 19:44:03:738 Memoria/(173783:173786): Cop: 81
+[INFO] 19:44:14:506 Memoria/(173783:173785): Se ha finalizado la conexion
+[INFO] 19:44:15:098 Memoria/(173783:173784): Se ha finalizado la conexion
+[INFO] 19:45:35:020 Memoria/(173956:173956): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 19:45:35:021 Memoria/(173956:173956): Algoritmo BEST configurado
+[INFO] 19:45:35:021 Memoria/(173956:173956): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 19:45:35:022 Memoria/(173956:173956): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 19:45:36:406 Memoria/(173956:173957): Cliente conectado (a memoria_sv)
+
+[INFO] 19:45:36:407 Memoria/(173956:173957): RESPUESTA AL CONECTAR CPU
+[INFO] 19:45:37:762 Memoria/(173956:173958): Cliente conectado (a memoria_sv)
+
+[INFO] 19:45:37:762 Memoria/(173956:173958): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 19:45:39:272 Memoria/(173956:173959): Cliente conectado (a memoria_sv)
+
+[INFO] 19:45:39:273 Memoria/(173956:173959): RESPUESTA AL CONECTAR KERNEL
+[INFO] 19:45:41:143 Memoria/(173956:173959): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 19:45:41:143 Memoria/(173956:173959): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 19:45:41:144 Memoria/(173956:173959): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:45:41:185 Memoria/(173956:173959): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 19:45:41:185 Memoria/(173956:173959): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 19:45:41:230 Memoria/(173956:173959): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:45:41:273 Memoria/(173956:173959): Recibo: id:2 -tamanio:32 - pid:0 
+[INFO] 19:45:41:273 Memoria/(173956:173959): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 19:45:41:317 Memoria/(173956:173959): [KERNEL] Recibido pedido de Eliminar segmento
+[WARNING] 19:45:41:362 Memoria/(173956:173959): Recibo eliminar: id:1 - pid:0 
+[INFO] 19:45:41:362 Memoria/(173956:173959): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:45:41:405 Memoria/(173956:173959): Recibo: id:3 -tamanio:60 - pid:0 
+[ERROR] 19:45:41:405 Memoria/(173956:173959): SOLICITAR COMPACTACION
+[ERROR] 19:45:41:405 Memoria/(173956:173959): Algo anduvo mal en el server KERNEL de memoria_sv
+[INFO] 19:45:41:405 Memoria/(173956:173959): Cop: 81
+[INFO] 19:50:33:427 Memoria/(173956:173958): Se ha finalizado la conexion
+[INFO] 19:50:34:043 Memoria/(173956:173957): Se ha finalizado la conexion
+[INFO] 19:50:36:400 Memoria/(174923:174923): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 19:50:36:402 Memoria/(174923:174923): Algoritmo BEST configurado
+[INFO] 19:50:36:402 Memoria/(174923:174923): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 19:50:36:402 Memoria/(174923:174923): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 19:50:37:182 Memoria/(174923:174924): Cliente conectado (a memoria_sv)
+
+[INFO] 19:50:37:182 Memoria/(174923:174924): RESPUESTA AL CONECTAR CPU
+[INFO] 19:50:37:913 Memoria/(174923:174925): Cliente conectado (a memoria_sv)
+
+[INFO] 19:50:37:914 Memoria/(174923:174925): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 19:50:39:846 Memoria/(174923:174926): Cliente conectado (a memoria_sv)
+
+[INFO] 19:50:39:846 Memoria/(174923:174926): RESPUESTA AL CONECTAR KERNEL
+[INFO] 19:50:41:304 Memoria/(174923:174926): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 19:50:41:304 Memoria/(174923:174926): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 19:50:41:305 Memoria/(174923:174926): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:50:41:345 Memoria/(174923:174926): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 19:50:41:345 Memoria/(174923:174926): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 19:50:41:390 Memoria/(174923:174926): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:50:41:433 Memoria/(174923:174926): Recibo: id:2 -tamanio:32 - pid:0 
+[INFO] 19:50:41:433 Memoria/(174923:174926): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 19:50:41:477 Memoria/(174923:174926): [KERNEL] Recibido pedido de Eliminar segmento
+[WARNING] 19:50:41:521 Memoria/(174923:174926): Recibo eliminar: id:1 - pid:0 
+[INFO] 19:50:41:522 Memoria/(174923:174926): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:50:41:565 Memoria/(174923:174926): Recibo: id:3 -tamanio:60 - pid:0 
+[ERROR] 19:50:41:565 Memoria/(174923:174926): SOLICITAR COMPACTACION
+[INFO] 19:50:41:565 Memoria/(174923:174926): [KERNEL] Recibido pedido de COMPACTAR
+[ERROR] 19:50:41:565 Memoria/(174923:174926): Cliente desconectado de memoria_sv...
+[INFO] 19:51:05:796 Memoria/(174923:174925): Se ha finalizado la conexion
+[INFO] 19:51:06:411 Memoria/(174923:174924): Se ha finalizado la conexion
+[INFO] 19:52:59:317 Memoria/(175439:175439): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 19:52:59:318 Memoria/(175439:175439): Algoritmo BEST configurado
+[INFO] 19:52:59:319 Memoria/(175439:175439): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 19:52:59:319 Memoria/(175439:175439): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 19:53:01:311 Memoria/(175439:175440): Cliente conectado (a memoria_sv)
+
+[INFO] 19:53:01:311 Memoria/(175439:175440): RESPUESTA AL CONECTAR CPU
+[INFO] 19:53:02:248 Memoria/(175439:175441): Cliente conectado (a memoria_sv)
+
+[INFO] 19:53:02:248 Memoria/(175439:175441): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 19:53:04:315 Memoria/(175439:175442): Cliente conectado (a memoria_sv)
+
+[INFO] 19:53:04:315 Memoria/(175439:175442): RESPUESTA AL CONECTAR KERNEL
+[INFO] 19:53:05:488 Memoria/(175439:175442): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 19:53:05:488 Memoria/(175439:175442): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 19:53:05:489 Memoria/(175439:175442): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:53:05:530 Memoria/(175439:175442): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 19:53:05:530 Memoria/(175439:175442): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 19:53:05:574 Memoria/(175439:175442): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:53:05:617 Memoria/(175439:175442): Recibo: id:2 -tamanio:32 - pid:0 
+[INFO] 19:53:05:617 Memoria/(175439:175442): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 19:53:05:661 Memoria/(175439:175442): [KERNEL] Recibido pedido de Eliminar segmento
+[WARNING] 19:53:05:706 Memoria/(175439:175442): Recibo eliminar: id:1 - pid:0 
+[INFO] 19:53:05:706 Memoria/(175439:175442): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:53:05:751 Memoria/(175439:175442): Recibo: id:3 -tamanio:60 - pid:0 
+[ERROR] 19:53:05:753 Memoria/(175439:175442): SOLICITAR COMPACTACION
+[INFO] 19:53:05:754 Memoria/(175439:175442): [KERNEL] Recibido pedido de COMPACTAR
+[INFO] 19:53:21:756 Memoria/(175439:175442): Se ha finalizado la conexion
+[INFO] 19:53:22:324 Memoria/(175439:175441): Se ha finalizado la conexion
+[INFO] 19:53:22:876 Memoria/(175439:175440): Se ha finalizado la conexion
+[INFO] 19:55:58:222 Memoria/(176021:176021): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 19:55:58:224 Memoria/(176021:176021): Algoritmo BEST configurado
+[INFO] 19:55:58:225 Memoria/(176021:176021): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 19:55:58:225 Memoria/(176021:176021): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 19:56:00:328 Memoria/(176021:176022): Cliente conectado (a memoria_sv)
+
+[INFO] 19:56:00:329 Memoria/(176021:176022): RESPUESTA AL CONECTAR CPU
+[INFO] 19:56:02:577 Memoria/(176021:176023): Cliente conectado (a memoria_sv)
+
+[INFO] 19:56:02:578 Memoria/(176021:176023): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 19:56:04:869 Memoria/(176021:176024): Cliente conectado (a memoria_sv)
+
+[INFO] 19:56:04:869 Memoria/(176021:176024): RESPUESTA AL CONECTAR KERNEL
+[INFO] 19:56:06:472 Memoria/(176021:176024): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 19:56:06:472 Memoria/(176021:176024): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 19:56:06:474 Memoria/(176021:176024): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:56:06:517 Memoria/(176021:176024): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 19:56:06:517 Memoria/(176021:176024): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 19:56:06:562 Memoria/(176021:176024): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:56:06:605 Memoria/(176021:176024): Recibo: id:2 -tamanio:32 - pid:0 
+[INFO] 19:56:06:606 Memoria/(176021:176024): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 19:56:06:649 Memoria/(176021:176024): [KERNEL] Recibido pedido de Eliminar segmento
+[WARNING] 19:56:06:693 Memoria/(176021:176024): Recibo eliminar: id:1 - pid:0 
+[INFO] 19:56:06:693 Memoria/(176021:176024): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:56:06:737 Memoria/(176021:176024): Recibo: id:3 -tamanio:60 - pid:0 
+[ERROR] 19:56:06:737 Memoria/(176021:176024): SOLICITAR COMPACTACION
+[INFO] 19:56:06:737 Memoria/(176021:176024): [KERNEL] Recibido pedido de COMPACTAR
+[INFO] 19:57:39:873 Memoria/(176290:176290): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 19:57:39:873 Memoria/(176290:176290): Algoritmo BEST configurado
+[INFO] 19:57:39:873 Memoria/(176290:176290): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 19:57:39:878 Memoria/(176290:176312): Cliente conectado (a memoria_sv)
+
+[INFO] 19:57:39:889 Memoria/(176290:176313): Cliente conectado (a memoria_sv)
+
+[INFO] 19:57:39:897 Memoria/(176290:176314): Cliente conectado (a memoria_sv)
+
+[INFO] 19:57:45:235 Memoria/(176021:176024): Se ha finalizado la conexion
+[INFO] 19:57:45:757 Memoria/(176021:176023): Se ha finalizado la conexion
+[INFO] 19:57:46:229 Memoria/(176021:176022): Se ha finalizado la conexion
+[INFO] 19:57:47:980 Memoria/(176021:176024): Cliente conectado (a memoria_sv)
+
+[ERROR] 19:57:47:980 Memoria/(176021:176024): Algo anduvo mal en el server KERNEL de memoria_sv
+[INFO] 19:57:47:980 Memoria/(176021:176024): Cop: 21919
+[INFO] 19:57:49:088 Memoria/(176021:176023): Cliente conectado (a memoria_sv)
+
+[INFO] 19:57:49:088 Memoria/(176021:176023): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 19:57:51:627 Memoria/(176021:176022): Cliente conectado (a memoria_sv)
+
+[ERROR] 19:57:51:629 Memoria/(176021:176022): Algo anduvo mal en el server CPU de memoria_sv
+[INFO] 19:57:51:630 Memoria/(176021:176022): Cop: 106
+[INFO] 19:58:03:749 Memoria/(176021:176023): Se ha finalizado la conexion
+[INFO] 20:00:52:076 Memoria/(176739:176739): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 20:00:52:076 Memoria/(176739:176739): Algoritmo BEST configurado
+[INFO] 20:00:52:076 Memoria/(176739:176739): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 20:00:52:077 Memoria/(176739:176739): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 20:00:56:216 Memoria/(176739:176756): Cliente conectado (a memoria_sv)
+
+[INFO] 20:00:56:217 Memoria/(176739:176756): RESPUESTA AL CONECTAR CPU
+[INFO] 20:00:58:244 Memoria/(176739:176757): Cliente conectado (a memoria_sv)
+
+[INFO] 20:00:58:245 Memoria/(176739:176757): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 20:01:00:651 Memoria/(176739:176758): Cliente conectado (a memoria_sv)
+
+[INFO] 20:01:00:652 Memoria/(176739:176758): RESPUESTA AL CONECTAR KERNEL
+[INFO] 20:01:02:346 Memoria/(176739:176758): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 20:01:02:346 Memoria/(176739:176758): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 20:01:07:680 Memoria/(176739:176758): [KERNEL] recibido pedido crear segmento
+[WARNING] 20:01:10:248 Memoria/(176739:176758): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 20:01:11:626 Memoria/(176739:176758): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 20:01:14:279 Memoria/(176739:176758): [KERNEL] recibido pedido crear segmento
+[WARNING] 20:01:15:788 Memoria/(176739:176758): Recibo: id:2 -tamanio:32 - pid:0 
+[INFO] 20:01:17:311 Memoria/(176739:176758): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 20:01:20:986 Memoria/(176739:176758): [KERNEL] Recibido pedido de Eliminar segmento
+[WARNING] 20:01:23:324 Memoria/(176739:176758): Recibo eliminar: id:1 - pid:0 
+[INFO] 20:01:30:942 Memoria/(176739:176758): [KERNEL] recibido pedido crear segmento
+[WARNING] 20:01:33:653 Memoria/(176739:176758): Recibo: id:3 -tamanio:60 - pid:0 
+[ERROR] 20:01:37:629 Memoria/(176739:176758): SOLICITAR COMPACTACION
+[INFO] 20:01:51:122 Memoria/(176739:176758): [KERNEL] Recibido pedido de COMPACTAR
+[INFO] 20:03:34:327 Memoria/(177126:177126): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 20:03:34:330 Memoria/(177126:177126): Algoritmo BEST configurado
+[INFO] 20:03:34:330 Memoria/(177126:177126): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 20:03:34:330 Memoria/(177126:177126): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 20:03:35:850 Memoria/(177126:177127): Cliente conectado (a memoria_sv)
+
+[INFO] 20:03:35:850 Memoria/(177126:177127): RESPUESTA AL CONECTAR CPU
+[INFO] 20:03:36:667 Memoria/(177126:177128): Cliente conectado (a memoria_sv)
+
+[INFO] 20:03:36:667 Memoria/(177126:177128): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 20:04:07:612 Memoria/(177126:177129): Cliente conectado (a memoria_sv)
+
+[INFO] 20:04:07:612 Memoria/(177126:177129): RESPUESTA AL CONECTAR KERNEL
+[INFO] 20:04:14:986 Memoria/(177126:177129): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 20:04:14:986 Memoria/(177126:177129): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 20:04:39:745 Memoria/(177126:177129): [KERNEL] recibido pedido crear segmento
+[WARNING] 20:04:39:786 Memoria/(177126:177129): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 20:04:39:786 Memoria/(177126:177129): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 20:04:55:903 Memoria/(177126:177129): [KERNEL] recibido pedido crear segmento
+[WARNING] 20:04:55:946 Memoria/(177126:177129): Recibo: id:2 -tamanio:32 - pid:0 
+[INFO] 20:04:55:946 Memoria/(177126:177129): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 20:05:12:207 Memoria/(177126:177129): [KERNEL] Recibido pedido de Eliminar segmento
+[WARNING] 20:05:12:250 Memoria/(177126:177129): Recibo eliminar: id:1 - pid:0 
+[INFO] 20:05:26:964 Memoria/(177126:177129): [KERNEL] recibido pedido crear segmento
+[WARNING] 20:05:27:005 Memoria/(177126:177129): Recibo: id:3 -tamanio:60 - pid:0 
+[ERROR] 20:05:27:005 Memoria/(177126:177129): SOLICITAR COMPACTACION
+[INFO] 20:05:47:424 Memoria/(177126:177129): [KERNEL] Recibido pedido de COMPACTAR
+[INFO] 20:07:17:337 Memoria/(177126:177129): Se ha finalizado la conexion
+[INFO] 20:07:26:752 Memoria/(177126:177128): Se ha finalizado la conexion
+[INFO] 20:07:27:454 Memoria/(177126:177127): Se ha finalizado la conexion
+[INFO] 20:30:42:011 Memoria/(179797:179797): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 20:30:42:014 Memoria/(179797:179797): Algoritmo BEST configurado
+[INFO] 20:30:42:014 Memoria/(179797:179797): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 20:30:42:014 Memoria/(179797:179797): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 20:30:43:126 Memoria/(179797:179798): Cliente conectado (a memoria_sv)
+
+[INFO] 20:30:43:127 Memoria/(179797:179798): RESPUESTA AL CONECTAR CPU
+[INFO] 20:30:44:031 Memoria/(179797:179799): Cliente conectado (a memoria_sv)
+
+[INFO] 20:30:44:032 Memoria/(179797:179799): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 20:30:44:923 Memoria/(179797:179800): Cliente conectado (a memoria_sv)
+
+[INFO] 20:30:44:924 Memoria/(179797:179800): RESPUESTA AL CONECTAR KERNEL
+[INFO] 20:30:46:297 Memoria/(179797:179800): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 20:30:46:297 Memoria/(179797:179800): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 20:30:46:298 Memoria/(179797:179800): [KERNEL] recibido pedido crear segmento
+[WARNING] 20:30:46:341 Memoria/(179797:179800): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 20:30:46:341 Memoria/(179797:179800): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 20:30:46:386 Memoria/(179797:179800): [KERNEL] recibido pedido crear segmento
+[WARNING] 20:30:46:429 Memoria/(179797:179800): Recibo: id:2 -tamanio:32 - pid:0 
+[INFO] 20:30:46:429 Memoria/(179797:179800): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 20:30:46:473 Memoria/(179797:179800): [KERNEL] Recibido pedido de Eliminar segmento
+[WARNING] 20:30:46:518 Memoria/(179797:179800): Recibo eliminar: id:1 - pid:0 
+[INFO] 20:30:46:518 Memoria/(179797:179800): [KERNEL] recibido pedido crear segmento
+[WARNING] 20:30:46:561 Memoria/(179797:179800): Recibo: id:3 -tamanio:60 - pid:0 
+[ERROR] 20:30:46:561 Memoria/(179797:179800): SOLICITAR COMPACTACION
+[INFO] 20:30:46:561 Memoria/(179797:179800): [KERNEL] Recibido pedido de COMPACTAR
+[INFO] 20:30:56:621 Memoria/(179797:179800): Se ha finalizado la conexion
+[INFO] 20:30:57:410 Memoria/(179797:179799): Se ha finalizado la conexion
+[INFO] 20:30:58:162 Memoria/(179797:179798): Se ha finalizado la conexion
+[INFO] 20:36:38:303 Memoria/(180571:180571): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 20:36:38:305 Memoria/(180571:180571): Algoritmo BEST configurado
+[INFO] 20:36:38:305 Memoria/(180571:180571): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 20:36:38:306 Memoria/(180571:180571): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 20:36:41:327 Memoria/(180571:180572): Cliente conectado (a memoria_sv)
+
+[INFO] 20:36:41:328 Memoria/(180571:180572): RESPUESTA AL CONECTAR CPU
+[INFO] 20:36:43:424 Memoria/(180571:180573): Cliente conectado (a memoria_sv)
+
+[INFO] 20:36:43:424 Memoria/(180571:180573): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 20:36:46:428 Memoria/(180571:180574): Cliente conectado (a memoria_sv)
+
+[INFO] 20:36:46:428 Memoria/(180571:180574): RESPUESTA AL CONECTAR KERNEL
+[INFO] 20:36:47:887 Memoria/(180571:180574): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 20:36:47:887 Memoria/(180571:180574): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 20:36:47:889 Memoria/(180571:180574): [KERNEL] recibido pedido crear segmento
+[WARNING] 20:36:47:930 Memoria/(180571:180574): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 20:36:47:930 Memoria/(180571:180574): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 20:36:47:974 Memoria/(180571:180574): [KERNEL] recibido pedido crear segmento
+[WARNING] 20:36:48:018 Memoria/(180571:180574): Recibo: id:2 -tamanio:32 - pid:0 
+[INFO] 20:36:48:018 Memoria/(180571:180574): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 20:36:48:061 Memoria/(180571:180574): [KERNEL] Recibido pedido de Eliminar segmento
+[WARNING] 20:36:48:105 Memoria/(180571:180574): Recibo eliminar: id:1 - pid:0 
+[INFO] 20:36:48:106 Memoria/(180571:180574): [KERNEL] recibido pedido crear segmento
+[WARNING] 20:36:48:149 Memoria/(180571:180574): Recibo: id:3 -tamanio:60 - pid:0 
+[ERROR] 20:36:48:149 Memoria/(180571:180574): SOLICITAR COMPACTACION
+[INFO] 20:36:48:149 Memoria/(180571:180574): [KERNEL] Recibido pedido de COMPACTAR
+[INFO] 20:37:03:755 Memoria/(180571:180574): Se ha finalizado la conexion
+[INFO] 20:37:04:315 Memoria/(180571:180573): Se ha finalizado la conexion
+[INFO] 20:37:05:018 Memoria/(180571:180572): Se ha finalizado la conexion
+[INFO] 20:37:07:317 Memoria/(180632:180632): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 20:37:07:318 Memoria/(180632:180632): Algoritmo BEST configurado
+[INFO] 20:37:07:318 Memoria/(180632:180632): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 20:37:07:318 Memoria/(180632:180632): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 20:37:08:213 Memoria/(180632:180633): Cliente conectado (a memoria_sv)
+
+[INFO] 20:37:08:214 Memoria/(180632:180633): RESPUESTA AL CONECTAR CPU
+[INFO] 20:37:08:953 Memoria/(180632:180634): Cliente conectado (a memoria_sv)
+
+[INFO] 20:37:08:953 Memoria/(180632:180634): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 20:37:11:253 Memoria/(180632:180635): Cliente conectado (a memoria_sv)
+
+[INFO] 20:37:11:254 Memoria/(180632:180635): RESPUESTA AL CONECTAR KERNEL
+[INFO] 20:37:19:161 Memoria/(180632:180635): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 20:37:19:162 Memoria/(180632:180635): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 20:37:27:091 Memoria/(180632:180635): [KERNEL] recibido pedido crear segmento
+[WARNING] 20:37:27:134 Memoria/(180632:180635): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 20:37:27:134 Memoria/(180632:180635): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 20:37:41:130 Memoria/(180632:180635): [KERNEL] recibido pedido crear segmento
+[WARNING] 20:37:41:174 Memoria/(180632:180635): Recibo: id:2 -tamanio:32 - pid:0 
+[INFO] 20:37:41:175 Memoria/(180632:180635): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 20:38:21:825 Memoria/(180632:180635): [KERNEL] Recibido pedido de Eliminar segmento
+[WARNING] 20:38:21:865 Memoria/(180632:180635): Recibo eliminar: id:1 - pid:0 
+[INFO] 20:38:31:049 Memoria/(180632:180635): [KERNEL] recibido pedido crear segmento
+[WARNING] 20:38:31:090 Memoria/(180632:180635): Recibo: id:3 -tamanio:60 - pid:0 
+[ERROR] 20:38:31:090 Memoria/(180632:180635): SOLICITAR COMPACTACION
+[INFO] 20:38:47:971 Memoria/(180632:180635): [KERNEL] Recibido pedido de COMPACTAR
+[INFO] 20:39:42:252 Memoria/(180632:180635): Se ha finalizado la conexion
+[INFO] 20:39:51:163 Memoria/(180632:180634): Se ha finalizado la conexion
+[INFO] 20:39:51:843 Memoria/(180632:180633): Se ha finalizado la conexion
+[INFO] 20:41:38:583 Memoria/(181270:181270): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 20:41:38:583 Memoria/(181270:181270): Algoritmo BEST configurado
+[INFO] 20:41:38:583 Memoria/(181270:181270): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 20:41:38:583 Memoria/(181270:181270): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 20:41:42:041 Memoria/(181270:181293): Cliente conectado (a memoria_sv)
+
+[INFO] 20:41:42:042 Memoria/(181270:181293): RESPUESTA AL CONECTAR CPU
+[INFO] 20:41:42:823 Memoria/(181270:181294): Cliente conectado (a memoria_sv)
+
+[INFO] 20:41:42:825 Memoria/(181270:181294): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 20:41:44:915 Memoria/(181270:181295): Cliente conectado (a memoria_sv)
+
+[INFO] 20:41:44:916 Memoria/(181270:181295): RESPUESTA AL CONECTAR KERNEL
+[INFO] 20:41:46:520 Memoria/(181270:181295): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 20:41:46:520 Memoria/(181270:181295): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 20:41:49:610 Memoria/(181270:181295): [KERNEL] recibido pedido crear segmento
+[WARNING] 20:41:52:704 Memoria/(181270:181295): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 20:41:54:288 Memoria/(181270:181295): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 20:42:02:019 Memoria/(181270:181295): [KERNEL] recibido pedido crear segmento
+[WARNING] 20:42:03:713 Memoria/(181270:181295): Recibo: id:2 -tamanio:32 - pid:0 
+[INFO] 20:42:06:163 Memoria/(181270:181295): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 20:42:13:638 Memoria/(181270:181295): [KERNEL] Recibido pedido de Eliminar segmento
+[WARNING] 20:42:15:418 Memoria/(181270:181295): Recibo eliminar: id:1 - pid:0 
+[INFO] 20:42:23:435 Memoria/(181270:181295): [KERNEL] recibido pedido crear segmento
+[WARNING] 20:42:27:711 Memoria/(181270:181295): Recibo: id:3 -tamanio:60 - pid:0 
+[ERROR] 20:42:31:416 Memoria/(181270:181295): SOLICITAR COMPACTACION
+[INFO] 20:43:36:040 Memoria/(181270:181295): [KERNEL] Recibido pedido de COMPACTAR
+[INFO] 20:46:47:771 Memoria/(182171:182171): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 20:46:47:773 Memoria/(182171:182171): Algoritmo BEST configurado
+[INFO] 20:46:47:773 Memoria/(182171:182171): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 20:46:47:774 Memoria/(182171:182171): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 20:46:50:966 Memoria/(182171:182206): Cliente conectado (a memoria_sv)
+
+[INFO] 20:46:50:975 Memoria/(182171:182206): RESPUESTA AL CONECTAR CPU
+[INFO] 20:46:51:622 Memoria/(182171:182207): Cliente conectado (a memoria_sv)
+
+[INFO] 20:46:51:624 Memoria/(182171:182207): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 20:46:53:534 Memoria/(182171:182208): Cliente conectado (a memoria_sv)
+
+[INFO] 20:46:53:535 Memoria/(182171:182208): RESPUESTA AL CONECTAR KERNEL
+[INFO] 20:46:54:841 Memoria/(182171:182208): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 20:46:54:841 Memoria/(182171:182208): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 20:46:59:131 Memoria/(182171:182208): [KERNEL] recibido pedido crear segmento
+[WARNING] 20:46:59:132 Memoria/(182171:182208): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 20:47:07:460 Memoria/(182171:182208): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 20:47:14:460 Memoria/(182171:182208): [KERNEL] recibido pedido crear segmento
+[WARNING] 20:47:14:461 Memoria/(182171:182208): Recibo: id:2 -tamanio:32 - pid:0 
+[INFO] 20:49:28:592 Memoria/(182171:182208): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 20:49:48:570 Memoria/(182171:182208): [KERNEL] Recibido pedido de Eliminar segmento
+[WARNING] 20:49:51:395 Memoria/(182171:182208): Recibo eliminar: id:1 - pid:0 
+[INFO] 20:50:06:615 Memoria/(182171:182208): [KERNEL] recibido pedido crear segmento
+[WARNING] 20:50:09:113 Memoria/(182171:182208): Recibo: id:3 -tamanio:60 - pid:0 
+[ERROR] 20:50:11:676 Memoria/(182171:182208): SOLICITAR COMPACTACION
+[INFO] 20:50:20:018 Memoria/(182171:182208): [KERNEL] Recibido pedido de COMPACTAR
+[INFO] 20:50:52:127 Memoria/(182813:182813): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 20:50:52:128 Memoria/(182813:182813): Algoritmo BEST configurado
+[INFO] 20:50:52:128 Memoria/(182813:182813): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 20:50:52:129 Memoria/(182813:182814): Cliente conectado (a memoria_sv)
+
+[INFO] 20:50:52:134 Memoria/(182813:182815): Cliente conectado (a memoria_sv)
+
+[INFO] 20:50:52:140 Memoria/(182813:182816): Cliente conectado (a memoria_sv)
+
+[INFO] 20:51:11:760 Memoria/(182859:182859): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 20:51:11:761 Memoria/(182859:182859): Algoritmo BEST configurado
+[INFO] 20:51:11:762 Memoria/(182859:182859): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 20:51:11:762 Memoria/(182859:182860): Cliente conectado (a memoria_sv)
+
+[INFO] 20:51:11:767 Memoria/(182859:182861): Cliente conectado (a memoria_sv)
+
+[INFO] 20:51:11:774 Memoria/(182859:182862): Cliente conectado (a memoria_sv)
+
+[INFO] 20:53:09:423 Memoria/(183160:183160): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 20:53:09:425 Memoria/(183160:183160): Algoritmo BEST configurado
+[INFO] 20:53:09:425 Memoria/(183160:183160): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 20:53:09:426 Memoria/(183160:183160): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 20:53:10:306 Memoria/(183160:183161): Cliente conectado (a memoria_sv)
+
+[INFO] 20:53:10:306 Memoria/(183160:183161): RESPUESTA AL CONECTAR CPU
+[INFO] 20:53:11:147 Memoria/(183160:183162): Cliente conectado (a memoria_sv)
+
+[INFO] 20:53:11:148 Memoria/(183160:183162): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 20:53:12:052 Memoria/(183160:183163): Cliente conectado (a memoria_sv)
+
+[INFO] 20:53:12:052 Memoria/(183160:183163): RESPUESTA AL CONECTAR KERNEL
+[INFO] 20:53:13:660 Memoria/(183160:183163): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 20:53:13:660 Memoria/(183160:183163): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 20:53:13:662 Memoria/(183160:183163): [KERNEL] recibido pedido crear segmento
+[WARNING] 20:53:13:706 Memoria/(183160:183163): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 20:53:13:706 Memoria/(183160:183163): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 20:53:13:750 Memoria/(183160:183163): [KERNEL] recibido pedido crear segmento
+[WARNING] 20:53:13:794 Memoria/(183160:183163): Recibo: id:2 -tamanio:32 - pid:0 
+[INFO] 20:53:13:794 Memoria/(183160:183163): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 20:53:13:838 Memoria/(183160:183163): [KERNEL] Recibido pedido de Eliminar segmento
+[WARNING] 20:53:13:881 Memoria/(183160:183163): Recibo eliminar: id:1 - pid:0 
+[INFO] 20:53:13:881 Memoria/(183160:183163): [KERNEL] recibido pedido crear segmento
+[WARNING] 20:53:13:926 Memoria/(183160:183163): Recibo: id:3 -tamanio:60 - pid:0 
+[ERROR] 20:53:13:926 Memoria/(183160:183163): SOLICITAR COMPACTACION
+[INFO] 20:53:13:926 Memoria/(183160:183163): [KERNEL] Recibido pedido de COMPACTAR
+[INFO] 20:58:37:942 Memoria/(183778:183778): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 20:58:37:944 Memoria/(183778:183778): Algoritmo BEST configurado
+[INFO] 20:58:37:945 Memoria/(183778:183778): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 20:58:37:952 Memoria/(183778:183797): Cliente conectado (a memoria_sv)
+
+[INFO] 20:58:37:963 Memoria/(183778:183798): Cliente conectado (a memoria_sv)
+
+[INFO] 20:58:37:973 Memoria/(183778:183799): Cliente conectado (a memoria_sv)
+
+[INFO] 20:58:51:639 Memoria/(183160:183163): Se ha finalizado la conexion
+[INFO] 20:58:53:695 Memoria/(183160:183162): Se ha finalizado la conexion
+[INFO] 20:58:54:598 Memoria/(183160:183161): Se ha finalizado la conexion
+[INFO] 21:00:14:645 Memoria/(183973:183973): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 21:00:14:646 Memoria/(183973:183973): Algoritmo BEST configurado
+[INFO] 21:00:14:646 Memoria/(183973:183973): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 21:00:14:646 Memoria/(183973:183973): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 21:00:18:104 Memoria/(183973:183990): Cliente conectado (a memoria_sv)
+
+[INFO] 21:00:18:105 Memoria/(183973:183990): RESPUESTA AL CONECTAR CPU
+[INFO] 21:00:18:889 Memoria/(183973:183991): Cliente conectado (a memoria_sv)
+
+[INFO] 21:00:18:890 Memoria/(183973:183991): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 21:00:21:501 Memoria/(183973:183992): Cliente conectado (a memoria_sv)
+
+[INFO] 21:00:21:502 Memoria/(183973:183992): RESPUESTA AL CONECTAR KERNEL
+[INFO] 21:00:23:828 Memoria/(183973:183992): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 21:00:23:828 Memoria/(183973:183992): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 21:00:26:690 Memoria/(183973:183992): [KERNEL] recibido pedido crear segmento
+[WARNING] 21:00:31:607 Memoria/(183973:183992): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 21:00:37:956 Memoria/(183973:183992): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 21:00:50:594 Memoria/(183973:183992): [KERNEL] recibido pedido crear segmento
+[WARNING] 21:00:55:343 Memoria/(183973:183992): Recibo: id:2 -tamanio:32 - pid:0 
+[INFO] 21:01:04:212 Memoria/(183973:183992): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 21:01:16:317 Memoria/(183973:183992): [KERNEL] Recibido pedido de Eliminar segmento
+[WARNING] 21:01:19:001 Memoria/(183973:183992): Recibo eliminar: id:1 - pid:0 
+[INFO] 21:01:27:465 Memoria/(183973:183992): [KERNEL] recibido pedido crear segmento
+[WARNING] 21:01:30:575 Memoria/(183973:183992): Recibo: id:3 -tamanio:60 - pid:0 
+[ERROR] 21:01:33:029 Memoria/(183973:183992): SOLICITAR COMPACTACION
+[INFO] 21:01:53:134 Memoria/(183973:183992): [KERNEL] Recibido pedido de COMPACTAR
+[INFO] 21:03:22:670 Memoria/(184390:184390): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 21:03:22:671 Memoria/(184390:184390): Algoritmo BEST configurado
+[INFO] 21:03:22:672 Memoria/(184390:184390): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 21:03:22:672 Memoria/(184390:184390): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 21:03:23:683 Memoria/(184390:184391): Cliente conectado (a memoria_sv)
+
+[INFO] 21:03:23:683 Memoria/(184390:184391): RESPUESTA AL CONECTAR CPU
+[INFO] 21:03:24:713 Memoria/(184390:184392): Cliente conectado (a memoria_sv)
+
+[INFO] 21:03:24:713 Memoria/(184390:184392): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 21:03:38:816 Memoria/(184390:184393): Cliente conectado (a memoria_sv)
+
+[INFO] 21:03:38:816 Memoria/(184390:184393): RESPUESTA AL CONECTAR KERNEL
+[INFO] 21:04:18:808 Memoria/(184390:184393): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 21:04:18:808 Memoria/(184390:184393): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 21:04:41:715 Memoria/(184390:184393): [KERNEL] recibido pedido crear segmento
+[WARNING] 21:04:41:758 Memoria/(184390:184393): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 21:04:41:758 Memoria/(184390:184393): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 21:05:03:001 Memoria/(184390:184393): [KERNEL] recibido pedido crear segmento
+[WARNING] 21:05:03:043 Memoria/(184390:184393): Recibo: id:2 -tamanio:32 - pid:0 
+[INFO] 21:05:03:044 Memoria/(184390:184393): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 21:05:14:077 Memoria/(184390:184393): [KERNEL] Recibido pedido de Eliminar segmento
+[WARNING] 21:05:14:118 Memoria/(184390:184393): Recibo eliminar: id:1 - pid:0 
+[INFO] 21:05:14:119 Memoria/(184390:184393): [KERNEL] recibido pedido crear segmento
+[WARNING] 21:05:14:163 Memoria/(184390:184393): Recibo: id:3 -tamanio:60 - pid:0 
+[ERROR] 21:05:14:163 Memoria/(184390:184393): SOLICITAR COMPACTACION
+[INFO] 21:05:26:785 Memoria/(184390:184393): [KERNEL] Recibido pedido de COMPACTAR
+[INFO] 21:06:21:275 Memoria/(184390:184393): Se ha finalizado la conexion
+[INFO] 21:06:33:072 Memoria/(184390:184392): Se ha finalizado la conexion
+[INFO] 21:06:35:112 Memoria/(184390:184391): Se ha finalizado la conexion
+[INFO] 21:09:20:331 Memoria/(185197:185197): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 21:09:20:332 Memoria/(185197:185197): Algoritmo BEST configurado
+[INFO] 21:09:20:333 Memoria/(185197:185197): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 21:09:20:333 Memoria/(185197:185197): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 21:09:21:084 Memoria/(185197:185198): Cliente conectado (a memoria_sv)
+
+[INFO] 21:09:21:084 Memoria/(185197:185198): RESPUESTA AL CONECTAR CPU
+[INFO] 21:09:21:799 Memoria/(185197:185199): Cliente conectado (a memoria_sv)
+
+[INFO] 21:09:21:799 Memoria/(185197:185199): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 21:09:23:670 Memoria/(185197:185200): Cliente conectado (a memoria_sv)
+
+[INFO] 21:09:23:671 Memoria/(185197:185200): RESPUESTA AL CONECTAR KERNEL
+[INFO] 21:09:26:742 Memoria/(185197:185200): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 21:09:26:743 Memoria/(185197:185200): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 21:09:26:744 Memoria/(185197:185200): [KERNEL] recibido pedido crear segmento
+[WARNING] 21:09:26:785 Memoria/(185197:185200): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 21:09:26:785 Memoria/(185197:185200): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 21:09:26:829 Memoria/(185197:185200): [KERNEL] recibido pedido crear segmento
+[WARNING] 21:09:26:874 Memoria/(185197:185200): Recibo: id:2 -tamanio:32 - pid:0 
+[INFO] 21:09:26:874 Memoria/(185197:185200): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 21:09:26:918 Memoria/(185197:185200): [KERNEL] Recibido pedido de Eliminar segmento
+[WARNING] 21:09:26:961 Memoria/(185197:185200): Recibo eliminar: id:1 - pid:0 
+[INFO] 21:09:26:961 Memoria/(185197:185200): [KERNEL] recibido pedido crear segmento
+[WARNING] 21:09:27:006 Memoria/(185197:185200): Recibo: id:3 -tamanio:60 - pid:0 
+[ERROR] 21:09:27:006 Memoria/(185197:185200): SOLICITAR COMPACTACION
+[INFO] 21:09:27:006 Memoria/(185197:185200): [KERNEL] Recibido pedido de COMPACTAR
+[INFO] 21:09:34:840 Memoria/(185197:185200): Se ha finalizado la conexion
+[INFO] 21:09:35:392 Memoria/(185197:185199): Se ha finalizado la conexion
+[INFO] 21:09:36:001 Memoria/(185197:185198): Se ha finalizado la conexion
+[INFO] 21:12:23:695 Memoria/(185711:185711): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 21:12:23:699 Memoria/(185711:185711): Algoritmo BEST configurado
+[INFO] 21:12:23:700 Memoria/(185711:185711): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 21:12:23:700 Memoria/(185711:185711): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 21:12:24:521 Memoria/(185711:185712): Cliente conectado (a memoria_sv)
+
+[INFO] 21:12:24:523 Memoria/(185711:185712): RESPUESTA AL CONECTAR CPU
+[INFO] 21:12:25:384 Memoria/(185711:185713): Cliente conectado (a memoria_sv)
+
+[INFO] 21:12:25:385 Memoria/(185711:185713): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 21:12:27:495 Memoria/(185711:185714): Cliente conectado (a memoria_sv)
+
+[INFO] 21:12:27:495 Memoria/(185711:185714): RESPUESTA AL CONECTAR KERNEL
+[INFO] 21:12:29:093 Memoria/(185711:185714): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 21:12:29:093 Memoria/(185711:185714): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 21:12:29:095 Memoria/(185711:185714): [KERNEL] recibido pedido crear segmento
+[WARNING] 21:12:29:137 Memoria/(185711:185714): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 21:12:29:137 Memoria/(185711:185714): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 21:12:29:182 Memoria/(185711:185714): [KERNEL] recibido pedido crear segmento
+[WARNING] 21:12:29:225 Memoria/(185711:185714): Recibo: id:2 -tamanio:32 - pid:0 
+[INFO] 21:12:29:225 Memoria/(185711:185714): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 21:12:29:269 Memoria/(185711:185714): [KERNEL] Recibido pedido de Eliminar segmento
+[WARNING] 21:12:29:314 Memoria/(185711:185714): Recibo eliminar: id:1 - pid:0 
+[INFO] 21:12:29:314 Memoria/(185711:185714): [KERNEL] recibido pedido crear segmento
+[WARNING] 21:12:29:358 Memoria/(185711:185714): Recibo: id:3 -tamanio:60 - pid:0 
+[ERROR] 21:12:29:358 Memoria/(185711:185714): SOLICITAR COMPACTACION
+[INFO] 21:12:29:358 Memoria/(185711:185714): [KERNEL] Recibido pedido de COMPACTAR
+[INFO] 21:13:02:209 Memoria/(185711:185714): Se ha finalizado la conexion
+[INFO] 21:13:02:785 Memoria/(185711:185713): Se ha finalizado la conexion
+[INFO] 21:13:03:425 Memoria/(185711:185712): Se ha finalizado la conexion
+[INFO] 21:13:10:670 Memoria/(185808:185808): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 21:13:10:674 Memoria/(185808:185808): Algoritmo BEST configurado
+[INFO] 21:13:10:674 Memoria/(185808:185808): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 21:13:10:674 Memoria/(185808:185808): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 21:13:11:444 Memoria/(185808:185809): Cliente conectado (a memoria_sv)
+
+[INFO] 21:13:11:445 Memoria/(185808:185809): RESPUESTA AL CONECTAR CPU
+[INFO] 21:13:13:134 Memoria/(185808:185810): Cliente conectado (a memoria_sv)
+
+[INFO] 21:13:13:134 Memoria/(185808:185810): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 21:13:25:154 Memoria/(185808:185811): Cliente conectado (a memoria_sv)
+
+[INFO] 21:13:25:155 Memoria/(185808:185811): RESPUESTA AL CONECTAR KERNEL
+[INFO] 21:13:37:802 Memoria/(185808:185811): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 21:13:37:802 Memoria/(185808:185811): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 21:13:37:803 Memoria/(185808:185811): [KERNEL] recibido pedido crear segmento
+[WARNING] 21:13:37:845 Memoria/(185808:185811): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 21:13:37:846 Memoria/(185808:185811): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 21:14:47:083 Memoria/(185808:185811): [KERNEL] recibido pedido crear segmento
+[WARNING] 21:14:47:885 Memoria/(185808:185811): Recibo: id:2 -tamanio:32 - pid:0 
+[INFO] 21:14:47:885 Memoria/(185808:185811): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 21:15:35:940 Memoria/(185808:185811): [KERNEL] Recibido pedido de Eliminar segmento
+[WARNING] 21:15:37:096 Memoria/(185808:185811): Recibo eliminar: id:1 - pid:0 
+[INFO] 21:16:28:594 Memoria/(185808:185811): [KERNEL] recibido pedido crear segmento
+[WARNING] 21:16:29:994 Memoria/(185808:185811): Recibo: id:3 -tamanio:60 - pid:0 
+[ERROR] 21:16:29:994 Memoria/(185808:185811): SOLICITAR COMPACTACION
+[INFO] 21:16:53:337 Memoria/(185808:185811): [KERNEL] Recibido pedido de COMPACTAR
+[INFO] 21:31:31:412 Memoria/(185808:185810): Se ha finalizado la conexion
+[INFO] 21:31:32:156 Memoria/(185808:185809): Se ha finalizado la conexion
+[INFO] 21:36:47:783 Memoria/(188355:188355): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 21:36:47:784 Memoria/(188355:188355): Algoritmo BEST configurado
+[INFO] 21:36:47:784 Memoria/(188355:188355): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 21:36:47:784 Memoria/(188355:188355): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 21:36:48:576 Memoria/(188355:188356): Cliente conectado (a memoria_sv)
+
+[INFO] 21:36:48:577 Memoria/(188355:188356): RESPUESTA AL CONECTAR CPU
+[INFO] 21:36:49:249 Memoria/(188355:188357): Cliente conectado (a memoria_sv)
+
+[INFO] 21:36:49:250 Memoria/(188355:188357): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 21:36:50:019 Memoria/(188355:188358): Cliente conectado (a memoria_sv)
+
+[INFO] 21:36:50:019 Memoria/(188355:188358): RESPUESTA AL CONECTAR KERNEL
+[INFO] 21:36:51:377 Memoria/(188355:188358): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 21:36:51:378 Memoria/(188355:188358): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 21:36:51:379 Memoria/(188355:188358): [KERNEL] recibido pedido crear segmento
+[WARNING] 21:36:51:421 Memoria/(188355:188358): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 21:36:51:421 Memoria/(188355:188358): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 21:36:51:467 Memoria/(188355:188358): [KERNEL] recibido pedido crear segmento
+[WARNING] 21:36:51:513 Memoria/(188355:188358): Recibo: id:2 -tamanio:32 - pid:0 
+[INFO] 21:36:51:514 Memoria/(188355:188358): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 21:36:51:557 Memoria/(188355:188358): [KERNEL] Recibido pedido de Eliminar segmento
+[WARNING] 21:36:51:601 Memoria/(188355:188358): Recibo eliminar: id:1 - pid:0 
+[INFO] 21:36:51:602 Memoria/(188355:188358): [KERNEL] recibido pedido crear segmento
+[WARNING] 21:36:51:650 Memoria/(188355:188358): Recibo: id:3 -tamanio:60 - pid:0 
+[ERROR] 21:36:51:650 Memoria/(188355:188358): SOLICITAR COMPACTACION
+[INFO] 21:36:51:651 Memoria/(188355:188358): [KERNEL] Recibido pedido de COMPACTAR

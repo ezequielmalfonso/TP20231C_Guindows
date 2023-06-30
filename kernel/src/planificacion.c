@@ -392,13 +392,22 @@ void esperar_cpu(){
 										break;
 				case CREATE_SEGMENT_COMPACTO:
 										log_warning(logger, "SOLICITAR COMPACTACION");
-										op = MAKE_COMPACTATION;
+										op_code cop_make = MAKE_COMPACTATION;
 										pthread_mutex_lock(&mx_memoria);
-										send(memoria_fd,&op,sizeof(op_code),0);
+										send(memoria_fd,&cop_make,sizeof(op_code),0);
 										pthread_mutex_unlock(&mx_memoria);
 
+										log_warning(logger, "ESPERO FIN DE COMPACTACION");
+
+										recv(memoria_fd, &cop_memo, sizeof(op_code), 0);
+
+										if(cop_memo == FIN_COMPACTATION){
+											log_warning(logger, "SOLICITAR CREACION DEL SEGMENTO NUEVAMENTE LUEGO DE LA COMPACTACION");
+										}
 										// TODO Actualizar tablas de segmento de todos los procesos
 										// y enviar nuevamente la solicitud de CREATE_SEGMENTE para el proceso
+										// y hacer lo mismo que arriba de este case y enviar contexto a cpu
+										break;
 
 				}
 
