@@ -12350,3 +12350,195 @@ ALGORITMO_ASIGNACION: BEST
 [INFO] 17:49:58:985 Memoria/(4670:4673): Se ha finalizado la conexion
 [INFO] 17:49:59:670 Memoria/(4670:4672): Se ha finalizado la conexion
 [INFO] 17:50:00:987 Memoria/(4670:4671): Se ha finalizado la conexion
+[INFO] 18:14:24:001 Memoria/(4903:4903): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 18:14:24:002 Memoria/(4903:4903): Algoritmo BEST configurado
+[INFO] 18:14:24:002 Memoria/(4903:4903): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 18:14:24:002 Memoria/(4903:4903): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 18:14:26:460 Memoria/(4903:4904): Cliente conectado (a memoria_sv)
+
+[INFO] 18:14:26:460 Memoria/(4903:4904): RESPUESTA AL CONECTAR CPU
+[INFO] 18:14:29:304 Memoria/(4903:4905): Cliente conectado (a memoria_sv)
+
+[INFO] 18:14:29:304 Memoria/(4903:4905): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 18:14:31:952 Memoria/(4903:4906): Cliente conectado (a memoria_sv)
+
+[INFO] 18:14:31:952 Memoria/(4903:4906): RESPUESTA AL CONECTAR KERNEL
+[INFO] 18:14:35:024 Memoria/(4903:4906): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 18:14:35:024 Memoria/(4903:4906): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 18:14:35:025 Memoria/(4903:4906): [KERNEL] recibido pedido crear segmento
+[WARNING] 18:14:35:067 Memoria/(4903:4906): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 18:14:35:067 Memoria/(4903:4906): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 18:14:35:111 Memoria/(4903:4906): [KERNEL] recibido pedido crear segmento
+[WARNING] 18:14:35:154 Memoria/(4903:4906): Recibo: id:2 -tamanio:32 - pid:0 
+[INFO] 18:14:35:154 Memoria/(4903:4906): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 18:14:35:199 Memoria/(4903:4906): [KERNEL] Recibido pedido de Eliminar segmento
+[WARNING] 18:14:35:242 Memoria/(4903:4906): Recibo eliminar: id:1 - pid:0 
+[INFO] 18:14:35:243 Memoria/(4903:4906): Direccion del seg a llenar:32
+[INFO] 18:14:35:243 Memoria/(4903:4906): creo un hueco: base:32 - tam: 32
+[INFO] 18:14:35:243 Memoria/(4903:4906): [KERNEL] recibido pedido crear segmento
+[WARNING] 18:14:35:286 Memoria/(4903:4906): Recibo: id:3 -tamanio:60 - pid:0 
+[ERROR] 18:14:35:286 Memoria/(4903:4906): SOLICITAR COMPACTACION
+[INFO] 18:14:35:288 Memoria/(4903:4906): Direccion del hueco leida:96
+[INFO] 18:14:35:288 Memoria/(4903:4906): Direccion del hueco leida:32
+[INFO] 18:14:35:288 Memoria/(4903:4906): Direccion del hueco a llenar:32
+[INFO] 18:14:35:288 Memoria/(4903:4906): pos buscada:64
+[INFO] 18:14:35:288 Memoria/(4903:4906): encontre el segmento 64
+[INFO] 18:14:35:288 Memoria/(4903:4906): segmento encontado pid:0 - sid:2 - base:64
+[INFO] 18:14:35:288 Memoria/(4903:4906): id:2
+[INFO] 18:14:35:288 Memoria/(4903:4906): encontro segmento id:2 - tam:32
+[INFO] 18:14:35:288 Memoria/(4903:4906): leyo
+[INFO] 18:14:35:288 Memoria/(4903:4906): escribio
+[INFO] 18:14:35:288 Memoria/(4903:4906): nueva direccion del seg 2 :32
+[INFO] 18:14:35:288 Memoria/(4903:4906): quedan 2 huecos
+[INFO] 18:14:35:288 Memoria/(4903:4906): Direccion del hueco leida:96
+[INFO] 18:14:35:288 Memoria/(4903:4906): Direccion del hueco leida:64
+[INFO] 18:14:35:288 Memoria/(4903:4906): Direccion del hueco a llenar:64
+[INFO] 18:14:35:288 Memoria/(4903:4906): pos buscada:96
+[INFO] 18:14:35:288 Memoria/(4903:4906): encontre hueco base:96
+[INFO] 18:14:35:288 Memoria/(4903:4906): encontre hueco para eliminar
+[INFO] 18:14:35:288 Memoria/(4903:4906): hueco a eliminar pos:1 - base:64 - tam:32
+[INFO] 18:14:35:288 Memoria/(4903:4906): elimine hueco
+[INFO] 18:14:35:288 Memoria/(4903:4906): pase el eliminar
+[INFO] 18:14:35:288 Memoria/(4903:4906): id:84
+[INFO] 18:14:35:288 Memoria/(4903:4906): es un hueco
+[INFO] 18:14:35:288 Memoria/(4903:4906): quedan 1 huecos
+[INFO] 18:14:35:288 Memoria/(4903:4906): Termine compactacion
+[INFO] 18:23:32:270 Memoria/(4903:4906): Se ha finalizado la conexion
+[INFO] 18:23:33:272 Memoria/(4903:4905): Se ha finalizado la conexion
+[INFO] 18:23:34:138 Memoria/(4903:4904): Se ha finalizado la conexion
+[INFO] 18:23:48:740 Memoria/(5352:5352): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 18:23:48:742 Memoria/(5352:5352): Algoritmo BEST configurado
+[INFO] 18:23:48:743 Memoria/(5352:5352): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 18:23:48:744 Memoria/(5352:5352): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 18:23:50:559 Memoria/(5352:5353): Cliente conectado (a memoria_sv)
+
+[INFO] 18:23:50:560 Memoria/(5352:5353): RESPUESTA AL CONECTAR CPU
+[INFO] 18:23:52:668 Memoria/(5352:5354): Cliente conectado (a memoria_sv)
+
+[INFO] 18:23:52:669 Memoria/(5352:5354): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 18:23:54:500 Memoria/(5352:5355): Cliente conectado (a memoria_sv)
+
+[INFO] 18:23:54:501 Memoria/(5352:5355): RESPUESTA AL CONECTAR KERNEL
+[INFO] 18:24:20:674 Memoria/(5352:5355): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 18:24:20:674 Memoria/(5352:5355): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 18:24:20:675 Memoria/(5352:5355): [KERNEL] recibido pedido crear segmento
+[WARNING] 18:24:20:719 Memoria/(5352:5355): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 18:24:20:719 Memoria/(5352:5355): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 18:24:20:765 Memoria/(5352:5355): [KERNEL] recibido pedido crear segmento
+[WARNING] 18:24:20:807 Memoria/(5352:5355): Recibo: id:2 -tamanio:32 - pid:0 
+[INFO] 18:24:20:807 Memoria/(5352:5355): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 18:24:20:851 Memoria/(5352:5355): [KERNEL] Recibido pedido de Eliminar segmento
+[WARNING] 18:24:20:902 Memoria/(5352:5355): Recibo eliminar: id:1 - pid:0 
+[INFO] 18:24:20:902 Memoria/(5352:5355): Direccion del seg a llenar:32
+[INFO] 18:24:20:902 Memoria/(5352:5355): creo un hueco: base:32 - tam: 32
+[INFO] 18:24:20:902 Memoria/(5352:5355): [KERNEL] recibido pedido crear segmento
+[WARNING] 18:24:20:943 Memoria/(5352:5355): Recibo: id:3 -tamanio:60 - pid:0 
+[ERROR] 18:24:20:943 Memoria/(5352:5355): SOLICITAR COMPACTACION
+[INFO] 18:24:20:943 Memoria/(5352:5355): Direccion del hueco leida:96
+[INFO] 18:24:20:943 Memoria/(5352:5355): Direccion del hueco leida:32
+[INFO] 18:24:20:943 Memoria/(5352:5355): Direccion del hueco a llenar:32
+[INFO] 18:24:20:943 Memoria/(5352:5355): pos buscada:64
+[INFO] 18:24:20:943 Memoria/(5352:5355): encontre el segmento 64
+[INFO] 18:24:20:943 Memoria/(5352:5355): segmento encontado pid:0 - sid:2 - base:64
+[INFO] 18:24:20:943 Memoria/(5352:5355): id:2
+[INFO] 18:24:20:943 Memoria/(5352:5355): encontro segmento id:2 - tam:32
+[INFO] 18:24:20:943 Memoria/(5352:5355): leyo
+[INFO] 18:24:20:943 Memoria/(5352:5355): escribio
+[INFO] 18:24:20:943 Memoria/(5352:5355): nueva direccion del seg 2 :32
+[INFO] 18:24:20:943 Memoria/(5352:5355): quedan 2 huecos
+[INFO] 18:24:20:943 Memoria/(5352:5355): Direccion del hueco leida:96
+[INFO] 18:24:20:943 Memoria/(5352:5355): Direccion del hueco leida:64
+[INFO] 18:24:20:943 Memoria/(5352:5355): Direccion del hueco a llenar:64
+[INFO] 18:24:20:943 Memoria/(5352:5355): pos buscada:96
+[INFO] 18:24:20:943 Memoria/(5352:5355): encontre hueco base:96
+[INFO] 18:24:20:943 Memoria/(5352:5355): encontre hueco para eliminar
+[INFO] 18:24:20:943 Memoria/(5352:5355): hueco a eliminar pos:1 - base:64 - tam:32
+[INFO] 18:24:20:943 Memoria/(5352:5355): elimine hueco
+[INFO] 18:24:20:943 Memoria/(5352:5355): pase el eliminar
+[INFO] 18:24:20:943 Memoria/(5352:5355): id:84
+[INFO] 18:24:20:943 Memoria/(5352:5355): es un hueco
+[INFO] 18:24:20:943 Memoria/(5352:5355): quedan 1 huecos
+[INFO] 18:24:20:943 Memoria/(5352:5355): Termine compactacion
+[INFO] 18:52:42:862 Memoria/(5352:5355): Se ha finalizado la conexion
+[INFO] 18:52:44:140 Memoria/(5352:5354): Se ha finalizado la conexion
+[INFO] 18:52:45:502 Memoria/(5352:5353): Se ha finalizado la conexion
+[INFO] 18:52:53:067 Memoria/(5749:5749): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 18:52:53:073 Memoria/(5749:5749): Algoritmo BEST configurado
+[INFO] 18:52:53:073 Memoria/(5749:5749): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 18:52:53:074 Memoria/(5749:5749): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 18:52:54:741 Memoria/(5749:5750): Cliente conectado (a memoria_sv)
+
+[INFO] 18:52:54:742 Memoria/(5749:5750): RESPUESTA AL CONECTAR CPU
+[INFO] 18:52:56:727 Memoria/(5749:5751): Cliente conectado (a memoria_sv)
+
+[INFO] 18:52:56:728 Memoria/(5749:5751): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 18:52:58:272 Memoria/(5749:5752): Cliente conectado (a memoria_sv)
+
+[INFO] 18:52:58:272 Memoria/(5749:5752): RESPUESTA AL CONECTAR KERNEL
+[INFO] 18:53:00:752 Memoria/(5749:5752): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 18:53:00:752 Memoria/(5749:5752): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 18:53:00:753 Memoria/(5749:5752): [KERNEL] recibido pedido crear segmento
+[WARNING] 18:53:00:794 Memoria/(5749:5752): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 18:53:00:795 Memoria/(5749:5752): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 18:53:00:841 Memoria/(5749:5752): [KERNEL] recibido pedido crear segmento
+[WARNING] 18:53:00:883 Memoria/(5749:5752): Recibo: id:2 -tamanio:32 - pid:0 
+[INFO] 18:53:00:883 Memoria/(5749:5752): [KERNEL] Envio de segmento id:2 para programa 0
+[INFO] 18:53:00:929 Memoria/(5749:5752): [KERNEL] Recibido pedido de Eliminar segmento
+[WARNING] 18:53:00:970 Memoria/(5749:5752): Recibo eliminar: id:1 - pid:0 
+[INFO] 18:53:00:970 Memoria/(5749:5752): Direccion del seg a llenar:32
+[INFO] 18:53:00:971 Memoria/(5749:5752): creo un hueco: base:32 - tam: 32
+[INFO] 18:53:00:971 Memoria/(5749:5752): [KERNEL] recibido pedido crear segmento
+[WARNING] 18:53:01:017 Memoria/(5749:5752): Recibo: id:3 -tamanio:60 - pid:0 
+[ERROR] 18:53:01:017 Memoria/(5749:5752): SOLICITAR COMPACTACION
+[INFO] 18:53:01:017 Memoria/(5749:5752): Direccion del hueco leida:96
+[INFO] 18:53:01:017 Memoria/(5749:5752): Direccion del hueco leida:32
+[INFO] 18:53:01:017 Memoria/(5749:5752): Direccion del hueco a llenar:32
+[INFO] 18:53:01:017 Memoria/(5749:5752): pos buscada:64
+[INFO] 18:53:01:017 Memoria/(5749:5752): encontre el segmento 64
+[INFO] 18:53:01:017 Memoria/(5749:5752): segmento encontado pid:0 - sid:2 - base:64
+[INFO] 18:53:01:017 Memoria/(5749:5752): id:2
+[INFO] 18:53:01:017 Memoria/(5749:5752): encontro segmento id:2 - tam:32
+[INFO] 18:53:01:017 Memoria/(5749:5752): leyo
+[INFO] 18:53:01:017 Memoria/(5749:5752): escribio
+[INFO] 18:53:01:017 Memoria/(5749:5752): nueva direccion del seg 2 :32
+[INFO] 18:53:01:017 Memoria/(5749:5752): quedan 2 huecos
+[INFO] 18:53:01:017 Memoria/(5749:5752): Direccion del hueco leida:96
+[INFO] 18:53:01:017 Memoria/(5749:5752): Direccion del hueco leida:64
+[INFO] 18:53:01:017 Memoria/(5749:5752): Direccion del hueco a llenar:64
+[INFO] 18:53:01:017 Memoria/(5749:5752): pos buscada:96
+[INFO] 18:53:01:017 Memoria/(5749:5752): encontre hueco base:96
+[INFO] 18:53:01:017 Memoria/(5749:5752): encontre hueco para eliminar
+[INFO] 18:53:01:017 Memoria/(5749:5752): hueco a eliminar pos:1 - base:64 - tam:32
+[INFO] 18:53:01:017 Memoria/(5749:5752): elimine hueco
+[INFO] 18:53:01:017 Memoria/(5749:5752): pase el eliminar
+[INFO] 18:53:01:017 Memoria/(5749:5752): id:84
+[INFO] 18:53:01:017 Memoria/(5749:5752): es un hueco
+[INFO] 18:53:01:017 Memoria/(5749:5752): quedan 1 huecos
+[INFO] 18:53:01:017 Memoria/(5749:5752): Termine compactacion
+[INFO] 18:53:01:059 Memoria/(5749:5752): [KERNEL] recibido pedido crear segmento
+[WARNING] 18:53:01:103 Memoria/(5749:5752): Recibo: id:3 -tamanio:60 - pid:0 
+[INFO] 18:53:01:103 Memoria/(5749:5752): [KERNEL] Envio de segmento id:3 para programa 0

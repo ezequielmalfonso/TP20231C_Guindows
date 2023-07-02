@@ -411,6 +411,7 @@ void esperar_cpu(){
 										log_warning(logger, "Actualizar segmento %d del proceso %d con la base: %d",seg_id,pid,nueva_base);
 
 										}
+										pcb->pc-=1;
 										log_warning(logger, "termino compactacion");
 
 										// TODO Actualizar tablas de segmento de todos los procesos

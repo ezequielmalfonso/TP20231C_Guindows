@@ -378,6 +378,7 @@ void eliminarHueco(t_segmento* h){
 	log_info(logger,"elimine hueco");
 
 }
+
 t_segmento* buscarSiguienteSegmento(t_segmento* h){
 	uint64_t pos_buscada = h->direccion_base+h->tamanio_segmento;
 	log_info(logger,"pos buscada:%d",pos_buscada);

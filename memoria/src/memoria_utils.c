@@ -287,7 +287,7 @@ void eliminarSegmentoProceso(uint32_t pid, uint32_t sid){
 }
 
 void agregarHueco(t_segmento* seg){
-	bool hayQueAgregarlo;
+	bool hayQueAgregarlo = true;
 //	int breakcondition;
 	log_info(logger,"Direccion del seg a llenar:%d",seg->direccion_base);
 	t_segmento* sAux = list_get(tabla_de_huecos,0);
@@ -309,7 +309,7 @@ void agregarHueco(t_segmento* seg){
 		log_info(logger,"manoseo el hueco");
 		}
 	}
-	if(!hayQueAgregarlo)
+	if(hayQueAgregarlo)
 	{
 		t_segmento* nuevo_hueco=malloc(sizeof(t_segmento));
 		nuevo_hueco->direccion_base=seg->direccion_base;
