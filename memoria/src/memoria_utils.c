@@ -289,6 +289,7 @@ void eliminarSegmentoProceso(uint32_t pid, uint32_t sid){
 void agregarHueco(t_segmento* seg){
 	bool hayQueAgregarlo;
 //	int breakcondition;
+	log_info(logger,"Direccion del seg a llenar:%d",seg->direccion_base);
 	t_segmento* sAux = list_get(tabla_de_huecos,0);
 	// TODO ESTA BIEN Q en los dos if ponga la variable hayQueAgregarlo en false???
 	for(int i = 0;i<list_size(tabla_de_huecos);i++){
@@ -296,6 +297,7 @@ void agregarHueco(t_segmento* seg){
 		if(seg->direccion_base==sAux->direccion_base+sAux->tamanio_segmento){
 		sAux->tamanio_segmento+=seg->tamanio_segmento; //un hueco termina donde arranca el nuevo
 		hayQueAgregarlo = false;
+		log_info(logger,"manoseo el hueco");
 		}
 	}
 	for(int i=0;i<list_size(tabla_de_huecos);i++){
@@ -304,11 +306,16 @@ void agregarHueco(t_segmento* seg){
 		sAux->direccion_base=seg->direccion_base;
 		sAux->tamanio_segmento+=seg->tamanio_segmento;
 		hayQueAgregarlo = false;
+		log_info(logger,"manoseo el hueco");
 		}
 	}
 	if(!hayQueAgregarlo)
 	{
-		list_add(tabla_de_huecos,seg);
+		t_segmento* nuevo_hueco=malloc(sizeof(t_segmento));
+		nuevo_hueco->direccion_base=seg->direccion_base;
+		nuevo_hueco->tamanio_segmento=seg->tamanio_segmento;
+		log_info(logger,"creo un hueco: base:%d - tam: %d",nuevo_hueco->direccion_base,nuevo_hueco->tamanio_segmento);
+		list_add(tabla_de_huecos,nuevo_hueco);
 	}
 
 
@@ -323,8 +330,13 @@ void agregarHueco(t_segmento* seg){
 	//
 
 }
+
 t_segmento* unirHuecosAlfinal(t_segmento* hueco, t_segmento* huecoNuevo){
 	hueco->tamanio_segmento+=huecoNuevo->tamanio_segmento;
 
 return hueco;
 }
+
+
+
+

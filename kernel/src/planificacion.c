@@ -382,10 +382,10 @@ void esperar_cpu(){
 										list_add(pcb->tabla_de_segmentos, segmento);
 
 										log_warning(logger,"Recibiendo Segmento: Id: %d - Dir Base: %d - Tamanio: %d", id_segmento, direccion_base, tamanio_segmento);
-
 										pthread_mutex_lock(&mx_cola_ready);  // TODO hacer mas pruebas
 										send_proceso(cpu_fd, pcb,DISPATCH);
 										pthread_mutex_unlock(&mx_cola_ready);
+
 										break;
 				case CREATE_SEGMENT_FAIL:
 										log_error(logger, "NO HAY SUFICIENTE");
@@ -400,16 +400,29 @@ void esperar_cpu(){
 										log_warning(logger, "ESPERO FIN DE COMPACTACION");
 
 										recv(memoria_fd, &cop_memo, sizeof(op_code), 0);
+										uint32_t pid;
+										uint32_t seg_id;
+										uint64_t nueva_base;
+										while(cop_memo == ACTUALIZAR_SEGMENTO){
+										recv(memoria_fd,&pid,sizeof(uint32_t),0);
+										recv(memoria_fd,&nueva_base,sizeof(uint64_t),0);
+										recv(memoria_fd,&seg_id,sizeof(uint32_t),0);
+										recv(memoria_fd, &cop_memo, sizeof(op_code), 0);
+										log_warning(logger, "Actualizar segmento %d del proceso %d con la base: %d",seg_id,pid,nueva_base);
 
-										if(cop_memo == FIN_COMPACTATION){
-											log_warning(logger, "SOLICITAR CREACION DEL SEGMENTO NUEVAMENTE LUEGO DE LA COMPACTACION");
 										}
+										log_warning(logger, "termino compactacion");
+
 										// TODO Actualizar tablas de segmento de todos los procesos
 										// y enviar nuevamente la solicitud de CREATE_SEGMENTE para el proceso
 										// y hacer lo mismo que arriba de este case y enviar contexto a cpu
+										pthread_mutex_lock(&mx_cola_ready);  // TODO hacer mas pruebas
+										send_proceso(cpu_fd, pcb,DISPATCH);
+										pthread_mutex_unlock(&mx_cola_ready);
 										break;
 
 				}
+
 
 				sem_post(&s_esperar_cpu);
 

@@ -21,7 +21,9 @@
 #include "memoria_utils.h"
 #include <semaphore.h>
 
-
+extern t_list* tabla_de_huecos;
+extern void* memoria;
+extern t_list* tabla_de_paginas;
 //KERNEL
 int kernel_escuchar(char* server_name, int server_socket);
 //CPU
