@@ -29,6 +29,7 @@ typedef struct {
 
 
 extern t_super_bloque* configuracionSuperBloque;
+extern int memoria_fd;
 void cargarBloqueIndirecto(int descriptor, int offset);
 void guardarBloqueIndirecto(int descriptor, int offset);
 

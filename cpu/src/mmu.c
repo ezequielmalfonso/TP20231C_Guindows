@@ -21,7 +21,8 @@ void mov_in(char direccion_logica[20], char registro[20], PCB_t* pcb){
 	send_pedido_memoria(memoria_fd,n_segmento,desplazamiento1,(pcb->pid),tamanio, MOV_IN);
 	recv(memoria_fd, registro_recibido ,tamanio, MSG_WAITALL);
 	memcpy(registro_recibido+4,"\n",2);
-		log_info(logger,"estamos recibiendo de memoria: %s", registro_recibido);
+
+	log_info(logger,"estamos recibiendo de memoria: %s", registro_recibido);
 	log_info(logger,"estamos seteando de memoria: %d", tamanio);
 
 	set_registro(registro, registro_recibido, pcb);
@@ -50,9 +51,11 @@ void mov_out(char* direccion_logica, char* registro,PCB_t* pcb){
 
 int checkSegmentetitonFault(uint32_t desplazamiento, uint32_t n_segmento,PCB_t* pcb){
 	t_segmento* segmentoN;
-		for(int i;i<list_size(pcb->tabla_de_segmentos);i++){
+	int i;
+	for(i = 0;i<list_size(pcb->tabla_de_segmentos);i++){
 		segmentoN = list_get(pcb->tabla_de_segmentos,i);
-		if(segmentoN->id_segmento == n_segmento)break;
+		if(segmentoN->id_segmento == n_segmento)
+			break;
 	}
 	return desplazamiento > segmentoN->tamanio_segmento;
 }
@@ -72,46 +75,45 @@ void set_registro(char* registro1,char* registro_recibido, PCB_t* pcb){
 	registro_recibido = strtok(registro_recibido,"\n");
 	if(!strcmp(registro,"AX")){
 		memcpy(regAX, registro_recibido, sizeof(char) * 5);
-		log_info(logger, "reg AX: %s", regAX);
-		//parseo_registro(registro_recibido, pcb,4);
+		log_warning(logger, "Contenido registro AX: %.4s", regAX);
 	}else if(!strcmp(registro,"BX")){
 		memcpy(regBX, registro_recibido, sizeof(char) * 5);
-		//parseo_registro(registro_recibido, pcb,4);
+		log_warning(logger, "Contenido registro BX: %.4s", regBX);
 	}else if(!strcmp(registro,"CX")){
 		memcpy(regCX, registro_recibido, sizeof(char) * 5);
-		//parseo_registro(registro_recibido, pcb,4);
+		log_warning(logger, "Contenido registro CX: %.4s", regCX);
 	}else if(!strcmp(registro,"DX")){
 		memcpy(regDX, registro_recibido, sizeof(char) * 5);
-		//parseo_registro(registro_recibido, pcb,4);
+		log_warning(logger, "Contenido registro DX: %.4s", regDX);
 	}else if(!strcmp(registro,"EAX")){
 		memcpy(regEAX, registro_recibido, sizeof(char) * 9);
-		//parseo_registro(registro_recibido, pcb,8);
+		log_warning(logger, "Contenido registro EAX: %.8s", regEAX);
 	}else if(!strcmp(registro,"EBX")){
 		memcpy(regEBX, registro_recibido, sizeof(char) * 9);
-		//parseo_registro(registro_recibido, pcb,8);
+		log_warning(logger, "Contenido registro EBX: %.8s", regEBX);
 	}else if(!strcmp(registro,"ECX")){
 		memcpy(regECX, registro_recibido, sizeof(char) * 9);
-		//parseo_registro(registro_recibido, pcb,8);
+		log_warning(logger, "Contenido registro ECX: %.8s", regECX);
 	}else if(!strcmp(registro,"EDX")){
 		memcpy(regEDX, registro_recibido, sizeof(char) * 9);
-		//parseo_registro(registro_recibido, pcb,16);
+		log_warning(logger, "Contenido registro EDX: %.8s", regEDX);
 	}else if(!strcmp(registro,"RAX")){
 		memcpy(regRAX, registro_recibido, sizeof(char) * 17);
-		//parseo_registro(registro_recibido, pcb,16);
+		log_warning(logger, "Contenido registro RAX: %.16s", regRAX);
 	}else if(!strcmp(registro,"RBX")){
 		memcpy(regRBX, registro_recibido, sizeof(char) * 17);
-		//parseo_registro(registro_recibido, pcb,16);
+		log_warning(logger, "Contenido registro RBX: %.16s", regRBX);
 	}else if(!strcmp(registro,"RCX")){
 		memcpy(regRCX, registro_recibido, sizeof(char) * 17);
-		//parseo_registro(registro_recibido, pcb,16);
+		log_warning(logger, "Contenido registro RCX: %.16s", regRCX);
 	}else if(!strcmp(registro,"RDX")){
 		memcpy(regRDX, registro_recibido, sizeof(char) * 17);
-		//parseo_registro(registro_recibido, pcb,16);
+		log_warning(logger, "Contenido registro RDX: %.16s", regRDX);
 	}else{
 		log_error(logger,"me fui al else del set");
 	}
-	log_info(logger, "Realizado SET del registro %s con valor %s", registro, regAX);
-	log_info(logger, "Realizado SET del registro %s con valor %s", registro, regBX);
+	//log_info(logger, "Realizado SET del registro %s con valor %s", registro, regAX);
+	//log_info(logger, "Realizado SET del registro %s con valor %s", registro, regBX);
 
 }
 
@@ -168,17 +170,19 @@ void* leer_registro(char* registro1){
 	log_info(logger, "Realizado lectura del registro %s con valor %s", registro, registro_recibido);
 	return registro_recibido;
 }
-/*void parseo_registro(char registro_recibido[20], PCB_t* pcb,int tamanio){
-	//log_warning(logger,"Registro recibido: %s - tamaño: %d: ",strtok(registro_recibido,"\0"), tamanio);
-		int i = 0;
-		char reg[tamanio];
 
-		while( i < tamanio)
-		{
-			reg[i] = registro_recibido[i];
-			i++;
-		}
-		log_error(logger, "reg: %s", reg);
-		strcpy(pcb->registro_cpu->ax,reg);
-		log_warning(logger,"Valor en el registro ax: %s", pcb->registro_cpu->ax);
-}*/
+// PARA FILESYSTEM
+void* traducirAFisica(void* direccion_logica, PCB_t* pcb){
+	uint32_t desplazamiento1 = desplazamiento(direccion_logica);
+	uint32_t n_segmento = num_seg(direccion_logica);
+
+	if(checkSegmentetitonFault(desplazamiento1, n_segmento,pcb)){
+		log_error(logger, "segmentation fault");
+	}
+	log_error(logger, "Desp: %d - Seg: %d", desplazamiento1, n_segmento );
+	return atoi (string_from_format("%d%d", n_segmento, desplazamiento1));
+
+
+}
+
+

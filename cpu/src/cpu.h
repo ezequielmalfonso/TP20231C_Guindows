@@ -19,8 +19,10 @@
 #include "cpuConfig.h"
 #include "mmu.h"
 
+
 extern int cpuServer;
 extern int memoria_fd;
+extern void* base_memoria;
 extern void *regAX, *regBX, *regCX, *regDX, *regEAX, *regEBX, *regECX, *regEDX, *regRAX, *regRBX, *regRCX, *regRDX;	// REGISTROS
 
 op_code iniciar_ciclo_instruccion(PCB_t* pcb);

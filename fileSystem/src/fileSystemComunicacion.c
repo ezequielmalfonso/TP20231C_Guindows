@@ -393,12 +393,18 @@ static void procesar_conexion(void* void_args) {
 				 log_info(logger, "Se leyo en un bloque %s", buffer);
 				 free(buffer);
 			 }
-			 log_info(logger, "Lectura completa: %s, listo para enviar a memoria", leido);
-			 // TODO
-			 //send leido a memoria
-			 // 		NOTA: creo que al fs le debe llegar la direccion fisica.
-			 //recv ok de memoria
-			 cop = F_READ_OK;
+			 log_info(logger, "Lectura completa: %s, listo para enviar a memoria - tamanio: %d", leido, atoi(parametro3));
+
+
+			 send_fs_memoria_read(memoria_fd,atoi(parametro2),atoi(parametro3),leido, MOV_IN);
+
+			 recv(memoria_fd, &cop, sizeof(op_code), 0);
+
+			 if(cop == MOV_IN_OK){
+				 cop = F_READ_OK;
+			 }else{
+				 cop = F_READ_FAIL;
+			 }
 			 config_destroy(FCB);
 			 send(cliente_socket, &cop, sizeof(op_code), 0);
 			 break;
@@ -422,12 +428,18 @@ static void procesar_conexion(void* void_args) {
 				 send(cliente_socket, &cop, sizeof(cop), 0);
 			 }
 
-			 //void* escribirBuffer = malloc(tamanio_a_escribir);
+			 void* escribirBuffer = malloc(tamanio_a_escribir);
+
 			 //TODO
 			 //send pedido a memoria
+			 send_fs_memoria(memoria_fd,atoi(parametro2),tamanio_a_escribir, MOV_OUT);
+
+			 recv(memoria_fd, escribirBuffer, tamanio_a_escribir, MSG_WAITALL);
+			 log_warning(logger, "Recibiendo buffer que escribir: %s", escribirBuffer);
+
 			 //recv datos de memoria
 			 // if memo fail -> send kernel F_WRITE_FAIL
-			 void* escribirBuffer = "holachauaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";	// borrar
+			 //void* escribirBuffer = "holachauaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";	// borrar
 
 			 int bloques_necesarios = ceil((double)tamanio_a_escribir / configuracionSuperBloque->BLOCK_SIZE);
 			 int bloque_inicial = floor((double)posicion / configuracionSuperBloque->BLOCK_SIZE);
@@ -470,8 +482,7 @@ static void procesar_conexion(void* void_args) {
 					 log_info(logger, "Se ha escrito en el bloque con puntero %d", puntero);
 				 }
 			 }
-
-			 //free(escribirBuffer);	descomentar cuando se descomente el malloc
+			 //free(escribirBuffer);
 			 cop = F_WRITE_OK;
 			 config_destroy(FCB);
 			 send(cliente_socket, &cop, sizeof(op_code), 0);

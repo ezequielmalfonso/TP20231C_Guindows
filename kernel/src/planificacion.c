@@ -977,6 +977,7 @@ void esperar_cpu(){
 				archivoAux2 = list_find(pcb->archivos_abiertos, aux3);
 				int posicion = archivoAux2->puntero;
 				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, string_itoa(posicion), F_READ);
+				log_info(logger, "PID: %d - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS", pcb->pid);
 				}
 
 				// Hilo de espera a respuesta
@@ -1025,6 +1026,7 @@ void esperar_cpu(){
 				archivoAux2 = list_find(pcb->archivos_abiertos, aux3);
 				int posicion = archivoAux2->puntero;
 				send_archivo(file_system_fd, instruccion->parametro1, instruccion->parametro2, instruccion->parametro3, string_itoa(posicion), F_WRITE);
+				log_info(logger, "PID: %d - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS", pcb->pid);
 				}
 				// Hilo de espera a respuesta
 				pthread_t hilo_bloqueado_write;
@@ -1285,6 +1287,8 @@ void execute_ftruncate(PCB_t* pcb) {
 void esperar_filesystem(PCB_t* pcb){	// Solo instrucciones con demora
 
 	op_code mensaje;
+
+	bool entro_error = false;
 	//log_info(logger, "PID: %d - En hilo esperando respuesta de FS", pcb->pid);
 
 	recv(file_system_fd, &mensaje , sizeof(op_code), 0);
@@ -1298,7 +1302,10 @@ void esperar_filesystem(PCB_t* pcb){	// Solo instrucciones con demora
 			pthread_mutex_lock(&mx_cola_ready);
 			queue_push(cola_ready, pcb);
 			pthread_mutex_unlock(&mx_cola_ready);
-			sem_post(&s_cont_ready);
+			// Lista los pids despues de entrar a ready
+			char* pids = procesosEnReady(cola_ready);
+			log_info(logger, "Ingreso a Ready algoritmo %s - PIDS: [%s] ", configuracion->ALGORITMO_PLANIFICACION, pids);
+			//sem_post(&s_cont_ready);
 
 			break;
 		case F_TRUNCATE_FAIL:
@@ -1306,11 +1313,13 @@ void esperar_filesystem(PCB_t* pcb){	// Solo instrucciones con demora
 		case F_WRITE_FAIL:
 			char motivoExit[] = "Fallo una instruccion al FS";
 			execute_a_exit(pcb,motivoExit);	// no hace el signal de ready_execute xq ya lo hizo antes
+			entro_error = true;
 			break;
 		default:	// no deberia entrar nunca
 			log_error(logger, "Error en case de hilo de espera a respuesta del FS");
 			char motivoExit2[] = "ERROR inesperado con operacion con demora del FS";
 			execute_a_exit(pcb,motivoExit2);	// no hace el signal de ready_execute xq ya lo hizo antes
+			entro_error = true;
 			break;
 	}
 	/*
@@ -1355,6 +1364,10 @@ void esperar_filesystem(PCB_t* pcb){	// Solo instrucciones con demora
 		{
 			execute_ftruncate(pcb_blocked);
 		}
+	}
+
+	if(!entro_error){
+		sem_post(&s_cont_ready);
 	}
 }
 

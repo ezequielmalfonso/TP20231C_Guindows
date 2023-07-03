@@ -73,7 +73,8 @@ typedef enum {
 	F_WRITE_FAIL,
 	F_READ_OK,
 	F_READ_FAIL,
-	MOV_OUT_OK
+	MOV_OUT_OK,
+	MOV_IN_OK
 	}op_code;
 
 typedef struct {
@@ -120,5 +121,15 @@ bool recv_escribir_memoria(int fd, uint32_t* num_seg, uint32_t* desplazamiento, 
 static void deserializar_escribir_memoria(void* stream, uint32_t* param1, uint32_t* param2, uint32_t* param3,int* param4, void* escribir) ;
 static void* serializar_escribir_memoria(size_t* size, uint32_t param1, uint32_t param2, uint32_t param3,void* param4, int tam, op_code codigo) ;
 bool send_escribir_memoria(int fd, uint32_t num_seg, uint32_t desplazamiento, uint32_t pid,void* escribir,int tamanio, op_code codigo);
+//ENVIO FS a MEMORIA
+bool send_fs_memoria(int memoria_fd, uint32_t dirreccion_fisica, int tamanio, op_code codigo);
+static void* serializar_fs_memoria(size_t* size, uint32_t dirreccion_fisica, int tamanio, op_code codigo);
+//recibo En memoria de FS
+bool recv_fs_memoria(int fd, uint32_t* direccion_fisica, int* tamanio);
+void deserializar_fs_memoria(void* stream, uint32_t* direccion_fisica, int* tamanio);
+bool send_fs_memoria_read(int memoria_fd, uint32_t dir_fisica, int tamanio,void* leido, op_code codigo);
+static void* serializar_fs_memoria_read(size_t* size, uint32_t dir_fisica, int tamanio,void* leido, op_code codigo);
+bool recv_fs_memoria_read(int fd, uint32_t* direccion_fisica, int* tamanio, void* leido);
+void deserializar_fs_memoria_read(void* stream, uint32_t* direccion_fisica, int* tamanio, void* leido);
 
 #endif /* SRC_PROTOCOLO_H_ */
