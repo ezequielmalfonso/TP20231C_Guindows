@@ -158,8 +158,8 @@ int execute(INSTRUCCION* instruccion_ejecutar, registros_t registros, uint16_t p
 
 		log_info(logger,"PID: %d - Listo para ejecutar F_WRITE ", pid);
 		void* instruccion_fisica = traducirAFisica( atoi(instruccion_ejecutar->parametro2), pcb);
-		log_warning(logger, "Dir Fisica: %d ", instruccion_fisica);
-		strcpy(instruccion_ejecutar->parametro2, string_itoa(instruccion_fisica));
+		log_warning(logger, "Dir Fisica: %s ", instruccion_fisica);
+		strcpy(instruccion_ejecutar->parametro2, instruccion_fisica);
 
 		return F_WRITE;
 
@@ -168,7 +168,8 @@ int execute(INSTRUCCION* instruccion_ejecutar, registros_t registros, uint16_t p
 		log_info(logger,"PID: %d - Listo para ejecutar F_READ ", pid);
 
 		void* instruccion_fisica = traducirAFisica( atoi(instruccion_ejecutar->parametro2), pcb);
-		strcpy(instruccion_ejecutar->parametro2, string_itoa(instruccion_fisica));
+		log_warning(logger, "Dir Fisica: %s ", instruccion_fisica);
+		strcpy(instruccion_ejecutar->parametro2, instruccion_fisica);
 
 		return F_READ;
 

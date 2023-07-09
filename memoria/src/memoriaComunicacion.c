@@ -260,29 +260,37 @@ static void procesar_fileSystem(void * void_args) {
     				//send(cliente_socket, &(configuracion -> TAM_PAGINA), sizeof(uint16_t), 0);
     				//pthread_mutex_unlock(&mx_cpu);
     				break;
-    case MOV_OUT:
+    case MOV_OUT: // WRITE
     				log_info(logger, "[FS] Recibo MOV_OUT");
-    				uint32_t direccion_fisica;
+    				char direccion_fisica[20];
     				int tamanio;
-    				recv_fs_memoria(cliente_socket, &direccion_fisica, &tamanio);
-    				log_warning(logger, "Recibimos dir fisica: %d - Tamanio: %d",direccion_fisica, tamanio);
+    				recv_fs_memoria(cliente_socket, direccion_fisica, &tamanio);
+    				char** seg_desp_pid =  string_split(direccion_fisica, "x");
+    				log_warning(logger, "Recibimos dir fisica: %s - Tamanio: %d",direccion_fisica, tamanio);
     				//TODO  separar direccion fisica en NRO SEG y OFFSET
     				// y escribir en memoria
     				void* buffer = malloc(tamanio);
     				strcpy(buffer, "probando");
 
+    				log_error(logger, "Enviando buffer a FS: %s ", buffer);
     				send(cliente_socket, buffer, tamanio, MSG_WAITALL);
 
     				break;
-    case MOV_IN: {
+    case MOV_IN: { // READ
     			  log_info(logger, "[FS] Recibo MOV_IN");
-    			  uint32_t direccion_fisica;
+    			  char direccion_fisica[20];
         		  int tamanio;
         		  void* leido;
         		  //TODO  separar direccion fisica en NRO SEG y OFFSET
         		  // y leer en memoria
-        		  recv_fs_memoria_read(cliente_socket, &direccion_fisica, &tamanio, leido);
-        		  log_warning(logger, "Recibimos dir fisica: %d - Tamanio: %d",direccion_fisica, tamanio);
+        		  recv_fs_memoria_read(cliente_socket, direccion_fisica, &tamanio, leido);
+        		  char** seg_desp_pid =  string_split(direccion_fisica, "x");
+
+        		  log_info(logger, "PID: %d - N° Segmento: %d, Desplazamiento: %d, Tamanio: %d", *pid, *num_seg, *desplazamiento1, *tamanio);
+        		  //log_info(logger, "xPID: %lu - N° Segmento: %lu, Desplazamiento: %lu, Tamanio: %d", *pid, *num_seg, *desplazamiento1, *tamanio);
+        		  void* leido = leerMemoria(*num_seg, *desplazamiento1, *pid, *tamanio);
+        		  log_error(logger, "Explote de la dir fisica: Seg: %s - Desp: %s - Pid: %s", seg_desp_pid[0], seg_desp_pid[1], seg_desp_pid[2]);
+        		  log_warning(logger, "Recibimos dir fisica: %s - Tamanio: %d",direccion_fisica, tamanio);
 
         		  //TODO
         		  op_code cop = MOV_IN_OK;

@@ -396,7 +396,7 @@ static void procesar_conexion(void* void_args) {
 			 log_info(logger, "Lectura completa: %s, listo para enviar a memoria - tamanio: %d", leido, atoi(parametro3));
 
 
-			 send_fs_memoria_read(memoria_fd,atoi(parametro2),atoi(parametro3),leido, MOV_IN);
+			 send_fs_memoria_read(memoria_fd,parametro2,atoi(parametro3),leido, MOV_IN);
 
 			 recv(memoria_fd, &cop, sizeof(op_code), 0);
 
@@ -432,7 +432,7 @@ static void procesar_conexion(void* void_args) {
 
 			 //TODO
 			 //send pedido a memoria
-			 send_fs_memoria(memoria_fd,atoi(parametro2),tamanio_a_escribir, MOV_OUT);
+			 send_fs_memoria(memoria_fd,parametro2,tamanio_a_escribir, MOV_OUT);
 
 			 recv(memoria_fd, escribirBuffer, tamanio_a_escribir, MSG_WAITALL);
 			 log_warning(logger, "Recibiendo buffer que escribir: %s", escribirBuffer);

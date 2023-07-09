@@ -65,8 +65,9 @@ int calcularTam(char* registro){
 	case 'E': return 8;
 	case 'R': return 16;
 	default: return 4;
+   }
 }
-}
+
 void set_registro(char* registro1,char* registro_recibido, PCB_t* pcb){
 	//log_warning(logger,"Registro: %s", registro_recibido);
 	//pcb->registro_cpu = malloc(sizeof(registros_t));
@@ -179,8 +180,9 @@ void* traducirAFisica(void* direccion_logica, PCB_t* pcb){
 	if(checkSegmentetitonFault(desplazamiento1, n_segmento,pcb)){
 		log_error(logger, "segmentation fault");
 	}
+
 	log_error(logger, "Desp: %d - Seg: %d", desplazamiento1, n_segmento );
-	return atoi (string_from_format("%d%d", n_segmento, desplazamiento1));
+	return string_from_format("%dx%dx%d", n_segmento,desplazamiento1, pcb->pid);
 
 
 }

@@ -13561,3 +13561,295 @@ ALGORITMO_ASIGNACION: BEST
 [WARNING] 23:49:48:800 Memoria/(227370:227372): Recibimos dir fisica: 4 - Tamanio: 20
 [INFO] 23:49:51:802 Memoria/(227370:227372): [FS] Recibo MOV_OUT
 [WARNING] 23:49:51:804 Memoria/(227370:227372): Recibimos dir fisica: 4 - Tamanio: 20
+[INFO] 18:09:37:584 Memoria/(227370:227373): Se ha finalizado la conexion
+[INFO] 18:09:38:200 Memoria/(227370:227372): Se ha finalizado la conexion
+[INFO] 18:09:38:961 Memoria/(227370:227371): Se ha finalizado la conexion
+[INFO] 19:06:40:717 Memoria/(231883:231883): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 19:06:40:718 Memoria/(231883:231883): Algoritmo BEST configurado
+[INFO] 19:06:40:718 Memoria/(231883:231883): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 19:06:40:738 Memoria/(231883:231883): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 19:06:44:554 Memoria/(231883:231884): Cliente conectado (a memoria_sv)
+
+[INFO] 19:06:44:555 Memoria/(231883:231884): RESPUESTA AL CONECTAR CPU
+[INFO] 19:06:49:039 Memoria/(231883:231885): Cliente conectado (a memoria_sv)
+
+[INFO] 19:06:49:039 Memoria/(231883:231885): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 19:06:53:796 Memoria/(231883:231886): Cliente conectado (a memoria_sv)
+
+[INFO] 19:06:53:796 Memoria/(231883:231886): RESPUESTA AL CONECTAR KERNEL
+[INFO] 19:07:19:476 Memoria/(231883:231886): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 19:07:19:476 Memoria/(231883:231886): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 19:07:21:483 Memoria/(231883:231886): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:07:21:525 Memoria/(231883:231886): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 19:07:21:525 Memoria/(231883:231886): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 19:07:23:562 Memoria/(231883:231885): [FS] Recibo MOV_IN
+[WARNING] 19:07:23:562 Memoria/(231883:231885): Recibimos dir fisica: 963120624 - Tamanio: 20
+[INFO] 19:07:26:564 Memoria/(231883:231885): [FS] Recibo MOV_OUT
+[WARNING] 19:07:26:565 Memoria/(231883:231885): Recibimos dir fisica: 963120624 - Tamanio: 0
+[INFO] 19:08:15:503 Memoria/(231883:231886): Se ha finalizado la conexion
+[INFO] 19:08:16:351 Memoria/(231883:231885): Se ha finalizado la conexion
+[INFO] 19:08:17:799 Memoria/(231883:231884): Se ha finalizado la conexion
+[INFO] 19:14:09:099 Memoria/(232240:232240): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 19:14:09:100 Memoria/(232240:232240): Algoritmo BEST configurado
+[INFO] 19:14:09:100 Memoria/(232240:232240): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 19:14:09:101 Memoria/(232240:232240): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 19:14:11:308 Memoria/(232240:232241): Cliente conectado (a memoria_sv)
+
+[INFO] 19:14:11:308 Memoria/(232240:232241): RESPUESTA AL CONECTAR CPU
+[INFO] 19:14:14:910 Memoria/(232240:232242): Cliente conectado (a memoria_sv)
+
+[INFO] 19:14:14:910 Memoria/(232240:232242): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 19:14:16:471 Memoria/(232240:232243): Cliente conectado (a memoria_sv)
+
+[INFO] 19:14:16:471 Memoria/(232240:232243): RESPUESTA AL CONECTAR KERNEL
+[INFO] 19:14:18:458 Memoria/(232240:232243): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 19:14:18:458 Memoria/(232240:232243): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 19:14:20:463 Memoria/(232240:232243): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:14:20:506 Memoria/(232240:232243): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 19:14:20:506 Memoria/(232240:232243): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 19:14:21:557 Memoria/(232240:232241): Se ha finalizado la conexion
+[INFO] 19:14:21:558 Memoria/(232240:232243): Se ha finalizado la conexion
+[INFO] 19:14:32:633 Memoria/(232240:232242): Se ha finalizado la conexion
+[INFO] 19:18:23:164 Memoria/(232526:232526): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 19:18:23:165 Memoria/(232526:232526): Algoritmo BEST configurado
+[INFO] 19:18:23:165 Memoria/(232526:232526): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 19:18:23:165 Memoria/(232526:232526): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 19:18:25:222 Memoria/(232526:232527): Cliente conectado (a memoria_sv)
+
+[INFO] 19:18:25:222 Memoria/(232526:232527): RESPUESTA AL CONECTAR CPU
+[INFO] 19:18:28:280 Memoria/(232526:232528): Cliente conectado (a memoria_sv)
+
+[INFO] 19:18:28:280 Memoria/(232526:232528): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 19:18:31:492 Memoria/(232526:232529): Cliente conectado (a memoria_sv)
+
+[INFO] 19:18:31:492 Memoria/(232526:232529): RESPUESTA AL CONECTAR KERNEL
+[INFO] 19:18:38:832 Memoria/(232526:232529): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 19:18:38:832 Memoria/(232526:232529): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 19:18:40:838 Memoria/(232526:232529): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:18:40:881 Memoria/(232526:232529): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 19:18:40:881 Memoria/(232526:232529): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 19:18:42:917 Memoria/(232526:232528): [FS] Recibo MOV_IN
+[WARNING] 19:18:42:917 Memoria/(232526:232528): Recibimos dir fisica: 458591728 - Tamanio: 20
+[INFO] 19:18:45:919 Memoria/(232526:232528): [FS] Recibo MOV_OUT
+[WARNING] 19:18:45:919 Memoria/(232526:232528): Recibimos dir fisica: 458591728 - Tamanio: 0
+[INFO] 19:20:27:715 Memoria/(232526:232529): Se ha finalizado la conexion
+[INFO] 19:20:28:306 Memoria/(232526:232528): Se ha finalizado la conexion
+[INFO] 19:20:29:099 Memoria/(232526:232527): Se ha finalizado la conexion
+[INFO] 19:20:32:750 Memoria/(232676:232676): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 19:20:32:751 Memoria/(232676:232676): Algoritmo BEST configurado
+[INFO] 19:20:32:752 Memoria/(232676:232676): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 19:20:32:752 Memoria/(232676:232676): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 19:20:34:111 Memoria/(232676:232677): Cliente conectado (a memoria_sv)
+
+[INFO] 19:20:34:112 Memoria/(232676:232677): RESPUESTA AL CONECTAR CPU
+[INFO] 19:20:35:671 Memoria/(232676:232678): Cliente conectado (a memoria_sv)
+
+[INFO] 19:20:35:672 Memoria/(232676:232678): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 19:20:36:996 Memoria/(232676:232679): Cliente conectado (a memoria_sv)
+
+[INFO] 19:20:36:996 Memoria/(232676:232679): RESPUESTA AL CONECTAR KERNEL
+[INFO] 19:20:38:592 Memoria/(232676:232679): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 19:20:38:592 Memoria/(232676:232679): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 19:20:40:599 Memoria/(232676:232679): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:20:40:641 Memoria/(232676:232679): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 19:20:40:641 Memoria/(232676:232679): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 19:20:42:679 Memoria/(232676:232678): [FS] Recibo MOV_IN
+[WARNING] 19:20:42:679 Memoria/(232676:232678): Recibimos dir fisica: 2125893104 - Tamanio: 20
+[INFO] 19:20:45:681 Memoria/(232676:232678): [FS] Recibo MOV_OUT
+[WARNING] 19:20:45:682 Memoria/(232676:232678): Recibimos dir fisica: 2125893104 - Tamanio: 0
+[INFO] 19:21:29:171 Memoria/(232676:232679): Se ha finalizado la conexion
+[INFO] 19:21:30:332 Memoria/(232676:232678): Se ha finalizado la conexion
+[INFO] 19:21:31:356 Memoria/(232676:232677): Se ha finalizado la conexion
+[INFO] 19:27:54:423 Memoria/(232962:232962): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 19:27:54:424 Memoria/(232962:232962): Algoritmo BEST configurado
+[INFO] 19:27:54:424 Memoria/(232962:232962): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 19:27:54:424 Memoria/(232962:232962): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 19:27:56:440 Memoria/(232962:232963): Cliente conectado (a memoria_sv)
+
+[INFO] 19:27:56:440 Memoria/(232962:232963): RESPUESTA AL CONECTAR CPU
+[INFO] 19:27:58:804 Memoria/(232962:232964): Cliente conectado (a memoria_sv)
+
+[INFO] 19:27:58:804 Memoria/(232962:232964): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 19:28:01:235 Memoria/(232962:232965): Cliente conectado (a memoria_sv)
+
+[INFO] 19:28:01:235 Memoria/(232962:232965): RESPUESTA AL CONECTAR KERNEL
+[INFO] 19:28:03:091 Memoria/(232962:232965): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 19:28:03:091 Memoria/(232962:232965): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 19:28:05:096 Memoria/(232962:232965): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:28:05:137 Memoria/(232962:232965): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 19:28:05:138 Memoria/(232962:232965): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 19:28:07:176 Memoria/(232962:232964): [FS] Recibo MOV_IN
+[WARNING] 19:28:07:176 Memoria/(232962:232964): Recibimos dir fisica: ‡MP\ - Tamanio: 20
+[INFO] 19:28:10:178 Memoria/(232962:232964): [FS] Recibo MOV_OUT
+[WARNING] 19:28:10:178 Memoria/(232962:232964): Recibimos dir fisica: ‡MP - Tamanio: 0
+[ERROR] 19:28:10:178 Memoria/(232962:232964): Enviando buffer a FS: probando 
+[INFO] 19:28:51:630 Memoria/(232962:232965): Se ha finalizado la conexion
+[INFO] 19:28:52:141 Memoria/(232962:232964): Se ha finalizado la conexion
+[INFO] 19:28:52:862 Memoria/(232962:232963): Se ha finalizado la conexion
+[INFO] 19:31:58:208 Memoria/(233242:233242): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 19:31:58:210 Memoria/(233242:233242): Algoritmo BEST configurado
+[INFO] 19:31:58:210 Memoria/(233242:233242): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 19:31:58:211 Memoria/(233242:233242): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 19:32:00:426 Memoria/(233242:233243): Cliente conectado (a memoria_sv)
+
+[INFO] 19:32:00:426 Memoria/(233242:233243): RESPUESTA AL CONECTAR CPU
+[INFO] 19:32:02:982 Memoria/(233242:233244): Cliente conectado (a memoria_sv)
+
+[INFO] 19:32:02:983 Memoria/(233242:233244): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 19:32:05:516 Memoria/(233242:233245): Cliente conectado (a memoria_sv)
+
+[INFO] 19:32:05:517 Memoria/(233242:233245): RESPUESTA AL CONECTAR KERNEL
+[INFO] 19:32:07:300 Memoria/(233242:233245): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 19:32:07:300 Memoria/(233242:233245): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 19:32:09:305 Memoria/(233242:233245): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:32:09:345 Memoria/(233242:233245): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 19:32:09:345 Memoria/(233242:233245): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 19:32:11:381 Memoria/(233242:233244): [FS] Recibo MOV_IN
+[WARNING] 19:32:11:381 Memoria/(233242:233244): Recibimos dir fisica: ‡ù„r - Tamanio: 20
+[INFO] 19:32:14:383 Memoria/(233242:233244): [FS] Recibo MOV_OUT
+[WARNING] 19:32:14:383 Memoria/(233242:233244): Recibimos dir fisica: ‡ù„r - Tamanio: 20
+[ERROR] 19:32:14:383 Memoria/(233242:233244): Enviando buffer a FS: probando 
+[INFO] 19:36:05:935 Memoria/(233242:233245): Se ha finalizado la conexion
+[INFO] 19:36:06:424 Memoria/(233242:233244): Se ha finalizado la conexion
+[INFO] 19:36:07:056 Memoria/(233242:233243): Se ha finalizado la conexion
+[INFO] 19:36:10:601 Memoria/(233699:233699): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 19:36:10:603 Memoria/(233699:233699): Algoritmo BEST configurado
+[INFO] 19:36:10:603 Memoria/(233699:233699): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 19:36:10:603 Memoria/(233699:233699): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 19:36:13:204 Memoria/(233699:233700): Cliente conectado (a memoria_sv)
+
+[INFO] 19:36:13:204 Memoria/(233699:233700): RESPUESTA AL CONECTAR CPU
+[INFO] 19:36:15:701 Memoria/(233699:233701): Cliente conectado (a memoria_sv)
+
+[INFO] 19:36:15:702 Memoria/(233699:233701): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 19:36:18:046 Memoria/(233699:233702): Cliente conectado (a memoria_sv)
+
+[INFO] 19:36:18:046 Memoria/(233699:233702): RESPUESTA AL CONECTAR KERNEL
+[INFO] 19:36:20:688 Memoria/(233699:233702): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 19:36:20:688 Memoria/(233699:233702): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 19:36:22:693 Memoria/(233699:233702): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:36:22:740 Memoria/(233699:233702): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 19:36:22:741 Memoria/(233699:233702): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 19:36:24:781 Memoria/(233699:233701): [FS] Recibo MOV_IN
+[WARNING] 19:36:24:781 Memoria/(233699:233701): Recibimos dir fisica: 0x4x0 - Tamanio: 20
+[INFO] 19:36:27:783 Memoria/(233699:233701): [FS] Recibo MOV_OUT
+[WARNING] 19:36:27:784 Memoria/(233699:233701): Recibimos dir fisica: 0x4x0 - Tamanio: 20
+[ERROR] 19:36:27:784 Memoria/(233699:233701): Enviando buffer a FS: probando 
+[INFO] 19:36:43:112 Memoria/(233699:233702): Se ha finalizado la conexion
+[INFO] 19:36:43:688 Memoria/(233699:233701): Se ha finalizado la conexion
+[INFO] 19:36:44:281 Memoria/(233699:233700): Se ha finalizado la conexion
+[INFO] 19:40:54:651 Memoria/(234045:234045): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 19:40:54:654 Memoria/(234045:234045): Algoritmo BEST configurado
+[INFO] 19:40:54:654 Memoria/(234045:234045): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 19:40:54:655 Memoria/(234045:234045): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 19:40:56:909 Memoria/(234045:234046): Cliente conectado (a memoria_sv)
+
+[INFO] 19:40:56:909 Memoria/(234045:234046): RESPUESTA AL CONECTAR CPU
+[INFO] 19:40:59:008 Memoria/(234045:234047): Cliente conectado (a memoria_sv)
+
+[INFO] 19:40:59:008 Memoria/(234045:234047): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 19:41:01:759 Memoria/(234045:234048): Cliente conectado (a memoria_sv)
+
+[INFO] 19:41:01:760 Memoria/(234045:234048): RESPUESTA AL CONECTAR KERNEL
+[INFO] 19:41:03:133 Memoria/(234045:234048): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 19:41:03:134 Memoria/(234045:234048): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 19:41:05:139 Memoria/(234045:234048): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:41:05:181 Memoria/(234045:234048): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 19:41:05:181 Memoria/(234045:234048): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 19:41:07:222 Memoria/(234045:234047): [FS] Recibo MOV_IN
+[INFO] 19:42:24:132 Memoria/(234149:234149): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 128
+TAM_SEGMENTO_0: 32
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 19:42:24:135 Memoria/(234149:234149): Algoritmo BEST configurado
+[INFO] 19:42:24:136 Memoria/(234149:234149): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 19:42:24:136 Memoria/(234149:234149): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 19:42:26:813 Memoria/(234149:234150): Cliente conectado (a memoria_sv)
+
+[INFO] 19:42:26:813 Memoria/(234149:234150): RESPUESTA AL CONECTAR CPU
+[INFO] 19:42:28:976 Memoria/(234149:234151): Cliente conectado (a memoria_sv)
+
+[INFO] 19:42:28:977 Memoria/(234149:234151): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 19:42:30:464 Memoria/(234149:234152): Cliente conectado (a memoria_sv)
+
+[INFO] 19:42:30:465 Memoria/(234149:234152): RESPUESTA AL CONECTAR KERNEL
+[INFO] 19:42:32:697 Memoria/(234149:234152): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 19:42:32:697 Memoria/(234149:234152): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 19:42:34:703 Memoria/(234149:234152): [KERNEL] recibido pedido crear segmento
+[WARNING] 19:42:34:746 Memoria/(234149:234152): Recibo: id:1 -tamanio:32 - pid:0 
+[INFO] 19:42:34:746 Memoria/(234149:234152): [KERNEL] Envio de segmento id:1 para programa 0
+[INFO] 19:42:36:787 Memoria/(234149:234151): [FS] Recibo MOV_IN
+[ERROR] 19:42:36:787 Memoria/(234149:234151): Explote de la dir fisica: Seg: 0 - Desp: 4 - Pid: 0
+[WARNING] 19:42:36:787 Memoria/(234149:234151): Recibimos dir fisica: 0x4x0 - Tamanio: 20
+[INFO] 19:42:39:789 Memoria/(234149:234151): [FS] Recibo MOV_OUT
+[WARNING] 19:42:39:790 Memoria/(234149:234151): Recibimos dir fisica: 0x4x0 - Tamanio: 20
+[ERROR] 19:42:39:790 Memoria/(234149:234151): Enviando buffer a FS: probando 
