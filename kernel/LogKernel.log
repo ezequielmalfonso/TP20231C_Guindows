@@ -3033,3 +3033,88 @@ GRADO_MAX_MULTIPROGRAMACION: 4
 [WARNING] 23:55:02:086 Kernel/(3604:3606): Recibiendo Segmento: Id: 3 - Dir Base: 64 - Tamanio: 60
 [INFO] 23:55:02:087 Kernel/(3604:3606): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
 [INFO] 23:55:02:087 Kernel/(3604:3606): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 00:34:27:062 Kernel/(3870:3870): Probando hora 0
+[INFO] 00:34:27:063 Kernel/(3870:3870): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 00:34:27:064 Kernel/(3870:3870): RECURSO: DISCO con 1 instancias
+[INFO] 00:34:27:064 Kernel/(3870:3870): RECURSO: MODEM con 1 instancias
+[INFO] 00:34:27:064 Kernel/(3870:3870): Cantidad total de recursos disponibles: 2 
+[INFO] 00:34:27:064 Kernel/(3870:3870): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 00:34:27:065 Kernel/(3870:3870): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 00:34:27:065 Kernel/(3870:3870): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 00:34:27:066 Kernel/(3870:3870): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 00:34:27:066 Kernel/(3870:3870): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 00:35:09:000 Kernel/(3870:3870): Cliente conectado (a KERNEL_SV)
+
+[INFO] 00:35:09:000 Kernel/(3870:3888): Envio solicitud a MEMORIA
+[INFO] 00:35:09:001 Kernel/(3870:3888): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 00:35:09:001 Kernel/(3870:3888): Se crea el proceso 0 en NEW
+[INFO] 00:35:09:001 Kernel/(3870:3888): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:35:09:001 Kernel/(3870:3888): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 00:35:09:002 Kernel/(3870:3871): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 00:35:11:004 Kernel/(3870:3872): PID: 0 - Recibo pedido de F_OPEN por: ARCHIVO
+
+[INFO] 00:35:11:004 Kernel/(3870:3872): PID: 0 - Abrir Archivo: ARCHIVO
+
+[WARNING] 00:35:11:004 Kernel/(3870:3872): La tabla global de archivos esta vacia
+[WARNING] 00:35:11:004 Kernel/(3870:3872): Archivo ARCHIVO
+ no esta abierto
+[WARNING] 00:35:11:004 Kernel/(3870:3872): Existencia=1
+[WARNING] 00:35:11:004 Kernel/(3870:3872): El archivo ARCHIVO fue abierto y cargado a la tabla global de archivos abiertos
+[INFO] 00:35:11:004 Kernel/(3870:3872): PID: 0 - Se agrego ARCHIVO a la tabla de archivos abiertos
+[INFO] 00:35:11:005 Kernel/(3870:3872): PID: 0 - Crear segmento - ID:1 - Tamanio: :32  
+[WARNING] 00:35:11:005 Kernel/(3870:3872): Id_seg: 1 - Tam seg: 32 
+[WARNING] 00:35:11:048 Kernel/(3870:3872): Recibiendo Segmento: Id: 1 - Dir Base: 32 - Tamanio: 32
+[INFO] 00:35:11:048 Kernel/(3870:3872): PID: 0 - Recibo pedido de F_TRUNCATE por: ARCHIVO
+[INFO] 00:35:11:048 Kernel/(3870:3872): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 00:35:11:091 Kernel/(3870:3889): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 00:35:11:091 Kernel/(3870:3889): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 00:35:11:091 Kernel/(3870:3871): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 00:35:11:091 Kernel/(3870:3872): PID: 0 - Recibo pedido de F_READ por: ARCHIVO
+[INFO] 00:35:11:091 Kernel/(3870:3872): PID: < 0 >- Leer Archivo: <ARCHIVO> - Puntero <PUNTERO> - Dirección Memoria <DIRECCIÓN MEMORIA> - Tamaño <TAMAÑO>
+[INFO] 00:35:11:091 Kernel/(3870:3872): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[WARNING] 00:35:13:461 Kernel/(3870:3890): PID 0 - Fue a exit con un archivo abierto
+[WARNING] 00:35:13:461 Kernel/(3870:3890): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
+[INFO] 00:35:13:462 Kernel/(3870:3890): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 00:35:13:462 Kernel/(3870:3890): Finaliza el proceso 0 - Motivo: Fallo una instruccion al FS
+[INFO] 00:51:54:814 Kernel/(4260:4260): Probando hora 0
+[INFO] 00:51:54:814 Kernel/(4260:4260): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 00:51:54:815 Kernel/(4260:4260): RECURSO: DISCO con 1 instancias
+[INFO] 00:51:54:815 Kernel/(4260:4260): RECURSO: MODEM con 1 instancias
+[INFO] 00:51:54:815 Kernel/(4260:4260): Cantidad total de recursos disponibles: 2 
+[INFO] 00:51:54:816 Kernel/(4260:4260): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 00:51:54:816 Kernel/(4260:4260): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 00:51:54:817 Kernel/(4260:4260): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[ERROR] 00:51:54:817 Kernel/(4260:4260): Error al conectar (a FILESYSTEM)
+
+[INFO] 00:51:54:817 Kernel/(4260:4260): Escuchando en 127.0.0.1:8000 (kernel server)
+
