@@ -368,11 +368,12 @@ static void procesar_conexion(void* void_args) {
 			 int tamanioALeerPrimerBloque = configuracionSuperBloque->BLOCK_SIZE - posEnPrimerBloque;
 			 tamanioALeerPrimerBloque = min(tamanioALeerPrimerBloque, tamanioTotalALeer);
 			 char* leido = string_new();
-			 char* buffer = malloc(configuracionSuperBloque->BLOCK_SIZE);
+			 char* buffer = malloc(tamanioALeerPrimerBloque+1);
 			 lseek(descriptor_archivo_bloque, posEnPrimerBloque + puntero_primer_bloque, SEEK_SET);
 			 read(descriptor_archivo_bloque, buffer, tamanioALeerPrimerBloque);
 			 usleep(configuracion->RETARDO_ACCESO_BLOQUE);
 			 tamanioTotalALeer -= tamanioALeerPrimerBloque;
+			 buffer[tamanioALeerPrimerBloque] = '\0';
 			 string_append(&leido, buffer);
 			 free(buffer);
 			 log_info(logger, "Se leyo a partir del offset %d dentro del bloque. Informacion del primer bloque leido: %s", posEnPrimerBloque, leido);
@@ -386,21 +387,21 @@ static void procesar_conexion(void* void_args) {
 				 tamanioALeer = max(tamanioTotalALeer, configuracionSuperBloque->BLOCK_SIZE);
 				 pointer_a_leer = leerBloqueIndirecto(descriptor_archivo_bloque, j*tamanio_puntero);
 				 lseek(descriptor_archivo_bloque, pointer_a_leer, SEEK_SET);
-				 char* buffer = malloc(tamanioALeer);
+				 char* buffer = malloc(tamanioALeer+1);
 				 usleep(configuracion->RETARDO_ACCESO_BLOQUE);
 				 read(descriptor_archivo_bloque, buffer, tamanioALeer);
+				 buffer[tamanioALeer] = '\0';
 				 string_append(&leido, buffer);
 				 log_info(logger, "Se leyo en un bloque %s", buffer);
 				 free(buffer);
 			 }
 			 log_info(logger, "Lectura completa: %s, listo para enviar a memoria - tamanio: %d", leido, atoi(parametro3));
 
-
-			 send_fs_memoria_read(memoria_fd,parametro2,atoi(parametro3),leido, MOV_IN);
+			 send_fs_memoria_read(memoria_fd,parametro2,atoi(parametro3),leido, MOV_OUT);
 
 			 recv(memoria_fd, &cop, sizeof(op_code), 0);
 
-			 if(cop == MOV_IN_OK){
+			 if(cop == MOV_OUT_OK){
 				 cop = F_READ_OK;
 			 }else{
 				 cop = F_READ_FAIL;
@@ -412,13 +413,15 @@ static void procesar_conexion(void* void_args) {
 		 case F_WRITE:
 			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
 			 log_info(logger, "Se recibio F_WRITE con parametros Archivo: %s, Tamaño: %s, Direccion Fisica: %s y Posicion: %s", parametro1, strtok(parametro3, "\n"), parametro2, pos);
-			 {int p = datosFCB(pathArchivo);
-			 if(p == -1) {	// No deberia entrar nunca
-				log_error(logger, "Error inesperado antes de cargar FCB");
-				cop=F_WRITE_FAIL;
-				send(cliente_socket, &cop, sizeof(op_code), 0);
-				break;
-			 }}
+			 {
+				 int p = datosFCB(pathArchivo);
+				 if(p == -1) {	// No deberia entrar nunca
+					log_error(logger, "Error inesperado antes de cargar FCB");
+					cop=F_WRITE_FAIL;
+					send(cliente_socket, &cop, sizeof(op_code), 0);
+					break;
+				 }
+			 }
 			 sleep(3);	// borrar
 			 posicion = atoi(pos);
 			 int tamanio_a_escribir  = atoi(parametro3);
@@ -428,19 +431,16 @@ static void procesar_conexion(void* void_args) {
 				 send(cliente_socket, &cop, sizeof(cop), 0);
 			 }
 
-			 void* escribirBuffer = malloc(tamanio_a_escribir);
+			 char* escribirBuffer = malloc(tamanio_a_escribir+1);
 
 			 //TODO
 			 //send pedido a memoria
 			 log_warning(logger, "Param: %s - Tam: %d", parametro2, tamanio_a_escribir );
-			 send_fs_memoria(memoria_fd,parametro2,tamanio_a_escribir, MOV_OUT);
+			 send_fs_memoria(memoria_fd,parametro2,tamanio_a_escribir, MOV_IN);
 
 			 recv(memoria_fd, escribirBuffer, tamanio_a_escribir, MSG_WAITALL);
+			 escribirBuffer[tamanio_a_escribir] = '\0';
 			 log_warning(logger, "Recibiendo buffer que escribir: %s", escribirBuffer);
-
-			 //recv datos de memoria
-			 // if memo fail -> send kernel F_WRITE_FAIL
-			 //void* escribirBuffer = "holachauaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";	// borrar
 
 			 int bloques_necesarios = ceil((double)tamanio_a_escribir / configuracionSuperBloque->BLOCK_SIZE);
 			 int bloque_inicial = floor((double)posicion / configuracionSuperBloque->BLOCK_SIZE);

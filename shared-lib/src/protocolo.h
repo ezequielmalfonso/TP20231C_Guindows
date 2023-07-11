@@ -129,7 +129,7 @@ bool recv_fs_memoria(int fd, char* direccion_fisica, int* tamanio);
 void deserializar_fs_memoria(void* stream, char* direccion_fisica, int* tamanio);
 bool send_fs_memoria_read(int memoria_fd, char* dir_fisica, int tamanio,void* leido, op_code codigo);
 static void* serializar_fs_memoria_read(size_t* size, char* dir_fisica, int tamanio,void* leido, op_code codigo);
-bool recv_fs_memoria_read(int fd, char* direccion_fisica, int* tamanio, void* leido);
-void deserializar_fs_memoria_read(void* stream, char* direccion_fisica, int* tamanio, void* leido);
+bool recv_fs_memoria_read(int fd, char* direccion_fisica, int* tamanio, void** leido);
+void deserializar_fs_memoria_read(void* stream, char* direccion_fisica, int* tamanio, void** leido);
 
 #endif /* SRC_PROTOCOLO_H_ */

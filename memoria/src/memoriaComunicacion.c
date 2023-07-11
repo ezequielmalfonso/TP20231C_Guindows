@@ -261,30 +261,34 @@ static void procesar_fileSystem(void * void_args) {
     				//send(cliente_socket, &(configuracion -> TAM_PAGINA), sizeof(uint16_t), 0);
     				//pthread_mutex_unlock(&mx_cpu);
     				break;
-    case MOV_OUT: // WRITE
+    case MOV_OUT: // FREAD
     				log_info(logger, "[FS] Recibo MOV_OUT");
     				char direccion_fisica[20];
     				int tamanio;
-    				recv_fs_memoria(cliente_socket, direccion_fisica, &tamanio);
+    				void* leido;
+    				recv_fs_memoria_read(cliente_socket, direccion_fisica, &tamanio, &leido);
     				char** seg_desp_pid =  string_split(direccion_fisica, "x");
     				log_warning(logger, "Recibimos dir fisica: %s - Tamanio: %d",direccion_fisica, tamanio);
     				//TODO  separar direccion fisica en NRO SEG y OFFSET
     				// y escribir en memoria
-    				void* buffer = malloc(tamanio);
+
     				//strcpy(buffer, "probando");
-    				escribirEnMemoria(atoi(seg_desp_pid[0]), atoi(seg_desp_pid[1]), atoi(seg_desp_pid[2]), tamanio, buffer);
-    				log_error(logger, "Enviando buffer a FS: %s ", buffer);
-    				send(cliente_socket, buffer, tamanio, MSG_WAITALL);
+    				escribirEnMemoria(atoi(seg_desp_pid[0]), atoi(seg_desp_pid[1]), atoi(seg_desp_pid[2]), tamanio, leido);
+
+    				log_warning(logger, "Buffer a escribir: %s", leido);
+          		    op_code cop = MOV_OUT_OK;
+          		    send(cliente_socket, &cop, sizeof(op_code), MSG_WAITALL);
 
     				break;
-    case MOV_IN: { // READ
+    case MOV_IN: { // FWRITE
     			  log_info(logger, "[FS] Recibo MOV_IN");
     			  char direccion_fisica[20];
         		  int tamanio;
         		  void* leido;
         		  //TODO  separar direccion fisica en NRO SEG y OFFSET
         		  // y leer en memoria
-        		  recv_fs_memoria_read(cliente_socket, direccion_fisica, &tamanio, leido);
+
+        		  recv_fs_memoria(cliente_socket, direccion_fisica, &tamanio);
         		  char** seg_desp_pid =  string_split(direccion_fisica, "x");
 
 //        		  log_info(logger, "PID: %d - N° Segmento: %d, Desplazamiento: %d, Tamanio: %d", *pid, *num_seg, *desplazamiento1, *tamanio);
@@ -295,9 +299,11 @@ static void procesar_fileSystem(void * void_args) {
         		  log_warning(logger, "Recibimos dir fisica: %s - Tamanio: %d",direccion_fisica, tamanio);
 
 
-        		  //TODO
-        		  op_code cop = MOV_IN_OK;
-        		  send(cliente_socket, &cop, sizeof(op_code), MSG_WAITALL);
+        		  log_error(logger, "Enviando buffer a FS: %s ", leido);
+        		  send(cliente_socket, leido, tamanio, MSG_WAITALL);
+
+        		  //free(leido);
+
     			 }
     			  break;
     // Errores

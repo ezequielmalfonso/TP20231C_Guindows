@@ -566,6 +566,7 @@ bool recv_fs_memoria(int fd, char* direccion_fisica, int* tamanio) {
 		free(stream);
 	    return false;
 	}
+
 	deserializar_fs_memoria(stream, direccion_fisica,tamanio);
 	free(stream);
 	return true;
@@ -606,7 +607,7 @@ static void* serializar_fs_memoria_read(size_t* size, char* dir_fisica, int tama
 	return stream;
 }
 
-bool recv_fs_memoria_read(int fd, char* direccion_fisica, int* tamanio, void* leido) {
+bool recv_fs_memoria_read(int fd, char* direccion_fisica, int* tamanio, void** leido) {
 	size_t size_payload;
 	if (recv(fd, &size_payload, sizeof(size_t), MSG_WAITALL) != sizeof(size_t))
 		return false;
@@ -620,13 +621,13 @@ bool recv_fs_memoria_read(int fd, char* direccion_fisica, int* tamanio, void* le
 	return true;
 }
 
-void deserializar_fs_memoria_read(void* stream, char* direccion_fisica, int* tamanio, void* leido) {
+void deserializar_fs_memoria_read(void* stream, char* direccion_fisica, int* tamanio, void** leido) {
 	memcpy(direccion_fisica, stream, sizeof(char)*20);
 	stream += sizeof(char)*20;
 	memcpy(tamanio, stream, sizeof(int));
 	stream += sizeof(int);
-	leido = malloc(*tamanio*(sizeof(char)));
-	memcpy(leido, stream, *tamanio*(sizeof(char)));
+	*leido = malloc(*tamanio*(sizeof(char)));
+	memcpy(*leido, stream, *tamanio*(sizeof(char)));
 }
 
 
