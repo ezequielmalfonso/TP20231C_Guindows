@@ -1053,3 +1053,49 @@ NOMBRE_ARCHIVO: ARCHIVO
 [WARNING] 20:19:50:360 FileSystem/(14248:14253): Recibiendo buffer que escribir: PROBANDO123456789112
 [INFO] 20:19:50:360 FileSystem/(14248:14253): Bloque inicial: 0, Offset en este bloque: 0, bloques necesarios totales: 1
 [INFO] 20:19:50:376 FileSystem/(14248:14253): Se ha escrito en el bloque con puntero 0 un tamaño de 20, partiendo de la posicion del archivo 0
+[INFO] 20:27:26:048 FileSystem/(14248:14253): Se ha finalizado la conexion
+[INFO] 20:27:36:982 FileSystem/(14384:14384): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 20:27:36:984 FileSystem/(14384:14384): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 20:27:36:984 FileSystem/(14384:14384): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 20:27:36:984 FileSystem/(14384:14384): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 20:27:36:984 FileSystem/(14384:14384): Archivo de Bloques Cargado
+[INFO] 20:27:36:985 FileSystem/(14384:14384): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 20:27:36:986 FileSystem/(14384:14384): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 20:27:38:816 FileSystem/(14384:14384): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 20:31:42:609 FileSystem/(14384:14389): Se ha finalizado la conexion
+[INFO] 20:31:48:107 FileSystem/(14534:14534): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 20:31:48:109 FileSystem/(14534:14534): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 20:31:48:110 FileSystem/(14534:14534): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 20:31:48:110 FileSystem/(14534:14534): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 20:31:48:110 FileSystem/(14534:14534): Archivo de Bloques Cargado
+[INFO] 20:31:48:111 FileSystem/(14534:14534): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 20:31:48:111 FileSystem/(14534:14534): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 20:31:49:144 FileSystem/(14534:14534): Cliente conectado (a FILESYSTEM_SV)
+

@@ -432,7 +432,7 @@ void esperar_cpu(){
 				 //sem_post(&s_cpu_desocupado);
 				break;
 			case DELETE_SEGMENT:
-							log_info(logger, "PID: %d - Eliminar segmento - Id: %d ", pcb->pid, strtok(instruccion->parametro1, "\n"));
+							log_info(logger, "PID: %d - Eliminar segmento - Id: %s ", pcb->pid, strtok(instruccion->parametro1, "\n"));
 							uint32_t id_seg_del  = atoi(instruccion->parametro1);
 							op_code op_del = DELETE_SEGMENT;
 

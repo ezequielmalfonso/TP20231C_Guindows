@@ -261,6 +261,7 @@ int buscarPrimerBloqueVacio (t_bitarray* s_bitmap, uint32_t BLOCK_SIZE){
 	long int tamano_bitmap = bitarray_get_max_bit(s_bitmap);
 	for(posicion_libre = 0; posicion_libre <  tamano_bitmap ; posicion_libre++ )
 	 {
+		log_info(logger, "Acceso a Bitmap - Bloque: %d - Estado: %d", posicion_libre, bitarray_test_bit(s_bitmap,  posicion_libre));
 		 if(!bitarray_test_bit(s_bitmap,  posicion_libre)){
 			 return posicion_libre;
 		 }
