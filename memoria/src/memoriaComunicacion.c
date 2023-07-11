@@ -16,6 +16,8 @@ int kernel_socket;
 pthread_mutex_t mx_kernel= PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_cpu = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_pagefault = PTHREAD_MUTEX_INITIALIZER;
+
+
 int* tamanio;
 uint32_t* num_seg;
 uint32_t* desplazamiento1;
@@ -498,7 +500,9 @@ void llenarHueco(t_segmento* hueco){
 	}
 	}
 void compactacion(){
-
+	pthread_mutex_lock(&mx_memoria);
+	log_warning(logger, "Tiempo de compactacion: %d", configuracion->RETARDO_COMPACTACION);
+	sleep(configuracion->RETARDO_COMPACTACION/1000);
 	t_segmento* hueco;
 	while(list_size(tabla_de_huecos)>1){
 		hueco = buscarPrimerHueco();
@@ -507,11 +511,11 @@ void compactacion(){
 }
 	op_code cop = FIN_COMPACTATION;
 	pthread_mutex_lock(&mx_kernel);
-		send(kernel_socket, &cop, sizeof(op_code), MSG_WAITALL);
-	    pthread_mutex_unlock(&mx_kernel);
-		log_info(logger,"Termine compactacion");
+	send(kernel_socket, &cop, sizeof(op_code), MSG_WAITALL);
+	pthread_mutex_unlock(&mx_kernel);
+	log_info(logger,"Termine compactacion");
 
-
+	pthread_mutex_unlock(&mx_memoria);
 }
 
 

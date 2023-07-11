@@ -24,6 +24,9 @@ t_list* tabla_de_huecos;
 
 int mensaje_error;
 
+pthread_mutex_t mx_memoria = PTHREAD_MUTEX_INITIALIZER;
+
+
 /*
  * Inicializacion de Estructuras administrativas de Memoria
  */
@@ -107,17 +110,23 @@ void crearSegmento(uint32_t pid, uint32_t id_seg, int tam){
 	//free(seg);
 }
 void* leerMemoria(uint32_t id_seg, uint32_t desplazamiento, uint32_t pid, int tam){
+	pthread_mutex_lock(&mx_memoria);
+	sleep(configuracion->RETARDO_MEMORIA/1000);
 	t_segmento* seg = buscarSegmento(buscarTabla(pid),id_seg);
 	void* direccion = memoria+seg->direccion_base+desplazamiento;
 	void* leido = malloc(tam);
 	memcpy(leido,direccion,tam);
+	pthread_mutex_unlock(&mx_memoria);
 	return leido;
 }
 
 int escribirEnMemoria(uint32_t id_seg,uint32_t  desplazamiento,uint32_t  pid, int tamanio, void* escribir){
+	pthread_mutex_lock(&mx_memoria);
+	sleep(configuracion->RETARDO_MEMORIA/1000);
 	t_segmento* seg = buscarSegmento(buscarTabla(pid),id_seg);
 	void* direccion = memoria+seg->direccion_base+desplazamiento;
 	memcpy(direccion,escribir,tamanio);
+	pthread_mutex_unlock(&mx_memoria);
 	return 1;
 }
 

@@ -240,14 +240,14 @@ void cargarBloqueIndirecto(int descriptor, int offset) {
 	log_info(logger, "Cargando bloque indirecto con direccion %d", offset);
 	lseek(descriptor, offset, SEEK_SET);
 	read(descriptor, bloqueIndirectoBuffer, configuracionSuperBloque->BLOCK_SIZE);
-	usleep(configuracion->RETARDO_ACCESO_BLOQUE);
+	sleep(configuracion->RETARDO_ACCESO_BLOQUE/1000);
 }
 
 void guardarBloqueIndirecto(int descriptor, int offset) {
 	log_info(logger, "Sincronizando los cambios en el bloque indirecto");
 	lseek(descriptor, offset, SEEK_SET);
 	write(descriptor, bloqueIndirectoBuffer, configuracionSuperBloque->BLOCK_SIZE);
-	usleep(configuracion->RETARDO_ACCESO_BLOQUE);
+	sleep(configuracion->RETARDO_ACCESO_BLOQUE/1000);
 }
 
 void leerBloque (int fd_ArchivoBloque, int numeroBloque, const void *datos){

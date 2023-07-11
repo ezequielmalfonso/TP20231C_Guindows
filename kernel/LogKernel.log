@@ -1197,3 +1197,223 @@ GRADO_MAX_MULTIPROGRAMACION: 4
 [WARNING] 20:31:51:115 Kernel/(14535:14537): Recibiendo Segmento: Id: 3 - Dir Base: 64 - Tamanio: 60
 [INFO] 20:31:51:115 Kernel/(14535:14537): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
 [INFO] 20:31:51:115 Kernel/(14535:14537): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 20:56:36:102 Kernel/(15619:15619): Probando hora 0
+[INFO] 20:56:36:103 Kernel/(15619:15619): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 20:56:36:105 Kernel/(15619:15619): RECURSO: DISCO con 1 instancias
+[INFO] 20:56:36:106 Kernel/(15619:15619): RECURSO: MODEM con 1 instancias
+[INFO] 20:56:36:106 Kernel/(15619:15619): Cantidad total de recursos disponibles: 2 
+[INFO] 20:56:36:106 Kernel/(15619:15619): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 20:56:36:107 Kernel/(15619:15619): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 20:56:36:107 Kernel/(15619:15619): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 20:56:36:108 Kernel/(15619:15619): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 20:56:36:108 Kernel/(15619:15619): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 20:56:37:588 Kernel/(15619:15619): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 20:56:37:589 Kernel/(15619:15625): No hay asignacion tamaño de registros
+[INFO] 20:56:37:589 Kernel/(15619:15625): Envio solicitud a MEMORIA
+[INFO] 20:56:37:590 Kernel/(15619:15625): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 20:56:37:590 Kernel/(15619:15625): Se crea el proceso 0 en NEW
+[INFO] 20:56:37:590 Kernel/(15619:15625): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:56:37:590 Kernel/(15619:15625): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 20:56:37:590 Kernel/(15619:15620): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 20:56:37:591 Kernel/(15619:15621): PID: 0 - Crear segmento - ID:1 - Tamanio: :32  
+[WARNING] 20:56:37:591 Kernel/(15619:15621): Id_seg: 1 - Tam seg: 32 
+[WARNING] 20:56:37:675 Kernel/(15619:15621): Recibiendo Segmento: Id: 1 - Dir Base: 32 - Tamanio: 32
+[INFO] 20:56:37:675 Kernel/(15619:15621): PID: 0 - Crear segmento - ID:2 - Tamanio: :32  
+[WARNING] 20:56:37:675 Kernel/(15619:15621): Id_seg: 2 - Tam seg: 32 
+[WARNING] 20:56:37:763 Kernel/(15619:15621): Recibiendo Segmento: Id: 2 - Dir Base: 64 - Tamanio: 32
+[INFO] 20:56:37:763 Kernel/(15619:15621): PID: 0 - Eliminar segmento - Id: 1 
+[WARNING] 20:56:37:763 Kernel/(15619:15621): Id_seg a eliminar: 1  
+[INFO] 20:56:37:807 Kernel/(15619:15621): PID: 0 - Eliminar Segmento - Id Segmento: 2
+[INFO] 20:56:37:807 Kernel/(15619:15621): PID: 0 - Crear segmento - ID:3 - Tamanio: :60  
+[WARNING] 20:56:37:807 Kernel/(15619:15621): Id_seg: 3 - Tam seg: 60 
+[WARNING] 20:56:37:851 Kernel/(15619:15621): SOLICITAR COMPACTACION
+[WARNING] 20:56:37:851 Kernel/(15619:15621): ESPERO FIN DE COMPACTACION
+[WARNING] 20:56:37:955 Kernel/(15619:15621): Actualizar segmento 2 del proceso 0 con la base: 32
+[WARNING] 20:56:37:955 Kernel/(15619:15621): termino compactacion
+[INFO] 20:56:37:955 Kernel/(15619:15621): PID: 0 - Crear segmento - ID:3 - Tamanio: :60  
+[WARNING] 20:56:37:955 Kernel/(15619:15621): Id_seg: 3 - Tam seg: 60 
+[WARNING] 20:56:37:999 Kernel/(15619:15621): Recibiendo Segmento: Id: 3 - Dir Base: 64 - Tamanio: 60
+[INFO] 20:56:37:999 Kernel/(15619:15621): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 20:56:37:999 Kernel/(15619:15621): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 20:59:40:083 Kernel/(15805:15805): Probando hora 0
+[INFO] 20:59:40:083 Kernel/(15805:15805): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 20:59:40:086 Kernel/(15805:15805): RECURSO: DISCO con 1 instancias
+[INFO] 20:59:40:086 Kernel/(15805:15805): RECURSO: MODEM con 1 instancias
+[INFO] 20:59:40:086 Kernel/(15805:15805): Cantidad total de recursos disponibles: 2 
+[INFO] 20:59:40:086 Kernel/(15805:15805): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 20:59:40:087 Kernel/(15805:15805): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 20:59:40:087 Kernel/(15805:15805): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 20:59:40:088 Kernel/(15805:15805): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 20:59:40:088 Kernel/(15805:15805): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 20:59:41:477 Kernel/(15805:15805): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 20:59:41:477 Kernel/(15805:15811): No hay asignacion tamaño de registros
+[INFO] 20:59:41:477 Kernel/(15805:15811): Envio solicitud a MEMORIA
+[INFO] 20:59:41:478 Kernel/(15805:15811): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 20:59:41:478 Kernel/(15805:15811): Se crea el proceso 0 en NEW
+[INFO] 20:59:41:478 Kernel/(15805:15811): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:59:41:478 Kernel/(15805:15811): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 20:59:41:479 Kernel/(15805:15806): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 20:59:41:479 Kernel/(15805:15807): PID: 0 - Crear segmento - ID:1 - Tamanio: :32  
+[WARNING] 20:59:41:479 Kernel/(15805:15807): Id_seg: 1 - Tam seg: 32 
+[WARNING] 20:59:41:567 Kernel/(15805:15807): Recibiendo Segmento: Id: 1 - Dir Base: 32 - Tamanio: 32
+[INFO] 20:59:41:567 Kernel/(15805:15807): PID: 0 - Crear segmento - ID:2 - Tamanio: :32  
+[WARNING] 20:59:41:567 Kernel/(15805:15807): Id_seg: 2 - Tam seg: 32 
+[WARNING] 20:59:41:655 Kernel/(15805:15807): Recibiendo Segmento: Id: 2 - Dir Base: 64 - Tamanio: 32
+[INFO] 20:59:41:655 Kernel/(15805:15807): PID: 0 - Eliminar segmento - Id: 1 
+[WARNING] 20:59:41:655 Kernel/(15805:15807): Id_seg a eliminar: 1  
+[INFO] 20:59:41:699 Kernel/(15805:15807): PID: 0 - Eliminar Segmento - Id Segmento: 2
+[INFO] 20:59:41:699 Kernel/(15805:15807): PID: 0 - Crear segmento - ID:3 - Tamanio: :60  
+[WARNING] 20:59:41:699 Kernel/(15805:15807): Id_seg: 3 - Tam seg: 60 
+[WARNING] 20:59:41:743 Kernel/(15805:15807): SOLICITAR COMPACTACION
+[WARNING] 20:59:41:743 Kernel/(15805:15807): ESPERO FIN DE COMPACTACION
+[WARNING] 20:59:41:847 Kernel/(15805:15807): Actualizar segmento 2 del proceso 0 con la base: 32
+[WARNING] 20:59:41:847 Kernel/(15805:15807): termino compactacion
+[INFO] 20:59:41:847 Kernel/(15805:15807): PID: 0 - Crear segmento - ID:3 - Tamanio: :60  
+[WARNING] 20:59:41:848 Kernel/(15805:15807): Id_seg: 3 - Tam seg: 60 
+[WARNING] 20:59:41:891 Kernel/(15805:15807): Recibiendo Segmento: Id: 3 - Dir Base: 64 - Tamanio: 60
+[INFO] 20:59:41:891 Kernel/(15805:15807): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 20:59:41:891 Kernel/(15805:15807): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 21:02:10:220 Kernel/(15915:15915): Probando hora 0
+[INFO] 21:02:10:221 Kernel/(15915:15915): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 21:02:10:224 Kernel/(15915:15915): RECURSO: DISCO con 1 instancias
+[INFO] 21:02:10:224 Kernel/(15915:15915): RECURSO: MODEM con 1 instancias
+[INFO] 21:02:10:225 Kernel/(15915:15915): Cantidad total de recursos disponibles: 2 
+[INFO] 21:02:10:225 Kernel/(15915:15915): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 21:02:10:226 Kernel/(15915:15915): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 21:02:10:226 Kernel/(15915:15915): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:02:10:227 Kernel/(15915:15915): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 21:02:10:227 Kernel/(15915:15915): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 21:02:12:142 Kernel/(15915:15915): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 21:02:12:143 Kernel/(15915:15921): No hay asignacion tamaño de registros
+[INFO] 21:02:12:143 Kernel/(15915:15921): Envio solicitud a MEMORIA
+[INFO] 21:02:12:143 Kernel/(15915:15921): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 21:02:12:144 Kernel/(15915:15921): Se crea el proceso 0 en NEW
+[INFO] 21:02:12:144 Kernel/(15915:15921): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:02:12:144 Kernel/(15915:15921): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 21:02:12:144 Kernel/(15915:15916): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:02:12:145 Kernel/(15915:15917): PID: 0 - Crear segmento - ID:1 - Tamanio: :32  
+[WARNING] 21:02:12:145 Kernel/(15915:15917): Id_seg: 1 - Tam seg: 32 
+[WARNING] 21:02:12:231 Kernel/(15915:15917): Recibiendo Segmento: Id: 1 - Dir Base: 32 - Tamanio: 32
+[INFO] 21:02:12:231 Kernel/(15915:15917): PID: 0 - Crear segmento - ID:2 - Tamanio: :32  
+[WARNING] 21:02:12:231 Kernel/(15915:15917): Id_seg: 2 - Tam seg: 32 
+[WARNING] 21:02:12:319 Kernel/(15915:15917): Recibiendo Segmento: Id: 2 - Dir Base: 64 - Tamanio: 32
+[INFO] 21:02:12:319 Kernel/(15915:15917): PID: 0 - Eliminar segmento - Id: 1 
+[WARNING] 21:02:12:319 Kernel/(15915:15917): Id_seg a eliminar: 1  
+[INFO] 21:02:12:363 Kernel/(15915:15917): PID: 0 - Eliminar Segmento - Id Segmento: 2
+[INFO] 21:02:12:363 Kernel/(15915:15917): PID: 0 - Crear segmento - ID:3 - Tamanio: :60  
+[WARNING] 21:02:12:363 Kernel/(15915:15917): Id_seg: 3 - Tam seg: 60 
+[WARNING] 21:02:12:407 Kernel/(15915:15917): SOLICITAR COMPACTACION
+[WARNING] 21:02:12:407 Kernel/(15915:15917): ESPERO FIN DE COMPACTACION
+[WARNING] 21:03:12:451 Kernel/(15915:15917): Actualizar segmento 2 del proceso 0 con la base: 32
+[WARNING] 21:03:12:451 Kernel/(15915:15917): termino compactacion
+[INFO] 21:03:12:451 Kernel/(15915:15917): PID: 0 - Crear segmento - ID:3 - Tamanio: :60  
+[WARNING] 21:03:12:451 Kernel/(15915:15917): Id_seg: 3 - Tam seg: 60 
+[WARNING] 21:03:12:495 Kernel/(15915:15917): Recibiendo Segmento: Id: 3 - Dir Base: 64 - Tamanio: 60
+[INFO] 21:03:12:495 Kernel/(15915:15917): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 21:03:12:495 Kernel/(15915:15917): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 21:06:49:583 Kernel/(16148:16148): Probando hora 0
+[INFO] 21:06:49:583 Kernel/(16148:16148): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 21:06:49:585 Kernel/(16148:16148): RECURSO: DISCO con 1 instancias
+[INFO] 21:06:49:585 Kernel/(16148:16148): RECURSO: MODEM con 1 instancias
+[INFO] 21:06:49:585 Kernel/(16148:16148): Cantidad total de recursos disponibles: 2 
+[INFO] 21:06:49:585 Kernel/(16148:16148): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 21:06:49:586 Kernel/(16148:16148): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 21:06:49:586 Kernel/(16148:16148): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:06:49:587 Kernel/(16148:16148): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 21:06:49:587 Kernel/(16148:16148): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 21:06:51:087 Kernel/(16148:16148): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 21:06:51:087 Kernel/(16148:16154): No hay asignacion tamaño de registros
+[INFO] 21:06:51:088 Kernel/(16148:16154): Envio solicitud a MEMORIA
+[INFO] 21:06:51:088 Kernel/(16148:16154): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 21:06:51:088 Kernel/(16148:16154): Se crea el proceso 0 en NEW
+[INFO] 21:06:51:088 Kernel/(16148:16154): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:06:51:089 Kernel/(16148:16154): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 21:06:51:089 Kernel/(16148:16149): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:06:51:089 Kernel/(16148:16150): PID: 0 - Crear segmento - ID:1 - Tamanio: :32  
+[WARNING] 21:06:51:089 Kernel/(16148:16150): Id_seg: 1 - Tam seg: 32 
+[WARNING] 21:06:51:175 Kernel/(16148:16150): Recibiendo Segmento: Id: 1 - Dir Base: 32 - Tamanio: 32
+[INFO] 21:06:51:176 Kernel/(16148:16150): PID: 0 - Crear segmento - ID:2 - Tamanio: :32  
+[WARNING] 21:06:51:176 Kernel/(16148:16150): Id_seg: 2 - Tam seg: 32 
+[WARNING] 21:06:51:263 Kernel/(16148:16150): Recibiendo Segmento: Id: 2 - Dir Base: 64 - Tamanio: 32
+[INFO] 21:06:51:263 Kernel/(16148:16150): PID: 0 - Eliminar segmento - Id: 1 
+[WARNING] 21:06:51:263 Kernel/(16148:16150): Id_seg a eliminar: 1  
+[INFO] 21:06:51:307 Kernel/(16148:16150): PID: 0 - Eliminar Segmento - Id Segmento: 2
+[INFO] 21:06:51:307 Kernel/(16148:16150): PID: 0 - Crear segmento - ID:3 - Tamanio: :60  
+[WARNING] 21:06:51:307 Kernel/(16148:16150): Id_seg: 3 - Tam seg: 60 
+[WARNING] 21:06:51:351 Kernel/(16148:16150): SOLICITAR COMPACTACION
+[WARNING] 21:06:51:351 Kernel/(16148:16150): ESPERO FIN DE COMPACTACION
+[WARNING] 21:07:51:395 Kernel/(16148:16150): Actualizar segmento 2 del proceso 0 con la base: 32
+[WARNING] 21:07:51:395 Kernel/(16148:16150): termino compactacion
+[INFO] 21:07:51:395 Kernel/(16148:16150): PID: 0 - Crear segmento - ID:3 - Tamanio: :60  
+[WARNING] 21:07:51:395 Kernel/(16148:16150): Id_seg: 3 - Tam seg: 60 
+[WARNING] 21:07:51:439 Kernel/(16148:16150): Recibiendo Segmento: Id: 3 - Dir Base: 64 - Tamanio: 60
+[INFO] 21:07:51:439 Kernel/(16148:16150): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 21:07:51:439 Kernel/(16148:16150): Finaliza el proceso 0 - Motivo: POR FIN

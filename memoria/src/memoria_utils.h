@@ -25,7 +25,7 @@
 #include "memoriaConfig.h"
 #include "protocolo.h"
 
-
+extern pthread_mutex_t mx_memoria;
 
 extern t_segmento* segmento;
 extern int mensaje_error;
