@@ -77,3 +77,164 @@ TAM_MAX_SEGMENTO: 128
 [WARNING] 14:24:44:290 Cpu/(5827:5832): Dir Fisica: 0x4x0 
 [INFO] 14:24:47:312 Cpu/(5827:5832): Recibi PCB id: 0
 [INFO] 14:24:47:312 Cpu/(5827:5832): PID: 0 - Ejecutando EXIT
+[INFO] 16:42:01:109 Cpu/(5827:5832): Se ha finalizado la conexion
+[INFO] 16:42:07:855 Cpu/(6874:6874): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[ERROR] 16:42:07:856 Cpu/(6874:6874): Error al conectar (a MEMORIA)
+
+[INFO] 16:42:07:856 Cpu/(6874:6874): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 16:42:09:355 Cpu/(6874:6874): Cliente conectado (a CPU_SV)
+
+[INFO] 16:42:10:882 Cpu/(6874:6878): Recibi PCB id: 0
+[INFO] 16:42:10:882 Cpu/(6874:6878): En CPU
+[INFO] 16:42:11:883 Cpu/(6874:6878): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLACHAU
+
+[INFO] 16:42:11:883 Cpu/(6874:6878): registro recibido: HOLACHAU
+
+[WARNING] 16:42:11:883 Cpu/(6874:6878): Contenido registro AX: HOLA
+[INFO] 16:42:11:883 Cpu/(6874:6878): En CPU
+[INFO] 16:42:12:883 Cpu/(6874:6878): PID: 0 - Ejecutando SET parametro 1: EAX parametro 2: HOLACHAU
+
+[INFO] 16:42:12:883 Cpu/(6874:6878): registro recibido: HOLACHAU
+
+[WARNING] 16:42:12:883 Cpu/(6874:6878): Contenido registro EAX: HOLACHAU
+[INFO] 16:42:12:883 Cpu/(6874:6878): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 16:42:12:886 Cpu/(6874:6878): Recibi PCB id: 0
+[INFO] 16:42:12:886 Cpu/(6874:6878): PID: 0 - Ejecutando CREATE_SEGMENT
+[INFO] 16:42:18:150 Cpu/(6874:6878): Se ha finalizado la conexion
+[INFO] 16:43:39:929 Cpu/(6982:6982): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 16:43:39:935 Cpu/(6982:6982): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 16:43:39:935 Cpu/(6982:6982): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 16:43:43:954 Cpu/(6982:6982): Cliente conectado (a CPU_SV)
+
+[INFO] 16:43:45:483 Cpu/(6982:6994): Recibi PCB id: 0
+[INFO] 16:43:45:483 Cpu/(6982:6994): En CPU
+[INFO] 16:43:46:483 Cpu/(6982:6994): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLACHAU
+
+[INFO] 16:43:46:483 Cpu/(6982:6994): registro recibido: HOLACHAU
+
+[WARNING] 16:43:46:483 Cpu/(6982:6994): Contenido registro AX: HOLA
+[INFO] 16:43:46:483 Cpu/(6982:6994): En CPU
+[INFO] 16:43:47:483 Cpu/(6982:6994): PID: 0 - Ejecutando SET parametro 1: EAX parametro 2: HOLACHAU
+
+[INFO] 16:43:47:484 Cpu/(6982:6994): registro recibido: HOLACHAU
+
+[WARNING] 16:43:47:484 Cpu/(6982:6994): Contenido registro EAX: HOLACHAU
+[INFO] 16:43:47:484 Cpu/(6982:6994): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 16:43:47:488 Cpu/(6982:6994): Recibi PCB id: 0
+[INFO] 16:43:47:488 Cpu/(6982:6994): PID: 0 - Ejecutando CREATE_SEGMENT
+[INFO] 16:43:47:532 Cpu/(6982:6994): Recibi PCB id: 0
+[INFO] 16:43:47:532 Cpu/(6982:6994): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 16:43:47:534 Cpu/(6982:6994): Recibi PCB id: 0
+[INFO] 16:43:47:534 Cpu/(6982:6994): PID: 0 - Listo para ejecutar F_READ 
+[ERROR] 16:43:47:534 Cpu/(6982:6994): Desp: 4 - Seg: 0
+[WARNING] 16:43:47:534 Cpu/(6982:6994): Dir Fisica: 0x4x0 
+[INFO] 16:43:49:572 Cpu/(6982:6994): Recibi PCB id: 0
+[INFO] 16:43:49:572 Cpu/(6982:6994): PID: 0 - Listo para ejecutar F_WRITE 
+[ERROR] 16:43:49:572 Cpu/(6982:6994): Desp: 4 - Seg: 0
+[WARNING] 16:43:49:573 Cpu/(6982:6994): Dir Fisica: 0x4x0 
+[INFO] 16:43:52:592 Cpu/(6982:6994): Recibi PCB id: 0
+[INFO] 16:43:52:592 Cpu/(6982:6994): PID: 0 - Ejecutando EXIT
+[INFO] 16:56:02:056 Cpu/(6982:6994): Se ha finalizado la conexion
+[INFO] 16:56:12:114 Cpu/(8591:8591): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 16:56:12:117 Cpu/(8591:8591): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 16:56:12:119 Cpu/(8591:8591): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 16:56:16:302 Cpu/(8591:8591): Cliente conectado (a CPU_SV)
+
+[INFO] 16:56:17:917 Cpu/(8591:8604): Recibi PCB id: 0
+[INFO] 16:56:17:917 Cpu/(8591:8604): En CPU
+[INFO] 16:56:18:917 Cpu/(8591:8604): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLACHAU
+
+[INFO] 16:56:18:917 Cpu/(8591:8604): registro recibido: HOLACHAU
+
+[WARNING] 16:56:18:917 Cpu/(8591:8604): Contenido registro AX: HOLA
+[INFO] 16:56:18:917 Cpu/(8591:8604): En CPU
+[INFO] 16:56:19:918 Cpu/(8591:8604): PID: 0 - Ejecutando SET parametro 1: EAX parametro 2: HOLACHAU
+
+[INFO] 16:56:19:918 Cpu/(8591:8604): registro recibido: HOLACHAU
+
+[WARNING] 16:56:19:918 Cpu/(8591:8604): Contenido registro EAX: HOLACHAU
+[INFO] 16:56:19:918 Cpu/(8591:8604): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 16:56:19:918 Cpu/(8591:8604): Recibi PCB id: 0
+[INFO] 16:56:19:918 Cpu/(8591:8604): PID: 0 - Ejecutando CREATE_SEGMENT
+[INFO] 16:56:19:964 Cpu/(8591:8604): Recibi PCB id: 0
+[INFO] 16:56:19:964 Cpu/(8591:8604): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 16:56:19:969 Cpu/(8591:8604): Recibi PCB id: 0
+[INFO] 16:56:19:969 Cpu/(8591:8604): PID: 0 - Listo para ejecutar F_READ 
+[ERROR] 16:56:19:969 Cpu/(8591:8604): Desp: 4 - Seg: 0
+[WARNING] 16:56:19:969 Cpu/(8591:8604): Dir Fisica: 0x4x0 
+[INFO] 16:56:22:008 Cpu/(8591:8604): Recibi PCB id: 0
+[INFO] 16:56:22:008 Cpu/(8591:8604): PID: 0 - Listo para ejecutar F_WRITE 
+[ERROR] 16:56:22:008 Cpu/(8591:8604): Desp: 4 - Seg: 0
+[WARNING] 16:56:22:008 Cpu/(8591:8604): Dir Fisica: 0x4x0 
+[INFO] 16:56:25:030 Cpu/(8591:8604): Recibi PCB id: 0
+[INFO] 16:56:25:031 Cpu/(8591:8604): PID: 0 - Ejecutando EXIT
+[INFO] 17:02:11:280 Cpu/(8591:8604): Se ha finalizado la conexion
+[INFO] 17:02:17:923 Cpu/(9091:9091): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 128
+
+[INFO] 17:02:17:924 Cpu/(9091:9091): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 17:02:17:925 Cpu/(9091:9091): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 17:02:21:575 Cpu/(9091:9091): Cliente conectado (a CPU_SV)
+
+[INFO] 17:02:23:047 Cpu/(9091:9098): Recibi PCB id: 0
+[INFO] 17:02:23:047 Cpu/(9091:9098): En CPU
+[INFO] 17:02:24:047 Cpu/(9091:9098): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLACHAU
+
+[INFO] 17:02:24:047 Cpu/(9091:9098): registro recibido: HOLACHAU
+
+[WARNING] 17:02:24:047 Cpu/(9091:9098): Contenido registro AX: HOLA
+[INFO] 17:02:24:048 Cpu/(9091:9098): En CPU
+[INFO] 17:02:25:049 Cpu/(9091:9098): PID: 0 - Ejecutando SET parametro 1: EAX parametro 2: HOLACHAU
+
+[INFO] 17:02:25:049 Cpu/(9091:9098): registro recibido: HOLACHAU
+
+[WARNING] 17:02:25:049 Cpu/(9091:9098): Contenido registro EAX: HOLACHAU
+[INFO] 17:02:25:049 Cpu/(9091:9098): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: ARCHIVO
+ 
+[INFO] 17:02:25:049 Cpu/(9091:9098): Recibi PCB id: 0
+[INFO] 17:02:25:049 Cpu/(9091:9098): PID: 0 - Ejecutando CREATE_SEGMENT
+[INFO] 17:02:25:091 Cpu/(9091:9098): Recibi PCB id: 0
+[INFO] 17:02:25:091 Cpu/(9091:9098): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 17:02:25:094 Cpu/(9091:9098): Recibi PCB id: 0
+[INFO] 17:02:25:094 Cpu/(9091:9098): PID: 0 - Listo para ejecutar F_READ 
+[ERROR] 17:02:25:094 Cpu/(9091:9098): Desp: 4 - Seg: 0
+[WARNING] 17:02:25:094 Cpu/(9091:9098): Dir Fisica: 0x4x0 
+[INFO] 17:02:27:127 Cpu/(9091:9098): Recibi PCB id: 0
+[INFO] 17:02:27:127 Cpu/(9091:9098): PID: 0 - Listo para ejecutar F_WRITE 
+[ERROR] 17:02:27:127 Cpu/(9091:9098): Desp: 4 - Seg: 0
+[WARNING] 17:02:27:127 Cpu/(9091:9098): Dir Fisica: 0x4x0 
+[INFO] 17:02:30:145 Cpu/(9091:9098): Recibi PCB id: 0
+[INFO] 17:02:30:146 Cpu/(9091:9098): PID: 0 - Ejecutando EXIT
+[INFO] 17:02:50:213 Cpu/(9091:9098): Se ha finalizado la conexion

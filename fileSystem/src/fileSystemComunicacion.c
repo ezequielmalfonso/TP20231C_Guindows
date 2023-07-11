@@ -432,6 +432,7 @@ static void procesar_conexion(void* void_args) {
 
 			 //TODO
 			 //send pedido a memoria
+			 log_warning(logger, "Param: %s - Tam: %d", parametro2, tamanio_a_escribir );
 			 send_fs_memoria(memoria_fd,parametro2,tamanio_a_escribir, MOV_OUT);
 
 			 recv(memoria_fd, escribirBuffer, tamanio_a_escribir, MSG_WAITALL);

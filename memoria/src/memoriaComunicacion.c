@@ -271,8 +271,8 @@ static void procesar_fileSystem(void * void_args) {
     				//TODO  separar direccion fisica en NRO SEG y OFFSET
     				// y escribir en memoria
     				void* buffer = malloc(tamanio);
-    				strcpy(buffer, "probando");
-
+    				//strcpy(buffer, "probando");
+    				escribirEnMemoria(atoi(seg_desp_pid[0]), atoi(seg_desp_pid[1]), atoi(seg_desp_pid[2]), tamanio, buffer);
     				log_error(logger, "Enviando buffer a FS: %s ", buffer);
     				send(cliente_socket, buffer, tamanio, MSG_WAITALL);
 
