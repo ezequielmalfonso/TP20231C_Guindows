@@ -290,7 +290,7 @@ static void procesar_fileSystem(void * void_args) {
 //        		  log_info(logger, "PID: %d - N° Segmento: %d, Desplazamiento: %d, Tamanio: %d", *pid, *num_seg, *desplazamiento1, *tamanio);
 
         		  //log_info(logger, "xPID: %lu - N° Segmento: %lu, Desplazamiento: %lu, Tamanio: %d", *pid, *num_seg, *desplazamiento1, *tamanio);
-        		  leido = leerMemoria(seg_desp_pid[0], seg_desp_pid[1], seg_desp_pid[2], tamanio);
+        		  leido = leerMemoria(atoi(seg_desp_pid[0]), atoi(seg_desp_pid[1]), atoi(seg_desp_pid[2]), tamanio);
         		  log_error(logger, "Explote de la dir fisica: Seg: %s - Desp: %s - Pid: %s", seg_desp_pid[0], seg_desp_pid[1], seg_desp_pid[2]);
         		  log_warning(logger, "Recibimos dir fisica: %s - Tamanio: %d",direccion_fisica, tamanio);
 

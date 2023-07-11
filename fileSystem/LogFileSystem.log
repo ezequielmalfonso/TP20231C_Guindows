@@ -1,0 +1,122 @@
+[INFO] 13:07:31:372 FileSystem/(5436:5436): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 13:07:31:374 FileSystem/(5436:5436): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 13:07:31:375 FileSystem/(5436:5436): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 13:07:31:375 FileSystem/(5436:5436): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 13:07:31:375 FileSystem/(5436:5436): Archivo de Bloques Cargado
+[INFO] 13:07:31:376 FileSystem/(5436:5436): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 13:07:31:376 FileSystem/(5436:5436): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 13:07:34:336 FileSystem/(5436:5436): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 13:07:43:041 FileSystem/(5436:5442): Se recibio F_EXISTS para archivo ARCHIVO
+[INFO] 13:07:43:042 FileSystem/(5436:5442): Se recibio F_OPEN para archivo ARCHIVO
+[INFO] 13:07:43:042 FileSystem/(5436:5442): Se ha abierto el archivo: ARCHIVO
+[INFO] 13:07:43:089 FileSystem/(5436:5442): Se recibio F_TRUNCATE con parametros archivo: ARCHIVO, nuevo tamaño: 64
+
+[INFO] 13:07:43:089 FileSystem/(5436:5442): Cargando fcb /home/utnso/tp-2023-1c-Guindows/fs/fcb/ARCHIVO
+[INFO] 13:07:43:089 FileSystem/(5436:5442): FCB Cargado:		
+NOMBRE_ARCHIVO: ARCHIVO
+		TAMANIO_ARCHIVO: 64
+		PUNTERO_DIRECTO: 0
+		PUNTERO_INDIRECTO: 0
+
+[WARNING] 13:07:43:103 FileSystem/(5436:5442): Bloques libres segun bitmap: 65535 de 65536 (ocupados=1)
+[WARNING] 13:07:43:104 FileSystem/(5436:5442): El archivo ocupa: 1 bloques - Debe pasar a ocupar: 1 bloques
+[WARNING] 13:07:43:104 FileSystem/(5436:5442): Tamaño nuevo: 64
+[INFO] 13:07:43:111 FileSystem/(5436:5442): Se recibio F_READ con parametros Archivo: ARCHIVO, Tamaño: 20, Direccion Fisica: 0x4x0 y Posicion: 0
+[INFO] 13:07:45:111 FileSystem/(5436:5442): Cargando fcb /home/utnso/tp-2023-1c-Guindows/fs/fcb/ARCHIVO
+[INFO] 13:07:45:112 FileSystem/(5436:5442): FCB Cargado:		
+NOMBRE_ARCHIVO: ARCHIVO
+		TAMANIO_ARCHIVO: 64
+		PUNTERO_DIRECTO: 0
+		PUNTERO_INDIRECTO: 0
+
+[INFO] 13:07:45:112 FileSystem/(5436:5442): Cargando bloque indirecto con direccion 0
+[INFO] 13:07:45:128 FileSystem/(5436:5442): Se debe empezar por el puntero directo
+[INFO] 13:07:45:128 FileSystem/(5436:5442): La lectura comienza en el bloque de puntero 0, perteneciente al bloque nro: 0
+[INFO] 13:07:45:128 FileSystem/(5436:5442): Tamaño a leer: 20, Tamaño Bloque: 64
+[INFO] 13:07:45:128 FileSystem/(5436:5442): Se deben leer 1 bloques
+[INFO] 13:07:45:145 FileSystem/(5436:5442): Se leyo a partir del offset 0 dentro del bloque. Informacion del primer bloque leido: HOLAPROBANDO12345678FileSystem/(5436:5442): Se deben leer 1 bloques
+
+[INFO] 13:07:45:146 FileSystem/(5436:5442): Tamaño leido en primer bloque: 20, tamaño restante por leer: 0
+[INFO] 13:07:45:146 FileSystem/(5436:5442): Lectura completa: HOLAPROBANDO12345678FileSystem/(5436:5442): Se deben leer 1 bloques
+, listo para enviar a memoria - tamanio: 20
+[INFO] 13:08:02:898 FileSystem/(5436:5442): Se ha finalizado la conexion
+[INFO] 14:24:35:875 FileSystem/(5828:5828): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 14:24:35:877 FileSystem/(5828:5828): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 14:24:35:878 FileSystem/(5828:5828): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 14:24:35:878 FileSystem/(5828:5828): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 14:24:35:878 FileSystem/(5828:5828): Archivo de Bloques Cargado
+[INFO] 14:24:35:879 FileSystem/(5828:5828): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 14:24:35:879 FileSystem/(5828:5828): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 14:24:36:570 FileSystem/(5828:5828): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 14:24:42:202 FileSystem/(5828:5833): Se recibio F_EXISTS para archivo ARCHIVO
+[INFO] 14:24:42:203 FileSystem/(5828:5833): Se recibio F_OPEN para archivo ARCHIVO
+[INFO] 14:24:42:203 FileSystem/(5828:5833): Se ha abierto el archivo: ARCHIVO
+[INFO] 14:24:42:247 FileSystem/(5828:5833): Se recibio F_TRUNCATE con parametros archivo: ARCHIVO, nuevo tamaño: 64
+
+[INFO] 14:24:42:247 FileSystem/(5828:5833): Cargando fcb /home/utnso/tp-2023-1c-Guindows/fs/fcb/ARCHIVO
+[INFO] 14:24:42:247 FileSystem/(5828:5833): FCB Cargado:		
+NOMBRE_ARCHIVO: ARCHIVO
+		TAMANIO_ARCHIVO: 64
+		PUNTERO_DIRECTO: 0
+		PUNTERO_INDIRECTO: 0
+
+[WARNING] 14:24:42:248 FileSystem/(5828:5833): Bloques libres segun bitmap: 65535 de 65536 (ocupados=1)
+[WARNING] 14:24:42:248 FileSystem/(5828:5833): El archivo ocupa: 1 bloques - Debe pasar a ocupar: 1 bloques
+[WARNING] 14:24:42:248 FileSystem/(5828:5833): Tamaño nuevo: 64
+[INFO] 14:24:42:250 FileSystem/(5828:5833): Se recibio F_READ con parametros Archivo: ARCHIVO, Tamaño: 20, Direccion Fisica: 0x4x0 y Posicion: 0
+[INFO] 14:24:44:250 FileSystem/(5828:5833): Cargando fcb /home/utnso/tp-2023-1c-Guindows/fs/fcb/ARCHIVO
+[INFO] 14:24:44:250 FileSystem/(5828:5833): FCB Cargado:		
+NOMBRE_ARCHIVO: ARCHIVO
+		TAMANIO_ARCHIVO: 64
+		PUNTERO_DIRECTO: 0
+		PUNTERO_INDIRECTO: 0
+
+[INFO] 14:24:44:251 FileSystem/(5828:5833): Cargando bloque indirecto con direccion 0
+[INFO] 14:24:44:266 FileSystem/(5828:5833): Se debe empezar por el puntero directo
+[INFO] 14:24:44:266 FileSystem/(5828:5833): La lectura comienza en el bloque de puntero 0, perteneciente al bloque nro: 0
+[INFO] 14:24:44:267 FileSystem/(5828:5833): Tamaño a leer: 20, Tamaño Bloque: 64
+[INFO] 14:24:44:267 FileSystem/(5828:5833): Se deben leer 1 bloques
+[INFO] 14:24:44:287 FileSystem/(5828:5833): Se leyo a partir del offset 0 dentro del bloque. Informacion del primer bloque leido: HOLAPROBANDO12345678FileSystem/(5828:5833): Se deben leer 1 bloques
+
+[INFO] 14:24:44:287 FileSystem/(5828:5833): Tamaño leido en primer bloque: 20, tamaño restante por leer: 0
+[INFO] 14:24:44:288 FileSystem/(5828:5833): Lectura completa: HOLAPROBANDO12345678FileSystem/(5828:5833): Se deben leer 1 bloques
+, listo para enviar a memoria - tamanio: 20
+[INFO] 14:24:44:293 FileSystem/(5828:5833): Se recibio F_WRITE con parametros Archivo: ARCHIVO, Tamaño: 20, Direccion Fisica: 0x4x0 y Posicion: 0
+[INFO] 14:24:44:293 FileSystem/(5828:5833): Cargando fcb /home/utnso/tp-2023-1c-Guindows/fs/fcb/ARCHIVO
+[INFO] 14:24:44:294 FileSystem/(5828:5833): FCB Cargado:		
+NOMBRE_ARCHIVO: ARCHIVO
+		TAMANIO_ARCHIVO: 64
+		PUNTERO_DIRECTO: 0
+		PUNTERO_INDIRECTO: 0
+
+[WARNING] 14:24:47:295 FileSystem/(5828:5833): Recibiendo buffer que escribir: probando
+[INFO] 14:24:47:296 FileSystem/(5828:5833): Bloque inicial: 0, Offset en este bloque: 0, bloques necesarios totales: 1
+[INFO] 14:24:47:311 FileSystem/(5828:5833): Se ha escrito en el bloque con puntero 0 un tamaño de 20, partiendo de la posicion del archivo 0
