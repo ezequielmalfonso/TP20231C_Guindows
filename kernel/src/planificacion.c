@@ -389,6 +389,9 @@ void esperar_cpu(){
 										break;
 				case CREATE_SEGMENT_FAIL:
 										log_error(logger, "NO HAY SUFICIENTE");
+										execute_a_exit(pcb, "Out of Memory");
+										sem_post(&s_ready_execute);
+										//TODO recorrer tabla de segmentos y enviar delete de cada uno. meterolo dentro del execute_a_exit
 										break;
 				case CREATE_SEGMENT_COMPACTO:
 										log_warning(logger, "SOLICITAR COMPACTACION");
