@@ -1192,3 +1192,167 @@ BLOCK_COUNT: 65536
 [INFO] 21:06:49:587 FileSystem/(16147:16147): Cliente conectado (a FILESYSTEM_SV)
 
 [INFO] 21:08:00:316 FileSystem/(16147:16152): Se ha finalizado la conexion
+[INFO] 16:27:53:207 FileSystem/(88868:88868): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 16:27:53:208 FileSystem/(88868:88868): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 16:27:53:209 FileSystem/(88868:88868): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 16:27:53:210 FileSystem/(88868:88868): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 16:27:53:210 FileSystem/(88868:88868): Archivo de Bloques Cargado
+[INFO] 16:27:53:210 FileSystem/(88868:88868): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 16:27:53:210 FileSystem/(88868:88868): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 16:27:55:956 FileSystem/(88868:88868): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 16:28:02:682 FileSystem/(88868:88876): Se recibio F_EXISTS para archivo ARCHIVO
+[INFO] 16:28:02:683 FileSystem/(88868:88876): Se recibio F_OPEN para archivo ARCHIVO
+[INFO] 16:28:02:683 FileSystem/(88868:88876): Se ha abierto el archivo: ARCHIVO
+[INFO] 16:28:02:724 FileSystem/(88868:88876): Se recibio F_TRUNCATE con parametros archivo: ARCHIVO, nuevo tamaño: 64
+
+[INFO] 16:28:02:724 FileSystem/(88868:88876): Cargando fcb /home/utnso/tp-2023-1c-Guindows/fs/fcb/ARCHIVO
+[INFO] 16:28:02:725 FileSystem/(88868:88876): FCB Cargado:		
+NOMBRE_ARCHIVO: ARCHIVO
+		TAMANIO_ARCHIVO: 64
+		PUNTERO_DIRECTO: 0
+		PUNTERO_INDIRECTO: 0
+
+[WARNING] 16:28:02:726 FileSystem/(88868:88876): Bloques libres segun bitmap: 65535 de 65536 (ocupados=1)
+[WARNING] 16:28:02:726 FileSystem/(88868:88876): El archivo ocupa: 1 bloques - Debe pasar a ocupar: 1 bloques
+[WARNING] 16:28:02:726 FileSystem/(88868:88876): Tamaño nuevo: 64
+[INFO] 16:28:02:727 FileSystem/(88868:88876): Se recibio F_READ con parametros Archivo: ARCHIVO, Tamaño: 20, Direccion Fisica: 0x4x0 y Posicion: 0
+[INFO] 16:28:04:728 FileSystem/(88868:88876): Cargando fcb /home/utnso/tp-2023-1c-Guindows/fs/fcb/ARCHIVO
+[INFO] 16:28:04:729 FileSystem/(88868:88876): FCB Cargado:		
+NOMBRE_ARCHIVO: ARCHIVO
+		TAMANIO_ARCHIVO: 64
+		PUNTERO_DIRECTO: 0
+		PUNTERO_INDIRECTO: 0
+
+[INFO] 16:28:04:729 FileSystem/(88868:88876): Cargando bloque indirecto con direccion 0
+[INFO] 16:28:19:730 FileSystem/(88868:88876): Se debe empezar por el puntero directo
+[INFO] 16:28:19:731 FileSystem/(88868:88876): La lectura comienza en el bloque de puntero 0, perteneciente al bloque nro: 0
+[INFO] 16:28:19:731 FileSystem/(88868:88876): Tamaño a leer: 20, Tamaño Bloque: 64
+[INFO] 16:28:19:731 FileSystem/(88868:88876): Se deben leer 1 bloques
+[INFO] 16:28:19:747 FileSystem/(88868:88876): Se leyo a partir del offset 0 dentro del bloque. Informacion del primer bloque leido: PROBANDO123456789112
+[INFO] 16:28:19:747 FileSystem/(88868:88876): Tamaño leido en primer bloque: 20, tamaño restante por leer: 0
+[INFO] 16:28:19:747 FileSystem/(88868:88876): Lectura completa: PROBANDO123456789112, listo para enviar a memoria - tamanio: 20
+[INFO] 16:28:20:752 FileSystem/(88868:88876): Se recibio F_WRITE con parametros Archivo: ARCHIVO, Tamaño: 20, Direccion Fisica: 0x4x0 y Posicion: 0
+[INFO] 16:28:20:752 FileSystem/(88868:88876): Cargando fcb /home/utnso/tp-2023-1c-Guindows/fs/fcb/ARCHIVO
+[INFO] 16:28:20:753 FileSystem/(88868:88876): FCB Cargado:		
+NOMBRE_ARCHIVO: ARCHIVO
+		TAMANIO_ARCHIVO: 64
+		PUNTERO_DIRECTO: 0
+		PUNTERO_INDIRECTO: 0
+
+[WARNING] 16:28:23:753 FileSystem/(88868:88876): Param: 0x4x0 - Tam: 20
+[WARNING] 16:28:24:756 FileSystem/(88868:88876): Recibiendo buffer que escribir: PROBANDO123456789112
+[INFO] 16:28:24:757 FileSystem/(88868:88876): Bloque inicial: 0, Offset en este bloque: 0, bloques necesarios totales: 1
+[INFO] 16:28:24:775 FileSystem/(88868:88876): Se ha escrito en el bloque con puntero 0 un tamaño de 20, partiendo de la posicion del archivo 0
+[INFO] 16:34:17:611 FileSystem/(88868:88876): Se ha finalizado la conexion
+[INFO] 16:34:23:963 FileSystem/(88912:88912): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 16:34:23:964 FileSystem/(88912:88912): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 16:34:23:965 FileSystem/(88912:88912): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 16:34:23:965 FileSystem/(88912:88912): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 16:34:23:965 FileSystem/(88912:88912): Archivo de Bloques Cargado
+[INFO] 16:34:23:965 FileSystem/(88912:88912): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 16:34:23:966 FileSystem/(88912:88912): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 16:34:25:154 FileSystem/(88912:88912): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 19:29:44:900 FileSystem/(88912:88917): Se ha finalizado la conexion
+[INFO] 19:29:52:651 FileSystem/(89527:89527): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 19:29:52:653 FileSystem/(89527:89527): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 19:29:52:653 FileSystem/(89527:89527): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 19:29:52:653 FileSystem/(89527:89527): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 19:29:52:654 FileSystem/(89527:89527): Archivo de Bloques Cargado
+[INFO] 19:29:52:655 FileSystem/(89527:89527): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 19:29:52:656 FileSystem/(89527:89527): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 19:29:53:513 FileSystem/(89527:89527): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 19:31:28:189 FileSystem/(89527:89532): Se ha finalizado la conexion
+[INFO] 19:31:33:052 FileSystem/(89646:89646): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 19:31:33:055 FileSystem/(89646:89646): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 19:31:33:055 FileSystem/(89646:89646): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 19:31:33:055 FileSystem/(89646:89646): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 19:31:33:055 FileSystem/(89646:89646): Archivo de Bloques Cargado
+[INFO] 19:31:33:056 FileSystem/(89646:89646): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 19:31:33:056 FileSystem/(89646:89646): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 19:31:33:828 FileSystem/(89646:89646): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 19:32:52:512 FileSystem/(89646:89651): Se ha finalizado la conexion
+[INFO] 19:34:46:182 FileSystem/(89880:89880): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 19:34:46:183 FileSystem/(89880:89880): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 19:34:46:183 FileSystem/(89880:89880): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 19:34:46:183 FileSystem/(89880:89880): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 65536
+[INFO] 19:34:46:185 FileSystem/(89880:89880): Archivo de Bloques Cargado
+[INFO] 19:34:46:185 FileSystem/(89880:89880): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 19:34:46:186 FileSystem/(89880:89880): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 19:34:47:033 FileSystem/(89880:89880): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 19:35:20:090 FileSystem/(89880:89887): Se recibio F_EXISTS para archivo ARCHIVO
+[INFO] 19:35:20:091 FileSystem/(89880:89887): Se recibio F_OPEN para archivo ARCHIVO
+[INFO] 19:35:20:091 FileSystem/(89880:89887): Se ha abierto el archivo: ARCHIVO
+[INFO] 19:37:17:579 FileSystem/(89880:89887): Se recibio F_EXISTS para archivo ARCHIVO
+[INFO] 19:37:17:579 FileSystem/(89880:89887): Se recibio F_OPEN para archivo ARCHIVO
+[INFO] 19:37:17:579 FileSystem/(89880:89887): Se ha abierto el archivo: ARCHIVO
+[INFO] 19:59:58:745 FileSystem/(89880:89887): Se ha finalizado la conexion
