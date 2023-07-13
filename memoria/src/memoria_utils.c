@@ -282,6 +282,7 @@ void eliminarSegmentoProceso(uint32_t pid, uint32_t sid){
 	t_list* tablaProceso = buscarTabla(pid);
 	int i=0;
 	t_segmento* segmentoAux = list_get(tablaProceso,i);
+	log_info(logger,"[KERNEL] PID: %d - Eliminar Segmento id: %d - BASE: %d - TAMAÑO: %d", pid, sid, segmentoAux->direccion_base , segmentoAux->tamanio_segmento);
 	while(sid!=segmentoAux->id_segmento && i< list_size(tablaProceso)){//TODO resolver la variable CANT_SEGMENTOS
 		i++;
 		segmentoAux = list_get(tablaProceso,i);

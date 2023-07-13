@@ -65,6 +65,8 @@ static void procesar_kernel(void * void_args) {
 
       // Despuesta cambiar a tabla de segmentos
       //envio_segmento_0(segmento);
+
+	  log_info(logger, "[KERNEL] Se crea el proceso <PID> en NEW %d", pid);
       log_info(logger, "[KERNEL] Envio de segmento 0 para programa %d", pid);
       pthread_mutex_lock(&mx_kernel);
       send(cliente_socket, &(segmento->id_segmento), sizeof(uint32_t), MSG_WAITALL);
@@ -85,7 +87,7 @@ static void procesar_kernel(void * void_args) {
 			recv(cliente_socket, & tam_segmento, sizeof(uint32_t), 0);
 			pthread_mutex_unlock(&mx_kernel);
 
-			log_warning(logger,"Recibo: id:%d -tamanio:%d - pid:%d ",id_seg,tam_segmento,pid);
+			//log_warning(logger,"Recibo: id:%d -tamanio:%d - pid:%d ",id_seg,tam_segmento,pid);
 
 			if(noHayEspacio(tam_segmento)){
 				log_error(logger, "NO HAY ESPACIO DISPONIBLE");
@@ -103,6 +105,7 @@ static void procesar_kernel(void * void_args) {
 				pthread_mutex_lock(&mx_kernel);
 				recv(cliente_socket, & cop_comp, sizeof(op_code), 0);
 				pthread_mutex_unlock(&mx_kernel);
+				log_info(logger,"Solicitud de Compatación");
 				compactacion();  //VA ACA????
 
 				break;
@@ -110,7 +113,8 @@ static void procesar_kernel(void * void_args) {
 	    		crearSegmento(pid, id_seg, tam_segmento);
 	    		t_list* tabla_proceso = buscarTabla(pid);
 	    		t_segmento* seg = buscarSegmento(tabla_proceso, id_seg);
-	    		log_info(logger, "[KERNEL] Envio de segmento id:%d para programa %d",seg->id_segmento, pid);
+	    		//log_info(logger, "[KERNEL] Envio de segmento id:%d para programa %d",seg->id_segmento, pid);
+	    		log_info(logger,"[KERNEL] PID: %d - Crear Segmento id: %d - BASE: %d - TAMAÑO: %d", pid, id_seg, seg->direccion_base, tam_segmento);
 	    		op_code cop_comp_ok = CREATE_SEGMENT_OK;
 				pthread_mutex_lock(&mx_kernel);
 				send(cliente_socket, &(cop_comp_ok), sizeof(uint32_t), MSG_WAITALL);
@@ -129,9 +133,7 @@ static void procesar_kernel(void * void_args) {
     			recv(cliente_socket, & pid, sizeof(uint16_t), 0);
     			recv(cliente_socket, & id_seg_delete, sizeof(uint32_t), 0);
     			pthread_mutex_unlock(&mx_kernel);
-
-    			log_warning(logger,"Recibo eliminar: id:%d - pid:%d ",id_seg_delete,pid);
-
+    			//log_warning(logger,"Recibo eliminar: id:%d - pid:%d ",id_seg_delete,pid);
     			eliminarSegmentoProceso(pid, id_seg_delete);
     			op_code cop_del = DELETE_SEGMENT_OK;
 				pthread_mutex_lock(&mx_kernel);
@@ -141,8 +143,6 @@ static void procesar_kernel(void * void_args) {
     			break;
     case MAKE_COMPACTATION:
     			log_info(logger,"[KERNEL] Recibido pedido de COMPACTAR");
-
-    			// compacto
     			//compactacion();
 
     			op_code cop_comp_make = FIN_COMPACTATION;
@@ -447,19 +447,21 @@ t_segmento* buscarSiguienteSegmento(t_segmento* h){
 		}
 	}
 	t_segmento* h_sig;
-	for(int i = 0;i<list_size(tabla_de_huecos);i++){
-	h_sig=list_get(tabla_de_huecos,i);
-	if(pos_buscada== h_sig->direccion_base){
-		//log_info(logger,"encontre hueco base:%d",h_sig->direccion_base);
-		h_sig->direccion_base=h->direccion_base;
-		h_sig->tamanio_segmento+=h->tamanio_segmento;
-		eliminarHueco(h);
-		//log_info(logger,"pase el eliminar");
-		t_segmento* r=malloc(sizeof(t_segmento));
-		r->id_segmento=84;
-		return r;
+	for(int i = 0;i<list_size(tabla_de_huecos);i++)
+	{
+		h_sig=list_get(tabla_de_huecos,i);
 
-	}
+		if(pos_buscada== h_sig->direccion_base){
+			//log_info(logger,"encontre hueco base:%d",h_sig->direccion_base);
+			h_sig->direccion_base=h->direccion_base;
+			h_sig->tamanio_segmento+=h->tamanio_segmento;
+			eliminarHueco(h);
+			//log_info(logger,"pase el eliminar");
+			t_segmento* r=malloc(sizeof(t_segmento));
+			r->id_segmento=84;
+			return r;
+
+		}
 	}
 }
 void* leerMemoriaDesdeDireccion(uint64_t base,uint32_t tam){
@@ -508,6 +510,7 @@ void compactacion(){
 		hueco = buscarPrimerHueco();
 		llenarHueco(hueco);
 		//log_info(logger,"quedan %d huecos",list_size(tabla_de_huecos));
+		//t_segmento* segmentoAux = list_get(tablaProceso,i);
 }
 	op_code cop = FIN_COMPACTATION;
 	pthread_mutex_lock(&mx_kernel);

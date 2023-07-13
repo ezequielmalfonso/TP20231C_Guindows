@@ -1785,3 +1785,1106 @@ GRADO_MAX_MULTIPROGRAMACION: 4
 [WARNING] 19:37:17:624 Kernel/(89883:89885): El archivo ARCHIVO fue eliminado de la tabla global de archivos abiertos
 [INFO] 19:37:17:624 Kernel/(89883:89885): PID: 2 - Estado Anterior: EXECUTE - Estado Actual: EXIT
 [INFO] 19:37:17:624 Kernel/(89883:89885): Finaliza el proceso 2 - Motivo: Out of Memory
+[INFO] 21:42:42:334 Kernel/(39829:39829): Probando hora 0
+[INFO] 21:42:42:335 Kernel/(39829:39829): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 21:42:42:336 Kernel/(39829:39829): RECURSO: DISCO con 1 instancias
+[INFO] 21:42:42:336 Kernel/(39829:39829): RECURSO: MODEM con 1 instancias
+[INFO] 21:42:42:336 Kernel/(39829:39829): Cantidad total de recursos disponibles: 2 
+[INFO] 21:42:42:336 Kernel/(39829:39829): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 21:42:42:337 Kernel/(39829:39829): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 21:42:42:337 Kernel/(39829:39829): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:42:42:338 Kernel/(39829:39829): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 21:42:42:338 Kernel/(39829:39829): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 21:42:48:209 Kernel/(39829:39829): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 21:42:48:209 Kernel/(39829:39835): No hay asignacion tamaño de registros
+[INFO] 21:42:48:209 Kernel/(39829:39835): Envio solicitud a MEMORIA
+[INFO] 21:42:48:210 Kernel/(39829:39835): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 21:42:48:210 Kernel/(39829:39835): Se crea el proceso 0 en NEW
+[INFO] 21:42:48:210 Kernel/(39829:39835): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:42:48:210 Kernel/(39829:39835): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 21:42:48:211 Kernel/(39829:39830): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:42:48:211 Kernel/(39829:39831): PID: 0 - Crear segmento - ID:1 - Tamanio: :32  
+[WARNING] 21:42:48:211 Kernel/(39829:39831): Id_seg: 1 - Tam seg: 32 
+[WARNING] 21:42:48:296 Kernel/(39829:39831): Recibiendo Segmento: Id: 1 - Dir Base: 32 - Tamanio: 32
+[INFO] 21:42:48:297 Kernel/(39829:39831): PID: 0 - Crear segmento - ID:2 - Tamanio: :32  
+[WARNING] 21:42:48:297 Kernel/(39829:39831): Id_seg: 2 - Tam seg: 32 
+[WARNING] 21:42:48:385 Kernel/(39829:39831): Recibiendo Segmento: Id: 2 - Dir Base: 64 - Tamanio: 32
+[INFO] 21:42:48:385 Kernel/(39829:39831): PID: 0 - Eliminar segmento - Id: 1 
+[WARNING] 21:42:48:385 Kernel/(39829:39831): Id_seg a eliminar: 1  
+[INFO] 21:42:48:428 Kernel/(39829:39831): PID: 0 - Eliminar Segmento - Id Segmento: 2
+[INFO] 21:42:48:429 Kernel/(39829:39831): PID: 0 - Crear segmento - ID:3 - Tamanio: :60  
+[WARNING] 21:42:48:429 Kernel/(39829:39831): Id_seg: 3 - Tam seg: 60 
+[WARNING] 21:42:48:473 Kernel/(39829:39831): SOLICITAR COMPACTACION
+[WARNING] 21:42:48:473 Kernel/(39829:39831): ESPERO FIN DE COMPACTACION
+[WARNING] 21:42:54:517 Kernel/(39829:39831): Actualizar segmento 2 del proceso 0 con la base: 32
+[WARNING] 21:42:54:517 Kernel/(39829:39831): termino compactacion
+[INFO] 21:42:54:518 Kernel/(39829:39831): PID: 0 - Crear segmento - ID:3 - Tamanio: :60  
+[WARNING] 21:42:54:518 Kernel/(39829:39831): Id_seg: 3 - Tam seg: 60 
+[WARNING] 21:42:54:561 Kernel/(39829:39831): Recibiendo Segmento: Id: 3 - Dir Base: 64 - Tamanio: 60
+[INFO] 21:42:54:561 Kernel/(39829:39831): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 21:42:54:561 Kernel/(39829:39831): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 21:43:06:823 Kernel/(39829:39829): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 21:43:06:824 Kernel/(39829:39841): No hay asignacion tamaño de registros
+[INFO] 21:43:06:824 Kernel/(39829:39841): Envio solicitud a MEMORIA
+[INFO] 21:43:06:865 Kernel/(39829:39841): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 21:43:06:866 Kernel/(39829:39841): Se crea el proceso 1 en NEW
+[INFO] 21:43:06:866 Kernel/(39829:39841): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:43:06:866 Kernel/(39829:39841): Ingreso a Ready algoritmo HRRN - PIDS: [1] 
+[INFO] 21:43:06:866 Kernel/(39829:39830): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 21:43:06:866 Kernel/(39829:39831): PID: 1 - Crear segmento - ID:1 - Tamanio: :32  
+[WARNING] 21:43:06:866 Kernel/(39829:39831): Id_seg: 1 - Tam seg: 32 
+[ERROR] 21:43:06:909 Kernel/(39829:39831): NO HAY SUFICIENTE
+[INFO] 21:43:06:909 Kernel/(39829:39831): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 21:43:06:909 Kernel/(39829:39831): Finaliza el proceso 1 - Motivo: Out of Memory
+[INFO] 22:09:19:588 Kernel/(40219:40219): Probando hora 0
+[INFO] 22:09:19:589 Kernel/(40219:40219): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 22:09:19:590 Kernel/(40219:40219): RECURSO: DISCO con 1 instancias
+[INFO] 22:09:19:590 Kernel/(40219:40219): RECURSO: MODEM con 1 instancias
+[INFO] 22:09:19:590 Kernel/(40219:40219): Cantidad total de recursos disponibles: 2 
+[INFO] 22:09:19:591 Kernel/(40219:40219): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 22:09:19:591 Kernel/(40219:40219): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 22:09:19:592 Kernel/(40219:40219): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:09:19:593 Kernel/(40219:40219): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 22:09:19:594 Kernel/(40219:40219): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 22:09:22:053 Kernel/(40219:40219): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 22:09:22:054 Kernel/(40219:40227): No hay asignacion tamaño de registros
+[INFO] 22:09:22:054 Kernel/(40219:40227): Envio solicitud a MEMORIA
+[INFO] 22:09:22:054 Kernel/(40219:40227): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 22:09:22:055 Kernel/(40219:40227): Se crea el proceso 0 en NEW
+[INFO] 22:09:22:055 Kernel/(40219:40227): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 22:09:22:055 Kernel/(40219:40227): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 22:09:22:056 Kernel/(40219:40220): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:09:22:056 Kernel/(40219:40221): PID: 0 - Crear segmento - ID:1 - Tamanio: :32  
+[WARNING] 22:09:22:056 Kernel/(40219:40221): Id_seg: 1 - Tam seg: 32 
+[WARNING] 22:09:22:140 Kernel/(40219:40221): Recibiendo Segmento: Id: 1 - Dir Base: 32 - Tamanio: 32
+[INFO] 22:09:22:141 Kernel/(40219:40221): PID: 0 - Crear segmento - ID:2 - Tamanio: :32  
+[WARNING] 22:09:22:141 Kernel/(40219:40221): Id_seg: 2 - Tam seg: 32 
+[WARNING] 22:09:22:229 Kernel/(40219:40221): Recibiendo Segmento: Id: 2 - Dir Base: 64 - Tamanio: 32
+[INFO] 22:09:22:229 Kernel/(40219:40221): PID: 0 - Eliminar segmento - Id: 1 
+[WARNING] 22:09:22:229 Kernel/(40219:40221): Id_seg a eliminar: 1  
+[INFO] 22:09:22:273 Kernel/(40219:40221): PID: 0 - Eliminar Segmento - Id Segmento: 2
+[INFO] 22:09:22:273 Kernel/(40219:40221): PID: 0 - Crear segmento - ID:3 - Tamanio: :60  
+[WARNING] 22:09:22:273 Kernel/(40219:40221): Id_seg: 3 - Tam seg: 60 
+[WARNING] 22:09:22:317 Kernel/(40219:40221): SOLICITAR COMPACTACION
+[WARNING] 22:09:22:317 Kernel/(40219:40221): ESPERO FIN DE COMPACTACION
+[WARNING] 22:09:28:361 Kernel/(40219:40221): Actualizar segmento 2 del proceso 0 con la base: 32
+[WARNING] 22:09:28:361 Kernel/(40219:40221): termino compactacion
+[INFO] 22:09:28:362 Kernel/(40219:40221): PID: 0 - Crear segmento - ID:3 - Tamanio: :60  
+[WARNING] 22:09:28:362 Kernel/(40219:40221): Id_seg: 3 - Tam seg: 60 
+[INFO] 22:16:07:877 Kernel/(40398:40398): Probando hora 0
+[INFO] 22:16:07:877 Kernel/(40398:40398): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 22:16:07:879 Kernel/(40398:40398): RECURSO: DISCO con 1 instancias
+[INFO] 22:16:07:879 Kernel/(40398:40398): RECURSO: MODEM con 1 instancias
+[INFO] 22:16:07:879 Kernel/(40398:40398): Cantidad total de recursos disponibles: 2 
+[INFO] 22:16:07:881 Kernel/(40398:40398): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 22:16:07:881 Kernel/(40398:40398): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 22:16:07:882 Kernel/(40398:40398): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:16:07:883 Kernel/(40398:40398): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 22:16:07:883 Kernel/(40398:40398): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 22:16:11:663 Kernel/(40398:40398): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 22:16:11:664 Kernel/(40398:40404): No hay asignacion tamaño de registros
+[INFO] 22:16:11:664 Kernel/(40398:40404): Envio solicitud a MEMORIA
+[INFO] 22:16:11:665 Kernel/(40398:40404): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 22:16:11:665 Kernel/(40398:40404): Se crea el proceso 0 en NEW
+[INFO] 22:16:11:665 Kernel/(40398:40404): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 22:16:11:665 Kernel/(40398:40404): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 22:16:11:665 Kernel/(40398:40399): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:16:11:666 Kernel/(40398:40400): PID: 0 - Crear segmento - ID:1 - Tamanio: :32  
+[WARNING] 22:16:11:666 Kernel/(40398:40400): Id_seg: 1 - Tam seg: 32 
+[WARNING] 22:16:11:752 Kernel/(40398:40400): Recibiendo Segmento: Id: 1 - Dir Base: 32 - Tamanio: 32
+[INFO] 22:16:11:753 Kernel/(40398:40400): PID: 0 - Crear segmento - ID:2 - Tamanio: :32  
+[WARNING] 22:16:11:753 Kernel/(40398:40400): Id_seg: 2 - Tam seg: 32 
+[WARNING] 22:16:11:841 Kernel/(40398:40400): Recibiendo Segmento: Id: 2 - Dir Base: 64 - Tamanio: 32
+[INFO] 22:16:11:841 Kernel/(40398:40400): PID: 0 - Eliminar segmento - Id: 1 
+[WARNING] 22:16:11:841 Kernel/(40398:40400): Id_seg a eliminar: 1  
+[INFO] 22:16:11:885 Kernel/(40398:40400): PID: 0 - Eliminar Segmento - Id Segmento: 2
+[INFO] 22:16:11:885 Kernel/(40398:40400): PID: 0 - Crear segmento - ID:3 - Tamanio: :60  
+[WARNING] 22:16:11:885 Kernel/(40398:40400): Id_seg: 3 - Tam seg: 60 
+[WARNING] 22:16:11:929 Kernel/(40398:40400): SOLICITAR COMPACTACION
+[WARNING] 22:16:11:929 Kernel/(40398:40400): ESPERO FIN DE COMPACTACION
+[WARNING] 22:16:17:973 Kernel/(40398:40400): Actualizar segmento 2 del proceso 0 con la base: 32
+[WARNING] 22:16:17:973 Kernel/(40398:40400): termino compactacion
+[INFO] 22:16:17:974 Kernel/(40398:40400): PID: 0 - Crear segmento - ID:3 - Tamanio: :60  
+[WARNING] 22:16:17:974 Kernel/(40398:40400): Id_seg: 3 - Tam seg: 60 
+[WARNING] 22:16:18:017 Kernel/(40398:40400): Recibiendo Segmento: Id: 3 - Dir Base: 64 - Tamanio: 60
+[INFO] 22:16:18:017 Kernel/(40398:40400): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 22:16:18:017 Kernel/(40398:40400): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 22:31:57:426 Kernel/(41022:41022): Probando hora 0
+[INFO] 22:31:57:426 Kernel/(41022:41022): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 22:31:57:427 Kernel/(41022:41022): RECURSO: DISCO con 1 instancias
+[INFO] 22:31:57:427 Kernel/(41022:41022): RECURSO: MODEM con 1 instancias
+[INFO] 22:31:57:428 Kernel/(41022:41022): Cantidad total de recursos disponibles: 2 
+[INFO] 22:31:57:428 Kernel/(41022:41022): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 22:31:57:428 Kernel/(41022:41022): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 22:31:57:429 Kernel/(41022:41022): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:31:57:429 Kernel/(41022:41022): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 22:31:57:430 Kernel/(41022:41022): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 22:31:58:826 Kernel/(41022:41022): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 22:31:58:827 Kernel/(41022:41028): No hay asignacion tamaño de registros
+[INFO] 22:31:58:827 Kernel/(41022:41028): Envio solicitud a MEMORIA
+[INFO] 22:31:58:828 Kernel/(41022:41028): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 22:31:58:828 Kernel/(41022:41028): Se crea el proceso 0 en NEW
+[INFO] 22:31:58:828 Kernel/(41022:41028): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 22:31:58:828 Kernel/(41022:41028): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 22:31:58:828 Kernel/(41022:41023): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:31:58:829 Kernel/(41022:41024): PID: 0 - Crear segmento - ID:1 - Tamanio: :32  
+[WARNING] 22:31:58:829 Kernel/(41022:41024): Id_seg: 1 - Tam seg: 32 
+[WARNING] 22:31:58:916 Kernel/(41022:41024): Recibiendo Segmento: Id: 1 - Dir Base: 32 - Tamanio: 32
+[INFO] 22:31:58:917 Kernel/(41022:41024): PID: 0 - Crear segmento - ID:2 - Tamanio: :32  
+[WARNING] 22:31:58:917 Kernel/(41022:41024): Id_seg: 2 - Tam seg: 32 
+[WARNING] 22:31:59:005 Kernel/(41022:41024): Recibiendo Segmento: Id: 2 - Dir Base: 64 - Tamanio: 32
+[INFO] 22:31:59:005 Kernel/(41022:41024): PID: 0 - Eliminar segmento - Id: 1 
+[WARNING] 22:31:59:005 Kernel/(41022:41024): Id_seg a eliminar: 1  
+[INFO] 22:31:59:049 Kernel/(41022:41024): PID: 0 - Eliminar Segmento - Id Segmento: 2
+[INFO] 22:31:59:049 Kernel/(41022:41024): PID: 0 - Crear segmento - ID:3 - Tamanio: :60  
+[WARNING] 22:31:59:049 Kernel/(41022:41024): Id_seg: 3 - Tam seg: 60 
+[WARNING] 22:31:59:094 Kernel/(41022:41024): SOLICITAR COMPACTACION
+[WARNING] 22:31:59:094 Kernel/(41022:41024): ESPERO FIN DE COMPACTACION
+[WARNING] 22:32:05:141 Kernel/(41022:41024): Actualizar segmento 2 del proceso 0 con la base: 32
+[WARNING] 22:32:05:141 Kernel/(41022:41024): termino compactacion
+[INFO] 22:32:05:142 Kernel/(41022:41024): PID: 0 - Crear segmento - ID:3 - Tamanio: :60  
+[WARNING] 22:32:05:142 Kernel/(41022:41024): Id_seg: 3 - Tam seg: 60 
+[WARNING] 22:32:05:185 Kernel/(41022:41024): Recibiendo Segmento: Id: 3 - Dir Base: 64 - Tamanio: 60
+[INFO] 22:32:05:185 Kernel/(41022:41024): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 22:32:05:185 Kernel/(41022:41024): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 22:36:55:281 Kernel/(41305:41305): Probando hora 0
+[INFO] 22:36:55:283 Kernel/(41305:41305): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 22:36:55:284 Kernel/(41305:41305): RECURSO: DISCO con 1 instancias
+[INFO] 22:36:55:284 Kernel/(41305:41305): RECURSO: MODEM con 1 instancias
+[INFO] 22:36:55:285 Kernel/(41305:41305): Cantidad total de recursos disponibles: 2 
+[INFO] 22:36:55:285 Kernel/(41305:41305): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 22:36:55:285 Kernel/(41305:41305): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 22:36:55:286 Kernel/(41305:41305): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:36:55:286 Kernel/(41305:41305): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 22:36:55:287 Kernel/(41305:41305): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 22:36:56:579 Kernel/(41305:41305): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 22:36:56:580 Kernel/(41305:41311): No hay asignacion tamaño de registros
+[INFO] 22:36:56:580 Kernel/(41305:41311): Envio solicitud a MEMORIA
+[INFO] 22:36:56:580 Kernel/(41305:41311): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 22:36:56:580 Kernel/(41305:41311): Se crea el proceso 0 en NEW
+[INFO] 22:36:56:581 Kernel/(41305:41311): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 22:36:56:581 Kernel/(41305:41311): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 22:36:56:581 Kernel/(41305:41306): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:36:56:581 Kernel/(41305:41307): PID: 0 - Crear segmento - ID:1 - Tamanio: :32  
+[WARNING] 22:36:56:581 Kernel/(41305:41307): Id_seg: 1 - Tam seg: 32 
+[WARNING] 22:36:56:669 Kernel/(41305:41307): Recibiendo Segmento: Id: 1 - Dir Base: 32 - Tamanio: 32
+[INFO] 22:36:56:669 Kernel/(41305:41307): PID: 0 - Crear segmento - ID:2 - Tamanio: :32  
+[WARNING] 22:36:56:669 Kernel/(41305:41307): Id_seg: 2 - Tam seg: 32 
+[WARNING] 22:36:56:757 Kernel/(41305:41307): Recibiendo Segmento: Id: 2 - Dir Base: 64 - Tamanio: 32
+[INFO] 22:36:56:757 Kernel/(41305:41307): PID: 0 - Eliminar segmento - Id: 1 
+[WARNING] 22:36:56:757 Kernel/(41305:41307): Id_seg a eliminar: 1  
+[INFO] 22:36:56:801 Kernel/(41305:41307): PID: 0 - Eliminar Segmento - Id Segmento: 2
+[INFO] 22:36:56:801 Kernel/(41305:41307): PID: 0 - Crear segmento - ID:3 - Tamanio: :60  
+[WARNING] 22:36:56:801 Kernel/(41305:41307): Id_seg: 3 - Tam seg: 60 
+[WARNING] 22:36:56:845 Kernel/(41305:41307): SOLICITAR COMPACTACION
+[WARNING] 22:36:56:845 Kernel/(41305:41307): ESPERO FIN DE COMPACTACION
+[WARNING] 22:37:02:889 Kernel/(41305:41307): Actualizar segmento 2 del proceso 0 con la base: 32
+[WARNING] 22:37:02:889 Kernel/(41305:41307): termino compactacion
+[INFO] 22:37:02:889 Kernel/(41305:41307): PID: 0 - Crear segmento - ID:3 - Tamanio: :60  
+[WARNING] 22:37:02:889 Kernel/(41305:41307): Id_seg: 3 - Tam seg: 60 
+[WARNING] 22:37:02:933 Kernel/(41305:41307): Recibiendo Segmento: Id: 3 - Dir Base: 64 - Tamanio: 60
+[INFO] 22:37:02:933 Kernel/(41305:41307): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 22:37:02:933 Kernel/(41305:41307): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 22:37:45:105 Kernel/(41399:41399): Probando hora 0
+[INFO] 22:37:45:106 Kernel/(41399:41399): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 22:37:45:108 Kernel/(41399:41399): RECURSO: DISCO con 1 instancias
+[INFO] 22:37:45:108 Kernel/(41399:41399): RECURSO: MODEM con 1 instancias
+[INFO] 22:37:45:108 Kernel/(41399:41399): Cantidad total de recursos disponibles: 2 
+[INFO] 22:37:45:108 Kernel/(41399:41399): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 22:37:45:109 Kernel/(41399:41399): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 22:37:45:109 Kernel/(41399:41399): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:37:45:110 Kernel/(41399:41399): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 22:37:45:110 Kernel/(41399:41399): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 22:37:46:187 Kernel/(41399:41399): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 22:37:46:187 Kernel/(41399:41405): No hay asignacion tamaño de registros
+[INFO] 22:37:46:188 Kernel/(41399:41405): Envio solicitud a MEMORIA
+[INFO] 22:37:46:188 Kernel/(41399:41405): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 22:37:46:188 Kernel/(41399:41405): Se crea el proceso 0 en NEW
+[INFO] 22:37:46:188 Kernel/(41399:41405): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 22:37:46:189 Kernel/(41399:41405): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 22:37:46:189 Kernel/(41399:41400): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:37:46:189 Kernel/(41399:41401): PID: 0 - Crear segmento - ID:1 - Tamanio: :32  
+[WARNING] 22:37:46:189 Kernel/(41399:41401): Id_seg: 1 - Tam seg: 32 
+[WARNING] 22:37:46:276 Kernel/(41399:41401): Recibiendo Segmento: Id: 1 - Dir Base: 32 - Tamanio: 32
+[INFO] 22:37:46:277 Kernel/(41399:41401): PID: 0 - Crear segmento - ID:2 - Tamanio: :32  
+[WARNING] 22:37:46:277 Kernel/(41399:41401): Id_seg: 2 - Tam seg: 32 
+[WARNING] 22:37:46:364 Kernel/(41399:41401): Recibiendo Segmento: Id: 2 - Dir Base: 64 - Tamanio: 32
+[INFO] 22:37:46:365 Kernel/(41399:41401): PID: 0 - Eliminar segmento - Id: 1 
+[WARNING] 22:37:46:365 Kernel/(41399:41401): Id_seg a eliminar: 1  
+[INFO] 22:37:46:409 Kernel/(41399:41401): PID: 0 - Eliminar Segmento - Id Segmento: 2
+[INFO] 22:37:46:409 Kernel/(41399:41401): PID: 0 - Crear segmento - ID:3 - Tamanio: :60  
+[WARNING] 22:37:46:410 Kernel/(41399:41401): Id_seg: 3 - Tam seg: 60 
+[WARNING] 22:37:46:452 Kernel/(41399:41401): SOLICITAR COMPACTACION
+[WARNING] 22:37:46:453 Kernel/(41399:41401): ESPERO FIN DE COMPACTACION
+[WARNING] 22:37:52:497 Kernel/(41399:41401): Actualizar segmento 2 del proceso 0 con la base: 32
+[WARNING] 22:37:52:497 Kernel/(41399:41401): termino compactacion
+[INFO] 22:37:52:498 Kernel/(41399:41401): PID: 0 - Crear segmento - ID:3 - Tamanio: :60  
+[WARNING] 22:37:52:498 Kernel/(41399:41401): Id_seg: 3 - Tam seg: 60 
+[WARNING] 22:37:52:540 Kernel/(41399:41401): Recibiendo Segmento: Id: 3 - Dir Base: 64 - Tamanio: 60
+[INFO] 22:37:52:541 Kernel/(41399:41401): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 22:37:52:541 Kernel/(41399:41401): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 22:51:52:928 Kernel/(41399:41399): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 22:51:52:928 Kernel/(41399:41725): No hay asignacion tamaño de registros
+[INFO] 22:51:52:928 Kernel/(41399:41725): Envio solicitud a MEMORIA
+[INFO] 22:51:52:970 Kernel/(41399:41725): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 22:51:52:970 Kernel/(41399:41725): Se crea el proceso 1 en NEW
+[INFO] 22:51:52:970 Kernel/(41399:41725): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 22:51:52:970 Kernel/(41399:41725): Ingreso a Ready algoritmo HRRN - PIDS: [1] 
+[INFO] 22:51:52:970 Kernel/(41399:41400): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:51:52:970 Kernel/(41399:41401): PID: 1 - Crear segmento - ID:1 - Tamanio: :32  
+[WARNING] 22:51:52:970 Kernel/(41399:41401): Id_seg: 1 - Tam seg: 32 
+[ERROR] 22:51:53:013 Kernel/(41399:41401): NO HAY SUFICIENTE
+[INFO] 22:51:53:013 Kernel/(41399:41401): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 22:51:53:013 Kernel/(41399:41401): Finaliza el proceso 1 - Motivo: Out of Memory
+[INFO] 22:55:46:457 Kernel/(41399:41399): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 22:55:46:457 Kernel/(41399:41745): No hay asignacion tamaño de registros
+[INFO] 22:55:46:458 Kernel/(41399:41745): Envio solicitud a MEMORIA
+[INFO] 22:55:46:502 Kernel/(41399:41745): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 22:55:46:502 Kernel/(41399:41745): Se crea el proceso 2 en NEW
+[INFO] 22:55:46:502 Kernel/(41399:41745): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 22:55:46:502 Kernel/(41399:41745): Ingreso a Ready algoritmo HRRN - PIDS: [2] 
+[INFO] 22:55:46:502 Kernel/(41399:41400): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 22:55:46:502 Kernel/(41399:41401): PID: 2 - Crear segmento - ID:1 - Tamanio: :16  
+[WARNING] 22:55:46:502 Kernel/(41399:41401): Id_seg: 1 - Tam seg: 16 
+[ERROR] 22:55:46:544 Kernel/(41399:41401): NO HAY SUFICIENTE
+[INFO] 22:55:46:545 Kernel/(41399:41401): PID: 2 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 22:55:46:545 Kernel/(41399:41401): Finaliza el proceso 2 - Motivo: Out of Memory
+[INFO] 23:00:18:897 Kernel/(41399:41399): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 23:00:18:897 Kernel/(41399:41756): No hay asignacion tamaño de registros
+[INFO] 23:00:18:898 Kernel/(41399:41756): Envio solicitud a MEMORIA
+[INFO] 23:00:18:941 Kernel/(41399:41756): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 23:00:18:941 Kernel/(41399:41756): Se crea el proceso 3 en NEW
+[INFO] 23:00:18:941 Kernel/(41399:41756): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:00:18:941 Kernel/(41399:41756): Ingreso a Ready algoritmo HRRN - PIDS: [3] 
+[INFO] 23:00:18:941 Kernel/(41399:41400): PID: 3 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:00:18:942 Kernel/(41399:41401): PID: 3 - Crear segmento - ID:1 - Tamanio: :1  
+[WARNING] 23:00:18:942 Kernel/(41399:41401): Id_seg: 1 - Tam seg: 1 
+[WARNING] 23:00:19:028 Kernel/(41399:41401): Recibiendo Segmento: Id: 1 - Dir Base: 124 - Tamanio: 1
+[INFO] 23:00:19:029 Kernel/(41399:41401): PID: 3 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 23:00:19:029 Kernel/(41399:41401): Finaliza el proceso 3 - Motivo: POR FIN
+[INFO] 23:01:02:025 Kernel/(41399:41399): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 23:01:02:026 Kernel/(41399:41764): No hay asignacion tamaño de registros
+[INFO] 23:01:02:026 Kernel/(41399:41764): Envio solicitud a MEMORIA
+[INFO] 23:01:02:069 Kernel/(41399:41764): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 23:01:02:069 Kernel/(41399:41764): Se crea el proceso 4 en NEW
+[INFO] 23:01:02:069 Kernel/(41399:41764): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:01:02:069 Kernel/(41399:41764): Ingreso a Ready algoritmo HRRN - PIDS: [4] 
+[INFO] 23:01:02:069 Kernel/(41399:41400): PID: 4 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:01:02:070 Kernel/(41399:41401): PID: 4 - Crear segmento - ID:1 - Tamanio: :10  
+[WARNING] 23:01:02:070 Kernel/(41399:41401): Id_seg: 1 - Tam seg: 10 
+[ERROR] 23:01:02:113 Kernel/(41399:41401): NO HAY SUFICIENTE
+[INFO] 23:01:02:113 Kernel/(41399:41401): PID: 4 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 23:01:02:113 Kernel/(41399:41401): Finaliza el proceso 4 - Motivo: Out of Memory
+[INFO] 23:19:06:188 Kernel/(42077:42077): Probando hora 0
+[INFO] 23:19:06:188 Kernel/(42077:42077): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 23:19:06:189 Kernel/(42077:42077): RECURSO: DISCO con 1 instancias
+[INFO] 23:19:06:190 Kernel/(42077:42077): RECURSO: MODEM con 1 instancias
+[INFO] 23:19:06:190 Kernel/(42077:42077): Cantidad total de recursos disponibles: 2 
+[INFO] 23:19:06:190 Kernel/(42077:42077): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 23:19:06:190 Kernel/(42077:42077): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 23:19:06:191 Kernel/(42077:42077): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:19:06:192 Kernel/(42077:42077): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 23:19:06:192 Kernel/(42077:42077): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 23:23:53:540 Kernel/(42137:42137): Probando hora 0
+[INFO] 23:23:53:541 Kernel/(42137:42137): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 23:23:53:542 Kernel/(42137:42137): RECURSO: DISCO con 1 instancias
+[INFO] 23:23:53:542 Kernel/(42137:42137): RECURSO: MODEM con 1 instancias
+[INFO] 23:23:53:542 Kernel/(42137:42137): Cantidad total de recursos disponibles: 2 
+[INFO] 23:23:53:543 Kernel/(42137:42137): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 23:23:53:543 Kernel/(42137:42137): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 23:23:53:544 Kernel/(42137:42137): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:23:53:544 Kernel/(42137:42137): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 23:23:53:544 Kernel/(42137:42137): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 23:24:51:805 Kernel/(42137:42137): Cliente conectado (a KERNEL_SV)
+
+[INFO] 23:24:52:221 Kernel/(42137:42137): Cliente conectado (a KERNEL_SV)
+
+[INFO] 23:25:50:044 Kernel/(42169:42169): Probando hora 0
+[INFO] 23:25:50:044 Kernel/(42169:42169): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 23:25:50:045 Kernel/(42169:42169): RECURSO: DISCO con 1 instancias
+[INFO] 23:25:50:045 Kernel/(42169:42169): RECURSO: MODEM con 1 instancias
+[INFO] 23:25:50:045 Kernel/(42169:42169): Cantidad total de recursos disponibles: 2 
+[INFO] 23:25:50:046 Kernel/(42169:42169): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 23:25:50:046 Kernel/(42169:42169): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 23:25:50:047 Kernel/(42169:42169): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:25:50:047 Kernel/(42169:42169): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 23:25:50:048 Kernel/(42169:42169): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 23:26:07:894 Kernel/(42169:42169): Cliente conectado (a KERNEL_SV)
+
+[INFO] 23:26:07:895 Kernel/(42169:42180): Envio solicitud a MEMORIA
+[INFO] 23:26:07:895 Kernel/(42169:42180): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 23:26:07:896 Kernel/(42169:42180): Se crea el proceso 0 en NEW
+[INFO] 23:26:07:896 Kernel/(42169:42180): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:26:07:896 Kernel/(42169:42180): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 23:26:07:896 Kernel/(42169:42170): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:26:08:356 Kernel/(42169:42169): Cliente conectado (a KERNEL_SV)
+
+[INFO] 23:26:08:357 Kernel/(42169:42182): Envio solicitud a MEMORIA
+[INFO] 23:26:08:397 Kernel/(42169:42182): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 23:26:08:398 Kernel/(42169:42182): Se crea el proceso 1 en NEW
+[INFO] 23:26:08:398 Kernel/(42169:42182): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:26:08:398 Kernel/(42169:42182): Ingreso a Ready algoritmo HRRN - PIDS: [1] 
+[INFO] 23:26:08:996 Kernel/(42169:42169): Cliente conectado (a KERNEL_SV)
+
+[INFO] 23:26:08:997 Kernel/(42169:42184): Envio solicitud a MEMORIA
+[INFO] 23:26:09:037 Kernel/(42169:42184): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 32
+[INFO] 23:26:09:037 Kernel/(42169:42184): Se crea el proceso 2 en NEW
+[INFO] 23:26:09:037 Kernel/(42169:42184): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:26:09:037 Kernel/(42169:42184): Ingreso a Ready algoritmo HRRN - PIDS: [1 2] 
+[INFO] 23:26:19:917 Kernel/(42169:42171): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:26:19:917 Kernel/(42169:42171): Ingreso a Ready algoritmo HRRN - PIDS: [1 2 0] 
+[INFO] 23:26:19:917 Kernel/(42169:42170): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:26:21:921 Kernel/(42169:42171): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:26:21:921 Kernel/(42169:42171): Ingreso a Ready algoritmo HRRN - PIDS: [2 0 1] 
+[INFO] 23:26:21:922 Kernel/(42169:42170): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:26:23:925 Kernel/(42169:42171): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:26:23:925 Kernel/(42169:42171): Ingreso a Ready algoritmo HRRN - PIDS: [0 1 2] 
+[INFO] 23:26:23:925 Kernel/(42169:42170): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:26:25:927 Kernel/(42169:42171): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:26:25:927 Kernel/(42169:42171): Ingreso a Ready algoritmo HRRN - PIDS: [0 2 1] 
+[INFO] 23:26:25:927 Kernel/(42169:42170): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:26:27:935 Kernel/(42169:42171): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:26:27:936 Kernel/(42169:42171): Ingreso a Ready algoritmo HRRN - PIDS: [0 1 2] 
+[INFO] 23:26:27:936 Kernel/(42169:42170): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:26:29:940 Kernel/(42169:42171): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 23:26:29:942 Kernel/(42169:42171): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 23:26:29:942 Kernel/(42169:42170): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:26:31:948 Kernel/(42169:42171): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:26:31:948 Kernel/(42169:42171): Ingreso a Ready algoritmo HRRN - PIDS: [2 1] 
+[INFO] 23:26:31:948 Kernel/(42169:42170): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:26:33:955 Kernel/(42169:42171): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:26:33:955 Kernel/(42169:42171): Ingreso a Ready algoritmo HRRN - PIDS: [1 2] 
+[INFO] 23:26:33:955 Kernel/(42169:42170): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:26:35:959 Kernel/(42169:42171): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:26:35:959 Kernel/(42169:42171): Ingreso a Ready algoritmo HRRN - PIDS: [2 1] 
+[INFO] 23:26:35:959 Kernel/(42169:42170): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:26:37:966 Kernel/(42169:42171): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:26:37:966 Kernel/(42169:42171): Ingreso a Ready algoritmo HRRN - PIDS: [1 2] 
+[INFO] 23:26:37:967 Kernel/(42169:42170): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:26:39:970 Kernel/(42169:42171): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:26:39:970 Kernel/(42169:42171): Ingreso a Ready algoritmo HRRN - PIDS: [2 1] 
+[INFO] 23:26:39:970 Kernel/(42169:42170): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:26:41:975 Kernel/(42169:42171): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:26:41:975 Kernel/(42169:42171): Ingreso a Ready algoritmo HRRN - PIDS: [1 2] 
+[INFO] 23:26:41:975 Kernel/(42169:42170): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:26:43:978 Kernel/(42169:42171): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:26:43:978 Kernel/(42169:42171): Ingreso a Ready algoritmo HRRN - PIDS: [2 1] 
+[INFO] 23:26:43:979 Kernel/(42169:42170): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:26:45:984 Kernel/(42169:42171): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:26:45:984 Kernel/(42169:42171): Ingreso a Ready algoritmo HRRN - PIDS: [1 2] 
+[INFO] 23:26:45:984 Kernel/(42169:42170): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:26:47:989 Kernel/(42169:42171): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:26:47:990 Kernel/(42169:42171): Ingreso a Ready algoritmo HRRN - PIDS: [2 1] 
+[INFO] 23:26:47:990 Kernel/(42169:42170): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:26:49:994 Kernel/(42169:42171): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:26:49:995 Kernel/(42169:42171): Ingreso a Ready algoritmo HRRN - PIDS: [1 2] 
+[INFO] 23:26:49:995 Kernel/(42169:42170): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:26:50:999 Kernel/(42169:42171): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:26:50:999 Kernel/(42169:42171): Ingreso a Ready algoritmo HRRN - PIDS: [2 1] 
+[INFO] 23:26:50:999 Kernel/(42169:42170): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:26:52:001 Kernel/(42169:42171): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:26:52:001 Kernel/(42169:42171): Ingreso a Ready algoritmo HRRN - PIDS: [1 2] 
+[INFO] 23:26:52:001 Kernel/(42169:42170): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:26:53:003 Kernel/(42169:42171): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 23:26:53:004 Kernel/(42169:42171): Finaliza el proceso 1 - Motivo: POR FIN
+[INFO] 23:26:53:004 Kernel/(42169:42170): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:26:54:006 Kernel/(42169:42171): PID: 2 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 23:26:54:007 Kernel/(42169:42171): Finaliza el proceso 2 - Motivo: POR FIN
+[INFO] 23:31:30:125 Kernel/(42374:42374): Probando hora 0
+[INFO] 23:31:30:126 Kernel/(42374:42374): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: FIFO
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 23:31:30:127 Kernel/(42374:42374): RECURSO: DISCO con 1 instancias
+[INFO] 23:31:30:127 Kernel/(42374:42374): Cantidad total de recursos disponibles: 1 
+[INFO] 23:31:30:127 Kernel/(42374:42374): ALGORITMO_PLANIFICACION FIFOOO!!!!
+[INFO] 23:31:30:129 Kernel/(42374:42374): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 23:31:30:129 Kernel/(42374:42374): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:31:30:130 Kernel/(42374:42374): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 23:31:30:130 Kernel/(42374:42374): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 23:31:34:718 Kernel/(42374:42374): Cliente conectado (a KERNEL_SV)
+
+[INFO] 23:31:34:719 Kernel/(42374:42380): Envio solicitud a MEMORIA
+[INFO] 23:31:34:721 Kernel/(42374:42380): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 23:31:34:721 Kernel/(42374:42380): Se crea el proceso 0 en NEW
+[INFO] 23:31:34:721 Kernel/(42374:42380): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:31:34:721 Kernel/(42374:42380): Ingreso a Ready algoritmo FIFO - PIDS: [0] 
+[INFO] 23:31:34:722 Kernel/(42374:42375): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 23:31:35:118 Kernel/(42374:42374): Cliente conectado (a KERNEL_SV)
+
+[INFO] 23:31:35:118 Kernel/(42374:42382): Envio solicitud a MEMORIA
+[INFO] 23:31:35:161 Kernel/(42374:42382): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 23:31:35:161 Kernel/(42374:42382): Se crea el proceso 1 en NEW
+[INFO] 23:31:35:161 Kernel/(42374:42382): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:31:35:161 Kernel/(42374:42382): Ingreso a Ready algoritmo FIFO - PIDS: [1] 
+[INFO] 23:31:35:677 Kernel/(42374:42374): Cliente conectado (a KERNEL_SV)
+
+[INFO] 23:31:35:678 Kernel/(42374:42384): Envio solicitud a MEMORIA
+[INFO] 23:31:35:722 Kernel/(42374:42384): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 23:31:35:722 Kernel/(42374:42384): Se crea el proceso 2 en NEW
+[INFO] 23:31:35:722 Kernel/(42374:42384): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:31:35:722 Kernel/(42374:42384): Ingreso a Ready algoritmo FIFO - PIDS: [1 2] 
+[INFO] 23:31:46:736 Kernel/(42374:42376): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:31:46:736 Kernel/(42374:42376): Ingreso a Ready algoritmo FIFO - PIDS: [1 2 0] 
+[INFO] 23:31:46:736 Kernel/(42374:42375): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 23:31:48:739 Kernel/(42374:42376): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:31:48:739 Kernel/(42374:42376): Ingreso a Ready algoritmo FIFO - PIDS: [2 0 1] 
+[INFO] 23:31:48:740 Kernel/(42374:42375): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 23:31:50:746 Kernel/(42374:42376): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:31:50:746 Kernel/(42374:42376): Ingreso a Ready algoritmo FIFO - PIDS: [0 1 2] 
+[INFO] 23:31:50:746 Kernel/(42374:42375): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 23:31:52:750 Kernel/(42374:42376): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 23:31:52:753 Kernel/(42374:42376): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 23:31:52:753 Kernel/(42374:42375): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 23:31:54:757 Kernel/(42374:42376): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:31:54:757 Kernel/(42374:42376): Ingreso a Ready algoritmo FIFO - PIDS: [2 1] 
+[INFO] 23:31:54:758 Kernel/(42374:42375): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 23:31:56:760 Kernel/(42374:42376): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:31:56:761 Kernel/(42374:42376): Ingreso a Ready algoritmo FIFO - PIDS: [1 2] 
+[INFO] 23:31:56:761 Kernel/(42374:42375): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 23:31:58:764 Kernel/(42374:42376): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:31:58:764 Kernel/(42374:42376): Ingreso a Ready algoritmo FIFO - PIDS: [2 1] 
+[INFO] 23:31:58:764 Kernel/(42374:42375): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 23:32:00:766 Kernel/(42374:42376): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:32:00:766 Kernel/(42374:42376): Ingreso a Ready algoritmo FIFO - PIDS: [1 2] 
+[INFO] 23:32:00:766 Kernel/(42374:42375): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 23:32:02:770 Kernel/(42374:42376): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:32:02:770 Kernel/(42374:42376): Ingreso a Ready algoritmo FIFO - PIDS: [2 1] 
+[INFO] 23:32:02:770 Kernel/(42374:42375): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 23:32:04:775 Kernel/(42374:42376): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:32:04:775 Kernel/(42374:42376): Ingreso a Ready algoritmo FIFO - PIDS: [1 2] 
+[INFO] 23:32:04:776 Kernel/(42374:42375): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 23:32:06:779 Kernel/(42374:42376): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:32:06:779 Kernel/(42374:42376): Ingreso a Ready algoritmo FIFO - PIDS: [2 1] 
+[INFO] 23:32:06:779 Kernel/(42374:42375): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 23:32:08:782 Kernel/(42374:42376): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:32:08:783 Kernel/(42374:42376): Ingreso a Ready algoritmo FIFO - PIDS: [1 2] 
+[INFO] 23:32:08:783 Kernel/(42374:42375): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 23:32:10:787 Kernel/(42374:42376): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:32:10:788 Kernel/(42374:42376): Ingreso a Ready algoritmo FIFO - PIDS: [2 1] 
+[INFO] 23:32:10:788 Kernel/(42374:42375): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 23:32:12:790 Kernel/(42374:42376): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:32:12:790 Kernel/(42374:42376): Ingreso a Ready algoritmo FIFO - PIDS: [1 2] 
+[INFO] 23:32:12:791 Kernel/(42374:42375): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 23:32:14:794 Kernel/(42374:42376): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:32:14:795 Kernel/(42374:42376): Ingreso a Ready algoritmo FIFO - PIDS: [2 1] 
+[INFO] 23:32:14:795 Kernel/(42374:42375): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 23:32:16:797 Kernel/(42374:42376): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:32:16:797 Kernel/(42374:42376): Ingreso a Ready algoritmo FIFO - PIDS: [1 2] 
+[INFO] 23:32:16:797 Kernel/(42374:42375): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 23:32:17:799 Kernel/(42374:42376): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:32:17:799 Kernel/(42374:42376): Ingreso a Ready algoritmo FIFO - PIDS: [2 1] 
+[INFO] 23:32:17:799 Kernel/(42374:42375): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 23:32:18:802 Kernel/(42374:42376): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:32:18:802 Kernel/(42374:42376): Ingreso a Ready algoritmo FIFO - PIDS: [1 2] 
+[INFO] 23:32:18:802 Kernel/(42374:42375): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 23:32:19:807 Kernel/(42374:42376): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 23:32:19:807 Kernel/(42374:42376): Finaliza el proceso 1 - Motivo: POR FIN
+[INFO] 23:32:19:807 Kernel/(42374:42375): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 23:32:20:809 Kernel/(42374:42376): PID: 2 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 23:32:20:810 Kernel/(42374:42376): Finaliza el proceso 2 - Motivo: POR FIN
+[INFO] 23:35:17:030 Kernel/(42416:42416): Probando hora 0
+[INFO] 23:35:17:030 Kernel/(42416:42416): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: HRRN
+ESTIMACION_INICIAL: 2000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 23:35:17:031 Kernel/(42416:42416): RECURSO: DISCO con 1 instancias
+[INFO] 23:35:17:031 Kernel/(42416:42416): Cantidad total de recursos disponibles: 1 
+[INFO] 23:35:17:031 Kernel/(42416:42416): ALGORITMO_PLANIFICACION HRRN!!!!
+[INFO] 23:35:17:032 Kernel/(42416:42416): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 23:35:17:032 Kernel/(42416:42416): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:35:17:033 Kernel/(42416:42416): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 23:35:17:033 Kernel/(42416:42416): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 23:35:26:063 Kernel/(42416:42416): Cliente conectado (a KERNEL_SV)
+
+[INFO] 23:35:26:064 Kernel/(42416:42423): Envio solicitud a MEMORIA
+[INFO] 23:35:26:064 Kernel/(42416:42423): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 23:35:26:064 Kernel/(42416:42423): Se crea el proceso 0 en NEW
+[INFO] 23:35:26:064 Kernel/(42416:42423): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:35:26:065 Kernel/(42416:42423): Ingreso a Ready algoritmo HRRN - PIDS: [0] 
+[INFO] 23:35:26:065 Kernel/(42416:42417): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:35:26:479 Kernel/(42416:42416): Cliente conectado (a KERNEL_SV)
+
+[INFO] 23:35:26:479 Kernel/(42416:42425): Envio solicitud a MEMORIA
+[INFO] 23:35:26:521 Kernel/(42416:42425): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 23:35:26:521 Kernel/(42416:42425): Se crea el proceso 1 en NEW
+[INFO] 23:35:26:521 Kernel/(42416:42425): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:35:26:521 Kernel/(42416:42425): Ingreso a Ready algoritmo HRRN - PIDS: [1] 
+[INFO] 23:35:26:998 Kernel/(42416:42416): Cliente conectado (a KERNEL_SV)
+
+[INFO] 23:35:26:999 Kernel/(42416:42427): Envio solicitud a MEMORIA
+[INFO] 23:35:27:041 Kernel/(42416:42427): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 23:35:27:041 Kernel/(42416:42427): Se crea el proceso 2 en NEW
+[INFO] 23:35:27:041 Kernel/(42416:42427): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:35:27:041 Kernel/(42416:42427): Ingreso a Ready algoritmo HRRN - PIDS: [1 2] 
+[INFO] 23:35:38:078 Kernel/(42416:42418): PID: 0 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:35:38:078 Kernel/(42416:42418): Ingreso a Ready algoritmo HRRN - PIDS: [1 2 0] 
+[INFO] 23:35:38:078 Kernel/(42416:42417): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:35:40:081 Kernel/(42416:42418): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:35:40:082 Kernel/(42416:42418): Ingreso a Ready algoritmo HRRN - PIDS: [2 0 1] 
+[INFO] 23:35:40:082 Kernel/(42416:42417): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:35:42:085 Kernel/(42416:42418): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:35:42:085 Kernel/(42416:42418): Ingreso a Ready algoritmo HRRN - PIDS: [0 1 2] 
+[INFO] 23:35:42:086 Kernel/(42416:42417): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:35:44:090 Kernel/(42416:42418): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:35:44:090 Kernel/(42416:42418): Ingreso a Ready algoritmo HRRN - PIDS: [0 2 1] 
+[INFO] 23:35:44:090 Kernel/(42416:42417): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:35:46:092 Kernel/(42416:42418): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:35:46:092 Kernel/(42416:42418): Ingreso a Ready algoritmo HRRN - PIDS: [0 1 2] 
+[INFO] 23:35:46:092 Kernel/(42416:42417): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:35:48:095 Kernel/(42416:42418): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 23:35:48:096 Kernel/(42416:42418): Finaliza el proceso 0 - Motivo: POR FIN
+[INFO] 23:35:48:096 Kernel/(42416:42417): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:35:50:099 Kernel/(42416:42418): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:35:50:100 Kernel/(42416:42418): Ingreso a Ready algoritmo HRRN - PIDS: [2 1] 
+[INFO] 23:35:50:100 Kernel/(42416:42417): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:35:52:106 Kernel/(42416:42418): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:35:52:106 Kernel/(42416:42418): Ingreso a Ready algoritmo HRRN - PIDS: [1 2] 
+[INFO] 23:35:52:106 Kernel/(42416:42417): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:35:54:113 Kernel/(42416:42418): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:35:54:113 Kernel/(42416:42418): Ingreso a Ready algoritmo HRRN - PIDS: [2 1] 
+[INFO] 23:35:54:114 Kernel/(42416:42417): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:35:56:118 Kernel/(42416:42418): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:35:56:118 Kernel/(42416:42418): Ingreso a Ready algoritmo HRRN - PIDS: [1 2] 
+[INFO] 23:35:56:118 Kernel/(42416:42417): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:35:58:120 Kernel/(42416:42418): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:35:58:120 Kernel/(42416:42418): Ingreso a Ready algoritmo HRRN - PIDS: [2 1] 
+[INFO] 23:35:58:121 Kernel/(42416:42417): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:36:00:122 Kernel/(42416:42418): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:36:00:122 Kernel/(42416:42418): Ingreso a Ready algoritmo HRRN - PIDS: [1 2] 
+[INFO] 23:36:00:123 Kernel/(42416:42417): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:36:02:126 Kernel/(42416:42418): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:36:02:126 Kernel/(42416:42418): Ingreso a Ready algoritmo HRRN - PIDS: [2 1] 
+[INFO] 23:36:02:126 Kernel/(42416:42417): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:36:04:130 Kernel/(42416:42418): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:36:04:130 Kernel/(42416:42418): Ingreso a Ready algoritmo HRRN - PIDS: [1 2] 
+[INFO] 23:36:04:130 Kernel/(42416:42417): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:36:06:136 Kernel/(42416:42418): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:36:06:136 Kernel/(42416:42418): Ingreso a Ready algoritmo HRRN - PIDS: [2 1] 
+[INFO] 23:36:06:137 Kernel/(42416:42417): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:36:08:141 Kernel/(42416:42418): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:36:08:141 Kernel/(42416:42418): Ingreso a Ready algoritmo HRRN - PIDS: [1 2] 
+[INFO] 23:36:08:141 Kernel/(42416:42417): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:36:09:144 Kernel/(42416:42418): PID: 1 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:36:09:145 Kernel/(42416:42418): Ingreso a Ready algoritmo HRRN - PIDS: [2 1] 
+[INFO] 23:36:09:145 Kernel/(42416:42417): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:36:10:147 Kernel/(42416:42418): PID: 2 - Recibi YIELD de CPU lo mandamos al final de la cola READY
+[INFO] 23:36:10:147 Kernel/(42416:42418): Ingreso a Ready algoritmo HRRN - PIDS: [1 2] 
+[INFO] 23:36:10:147 Kernel/(42416:42417): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:36:11:153 Kernel/(42416:42418): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 23:36:11:155 Kernel/(42416:42418): Finaliza el proceso 1 - Motivo: POR FIN
+[INFO] 23:36:11:155 Kernel/(42416:42417): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE hrrn
+[INFO] 23:36:12:159 Kernel/(42416:42418): PID: 2 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 23:36:12:161 Kernel/(42416:42418): Finaliza el proceso 2 - Motivo: POR FIN
+[INFO] 23:57:47:906 Kernel/(42770:42770): Probando hora 0
+[INFO] 23:57:47:907 Kernel/(42770:42770): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: FIFO
+ESTIMACION_INICIAL: 10000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 3
+
+[INFO] 23:57:47:908 Kernel/(42770:42770): RECURSO: DISCO con 1 instancias
+[INFO] 23:57:47:908 Kernel/(42770:42770): RECURSO: IMPRESORA con 1 instancias
+[INFO] 23:57:47:908 Kernel/(42770:42770): RECURSO: SCANNER con 1 instancias
+[INFO] 23:57:47:908 Kernel/(42770:42770): Cantidad total de recursos disponibles: 3 
+[INFO] 23:57:47:908 Kernel/(42770:42770): ALGORITMO_PLANIFICACION FIFOOO!!!!
+[INFO] 23:57:47:909 Kernel/(42770:42770): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 23:57:47:909 Kernel/(42770:42770): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:57:47:910 Kernel/(42770:42770): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 23:57:47:910 Kernel/(42770:42770): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 23:57:54:052 Kernel/(42770:42770): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 23:57:54:052 Kernel/(42770:42776): No hay asignacion tamaño de registros
+[INFO] 23:57:54:052 Kernel/(42770:42776): Envio solicitud a MEMORIA
+[INFO] 23:57:54:053 Kernel/(42770:42776): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 23:57:54:053 Kernel/(42770:42776): Se crea el proceso 0 en NEW
+[INFO] 23:57:54:053 Kernel/(42770:42776): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:57:54:053 Kernel/(42770:42776): Ingreso a Ready algoritmo FIFO - PIDS: [0] 
+[INFO] 23:57:54:054 Kernel/(42770:42771): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 23:57:54:054 Kernel/(42770:42772): PID: 0 - Recibo pedido de WAIT por RECURSO: DISCO
+[INFO] 23:57:54:054 Kernel/(42770:42772): Para RECURSO DISCO hay 1 instancias disponibles antes de ejecutar
+[INFO] 23:57:54:054 Kernel/(42770:42772): PID: 0 - Wait: DISCO - Instancias: 0 
+[INFO] 23:57:54:054 Kernel/(42770:42772): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O
+[INFO] 23:57:54:055 Kernel/(42770:42777):  PID: 0 - Bloqueado por I/O durante: 10
+
+[INFO] 23:57:54:509 Kernel/(42770:42770): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 23:57:54:509 Kernel/(42770:42779): No hay asignacion tamaño de registros
+[INFO] 23:57:54:509 Kernel/(42770:42779): Envio solicitud a MEMORIA
+[INFO] 23:57:54:554 Kernel/(42770:42779): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 23:57:54:554 Kernel/(42770:42779): Se crea el proceso 1 en NEW
+[INFO] 23:57:54:554 Kernel/(42770:42779): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:57:54:554 Kernel/(42770:42779): Ingreso a Ready algoritmo FIFO - PIDS: [1] 
+[INFO] 23:57:54:554 Kernel/(42770:42771): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 23:57:54:555 Kernel/(42770:42772): PID: 1 - Recibo pedido de WAIT por RECURSO: IMPRESORA
+[INFO] 23:57:54:555 Kernel/(42770:42772): Para RECURSO IMPRESORA hay 1 instancias disponibles antes de ejecutar
+[INFO] 23:57:54:555 Kernel/(42770:42772): PID: 1 - Wait: IMPRESORA - Instancias: 0 
+[INFO] 23:57:54:555 Kernel/(42770:42772): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O ocupado
+[INFO] 23:57:55:140 Kernel/(42770:42770): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 23:57:55:141 Kernel/(42770:42781): No hay asignacion tamaño de registros
+[INFO] 23:57:55:141 Kernel/(42770:42781): Envio solicitud a MEMORIA
+[INFO] 23:57:55:185 Kernel/(42770:42781): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 23:57:55:185 Kernel/(42770:42781): Se crea el proceso 2 en NEW
+[INFO] 23:57:55:185 Kernel/(42770:42781): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:57:55:185 Kernel/(42770:42781): Ingreso a Ready algoritmo FIFO - PIDS: [2] 
+[INFO] 23:57:55:185 Kernel/(42770:42771): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 23:57:55:185 Kernel/(42770:42772): PID: 2 - Recibo pedido de WAIT por RECURSO: SCANNER
+[INFO] 23:57:55:185 Kernel/(42770:42772): Para RECURSO SCANNER hay 1 instancias disponibles antes de ejecutar
+[INFO] 23:57:55:185 Kernel/(42770:42772): PID: 2 - Wait: SCANNER - Instancias: 0 
+[INFO] 23:57:55:185 Kernel/(42770:42772): PID: 2 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por I/O ocupado
+[INFO] 23:58:04:056 Kernel/(42770:42777): PID: 0 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 23:58:04:056 Kernel/(42770:42777): Ingreso a Ready algoritmo FIFO - PIDS: [0] 
+[INFO] 23:58:04:056 Kernel/(42770:42777): PID: 1 - Estado Anterior: BLOCKED por I/O ocupado - Estado Actual: BLOCKED por I/O
+[INFO] 23:58:04:056 Kernel/(42770:42771): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 23:58:04:057 Kernel/(42770:42772): PID: 0 - Recibo pedido de WAIT por RECURSO: IMPRESORA
+[INFO] 23:58:04:057 Kernel/(42770:42772): Para RECURSO IMPRESORA hay 0 instancias disponibles antes de ejecutar
+[INFO] 23:58:04:058 Kernel/(42770:42772): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: IMPRESORA - Instancias: -1 - PC: 3
+[INFO] 23:58:04:059 Kernel/(42770:42782):  PID: 1 - Bloqueado por I/O durante: 10
+
+[INFO] 23:58:14:059 Kernel/(42770:42782): PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 23:58:14:060 Kernel/(42770:42782): Ingreso a Ready algoritmo FIFO - PIDS: [1] 
+[INFO] 23:58:14:060 Kernel/(42770:42782): PID: 2 - Estado Anterior: BLOCKED por I/O ocupado - Estado Actual: BLOCKED por I/O
+[INFO] 23:58:14:060 Kernel/(42770:42771): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 23:58:14:061 Kernel/(42770:42772): PID: 1 - Recibo pedido de WAIT por RECURSO: SCANNER
+[INFO] 23:58:14:061 Kernel/(42770:42772): Para RECURSO SCANNER hay 0 instancias disponibles antes de ejecutar
+[INFO] 23:58:14:061 Kernel/(42770:42772): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: SCANNER - Instancias: -1 - PC: 3
+[INFO] 23:58:14:062 Kernel/(42770:42783):  PID: 2 - Bloqueado por I/O durante: 10
+
+[INFO] 23:58:24:063 Kernel/(42770:42783): PID: 2 - Estado Anterior: BLOCKED - Estado Actual: READY
+[INFO] 23:58:24:063 Kernel/(42770:42783): Ingreso a Ready algoritmo FIFO - PIDS: [2] 
+[INFO] 23:58:24:063 Kernel/(42770:42771): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 23:58:24:064 Kernel/(42770:42772): PID: 2 - Recibo pedido de WAIT por RECURSO: DISCO
+[INFO] 23:58:24:064 Kernel/(42770:42772): Para RECURSO DISCO hay 0 instancias disponibles antes de ejecutar
+[INFO] 23:58:24:065 Kernel/(42770:42772): PID: 2 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: DISCO - Instancias: -1 - PC: 3
+[INFO] 23:59:38:268 Kernel/(42770:42770): Cliente conectado (a KERNEL_SV)
+
+[INFO] 23:59:38:269 Kernel/(42770:42797): Envio solicitud a MEMORIA
+[INFO] 23:59:38:313 Kernel/(42770:42797): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 00:01:30:853 Kernel/(42770:42770): Cliente conectado (a KERNEL_SV)
+
+[INFO] 00:01:30:853 Kernel/(42770:43022): Envio solicitud a MEMORIA
+[INFO] 00:01:30:897 Kernel/(42770:43022): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 00:02:10:724 Kernel/(42770:42770): Cliente conectado (a KERNEL_SV)
+
+[INFO] 00:02:10:725 Kernel/(42770:43024): Envio solicitud a MEMORIA
+[INFO] 00:02:10:765 Kernel/(42770:43024): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 00:03:17:211 Kernel/(43035:43035): Probando hora 0
+[INFO] 00:03:17:213 Kernel/(43035:43035): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: FIFO
+ESTIMACION_INICIAL: 10000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 3
+
+[INFO] 00:03:17:214 Kernel/(43035:43035): RECURSO: DISCO con 1 instancias
+[INFO] 00:03:17:215 Kernel/(43035:43035): RECURSO: IMPRESORA con 1 instancias
+[INFO] 00:03:17:215 Kernel/(43035:43035): RECURSO: SCANNER con 1 instancias
+[INFO] 00:03:17:215 Kernel/(43035:43035): Cantidad total de recursos disponibles: 3 
+[INFO] 00:03:17:215 Kernel/(43035:43035): ALGORITMO_PLANIFICACION FIFOOO!!!!
+[INFO] 00:03:17:216 Kernel/(43035:43035): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 00:03:17:216 Kernel/(43035:43035): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 00:03:17:217 Kernel/(43035:43035): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 00:03:17:217 Kernel/(43035:43035): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 00:03:58:837 Kernel/(43035:43035): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 00:03:58:837 Kernel/(43035:43043): No hay asignacion tamaño de registros
+[INFO] 00:03:58:838 Kernel/(43035:43043): Envio solicitud a MEMORIA
+[INFO] 00:03:58:838 Kernel/(43035:43043): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 00:03:58:838 Kernel/(43035:43043): Se crea el proceso 0 en NEW
+[INFO] 00:03:58:838 Kernel/(43035:43043): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:03:58:839 Kernel/(43035:43043): Ingreso a Ready algoritmo FIFO - PIDS: [0] 
+[INFO] 00:03:58:839 Kernel/(43035:43036): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 00:03:58:839 Kernel/(43035:43037): PID: 0 - Recibo pedido de WAIT por RECURSO: RA
+[ERROR] 00:03:58:839 Kernel/(43035:43037): PID: 0 - Recibo pedido de WAIT por recurso desconocido: RA
+[INFO] 00:03:58:839 Kernel/(43035:43037): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 00:03:58:839 Kernel/(43035:43037): Finaliza el proceso 0 - Motivo: WAIT por Recurso Inexistente
+[INFO] 00:03:59:292 Kernel/(43035:43035): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 00:03:59:293 Kernel/(43035:43045): No hay asignacion tamaño de registros
+[INFO] 00:03:59:293 Kernel/(43035:43045): Envio solicitud a MEMORIA
+[INFO] 00:03:59:337 Kernel/(43035:43045): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 00:03:59:337 Kernel/(43035:43045): Se crea el proceso 1 en NEW
+[INFO] 00:03:59:337 Kernel/(43035:43045): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:03:59:337 Kernel/(43035:43045): Ingreso a Ready algoritmo FIFO - PIDS: [1] 
+[INFO] 00:03:59:337 Kernel/(43035:43036): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 00:03:59:337 Kernel/(43035:43037): PID: 1 - Recibo pedido de WAIT por RECURSO: RB
+[ERROR] 00:03:59:337 Kernel/(43035:43037): PID: 1 - Recibo pedido de WAIT por recurso desconocido: RB
+[INFO] 00:03:59:337 Kernel/(43035:43037): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 00:03:59:337 Kernel/(43035:43037): Finaliza el proceso 1 - Motivo: WAIT por Recurso Inexistente
+[INFO] 00:03:59:789 Kernel/(43035:43035): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 00:03:59:790 Kernel/(43035:43047): No hay asignacion tamaño de registros
+[INFO] 00:03:59:790 Kernel/(43035:43047): Envio solicitud a MEMORIA
+[INFO] 00:03:59:833 Kernel/(43035:43047): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 00:03:59:833 Kernel/(43035:43047): Se crea el proceso 2 en NEW
+[INFO] 00:03:59:833 Kernel/(43035:43047): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:03:59:833 Kernel/(43035:43047): Ingreso a Ready algoritmo FIFO - PIDS: [2] 
+[INFO] 00:03:59:833 Kernel/(43035:43036): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 00:03:59:833 Kernel/(43035:43037): PID: 2 - Recibo pedido de WAIT por RECURSO: RC
+[ERROR] 00:03:59:833 Kernel/(43035:43037): PID: 2 - Recibo pedido de WAIT por recurso desconocido: RC
+[INFO] 00:03:59:833 Kernel/(43035:43037): PID: 2 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 00:03:59:833 Kernel/(43035:43037): Finaliza el proceso 2 - Motivo: WAIT por Recurso Inexistente
+[INFO] 00:12:51:573 Kernel/(43326:43326): Probando hora 0
+[INFO] 00:12:51:575 Kernel/(43326:43326): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: FIFO
+ESTIMACION_INICIAL: 10000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 12
+
+[INFO] 00:12:51:578 Kernel/(43326:43326): RECURSO: RA con 1 instancias
+[INFO] 00:12:51:578 Kernel/(43326:43326): RECURSO: RB con 0 instancias
+[INFO] 00:12:51:579 Kernel/(43326:43326): RECURSO: RC con 0 instancias
+[INFO] 00:12:51:579 Kernel/(43326:43326): Cantidad total de recursos disponibles: 3 
+[INFO] 00:12:51:581 Kernel/(43326:43326): ALGORITMO_PLANIFICACION FIFOOO!!!!
+[INFO] 00:12:51:584 Kernel/(43326:43326): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 00:12:51:585 Kernel/(43326:43326): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 00:12:51:588 Kernel/(43326:43326): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 00:12:51:588 Kernel/(43326:43326): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 00:13:00:528 Kernel/(43326:43326): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 00:13:00:528 Kernel/(43326:43332): No hay asignacion tamaño de registros
+[INFO] 00:13:00:529 Kernel/(43326:43332): Envio solicitud a MEMORIA
+[INFO] 00:13:00:530 Kernel/(43326:43332): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 00:13:00:530 Kernel/(43326:43332): Se crea el proceso 0 en NEW
+[INFO] 00:13:00:530 Kernel/(43326:43332): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:13:00:530 Kernel/(43326:43332): Ingreso a Ready algoritmo FIFO - PIDS: [0] 
+[INFO] 00:13:00:530 Kernel/(43326:43327): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 00:13:00:531 Kernel/(43326:43328): PID: 0 - Recibo pedido de WAIT por RECURSO: RA
+[INFO] 00:13:00:531 Kernel/(43326:43328): Para RECURSO RA hay 1 instancias disponibles antes de ejecutar
+[INFO] 00:13:00:531 Kernel/(43326:43328): PID: 0 - Wait: RA - Instancias: 0 
+[INFO] 00:13:00:974 Kernel/(43326:43326): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 00:13:00:974 Kernel/(43326:43334): No hay asignacion tamaño de registros
+[INFO] 00:13:00:974 Kernel/(43326:43334): Envio solicitud a MEMORIA
+[INFO] 00:13:01:017 Kernel/(43326:43334): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 00:13:01:017 Kernel/(43326:43334): Se crea el proceso 1 en NEW
+[INFO] 00:13:01:017 Kernel/(43326:43334): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:13:01:017 Kernel/(43326:43334): Ingreso a Ready algoritmo FIFO - PIDS: [1] 
+[INFO] 00:13:01:414 Kernel/(43326:43326): Cliente conectado (a KERNEL_SV)
+
+[WARNING] 00:13:01:415 Kernel/(43326:43336): No hay asignacion tamaño de registros
+[INFO] 00:13:01:415 Kernel/(43326:43336): Envio solicitud a MEMORIA
+[INFO] 00:13:01:457 Kernel/(43326:43336): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 00:13:01:457 Kernel/(43326:43336): Se crea el proceso 2 en NEW
+[INFO] 00:13:01:457 Kernel/(43326:43336): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:13:01:457 Kernel/(43326:43336): Ingreso a Ready algoritmo FIFO - PIDS: [1 2] 
+[INFO] 00:13:02:534 Kernel/(43326:43328): PID: 0 - Crear segmento - ID:1 - Tamanio: :128  
+[WARNING] 00:13:02:534 Kernel/(43326:43328): Id_seg: 1 - Tam seg: 128 
+[WARNING] 00:13:02:577 Kernel/(43326:43328): Recibiendo Segmento: Id: 1 - Dir Base: 128 - Tamanio: 128
+[INFO] 00:13:02:581 Kernel/(43326:43328): PID: 0 - Recibo pedido de SIGNAL por RECURSO: RB
+[INFO] 00:13:02:581 Kernel/(43326:43328): Para RECURSO RB hay 0 instancias disponibles antes de ejecutar
+[INFO] 00:13:02:581 Kernel/(43326:43328): PID: 0 - SIGNAL: RB - Instancias: 1 
+[INFO] 00:13:02:582 Kernel/(43326:43328): PID: 0 - Recibo pedido de WAIT por RECURSO: RA
+[INFO] 00:13:02:582 Kernel/(43326:43328): Para RECURSO RA hay 0 instancias disponibles antes de ejecutar
+[INFO] 00:13:02:582 Kernel/(43326:43328): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: RA - Instancias: -1 - PC: 6
+[INFO] 00:13:02:582 Kernel/(43326:43327): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 00:13:02:583 Kernel/(43326:43328): PID: 1 - Recibo pedido de WAIT por RECURSO: RB
+[INFO] 00:13:02:583 Kernel/(43326:43328): Para RECURSO RB hay 1 instancias disponibles antes de ejecutar
+[INFO] 00:13:02:583 Kernel/(43326:43328): PID: 1 - Wait: RB - Instancias: 0 
+[INFO] 00:13:03:586 Kernel/(43326:43328): PID: 1 - Crear segmento - ID:1 - Tamanio: :64  
+[WARNING] 00:13:03:586 Kernel/(43326:43328): Id_seg: 1 - Tam seg: 64 
+[WARNING] 00:13:03:629 Kernel/(43326:43328): Recibiendo Segmento: Id: 1 - Dir Base: 256 - Tamanio: 64
+[INFO] 00:13:03:629 Kernel/(43326:43328): PID: 1 - Crear segmento - ID:2 - Tamanio: :64  
+[WARNING] 00:13:03:629 Kernel/(43326:43328): Id_seg: 2 - Tam seg: 64 
+[WARNING] 00:13:03:716 Kernel/(43326:43328): Recibiendo Segmento: Id: 2 - Dir Base: 320 - Tamanio: 64
+[INFO] 00:13:03:717 Kernel/(43326:43328): PID: 1 - Crear segmento - ID:3 - Tamanio: :64  
+[WARNING] 00:13:03:717 Kernel/(43326:43328): Id_seg: 3 - Tam seg: 64 
+[WARNING] 00:13:03:804 Kernel/(43326:43328): Recibiendo Segmento: Id: 3 - Dir Base: 384 - Tamanio: 64
+[INFO] 00:13:03:805 Kernel/(43326:43328): PID: 1 - Crear segmento - ID:4 - Tamanio: :64  
+[WARNING] 00:13:03:805 Kernel/(43326:43328): Id_seg: 4 - Tam seg: 64 
+[WARNING] 00:13:03:892 Kernel/(43326:43328): Recibiendo Segmento: Id: 4 - Dir Base: 448 - Tamanio: 64
+[INFO] 00:13:03:893 Kernel/(43326:43328): PID: 1 - Crear segmento - ID:5 - Tamanio: :64  
+[WARNING] 00:13:03:893 Kernel/(43326:43328): Id_seg: 5 - Tam seg: 64 
+[WARNING] 00:13:03:980 Kernel/(43326:43328): Recibiendo Segmento: Id: 5 - Dir Base: 512 - Tamanio: 64
+[INFO] 00:13:03:981 Kernel/(43326:43328): PID: 1 - Crear segmento - ID:6 - Tamanio: :64  
+[WARNING] 00:13:03:981 Kernel/(43326:43328): Id_seg: 6 - Tam seg: 64 
+[WARNING] 00:13:04:069 Kernel/(43326:43328): Recibiendo Segmento: Id: 6 - Dir Base: 576 - Tamanio: 64
+[INFO] 00:13:04:069 Kernel/(43326:43328): PID: 1 - Crear segmento - ID:7 - Tamanio: :64  
+[WARNING] 00:13:04:069 Kernel/(43326:43328): Id_seg: 7 - Tam seg: 64 
+[WARNING] 00:13:04:156 Kernel/(43326:43328): Recibiendo Segmento: Id: 7 - Dir Base: 640 - Tamanio: 64
+[INFO] 00:13:04:157 Kernel/(43326:43328): PID: 1 - Crear segmento - ID:8 - Tamanio: :64  
+[WARNING] 00:13:04:157 Kernel/(43326:43328): Id_seg: 8 - Tam seg: 64 
+[WARNING] 00:13:04:245 Kernel/(43326:43328): Recibiendo Segmento: Id: 8 - Dir Base: 704 - Tamanio: 64
+[INFO] 00:13:06:254 Kernel/(43326:43328): PID: 1 - Recibo pedido de SIGNAL por RECURSO: RA
+[INFO] 00:13:06:254 Kernel/(43326:43328): Para RECURSO RA hay -1 instancias disponibles antes de ejecutar
+[INFO] 00:13:06:254 Kernel/(43326:43328): PID: 1 - SIGNAL: RA - Instancias: 0 
+[INFO] 00:13:06:254 Kernel/(43326:43328): PID: 0 que se  desbloqueo
+[INFO] 00:13:06:254 Kernel/(43326:43328): Ingreso a Ready algoritmo FIFO - PIDS: [2] 
+[INFO] 00:13:06:255 Kernel/(43326:43328): PID: 0 - Estado Anterior: BLOCKED - Estado Actual: READY - PROGRAM COINTER: 6
+[INFO] 00:13:06:255 Kernel/(43326:43328): PID: 1 - Recibo pedido de WAIT por RECURSO: RB
+[INFO] 00:13:06:256 Kernel/(43326:43328): Para RECURSO RB hay 0 instancias disponibles antes de ejecutar
+[INFO] 00:13:06:256 Kernel/(43326:43328): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: RB - Instancias: -1 - PC: 14
+[INFO] 00:13:06:256 Kernel/(43326:43327): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 00:13:06:258 Kernel/(43326:43328): PID: 2 - Recibo pedido de WAIT por RECURSO: RC
+[INFO] 00:13:06:258 Kernel/(43326:43328): Para RECURSO RC hay 0 instancias disponibles antes de ejecutar
+[INFO] 00:13:06:258 Kernel/(43326:43328): PID: 2 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: RC - Instancias: -1 - PC: 1
+[INFO] 00:13:06:258 Kernel/(43326:43327): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 00:13:06:260 Kernel/(43326:43328): PID: 0 - Eliminar segmento - Id: 1 
+[WARNING] 00:13:06:260 Kernel/(43326:43328): Id_seg a eliminar: 1  
+[INFO] 00:13:06:301 Kernel/(43326:43328): PID: 0 - Eliminar Segmento - Id Segmento: 8
+[INFO] 00:13:07:302 Kernel/(43326:43328): PID: 0 - Recibo pedido de SIGNAL por RECURSO: RB
+[INFO] 00:13:07:302 Kernel/(43326:43328): Para RECURSO RB hay -1 instancias disponibles antes de ejecutar
+[INFO] 00:13:07:303 Kernel/(43326:43328): PID: 0 - SIGNAL: RB - Instancias: 0 
+[INFO] 00:13:07:303 Kernel/(43326:43328): PID: 1 que se  desbloqueo
+[INFO] 00:13:07:303 Kernel/(43326:43328): Ingreso a Ready algoritmo FIFO - PIDS: [] 
+[INFO] 00:13:07:303 Kernel/(43326:43328): PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY - PROGRAM COINTER: 14
+[INFO] 00:13:07:303 Kernel/(43326:43328): PID: 0 - Recibo pedido de WAIT por RECURSO: RA
+[INFO] 00:13:07:303 Kernel/(43326:43328): Para RECURSO RA hay 0 instancias disponibles antes de ejecutar
+[INFO] 00:13:07:303 Kernel/(43326:43328): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: RA - Instancias: -1 - PC: 10
+[INFO] 00:13:07:304 Kernel/(43326:43327): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 00:13:07:304 Kernel/(43326:43328): PID: 1 - Crear segmento - ID:9 - Tamanio: :64  
+[WARNING] 00:13:07:304 Kernel/(43326:43328): Id_seg: 9 - Tam seg: 64 
+[WARNING] 00:13:07:345 Kernel/(43326:43328): Recibiendo Segmento: Id: 9 - Dir Base: 768 - Tamanio: 64
+[INFO] 00:13:11:357 Kernel/(43326:43328): PID: 1 - Recibo pedido de SIGNAL por RECURSO: RC
+[INFO] 00:13:11:357 Kernel/(43326:43328): Para RECURSO RC hay -1 instancias disponibles antes de ejecutar
+[INFO] 00:13:11:357 Kernel/(43326:43328): PID: 1 - SIGNAL: RC - Instancias: 0 
+[INFO] 00:13:11:357 Kernel/(43326:43328): PID: 2 que se  desbloqueo
+[INFO] 00:13:11:357 Kernel/(43326:43328): Ingreso a Ready algoritmo FIFO - PIDS: [
+] 
+[INFO] 00:13:11:357 Kernel/(43326:43328): PID: 2 - Estado Anterior: BLOCKED - Estado Actual: READY - PROGRAM COINTER: 1
+[INFO] 00:13:11:358 Kernel/(43326:43328): PID: 1 - Recibo pedido de WAIT por RECURSO: RB
+[INFO] 00:13:11:358 Kernel/(43326:43328): Para RECURSO RB hay 0 instancias disponibles antes de ejecutar
+[INFO] 00:13:11:358 Kernel/(43326:43328): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: RB - Instancias: -1 - PC: 21
+[INFO] 00:13:11:358 Kernel/(43326:43327): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 00:13:11:359 Kernel/(43326:43328): PID: 2 - Crear segmento - ID:1 - Tamanio: :256  
+[WARNING] 00:13:11:359 Kernel/(43326:43328): Id_seg: 1 - Tam seg: 256 
+[WARNING] 00:13:11:401 Kernel/(43326:43328): SOLICITAR COMPACTACION
+[WARNING] 00:13:11:401 Kernel/(43326:43328): ESPERO FIN DE COMPACTACION
+[WARNING] 00:14:11:445 Kernel/(43326:43328): Actualizar segmento 1 del proceso 1 con la base: 128
+[WARNING] 00:14:11:445 Kernel/(43326:43328): Actualizar segmento 2 del proceso 1 con la base: 192
+[WARNING] 00:14:11:445 Kernel/(43326:43328): Actualizar segmento 3 del proceso 1 con la base: 256
+[WARNING] 00:14:11:445 Kernel/(43326:43328): Actualizar segmento 4 del proceso 1 con la base: 320
+[WARNING] 00:14:11:445 Kernel/(43326:43328): Actualizar segmento 5 del proceso 1 con la base: 384
+[WARNING] 00:14:11:445 Kernel/(43326:43328): Actualizar segmento 6 del proceso 1 con la base: 448
+[WARNING] 00:14:11:445 Kernel/(43326:43328): Actualizar segmento 7 del proceso 1 con la base: 512
+[WARNING] 00:14:11:445 Kernel/(43326:43328): Actualizar segmento 8 del proceso 1 con la base: 576
+[WARNING] 00:14:11:445 Kernel/(43326:43328): Actualizar segmento 9 del proceso 1 con la base: 640
+[WARNING] 00:14:11:445 Kernel/(43326:43328): termino compactacion
+[INFO] 00:14:11:446 Kernel/(43326:43328): PID: 2 - Crear segmento - ID:1 - Tamanio: :256  
+[WARNING] 00:14:11:446 Kernel/(43326:43328): Id_seg: 1 - Tam seg: 256 
+[WARNING] 00:14:11:489 Kernel/(43326:43328): Recibiendo Segmento: Id: 1 - Dir Base: 704 - Tamanio: 256
+[INFO] 00:14:12:491 Kernel/(43326:43328): PID: 2 - Recibo pedido de SIGNAL por RECURSO: RB
+[INFO] 00:14:12:492 Kernel/(43326:43328): Para RECURSO RB hay -1 instancias disponibles antes de ejecutar
+[INFO] 00:14:12:492 Kernel/(43326:43328): PID: 2 - SIGNAL: RB - Instancias: 0 
+[INFO] 00:14:12:492 Kernel/(43326:43328): PID: 1 que se  desbloqueo
+[INFO] 00:14:12:492 Kernel/(43326:43328): Ingreso a Ready algoritmo FIFO - PIDS: [] 
+[INFO] 00:14:12:492 Kernel/(43326:43328): PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY - PROGRAM COINTER: 21
+[INFO] 00:14:12:493 Kernel/(43326:43328): PID: 2 - Recibo pedido de WAIT por RECURSO: RC
+[INFO] 00:14:12:493 Kernel/(43326:43328): Para RECURSO RC hay 0 instancias disponibles antes de ejecutar
+[INFO] 00:14:12:493 Kernel/(43326:43328): PID: 2 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: RC - Instancias: -1 - PC: 5
+[INFO] 00:14:12:493 Kernel/(43326:43327): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[ERROR] 00:14:13:685 Kernel/(43326:43328): DISCONNECT FAILURE!
