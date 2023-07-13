@@ -18,6 +18,7 @@
 #include <commons/collections/list.h>
 #include <commons/string.h>
 #include "pcb.h"
+#include<semaphore.h>
 
 typedef enum {
     DEBUG = 69,
@@ -76,6 +77,8 @@ typedef enum {
 	MOV_OUT_OK,
 	MOV_IN_OK
 	}op_code;
+
+
 
 typedef struct {
     uint32_t size; // Tamaño del payload

@@ -26,7 +26,7 @@ pthread_mutex_t mx_instancias       = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_cola_blocked_fs 	= PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_cola_blocked_io 	= PTHREAD_MUTEX_INITIALIZER;
 
-sem_t s_pasaje_a_ready, s_ready_execute,s_cpu_desocupado,s_cont_ready,s_multiprogramacion_actual,s_esperar_cpu,s_pcb_desalojado,s_blocked,s_io, s_blocked_fs;
+sem_t s_pasaje_a_ready, s_ready_execute,s_cpu_desocupado,s_cont_ready,s_multiprogramacion_actual,s_esperar_cpu,s_pcb_desalojado,s_blocked,s_io, s_blocked_fs, s_fs_compacta;
 sem_t s_blocked_rec;
 t_queue* cola_new;
 t_queue* cola_ready;
@@ -193,6 +193,8 @@ void inicializarPlanificacion(){
 	sem_init(&s_cont_ready,0,0);
 	sem_init(&s_io, 0, 1);
 	sem_init(&s_blocked_fs, 0, 1);
+	sem_init(&s_fs_compacta, 0, 1);
+
 
 
 /*	for(int i=0;i<10;i++){
@@ -394,8 +396,10 @@ void esperar_cpu(){
 										//TODO recorrer tabla de segmentos y enviar delete de cada uno. meterolo dentro del execute_a_exit
 										break;
 				case CREATE_SEGMENT_COMPACTO:
+										sem_wait(&s_fs_compacta);
 										log_warning(logger, "SOLICITAR COMPACTACION");
 										op_code cop_make = MAKE_COMPACTATION;
+										//sem_(&s_esperar_cpu);
 										pthread_mutex_lock(&mx_memoria);
 										send(memoria_fd,&cop_make,sizeof(op_code),0);
 										pthread_mutex_unlock(&mx_memoria);
@@ -423,6 +427,7 @@ void esperar_cpu(){
 										pthread_mutex_lock(&mx_cola_ready);  // TODO hacer mas pruebas
 										send_proceso(cpu_fd, pcb,DISPATCH);
 										pthread_mutex_unlock(&mx_cola_ready);
+										sem_post(&s_fs_compacta);
 										break;
 
 				}
@@ -936,6 +941,7 @@ void esperar_cpu(){
 				break;
 
 			case F_READ:
+				sem_wait(&s_fs_compacta);
 				/*
 				  F_READ (Nombre Archivo, Dirección Lógica, Cantidad de Bytes):
 				  Esta instrucción solicita al Kernel que se lea del archivo indicado,
@@ -994,6 +1000,7 @@ void esperar_cpu(){
 				break;
 
 			case F_WRITE:
+				sem_wait(&s_fs_compacta);
 				log_info(logger, "PID: %d - Recibo pedido de F_WRITE por: %s", pcb->pid, instruccion->parametro1);
 
 				// Tiempos hrrn
@@ -1309,6 +1316,7 @@ void esperar_filesystem(PCB_t* pcb){	// Solo instrucciones con demora
 			char* pids = procesosEnReady(cola_ready);
 			log_info(logger, "Ingreso a Ready algoritmo %s - PIDS: [%s] ", configuracion->ALGORITMO_PLANIFICACION, pids);
 			//sem_post(&s_cont_ready);
+			sem_post(&s_fs_compacta);
 
 			break;
 		case F_TRUNCATE_FAIL:

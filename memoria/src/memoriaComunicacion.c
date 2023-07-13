@@ -97,7 +97,6 @@ static void procesar_kernel(void * void_args) {
 				pthread_mutex_unlock(&mx_kernel);
 				break;
 			}else if(!hayEspacio(tam_segmento)){
-				log_error(logger, "SOLICITAR COMPACTACION");
 				op_code cop_comp = CREATE_SEGMENT_COMPACTO;
 				pthread_mutex_lock(&mx_kernel);
 				send(cliente_socket, &(cop_comp), sizeof(op_code), MSG_WAITALL);
@@ -105,7 +104,8 @@ static void procesar_kernel(void * void_args) {
 				pthread_mutex_lock(&mx_kernel);
 				recv(cliente_socket, & cop_comp, sizeof(op_code), 0);
 				pthread_mutex_unlock(&mx_kernel);
-				log_info(logger,"Solicitud de Compatación");
+				log_error(logger, "SOLICITAR COMPACTACION");
+				//log_info(logger,"Solicitud de Compatación");
 				compactacion();  //VA ACA????
 
 				break;
@@ -211,7 +211,7 @@ static void procesar_cpu(void * void_args) {
     		log_info(logger, "PID: %d - N° Segmento: %d, Desplazamiento: %d, Tamanio: %d", *pid, *num_seg, *desplazamiento1, *tamanio);
     		//log_info(logger, "xPID: %lu - N° Segmento: %lu, Desplazamiento: %lu, Tamanio: %d", *pid, *num_seg, *desplazamiento1, *tamanio);
     		void* leido = leerMemoria(*num_seg, *desplazamiento1, *pid, *tamanio);
-    		log_warning(logger, "El valor de LEIDO antes de enviarlo a CPU: %s", leido);
+    		//log_warning(logger, "El valor de LEIDO antes de enviarlo a CPU: %s", leido);
     		send(cpu_fd, leido, *tamanio, 0);
     		break;
     	case MOV_OUT:
@@ -465,15 +465,16 @@ t_segmento* buscarSiguienteSegmento(t_segmento* h){
 		}
 	}
 }
-void* leerMemoriaDesdeDireccion(uint64_t base,uint32_t tam){
-void* leer = "hola";
-//memcpy(leer,memoria+base,tam);
-//log_info(logger,"leyo");
+void* leerMemoriaDesdeDireccion(uint64_t base,uint32_t tam)
+{
+	void* leer = malloc(tam);
+	memcpy(leer,memoria+base,tam);
+	//log_info(logger,"leyo: %s", leer);
 	return leer;
 }
 void escribirMemoriaDesdeDireccion(void* leido,t_segmento* hueco,uint32_t tam){
 
-	//memcpy(memoria+hueco->direccion_base,leido,tam);
+	memcpy(memoria+hueco->direccion_base,leido,tam);
 	//log_info(logger,"escribio");
 }
 

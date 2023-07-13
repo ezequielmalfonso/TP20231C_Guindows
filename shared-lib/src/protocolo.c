@@ -497,7 +497,7 @@ static void* serializar_escribir_memoria(size_t* size, uint32_t param1, uint32_t
 	memcpy(stream + offset, &tam,sizeof(int));
 	offset += sizeof(int);
 	memcpy(stream + offset, param4,tam);
-	printf("\n escribir desde serializacion: %s \n", param4);
+	//printf("\n escribir desde serializacion: %s \n", param4);
 	return stream;
 }
 
@@ -510,9 +510,9 @@ static void deserializar_escribir_memoria(void* stream, uint32_t* param1, uint32
 	stream += sizeof(uint32_t);
 	memcpy(param4, stream, sizeof(int));
 	stream += sizeof(int);
-	printf("\ntamanio de void desde la serializacion %d\n",*param4);
+	//printf("\ntamanio de void desde la serializacion %d\n",*param4);
 	memcpy(escribir, stream, *param4);
-	printf("\n\n escribir: %s",escribir);
+	//printf("\n\n escribir: %s",escribir);
 
 }
 bool recv_escribir_memoria(int fd, uint32_t* num_seg, uint32_t* desplazamiento, uint32_t* pid,int* tamanio, void* escribir) {
