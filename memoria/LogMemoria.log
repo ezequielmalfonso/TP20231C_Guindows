@@ -2023,3 +2023,1579 @@ ALGORITMO_ASIGNACION: FIRST
 [INFO] 00:14:13:685 Memoria/(43315:43316): Se ha finalizado la conexion
 [INFO] 00:14:13:691 Memoria/(43315:43318): Se ha finalizado la conexion
 [INFO] 00:16:11:196 Memoria/(43315:43317): Se ha finalizado la conexion
+[INFO] 12:37:44:977 Memoria/(43684:43684): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 12:37:44:977 Memoria/(43684:43684): Algoritmo FIRST configurado
+[INFO] 12:37:44:978 Memoria/(43684:43684): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 12:37:44:978 Memoria/(43684:43684): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 12:37:47:905 Memoria/(43684:43685): Cliente conectado (a memoria_sv)
+
+[INFO] 12:37:47:905 Memoria/(43684:43685): RESPUESTA AL CONECTAR CPU
+[INFO] 12:37:50:907 Memoria/(43684:43686): Cliente conectado (a memoria_sv)
+
+[INFO] 12:37:50:908 Memoria/(43684:43686): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 12:37:55:819 Memoria/(43684:43687): Cliente conectado (a memoria_sv)
+
+[INFO] 12:37:55:819 Memoria/(43684:43687): RESPUESTA AL CONECTAR KERNEL
+[INFO] 12:38:32:939 Memoria/(43684:43687): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 12:38:32:939 Memoria/(43684:43687): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 12:38:32:939 Memoria/(43684:43687): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 12:38:33:579 Memoria/(43684:43687): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 12:38:33:579 Memoria/(43684:43687): [KERNEL] Se crea el proceso <PID> en NEW 1
+[INFO] 12:38:33:579 Memoria/(43684:43687): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 12:38:33:942 Memoria/(43684:43685): [CPU] Recibido pedido de MOV_OUT
+[INFO] 12:38:33:942 Memoria/(43684:43685): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h01p
+[INFO] 12:38:34:354 Memoria/(43684:43687): [KERNEL] Recibiendo solicitud de segmento para programa 2
+[INFO] 12:38:34:354 Memoria/(43684:43687): [KERNEL] Se crea el proceso <PID> en NEW 2
+[INFO] 12:38:34:354 Memoria/(43684:43687): [KERNEL] Envio de segmento 0 para programa 2
+[INFO] 12:38:34:943 Memoria/(43684:43687): [KERNEL] Solcitud de creacion de segmento
+[INFO] 12:38:34:986 Memoria/(43684:43687): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 12:38:34:987 Memoria/(43684:43685): [CPU] Recibido pedido de MOV_IN
+[INFO] 12:38:34:987 Memoria/(43684:43685): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[INFO] 12:38:35:989 Memoria/(43684:43687): [KERNEL] Solcitud de creacion de segmento
+[INFO] 12:38:36:030 Memoria/(43684:43687): [KERNEL] PID: 1 - Crear Segmento id: 1 - BASE: 256 - TAMAÑO: 64
+[INFO] 12:38:36:030 Memoria/(43684:43687): [KERNEL] Solcitud de creacion de segmento
+[INFO] 12:38:36:074 Memoria/(43684:43687): [KERNEL] PID: 1 - Crear Segmento id: 2 - BASE: 320 - TAMAÑO: 64
+[INFO] 12:38:36:119 Memoria/(43684:43687): [KERNEL] Solcitud de creacion de segmento
+[INFO] 12:38:36:162 Memoria/(43684:43687): [KERNEL] PID: 1 - Crear Segmento id: 3 - BASE: 384 - TAMAÑO: 64
+[INFO] 12:38:36:206 Memoria/(43684:43687): [KERNEL] Solcitud de creacion de segmento
+[INFO] 12:38:36:250 Memoria/(43684:43687): [KERNEL] PID: 1 - Crear Segmento id: 4 - BASE: 448 - TAMAÑO: 64
+[INFO] 12:38:36:294 Memoria/(43684:43687): [KERNEL] Solcitud de creacion de segmento
+[INFO] 12:38:36:338 Memoria/(43684:43687): [KERNEL] PID: 1 - Crear Segmento id: 5 - BASE: 512 - TAMAÑO: 64
+[INFO] 12:38:36:382 Memoria/(43684:43687): [KERNEL] Solcitud de creacion de segmento
+[INFO] 12:38:36:426 Memoria/(43684:43687): [KERNEL] PID: 1 - Crear Segmento id: 6 - BASE: 576 - TAMAÑO: 64
+[INFO] 12:38:36:470 Memoria/(43684:43687): [KERNEL] Solcitud de creacion de segmento
+[INFO] 12:38:36:515 Memoria/(43684:43687): [KERNEL] PID: 1 - Crear Segmento id: 7 - BASE: 640 - TAMAÑO: 64
+[INFO] 12:38:36:558 Memoria/(43684:43687): [KERNEL] Solcitud de creacion de segmento
+[INFO] 12:38:36:602 Memoria/(43684:43687): [KERNEL] PID: 1 - Crear Segmento id: 8 - BASE: 704 - TAMAÑO: 64
+[INFO] 12:38:37:647 Memoria/(43684:43685): [CPU] Recibido pedido de MOV_OUT
+[INFO] 12:38:37:648 Memoria/(43684:43685): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: Ch4p
+[INFO] 12:38:38:651 Memoria/(43684:43687): [KERNEL] Recibido pedido de Eliminar segmento
+[INFO] 12:38:38:694 Memoria/(43684:43687): [KERNEL] PID: 0 - Eliminar Segmento id: 1 - BASE: 0 - TAMAÑO: 128
+[INFO] 12:38:38:694 Memoria/(43684:43687): Direccion del seg a llenar:128
+[INFO] 12:38:38:694 Memoria/(43684:43687): creo un hueco: base:128 - tam: 128
+[INFO] 12:38:38:695 Memoria/(43684:43685): [CPU] Recibido pedido de MOV_IN
+[INFO] 12:38:38:695 Memoria/(43684:43685): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[INFO] 12:38:39:697 Memoria/(43684:43687): [KERNEL] Solcitud de creacion de segmento
+[INFO] 12:38:39:739 Memoria/(43684:43687): [KERNEL] PID: 1 - Crear Segmento id: 9 - BASE: 768 - TAMAÑO: 64
+[INFO] 12:38:40:740 Memoria/(43684:43685): [CPU] Recibido pedido de MOV_OUT
+[INFO] 12:38:40:740 Memoria/(43684:43685): PID: 1 - N° Segmento: 1, Desplazamiento: 0, Tamanio: 9, Escribir: Cosc
+[INFO] 12:38:42:743 Memoria/(43684:43685): [CPU] Recibido pedido de MOV_OUT
+[INFO] 12:38:42:743 Memoria/(43684:43685): PID: 1 - N° Segmento: 8, Desplazamiento: 0, Tamanio: 9, Escribir: Germ
+[INFO] 12:38:43:746 Memoria/(43684:43687): [KERNEL] Solcitud de creacion de segmento
+[ERROR] 12:38:43:786 Memoria/(43684:43687): SOLICITAR COMPACTACION
+[INFO] 12:38:43:787 Memoria/(43684:43687): Solicitud de Compatación
+[WARNING] 12:38:43:787 Memoria/(43684:43687): Tiempo de compactacion: 60000
+[INFO] 12:39:43:787 Memoria/(43684:43687): Segmento encontado PID:1 - Seg. Id:1 - base:256
+[INFO] 12:39:43:788 Memoria/(43684:43687): Nueva direccion del Seg ID: 1  - Dir. Base: 128
+[INFO] 12:39:43:788 Memoria/(43684:43687): Segmento encontado PID:1 - Seg. Id:2 - base:320
+[INFO] 12:39:43:788 Memoria/(43684:43687): Nueva direccion del Seg ID: 2  - Dir. Base: 192
+[INFO] 12:39:43:788 Memoria/(43684:43687): Segmento encontado PID:1 - Seg. Id:3 - base:384
+[INFO] 12:39:43:788 Memoria/(43684:43687): Nueva direccion del Seg ID: 3  - Dir. Base: 256
+[INFO] 12:39:43:788 Memoria/(43684:43687): Segmento encontado PID:1 - Seg. Id:4 - base:448
+[INFO] 12:39:43:788 Memoria/(43684:43687): Nueva direccion del Seg ID: 4  - Dir. Base: 320
+[INFO] 12:39:43:788 Memoria/(43684:43687): Segmento encontado PID:1 - Seg. Id:5 - base:512
+[INFO] 12:39:43:788 Memoria/(43684:43687): Nueva direccion del Seg ID: 5  - Dir. Base: 384
+[INFO] 12:39:43:788 Memoria/(43684:43687): Segmento encontado PID:1 - Seg. Id:6 - base:576
+[INFO] 12:39:43:789 Memoria/(43684:43687): Nueva direccion del Seg ID: 6  - Dir. Base: 448
+[INFO] 12:39:43:789 Memoria/(43684:43687): Segmento encontado PID:1 - Seg. Id:7 - base:640
+[INFO] 12:39:43:789 Memoria/(43684:43687): Nueva direccion del Seg ID: 7  - Dir. Base: 512
+[INFO] 12:39:43:789 Memoria/(43684:43687): Segmento encontado PID:1 - Seg. Id:8 - base:704
+[INFO] 12:39:43:789 Memoria/(43684:43687): Nueva direccion del Seg ID: 8  - Dir. Base: 576
+[INFO] 12:39:43:789 Memoria/(43684:43687): Segmento encontado PID:1 - Seg. Id:9 - base:768
+[INFO] 12:39:43:789 Memoria/(43684:43687): Nueva direccion del Seg ID: 9  - Dir. Base: 640
+[INFO] 12:39:43:789 Memoria/(43684:43687): FIN COMPACTACION
+[INFO] 12:39:43:831 Memoria/(43684:43687): [KERNEL] Solcitud de creacion de segmento
+[INFO] 12:39:43:831 Memoria/(43684:43687): [KERNEL] PID: 2 - Crear Segmento id: 1 - BASE: 704 - TAMAÑO: 256
+[INFO] 12:39:43:875 Memoria/(43684:43685): [CPU] Recibido pedido de MOV_IN
+[INFO] 12:39:43:875 Memoria/(43684:43685): PID: 2 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[INFO] 12:39:44:878 Memoria/(43684:43685): [CPU] Recibido pedido de MOV_IN
+[INFO] 12:39:44:878 Memoria/(43684:43685): PID: 1 - N° Segmento: 1, Desplazamiento: 0, Tamanio: 8
+[INFO] 12:39:46:064 Memoria/(43684:43685): Se ha finalizado la conexion
+[INFO] 12:39:46:075 Memoria/(43684:43687): Se ha finalizado la conexion
+[INFO] 14:17:44:914 Memoria/(43684:43686): Se ha finalizado la conexion
+[INFO] 14:17:49:660 Memoria/(44875:44875): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 14:17:49:661 Memoria/(44875:44875): Algoritmo FIRST configurado
+[INFO] 14:17:49:661 Memoria/(44875:44875): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 14:17:49:662 Memoria/(44875:44875): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 14:17:52:318 Memoria/(44875:44876): Cliente conectado (a memoria_sv)
+
+[INFO] 14:17:52:319 Memoria/(44875:44876): RESPUESTA AL CONECTAR CPU
+[INFO] 14:17:55:656 Memoria/(44875:44877): Cliente conectado (a memoria_sv)
+
+[INFO] 14:17:55:656 Memoria/(44875:44877): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 14:17:57:657 Memoria/(44875:44878): Cliente conectado (a memoria_sv)
+
+[INFO] 14:17:57:657 Memoria/(44875:44878): RESPUESTA AL CONECTAR KERNEL
+[INFO] 14:18:04:855 Memoria/(44875:44878): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 14:18:04:855 Memoria/(44875:44878): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 14:18:04:855 Memoria/(44875:44878): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 14:18:05:426 Memoria/(44875:44878): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 14:18:05:426 Memoria/(44875:44878): [KERNEL] Se crea el proceso <PID> en NEW 1
+[INFO] 14:18:05:426 Memoria/(44875:44878): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 14:18:05:857 Memoria/(44875:44876): [CPU] Recibido pedido de MOV_OUT
+[INFO] 14:18:05:857 Memoria/(44875:44876): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h01p
+[INFO] 14:18:06:078 Memoria/(44875:44878): [KERNEL] Recibiendo solicitud de segmento para programa 2
+[INFO] 14:18:06:078 Memoria/(44875:44878): [KERNEL] Se crea el proceso <PID> en NEW 2
+[INFO] 14:18:06:078 Memoria/(44875:44878): [KERNEL] Envio de segmento 0 para programa 2
+[INFO] 14:18:06:859 Memoria/(44875:44878): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:18:06:903 Memoria/(44875:44878): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 14:18:06:906 Memoria/(44875:44876): [CPU] Recibido pedido de MOV_IN
+[INFO] 14:18:06:906 Memoria/(44875:44876): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 14:18:07:906 Memoria/(44875:44876): El valor de leido antes de enviarlo a CPU: h01p�
+[INFO] 14:18:07:908 Memoria/(44875:44878): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:18:07:951 Memoria/(44875:44878): [KERNEL] PID: 1 - Crear Segmento id: 1 - BASE: 256 - TAMAÑO: 64
+[INFO] 14:18:07:952 Memoria/(44875:44878): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:18:07:994 Memoria/(44875:44878): [KERNEL] PID: 1 - Crear Segmento id: 2 - BASE: 320 - TAMAÑO: 64
+[INFO] 14:18:08:038 Memoria/(44875:44878): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:18:08:082 Memoria/(44875:44878): [KERNEL] PID: 1 - Crear Segmento id: 3 - BASE: 384 - TAMAÑO: 64
+[INFO] 14:18:08:127 Memoria/(44875:44878): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:18:08:170 Memoria/(44875:44878): [KERNEL] PID: 1 - Crear Segmento id: 4 - BASE: 448 - TAMAÑO: 64
+[INFO] 14:18:08:214 Memoria/(44875:44878): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:18:08:258 Memoria/(44875:44878): [KERNEL] PID: 1 - Crear Segmento id: 5 - BASE: 512 - TAMAÑO: 64
+[INFO] 14:18:08:302 Memoria/(44875:44878): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:18:08:346 Memoria/(44875:44878): [KERNEL] PID: 1 - Crear Segmento id: 6 - BASE: 576 - TAMAÑO: 64
+[INFO] 14:18:08:390 Memoria/(44875:44878): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:18:08:434 Memoria/(44875:44878): [KERNEL] PID: 1 - Crear Segmento id: 7 - BASE: 640 - TAMAÑO: 64
+[INFO] 14:18:08:478 Memoria/(44875:44878): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:18:08:522 Memoria/(44875:44878): [KERNEL] PID: 1 - Crear Segmento id: 8 - BASE: 704 - TAMAÑO: 64
+[INFO] 14:18:09:574 Memoria/(44875:44876): [CPU] Recibido pedido de MOV_OUT
+[INFO] 14:18:09:574 Memoria/(44875:44876): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: Ch4p
+[INFO] 14:18:10:582 Memoria/(44875:44878): [KERNEL] Recibido pedido de Eliminar segmento
+[INFO] 14:18:10:622 Memoria/(44875:44878): [KERNEL] PID: 0 - Eliminar Segmento id: 1 - BASE: 0 - TAMAÑO: 128
+[INFO] 14:18:10:622 Memoria/(44875:44878): Direccion del seg a llenar:128
+[INFO] 14:18:10:622 Memoria/(44875:44878): creo un hueco: base:128 - tam: 128
+[INFO] 14:18:10:623 Memoria/(44875:44876): [CPU] Recibido pedido de MOV_IN
+[INFO] 14:18:10:623 Memoria/(44875:44876): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 14:18:11:624 Memoria/(44875:44876): El valor de leido antes de enviarlo a CPU: Ch4p�
+[INFO] 14:18:11:630 Memoria/(44875:44878): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:18:11:670 Memoria/(44875:44878): [KERNEL] PID: 1 - Crear Segmento id: 9 - BASE: 768 - TAMAÑO: 64
+[INFO] 14:18:12:672 Memoria/(44875:44876): [CPU] Recibido pedido de MOV_OUT
+[INFO] 14:18:12:672 Memoria/(44875:44876): PID: 1 - N° Segmento: 1, Desplazamiento: 0, Tamanio: 9, Escribir: Cosc
+[INFO] 14:18:14:673 Memoria/(44875:44876): [CPU] Recibido pedido de MOV_OUT
+[INFO] 14:18:14:673 Memoria/(44875:44876): PID: 1 - N° Segmento: 8, Desplazamiento: 0, Tamanio: 9, Escribir: Germ
+[INFO] 14:18:15:678 Memoria/(44875:44878): [KERNEL] Solcitud de creacion de segmento
+[ERROR] 14:18:15:723 Memoria/(44875:44878): SOLICITAR COMPACTACION
+[INFO] 14:18:15:724 Memoria/(44875:44878): Solicitud de Compatación
+[WARNING] 14:18:15:724 Memoria/(44875:44878): Tiempo de compactacion: 60000
+[INFO] 14:19:15:725 Memoria/(44875:44878): Segmento encontado PID:1 - Seg. Id:1 - base:256
+[INFO] 14:19:15:725 Memoria/(44875:44878): Nueva direccion del Seg ID: 1  - Dir. Base: 128
+[INFO] 14:19:15:725 Memoria/(44875:44878): Segmento encontado PID:1 - Seg. Id:2 - base:320
+[INFO] 14:19:15:725 Memoria/(44875:44878): Nueva direccion del Seg ID: 2  - Dir. Base: 192
+[INFO] 14:19:15:725 Memoria/(44875:44878): Segmento encontado PID:1 - Seg. Id:3 - base:384
+[INFO] 14:19:15:725 Memoria/(44875:44878): Nueva direccion del Seg ID: 3  - Dir. Base: 256
+[INFO] 14:19:15:725 Memoria/(44875:44878): Segmento encontado PID:1 - Seg. Id:4 - base:448
+[INFO] 14:19:15:725 Memoria/(44875:44878): Nueva direccion del Seg ID: 4  - Dir. Base: 320
+[INFO] 14:19:15:725 Memoria/(44875:44878): Segmento encontado PID:1 - Seg. Id:5 - base:512
+[INFO] 14:19:15:725 Memoria/(44875:44878): Nueva direccion del Seg ID: 5  - Dir. Base: 384
+[INFO] 14:19:15:726 Memoria/(44875:44878): Segmento encontado PID:1 - Seg. Id:6 - base:576
+[INFO] 14:19:15:726 Memoria/(44875:44878): Nueva direccion del Seg ID: 6  - Dir. Base: 448
+[INFO] 14:19:15:726 Memoria/(44875:44878): Segmento encontado PID:1 - Seg. Id:7 - base:640
+[INFO] 14:19:15:726 Memoria/(44875:44878): Nueva direccion del Seg ID: 7  - Dir. Base: 512
+[INFO] 14:19:15:726 Memoria/(44875:44878): Segmento encontado PID:1 - Seg. Id:8 - base:704
+[INFO] 14:19:15:726 Memoria/(44875:44878): Nueva direccion del Seg ID: 8  - Dir. Base: 576
+[INFO] 14:19:15:726 Memoria/(44875:44878): Segmento encontado PID:1 - Seg. Id:9 - base:768
+[INFO] 14:19:15:726 Memoria/(44875:44878): Nueva direccion del Seg ID: 9  - Dir. Base: 640
+[INFO] 14:19:15:726 Memoria/(44875:44878): FIN COMPACTACION
+[INFO] 14:19:15:768 Memoria/(44875:44878): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:19:15:768 Memoria/(44875:44878): [KERNEL] PID: 2 - Crear Segmento id: 1 - BASE: 704 - TAMAÑO: 256
+[INFO] 14:19:15:811 Memoria/(44875:44876): [CPU] Recibido pedido de MOV_IN
+[INFO] 14:19:15:811 Memoria/(44875:44876): PID: 2 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 14:19:16:811 Memoria/(44875:44876): El valor de leido antes de enviarlo a CPU: Ch4p�
+[INFO] 14:19:16:816 Memoria/(44875:44876): [CPU] Recibido pedido de MOV_IN
+[INFO] 14:19:16:817 Memoria/(44875:44876): PID: 1 - N° Segmento: 1, Desplazamiento: 0, Tamanio: 8
+[WARNING] 14:19:17:817 Memoria/(44875:44876): El valor de leido antes de enviarlo a CPU: 
+[INFO] 14:19:18:005 Memoria/(44875:44876): Se ha finalizado la conexion
+[INFO] 14:19:18:014 Memoria/(44875:44878): Se ha finalizado la conexion
+[INFO] 14:22:39:598 Memoria/(44875:44877): Se ha finalizado la conexion
+[INFO] 14:22:44:925 Memoria/(44917:44917): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 14:22:44:926 Memoria/(44917:44917): Algoritmo FIRST configurado
+[INFO] 14:22:44:927 Memoria/(44917:44917): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 14:22:44:927 Memoria/(44917:44917): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 14:22:46:823 Memoria/(44917:44918): Cliente conectado (a memoria_sv)
+
+[INFO] 14:22:46:823 Memoria/(44917:44918): RESPUESTA AL CONECTAR CPU
+[INFO] 14:22:48:768 Memoria/(44917:44919): Cliente conectado (a memoria_sv)
+
+[INFO] 14:22:48:768 Memoria/(44917:44919): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 14:22:51:401 Memoria/(44917:44920): Cliente conectado (a memoria_sv)
+
+[INFO] 14:22:51:402 Memoria/(44917:44920): RESPUESTA AL CONECTAR KERNEL
+[INFO] 14:22:53:224 Memoria/(44917:44920): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 14:22:53:225 Memoria/(44917:44920): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 14:22:53:225 Memoria/(44917:44920): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 14:22:54:228 Memoria/(44917:44918): [CPU] Recibido pedido de MOV_OUT
+[INFO] 14:22:54:228 Memoria/(44917:44918): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h01p
+[INFO] 14:22:55:230 Memoria/(44917:44920): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:22:55:270 Memoria/(44917:44920): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 14:24:52:466 Memoria/(44917:44920): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 14:24:52:466 Memoria/(44917:44920): [KERNEL] Se crea el proceso <PID> en NEW 1
+[INFO] 14:24:52:466 Memoria/(44917:44920): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 14:24:52:467 Memoria/(44917:44918): [CPU] Recibido pedido de MOV_IN
+[INFO] 14:24:52:467 Memoria/(44917:44918): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 14:24:53:467 Memoria/(44917:44918): El valor de leido antes de enviarlo a CPU: h01p�
+[INFO] 14:24:53:468 Memoria/(44917:44920): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:24:53:511 Memoria/(44917:44920): [KERNEL] PID: 1 - Crear Segmento id: 1 - BASE: 256 - TAMAÑO: 64
+[INFO] 14:24:53:512 Memoria/(44917:44920): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:24:53:554 Memoria/(44917:44920): [KERNEL] PID: 1 - Crear Segmento id: 2 - BASE: 320 - TAMAÑO: 64
+[INFO] 14:24:53:598 Memoria/(44917:44920): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:24:53:642 Memoria/(44917:44920): [KERNEL] PID: 1 - Crear Segmento id: 3 - BASE: 384 - TAMAÑO: 64
+[INFO] 14:24:53:686 Memoria/(44917:44920): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:24:53:730 Memoria/(44917:44920): [KERNEL] PID: 1 - Crear Segmento id: 4 - BASE: 448 - TAMAÑO: 64
+[INFO] 14:24:53:774 Memoria/(44917:44920): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:24:53:818 Memoria/(44917:44920): [KERNEL] PID: 1 - Crear Segmento id: 5 - BASE: 512 - TAMAÑO: 64
+[INFO] 14:24:53:864 Memoria/(44917:44920): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:24:53:910 Memoria/(44917:44920): [KERNEL] PID: 1 - Crear Segmento id: 6 - BASE: 576 - TAMAÑO: 64
+[INFO] 14:24:53:954 Memoria/(44917:44920): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:24:53:998 Memoria/(44917:44920): [KERNEL] PID: 1 - Crear Segmento id: 7 - BASE: 640 - TAMAÑO: 64
+[INFO] 14:24:54:042 Memoria/(44917:44920): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:24:54:086 Memoria/(44917:44920): [KERNEL] PID: 1 - Crear Segmento id: 8 - BASE: 704 - TAMAÑO: 64
+[INFO] 14:24:55:132 Memoria/(44917:44918): [CPU] Recibido pedido de MOV_OUT
+[INFO] 14:24:55:132 Memoria/(44917:44918): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: Ch4p
+[INFO] 14:24:56:136 Memoria/(44917:44920): [KERNEL] Recibido pedido de Eliminar segmento
+[INFO] 14:24:56:178 Memoria/(44917:44920): [KERNEL] PID: 0 - Eliminar Segmento id: 1 - BASE: 0 - TAMAÑO: 128
+[INFO] 14:24:56:178 Memoria/(44917:44920): Direccion del seg a llenar:128
+[INFO] 14:24:56:179 Memoria/(44917:44920): creo un hueco: base:128 - tam: 128
+[INFO] 14:24:56:179 Memoria/(44917:44918): [CPU] Recibido pedido de MOV_IN
+[INFO] 14:24:56:179 Memoria/(44917:44918): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 14:24:57:180 Memoria/(44917:44918): El valor de leido antes de enviarlo a CPU: Ch4p�
+[INFO] 14:24:57:182 Memoria/(44917:44920): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:24:57:222 Memoria/(44917:44920): [KERNEL] PID: 1 - Crear Segmento id: 9 - BASE: 768 - TAMAÑO: 64
+[INFO] 14:24:58:225 Memoria/(44917:44918): [CPU] Recibido pedido de MOV_OUT
+[INFO] 14:24:58:225 Memoria/(44917:44918): PID: 1 - N° Segmento: 1, Desplazamiento: 0, Tamanio: 9, Escribir: Cosc
+[INFO] 14:25:00:228 Memoria/(44917:44918): [CPU] Recibido pedido de MOV_OUT
+[INFO] 14:25:00:228 Memoria/(44917:44918): PID: 1 - N° Segmento: 8, Desplazamiento: 0, Tamanio: 9, Escribir: Germ
+[INFO] 14:27:30:156 Memoria/(44917:44920): Se ha finalizado la conexion
+[INFO] 14:27:30:996 Memoria/(44917:44919): Se ha finalizado la conexion
+[INFO] 14:27:31:757 Memoria/(44917:44918): Se ha finalizado la conexion
+[INFO] 14:31:51:487 Memoria/(45159:45159): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 14:31:51:488 Memoria/(45159:45159): Algoritmo FIRST configurado
+[INFO] 14:31:51:488 Memoria/(45159:45159): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 14:31:51:488 Memoria/(45159:45159): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 14:31:52:584 Memoria/(45159:45160): Cliente conectado (a memoria_sv)
+
+[INFO] 14:31:52:584 Memoria/(45159:45160): RESPUESTA AL CONECTAR CPU
+[INFO] 14:31:54:203 Memoria/(45159:45161): Cliente conectado (a memoria_sv)
+
+[INFO] 14:31:54:203 Memoria/(45159:45161): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 14:31:55:499 Memoria/(45159:45162): Cliente conectado (a memoria_sv)
+
+[INFO] 14:31:55:499 Memoria/(45159:45162): RESPUESTA AL CONECTAR KERNEL
+[INFO] 14:32:00:458 Memoria/(45159:45162): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 14:32:00:458 Memoria/(45159:45162): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 14:32:00:458 Memoria/(45159:45162): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 14:32:01:460 Memoria/(45159:45160): [CPU] Recibido pedido de MOV_OUT
+[INFO] 14:32:01:460 Memoria/(45159:45160): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h014
+[INFO] 14:32:02:461 Memoria/(45159:45162): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:32:02:506 Memoria/(45159:45162): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 14:32:09:135 Memoria/(45159:45162): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 14:32:09:135 Memoria/(45159:45162): [KERNEL] Se crea el proceso <PID> en NEW 1
+[INFO] 14:32:09:135 Memoria/(45159:45162): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 14:32:09:136 Memoria/(45159:45160): [CPU] Recibido pedido de MOV_IN
+[INFO] 14:32:09:137 Memoria/(45159:45160): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 14:32:10:137 Memoria/(45159:45160): El valor de LEIDO antes de enviarlo a CPU: h0144
+[INFO] 14:32:10:137 Memoria/(45159:45162): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:32:10:178 Memoria/(45159:45162): [KERNEL] PID: 1 - Crear Segmento id: 1 - BASE: 256 - TAMAÑO: 64
+[INFO] 14:32:10:178 Memoria/(45159:45162): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:32:10:222 Memoria/(45159:45162): [KERNEL] PID: 1 - Crear Segmento id: 2 - BASE: 320 - TAMAÑO: 64
+[INFO] 14:32:10:266 Memoria/(45159:45162): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:32:10:310 Memoria/(45159:45162): [KERNEL] PID: 1 - Crear Segmento id: 3 - BASE: 384 - TAMAÑO: 64
+[INFO] 14:32:10:354 Memoria/(45159:45162): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:32:10:398 Memoria/(45159:45162): [KERNEL] PID: 1 - Crear Segmento id: 4 - BASE: 448 - TAMAÑO: 64
+[INFO] 14:32:10:443 Memoria/(45159:45162): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:32:10:487 Memoria/(45159:45162): [KERNEL] PID: 1 - Crear Segmento id: 5 - BASE: 512 - TAMAÑO: 64
+[INFO] 14:32:10:530 Memoria/(45159:45162): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:32:10:574 Memoria/(45159:45162): [KERNEL] PID: 1 - Crear Segmento id: 6 - BASE: 576 - TAMAÑO: 64
+[INFO] 14:32:10:618 Memoria/(45159:45162): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:32:10:663 Memoria/(45159:45162): [KERNEL] PID: 1 - Crear Segmento id: 7 - BASE: 640 - TAMAÑO: 64
+[INFO] 14:32:10:706 Memoria/(45159:45162): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:32:10:750 Memoria/(45159:45162): [KERNEL] PID: 1 - Crear Segmento id: 8 - BASE: 704 - TAMAÑO: 64
+[INFO] 14:32:11:795 Memoria/(45159:45160): [CPU] Recibido pedido de MOV_OUT
+[INFO] 14:32:11:795 Memoria/(45159:45160): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: Ch4u
+[INFO] 14:32:12:799 Memoria/(45159:45162): [KERNEL] Recibido pedido de Eliminar segmento
+[INFO] 14:32:12:842 Memoria/(45159:45162): [KERNEL] PID: 0 - Eliminar Segmento id: 1 - BASE: 0 - TAMAÑO: 128
+[INFO] 14:32:12:843 Memoria/(45159:45162): Direccion del seg a llenar:128
+[INFO] 14:32:12:843 Memoria/(45159:45162): creo un hueco: base:128 - tam: 128
+[INFO] 14:32:12:844 Memoria/(45159:45160): [CPU] Recibido pedido de MOV_IN
+[INFO] 14:32:12:844 Memoria/(45159:45160): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 14:32:13:844 Memoria/(45159:45160): El valor de LEIDO antes de enviarlo a CPU: Ch4u4
+[INFO] 14:32:13:849 Memoria/(45159:45162): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:32:13:895 Memoria/(45159:45162): [KERNEL] PID: 1 - Crear Segmento id: 9 - BASE: 768 - TAMAÑO: 64
+[INFO] 14:32:14:900 Memoria/(45159:45160): [CPU] Recibido pedido de MOV_OUT
+[INFO] 14:32:14:900 Memoria/(45159:45160): PID: 1 - N° Segmento: 1, Desplazamiento: 0, Tamanio: 9, Escribir: Cosc
+[INFO] 14:32:16:905 Memoria/(45159:45160): [CPU] Recibido pedido de MOV_OUT
+[INFO] 14:32:16:906 Memoria/(45159:45160): PID: 1 - N° Segmento: 8, Desplazamiento: 0, Tamanio: 9, Escribir: Germ
+[INFO] 14:33:07:342 Memoria/(45159:45162): Se ha finalizado la conexion
+[INFO] 14:33:08:013 Memoria/(45159:45161): Se ha finalizado la conexion
+[INFO] 14:33:08:662 Memoria/(45159:45160): Se ha finalizado la conexion
+[INFO] 14:35:33:360 Memoria/(45328:45328): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 14:35:33:361 Memoria/(45328:45328): Algoritmo FIRST configurado
+[INFO] 14:35:33:362 Memoria/(45328:45328): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 14:35:33:362 Memoria/(45328:45328): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 14:35:35:145 Memoria/(45328:45329): Cliente conectado (a memoria_sv)
+
+[INFO] 14:35:35:145 Memoria/(45328:45329): RESPUESTA AL CONECTAR CPU
+[INFO] 14:35:36:970 Memoria/(45328:45330): Cliente conectado (a memoria_sv)
+
+[INFO] 14:35:36:970 Memoria/(45328:45330): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 14:35:38:699 Memoria/(45328:45331): Cliente conectado (a memoria_sv)
+
+[INFO] 14:35:38:700 Memoria/(45328:45331): RESPUESTA AL CONECTAR KERNEL
+[INFO] 14:35:40:523 Memoria/(45328:45331): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 14:35:40:523 Memoria/(45328:45331): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 14:35:40:523 Memoria/(45328:45331): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 14:35:41:526 Memoria/(45328:45329): [CPU] Recibido pedido de MOV_OUT
+[INFO] 14:35:41:526 Memoria/(45328:45329): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h01�
+[INFO] 14:35:42:528 Memoria/(45328:45331): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:35:42:571 Memoria/(45328:45331): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 14:36:47:854 Memoria/(45328:45331): Se ha finalizado la conexion
+[INFO] 14:36:48:422 Memoria/(45328:45330): Se ha finalizado la conexion
+[INFO] 14:36:48:976 Memoria/(45328:45329): Se ha finalizado la conexion
+[INFO] 14:36:52:344 Memoria/(45431:45431): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 14:36:52:346 Memoria/(45431:45431): Algoritmo FIRST configurado
+[INFO] 14:36:52:346 Memoria/(45431:45431): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 14:36:52:346 Memoria/(45431:45431): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 14:36:54:026 Memoria/(45431:45432): Cliente conectado (a memoria_sv)
+
+[INFO] 14:36:54:026 Memoria/(45431:45432): RESPUESTA AL CONECTAR CPU
+[INFO] 14:36:55:850 Memoria/(45431:45433): Cliente conectado (a memoria_sv)
+
+[INFO] 14:36:55:851 Memoria/(45431:45433): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 14:36:56:897 Memoria/(45431:45434): Cliente conectado (a memoria_sv)
+
+[INFO] 14:36:56:898 Memoria/(45431:45434): RESPUESTA AL CONECTAR KERNEL
+[INFO] 14:36:59:195 Memoria/(45431:45434): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 14:36:59:196 Memoria/(45431:45434): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 14:36:59:196 Memoria/(45431:45434): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 14:37:00:198 Memoria/(45431:45432): [CPU] Recibido pedido de MOV_OUT
+[INFO] 14:37:00:198 Memoria/(45431:45432): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h01p
+[INFO] 14:37:01:199 Memoria/(45431:45434): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:37:01:242 Memoria/(45431:45434): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 14:38:34:814 Memoria/(45431:45434): Se ha finalizado la conexion
+[INFO] 14:38:35:415 Memoria/(45431:45433): Se ha finalizado la conexion
+[INFO] 14:38:36:006 Memoria/(45431:45432): Se ha finalizado la conexion
+[INFO] 14:40:09:776 Memoria/(45650:45650): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 14:40:09:778 Memoria/(45650:45650): Algoritmo FIRST configurado
+[INFO] 14:40:09:778 Memoria/(45650:45650): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 14:40:09:778 Memoria/(45650:45650): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 14:40:11:857 Memoria/(45650:45651): Cliente conectado (a memoria_sv)
+
+[INFO] 14:40:11:858 Memoria/(45650:45651): RESPUESTA AL CONECTAR CPU
+[INFO] 14:40:14:516 Memoria/(45650:45652): Cliente conectado (a memoria_sv)
+
+[INFO] 14:40:14:516 Memoria/(45650:45652): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 14:40:16:334 Memoria/(45650:45653): Cliente conectado (a memoria_sv)
+
+[INFO] 14:40:16:335 Memoria/(45650:45653): RESPUESTA AL CONECTAR KERNEL
+[INFO] 14:40:17:531 Memoria/(45650:45653): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 14:40:17:531 Memoria/(45650:45653): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 14:40:17:532 Memoria/(45650:45653): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 14:40:18:534 Memoria/(45650:45651): [CPU] Recibido pedido de MOV_OUT
+[INFO] 14:40:18:535 Memoria/(45650:45651): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h01�
+[INFO] 14:40:19:538 Memoria/(45650:45653): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:40:19:578 Memoria/(45650:45653): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 14:41:45:087 Memoria/(45650:45653): Se ha finalizado la conexion
+[INFO] 14:41:45:719 Memoria/(45650:45652): Se ha finalizado la conexion
+[INFO] 14:41:46:367 Memoria/(45650:45651): Se ha finalizado la conexion
+[INFO] 14:46:28:762 Memoria/(45861:45861): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 14:46:28:763 Memoria/(45861:45861): Algoritmo FIRST configurado
+[INFO] 14:46:28:763 Memoria/(45861:45861): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 14:46:28:764 Memoria/(45861:45861): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 14:46:31:196 Memoria/(45861:45862): Cliente conectado (a memoria_sv)
+
+[INFO] 14:46:31:197 Memoria/(45861:45862): RESPUESTA AL CONECTAR CPU
+[INFO] 14:46:33:676 Memoria/(45861:45863): Cliente conectado (a memoria_sv)
+
+[INFO] 14:46:33:676 Memoria/(45861:45863): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 14:46:35:494 Memoria/(45861:45864): Cliente conectado (a memoria_sv)
+
+[INFO] 14:46:35:495 Memoria/(45861:45864): RESPUESTA AL CONECTAR KERNEL
+[INFO] 14:46:37:020 Memoria/(45861:45864): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 14:46:37:020 Memoria/(45861:45864): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 14:46:37:020 Memoria/(45861:45864): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 14:46:38:023 Memoria/(45861:45862): [CPU] Recibido pedido de MOV_OUT
+[INFO] 14:46:38:023 Memoria/(45861:45862): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h01p
+[INFO] 14:46:39:026 Memoria/(45861:45864): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:46:39:067 Memoria/(45861:45864): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 14:52:21:329 Memoria/(45861:45864): Se ha finalizado la conexion
+[INFO] 14:52:21:905 Memoria/(45861:45863): Se ha finalizado la conexion
+[INFO] 14:52:22:353 Memoria/(45861:45862): Se ha finalizado la conexion
+[INFO] 14:52:24:596 Memoria/(46001:46001): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 14:52:24:597 Memoria/(46001:46001): Algoritmo FIRST configurado
+[INFO] 14:52:24:598 Memoria/(46001:46001): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 14:52:24:598 Memoria/(46001:46001): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 14:52:25:580 Memoria/(46001:46002): Cliente conectado (a memoria_sv)
+
+[INFO] 14:52:25:580 Memoria/(46001:46002): RESPUESTA AL CONECTAR CPU
+[INFO] 14:52:26:550 Memoria/(46001:46003): Cliente conectado (a memoria_sv)
+
+[INFO] 14:52:26:550 Memoria/(46001:46003): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 14:52:27:582 Memoria/(46001:46004): Cliente conectado (a memoria_sv)
+
+[INFO] 14:52:27:582 Memoria/(46001:46004): RESPUESTA AL CONECTAR KERNEL
+[INFO] 14:52:28:943 Memoria/(46001:46004): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 14:52:28:943 Memoria/(46001:46004): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 14:52:28:943 Memoria/(46001:46004): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 14:52:29:946 Memoria/(46001:46002): [CPU] Recibido pedido de MOV_OUT
+[INFO] 14:52:29:946 Memoria/(46001:46002): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h01�
+[INFO] 14:52:30:947 Memoria/(46001:46004): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:52:30:990 Memoria/(46001:46004): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 14:52:42:641 Memoria/(46001:46004): Se ha finalizado la conexion
+[INFO] 14:52:43:201 Memoria/(46001:46003): Se ha finalizado la conexion
+[INFO] 14:52:43:769 Memoria/(46001:46002): Se ha finalizado la conexion
+[INFO] 14:55:18:531 Memoria/(46266:46266): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 14:55:18:532 Memoria/(46266:46266): Algoritmo FIRST configurado
+[INFO] 14:55:18:532 Memoria/(46266:46266): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 14:55:18:533 Memoria/(46266:46266): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 14:55:20:654 Memoria/(46266:46267): Cliente conectado (a memoria_sv)
+
+[INFO] 14:55:20:655 Memoria/(46266:46267): RESPUESTA AL CONECTAR CPU
+[INFO] 14:55:22:904 Memoria/(46266:46268): Cliente conectado (a memoria_sv)
+
+[INFO] 14:55:22:904 Memoria/(46266:46268): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 14:55:24:814 Memoria/(46266:46269): Cliente conectado (a memoria_sv)
+
+[INFO] 14:55:24:815 Memoria/(46266:46269): RESPUESTA AL CONECTAR KERNEL
+[INFO] 14:55:26:181 Memoria/(46266:46269): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 14:55:26:181 Memoria/(46266:46269): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 14:55:26:181 Memoria/(46266:46269): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 14:55:27:184 Memoria/(46266:46267): [CPU] Recibido pedido de MOV_OUT
+[INFO] 14:55:27:184 Memoria/(46266:46267): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h01�
+[INFO] 14:55:28:186 Memoria/(46266:46269): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:55:28:234 Memoria/(46266:46269): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 14:57:06:610 Memoria/(46266:46269): Se ha finalizado la conexion
+[INFO] 14:57:07:210 Memoria/(46266:46268): Se ha finalizado la conexion
+[INFO] 14:57:07:706 Memoria/(46266:46267): Se ha finalizado la conexion
+[INFO] 14:57:10:494 Memoria/(46382:46382): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 14:57:10:495 Memoria/(46382:46382): Algoritmo FIRST configurado
+[INFO] 14:57:10:495 Memoria/(46382:46382): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 14:57:10:496 Memoria/(46382:46382): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 14:57:11:454 Memoria/(46382:46383): Cliente conectado (a memoria_sv)
+
+[INFO] 14:57:11:455 Memoria/(46382:46383): RESPUESTA AL CONECTAR CPU
+[INFO] 14:57:12:255 Memoria/(46382:46384): Cliente conectado (a memoria_sv)
+
+[INFO] 14:57:12:255 Memoria/(46382:46384): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 14:57:12:999 Memoria/(46382:46385): Cliente conectado (a memoria_sv)
+
+[INFO] 14:57:13:000 Memoria/(46382:46385): RESPUESTA AL CONECTAR KERNEL
+[INFO] 14:57:14:295 Memoria/(46382:46385): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 14:57:14:296 Memoria/(46382:46385): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 14:57:14:296 Memoria/(46382:46385): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 14:57:15:299 Memoria/(46382:46383): [CPU] Recibido pedido de MOV_OUT
+[INFO] 14:57:15:299 Memoria/(46382:46383): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h01�
+[INFO] 14:57:16:302 Memoria/(46382:46385): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:57:16:343 Memoria/(46382:46385): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 14:59:16:994 Memoria/(46382:46385): Se ha finalizado la conexion
+[INFO] 14:59:17:867 Memoria/(46382:46384): Se ha finalizado la conexion
+[INFO] 14:59:18:508 Memoria/(46382:46383): Se ha finalizado la conexion
+[INFO] 14:59:20:820 Memoria/(46528:46528): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 14:59:20:821 Memoria/(46528:46528): Algoritmo FIRST configurado
+[INFO] 14:59:20:821 Memoria/(46528:46528): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 14:59:20:821 Memoria/(46528:46528): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 14:59:21:662 Memoria/(46528:46529): Cliente conectado (a memoria_sv)
+
+[INFO] 14:59:21:663 Memoria/(46528:46529): RESPUESTA AL CONECTAR CPU
+[INFO] 14:59:22:352 Memoria/(46528:46530): Cliente conectado (a memoria_sv)
+
+[INFO] 14:59:22:352 Memoria/(46528:46530): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 14:59:23:056 Memoria/(46528:46531): Cliente conectado (a memoria_sv)
+
+[INFO] 14:59:23:057 Memoria/(46528:46531): RESPUESTA AL CONECTAR KERNEL
+[INFO] 14:59:24:438 Memoria/(46528:46531): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 14:59:24:438 Memoria/(46528:46531): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 14:59:24:438 Memoria/(46528:46531): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 14:59:25:440 Memoria/(46528:46529): [CPU] Recibido pedido de MOV_OUT
+[INFO] 14:59:25:440 Memoria/(46528:46529): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h01�
+[INFO] 14:59:26:442 Memoria/(46528:46531): [KERNEL] Solcitud de creacion de segmento
+[INFO] 14:59:26:483 Memoria/(46528:46531): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 15:01:05:411 Memoria/(46528:46531): Se ha finalizado la conexion
+[INFO] 15:01:06:051 Memoria/(46528:46530): Se ha finalizado la conexion
+[INFO] 15:01:06:651 Memoria/(46528:46529): Se ha finalizado la conexion
+[INFO] 15:01:10:261 Memoria/(46636:46636): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 15:01:10:262 Memoria/(46636:46636): Algoritmo FIRST configurado
+[INFO] 15:01:10:263 Memoria/(46636:46636): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:01:10:263 Memoria/(46636:46636): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 15:01:11:222 Memoria/(46636:46637): Cliente conectado (a memoria_sv)
+
+[INFO] 15:01:11:223 Memoria/(46636:46637): RESPUESTA AL CONECTAR CPU
+[INFO] 15:01:12:126 Memoria/(46636:46638): Cliente conectado (a memoria_sv)
+
+[INFO] 15:01:12:126 Memoria/(46636:46638): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 15:01:12:841 Memoria/(46636:46639): Cliente conectado (a memoria_sv)
+
+[INFO] 15:01:12:842 Memoria/(46636:46639): RESPUESTA AL CONECTAR KERNEL
+[INFO] 15:01:14:009 Memoria/(46636:46639): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 15:01:14:009 Memoria/(46636:46639): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 15:01:14:009 Memoria/(46636:46639): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 15:01:15:014 Memoria/(46636:46637): [CPU] Recibido pedido de MOV_OUT
+[INFO] 15:01:15:014 Memoria/(46636:46637): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h014
+[INFO] 15:01:16:016 Memoria/(46636:46639): [KERNEL] Solcitud de creacion de segmento
+[INFO] 15:01:16:058 Memoria/(46636:46639): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 15:03:28:571 Memoria/(46636:46639): Se ha finalizado la conexion
+[INFO] 15:03:29:269 Memoria/(46636:46638): Se ha finalizado la conexion
+[INFO] 15:03:29:819 Memoria/(46636:46637): Se ha finalizado la conexion
+[INFO] 15:03:32:015 Memoria/(46762:46762): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 15:03:32:017 Memoria/(46762:46762): Algoritmo FIRST configurado
+[INFO] 15:03:32:020 Memoria/(46762:46762): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:03:32:020 Memoria/(46762:46762): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 15:03:32:781 Memoria/(46762:46763): Cliente conectado (a memoria_sv)
+
+[INFO] 15:03:32:782 Memoria/(46762:46763): RESPUESTA AL CONECTAR CPU
+[INFO] 15:03:33:623 Memoria/(46762:46764): Cliente conectado (a memoria_sv)
+
+[INFO] 15:03:33:624 Memoria/(46762:46764): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 15:03:34:530 Memoria/(46762:46765): Cliente conectado (a memoria_sv)
+
+[INFO] 15:03:34:530 Memoria/(46762:46765): RESPUESTA AL CONECTAR KERNEL
+[INFO] 15:03:35:911 Memoria/(46762:46765): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 15:03:35:911 Memoria/(46762:46765): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 15:03:35:911 Memoria/(46762:46765): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 15:03:36:913 Memoria/(46762:46763): [CPU] Recibido pedido de MOV_OUT
+[INFO] 15:03:36:913 Memoria/(46762:46763): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h014
+[INFO] 15:03:37:915 Memoria/(46762:46765): [KERNEL] Solcitud de creacion de segmento
+[INFO] 15:03:37:960 Memoria/(46762:46765): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 15:04:23:596 Memoria/(46762:46765): Se ha finalizado la conexion
+[INFO] 15:04:24:195 Memoria/(46762:46764): Se ha finalizado la conexion
+[INFO] 15:04:24:731 Memoria/(46762:46763): Se ha finalizado la conexion
+[INFO] 15:04:26:997 Memoria/(46870:46870): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 15:04:26:998 Memoria/(46870:46870): Algoritmo FIRST configurado
+[INFO] 15:04:26:998 Memoria/(46870:46870): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:04:26:998 Memoria/(46870:46870): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 15:04:28:057 Memoria/(46870:46871): Cliente conectado (a memoria_sv)
+
+[INFO] 15:04:28:057 Memoria/(46870:46871): RESPUESTA AL CONECTAR CPU
+[INFO] 15:04:29:120 Memoria/(46870:46872): Cliente conectado (a memoria_sv)
+
+[INFO] 15:04:29:121 Memoria/(46870:46872): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 15:04:30:064 Memoria/(46870:46873): Cliente conectado (a memoria_sv)
+
+[INFO] 15:04:30:064 Memoria/(46870:46873): RESPUESTA AL CONECTAR KERNEL
+[INFO] 15:04:31:599 Memoria/(46870:46873): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 15:04:31:599 Memoria/(46870:46873): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 15:04:31:599 Memoria/(46870:46873): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 15:04:32:602 Memoria/(46870:46871): [CPU] Recibido pedido de MOV_OUT
+[INFO] 15:04:32:602 Memoria/(46870:46871): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h01�
+[INFO] 15:04:33:604 Memoria/(46870:46873): [KERNEL] Solcitud de creacion de segmento
+[INFO] 15:04:33:647 Memoria/(46870:46873): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 15:06:03:436 Memoria/(46870:46873): Se ha finalizado la conexion
+[INFO] 15:06:04:036 Memoria/(46870:46872): Se ha finalizado la conexion
+[INFO] 15:06:04:428 Memoria/(46870:46871): Se ha finalizado la conexion
+[INFO] 15:06:07:847 Memoria/(46974:46974): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 15:06:07:850 Memoria/(46974:46974): Algoritmo FIRST configurado
+[INFO] 15:06:07:850 Memoria/(46974:46974): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:06:07:850 Memoria/(46974:46974): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 15:06:08:608 Memoria/(46974:46975): Cliente conectado (a memoria_sv)
+
+[INFO] 15:06:08:608 Memoria/(46974:46975): RESPUESTA AL CONECTAR CPU
+[INFO] 15:06:09:352 Memoria/(46974:46976): Cliente conectado (a memoria_sv)
+
+[INFO] 15:06:09:353 Memoria/(46974:46976): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 15:06:10:057 Memoria/(46974:46977): Cliente conectado (a memoria_sv)
+
+[INFO] 15:06:10:058 Memoria/(46974:46977): RESPUESTA AL CONECTAR KERNEL
+[INFO] 15:06:11:356 Memoria/(46974:46977): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 15:06:11:356 Memoria/(46974:46977): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 15:06:11:356 Memoria/(46974:46977): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 15:06:12:360 Memoria/(46974:46975): [CPU] Recibido pedido de MOV_OUT
+[INFO] 15:06:12:360 Memoria/(46974:46975): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h014
+[INFO] 15:06:13:361 Memoria/(46974:46977): [KERNEL] Solcitud de creacion de segmento
+[INFO] 15:06:13:403 Memoria/(46974:46977): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 15:07:18:220 Memoria/(46974:46977): Se ha finalizado la conexion
+[INFO] 15:07:18:733 Memoria/(46974:46976): Se ha finalizado la conexion
+[INFO] 15:07:19:266 Memoria/(46974:46975): Se ha finalizado la conexion
+[INFO] 15:07:21:438 Memoria/(47078:47078): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 15:07:21:440 Memoria/(47078:47078): Algoritmo FIRST configurado
+[INFO] 15:07:21:440 Memoria/(47078:47078): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:07:21:440 Memoria/(47078:47078): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 15:07:22:254 Memoria/(47078:47079): Cliente conectado (a memoria_sv)
+
+[INFO] 15:07:22:255 Memoria/(47078:47079): RESPUESTA AL CONECTAR CPU
+[INFO] 15:07:22:921 Memoria/(47078:47080): Cliente conectado (a memoria_sv)
+
+[INFO] 15:07:22:922 Memoria/(47078:47080): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 15:07:23:619 Memoria/(47078:47081): Cliente conectado (a memoria_sv)
+
+[INFO] 15:07:23:619 Memoria/(47078:47081): RESPUESTA AL CONECTAR KERNEL
+[INFO] 15:07:25:514 Memoria/(47078:47081): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 15:07:25:514 Memoria/(47078:47081): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 15:07:25:514 Memoria/(47078:47081): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 15:07:26:519 Memoria/(47078:47079): [CPU] Recibido pedido de MOV_OUT
+[INFO] 15:07:26:519 Memoria/(47078:47079): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h014
+[INFO] 15:07:27:521 Memoria/(47078:47081): [KERNEL] Solcitud de creacion de segmento
+[INFO] 15:07:27:562 Memoria/(47078:47081): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 15:08:32:588 Memoria/(47078:47081): Se ha finalizado la conexion
+[INFO] 15:08:33:124 Memoria/(47078:47080): Se ha finalizado la conexion
+[INFO] 15:08:33:756 Memoria/(47078:47079): Se ha finalizado la conexion
+[INFO] 15:08:36:086 Memoria/(47235:47235): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 15:08:36:089 Memoria/(47235:47235): Algoritmo FIRST configurado
+[INFO] 15:08:36:089 Memoria/(47235:47235): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:08:36:089 Memoria/(47235:47235): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 15:08:36:847 Memoria/(47235:47236): Cliente conectado (a memoria_sv)
+
+[INFO] 15:08:36:848 Memoria/(47235:47236): RESPUESTA AL CONECTAR CPU
+[INFO] 15:08:37:594 Memoria/(47235:47237): Cliente conectado (a memoria_sv)
+
+[INFO] 15:08:37:594 Memoria/(47235:47237): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 15:08:39:081 Memoria/(47235:47238): Cliente conectado (a memoria_sv)
+
+[INFO] 15:08:39:082 Memoria/(47235:47238): RESPUESTA AL CONECTAR KERNEL
+[INFO] 15:08:40:297 Memoria/(47235:47238): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 15:08:40:297 Memoria/(47235:47238): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 15:08:40:297 Memoria/(47235:47238): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 15:08:41:300 Memoria/(47235:47236): [CPU] Recibido pedido de MOV_OUT
+[INFO] 15:08:41:300 Memoria/(47235:47236): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h014
+[INFO] 15:08:42:302 Memoria/(47235:47238): [KERNEL] Solcitud de creacion de segmento
+[INFO] 15:08:42:342 Memoria/(47235:47238): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 15:10:03:669 Memoria/(47235:47238): Se ha finalizado la conexion
+[INFO] 15:10:04:212 Memoria/(47235:47237): Se ha finalizado la conexion
+[INFO] 15:10:04:694 Memoria/(47235:47236): Se ha finalizado la conexion
+[INFO] 15:10:06:695 Memoria/(47406:47406): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 15:10:06:696 Memoria/(47406:47406): Algoritmo FIRST configurado
+[INFO] 15:10:06:697 Memoria/(47406:47406): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:10:06:697 Memoria/(47406:47406): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 15:10:07:479 Memoria/(47406:47407): Cliente conectado (a memoria_sv)
+
+[INFO] 15:10:07:479 Memoria/(47406:47407): RESPUESTA AL CONECTAR CPU
+[INFO] 15:10:08:226 Memoria/(47406:47408): Cliente conectado (a memoria_sv)
+
+[INFO] 15:10:08:226 Memoria/(47406:47408): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 15:10:09:050 Memoria/(47406:47409): Cliente conectado (a memoria_sv)
+
+[INFO] 15:10:09:050 Memoria/(47406:47409): RESPUESTA AL CONECTAR KERNEL
+[INFO] 15:10:10:160 Memoria/(47406:47409): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 15:10:10:160 Memoria/(47406:47409): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 15:10:10:161 Memoria/(47406:47409): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 15:10:11:165 Memoria/(47406:47407): [CPU] Recibido pedido de MOV_OUT
+[INFO] 15:10:11:166 Memoria/(47406:47407): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h014
+[INFO] 15:10:12:168 Memoria/(47406:47409): [KERNEL] Solcitud de creacion de segmento
+[INFO] 15:10:12:211 Memoria/(47406:47409): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 15:10:38:156 Memoria/(47406:47409): Se ha finalizado la conexion
+[INFO] 15:10:38:685 Memoria/(47406:47408): Se ha finalizado la conexion
+[INFO] 15:10:39:196 Memoria/(47406:47407): Se ha finalizado la conexion
+[INFO] 15:12:43:230 Memoria/(47615:47615): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 15:12:43:233 Memoria/(47615:47615): Algoritmo FIRST configurado
+[INFO] 15:12:43:233 Memoria/(47615:47615): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:12:43:233 Memoria/(47615:47615): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 15:12:45:231 Memoria/(47615:47616): Cliente conectado (a memoria_sv)
+
+[INFO] 15:12:45:232 Memoria/(47615:47616): RESPUESTA AL CONECTAR CPU
+[INFO] 15:12:47:465 Memoria/(47615:47617): Cliente conectado (a memoria_sv)
+
+[INFO] 15:12:47:466 Memoria/(47615:47617): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 15:12:49:707 Memoria/(47615:47618): Cliente conectado (a memoria_sv)
+
+[INFO] 15:12:49:708 Memoria/(47615:47618): RESPUESTA AL CONECTAR KERNEL
+[INFO] 15:12:51:538 Memoria/(47615:47618): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 15:12:51:538 Memoria/(47615:47618): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 15:12:51:538 Memoria/(47615:47618): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 15:12:52:544 Memoria/(47615:47616): [CPU] Recibido pedido de MOV_OUT
+[INFO] 15:12:52:544 Memoria/(47615:47616): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h014
+[INFO] 15:12:53:546 Memoria/(47615:47618): [KERNEL] Solcitud de creacion de segmento
+[INFO] 15:12:53:590 Memoria/(47615:47618): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 15:13:01:654 Memoria/(47615:47618): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 15:13:01:654 Memoria/(47615:47618): [KERNEL] Se crea el proceso <PID> en NEW 1
+[INFO] 15:13:01:654 Memoria/(47615:47618): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 15:13:01:655 Memoria/(47615:47616): [CPU] Recibido pedido de MOV_IN
+[INFO] 15:13:01:655 Memoria/(47615:47616): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 15:13:02:655 Memoria/(47615:47616): El valor de LEIDO antes de enviarlo a CPU: h014^
+[INFO] 15:13:02:656 Memoria/(47615:47618): [KERNEL] Solcitud de creacion de segmento
+[INFO] 15:13:02:698 Memoria/(47615:47618): [KERNEL] PID: 1 - Crear Segmento id: 1 - BASE: 256 - TAMAÑO: 64
+[INFO] 15:13:02:699 Memoria/(47615:47618): [KERNEL] Solcitud de creacion de segmento
+[INFO] 15:13:02:742 Memoria/(47615:47618): [KERNEL] PID: 1 - Crear Segmento id: 2 - BASE: 320 - TAMAÑO: 64
+[INFO] 15:13:02:786 Memoria/(47615:47618): [KERNEL] Solcitud de creacion de segmento
+[INFO] 15:13:02:831 Memoria/(47615:47618): [KERNEL] PID: 1 - Crear Segmento id: 3 - BASE: 384 - TAMAÑO: 64
+[INFO] 15:13:02:875 Memoria/(47615:47618): [KERNEL] Solcitud de creacion de segmento
+[INFO] 15:13:02:918 Memoria/(47615:47618): [KERNEL] PID: 1 - Crear Segmento id: 4 - BASE: 448 - TAMAÑO: 64
+[INFO] 15:13:02:962 Memoria/(47615:47618): [KERNEL] Solcitud de creacion de segmento
+[INFO] 15:13:03:006 Memoria/(47615:47618): [KERNEL] PID: 1 - Crear Segmento id: 5 - BASE: 512 - TAMAÑO: 64
+[INFO] 15:13:03:051 Memoria/(47615:47618): [KERNEL] Solcitud de creacion de segmento
+[INFO] 15:13:03:094 Memoria/(47615:47618): [KERNEL] PID: 1 - Crear Segmento id: 6 - BASE: 576 - TAMAÑO: 64
+[INFO] 15:13:03:139 Memoria/(47615:47618): [KERNEL] Solcitud de creacion de segmento
+[INFO] 15:13:03:182 Memoria/(47615:47618): [KERNEL] PID: 1 - Crear Segmento id: 7 - BASE: 640 - TAMAÑO: 64
+[INFO] 15:13:03:226 Memoria/(47615:47618): [KERNEL] Solcitud de creacion de segmento
+[INFO] 15:13:03:270 Memoria/(47615:47618): [KERNEL] PID: 1 - Crear Segmento id: 8 - BASE: 704 - TAMAÑO: 64
+[INFO] 15:13:04:317 Memoria/(47615:47616): [CPU] Recibido pedido de MOV_OUT
+[INFO] 15:13:04:318 Memoria/(47615:47616): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: Ch4u
+[INFO] 15:13:05:323 Memoria/(47615:47618): [KERNEL] Recibido pedido de Eliminar segmento
+[INFO] 15:13:05:366 Memoria/(47615:47618): [KERNEL] PID: 0 - Eliminar Segmento id: 1 - BASE: 0 - TAMAÑO: 128
+[INFO] 15:13:05:366 Memoria/(47615:47618): Direccion del seg a llenar:128
+[INFO] 15:13:05:366 Memoria/(47615:47618): creo un hueco: base:128 - tam: 128
+[INFO] 15:13:05:367 Memoria/(47615:47616): [CPU] Recibido pedido de MOV_IN
+[INFO] 15:13:05:367 Memoria/(47615:47616): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 15:13:06:367 Memoria/(47615:47616): El valor de LEIDO antes de enviarlo a CPU: Ch4u^
+[INFO] 15:13:06:369 Memoria/(47615:47618): [KERNEL] Solcitud de creacion de segmento
+[INFO] 15:13:06:410 Memoria/(47615:47618): [KERNEL] PID: 1 - Crear Segmento id: 9 - BASE: 768 - TAMAÑO: 64
+[INFO] 15:13:07:414 Memoria/(47615:47616): [CPU] Recibido pedido de MOV_OUT
+[INFO] 15:13:07:414 Memoria/(47615:47616): PID: 1 - N° Segmento: 1, Desplazamiento: 0, Tamanio: 9, Escribir: Cosc
+[INFO] 15:13:09:417 Memoria/(47615:47616): [CPU] Recibido pedido de MOV_OUT
+[INFO] 15:13:09:417 Memoria/(47615:47616): PID: 1 - N° Segmento: 8, Desplazamiento: 0, Tamanio: 9, Escribir: Germ
+[INFO] 15:15:43:437 Memoria/(47615:47618): Se ha finalizado la conexion
+[INFO] 15:15:44:190 Memoria/(47615:47617): Se ha finalizado la conexion
+[INFO] 15:15:44:758 Memoria/(47615:47616): Se ha finalizado la conexion
+[INFO] 15:15:47:268 Memoria/(47750:47750): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 15:15:47:269 Memoria/(47750:47750): Algoritmo FIRST configurado
+[INFO] 15:15:47:269 Memoria/(47750:47750): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:15:47:270 Memoria/(47750:47750): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 15:15:48:268 Memoria/(47750:47751): Cliente conectado (a memoria_sv)
+
+[INFO] 15:15:48:269 Memoria/(47750:47751): RESPUESTA AL CONECTAR CPU
+[INFO] 15:15:49:251 Memoria/(47750:47752): Cliente conectado (a memoria_sv)
+
+[INFO] 15:15:49:251 Memoria/(47750:47752): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 15:15:50:263 Memoria/(47750:47753): Cliente conectado (a memoria_sv)
+
+[INFO] 15:15:50:263 Memoria/(47750:47753): RESPUESTA AL CONECTAR KERNEL
+[INFO] 15:15:50:270 Memoria/(47750:47753): Se ha finalizado la conexion
+[INFO] 15:16:00:995 Memoria/(47750:47753): Cliente conectado (a memoria_sv)
+
+[INFO] 15:16:00:995 Memoria/(47750:47753): RESPUESTA AL CONECTAR KERNEL
+[INFO] 15:16:00:996 Memoria/(47750:47753): Se ha finalizado la conexion
+[INFO] 15:16:10:302 Memoria/(47750:47752): Se ha finalizado la conexion
+[INFO] 15:16:10:958 Memoria/(47750:47751): Se ha finalizado la conexion
+[INFO] 15:16:14:053 Memoria/(47769:47769): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 15:16:14:054 Memoria/(47769:47769): Algoritmo FIRST configurado
+[INFO] 15:16:14:055 Memoria/(47769:47769): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:16:14:055 Memoria/(47769:47769): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 15:16:15:197 Memoria/(47769:47770): Cliente conectado (a memoria_sv)
+
+[INFO] 15:16:15:198 Memoria/(47769:47770): RESPUESTA AL CONECTAR CPU
+[INFO] 15:16:16:356 Memoria/(47769:47771): Cliente conectado (a memoria_sv)
+
+[INFO] 15:16:16:357 Memoria/(47769:47771): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 15:16:18:051 Memoria/(47769:47772): Cliente conectado (a memoria_sv)
+
+[INFO] 15:16:18:051 Memoria/(47769:47772): RESPUESTA AL CONECTAR KERNEL
+[INFO] 15:16:18:053 Memoria/(47769:47772): Se ha finalizado la conexion
+[INFO] 15:16:22:446 Memoria/(47769:47771): Se ha finalizado la conexion
+[INFO] 15:16:23:150 Memoria/(47769:47770): Se ha finalizado la conexion
+[INFO] 15:29:13:155 Memoria/(48937:48937): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 15:29:13:156 Memoria/(48937:48937): Algoritmo FIRST configurado
+[INFO] 15:29:13:156 Memoria/(48937:48937): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 15:29:13:156 Memoria/(48937:48937): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 15:29:15:435 Memoria/(48937:48938): Cliente conectado (a memoria_sv)
+
+[INFO] 15:29:15:436 Memoria/(48937:48938): RESPUESTA AL CONECTAR CPU
+[INFO] 15:29:17:693 Memoria/(48937:48939): Cliente conectado (a memoria_sv)
+
+[INFO] 15:29:17:694 Memoria/(48937:48939): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 15:29:18:935 Memoria/(48937:48940): Cliente conectado (a memoria_sv)
+
+[INFO] 15:29:18:935 Memoria/(48937:48940): RESPUESTA AL CONECTAR KERNEL
+[INFO] 15:29:21:301 Memoria/(48937:48940): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 15:29:21:301 Memoria/(48937:48940): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 15:29:21:301 Memoria/(48937:48940): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 15:29:22:306 Memoria/(48937:48938): [CPU] Recibido pedido de MOV_OUT
+[INFO] 15:29:22:306 Memoria/(48937:48938): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h014
+[INFO] 15:29:23:307 Memoria/(48937:48940): [KERNEL] Solcitud de creacion de segmento
+[INFO] 15:29:23:351 Memoria/(48937:48940): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 15:29:40:726 Memoria/(48937:48940): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 15:29:40:726 Memoria/(48937:48940): [KERNEL] Se crea el proceso <PID> en NEW 1
+[INFO] 15:29:40:726 Memoria/(48937:48940): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 15:29:40:729 Memoria/(48937:48938): [CPU] Recibido pedido de MOV_IN
+[INFO] 15:29:40:729 Memoria/(48937:48938): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 15:29:41:730 Memoria/(48937:48938): El valor de LEIDO antes de enviarlo a CPU: h014�
+[INFO] 15:29:41:732 Memoria/(48937:48940): [KERNEL] Solcitud de creacion de segmento
+[INFO] 15:29:41:775 Memoria/(48937:48940): [KERNEL] PID: 1 - Crear Segmento id: 1 - BASE: 256 - TAMAÑO: 64
+[INFO] 15:29:41:776 Memoria/(48937:48940): [KERNEL] Solcitud de creacion de segmento
+[INFO] 15:29:41:818 Memoria/(48937:48940): [KERNEL] PID: 1 - Crear Segmento id: 2 - BASE: 320 - TAMAÑO: 64
+[INFO] 15:29:41:863 Memoria/(48937:48940): [KERNEL] Solcitud de creacion de segmento
+[INFO] 15:29:41:906 Memoria/(48937:48940): [KERNEL] PID: 1 - Crear Segmento id: 3 - BASE: 384 - TAMAÑO: 64
+[INFO] 15:29:41:951 Memoria/(48937:48940): [KERNEL] Solcitud de creacion de segmento
+[INFO] 15:29:41:994 Memoria/(48937:48940): [KERNEL] PID: 1 - Crear Segmento id: 4 - BASE: 448 - TAMAÑO: 64
+[INFO] 15:29:42:038 Memoria/(48937:48940): [KERNEL] Solcitud de creacion de segmento
+[INFO] 15:29:42:082 Memoria/(48937:48940): [KERNEL] PID: 1 - Crear Segmento id: 5 - BASE: 512 - TAMAÑO: 64
+[INFO] 15:29:42:127 Memoria/(48937:48940): [KERNEL] Solcitud de creacion de segmento
+[INFO] 15:29:42:170 Memoria/(48937:48940): [KERNEL] PID: 1 - Crear Segmento id: 6 - BASE: 576 - TAMAÑO: 64
+[INFO] 15:29:42:214 Memoria/(48937:48940): [KERNEL] Solcitud de creacion de segmento
+[INFO] 15:29:42:258 Memoria/(48937:48940): [KERNEL] PID: 1 - Crear Segmento id: 7 - BASE: 640 - TAMAÑO: 64
+[INFO] 15:29:42:302 Memoria/(48937:48940): [KERNEL] Solcitud de creacion de segmento
+[INFO] 15:29:42:346 Memoria/(48937:48940): [KERNEL] PID: 1 - Crear Segmento id: 8 - BASE: 704 - TAMAÑO: 64
+[INFO] 15:29:43:391 Memoria/(48937:48938): [CPU] Recibido pedido de MOV_OUT
+[INFO] 15:29:43:391 Memoria/(48937:48938): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: Ch4u
+[INFO] 15:29:44:396 Memoria/(48937:48940): [KERNEL] Recibido pedido de Eliminar segmento
+[INFO] 15:29:44:439 Memoria/(48937:48940): [KERNEL] PID: 0 - Eliminar Segmento id: 1 - BASE: 0 - TAMAÑO: 128
+[INFO] 15:29:44:439 Memoria/(48937:48940): Direccion del seg a llenar:128
+[INFO] 15:29:44:439 Memoria/(48937:48940): creo un hueco: base:128 - tam: 128
+[INFO] 15:29:44:440 Memoria/(48937:48938): [CPU] Recibido pedido de MOV_IN
+[INFO] 15:29:44:440 Memoria/(48937:48938): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 15:29:45:440 Memoria/(48937:48938): El valor de LEIDO antes de enviarlo a CPU: Ch4u�
+[INFO] 15:29:45:445 Memoria/(48937:48940): [KERNEL] Solcitud de creacion de segmento
+[INFO] 15:29:45:486 Memoria/(48937:48940): [KERNEL] PID: 1 - Crear Segmento id: 9 - BASE: 768 - TAMAÑO: 64
+[INFO] 15:29:46:490 Memoria/(48937:48938): [CPU] Recibido pedido de MOV_OUT
+[INFO] 15:29:46:490 Memoria/(48937:48938): PID: 1 - N° Segmento: 1, Desplazamiento: 0, Tamanio: 9, Escribir: Cosc
+[INFO] 15:29:48:493 Memoria/(48937:48938): [CPU] Recibido pedido de MOV_OUT
+[INFO] 15:29:48:493 Memoria/(48937:48938): PID: 1 - N° Segmento: 8, Desplazamiento: 0, Tamanio: 9, Escribir: Germ
+[INFO] 16:07:06:623 Memoria/(48937:48940): Se ha finalizado la conexion
+[INFO] 16:07:07:256 Memoria/(48937:48939): Se ha finalizado la conexion
+[INFO] 16:07:07:871 Memoria/(48937:48938): Se ha finalizado la conexion
+[INFO] 16:07:10:322 Memoria/(49269:49269): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 16:07:10:323 Memoria/(49269:49269): Algoritmo FIRST configurado
+[INFO] 16:07:10:323 Memoria/(49269:49269): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 16:07:10:323 Memoria/(49269:49269): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 16:07:11:426 Memoria/(49269:49270): Cliente conectado (a memoria_sv)
+
+[INFO] 16:07:11:426 Memoria/(49269:49270): RESPUESTA AL CONECTAR CPU
+[INFO] 16:07:12:226 Memoria/(49269:49271): Cliente conectado (a memoria_sv)
+
+[INFO] 16:07:12:227 Memoria/(49269:49271): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 16:07:12:996 Memoria/(49269:49272): Cliente conectado (a memoria_sv)
+
+[INFO] 16:07:12:996 Memoria/(49269:49272): RESPUESTA AL CONECTAR KERNEL
+[INFO] 16:07:14:459 Memoria/(49269:49272): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 16:07:14:459 Memoria/(49269:49272): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 16:07:14:459 Memoria/(49269:49272): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 16:07:15:463 Memoria/(49269:49270): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:07:15:463 Memoria/(49269:49270): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h014
+[INFO] 16:07:16:464 Memoria/(49269:49272): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:07:16:506 Memoria/(49269:49272): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 16:07:26:518 Memoria/(49269:49272): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 16:07:26:518 Memoria/(49269:49272): [KERNEL] Se crea el proceso <PID> en NEW 1
+[INFO] 16:07:26:518 Memoria/(49269:49272): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 16:07:26:519 Memoria/(49269:49270): [CPU] Recibido pedido de MOV_IN
+[INFO] 16:07:26:519 Memoria/(49269:49270): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 16:07:27:519 Memoria/(49269:49270): El valor de LEIDO antes de enviarlo a CPU: h0141
+[INFO] 16:07:27:520 Memoria/(49269:49272): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:07:27:562 Memoria/(49269:49272): [KERNEL] PID: 1 - Crear Segmento id: 1 - BASE: 256 - TAMAÑO: 64
+[INFO] 16:07:27:563 Memoria/(49269:49272): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:07:27:606 Memoria/(49269:49272): [KERNEL] PID: 1 - Crear Segmento id: 2 - BASE: 320 - TAMAÑO: 64
+[INFO] 16:07:27:650 Memoria/(49269:49272): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:07:27:694 Memoria/(49269:49272): [KERNEL] PID: 1 - Crear Segmento id: 3 - BASE: 384 - TAMAÑO: 64
+[INFO] 16:07:27:739 Memoria/(49269:49272): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:07:27:782 Memoria/(49269:49272): [KERNEL] PID: 1 - Crear Segmento id: 4 - BASE: 448 - TAMAÑO: 64
+[INFO] 16:07:27:826 Memoria/(49269:49272): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:07:27:870 Memoria/(49269:49272): [KERNEL] PID: 1 - Crear Segmento id: 5 - BASE: 512 - TAMAÑO: 64
+[INFO] 16:07:27:914 Memoria/(49269:49272): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:07:27:958 Memoria/(49269:49272): [KERNEL] PID: 1 - Crear Segmento id: 6 - BASE: 576 - TAMAÑO: 64
+[INFO] 16:07:28:002 Memoria/(49269:49272): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:07:28:046 Memoria/(49269:49272): [KERNEL] PID: 1 - Crear Segmento id: 7 - BASE: 640 - TAMAÑO: 64
+[INFO] 16:07:28:090 Memoria/(49269:49272): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:07:28:134 Memoria/(49269:49272): [KERNEL] PID: 1 - Crear Segmento id: 8 - BASE: 704 - TAMAÑO: 64
+[INFO] 16:07:29:180 Memoria/(49269:49270): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:07:29:180 Memoria/(49269:49270): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: Ch4u
+[INFO] 16:07:30:182 Memoria/(49269:49272): [KERNEL] Recibido pedido de Eliminar segmento
+[INFO] 16:07:30:222 Memoria/(49269:49272): [KERNEL] PID: 0 - Eliminar Segmento id: 1 - BASE: 0 - TAMAÑO: 128
+[INFO] 16:07:30:222 Memoria/(49269:49272): Direccion del seg a llenar:128
+[INFO] 16:07:30:222 Memoria/(49269:49272): creo un hueco: base:128 - tam: 128
+[INFO] 16:07:30:223 Memoria/(49269:49270): [CPU] Recibido pedido de MOV_IN
+[INFO] 16:07:30:223 Memoria/(49269:49270): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 16:07:31:223 Memoria/(49269:49270): El valor de LEIDO antes de enviarlo a CPU: Ch4u1
+[INFO] 16:07:31:227 Memoria/(49269:49272): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:07:31:270 Memoria/(49269:49272): [KERNEL] PID: 1 - Crear Segmento id: 9 - BASE: 768 - TAMAÑO: 64
+[INFO] 16:07:32:274 Memoria/(49269:49270): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:07:32:274 Memoria/(49269:49270): PID: 1 - N° Segmento: 1, Desplazamiento: 0, Tamanio: 9, Escribir: Cosc
+[INFO] 16:07:34:279 Memoria/(49269:49270): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:07:34:279 Memoria/(49269:49270): PID: 1 - N° Segmento: 8, Desplazamiento: 0, Tamanio: 9, Escribir: Germ
+[INFO] 16:19:21:865 Memoria/(49269:49272): Se ha finalizado la conexion
+[INFO] 16:19:22:553 Memoria/(49269:49271): Se ha finalizado la conexion
+[INFO] 16:19:23:065 Memoria/(49269:49270): Se ha finalizado la conexion
+[INFO] 16:19:25:355 Memoria/(49553:49553): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 16:19:25:356 Memoria/(49553:49553): Algoritmo FIRST configurado
+[INFO] 16:19:25:356 Memoria/(49553:49553): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 16:19:25:356 Memoria/(49553:49553): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 16:19:26:237 Memoria/(49553:49554): Cliente conectado (a memoria_sv)
+
+[INFO] 16:19:26:237 Memoria/(49553:49554): RESPUESTA AL CONECTAR CPU
+[INFO] 16:19:27:022 Memoria/(49553:49555): Cliente conectado (a memoria_sv)
+
+[INFO] 16:19:27:022 Memoria/(49553:49555): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 16:19:28:670 Memoria/(49553:49556): Cliente conectado (a memoria_sv)
+
+[INFO] 16:19:28:671 Memoria/(49553:49556): RESPUESTA AL CONECTAR KERNEL
+[INFO] 16:19:30:176 Memoria/(49553:49556): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 16:19:30:176 Memoria/(49553:49556): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 16:19:30:176 Memoria/(49553:49556): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 16:19:31:180 Memoria/(49553:49554): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:19:31:180 Memoria/(49553:49554): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h014
+[INFO] 16:19:32:182 Memoria/(49553:49556): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:19:32:228 Memoria/(49553:49556): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 16:19:59:714 Memoria/(49553:49556): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 16:19:59:714 Memoria/(49553:49556): [KERNEL] Se crea el proceso <PID> en NEW 1
+[INFO] 16:19:59:714 Memoria/(49553:49556): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 16:19:59:716 Memoria/(49553:49554): [CPU] Recibido pedido de MOV_IN
+[INFO] 16:19:59:716 Memoria/(49553:49554): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 16:20:00:716 Memoria/(49553:49554): El valor de LEIDO antes de enviarlo a CPU: h014X
+[INFO] 16:20:00:718 Memoria/(49553:49556): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:20:00:762 Memoria/(49553:49556): [KERNEL] PID: 1 - Crear Segmento id: 1 - BASE: 256 - TAMAÑO: 64
+[INFO] 16:20:00:763 Memoria/(49553:49556): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:20:00:806 Memoria/(49553:49556): [KERNEL] PID: 1 - Crear Segmento id: 2 - BASE: 320 - TAMAÑO: 64
+[INFO] 16:20:00:850 Memoria/(49553:49556): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:20:00:894 Memoria/(49553:49556): [KERNEL] PID: 1 - Crear Segmento id: 3 - BASE: 384 - TAMAÑO: 64
+[INFO] 16:20:00:938 Memoria/(49553:49556): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:20:00:982 Memoria/(49553:49556): [KERNEL] PID: 1 - Crear Segmento id: 4 - BASE: 448 - TAMAÑO: 64
+[INFO] 16:20:01:026 Memoria/(49553:49556): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:20:01:070 Memoria/(49553:49556): [KERNEL] PID: 1 - Crear Segmento id: 5 - BASE: 512 - TAMAÑO: 64
+[INFO] 16:20:01:115 Memoria/(49553:49556): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:20:01:158 Memoria/(49553:49556): [KERNEL] PID: 1 - Crear Segmento id: 6 - BASE: 576 - TAMAÑO: 64
+[INFO] 16:20:01:202 Memoria/(49553:49556): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:20:01:246 Memoria/(49553:49556): [KERNEL] PID: 1 - Crear Segmento id: 7 - BASE: 640 - TAMAÑO: 64
+[INFO] 16:20:01:291 Memoria/(49553:49556): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:20:01:334 Memoria/(49553:49556): [KERNEL] PID: 1 - Crear Segmento id: 8 - BASE: 704 - TAMAÑO: 64
+[INFO] 16:20:02:379 Memoria/(49553:49554): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:20:02:379 Memoria/(49553:49554): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: Ch4u
+[INFO] 16:20:03:384 Memoria/(49553:49556): [KERNEL] Recibido pedido de Eliminar segmento
+[INFO] 16:20:03:427 Memoria/(49553:49556): [KERNEL] PID: 0 - Eliminar Segmento id: 1 - BASE: 0 - TAMAÑO: 128
+[INFO] 16:20:03:431 Memoria/(49553:49556): Direccion del seg a llenar:128
+[INFO] 16:20:03:431 Memoria/(49553:49556): creo un hueco: base:128 - tam: 128
+[INFO] 16:20:03:432 Memoria/(49553:49554): [CPU] Recibido pedido de MOV_IN
+[INFO] 16:20:03:432 Memoria/(49553:49554): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 16:20:04:432 Memoria/(49553:49554): El valor de LEIDO antes de enviarlo a CPU: Ch4uX
+[INFO] 16:20:04:435 Memoria/(49553:49556): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:20:04:478 Memoria/(49553:49556): [KERNEL] PID: 1 - Crear Segmento id: 9 - BASE: 768 - TAMAÑO: 64
+[INFO] 16:20:05:481 Memoria/(49553:49554): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:20:05:481 Memoria/(49553:49554): PID: 1 - N° Segmento: 1, Desplazamiento: 0, Tamanio: 9, Escribir: Cosc
+[INFO] 16:20:07:482 Memoria/(49553:49554): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:20:07:482 Memoria/(49553:49554): PID: 1 - N° Segmento: 8, Desplazamiento: 0, Tamanio: 9, Escribir: Germ
+[INFO] 16:22:07:178 Memoria/(49553:49556): Se ha finalizado la conexion
+[INFO] 16:22:07:706 Memoria/(49553:49555): Se ha finalizado la conexion
+[INFO] 16:22:08:498 Memoria/(49553:49554): Se ha finalizado la conexion
+[INFO] 16:22:10:780 Memoria/(49677:49677): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 16:22:10:781 Memoria/(49677:49677): Algoritmo FIRST configurado
+[INFO] 16:22:10:781 Memoria/(49677:49677): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 16:22:10:781 Memoria/(49677:49677): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 16:22:11:541 Memoria/(49677:49678): Cliente conectado (a memoria_sv)
+
+[INFO] 16:22:11:542 Memoria/(49677:49678): RESPUESTA AL CONECTAR CPU
+[INFO] 16:22:12:207 Memoria/(49677:49679): Cliente conectado (a memoria_sv)
+
+[INFO] 16:22:12:207 Memoria/(49677:49679): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 16:22:12:880 Memoria/(49677:49680): Cliente conectado (a memoria_sv)
+
+[INFO] 16:22:12:881 Memoria/(49677:49680): RESPUESTA AL CONECTAR KERNEL
+[INFO] 16:22:13:845 Memoria/(49677:49680): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 16:22:13:846 Memoria/(49677:49680): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 16:22:13:846 Memoria/(49677:49680): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 16:22:14:850 Memoria/(49677:49678): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:22:14:850 Memoria/(49677:49678): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h014
+[INFO] 16:22:15:852 Memoria/(49677:49680): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:22:15:895 Memoria/(49677:49680): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 16:22:20:454 Memoria/(49677:49680): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 16:22:20:454 Memoria/(49677:49680): [KERNEL] Se crea el proceso <PID> en NEW 1
+[INFO] 16:22:20:454 Memoria/(49677:49680): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 16:22:20:456 Memoria/(49677:49678): [CPU] Recibido pedido de MOV_IN
+[INFO] 16:22:20:456 Memoria/(49677:49678): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 16:22:21:457 Memoria/(49677:49678): El valor de LEIDO antes de enviarlo a CPU: h014�
+[INFO] 16:22:21:459 Memoria/(49677:49680): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:22:21:503 Memoria/(49677:49680): [KERNEL] PID: 1 - Crear Segmento id: 1 - BASE: 256 - TAMAÑO: 64
+[INFO] 16:22:21:503 Memoria/(49677:49680): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:22:21:546 Memoria/(49677:49680): [KERNEL] PID: 1 - Crear Segmento id: 2 - BASE: 320 - TAMAÑO: 64
+[INFO] 16:22:21:590 Memoria/(49677:49680): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:22:21:635 Memoria/(49677:49680): [KERNEL] PID: 1 - Crear Segmento id: 3 - BASE: 384 - TAMAÑO: 64
+[INFO] 16:22:21:678 Memoria/(49677:49680): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:22:21:722 Memoria/(49677:49680): [KERNEL] PID: 1 - Crear Segmento id: 4 - BASE: 448 - TAMAÑO: 64
+[INFO] 16:22:21:766 Memoria/(49677:49680): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:22:21:810 Memoria/(49677:49680): [KERNEL] PID: 1 - Crear Segmento id: 5 - BASE: 512 - TAMAÑO: 64
+[INFO] 16:22:21:854 Memoria/(49677:49680): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:22:21:899 Memoria/(49677:49680): [KERNEL] PID: 1 - Crear Segmento id: 6 - BASE: 576 - TAMAÑO: 64
+[INFO] 16:22:21:942 Memoria/(49677:49680): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:22:21:986 Memoria/(49677:49680): [KERNEL] PID: 1 - Crear Segmento id: 7 - BASE: 640 - TAMAÑO: 64
+[INFO] 16:22:22:031 Memoria/(49677:49680): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:22:22:074 Memoria/(49677:49680): [KERNEL] PID: 1 - Crear Segmento id: 8 - BASE: 704 - TAMAÑO: 64
+[INFO] 16:22:23:121 Memoria/(49677:49678): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:22:23:121 Memoria/(49677:49678): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: Ch4u
+[INFO] 16:22:24:127 Memoria/(49677:49680): [KERNEL] Recibido pedido de Eliminar segmento
+[INFO] 16:22:24:171 Memoria/(49677:49680): [KERNEL] PID: 0 - Eliminar Segmento id: 1 - BASE: 0 - TAMAÑO: 128
+[INFO] 16:22:24:171 Memoria/(49677:49680): Direccion del seg a llenar:128
+[INFO] 16:22:24:171 Memoria/(49677:49680): creo un hueco: base:128 - tam: 128
+[INFO] 16:22:24:171 Memoria/(49677:49678): [CPU] Recibido pedido de MOV_IN
+[INFO] 16:22:24:171 Memoria/(49677:49678): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 16:22:25:172 Memoria/(49677:49678): El valor de LEIDO antes de enviarlo a CPU: Ch4u�
+[INFO] 16:22:25:177 Memoria/(49677:49680): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:22:25:218 Memoria/(49677:49680): [KERNEL] PID: 1 - Crear Segmento id: 9 - BASE: 768 - TAMAÑO: 64
+[INFO] 16:22:26:219 Memoria/(49677:49678): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:22:26:219 Memoria/(49677:49678): PID: 1 - N° Segmento: 1, Desplazamiento: 0, Tamanio: 9, Escribir: Cosc
+[INFO] 16:22:28:225 Memoria/(49677:49678): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:22:28:225 Memoria/(49677:49678): PID: 1 - N° Segmento: 8, Desplazamiento: 0, Tamanio: 9, Escribir: Germ
+[INFO] 16:25:24:770 Memoria/(49677:49680): Se ha finalizado la conexion
+[INFO] 16:25:25:346 Memoria/(49677:49679): Se ha finalizado la conexion
+[INFO] 16:25:25:805 Memoria/(49677:49678): Se ha finalizado la conexion
+[INFO] 16:25:27:990 Memoria/(49859:49859): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 16:25:27:990 Memoria/(49859:49859): Algoritmo FIRST configurado
+[INFO] 16:25:27:991 Memoria/(49859:49859): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 16:25:27:991 Memoria/(49859:49859): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 16:25:28:821 Memoria/(49859:49860): Cliente conectado (a memoria_sv)
+
+[INFO] 16:25:28:822 Memoria/(49859:49860): RESPUESTA AL CONECTAR CPU
+[INFO] 16:25:29:783 Memoria/(49859:49861): Cliente conectado (a memoria_sv)
+
+[INFO] 16:25:29:784 Memoria/(49859:49861): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 16:25:30:536 Memoria/(49859:49862): Cliente conectado (a memoria_sv)
+
+[INFO] 16:25:30:536 Memoria/(49859:49862): RESPUESTA AL CONECTAR KERNEL
+[INFO] 16:25:31:654 Memoria/(49859:49862): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 16:25:31:654 Memoria/(49859:49862): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 16:25:31:654 Memoria/(49859:49862): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 16:25:32:656 Memoria/(49859:49860): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:25:32:656 Memoria/(49859:49860): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h014
+[INFO] 16:25:33:658 Memoria/(49859:49862): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:25:33:703 Memoria/(49859:49862): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 16:25:39:490 Memoria/(49859:49862): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 16:25:39:490 Memoria/(49859:49862): [KERNEL] Se crea el proceso <PID> en NEW 1
+[INFO] 16:25:39:490 Memoria/(49859:49862): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 16:25:39:491 Memoria/(49859:49860): [CPU] Recibido pedido de MOV_IN
+[INFO] 16:25:39:492 Memoria/(49859:49860): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 16:25:40:492 Memoria/(49859:49860): El valor de LEIDO antes de enviarlo a CPU: h014�~
+[INFO] 16:25:40:494 Memoria/(49859:49862): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:25:40:535 Memoria/(49859:49862): [KERNEL] PID: 1 - Crear Segmento id: 1 - BASE: 256 - TAMAÑO: 64
+[INFO] 16:25:40:535 Memoria/(49859:49862): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:25:40:578 Memoria/(49859:49862): [KERNEL] PID: 1 - Crear Segmento id: 2 - BASE: 320 - TAMAÑO: 64
+[INFO] 16:25:40:622 Memoria/(49859:49862): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:25:40:667 Memoria/(49859:49862): [KERNEL] PID: 1 - Crear Segmento id: 3 - BASE: 384 - TAMAÑO: 64
+[INFO] 16:25:40:711 Memoria/(49859:49862): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:25:40:754 Memoria/(49859:49862): [KERNEL] PID: 1 - Crear Segmento id: 4 - BASE: 448 - TAMAÑO: 64
+[INFO] 16:25:40:799 Memoria/(49859:49862): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:25:40:842 Memoria/(49859:49862): [KERNEL] PID: 1 - Crear Segmento id: 5 - BASE: 512 - TAMAÑO: 64
+[INFO] 16:25:40:887 Memoria/(49859:49862): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:25:40:930 Memoria/(49859:49862): [KERNEL] PID: 1 - Crear Segmento id: 6 - BASE: 576 - TAMAÑO: 64
+[INFO] 16:25:40:975 Memoria/(49859:49862): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:25:41:019 Memoria/(49859:49862): [KERNEL] PID: 1 - Crear Segmento id: 7 - BASE: 640 - TAMAÑO: 64
+[INFO] 16:25:41:063 Memoria/(49859:49862): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:25:41:106 Memoria/(49859:49862): [KERNEL] PID: 1 - Crear Segmento id: 8 - BASE: 704 - TAMAÑO: 64
+[INFO] 16:25:42:154 Memoria/(49859:49860): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:25:42:154 Memoria/(49859:49860): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: Ch4u
+[INFO] 16:25:43:160 Memoria/(49859:49862): [KERNEL] Recibido pedido de Eliminar segmento
+[INFO] 16:25:43:202 Memoria/(49859:49862): [KERNEL] PID: 0 - Eliminar Segmento id: 1 - BASE: 0 - TAMAÑO: 128
+[INFO] 16:25:43:203 Memoria/(49859:49862): Direccion del seg a llenar:128
+[INFO] 16:25:43:203 Memoria/(49859:49862): creo un hueco: base:128 - tam: 128
+[INFO] 16:25:43:203 Memoria/(49859:49860): [CPU] Recibido pedido de MOV_IN
+[INFO] 16:25:43:204 Memoria/(49859:49860): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 16:25:44:204 Memoria/(49859:49860): El valor de LEIDO antes de enviarlo a CPU: Ch4u�~
+[INFO] 16:25:44:210 Memoria/(49859:49862): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:25:44:255 Memoria/(49859:49862): [KERNEL] PID: 1 - Crear Segmento id: 9 - BASE: 768 - TAMAÑO: 64
+[INFO] 16:25:45:256 Memoria/(49859:49860): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:25:45:257 Memoria/(49859:49860): PID: 1 - N° Segmento: 1, Desplazamiento: 0, Tamanio: 9, Escribir: Cosc
+[INFO] 16:25:47:264 Memoria/(49859:49860): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:25:47:264 Memoria/(49859:49860): PID: 1 - N° Segmento: 8, Desplazamiento: 0, Tamanio: 9, Escribir: Germ
+[INFO] 16:27:33:203 Memoria/(49859:49862): Se ha finalizado la conexion
+[INFO] 16:27:33:924 Memoria/(49859:49861): Se ha finalizado la conexion
+[INFO] 16:27:34:555 Memoria/(49859:49860): Se ha finalizado la conexion
+[INFO] 16:27:37:917 Memoria/(49966:49966): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 16:27:37:918 Memoria/(49966:49966): Algoritmo FIRST configurado
+[INFO] 16:27:37:918 Memoria/(49966:49966): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 16:27:37:918 Memoria/(49966:49966): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 16:27:40:191 Memoria/(49966:49967): Cliente conectado (a memoria_sv)
+
+[INFO] 16:27:40:192 Memoria/(49966:49967): RESPUESTA AL CONECTAR CPU
+[INFO] 16:27:42:447 Memoria/(49966:49968): Cliente conectado (a memoria_sv)
+
+[INFO] 16:27:42:448 Memoria/(49966:49968): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 16:27:44:345 Memoria/(49966:49969): Cliente conectado (a memoria_sv)
+
+[INFO] 16:27:44:345 Memoria/(49966:49969): RESPUESTA AL CONECTAR KERNEL
+[INFO] 16:27:47:640 Memoria/(49966:49969): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 16:27:47:640 Memoria/(49966:49969): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 16:27:47:640 Memoria/(49966:49969): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 16:27:48:643 Memoria/(49966:49967): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:27:48:643 Memoria/(49966:49967): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h014
+[INFO] 16:27:49:644 Memoria/(49966:49969): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:27:49:687 Memoria/(49966:49969): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 16:28:11:570 Memoria/(49966:49969): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 16:28:11:570 Memoria/(49966:49969): [KERNEL] Se crea el proceso <PID> en NEW 1
+[INFO] 16:28:11:570 Memoria/(49966:49969): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 16:28:11:571 Memoria/(49966:49967): [CPU] Recibido pedido de MOV_IN
+[INFO] 16:28:11:571 Memoria/(49966:49967): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 16:28:12:572 Memoria/(49966:49967): El valor de LEIDO antes de enviarlo a CPU: h014�
+[INFO] 16:28:12:573 Memoria/(49966:49969): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:28:12:614 Memoria/(49966:49969): [KERNEL] PID: 1 - Crear Segmento id: 1 - BASE: 256 - TAMAÑO: 64
+[INFO] 16:28:12:614 Memoria/(49966:49969): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:28:12:658 Memoria/(49966:49969): [KERNEL] PID: 1 - Crear Segmento id: 2 - BASE: 320 - TAMAÑO: 64
+[INFO] 16:28:12:702 Memoria/(49966:49969): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:28:12:746 Memoria/(49966:49969): [KERNEL] PID: 1 - Crear Segmento id: 3 - BASE: 384 - TAMAÑO: 64
+[INFO] 16:28:12:791 Memoria/(49966:49969): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:28:12:835 Memoria/(49966:49969): [KERNEL] PID: 1 - Crear Segmento id: 4 - BASE: 448 - TAMAÑO: 64
+[INFO] 16:28:12:878 Memoria/(49966:49969): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:28:12:922 Memoria/(49966:49969): [KERNEL] PID: 1 - Crear Segmento id: 5 - BASE: 512 - TAMAÑO: 64
+[INFO] 16:28:12:968 Memoria/(49966:49969): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:28:13:011 Memoria/(49966:49969): [KERNEL] PID: 1 - Crear Segmento id: 6 - BASE: 576 - TAMAÑO: 64
+[INFO] 16:28:13:055 Memoria/(49966:49969): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:28:13:098 Memoria/(49966:49969): [KERNEL] PID: 1 - Crear Segmento id: 7 - BASE: 640 - TAMAÑO: 64
+[INFO] 16:28:13:142 Memoria/(49966:49969): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:28:13:186 Memoria/(49966:49969): [KERNEL] PID: 1 - Crear Segmento id: 8 - BASE: 704 - TAMAÑO: 64
+[INFO] 16:28:14:232 Memoria/(49966:49967): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:28:14:232 Memoria/(49966:49967): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: Ch4u
+[INFO] 16:28:15:234 Memoria/(49966:49969): [KERNEL] Recibido pedido de Eliminar segmento
+[INFO] 16:28:15:277 Memoria/(49966:49969): [KERNEL] PID: 0 - Eliminar Segmento id: 1 - BASE: 0 - TAMAÑO: 128
+[INFO] 16:28:15:277 Memoria/(49966:49969): Direccion del seg a llenar:128
+[INFO] 16:28:15:277 Memoria/(49966:49969): creo un hueco: base:128 - tam: 128
+[INFO] 16:28:15:278 Memoria/(49966:49967): [CPU] Recibido pedido de MOV_IN
+[INFO] 16:28:15:278 Memoria/(49966:49967): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 16:28:16:278 Memoria/(49966:49967): El valor de LEIDO antes de enviarlo a CPU: Ch4u�
+[INFO] 16:28:16:279 Memoria/(49966:49969): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:28:16:322 Memoria/(49966:49969): [KERNEL] PID: 1 - Crear Segmento id: 9 - BASE: 768 - TAMAÑO: 64
+[INFO] 16:28:17:324 Memoria/(49966:49967): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:28:17:324 Memoria/(49966:49967): PID: 1 - N° Segmento: 1, Desplazamiento: 0, Tamanio: 9, Escribir: Cosc
+[INFO] 16:28:19:326 Memoria/(49966:49967): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:28:19:327 Memoria/(49966:49967): PID: 1 - N° Segmento: 8, Desplazamiento: 0, Tamanio: 9, Escribir: Germ
+[INFO] 16:39:04:968 Memoria/(50424:50424): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 16:39:04:969 Memoria/(50424:50424): Algoritmo FIRST configurado
+[INFO] 16:39:04:969 Memoria/(50424:50424): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 16:39:04:969 Memoria/(50424:50424): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 16:39:17:743 Memoria/(50430:50430): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 16:39:17:744 Memoria/(50430:50430): Algoritmo FIRST configurado
+[INFO] 16:39:17:744 Memoria/(50430:50430): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 16:39:17:745 Memoria/(50430:50430): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 16:39:20:553 Memoria/(50430:50431): Cliente conectado (a memoria_sv)
+
+[INFO] 16:39:20:553 Memoria/(50430:50431): RESPUESTA AL CONECTAR CPU
+[INFO] 16:39:22:827 Memoria/(50430:50432): Cliente conectado (a memoria_sv)
+
+[INFO] 16:39:22:827 Memoria/(50430:50432): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 16:39:25:515 Memoria/(50430:50433): Cliente conectado (a memoria_sv)
+
+[INFO] 16:39:25:516 Memoria/(50430:50433): RESPUESTA AL CONECTAR KERNEL
+[INFO] 16:39:29:611 Memoria/(50430:50433): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 16:39:29:611 Memoria/(50430:50433): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 16:39:29:611 Memoria/(50430:50433): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 16:39:30:614 Memoria/(50430:50431): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:39:30:614 Memoria/(50430:50431): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h014
+[INFO] 16:39:31:615 Memoria/(50430:50433): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:39:31:658 Memoria/(50430:50433): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 16:40:24:558 Memoria/(50430:50433): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 16:40:24:558 Memoria/(50430:50433): [KERNEL] Se crea el proceso <PID> en NEW 1
+[INFO] 16:40:24:558 Memoria/(50430:50433): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 16:40:24:559 Memoria/(50430:50431): [CPU] Recibido pedido de MOV_IN
+[INFO] 16:40:24:560 Memoria/(50430:50431): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 16:40:25:560 Memoria/(50430:50431): El valor de LEIDO antes de enviarlo a CPU: h014�
+[INFO] 16:40:25:561 Memoria/(50430:50433): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:40:25:602 Memoria/(50430:50433): [KERNEL] PID: 1 - Crear Segmento id: 1 - BASE: 256 - TAMAÑO: 64
+[INFO] 16:40:25:603 Memoria/(50430:50433): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:40:25:646 Memoria/(50430:50433): [KERNEL] PID: 1 - Crear Segmento id: 2 - BASE: 320 - TAMAÑO: 64
+[INFO] 16:40:25:690 Memoria/(50430:50433): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:40:25:734 Memoria/(50430:50433): [KERNEL] PID: 1 - Crear Segmento id: 3 - BASE: 384 - TAMAÑO: 64
+[INFO] 16:40:25:778 Memoria/(50430:50433): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:40:25:822 Memoria/(50430:50433): [KERNEL] PID: 1 - Crear Segmento id: 4 - BASE: 448 - TAMAÑO: 64
+[INFO] 16:40:25:867 Memoria/(50430:50433): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:40:25:910 Memoria/(50430:50433): [KERNEL] PID: 1 - Crear Segmento id: 5 - BASE: 512 - TAMAÑO: 64
+[INFO] 16:40:25:954 Memoria/(50430:50433): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:40:25:998 Memoria/(50430:50433): [KERNEL] PID: 1 - Crear Segmento id: 6 - BASE: 576 - TAMAÑO: 64
+[INFO] 16:40:26:042 Memoria/(50430:50433): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:40:26:086 Memoria/(50430:50433): [KERNEL] PID: 1 - Crear Segmento id: 7 - BASE: 640 - TAMAÑO: 64
+[INFO] 16:40:26:130 Memoria/(50430:50433): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:40:26:174 Memoria/(50430:50433): [KERNEL] PID: 1 - Crear Segmento id: 8 - BASE: 704 - TAMAÑO: 64
+[INFO] 16:40:27:219 Memoria/(50430:50431): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:40:27:219 Memoria/(50430:50431): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: Ch4u
+[INFO] 16:40:28:222 Memoria/(50430:50433): [KERNEL] Recibido pedido de Eliminar segmento
+[INFO] 16:40:28:262 Memoria/(50430:50433): [KERNEL] PID: 0 - Eliminar Segmento id: 1 - BASE: 0 - TAMAÑO: 128
+[INFO] 16:40:28:265 Memoria/(50430:50433): Direccion del seg a llenar:128
+[INFO] 16:40:28:271 Memoria/(50430:50433): creo un hueco: base:128 - tam: 128
+[INFO] 16:40:28:271 Memoria/(50430:50431): [CPU] Recibido pedido de MOV_IN
+[INFO] 16:40:28:271 Memoria/(50430:50431): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 16:40:29:271 Memoria/(50430:50431): El valor de LEIDO antes de enviarlo a CPU: Ch4u�
+[INFO] 16:40:29:274 Memoria/(50430:50433): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:40:29:318 Memoria/(50430:50433): [KERNEL] PID: 1 - Crear Segmento id: 9 - BASE: 768 - TAMAÑO: 64
+[INFO] 16:40:30:320 Memoria/(50430:50431): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:40:30:320 Memoria/(50430:50431): PID: 1 - N° Segmento: 1, Desplazamiento: 0, Tamanio: 9, Escribir: Cosc
+[INFO] 16:40:32:323 Memoria/(50430:50431): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:40:32:323 Memoria/(50430:50431): PID: 1 - N° Segmento: 8, Desplazamiento: 0, Tamanio: 9, Escribir: Germ
+[INFO] 16:42:56:327 Memoria/(50430:50433): Se ha finalizado la conexion
+[INFO] 16:42:57:078 Memoria/(50430:50432): Se ha finalizado la conexion
+[INFO] 16:42:57:879 Memoria/(50430:50431): Se ha finalizado la conexion
+[INFO] 16:43:10:432 Memoria/(50576:50576): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 16:43:10:434 Memoria/(50576:50576): Algoritmo FIRST configurado
+[INFO] 16:43:10:434 Memoria/(50576:50576): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 16:43:10:434 Memoria/(50576:50576): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 16:43:16:578 Memoria/(50576:50577): Cliente conectado (a memoria_sv)
+
+[INFO] 16:43:16:579 Memoria/(50576:50577): RESPUESTA AL CONECTAR CPU
+[INFO] 16:43:19:275 Memoria/(50576:50578): Cliente conectado (a memoria_sv)
+
+[INFO] 16:43:19:275 Memoria/(50576:50578): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 16:43:22:067 Memoria/(50576:50579): Cliente conectado (a memoria_sv)
+
+[INFO] 16:43:22:068 Memoria/(50576:50579): RESPUESTA AL CONECTAR KERNEL
+[INFO] 16:43:26:412 Memoria/(50576:50579): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 16:43:26:412 Memoria/(50576:50579): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 16:43:26:412 Memoria/(50576:50579): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 16:43:27:416 Memoria/(50576:50577): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:43:27:416 Memoria/(50576:50577): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h014
+[INFO] 16:43:28:417 Memoria/(50576:50579): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:43:28:458 Memoria/(50576:50579): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 16:43:52:822 Memoria/(50576:50579): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 16:43:52:822 Memoria/(50576:50579): [KERNEL] Se crea el proceso <PID> en NEW 1
+[INFO] 16:43:52:822 Memoria/(50576:50579): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 16:43:52:823 Memoria/(50576:50577): [CPU] Recibido pedido de MOV_IN
+[INFO] 16:43:52:823 Memoria/(50576:50577): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 16:43:53:823 Memoria/(50576:50577): El valor de LEIDO antes de enviarlo a CPU: h014L
+[INFO] 16:43:53:824 Memoria/(50576:50579): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:43:53:866 Memoria/(50576:50579): [KERNEL] PID: 1 - Crear Segmento id: 1 - BASE: 256 - TAMAÑO: 64
+[INFO] 16:43:53:867 Memoria/(50576:50579): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:43:53:910 Memoria/(50576:50579): [KERNEL] PID: 1 - Crear Segmento id: 2 - BASE: 320 - TAMAÑO: 64
+[INFO] 16:43:53:955 Memoria/(50576:50579): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:43:53:998 Memoria/(50576:50579): [KERNEL] PID: 1 - Crear Segmento id: 3 - BASE: 384 - TAMAÑO: 64
+[INFO] 16:43:54:043 Memoria/(50576:50579): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:43:54:086 Memoria/(50576:50579): [KERNEL] PID: 1 - Crear Segmento id: 4 - BASE: 448 - TAMAÑO: 64
+[INFO] 16:43:54:130 Memoria/(50576:50579): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:43:54:174 Memoria/(50576:50579): [KERNEL] PID: 1 - Crear Segmento id: 5 - BASE: 512 - TAMAÑO: 64
+[INFO] 16:43:54:218 Memoria/(50576:50579): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:43:54:262 Memoria/(50576:50579): [KERNEL] PID: 1 - Crear Segmento id: 6 - BASE: 576 - TAMAÑO: 64
+[INFO] 16:43:54:306 Memoria/(50576:50579): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:43:54:350 Memoria/(50576:50579): [KERNEL] PID: 1 - Crear Segmento id: 7 - BASE: 640 - TAMAÑO: 64
+[INFO] 16:43:54:394 Memoria/(50576:50579): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:43:54:438 Memoria/(50576:50579): [KERNEL] PID: 1 - Crear Segmento id: 8 - BASE: 704 - TAMAÑO: 64
+[INFO] 16:43:55:484 Memoria/(50576:50577): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:43:55:484 Memoria/(50576:50577): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: Ch4u
+[INFO] 16:43:56:486 Memoria/(50576:50579): [KERNEL] Recibido pedido de Eliminar segmento
+[INFO] 16:43:56:527 Memoria/(50576:50579): [KERNEL] PID: 0 - Eliminar Segmento id: 1 - BASE: 0 - TAMAÑO: 128
+[INFO] 16:43:56:527 Memoria/(50576:50579): Direccion del seg a llenar:128
+[INFO] 16:43:56:527 Memoria/(50576:50579): creo un hueco: base:128 - tam: 128
+[INFO] 16:43:56:528 Memoria/(50576:50577): [CPU] Recibido pedido de MOV_IN
+[INFO] 16:43:56:528 Memoria/(50576:50577): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 16:43:57:528 Memoria/(50576:50577): El valor de LEIDO antes de enviarlo a CPU: Ch4uL
+[INFO] 16:43:57:530 Memoria/(50576:50579): [KERNEL] Solcitud de creacion de segmento
+[INFO] 16:43:57:574 Memoria/(50576:50579): [KERNEL] PID: 1 - Crear Segmento id: 9 - BASE: 768 - TAMAÑO: 64
+[INFO] 16:43:58:576 Memoria/(50576:50577): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:43:58:576 Memoria/(50576:50577): PID: 1 - N° Segmento: 1, Desplazamiento: 0, Tamanio: 9, Escribir: Cosc
+[INFO] 16:44:00:578 Memoria/(50576:50577): [CPU] Recibido pedido de MOV_OUT
+[INFO] 16:44:00:579 Memoria/(50576:50577): PID: 1 - N° Segmento: 8, Desplazamiento: 0, Tamanio: 9, Escribir: Germ
+[INFO] 16:45:53:831 Memoria/(50576:50579): Se ha finalizado la conexion
+[INFO] 16:45:54:455 Memoria/(50576:50578): Se ha finalizado la conexion
+[INFO] 16:45:55:119 Memoria/(50576:50577): Se ha finalizado la conexion
+[INFO] 17:01:44:454 Memoria/(51069:51069): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 17:01:44:455 Memoria/(51069:51069): Algoritmo FIRST configurado
+[INFO] 17:01:44:455 Memoria/(51069:51069): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 17:01:44:455 Memoria/(51069:51069): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 17:01:46:408 Memoria/(51069:51070): Cliente conectado (a memoria_sv)
+
+[INFO] 17:01:46:409 Memoria/(51069:51070): RESPUESTA AL CONECTAR CPU
+[INFO] 17:01:48:313 Memoria/(51069:51071): Cliente conectado (a memoria_sv)
+
+[INFO] 17:01:48:314 Memoria/(51069:51071): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 17:01:50:355 Memoria/(51069:51072): Cliente conectado (a memoria_sv)
+
+[INFO] 17:01:50:355 Memoria/(51069:51072): RESPUESTA AL CONECTAR KERNEL
+[INFO] 17:01:51:752 Memoria/(51069:51072): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 17:01:51:752 Memoria/(51069:51072): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 17:01:51:752 Memoria/(51069:51072): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 17:01:52:755 Memoria/(51069:51070): [CPU] Recibido pedido de MOV_OUT
+[INFO] 17:01:52:755 Memoria/(51069:51070): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: h014�
+[INFO] 17:01:53:756 Memoria/(51069:51072): [KERNEL] Solcitud de creacion de segmento
+[INFO] 17:01:53:798 Memoria/(51069:51072): [KERNEL] PID: 0 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 128
+[INFO] 17:02:03:962 Memoria/(51069:51072): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 17:02:03:962 Memoria/(51069:51072): [KERNEL] Se crea el proceso <PID> en NEW 1
+[INFO] 17:02:03:962 Memoria/(51069:51072): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 17:02:03:964 Memoria/(51069:51070): [CPU] Recibido pedido de MOV_IN
+[INFO] 17:02:03:964 Memoria/(51069:51070): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 17:02:04:964 Memoria/(51069:51070): El valor de LEIDO antes de enviarlo a CPU: h014G
+[INFO] 17:02:04:965 Memoria/(51069:51072): [KERNEL] Solcitud de creacion de segmento
+[INFO] 17:02:05:006 Memoria/(51069:51072): [KERNEL] PID: 1 - Crear Segmento id: 1 - BASE: 256 - TAMAÑO: 64
+[INFO] 17:02:05:007 Memoria/(51069:51072): [KERNEL] Solcitud de creacion de segmento
+[INFO] 17:02:05:050 Memoria/(51069:51072): [KERNEL] PID: 1 - Crear Segmento id: 2 - BASE: 320 - TAMAÑO: 64
+[INFO] 17:02:05:094 Memoria/(51069:51072): [KERNEL] Solcitud de creacion de segmento
+[INFO] 17:02:05:138 Memoria/(51069:51072): [KERNEL] PID: 1 - Crear Segmento id: 3 - BASE: 384 - TAMAÑO: 64
+[INFO] 17:02:05:182 Memoria/(51069:51072): [KERNEL] Solcitud de creacion de segmento
+[INFO] 17:02:05:226 Memoria/(51069:51072): [KERNEL] PID: 1 - Crear Segmento id: 4 - BASE: 448 - TAMAÑO: 64
+[INFO] 17:02:05:270 Memoria/(51069:51072): [KERNEL] Solcitud de creacion de segmento
+[INFO] 17:02:05:314 Memoria/(51069:51072): [KERNEL] PID: 1 - Crear Segmento id: 5 - BASE: 512 - TAMAÑO: 64
+[INFO] 17:02:05:358 Memoria/(51069:51072): [KERNEL] Solcitud de creacion de segmento
+[INFO] 17:02:05:402 Memoria/(51069:51072): [KERNEL] PID: 1 - Crear Segmento id: 6 - BASE: 576 - TAMAÑO: 64
+[INFO] 17:02:05:446 Memoria/(51069:51072): [KERNEL] Solcitud de creacion de segmento
+[INFO] 17:02:05:490 Memoria/(51069:51072): [KERNEL] PID: 1 - Crear Segmento id: 7 - BASE: 640 - TAMAÑO: 64
+[INFO] 17:02:05:534 Memoria/(51069:51072): [KERNEL] Solcitud de creacion de segmento
+[INFO] 17:02:05:578 Memoria/(51069:51072): [KERNEL] PID: 1 - Crear Segmento id: 8 - BASE: 704 - TAMAÑO: 64
+[INFO] 17:02:06:623 Memoria/(51069:51070): [CPU] Recibido pedido de MOV_OUT
+[INFO] 17:02:06:623 Memoria/(51069:51070): PID: 1 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 5, Escribir: Ch4u�
+[INFO] 17:02:07:625 Memoria/(51069:51072): [KERNEL] Recibido pedido de Eliminar segmento
+[INFO] 17:02:07:666 Memoria/(51069:51072): [KERNEL] PID: 0 - Eliminar Segmento id: 1 - BASE: 0 - TAMAÑO: 128
+[INFO] 17:02:07:666 Memoria/(51069:51072): Direccion del seg a llenar:128
+[INFO] 17:02:07:666 Memoria/(51069:51072): creo un hueco: base:128 - tam: 128
+[INFO] 17:02:07:666 Memoria/(51069:51070): [CPU] Recibido pedido de MOV_IN
+[INFO] 17:02:07:666 Memoria/(51069:51070): PID: 0 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 17:02:08:666 Memoria/(51069:51070): El valor de LEIDO antes de enviarlo a CPU: Ch4uG
+[INFO] 17:02:08:669 Memoria/(51069:51072): [KERNEL] Solcitud de creacion de segmento
+[INFO] 17:02:08:710 Memoria/(51069:51072): [KERNEL] PID: 1 - Crear Segmento id: 9 - BASE: 768 - TAMAÑO: 64
+[INFO] 17:02:09:711 Memoria/(51069:51070): [CPU] Recibido pedido de MOV_OUT
+[INFO] 17:02:09:711 Memoria/(51069:51070): PID: 1 - N° Segmento: 1, Desplazamiento: 0, Tamanio: 9, Escribir: CoscuWin
+[INFO] 17:02:11:713 Memoria/(51069:51070): [CPU] Recibido pedido de MOV_OUT
+[INFO] 17:02:11:714 Memoria/(51069:51070): PID: 1 - N° Segmento: 8, Desplazamiento: 0, Tamanio: 9, Escribir: GermanNo
+[INFO] 17:02:26:098 Memoria/(51069:51072): [KERNEL] Recibiendo solicitud de segmento para programa 2
+[INFO] 17:02:26:098 Memoria/(51069:51072): [KERNEL] Se crea el proceso <PID> en NEW 2
+[INFO] 17:02:26:098 Memoria/(51069:51072): [KERNEL] Envio de segmento 0 para programa 2
+[INFO] 17:02:26:099 Memoria/(51069:51072): [KERNEL] Solcitud de creacion de segmento
+[ERROR] 17:02:26:142 Memoria/(51069:51072): SOLICITAR COMPACTACION
+[INFO] 17:02:26:142 Memoria/(51069:51072): Solicitud de Compatación
+[WARNING] 17:02:26:142 Memoria/(51069:51072): Tiempo de compactacion: 60000
+[INFO] 17:03:26:142 Memoria/(51069:51072): Segmento encontado PID:1 - Seg. Id:1 - base:256
+[INFO] 17:03:26:143 Memoria/(51069:51072): Nueva direccion del Seg ID: 1  - Dir. Base: 128
+[INFO] 17:03:26:143 Memoria/(51069:51072): Segmento encontado PID:1 - Seg. Id:2 - base:320
+[INFO] 17:03:26:143 Memoria/(51069:51072): Nueva direccion del Seg ID: 2  - Dir. Base: 192
+[INFO] 17:03:26:143 Memoria/(51069:51072): Segmento encontado PID:1 - Seg. Id:3 - base:384
+[INFO] 17:03:26:143 Memoria/(51069:51072): Nueva direccion del Seg ID: 3  - Dir. Base: 256
+[INFO] 17:03:26:143 Memoria/(51069:51072): Segmento encontado PID:1 - Seg. Id:4 - base:448
+[INFO] 17:03:26:143 Memoria/(51069:51072): Nueva direccion del Seg ID: 4  - Dir. Base: 320
+[INFO] 17:03:26:143 Memoria/(51069:51072): Segmento encontado PID:1 - Seg. Id:5 - base:512
+[INFO] 17:03:26:143 Memoria/(51069:51072): Nueva direccion del Seg ID: 5  - Dir. Base: 384
+[INFO] 17:03:26:144 Memoria/(51069:51072): Segmento encontado PID:1 - Seg. Id:6 - base:576
+[INFO] 17:03:26:144 Memoria/(51069:51072): Nueva direccion del Seg ID: 6  - Dir. Base: 448
+[INFO] 17:03:26:144 Memoria/(51069:51072): Segmento encontado PID:1 - Seg. Id:7 - base:640
+[INFO] 17:03:26:144 Memoria/(51069:51072): Nueva direccion del Seg ID: 7  - Dir. Base: 512
+[INFO] 17:03:26:144 Memoria/(51069:51072): Segmento encontado PID:1 - Seg. Id:8 - base:704
+[INFO] 17:03:26:144 Memoria/(51069:51072): Nueva direccion del Seg ID: 8  - Dir. Base: 576
+[INFO] 17:03:26:144 Memoria/(51069:51072): Segmento encontado PID:1 - Seg. Id:9 - base:768
+[INFO] 17:03:26:144 Memoria/(51069:51072): Nueva direccion del Seg ID: 9  - Dir. Base: 640
+[INFO] 17:03:26:144 Memoria/(51069:51072): FIN COMPACTACION
+[INFO] 17:03:26:187 Memoria/(51069:51072): [KERNEL] Solcitud de creacion de segmento
+[INFO] 17:03:26:187 Memoria/(51069:51072): [KERNEL] PID: 2 - Crear Segmento id: 1 - BASE: 704 - TAMAÑO: 256
+[INFO] 17:03:26:230 Memoria/(51069:51070): [CPU] Recibido pedido de MOV_IN
+[INFO] 17:03:26:230 Memoria/(51069:51070): PID: 2 - N° Segmento: 0, Desplazamiento: 12, Tamanio: 4
+[WARNING] 17:03:27:231 Memoria/(51069:51070): El valor de LEIDO antes de enviarlo a CPU: Ch4uG
+[INFO] 17:03:27:233 Memoria/(51069:51070): [CPU] Recibido pedido de MOV_IN
+[INFO] 17:03:27:234 Memoria/(51069:51070): PID: 1 - N° Segmento: 1, Desplazamiento: 0, Tamanio: 8
+[WARNING] 17:03:28:234 Memoria/(51069:51070): El valor de LEIDO antes de enviarlo a CPU: 
+[INFO] 17:03:28:437 Memoria/(51069:51070): Se ha finalizado la conexion
+[INFO] 17:03:28:446 Memoria/(51069:51072): Se ha finalizado la conexion
+[INFO] 17:09:01:230 Memoria/(51069:51071): Se ha finalizado la conexion

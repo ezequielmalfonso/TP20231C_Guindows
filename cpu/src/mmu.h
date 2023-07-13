@@ -24,7 +24,7 @@ int checkSegmentetitonFault(uint32_t desplazamiento, uint32_t n_segmento,PCB_t* 
 void set_registro(char* registro,char* registro_recibido, PCB_t* pcb);
 void parseo_registro(char registro_recibido[20], PCB_t* pcb,int tamanio);
 int calcularTam(char* registro);
-void* leer_registro(char* registro);
+void* leer_registro(char* registro, int tamanio);
 void* traducirAFisica(void* direccion_logica, PCB_t* pcb);
 
 #endif /* MMU_H_ */

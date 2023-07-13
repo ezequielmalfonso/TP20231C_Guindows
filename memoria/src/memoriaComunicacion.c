@@ -211,6 +211,7 @@ static void procesar_cpu(void * void_args) {
     		log_info(logger, "PID: %d - N° Segmento: %d, Desplazamiento: %d, Tamanio: %d", *pid, *num_seg, *desplazamiento1, *tamanio);
     		//log_info(logger, "xPID: %lu - N° Segmento: %lu, Desplazamiento: %lu, Tamanio: %d", *pid, *num_seg, *desplazamiento1, *tamanio);
     		void* leido = leerMemoria(*num_seg, *desplazamiento1, *pid, *tamanio);
+    		log_warning(logger, "El valor de LEIDO antes de enviarlo a CPU: %s", leido);
     		send(cpu_fd, leido, *tamanio, 0);
     		break;
     	case MOV_OUT:

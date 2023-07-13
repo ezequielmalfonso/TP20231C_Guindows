@@ -34,9 +34,10 @@ void mov_out(char* direccion_logica, char* registro,PCB_t* pcb){
 	uint32_t desplazamiento1 = desplazamiento(atoi(direccion_logica));
 		uint32_t n_segmento = num_seg(atoi(direccion_logica));
 		int tamanio = calcularTam(registro);
-		char* escribir = malloc(tamanio);
-		memcpy(escribir,leer_registro(registro),tamanio);
-		escribir[tamanio-1]="\0";
+		log_warning(logger, "Tamanio registro: %d", tamanio );
+		char* escribir = malloc(tamanio+1);
+		memcpy(escribir,leer_registro(registro,tamanio),tamanio);
+		//escribir[tamanio-1]='\0';
 		log_info(logger, "estamos mandando a memoria: %s", escribir);
 		if(checkSegmentetitonFault(desplazamiento1, n_segmento,pcb)){
 			log_error(logger, "segmentation fault");
@@ -61,11 +62,26 @@ int checkSegmentetitonFault(uint32_t desplazamiento, uint32_t n_segmento,PCB_t* 
 }
 
 int calcularTam(char* registro){
+	log_warning(logger, "Registo para calcualr tamaño: %s" , registro );
 	switch(registro[0]){
-	case 'E': return 8;
-	case 'R': return 16;
-	default: return 4;
+	case 'A': log_warning(logger, "Tamanio registro A: ");
+			  return 4;
+	case 'B': log_warning(logger, "Tamanio registro B: ");
+			  return 4;
+	case 'C': log_warning(logger, "Tamanio registro C: ");
+			  return 4;
+	case 'D': log_warning(logger, "Tamanio registro D: ");
+			  return 4;
+	case 'E':
+		      log_warning(logger, "Tamanio registro E: ");
+			  return 8;
+	case 'R':
+		      log_warning(logger, "Tamanio registro R: ");
+		      return 16;
+	default: log_error(logger, "FALLO AL CALCULAR TAMAÑO!!!!");
+	         return 0;
    }
+
 }
 
 void set_registro(char* registro1,char* registro_recibido, PCB_t* pcb){
@@ -118,55 +134,55 @@ void set_registro(char* registro1,char* registro_recibido, PCB_t* pcb){
 
 }
 
-void* leer_registro(char* registro1){
+void* leer_registro(char* registro1, int tamanio){
 	char* registro_recibido=malloc(20);
 	char* registro=strtok(registro1,"\n");
-	log_error(logger,"registro : %s",registro);
-	log_error(logger,"registro AX : %s",regAX);
+	log_error(logger,"registro : %s - Tamanio: %d",registro, tamanio);
+	//log_error(logger,"registro AX : %s",regAX);
 
-	if(!strcmp(registro,"AX")){
-		memcpy(registro_recibido, regAX, sizeof(char) * 4);
+	if(!strcmp(registro,"AX")){   log_error(logger,"registro  : %s",regAX);
+		memcpy(registro_recibido, regAX, tamanio);
+		//registro_recibido[tamanio] = '\0';
+	    log_error(logger,"Valor reg recibiod: %s",registro_recibido);
+	}else if(!strcmp(registro,"BX")){ log_error(logger,"registro  : %s",regBX);
+	    memcpy(registro_recibido, regBX, tamanio);
+	    //registro_recibido[tamanio] = '\0';
+	}else if(!strcmp(registro,"CX")){ log_error(logger,"registro  : %s",regCX);
+	    memcpy(registro_recibido, regCX, tamanio);
+	    //registro_recibido[tamanio] = '\0';
+	}else if(!strcmp(registro,"DX")){ log_error(logger,"registro  : %s",regDX);
+	    memcpy(registro_recibido, regDX, tamanio);
 	    //parseo_registro(registro_recibido, pcb,4);
-	}else if(!strcmp(registro,"BX")){
-
-	    memcpy(registro_recibido, regBX, sizeof(char) * 4);
-	    //parseo_registro(registro_recibido, pcb,4);
-	}else if(!strcmp(registro,"CX")){
-
-	    memcpy(registro_recibido, regCX, sizeof(char) * 4);
-	    //parseo_registro(registro_recibido, pcb,4);
-	}else if(!strcmp(registro,"DX")){
-
-	    memcpy(registro_recibido, regDX, sizeof(char) * 4);
-	    //parseo_registro(registro_recibido, pcb,4);
-	}else if(!strcmp(registro,"EAX")){
-	    memcpy(registro_recibido, regEAX, sizeof(char) * 8);
+	}else if(!strcmp(registro,"EAX")){ log_error(logger,"registro  : %s",regEAX);
+	    memcpy(registro_recibido, regEAX, tamanio);
+	    log_error(logger,"Valor reg recibiod: %s",registro_recibido);
 	    //parseo_registro(registro_recibido, pcb,8);
-	}else if(!strcmp(registro,"EBX")){
-	    memcpy(registro_recibido, regEBX, sizeof(char) * 8);
+	}else if(!strcmp(registro,"EBX")){ log_error(logger,"registro  : %s",regEBX);
+	    memcpy(registro_recibido, regEBX, tamanio);
+	    log_error(logger,"Valor reg recibiod: %s",registro_recibido);
+
+	}else if(!strcmp(registro,"ECX")){ log_error(logger,"registro  : %s",regECX);
+	    memcpy(registro_recibido, regECX, tamanio);
 	    //parseo_registro(registro_recibido, pcb,8);
-	}else if(!strcmp(registro,"ECX")){
-	    memcpy(registro_recibido, regECX, sizeof(char) * 8);
-	    //parseo_registro(registro_recibido, pcb,8);
-	}else if(!strcmp(registro,"EDX")){
-	    memcpy(registro_recibido, regEDX, sizeof(char) * 8);
+	}else if(!strcmp(registro,"EDX")){ log_error(logger,"registro  : %s",regEDX);
+	    memcpy(registro_recibido, regEDX, tamanio);
 	    //parseo_registro(registro_recibido, pcb,16);
-	}else if(!strcmp(registro,"RAX")){
-	    memcpy(registro_recibido, regRAX, sizeof(char) * 16);
+	}else if(!strcmp(registro,"RAX")){ log_error(logger,"registro  : %s",regRAX);
+	    memcpy(registro_recibido, regRAX, tamanio );
 	    //parseo_registro(registro_recibido, pcb,16);
-	}else if(!strcmp(registro,"RBX")){
-	    memcpy(registro_recibido, regRBX, sizeof(char) * 16);
+	}else if(!strcmp(registro,"RBX")){ log_error(logger,"registro  : %s",regRBX);
+	    memcpy(registro_recibido, regRBX, tamanio);
 	    //parseo_registro(registro_recibido, pcb,16);
-	}else if(!strcmp(registro,"RCX")){
-	    memcpy(registro_recibido, regRCX, sizeof(char) * 16);
+	}else if(!strcmp(registro,"RCX")){ log_error(logger,"registro  : %s",regRCX);
+	    memcpy(registro_recibido, regRCX, tamanio);
 	    //parseo_registro(registro_recibido, pcb,16);
-	}else if(!strcmp(registro,"RDX")){
-	    memcpy(registro_recibido, regRDX, sizeof(char) * 16);
+	}else if(!strcmp(registro,"RDX")){ log_error(logger,"registro  : %s",regRDX);
+	    memcpy(registro_recibido, regRDX, tamanio);
 	    //parseo_registro(registro_recibido, pcb,16);
 	}else{
 		log_error(logger, "me fui al else");
 	}
-
+	//registro_recibido[tamanio] = '\0';
 
 	log_info(logger, "Realizado lectura del registro %s con valor %s", registro, registro_recibido);
 	return registro_recibido;
