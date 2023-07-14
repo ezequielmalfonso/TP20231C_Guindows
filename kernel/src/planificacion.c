@@ -396,7 +396,7 @@ void esperar_cpu(){
 										//TODO recorrer tabla de segmentos y enviar delete de cada uno. meterolo dentro del execute_a_exit
 										break;
 				case CREATE_SEGMENT_COMPACTO:
-										//sem_wait(&s_fs_compacta);
+										sem_wait(&s_blocked_fs);
 										log_warning(logger, "SOLICITAR COMPACTACION");
 										op_code cop_make = MAKE_COMPACTATION;
 										//sem_(&s_esperar_cpu);
@@ -427,7 +427,7 @@ void esperar_cpu(){
 										pthread_mutex_lock(&mx_cola_ready);  // TODO hacer mas pruebas
 										send_proceso(cpu_fd, pcb,DISPATCH);
 										pthread_mutex_unlock(&mx_cola_ready);
-										//sem_post(&s_fs_compacta);
+										sem_post(&s_blocked_fs);
 										break;
 
 				}
@@ -878,7 +878,7 @@ void esperar_cpu(){
 
 				// Tabla de archivos del proceso: verifico que el archivo este abierto y actualizo el valor del puntero
 				if(!list_is_empty(pcb->archivos_abiertos)) {	//
-					log_error(logger, "Entro al if");
+					//log_error(logger, "Entro al if");
 					archivoABuscar = strtok(instruccion->parametro1, "\n");	// global
 					bool (*aux3)(void* x) = criterio_nombre_archivo_proceso;	// se puede meter como parametro directamente de alguna forma y no tener que usar aux2
 					t_archivoAbierto* archivoAux2 = NULL;

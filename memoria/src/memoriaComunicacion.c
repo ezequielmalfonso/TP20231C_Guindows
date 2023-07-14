@@ -210,7 +210,7 @@ static void procesar_cpu(void * void_args) {
     		recv_instruccion_memoria(cpu_fd, num_seg, desplazamiento1, pid, tamanio);
     		log_info(logger, "PID: %d - N° Segmento: %d, Desplazamiento: %d, Tamanio: %d", *pid, *num_seg, *desplazamiento1, *tamanio);
     		//log_info(logger, "xPID: %lu - N° Segmento: %lu, Desplazamiento: %lu, Tamanio: %d", *pid, *num_seg, *desplazamiento1, *tamanio);
-    		void* leido = leerMemoria(*num_seg, *desplazamiento1, *pid, *tamanio);
+    		void* leido = leerMemoria(*num_seg, *desplazamiento1, *pid, *tamanio, "CPU");
     		//log_warning(logger, "El valor de LEIDO antes de enviarlo a CPU: %s", leido);
     		send(cpu_fd, leido, *tamanio, 0);
     		break;
@@ -220,9 +220,26 @@ static void procesar_cpu(void * void_args) {
     		void* escribir=malloc(20);
     		recv_escribir_memoria(cpu_fd, num_seg, desplazamiento1, pid, tamanio, escribir);	//OJO que ahora num_seg, desplazamiento y pid son punteros
     		log_info(logger, "PID: %d - N° Segmento: %d, Desplazamiento: %d, Tamanio: %d, Escribir: %s", *pid, *num_seg, *desplazamiento1, *tamanio, escribir);
-    		if(escribirEnMemoria( *num_seg,  *desplazamiento1,  *pid,  *tamanio-1,escribir)){
-    		send(cpu_fd, &cop, sizeof(cop), 0); // hubieran usado op_codes :v
-    				}	// else?
+    		if(escribirEnMemoria( *num_seg,  *desplazamiento1,  *pid,  *tamanio-1,escribir, "CPU")){
+    			send(cpu_fd, &cop, sizeof(cop), 0); // hubieran usado op_codes :v
+    		}	// else?
+    		break;
+    	case BASE:
+
+    		recv_escribir_memoria(cpu_fd, num_seg, desplazamiento1, pid, tamanio, escribir);
+    		t_list* tablaProceso = buscarTabla(*pid);
+			int i=0;
+
+			t_segmento* segmentoAux = list_get(tablaProceso,i);
+			while(*num_seg != segmentoAux->id_segmento && i< list_size(tablaProceso)){//TODO resolver la variable CANT_SEGMENTOS
+				i++;
+				segmentoAux = list_get(tablaProceso,i);
+			}
+			if(segmentoAux==NULL){
+				log_error(logger, "SEGMENTO NO ENCONTRADO");
+			}
+
+    		send(cpu_fd, &segmentoAux->direccion_base, sizeof(uint64_t), MSG_WAITALL);
     		break;
 
     case -1:
@@ -276,7 +293,7 @@ static void procesar_fileSystem(void * void_args) {
     				// y escribir en memoria
 
     				//strcpy(buffer, "probando");
-    				escribirEnMemoria(atoi(seg_desp_pid[0]), atoi(seg_desp_pid[1]), atoi(seg_desp_pid[2]), tamanio, leido);
+    				escribirEnMemoria(atoi(seg_desp_pid[0]), atoi(seg_desp_pid[1]), atoi(seg_desp_pid[2]), tamanio, leido, "FS");
 
     				log_warning(logger, "Buffer a escribir: %s", leido);
           		    op_code cop = MOV_OUT_OK;
@@ -297,12 +314,12 @@ static void procesar_fileSystem(void * void_args) {
 //        		  log_info(logger, "PID: %d - N° Segmento: %d, Desplazamiento: %d, Tamanio: %d", *pid, *num_seg, *desplazamiento1, *tamanio);
 
         		  //log_info(logger, "xPID: %lu - N° Segmento: %lu, Desplazamiento: %lu, Tamanio: %d", *pid, *num_seg, *desplazamiento1, *tamanio);
-        		  leido = leerMemoria(atoi(seg_desp_pid[0]), atoi(seg_desp_pid[1]), atoi(seg_desp_pid[2]), tamanio);
-        		  log_error(logger, "Explote de la dir fisica: Seg: %s - Desp: %s - Pid: %s", seg_desp_pid[0], seg_desp_pid[1], seg_desp_pid[2]);
-        		  log_warning(logger, "Recibimos dir fisica: %s - Tamanio: %d",direccion_fisica, tamanio);
+        		  leido = leerMemoria(atoi(seg_desp_pid[0]), atoi(seg_desp_pid[1]), atoi(seg_desp_pid[2]), tamanio, "FS");
+        		  //log_error(logger, "Explote de la dir fisica: Seg: %s - Desp: %s - Pid: %s", seg_desp_pid[0], seg_desp_pid[1], seg_desp_pid[2]);
+        		  //log_warning(logger, "Recibimos dir fisica: %s - Tamanio: %d",direccion_fisica, tamanio);
 
 
-        		  log_error(logger, "Enviando buffer a FS: %s ", leido);
+        		  //log_error(logger, "Enviando buffer a FS: %s ", leido);
         		  send(cliente_socket, leido, tamanio, MSG_WAITALL);
 
         		  //free(leido);
@@ -374,7 +391,7 @@ void atenderCpu(){
 		recv_instruccion_memoria(cpu_fd, num_seg, desplazamiento1, pid, tamanio);
 		log_info(logger, "PID: %d - N° Segmento: %d, Desplazamiento: %d, Tamanio: %d", *pid, *num_seg, *desplazamiento1, *tamanio);
 		//log_info(logger, "xPID: %lu - N° Segmento: %lu, Desplazamiento: %lu, Tamanio: %d", *pid, *num_seg, *desplazamiento1, *tamanio);
-		void* leido = leerMemoria(*num_seg, *desplazamiento1, *pid, *tamanio);
+		void* leido = leerMemoria(*num_seg, *desplazamiento1, *pid, *tamanio, "CPU");
 		send(cpu_fd, leido, *tamanio, 0);
 		break;
 	case MOV_OUT:
@@ -383,7 +400,7 @@ void atenderCpu(){
 		void* escribir=malloc(20);
 		recv_escribir_memoria(cpu_fd, num_seg, desplazamiento1, pid, tamanio, escribir);	//OJO que ahora num_seg, desplazamiento y pid son punteros
 		log_info(logger, "PID: %d - N° Segmento: %d, Desplazamiento: %d, Tamanio: %d, Escribir: %s", *pid, *num_seg, *desplazamiento1, *tamanio, escribir);
-		if(escribirEnMemoria( *num_seg,  *desplazamiento1,  *pid,  *tamanio-1,escribir)){
+		if(escribirEnMemoria( *num_seg,  *desplazamiento1,  *pid,  *tamanio-1,escribir, "CPU")){
 		send(cpu_fd, &cop, sizeof(cop), 0); // hubieran usado op_codes :v
 				}	// else?
 

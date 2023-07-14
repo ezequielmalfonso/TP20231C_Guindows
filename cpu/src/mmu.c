@@ -15,6 +15,7 @@ int mov_in(char direccion_logica[20], char registro[20], PCB_t* pcb){
 
 	int tamanio = calcularTam(registro);
 	//log_error(logger, "(MOV_IN) PID: %d -TAM REG: %d",pcb->pid, tamanio);
+
 	if(checkSegmentetitonFault(desplazamiento1+tamanio, n_segmento,pcb)){
 		log_error(logger, "PID: %d - SEGMENTATION FAULT", pcb->pid);
 		//op_code codigo = SEGMENTATION_FAULT;
@@ -25,12 +26,21 @@ int mov_in(char direccion_logica[20], char registro[20], PCB_t* pcb){
 	char* registro_recibido= malloc(20);
 	send_pedido_memoria(memoria_fd,n_segmento,desplazamiento1,(pcb->pid),tamanio, MOV_IN);
 	recv(memoria_fd, registro_recibido ,tamanio, MSG_WAITALL);
-	memcpy(registro_recibido+4,"\n",2);
 
-	//log_info(logger,"estamos recibiendo de memoria: %s", registro_recibido);
+
+	memcpy(registro_recibido+4,"\n",2);
+		//log_info(logger,"estamos recibiendo de memoria: %s", registro_recibido);
 	//log_info(logger,"estamos seteando de memoria: %d", tamanio);
 
 	set_registro(registro, registro_recibido, pcb);
+
+	uint64_t base;
+	uint64_t direccion_fisica;
+	send_escribir_memoria(memoria_fd, n_segmento, 0, pcb->pid, "", 0, BASE);
+	recv(memoria_fd, base, sizeof(uint64_t), MSG_WAITALL);
+	direccion_fisica = desplazamiento1+base;
+	log_info(logger, "PID: %d - Acción: LEER - Segmento: %d - Dirección Física: %d - Valor: %s", pcb->pid, n_segmento, direccion_fisica, registro_recibido);
+
 //	log_info(logger,"PID: %d - Ejecutando SET parametro 1: %s parametro 2: %s", pid,instruccion_ejecutar->parametro1,instruccion_ejecutar->parametro2);
 //	bool recv_instruccion(memoria_fd, tam, respuestaMemoria, char* param3);
 //enviar pedido a memoria TODO
@@ -54,6 +64,16 @@ int mov_out(char* direccion_logica, char* registro,PCB_t* pcb){
 			return 0;
 
 		}else{
+
+		uint64_t base;
+		uint64_t direccion_fisica;
+		//log_warning(logger, "Antes del send a memo");
+		send_escribir_memoria(memoria_fd, n_segmento, 0, pcb->pid, "", 0, BASE);
+		recv(memoria_fd, base, sizeof(uint64_t), MSG_WAITALL);
+
+		direccion_fisica = desplazamiento1+base;
+		log_info(logger, "PID: %d - Acción: ESCRIBIR - Segmento: %d - Dirección Física: %d - Valor: %s", pcb->pid, n_segmento, direccion_fisica, escribir);
+
 		send_escribir_memoria(memoria_fd,n_segmento,desplazamiento1,(pcb->pid),escribir,tamanio+1,MOV_OUT);
 		op_code cop;
 		recv(memoria_fd, &cop, sizeof(cop), 0);
@@ -203,16 +223,34 @@ void* leer_registro(char* registro1, int tamanio){
 }
 
 // PARA FILESYSTEM
-void* traducirAFisica(void* direccion_logica, PCB_t* pcb){
+
+void* traducirAFisica(void* direccion_logica, PCB_t* pcb, int tamanio,char* valor, bool leer){
 	uint32_t desplazamiento1 = desplazamiento(direccion_logica);
 	uint32_t n_segmento = num_seg(direccion_logica);
+	uint64_t base;
 
-	if(checkSegmentetitonFault(desplazamiento1, n_segmento,pcb)){
-		log_error(logger, "segmentation fault");
+	send_escribir_memoria(memoria_fd, n_segmento, 0, pcb->pid, "", 0, BASE);
+	recv(memoria_fd, base, sizeof(uint64_t), MSG_WAITALL);
+
+	uint64_t direccion_fisica = desplazamiento1+base;
+
+	if(leer){
+		log_info(logger, "PID: %d - Acción: LEER - Segmento: %d - Dirección Física: %d - Valor: %s", pcb->pid, n_segmento, direccion_fisica, valor);
+	}else{
+		log_info(logger, "PID: %d - Acción: ESCRIBIR - Segmento: %d - Dirección Física: %d - Valor: %s", pcb->pid, n_segmento, direccion_fisica, valor);
 	}
 
-	log_error(logger, "Desp: %d - Seg: %d", desplazamiento1, n_segmento );
-	return string_from_format("%dx%dx%d", n_segmento,desplazamiento1, pcb->pid);
+	if(checkSegmentetitonFault(desplazamiento1+tamanio, n_segmento,pcb)){
+		log_error(logger, "PID: %d - SEGMENTATION FAULT", pcb->pid);
+					//op_code codigo = SEGMENTATION_FAULT;
+					//send_proceso(cliente_socket,pcb,codigo);
+					return "0";
+
+	}else{
+	 	//log_error(logger, "Desp: %d - Seg: %d", desplazamiento1, n_segmento );
+
+	      return string_from_format("%dx%dx%dx%d", n_segmento,desplazamiento1, pcb->pid, base);
+	}
 
 
 }

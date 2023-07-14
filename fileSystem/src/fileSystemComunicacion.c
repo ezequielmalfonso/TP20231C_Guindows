@@ -313,7 +313,9 @@ static void procesar_conexion(void* void_args) {
 
 		 case F_READ:
 			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
-			 log_info(logger, "Se recibio F_READ con parametros Archivo: %s, Tamaño: %s, Direccion Fisica: %s y Posicion: %s", parametro1, strtok(parametro3, "\n"), parametro2, pos);
+			 char** seg_desp_pid_1 =  string_split(parametro2, "x");
+			 int dir_fisica_read = atoi(seg_desp_pid_1[1]) + atoi(seg_desp_pid_1[3]);
+			 log_info(logger, "Se recibio F_READ con parametros Archivo: %s, Tamaño: %s, Direccion Fisica: %d y Posicion: %s", parametro1, strtok(parametro3, "\n"), dir_fisica_read, pos);
 			 int tamanioTotalALeer = atoi(parametro3);
 			 sleep(2);
 			 posicion = atoi(pos);
@@ -412,7 +414,9 @@ static void procesar_conexion(void* void_args) {
 
 		 case F_WRITE:
 			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
-			 log_info(logger, "Se recibio F_WRITE con parametros Archivo: %s, Tamaño: %s, Direccion Fisica: %s y Posicion: %s", parametro1, strtok(parametro3, "\n"), parametro2, pos);
+			 char** seg_desp_pid =  string_split(parametro2, "x");
+			 int dir_fisica = atoi(seg_desp_pid[1]) + atoi(seg_desp_pid[3]);
+			 log_info(logger, "Se recibio F_WRITE con parametros Archivo: %s, Tamaño: %s, Direccion Fisica: %d y Posicion: %s", parametro1, strtok(parametro3, "\n"), dir_fisica, pos);
 			 {
 				 int p = datosFCB(pathArchivo);
 				 if(p == -1) {	// No deberia entrar nunca
@@ -422,7 +426,7 @@ static void procesar_conexion(void* void_args) {
 					break;
 				 }
 			 }
-			 sleep(3);	// borrar
+
 			 posicion = atoi(pos);
 			 int tamanio_a_escribir  = atoi(parametro3);
 			 if(tamanio_a_escribir + posicion > FCB_archivo->tamanio_archivo) {	// Debe entrar en el archivo partiendo de la posicion
@@ -435,7 +439,7 @@ static void procesar_conexion(void* void_args) {
 
 			 //TODO
 			 //send pedido a memoria
-			 log_warning(logger, "Param: %s - Tam: %d", parametro2, tamanio_a_escribir );
+			 //log_warning(logger, "Param: %s - Tam: %d", parametro2, tamanio_a_escribir );
 			 send_fs_memoria(memoria_fd,parametro2,tamanio_a_escribir, MOV_IN);
 
 			 recv(memoria_fd, escribirBuffer, tamanio_a_escribir, MSG_WAITALL);

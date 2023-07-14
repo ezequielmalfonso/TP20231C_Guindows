@@ -76,7 +76,8 @@ typedef enum {
 	F_READ_FAIL,
 	MOV_OUT_OK,
 	MOV_IN_OK,
-	SEGMENTATION_FAULT
+	SEGMENTATION_FAULT,
+	BASE
 	}op_code;
 
 

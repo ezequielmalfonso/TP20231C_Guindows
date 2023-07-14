@@ -42,7 +42,7 @@ t_list* cargarProceso(uint32_t pid);
 void eliminarSegmentoProceso(uint32_t pid, uint32_t sid);
 void agregarHueco(t_segmento* seg);
 bool noHayEspacio(int tam);
-void* leerMemoria(uint32_t id_seg, uint32_t desplazamiento, uint32_t pid, int tam);
+void* leerMemoria(uint32_t id_seg, uint32_t desplazamiento, uint32_t pid, int tam, char* origen);
 void compactacion();
 
 

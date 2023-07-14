@@ -7798,3 +7798,733 @@ ALGORITMO_ASIGNACION: FIRST
 [INFO] 00:03:12:579 Memoria/(79265:79268): Se ha finalizado la conexion
 [INFO] 00:03:13:318 Memoria/(79265:79267): Se ha finalizado la conexion
 [INFO] 00:03:14:054 Memoria/(79265:79266): Se ha finalizado la conexion
+[INFO] 18:07:50:229 Memoria/(81300:81300): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 512
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 30000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 18:07:50:230 Memoria/(81300:81300): Algoritmo FIRST configurado
+[INFO] 18:07:50:230 Memoria/(81300:81300): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 18:07:50:230 Memoria/(81300:81300): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 18:07:51:944 Memoria/(81300:81301): Cliente conectado (a memoria_sv)
+
+[INFO] 18:07:51:944 Memoria/(81300:81301): RESPUESTA AL CONECTAR CPU
+[INFO] 18:07:53:208 Memoria/(81300:81302): Cliente conectado (a memoria_sv)
+
+[INFO] 18:07:53:209 Memoria/(81300:81302): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 18:07:56:208 Memoria/(81300:81303): Cliente conectado (a memoria_sv)
+
+[INFO] 18:07:56:209 Memoria/(81300:81303): RESPUESTA AL CONECTAR KERNEL
+[INFO] 18:08:02:999 Memoria/(81300:81303): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 18:08:02:999 Memoria/(81300:81303): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 18:08:02:999 Memoria/(81300:81303): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 18:08:03:737 Memoria/(81300:81303): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 18:08:03:737 Memoria/(81300:81303): [KERNEL] Se crea el proceso <PID> en NEW 1
+[INFO] 18:08:03:737 Memoria/(81300:81303): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 18:08:04:002 Memoria/(81300:81301): [CPU] Recibido pedido de MOV_OUT
+[INFO] 18:08:04:002 Memoria/(81300:81301): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 17, Escribir: SonicTheHedgehog
+[INFO] 18:08:06:003 Memoria/(81300:81301): [CPU] Recibido pedido de MOV_OUT
+[INFO] 18:08:06:003 Memoria/(81300:81301): PID: 0 - N° Segmento: 0, Desplazamiento: 32, Tamanio: 17, Escribir: SonyPlaystation1
+[INFO] 18:08:08:006 Memoria/(81300:81301): [CPU] Recibido pedido de MOV_OUT
+[INFO] 18:08:08:006 Memoria/(81300:81301): PID: 0 - N° Segmento: 0, Desplazamiento: 48, Tamanio: 17, Escribir: SonyPlaystation2
+[INFO] 18:08:10:008 Memoria/(81300:81301): [CPU] Recibido pedido de MOV_OUT
+[INFO] 18:08:10:009 Memoria/(81300:81301): PID: 0 - N° Segmento: 0, Desplazamiento: 64, Tamanio: 17, Escribir: SonyPlaystation3
+[INFO] 18:08:12:010 Memoria/(81300:81301): [CPU] Recibido pedido de MOV_OUT
+[INFO] 18:08:12:010 Memoria/(81300:81301): PID: 0 - N° Segmento: 0, Desplazamiento: 80, Tamanio: 17, Escribir: SonyPlaystation4
+[INFO] 18:08:14:012 Memoria/(81300:81301): [CPU] Recibido pedido de MOV_OUT
+[INFO] 18:08:14:012 Memoria/(81300:81301): PID: 0 - N° Segmento: 0, Desplazamiento: 96, Tamanio: 17, Escribir: SonyPlaystation5
+[INFO] 18:08:15:020 Memoria/(81300:81303): [KERNEL] Solcitud de creacion de segmento
+[INFO] 18:08:15:061 Memoria/(81300:81303): [KERNEL] PID: 1 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 64
+[INFO] 18:08:15:062 Memoria/(81300:81303): [KERNEL] Solcitud de creacion de segmento
+[INFO] 18:08:15:106 Memoria/(81300:81303): [KERNEL] PID: 1 - Crear Segmento id: 2 - BASE: 192 - TAMAÑO: 64
+[INFO] 18:08:15:150 Memoria/(81300:81303): [KERNEL] Solcitud de creacion de segmento
+[INFO] 18:08:15:193 Memoria/(81300:81303): [KERNEL] PID: 1 - Crear Segmento id: 3 - BASE: 256 - TAMAÑO: 64
+[INFO] 18:08:15:238 Memoria/(81300:81303): [KERNEL] Solcitud de creacion de segmento
+[INFO] 18:08:15:282 Memoria/(81300:81303): [KERNEL] PID: 1 - Crear Segmento id: 4 - BASE: 320 - TAMAÑO: 64
+[INFO] 18:08:15:326 Memoria/(81300:81303): [KERNEL] Solcitud de creacion de segmento
+[INFO] 18:08:15:369 Memoria/(81300:81303): [KERNEL] PID: 1 - Crear Segmento id: 5 - BASE: 384 - TAMAÑO: 128
+[INFO] 18:08:15:414 Memoria/(81300:81303): [KERNEL] Recibido pedido de Eliminar segmento
+[INFO] 18:08:15:458 Memoria/(81300:81303): [KERNEL] PID: 1 - Eliminar Segmento id: 2 - BASE: 192 - TAMAÑO: 64
+[INFO] 18:08:15:458 Memoria/(81300:81303): Direccion del seg a llenar:192
+[INFO] 18:08:15:458 Memoria/(81300:81303): creo un hueco: base:192 - tam: 64
+[INFO] 18:08:15:458 Memoria/(81300:81303): [KERNEL] Recibido pedido de Eliminar segmento
+[INFO] 18:08:15:501 Memoria/(81300:81303): [KERNEL] PID: 1 - Eliminar Segmento id: 4 - BASE: 320 - TAMAÑO: 64
+[INFO] 18:08:15:501 Memoria/(81300:81303): Direccion del seg a llenar:320
+[INFO] 18:08:15:501 Memoria/(81300:81303): creo un hueco: base:320 - tam: 64
+[INFO] 18:08:15:501 Memoria/(81300:81303): [KERNEL] Solcitud de creacion de segmento
+[INFO] 18:08:18:020 Memoria/(81300:81302): [FS] Recibo MOV_IN
+[ERROR] 18:08:19:021 Memoria/(81300:81302): Explote de la dir fisica: Seg: 0 - Desp: 32 - Pid: 0
+[WARNING] 18:08:19:021 Memoria/(81300:81302): Recibimos dir fisica: 0x32x0 - Tamanio: 80
+[ERROR] 18:08:19:021 Memoria/(81300:81302): Enviando buffer a FS: SonyPlaystation1SonyPlaystation2SonyPlaystation3SonyPlaystation4SonyPlaystation5 
+[ERROR] 18:08:19:040 Memoria/(81300:81303): SOLICITAR COMPACTACION
+[WARNING] 18:08:19:040 Memoria/(81300:81303): Tiempo de compactacion: 30000
+[INFO] 18:08:49:041 Memoria/(81300:81303): Segmento encontado PID:1 - Seg. Id:3 - base:256
+[INFO] 18:08:49:041 Memoria/(81300:81303): Nueva direccion del Seg ID: 3  - Dir. Base: 192
+[INFO] 18:08:49:041 Memoria/(81300:81303): Segmento encontado PID:1 - Seg. Id:5 - base:384
+[INFO] 18:08:49:041 Memoria/(81300:81303): Nueva direccion del Seg ID: 5  - Dir. Base: 256
+[INFO] 18:08:49:041 Memoria/(81300:81303): FIN COMPACTACION
+[INFO] 18:08:49:042 Memoria/(81300:81303): [KERNEL] Solcitud de creacion de segmento
+[INFO] 18:08:49:042 Memoria/(81300:81303): [KERNEL] PID: 1 - Crear Segmento id: 6 - BASE: 384 - TAMAÑO: 128
+[INFO] 18:08:52:096 Memoria/(81300:81302): [FS] Recibo MOV_IN
+[ERROR] 18:08:53:096 Memoria/(81300:81302): Explote de la dir fisica: Seg: 0 - Desp: 0 - Pid: 0
+[WARNING] 18:08:53:096 Memoria/(81300:81302): Recibimos dir fisica: 0x0x0 - Tamanio: 16
+[ERROR] 18:08:53:096 Memoria/(81300:81302): Enviando buffer a FS: SonicTheHedgehog 
+[INFO] 18:15:02:205 Memoria/(81300:81303): Se ha finalizado la conexion
+[INFO] 18:15:03:000 Memoria/(81300:81302): Se ha finalizado la conexion
+[INFO] 18:15:03:708 Memoria/(81300:81301): Se ha finalizado la conexion
+[INFO] 18:15:08:399 Memoria/(81353:81353): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 512
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 30000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 18:15:08:400 Memoria/(81353:81353): Algoritmo FIRST configurado
+[INFO] 18:15:08:400 Memoria/(81353:81353): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 18:15:08:401 Memoria/(81353:81353): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 18:15:10:129 Memoria/(81353:81354): Cliente conectado (a memoria_sv)
+
+[INFO] 18:15:10:129 Memoria/(81353:81354): RESPUESTA AL CONECTAR CPU
+[INFO] 18:15:11:355 Memoria/(81353:81355): Cliente conectado (a memoria_sv)
+
+[INFO] 18:15:11:355 Memoria/(81353:81355): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 18:15:12:754 Memoria/(81353:81356): Cliente conectado (a memoria_sv)
+
+[INFO] 18:15:12:754 Memoria/(81353:81356): RESPUESTA AL CONECTAR KERNEL
+[INFO] 18:15:28:210 Memoria/(81353:81356): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 18:15:28:211 Memoria/(81353:81356): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 18:15:28:211 Memoria/(81353:81356): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 18:15:28:730 Memoria/(81353:81356): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 18:15:28:730 Memoria/(81353:81356): [KERNEL] Se crea el proceso <PID> en NEW 1
+[INFO] 18:15:28:730 Memoria/(81353:81356): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 18:15:29:301 Memoria/(81353:81356): [KERNEL] Recibiendo solicitud de segmento para programa 2
+[INFO] 18:15:29:301 Memoria/(81353:81356): [KERNEL] Se crea el proceso <PID> en NEW 2
+[INFO] 18:15:29:301 Memoria/(81353:81356): [KERNEL] Envio de segmento 0 para programa 2
+[INFO] 18:15:29:929 Memoria/(81353:81356): [KERNEL] Recibiendo solicitud de segmento para programa 3
+[INFO] 18:15:29:929 Memoria/(81353:81356): [KERNEL] Se crea el proceso <PID> en NEW 3
+[INFO] 18:15:29:929 Memoria/(81353:81356): [KERNEL] Envio de segmento 0 para programa 3
+[INFO] 18:15:45:232 Memoria/(81353:81355): [FS] Recibo MOV_OUT
+[WARNING] 18:15:45:232 Memoria/(81353:81355): Recibimos dir fisica: 0x16x0 - Tamanio: 16
+[WARNING] 18:15:46:232 Memoria/(81353:81355): Buffer a escribir: SonicTheHedgehogOUT
+[INFO] 18:15:46:234 Memoria/(81353:81354): [CPU] Recibido pedido de MOV_IN
+[INFO] 18:15:46:234 Memoria/(81353:81354): PID: 0 - N° Segmento: 0, Desplazamiento: 16, Tamanio: 16
+[INFO] 18:16:04:255 Memoria/(81353:81355): [FS] Recibo MOV_OUT
+[WARNING] 18:16:04:255 Memoria/(81353:81355): Recibimos dir fisica: 0x16x1 - Tamanio: 16
+[WARNING] 18:16:05:255 Memoria/(81353:81355): Buffer a escribir: SonicTheHedgehogOUT
+[INFO] 18:16:05:256 Memoria/(81353:81354): [CPU] Recibido pedido de MOV_IN
+[INFO] 18:16:05:256 Memoria/(81353:81354): PID: 1 - N° Segmento: 0, Desplazamiento: 16, Tamanio: 16
+[INFO] 18:16:23:278 Memoria/(81353:81355): [FS] Recibo MOV_OUT
+[WARNING] 18:16:23:278 Memoria/(81353:81355): Recibimos dir fisica: 0x16x2 - Tamanio: 16
+[WARNING] 18:16:24:279 Memoria/(81353:81355): Buffer a escribir: SonicTheHedgehogOUT
+[INFO] 18:16:24:280 Memoria/(81353:81354): [CPU] Recibido pedido de MOV_IN
+[INFO] 18:16:24:280 Memoria/(81353:81354): PID: 2 - N° Segmento: 0, Desplazamiento: 16, Tamanio: 16
+[INFO] 18:16:42:302 Memoria/(81353:81355): [FS] Recibo MOV_OUT
+[WARNING] 18:16:42:302 Memoria/(81353:81355): Recibimos dir fisica: 0x16x3 - Tamanio: 16
+[WARNING] 18:16:43:303 Memoria/(81353:81355): Buffer a escribir: SonicTheHedgehogOUT
+[INFO] 18:16:43:303 Memoria/(81353:81354): [CPU] Recibido pedido de MOV_IN
+[INFO] 18:16:43:303 Memoria/(81353:81354): PID: 3 - N° Segmento: 0, Desplazamiento: 16, Tamanio: 16
+[INFO] 18:23:09:056 Memoria/(81353:81355): Se ha finalizado la conexion
+[INFO] 18:23:10:415 Memoria/(81353:81354): Se ha finalizado la conexion
+[INFO] 18:29:57:029 Memoria/(81550:81550): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 512
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 30000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 18:29:57:031 Memoria/(81550:81550): Algoritmo FIRST configurado
+[INFO] 18:29:57:031 Memoria/(81550:81550): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 18:29:57:031 Memoria/(81550:81550): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 18:29:58:084 Memoria/(81550:81551): Cliente conectado (a memoria_sv)
+
+[INFO] 18:29:58:085 Memoria/(81550:81551): RESPUESTA AL CONECTAR CPU
+[INFO] 18:30:01:180 Memoria/(81550:81552): Cliente conectado (a memoria_sv)
+
+[INFO] 18:30:01:181 Memoria/(81550:81552): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 18:30:03:233 Memoria/(81550:81553): Cliente conectado (a memoria_sv)
+
+[INFO] 18:30:03:234 Memoria/(81550:81553): RESPUESTA AL CONECTAR KERNEL
+[INFO] 18:30:10:086 Memoria/(81550:81553): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 18:30:10:086 Memoria/(81550:81553): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 18:30:10:086 Memoria/(81550:81553): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 18:30:10:814 Memoria/(81550:81553): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 18:30:10:814 Memoria/(81550:81553): [KERNEL] Se crea el proceso <PID> en NEW 1
+[INFO] 18:30:10:814 Memoria/(81550:81553): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 18:30:11:090 Memoria/(81550:81551): [CPU] Recibido pedido de MOV_OUT
+[INFO] 18:30:11:090 Memoria/(81550:81551): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 17, Escribir: SonicTheHedgehog
+[INFO] 18:30:13:091 Memoria/(81550:81551): [CPU] Recibido pedido de MOV_OUT
+[INFO] 18:30:13:091 Memoria/(81550:81551): PID: 0 - N° Segmento: 0, Desplazamiento: 32, Tamanio: 17, Escribir: SonyPlaystation1
+[INFO] 18:30:15:093 Memoria/(81550:81551): [CPU] Recibido pedido de MOV_OUT
+[INFO] 18:30:15:094 Memoria/(81550:81551): PID: 0 - N° Segmento: 0, Desplazamiento: 48, Tamanio: 17, Escribir: SonyPlaystation2
+[INFO] 18:30:17:095 Memoria/(81550:81551): [CPU] Recibido pedido de MOV_OUT
+[INFO] 18:30:17:095 Memoria/(81550:81551): PID: 0 - N° Segmento: 0, Desplazamiento: 64, Tamanio: 17, Escribir: SonyPlaystation3
+[INFO] 18:30:19:097 Memoria/(81550:81551): [CPU] Recibido pedido de MOV_OUT
+[INFO] 18:30:19:097 Memoria/(81550:81551): PID: 0 - N° Segmento: 0, Desplazamiento: 80, Tamanio: 17, Escribir: SonyPlaystation4
+[INFO] 18:30:21:100 Memoria/(81550:81551): [CPU] Recibido pedido de MOV_OUT
+[INFO] 18:30:21:100 Memoria/(81550:81551): PID: 0 - N° Segmento: 0, Desplazamiento: 96, Tamanio: 17, Escribir: SonyPlaystation5
+[INFO] 18:30:52:126 Memoria/(81550:81553): [KERNEL] Solcitud de creacion de segmento
+[INFO] 18:30:52:169 Memoria/(81550:81553): [KERNEL] PID: 1 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 64
+[INFO] 18:30:52:170 Memoria/(81550:81553): [KERNEL] Solcitud de creacion de segmento
+[INFO] 18:30:52:214 Memoria/(81550:81553): [KERNEL] PID: 1 - Crear Segmento id: 2 - BASE: 192 - TAMAÑO: 64
+[INFO] 18:30:52:257 Memoria/(81550:81553): [KERNEL] Solcitud de creacion de segmento
+[INFO] 18:30:52:301 Memoria/(81550:81553): [KERNEL] PID: 1 - Crear Segmento id: 3 - BASE: 256 - TAMAÑO: 64
+[INFO] 18:30:52:346 Memoria/(81550:81553): [KERNEL] Solcitud de creacion de segmento
+[INFO] 18:30:52:390 Memoria/(81550:81553): [KERNEL] PID: 1 - Crear Segmento id: 4 - BASE: 320 - TAMAÑO: 64
+[INFO] 18:30:52:434 Memoria/(81550:81553): [KERNEL] Solcitud de creacion de segmento
+[INFO] 18:30:52:477 Memoria/(81550:81553): [KERNEL] PID: 1 - Crear Segmento id: 5 - BASE: 384 - TAMAÑO: 128
+[INFO] 18:30:52:522 Memoria/(81550:81553): [KERNEL] Recibido pedido de Eliminar segmento
+[INFO] 18:30:52:565 Memoria/(81550:81553): [KERNEL] PID: 1 - Eliminar Segmento id: 2 - BASE: 192 - TAMAÑO: 64
+[INFO] 18:30:52:565 Memoria/(81550:81553): Direccion del seg a llenar:192
+[INFO] 18:30:52:565 Memoria/(81550:81553): creo un hueco: base:192 - tam: 64
+[INFO] 18:30:52:566 Memoria/(81550:81553): [KERNEL] Recibido pedido de Eliminar segmento
+[INFO] 18:30:52:610 Memoria/(81550:81553): [KERNEL] PID: 1 - Eliminar Segmento id: 4 - BASE: 320 - TAMAÑO: 64
+[INFO] 18:30:52:610 Memoria/(81550:81553): Direccion del seg a llenar:320
+[INFO] 18:30:52:610 Memoria/(81550:81553): creo un hueco: base:320 - tam: 64
+[INFO] 18:30:52:610 Memoria/(81550:81553): [KERNEL] Solcitud de creacion de segmento
+[INFO] 18:30:55:126 Memoria/(81550:81552): [FS] Recibo MOV_IN
+[ERROR] 18:30:56:127 Memoria/(81550:81552): Explote de la dir fisica: Seg: 0 - Desp: 32 - Pid: 0
+[WARNING] 18:30:56:127 Memoria/(81550:81552): Recibimos dir fisica: 0x32x0 - Tamanio: 80
+[ERROR] 18:30:56:127 Memoria/(81550:81552): Enviando buffer a FS: SonyPlaystation1SonyPlaystation2SonyPlaystation3SonyPlaystation4SonyPlaystation5 
+[ERROR] 18:30:56:149 Memoria/(81550:81553): SOLICITAR COMPACTACION
+[WARNING] 18:30:56:149 Memoria/(81550:81553): Tiempo de compactacion: 30000
+[INFO] 18:31:26:150 Memoria/(81550:81553): Segmento encontado PID:1 - Seg. Id:3 - base:256
+[INFO] 18:31:26:150 Memoria/(81550:81553): Nueva direccion del Seg ID: 3  - Dir. Base: 192
+[INFO] 18:31:26:150 Memoria/(81550:81553): Segmento encontado PID:1 - Seg. Id:5 - base:384
+[INFO] 18:31:26:151 Memoria/(81550:81553): Nueva direccion del Seg ID: 5  - Dir. Base: 256
+[INFO] 18:31:26:151 Memoria/(81550:81553): FIN COMPACTACION
+[INFO] 18:31:26:152 Memoria/(81550:81553): [KERNEL] Solcitud de creacion de segmento
+[INFO] 18:31:26:152 Memoria/(81550:81553): [KERNEL] PID: 1 - Crear Segmento id: 6 - BASE: 384 - TAMAÑO: 128
+[INFO] 18:31:29:221 Memoria/(81550:81552): [FS] Recibo MOV_IN
+[ERROR] 18:31:30:222 Memoria/(81550:81552): Explote de la dir fisica: Seg: 0 - Desp: 0 - Pid: 0
+[WARNING] 18:31:30:222 Memoria/(81550:81552): Recibimos dir fisica: 0x0x0 - Tamanio: 16
+[ERROR] 18:31:30:222 Memoria/(81550:81552): Enviando buffer a FS: SonicTheHedgehog 
+[INFO] 18:37:37:220 Memoria/(81550:81553): Se ha finalizado la conexion
+[INFO] 18:37:37:972 Memoria/(81550:81552): Se ha finalizado la conexion
+[INFO] 18:37:38:947 Memoria/(81550:81551): Se ha finalizado la conexion
+[INFO] 18:37:51:022 Memoria/(81592:81592): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 512
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 30000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 18:37:51:023 Memoria/(81592:81592): Algoritmo FIRST configurado
+[INFO] 18:37:51:023 Memoria/(81592:81592): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 18:37:51:024 Memoria/(81592:81592): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 18:37:52:552 Memoria/(81592:81593): Cliente conectado (a memoria_sv)
+
+[INFO] 18:37:52:552 Memoria/(81592:81593): RESPUESTA AL CONECTAR CPU
+[INFO] 18:37:54:798 Memoria/(81592:81594): Cliente conectado (a memoria_sv)
+
+[INFO] 18:37:54:799 Memoria/(81592:81594): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 18:37:56:557 Memoria/(81592:81595): Cliente conectado (a memoria_sv)
+
+[INFO] 18:37:56:557 Memoria/(81592:81595): RESPUESTA AL CONECTAR KERNEL
+[INFO] 18:38:08:177 Memoria/(81592:81595): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 18:38:08:177 Memoria/(81592:81595): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 18:38:08:177 Memoria/(81592:81595): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 18:38:08:745 Memoria/(81592:81595): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 18:38:08:745 Memoria/(81592:81595): [KERNEL] Se crea el proceso <PID> en NEW 1
+[INFO] 18:38:08:745 Memoria/(81592:81595): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 18:38:09:465 Memoria/(81592:81595): [KERNEL] Recibiendo solicitud de segmento para programa 2
+[INFO] 18:38:09:465 Memoria/(81592:81595): [KERNEL] Se crea el proceso <PID> en NEW 2
+[INFO] 18:38:09:465 Memoria/(81592:81595): [KERNEL] Envio de segmento 0 para programa 2
+[INFO] 18:38:10:458 Memoria/(81592:81595): [KERNEL] Recibiendo solicitud de segmento para programa 3
+[INFO] 18:38:10:458 Memoria/(81592:81595): [KERNEL] Se crea el proceso <PID> en NEW 3
+[INFO] 18:38:10:458 Memoria/(81592:81595): [KERNEL] Envio de segmento 0 para programa 3
+[INFO] 18:38:25:196 Memoria/(81592:81594): [FS] Recibo MOV_OUT
+[WARNING] 18:38:25:196 Memoria/(81592:81594): Recibimos dir fisica: 0x16x0 - Tamanio: 16
+[WARNING] 18:38:26:197 Memoria/(81592:81594): Buffer a escribir: SonicTheHedgehogOUT
+[INFO] 18:38:26:199 Memoria/(81592:81593): [CPU] Recibido pedido de MOV_IN
+[INFO] 18:38:26:199 Memoria/(81592:81593): PID: 0 - N° Segmento: 0, Desplazamiento: 16, Tamanio: 16
+[INFO] 18:38:44:219 Memoria/(81592:81594): [FS] Recibo MOV_OUT
+[WARNING] 18:38:44:219 Memoria/(81592:81594): Recibimos dir fisica: 0x16x1 - Tamanio: 16
+[WARNING] 18:38:45:219 Memoria/(81592:81594): Buffer a escribir: SonicTheHedgehogOUT
+[INFO] 18:38:45:220 Memoria/(81592:81593): [CPU] Recibido pedido de MOV_IN
+[INFO] 18:38:45:220 Memoria/(81592:81593): PID: 1 - N° Segmento: 0, Desplazamiento: 16, Tamanio: 16
+[INFO] 18:39:03:242 Memoria/(81592:81594): [FS] Recibo MOV_OUT
+[WARNING] 18:39:03:242 Memoria/(81592:81594): Recibimos dir fisica: 0x16x2 - Tamanio: 16
+[WARNING] 18:39:04:242 Memoria/(81592:81594): Buffer a escribir: SonicTheHedgehogOUT
+[INFO] 18:39:04:243 Memoria/(81592:81593): [CPU] Recibido pedido de MOV_IN
+[INFO] 18:39:04:243 Memoria/(81592:81593): PID: 2 - N° Segmento: 0, Desplazamiento: 16, Tamanio: 16
+[INFO] 18:39:22:264 Memoria/(81592:81594): [FS] Recibo MOV_OUT
+[WARNING] 18:39:22:264 Memoria/(81592:81594): Recibimos dir fisica: 0x16x3 - Tamanio: 16
+[WARNING] 18:39:23:264 Memoria/(81592:81594): Buffer a escribir: SonicTheHedgehogOUT
+[INFO] 18:39:23:265 Memoria/(81592:81593): [CPU] Recibido pedido de MOV_IN
+[INFO] 18:39:23:265 Memoria/(81592:81593): PID: 3 - N° Segmento: 0, Desplazamiento: 16, Tamanio: 16
+[INFO] 20:13:21:023 Memoria/(81592:81595): Se ha finalizado la conexion
+[INFO] 20:13:21:678 Memoria/(81592:81594): Se ha finalizado la conexion
+[INFO] 20:13:22:270 Memoria/(81592:81593): Se ha finalizado la conexion
+[INFO] 20:13:40:674 Memoria/(85724:85724): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 512
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 30000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 20:13:40:675 Memoria/(85724:85724): Algoritmo FIRST configurado
+[INFO] 20:13:40:676 Memoria/(85724:85724): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 20:13:40:676 Memoria/(85724:85724): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 20:13:42:747 Memoria/(85724:85725): Cliente conectado (a memoria_sv)
+
+[INFO] 20:13:42:748 Memoria/(85724:85725): RESPUESTA AL CONECTAR CPU
+[INFO] 20:13:44:619 Memoria/(85724:85726): Cliente conectado (a memoria_sv)
+
+[INFO] 20:13:44:622 Memoria/(85724:85726): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 20:13:46:997 Memoria/(85724:85727): Cliente conectado (a memoria_sv)
+
+[INFO] 20:13:46:998 Memoria/(85724:85727): RESPUESTA AL CONECTAR KERNEL
+[INFO] 20:13:52:370 Memoria/(85724:85727): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 20:13:52:370 Memoria/(85724:85727): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 20:13:52:370 Memoria/(85724:85727): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 20:13:52:894 Memoria/(85724:85727): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 20:13:52:894 Memoria/(85724:85727): [KERNEL] Se crea el proceso <PID> en NEW 1
+[INFO] 20:13:52:894 Memoria/(85724:85727): [KERNEL] Envio de segmento 0 para programa 1
+[ERROR] 20:13:53:373 Memoria/(85724:85725): Error en la busqueda de tabla
+[INFO] 20:23:38:796 Memoria/(86069:86069): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 512
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 30000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 20:23:38:798 Memoria/(86069:86069): Algoritmo FIRST configurado
+[INFO] 20:23:38:798 Memoria/(86069:86069): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 20:23:38:798 Memoria/(86069:86069): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 20:23:40:717 Memoria/(86069:86070): Cliente conectado (a memoria_sv)
+
+[INFO] 20:23:40:717 Memoria/(86069:86070): RESPUESTA AL CONECTAR CPU
+[INFO] 20:23:42:385 Memoria/(86069:86071): Cliente conectado (a memoria_sv)
+
+[INFO] 20:23:42:386 Memoria/(86069:86071): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 20:23:44:170 Memoria/(86069:86072): Cliente conectado (a memoria_sv)
+
+[INFO] 20:23:44:170 Memoria/(86069:86072): RESPUESTA AL CONECTAR KERNEL
+[INFO] 20:23:47:160 Memoria/(86069:86072): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 20:23:47:160 Memoria/(86069:86072): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 20:23:47:160 Memoria/(86069:86072): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 20:23:47:833 Memoria/(86069:86072): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 20:23:47:833 Memoria/(86069:86072): [KERNEL] Se crea el proceso <PID> en NEW 1
+[INFO] 20:23:47:833 Memoria/(86069:86072): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 20:24:59:877 Memoria/(86229:86229): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 512
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 30000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 20:24:59:878 Memoria/(86229:86229): Algoritmo FIRST configurado
+[INFO] 20:24:59:878 Memoria/(86229:86229): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 20:24:59:879 Memoria/(86229:86229): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 20:25:01:409 Memoria/(86229:86230): Cliente conectado (a memoria_sv)
+
+[INFO] 20:25:01:410 Memoria/(86229:86230): RESPUESTA AL CONECTAR CPU
+[INFO] 20:25:02:824 Memoria/(86229:86231): Cliente conectado (a memoria_sv)
+
+[INFO] 20:25:02:825 Memoria/(86229:86231): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 20:25:04:144 Memoria/(86229:86232): Cliente conectado (a memoria_sv)
+
+[INFO] 20:25:04:145 Memoria/(86229:86232): RESPUESTA AL CONECTAR KERNEL
+[INFO] 20:25:08:865 Memoria/(86229:86232): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 20:25:08:865 Memoria/(86229:86232): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 20:25:08:865 Memoria/(86229:86232): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 20:25:09:601 Memoria/(86229:86232): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 20:25:09:601 Memoria/(86229:86232): [KERNEL] Se crea el proceso <PID> en NEW 1
+[INFO] 20:25:09:601 Memoria/(86229:86232): [KERNEL] Envio de segmento 0 para programa 1
+[ERROR] 20:25:09:868 Memoria/(86229:86230): BASE
+[INFO] 20:28:03:847 Memoria/(86464:86464): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 512
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 30000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 20:28:03:849 Memoria/(86464:86464): Algoritmo FIRST configurado
+[INFO] 20:28:03:849 Memoria/(86464:86464): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 20:28:03:849 Memoria/(86464:86464): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 20:28:04:695 Memoria/(86464:86465): Cliente conectado (a memoria_sv)
+
+[INFO] 20:28:04:696 Memoria/(86464:86465): RESPUESTA AL CONECTAR CPU
+[INFO] 20:28:05:512 Memoria/(86464:86466): Cliente conectado (a memoria_sv)
+
+[INFO] 20:28:05:513 Memoria/(86464:86466): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 20:28:08:943 Memoria/(86464:86467): Cliente conectado (a memoria_sv)
+
+[INFO] 20:28:08:943 Memoria/(86464:86467): RESPUESTA AL CONECTAR KERNEL
+[INFO] 20:28:12:715 Memoria/(86464:86467): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 20:28:12:715 Memoria/(86464:86467): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 20:28:12:715 Memoria/(86464:86467): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 20:28:13:257 Memoria/(86464:86467): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 20:28:13:257 Memoria/(86464:86467): [KERNEL] Se crea el proceso <PID> en NEW 1
+[INFO] 20:28:13:257 Memoria/(86464:86467): [KERNEL] Envio de segmento 0 para programa 1
+[ERROR] 20:28:13:718 Memoria/(86464:86465): BASE cant segmentos: 1
+[INFO] 20:31:24:271 Memoria/(86640:86640): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 512
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 30000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 20:31:24:271 Memoria/(86640:86640): Algoritmo FIRST configurado
+[INFO] 20:31:24:272 Memoria/(86640:86640): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 20:31:24:272 Memoria/(86640:86640): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 20:31:26:136 Memoria/(86640:86641): Cliente conectado (a memoria_sv)
+
+[INFO] 20:31:26:137 Memoria/(86640:86641): RESPUESTA AL CONECTAR CPU
+[INFO] 20:31:28:066 Memoria/(86640:86642): Cliente conectado (a memoria_sv)
+
+[INFO] 20:31:28:067 Memoria/(86640:86642): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 20:31:36:147 Memoria/(86640:86643): Cliente conectado (a memoria_sv)
+
+[INFO] 20:31:36:147 Memoria/(86640:86643): RESPUESTA AL CONECTAR KERNEL
+[INFO] 20:31:40:761 Memoria/(86640:86643): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 20:31:40:761 Memoria/(86640:86643): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 20:31:40:761 Memoria/(86640:86643): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 20:31:41:261 Memoria/(86640:86643): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 20:31:41:261 Memoria/(86640:86643): [KERNEL] Se crea el proceso <PID> en NEW 1
+[INFO] 20:31:41:261 Memoria/(86640:86643): [KERNEL] Envio de segmento 0 para programa 1
+[ERROR] 20:31:41:765 Memoria/(86640:86641): BASE cant segmentos: 1
+[ERROR] 20:31:41:765 Memoria/(86640:86641): Antes del send
+[INFO] 20:33:18:190 Memoria/(86640:86641): Se ha finalizado la conexion
+[INFO] 20:33:18:197 Memoria/(86640:86643): Se ha finalizado la conexion
+[INFO] 20:33:25:446 Memoria/(86640:86642): Se ha finalizado la conexion
+[INFO] 20:41:26:789 Memoria/(86971:86971): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 512
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 30000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 20:41:26:791 Memoria/(86971:86971): Algoritmo FIRST configurado
+[INFO] 20:41:26:791 Memoria/(86971:86971): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 20:41:26:791 Memoria/(86971:86971): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 20:41:30:741 Memoria/(86971:86972): Cliente conectado (a memoria_sv)
+
+[INFO] 20:41:30:741 Memoria/(86971:86972): RESPUESTA AL CONECTAR CPU
+[INFO] 20:41:35:343 Memoria/(86971:86973): Cliente conectado (a memoria_sv)
+
+[INFO] 20:41:35:343 Memoria/(86971:86973): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 20:41:39:560 Memoria/(86971:86974): Cliente conectado (a memoria_sv)
+
+[INFO] 20:41:39:561 Memoria/(86971:86974): RESPUESTA AL CONECTAR KERNEL
+[INFO] 20:41:43:951 Memoria/(86971:86974): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 20:41:43:951 Memoria/(86971:86974): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 20:41:43:951 Memoria/(86971:86974): [KERNEL] Envio de segmento 0 para programa 0
+[ERROR] 20:41:43:954 Memoria/(86971:86972): BASE cant segmentos: 1
+[ERROR] 20:41:43:954 Memoria/(86971:86972): Antes del send
+[INFO] 20:41:44:193 Memoria/(86971:86973): Se ha finalizado la conexion
+[INFO] 20:41:44:577 Memoria/(86971:86974): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 20:41:44:577 Memoria/(86971:86974): [KERNEL] Se crea el proceso <PID> en NEW 1
+[INFO] 20:41:44:577 Memoria/(86971:86974): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 20:42:21:489 Memoria/(86971:86974): Se ha finalizado la conexion
+[INFO] 20:42:23:185 Memoria/(86971:86972): Se ha finalizado la conexion
+[INFO] 20:42:27:179 Memoria/(86993:86993): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 512
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 30000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 20:42:27:181 Memoria/(86993:86993): Algoritmo FIRST configurado
+[INFO] 20:42:27:181 Memoria/(86993:86993): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 20:42:27:182 Memoria/(86993:86993): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 20:42:28:333 Memoria/(86993:86994): Cliente conectado (a memoria_sv)
+
+[INFO] 20:42:28:334 Memoria/(86993:86994): RESPUESTA AL CONECTAR CPU
+[INFO] 20:42:29:616 Memoria/(86993:86995): Cliente conectado (a memoria_sv)
+
+[INFO] 20:42:29:616 Memoria/(86993:86995): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 20:42:29:617 Memoria/(86993:86995): Se ha finalizado la conexion
+[INFO] 20:42:34:353 Memoria/(86993:86994): Se ha finalizado la conexion
+[INFO] 20:44:49:535 Memoria/(87251:87251): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 512
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 30000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 20:44:49:537 Memoria/(87251:87251): Algoritmo FIRST configurado
+[INFO] 20:44:49:540 Memoria/(87251:87251): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 20:44:49:540 Memoria/(87251:87251): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 20:44:50:760 Memoria/(87251:87252): Cliente conectado (a memoria_sv)
+
+[INFO] 20:44:50:760 Memoria/(87251:87252): RESPUESTA AL CONECTAR CPU
+[INFO] 20:44:52:828 Memoria/(87251:87253): Cliente conectado (a memoria_sv)
+
+[INFO] 20:44:52:829 Memoria/(87251:87253): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 20:45:06:536 Memoria/(87251:87254): Cliente conectado (a memoria_sv)
+
+[INFO] 20:45:06:537 Memoria/(87251:87254): RESPUESTA AL CONECTAR KERNEL
+[INFO] 20:45:08:656 Memoria/(87251:87254): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 20:45:08:656 Memoria/(87251:87254): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 20:45:08:656 Memoria/(87251:87254): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 20:45:09:369 Memoria/(87251:87254): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 20:45:09:369 Memoria/(87251:87254): [KERNEL] Se crea el proceso <PID> en NEW 1
+[INFO] 20:45:09:369 Memoria/(87251:87254): [KERNEL] Envio de segmento 0 para programa 1
+[ERROR] 20:45:09:658 Memoria/(87251:87252): BASE cant segmentos: 1
+[ERROR] 20:45:09:658 Memoria/(87251:87252): Antes del send
+[INFO] 20:45:09:658 Memoria/(87251:87252): [CPU] Recibido pedido de MOV_OUT
+[INFO] 20:45:09:658 Memoria/(87251:87252): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 17, Escribir: SonicTheHedgehog
+[WARNING] 20:45:10:659 Memoria/(87251:87252): PID: 0 - Acción: ESCRIBIR - Dirección física: 2091671904 - Tamaño: 16 - Origen: CPU
+[ERROR] 20:45:11:660 Memoria/(87251:87252): BASE cant segmentos: 1
+[ERROR] 20:45:11:660 Memoria/(87251:87252): Antes del send
+[INFO] 20:45:11:660 Memoria/(87251:87252): [CPU] Recibido pedido de MOV_OUT
+[INFO] 20:45:11:661 Memoria/(87251:87252): PID: 0 - N° Segmento: 0, Desplazamiento: 32, Tamanio: 17, Escribir: SonyPlaystation1
+[WARNING] 20:45:12:661 Memoria/(87251:87252): PID: 0 - Acción: ESCRIBIR - Dirección física: 2091671936 - Tamaño: 16 - Origen: CPU
+[ERROR] 20:45:13:662 Memoria/(87251:87252): BASE cant segmentos: 1
+[ERROR] 20:45:13:662 Memoria/(87251:87252): Antes del send
+[INFO] 20:45:13:663 Memoria/(87251:87252): [CPU] Recibido pedido de MOV_OUT
+[INFO] 20:45:13:663 Memoria/(87251:87252): PID: 0 - N° Segmento: 0, Desplazamiento: 48, Tamanio: 17, Escribir: SonyPlaystation2
+[WARNING] 20:45:14:663 Memoria/(87251:87252): PID: 0 - Acción: ESCRIBIR - Dirección física: 2091671952 - Tamaño: 16 - Origen: CPU
+[ERROR] 20:45:15:664 Memoria/(87251:87252): BASE cant segmentos: 1
+[ERROR] 20:45:15:664 Memoria/(87251:87252): Antes del send
+[INFO] 20:45:15:664 Memoria/(87251:87252): [CPU] Recibido pedido de MOV_OUT
+[INFO] 20:45:15:664 Memoria/(87251:87252): PID: 0 - N° Segmento: 0, Desplazamiento: 64, Tamanio: 17, Escribir: SonyPlaystation3
+[WARNING] 20:45:16:665 Memoria/(87251:87252): PID: 0 - Acción: ESCRIBIR - Dirección física: 2091671968 - Tamaño: 16 - Origen: CPU
+[ERROR] 20:45:17:666 Memoria/(87251:87252): BASE cant segmentos: 1
+[ERROR] 20:45:17:666 Memoria/(87251:87252): Antes del send
+[INFO] 20:45:17:666 Memoria/(87251:87252): [CPU] Recibido pedido de MOV_OUT
+[INFO] 20:45:17:666 Memoria/(87251:87252): PID: 0 - N° Segmento: 0, Desplazamiento: 80, Tamanio: 17, Escribir: SonyPlaystation4
+[WARNING] 20:45:18:666 Memoria/(87251:87252): PID: 0 - Acción: ESCRIBIR - Dirección física: 2091671984 - Tamaño: 16 - Origen: CPU
+[ERROR] 20:45:19:668 Memoria/(87251:87252): BASE cant segmentos: 1
+[ERROR] 20:45:19:668 Memoria/(87251:87252): Antes del send
+[INFO] 20:45:19:669 Memoria/(87251:87252): [CPU] Recibido pedido de MOV_OUT
+[INFO] 20:45:19:669 Memoria/(87251:87252): PID: 0 - N° Segmento: 0, Desplazamiento: 96, Tamanio: 17, Escribir: SonyPlaystation5
+[WARNING] 20:45:20:669 Memoria/(87251:87252): PID: 0 - Acción: ESCRIBIR - Dirección física: 2091672000 - Tamaño: 16 - Origen: CPU
+[ERROR] 20:45:50:695 Memoria/(87251:87252): BASE cant segmentos: 1
+[ERROR] 20:45:50:695 Memoria/(87251:87252): Antes del send
+[INFO] 20:45:50:696 Memoria/(87251:87253): [FS] Recibo MOV_IN
+[INFO] 20:45:50:696 Memoria/(87251:87254): [KERNEL] Solcitud de creacion de segmento
+[INFO] 20:45:50:737 Memoria/(87251:87254): [KERNEL] PID: 1 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 64
+[INFO] 20:45:50:738 Memoria/(87251:87254): [KERNEL] Solcitud de creacion de segmento
+[INFO] 20:45:50:781 Memoria/(87251:87254): [KERNEL] PID: 1 - Crear Segmento id: 2 - BASE: 192 - TAMAÑO: 64
+[INFO] 20:45:50:825 Memoria/(87251:87254): [KERNEL] Solcitud de creacion de segmento
+[INFO] 20:45:50:870 Memoria/(87251:87254): [KERNEL] PID: 1 - Crear Segmento id: 3 - BASE: 256 - TAMAÑO: 64
+[INFO] 20:45:50:914 Memoria/(87251:87254): [KERNEL] Solcitud de creacion de segmento
+[INFO] 20:45:50:961 Memoria/(87251:87254): [KERNEL] PID: 1 - Crear Segmento id: 4 - BASE: 320 - TAMAÑO: 64
+[INFO] 20:45:51:002 Memoria/(87251:87254): [KERNEL] Solcitud de creacion de segmento
+[INFO] 20:45:51:046 Memoria/(87251:87254): [KERNEL] PID: 1 - Crear Segmento id: 5 - BASE: 384 - TAMAÑO: 128
+[INFO] 20:45:51:090 Memoria/(87251:87254): [KERNEL] Recibido pedido de Eliminar segmento
+[INFO] 20:45:51:133 Memoria/(87251:87254): [KERNEL] PID: 1 - Eliminar Segmento id: 2 - BASE: 192 - TAMAÑO: 64
+[INFO] 20:45:51:133 Memoria/(87251:87254): Direccion del seg a llenar:192
+[INFO] 20:45:51:133 Memoria/(87251:87254): creo un hueco: base:192 - tam: 64
+[INFO] 20:45:51:134 Memoria/(87251:87254): [KERNEL] Recibido pedido de Eliminar segmento
+[INFO] 20:45:51:177 Memoria/(87251:87254): [KERNEL] PID: 1 - Eliminar Segmento id: 4 - BASE: 320 - TAMAÑO: 64
+[INFO] 20:45:51:177 Memoria/(87251:87254): Direccion del seg a llenar:320
+[INFO] 20:45:51:177 Memoria/(87251:87254): creo un hueco: base:320 - tam: 64
+[INFO] 20:45:51:178 Memoria/(87251:87254): [KERNEL] Solcitud de creacion de segmento
+[WARNING] 20:45:51:697 Memoria/(87251:87253): PID: 0 - Acción: LEER - Dirección física: 2091671936 - Tamaño: 80 - Origen: FS
+[ERROR] 20:45:51:698 Memoria/(87251:87253): Explote de la dir fisica: Seg: 0 - Desp: 32 - Pid: 0
+[WARNING] 20:45:51:698 Memoria/(87251:87253): Recibimos dir fisica: 0x32x0x1831108752 - Tamanio: 80
+[ERROR] 20:45:51:698 Memoria/(87251:87253): Enviando buffer a FS: SonyPlaystation1SonyPlaystation2SonyPlaystation3SonyPlaystation4SonyPlaystation5 
+[ERROR] 20:45:51:721 Memoria/(87251:87254): SOLICITAR COMPACTACION
+[WARNING] 20:45:51:722 Memoria/(87251:87254): Tiempo de compactacion: 30000
+[INFO] 20:46:21:722 Memoria/(87251:87254): Segmento encontado PID:1 - Seg. Id:3 - base:256
+[INFO] 20:46:21:722 Memoria/(87251:87254): Nueva direccion del Seg ID: 3  - Dir. Base: 192
+[INFO] 20:46:21:723 Memoria/(87251:87254): Segmento encontado PID:1 - Seg. Id:5 - base:384
+[INFO] 20:46:21:723 Memoria/(87251:87254): Nueva direccion del Seg ID: 5  - Dir. Base: 256
+[INFO] 20:46:21:723 Memoria/(87251:87254): FIN COMPACTACION
+[INFO] 20:46:21:724 Memoria/(87251:87254): [KERNEL] Solcitud de creacion de segmento
+[INFO] 20:46:21:724 Memoria/(87251:87254): [KERNEL] PID: 1 - Crear Segmento id: 6 - BASE: 384 - TAMAÑO: 128
+[ERROR] 20:46:21:788 Memoria/(87251:87252): BASE cant segmentos: 1
+[ERROR] 20:46:21:788 Memoria/(87251:87252): Antes del send
+[INFO] 20:46:21:789 Memoria/(87251:87253): [FS] Recibo MOV_IN
+[WARNING] 20:46:22:789 Memoria/(87251:87253): PID: 0 - Acción: LEER - Dirección física: 2091671904 - Tamaño: 16 - Origen: FS
+[ERROR] 20:46:22:789 Memoria/(87251:87253): Explote de la dir fisica: Seg: 0 - Desp: 0 - Pid: 0
+[WARNING] 20:46:22:789 Memoria/(87251:87253): Recibimos dir fisica: 0x0x0x1831108752 - Tamanio: 16
+[ERROR] 20:46:22:789 Memoria/(87251:87253): Enviando buffer a FS: SonicTheHedgehogIN 
+[INFO] 20:48:45:508 Memoria/(87251:87254): Se ha finalizado la conexion
+[INFO] 20:48:47:900 Memoria/(87251:87253): Se ha finalizado la conexion
+[INFO] 20:48:48:812 Memoria/(87251:87252): Se ha finalizado la conexion
+[INFO] 20:51:18:390 Memoria/(88036:88036): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 512
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 30000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 20:51:18:391 Memoria/(88036:88036): Algoritmo FIRST configurado
+[INFO] 20:51:18:391 Memoria/(88036:88036): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 20:51:18:391 Memoria/(88036:88036): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 20:51:20:809 Memoria/(88036:88037): Cliente conectado (a memoria_sv)
+
+[INFO] 20:51:20:809 Memoria/(88036:88037): RESPUESTA AL CONECTAR CPU
+[INFO] 20:51:22:804 Memoria/(88036:88038): Cliente conectado (a memoria_sv)
+
+[INFO] 20:51:22:804 Memoria/(88036:88038): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 20:51:26:176 Memoria/(88036:88039): Cliente conectado (a memoria_sv)
+
+[INFO] 20:51:26:177 Memoria/(88036:88039): RESPUESTA AL CONECTAR KERNEL
+[INFO] 20:51:30:186 Memoria/(88036:88039): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 20:51:30:186 Memoria/(88036:88039): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 20:51:30:186 Memoria/(88036:88039): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 20:51:30:978 Memoria/(88036:88039): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 20:51:30:979 Memoria/(88036:88039): [KERNEL] Se crea el proceso <PID> en NEW 1
+[INFO] 20:51:30:979 Memoria/(88036:88039): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 20:51:31:189 Memoria/(88036:88037): [CPU] Recibido pedido de MOV_OUT
+[INFO] 20:51:31:189 Memoria/(88036:88037): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 17, Escribir: SonicTheHedgehog
+[WARNING] 20:51:32:190 Memoria/(88036:88037): PID: 0 - Acción: ESCRIBIR - Dirección física: 2119061856 - Tamaño: 16 - Origen: CPU
+[INFO] 20:51:33:192 Memoria/(88036:88037): [CPU] Recibido pedido de MOV_OUT
+[INFO] 20:51:33:192 Memoria/(88036:88037): PID: 0 - N° Segmento: 0, Desplazamiento: 32, Tamanio: 17, Escribir: SonyPlaystation1
+[WARNING] 20:51:34:192 Memoria/(88036:88037): PID: 0 - Acción: ESCRIBIR - Dirección física: 2119061888 - Tamaño: 16 - Origen: CPU
+[INFO] 20:51:35:194 Memoria/(88036:88037): [CPU] Recibido pedido de MOV_OUT
+[INFO] 20:51:35:194 Memoria/(88036:88037): PID: 0 - N° Segmento: 0, Desplazamiento: 48, Tamanio: 17, Escribir: SonyPlaystation2
+[WARNING] 20:51:36:194 Memoria/(88036:88037): PID: 0 - Acción: ESCRIBIR - Dirección física: 2119061904 - Tamaño: 16 - Origen: CPU
+[INFO] 20:51:37:196 Memoria/(88036:88037): [CPU] Recibido pedido de MOV_OUT
+[INFO] 20:51:37:197 Memoria/(88036:88037): PID: 0 - N° Segmento: 0, Desplazamiento: 64, Tamanio: 17, Escribir: SonyPlaystation3
+[WARNING] 20:51:38:197 Memoria/(88036:88037): PID: 0 - Acción: ESCRIBIR - Dirección física: 2119061920 - Tamaño: 16 - Origen: CPU
+[INFO] 20:51:39:199 Memoria/(88036:88037): [CPU] Recibido pedido de MOV_OUT
+[INFO] 20:51:39:199 Memoria/(88036:88037): PID: 0 - N° Segmento: 0, Desplazamiento: 80, Tamanio: 17, Escribir: SonyPlaystation4
+[WARNING] 20:51:40:199 Memoria/(88036:88037): PID: 0 - Acción: ESCRIBIR - Dirección física: 2119061936 - Tamaño: 16 - Origen: CPU
+[INFO] 20:51:41:201 Memoria/(88036:88037): [CPU] Recibido pedido de MOV_OUT
+[INFO] 20:51:41:201 Memoria/(88036:88037): PID: 0 - N° Segmento: 0, Desplazamiento: 96, Tamanio: 17, Escribir: SonyPlaystation5
+[WARNING] 20:51:42:201 Memoria/(88036:88037): PID: 0 - Acción: ESCRIBIR - Dirección física: 2119061952 - Tamaño: 16 - Origen: CPU
+[INFO] 20:51:42:208 Memoria/(88036:88038): [FS] Recibo MOV_IN
+[INFO] 20:51:42:209 Memoria/(88036:88039): [KERNEL] Solcitud de creacion de segmento
+[INFO] 20:51:42:250 Memoria/(88036:88039): [KERNEL] PID: 1 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 64
+[INFO] 20:51:42:251 Memoria/(88036:88039): [KERNEL] Solcitud de creacion de segmento
+[INFO] 20:51:42:294 Memoria/(88036:88039): [KERNEL] PID: 1 - Crear Segmento id: 2 - BASE: 192 - TAMAÑO: 64
+[INFO] 20:51:42:338 Memoria/(88036:88039): [KERNEL] Solcitud de creacion de segmento
+[INFO] 20:51:42:381 Memoria/(88036:88039): [KERNEL] PID: 1 - Crear Segmento id: 3 - BASE: 256 - TAMAÑO: 64
+[INFO] 20:51:42:426 Memoria/(88036:88039): [KERNEL] Solcitud de creacion de segmento
+[INFO] 20:51:42:470 Memoria/(88036:88039): [KERNEL] PID: 1 - Crear Segmento id: 4 - BASE: 320 - TAMAÑO: 64
+[INFO] 20:51:42:513 Memoria/(88036:88039): [KERNEL] Solcitud de creacion de segmento
+[INFO] 20:51:42:557 Memoria/(88036:88039): [KERNEL] PID: 1 - Crear Segmento id: 5 - BASE: 384 - TAMAÑO: 128
+[INFO] 20:51:42:602 Memoria/(88036:88039): [KERNEL] Recibido pedido de Eliminar segmento
+[INFO] 20:51:42:645 Memoria/(88036:88039): [KERNEL] PID: 1 - Eliminar Segmento id: 2 - BASE: 192 - TAMAÑO: 64
+[INFO] 20:51:42:645 Memoria/(88036:88039): Direccion del seg a llenar:192
+[INFO] 20:51:42:645 Memoria/(88036:88039): creo un hueco: base:192 - tam: 64
+[INFO] 20:51:42:646 Memoria/(88036:88039): [KERNEL] Recibido pedido de Eliminar segmento
+[INFO] 20:51:42:689 Memoria/(88036:88039): [KERNEL] PID: 1 - Eliminar Segmento id: 4 - BASE: 320 - TAMAÑO: 64
+[INFO] 20:51:42:689 Memoria/(88036:88039): Direccion del seg a llenar:320
+[INFO] 20:51:42:689 Memoria/(88036:88039): creo un hueco: base:320 - tam: 64
+[INFO] 20:51:42:690 Memoria/(88036:88039): [KERNEL] Solcitud de creacion de segmento
+[WARNING] 20:51:43:209 Memoria/(88036:88038): PID: 0 - Acción: LEER - Dirección física: 2119061888 - Tamaño: 80 - Origen: FS
+[ERROR] 20:51:43:209 Memoria/(88036:88038): Explote de la dir fisica: Seg: 0 - Desp: 32 - Pid: 0
+[WARNING] 20:51:43:209 Memoria/(88036:88038): Recibimos dir fisica: 0x32x0x-1477894144 - Tamanio: 80
+[ERROR] 20:51:43:209 Memoria/(88036:88038): Enviando buffer a FS: SonyPlaystation1SonyPlaystation2SonyPlaystation3SonyPlaystation4SonyPlaystation5 
+[ERROR] 20:51:43:232 Memoria/(88036:88039): SOLICITAR COMPACTACION
+[WARNING] 20:51:43:232 Memoria/(88036:88039): Tiempo de compactacion: 30000
+[INFO] 20:52:13:232 Memoria/(88036:88039): Segmento encontado PID:1 - Seg. Id:3 - base:256
+[INFO] 20:52:13:232 Memoria/(88036:88039): Nueva direccion del Seg ID: 3  - Dir. Base: 192
+[INFO] 20:52:13:233 Memoria/(88036:88039): Segmento encontado PID:1 - Seg. Id:5 - base:384
+[INFO] 20:52:13:233 Memoria/(88036:88039): Nueva direccion del Seg ID: 5  - Dir. Base: 256
+[INFO] 20:52:13:233 Memoria/(88036:88039): FIN COMPACTACION
+[INFO] 20:52:13:234 Memoria/(88036:88039): [KERNEL] Solcitud de creacion de segmento
+[INFO] 20:52:13:235 Memoria/(88036:88039): [KERNEL] PID: 1 - Crear Segmento id: 6 - BASE: 384 - TAMAÑO: 128
+[INFO] 20:52:13:283 Memoria/(88036:88038): [FS] Recibo MOV_IN
+[WARNING] 20:52:14:283 Memoria/(88036:88038): PID: 0 - Acción: LEER - Dirección física: 2119061856 - Tamaño: 16 - Origen: FS
+[ERROR] 20:52:14:284 Memoria/(88036:88038): Explote de la dir fisica: Seg: 0 - Desp: 0 - Pid: 0
+[WARNING] 20:52:14:284 Memoria/(88036:88038): Recibimos dir fisica: 0x0x0x-1477894144 - Tamanio: 16
+[ERROR] 20:52:14:284 Memoria/(88036:88038): Enviando buffer a FS: SonicTheHedgehogIN 
+[INFO] 20:55:04:822 Memoria/(88036:88039): Se ha finalizado la conexion
+[INFO] 20:55:07:149 Memoria/(88036:88038): Se ha finalizado la conexion
+[INFO] 20:56:31:039 Memoria/(88036:88037): Se ha finalizado la conexion
+[INFO] 20:56:34:002 Memoria/(88802:88802): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 512
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 30000
+ALGORITMO_ASIGNACION: FIRST
+
+[INFO] 20:56:34:004 Memoria/(88802:88802): Algoritmo FIRST configurado
+[INFO] 20:56:34:005 Memoria/(88802:88802): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 20:56:34:005 Memoria/(88802:88802): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 20:56:35:050 Memoria/(88802:88803): Cliente conectado (a memoria_sv)
+
+[INFO] 20:56:35:050 Memoria/(88802:88803): RESPUESTA AL CONECTAR CPU
+[INFO] 20:56:35:867 Memoria/(88802:88804): Cliente conectado (a memoria_sv)
+
+[INFO] 20:56:35:867 Memoria/(88802:88804): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 20:56:36:927 Memoria/(88802:88805): Cliente conectado (a memoria_sv)
+
+[INFO] 20:56:36:929 Memoria/(88802:88805): RESPUESTA AL CONECTAR KERNEL
+[INFO] 20:56:43:148 Memoria/(88802:88805): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 20:56:43:148 Memoria/(88802:88805): [KERNEL] Se crea el proceso <PID> en NEW 0
+[INFO] 20:56:43:148 Memoria/(88802:88805): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 20:56:43:693 Memoria/(88802:88805): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 20:56:43:693 Memoria/(88802:88805): [KERNEL] Se crea el proceso <PID> en NEW 1
+[INFO] 20:56:43:694 Memoria/(88802:88805): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 20:56:44:152 Memoria/(88802:88803): [CPU] Recibido pedido de MOV_OUT
+[INFO] 20:56:44:152 Memoria/(88802:88803): PID: 0 - N° Segmento: 0, Desplazamiento: 0, Tamanio: 17, Escribir: SonicTheHedgehog
+[INFO] 20:56:45:153 Memoria/(88802:88803): PID: 0 - Acción: ESCRIBIR - Dirección física: -17215136 - Tamaño: 16 - Origen: CPU
+[INFO] 20:56:46:154 Memoria/(88802:88803): [CPU] Recibido pedido de MOV_OUT
+[INFO] 20:56:46:155 Memoria/(88802:88803): PID: 0 - N° Segmento: 0, Desplazamiento: 32, Tamanio: 17, Escribir: SonyPlaystation1
+[INFO] 20:56:47:155 Memoria/(88802:88803): PID: 0 - Acción: ESCRIBIR - Dirección física: -17215104 - Tamaño: 16 - Origen: CPU
+[INFO] 20:56:48:157 Memoria/(88802:88803): [CPU] Recibido pedido de MOV_OUT
+[INFO] 20:56:48:157 Memoria/(88802:88803): PID: 0 - N° Segmento: 0, Desplazamiento: 48, Tamanio: 17, Escribir: SonyPlaystation2
+[INFO] 20:56:49:157 Memoria/(88802:88803): PID: 0 - Acción: ESCRIBIR - Dirección física: -17215088 - Tamaño: 16 - Origen: CPU
+[INFO] 20:56:50:159 Memoria/(88802:88803): [CPU] Recibido pedido de MOV_OUT
+[INFO] 20:56:50:159 Memoria/(88802:88803): PID: 0 - N° Segmento: 0, Desplazamiento: 64, Tamanio: 17, Escribir: SonyPlaystation3
+[INFO] 20:56:51:159 Memoria/(88802:88803): PID: 0 - Acción: ESCRIBIR - Dirección física: -17215072 - Tamaño: 16 - Origen: CPU
+[INFO] 20:56:52:162 Memoria/(88802:88803): [CPU] Recibido pedido de MOV_OUT
+[INFO] 20:56:52:162 Memoria/(88802:88803): PID: 0 - N° Segmento: 0, Desplazamiento: 80, Tamanio: 17, Escribir: SonyPlaystation4
+[INFO] 20:56:53:162 Memoria/(88802:88803): PID: 0 - Acción: ESCRIBIR - Dirección física: -17215056 - Tamaño: 16 - Origen: CPU
+[INFO] 20:56:54:164 Memoria/(88802:88803): [CPU] Recibido pedido de MOV_OUT
+[INFO] 20:56:54:164 Memoria/(88802:88803): PID: 0 - N° Segmento: 0, Desplazamiento: 96, Tamanio: 17, Escribir: SonyPlaystation5
+[INFO] 20:56:55:165 Memoria/(88802:88803): PID: 0 - Acción: ESCRIBIR - Dirección física: -17215040 - Tamaño: 16 - Origen: CPU
+[INFO] 20:56:55:171 Memoria/(88802:88804): [FS] Recibo MOV_IN
+[INFO] 20:56:55:172 Memoria/(88802:88805): [KERNEL] Solcitud de creacion de segmento
+[INFO] 20:56:55:213 Memoria/(88802:88805): [KERNEL] PID: 1 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 64
+[INFO] 20:56:55:214 Memoria/(88802:88805): [KERNEL] Solcitud de creacion de segmento
+[INFO] 20:56:55:258 Memoria/(88802:88805): [KERNEL] PID: 1 - Crear Segmento id: 2 - BASE: 192 - TAMAÑO: 64
+[INFO] 20:56:55:302 Memoria/(88802:88805): [KERNEL] Solcitud de creacion de segmento
+[INFO] 20:56:55:346 Memoria/(88802:88805): [KERNEL] PID: 1 - Crear Segmento id: 3 - BASE: 256 - TAMAÑO: 64
+[INFO] 20:56:55:390 Memoria/(88802:88805): [KERNEL] Solcitud de creacion de segmento
+[INFO] 20:56:55:434 Memoria/(88802:88805): [KERNEL] PID: 1 - Crear Segmento id: 4 - BASE: 320 - TAMAÑO: 64
+[INFO] 20:56:55:478 Memoria/(88802:88805): [KERNEL] Solcitud de creacion de segmento
+[INFO] 20:56:55:522 Memoria/(88802:88805): [KERNEL] PID: 1 - Crear Segmento id: 5 - BASE: 384 - TAMAÑO: 128
+[INFO] 20:56:55:566 Memoria/(88802:88805): [KERNEL] Recibido pedido de Eliminar segmento
+[INFO] 20:56:55:609 Memoria/(88802:88805): [KERNEL] PID: 1 - Eliminar Segmento id: 2 - BASE: 192 - TAMAÑO: 64
+[INFO] 20:56:55:609 Memoria/(88802:88805): Direccion del seg a llenar:192
+[INFO] 20:56:55:609 Memoria/(88802:88805): creo un hueco: base:192 - tam: 64
+[INFO] 20:56:55:610 Memoria/(88802:88805): [KERNEL] Recibido pedido de Eliminar segmento
+[INFO] 20:56:55:653 Memoria/(88802:88805): [KERNEL] PID: 1 - Eliminar Segmento id: 4 - BASE: 320 - TAMAÑO: 64
+[INFO] 20:56:55:653 Memoria/(88802:88805): Direccion del seg a llenar:320
+[INFO] 20:56:55:653 Memoria/(88802:88805): creo un hueco: base:320 - tam: 64
+[INFO] 20:56:55:654 Memoria/(88802:88805): [KERNEL] Solcitud de creacion de segmento
+[INFO] 20:56:56:171 Memoria/(88802:88804): PID: 0 - Acción: LEER - Dirección física: -17215104 - Tamaño: 80 - Origen: FS
+[ERROR] 20:56:56:193 Memoria/(88802:88805): SOLICITAR COMPACTACION
+[WARNING] 20:56:56:193 Memoria/(88802:88805): Tiempo de compactacion: 30000
+[INFO] 20:57:26:194 Memoria/(88802:88805): Segmento encontado PID:1 - Seg. Id:3 - base:256
+[INFO] 20:57:26:194 Memoria/(88802:88805): Nueva direccion del Seg ID: 3  - Dir. Base: 192
+[INFO] 20:57:26:194 Memoria/(88802:88805): Segmento encontado PID:1 - Seg. Id:5 - base:384
+[INFO] 20:57:26:194 Memoria/(88802:88805): Nueva direccion del Seg ID: 5  - Dir. Base: 256
+[INFO] 20:57:26:194 Memoria/(88802:88805): FIN COMPACTACION
+[INFO] 20:57:26:195 Memoria/(88802:88805): [KERNEL] Solcitud de creacion de segmento
+[INFO] 20:57:26:195 Memoria/(88802:88805): [KERNEL] PID: 1 - Crear Segmento id: 6 - BASE: 384 - TAMAÑO: 128
+[INFO] 20:57:26:249 Memoria/(88802:88804): [FS] Recibo MOV_IN
+[INFO] 20:57:27:249 Memoria/(88802:88804): PID: 0 - Acción: LEER - Dirección física: -17215136 - Tamaño: 16 - Origen: FS
+[INFO] 20:58:01:967 Memoria/(88802:88805): Se ha finalizado la conexion
+[INFO] 20:58:03:022 Memoria/(88802:88804): Se ha finalizado la conexion
+[INFO] 20:58:04:703 Memoria/(88802:88803): Se ha finalizado la conexion

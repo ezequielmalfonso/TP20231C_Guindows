@@ -134,7 +134,8 @@ int execute(INSTRUCCION* instruccion_ejecutar, registros_t registros, uint16_t p
 	}else if(!strcmp(instruccion_ejecutar->comando,"MOV_IN") ){
 		int resp_mov_in;
 		log_info(logger,"PID: %d -  Listo para ejecutar MOV_IN ", pid);
-		mov_in(instruccion_ejecutar->parametro2,instruccion_ejecutar->parametro1, pcb);
+		resp_mov_in = mov_in(instruccion_ejecutar->parametro2,instruccion_ejecutar->parametro1, pcb);
+
 		log_info(logger,"PID: %d - Se ha ejecutado MOV_IN parametro 1: %s parametro 2: %s", pid,instruccion_ejecutar->parametro1,instruccion_ejecutar->parametro2);
 		if (resp_mov_in == 0){
 			op_code codigo = SEGMENTATION_FAULT;
@@ -167,8 +168,8 @@ int execute(INSTRUCCION* instruccion_ejecutar, registros_t registros, uint16_t p
 	}else if(!strcmp(instruccion_ejecutar->comando,"F_WRITE") ){
 
 		log_info(logger,"PID: %d - Listo para ejecutar F_WRITE ", pid);
-		void* instruccion_fisica = traducirAFisica( atoi(instruccion_ejecutar->parametro2), pcb);
-		log_warning(logger, "Dir Fisica: %s ", instruccion_fisica);
+		void* instruccion_fisica = traducirAFisica( atoi(instruccion_ejecutar->parametro2), pcb, atoi(instruccion_ejecutar->parametro2), instruccion_ejecutar->parametro3,  0);
+		//log_warning(logger, "Dir Fisica: %s ", instruccion_fisica);
 		strcpy(instruccion_ejecutar->parametro2, instruccion_fisica);
 
 		return F_WRITE;
@@ -177,8 +178,12 @@ int execute(INSTRUCCION* instruccion_ejecutar, registros_t registros, uint16_t p
 
 		log_info(logger,"PID: %d - Listo para ejecutar F_READ ", pid);
 
-		void* instruccion_fisica = traducirAFisica( atoi(instruccion_ejecutar->parametro2), pcb);
-		log_warning(logger, "Dir Fisica: %s ", instruccion_fisica);
+		void* instruccion_fisica = traducirAFisica( atoi(instruccion_ejecutar->parametro2),pcb, atoi(instruccion_ejecutar->parametro2), instruccion_ejecutar->parametro3, 1);
+		//log_warning(logger, "Dir Fisica: %s ", instruccion_fisica);
+		if(!strcmp(instruccion_fisica, "0")){
+			op_code codigo = SEGMENTATION_FAULT;
+			return codigo;
+		}
 		strcpy(instruccion_ejecutar->parametro2, instruccion_fisica);
 
 		return F_READ;

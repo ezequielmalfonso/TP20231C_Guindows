@@ -25,6 +25,6 @@ void set_registro(char* registro,char* registro_recibido, PCB_t* pcb);
 void parseo_registro(char registro_recibido[20], PCB_t* pcb,int tamanio);
 int calcularTam(char* registro);
 void* leer_registro(char* registro, int tamanio);
-void* traducirAFisica(void* direccion_logica, PCB_t* pcb);
+void* traducirAFisica(void* direccion_logica, PCB_t* pcb, int tamanio, char* valor, bool leer);
 
 #endif /* MMU_H_ */
