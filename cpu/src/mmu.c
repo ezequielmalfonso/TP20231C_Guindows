@@ -9,14 +9,19 @@ uint32_t desplazamiento(int logica){
 	return logica%configuracion->TAM_MAX_SEGMENTO;
 }
 
-void mov_in(char direccion_logica[20], char registro[20], PCB_t* pcb){
+int mov_in(char direccion_logica[20], char registro[20], PCB_t* pcb){
 	uint32_t desplazamiento1 = desplazamiento(atoi(direccion_logica));
 	uint32_t n_segmento = num_seg(atoi(direccion_logica));
 
 	int tamanio = calcularTam(registro);
-	if(checkSegmentetitonFault(desplazamiento1, n_segmento,pcb)){
-		log_error(logger, "segmentation fault");
-	}
+	//log_error(logger, "(MOV_IN) PID: %d -TAM REG: %d",pcb->pid, tamanio);
+	if(checkSegmentetitonFault(desplazamiento1+tamanio, n_segmento,pcb)){
+		log_error(logger, "PID: %d - SEGMENTATION FAULT", pcb->pid);
+		//op_code codigo = SEGMENTATION_FAULT;
+		//send_proceso(cliente_socket,pcb,codigo);
+		return 0;
+
+	}else{
 	char* registro_recibido= malloc(20);
 	send_pedido_memoria(memoria_fd,n_segmento,desplazamiento1,(pcb->pid),tamanio, MOV_IN);
 	recv(memoria_fd, registro_recibido ,tamanio, MSG_WAITALL);
@@ -29,8 +34,10 @@ void mov_in(char direccion_logica[20], char registro[20], PCB_t* pcb){
 //	log_info(logger,"PID: %d - Ejecutando SET parametro 1: %s parametro 2: %s", pid,instruccion_ejecutar->parametro1,instruccion_ejecutar->parametro2);
 //	bool recv_instruccion(memoria_fd, tam, respuestaMemoria, char* param3);
 //enviar pedido a memoria TODO
+	return 1;
+	}
 }
-void mov_out(char* direccion_logica, char* registro,PCB_t* pcb){
+int mov_out(char* direccion_logica, char* registro,PCB_t* pcb){
 	uint32_t desplazamiento1 = desplazamiento(atoi(direccion_logica));
 		uint32_t n_segmento = num_seg(atoi(direccion_logica));
 		int tamanio = calcularTam(registro);
@@ -39,15 +46,22 @@ void mov_out(char* direccion_logica, char* registro,PCB_t* pcb){
 		memcpy(escribir,leer_registro(registro,tamanio),tamanio);
 		//escribir[tamanio-1]='\0';
 		//log_info(logger, "estamos mandando a memoria: %s", escribir);
-		if(checkSegmentetitonFault(desplazamiento1, n_segmento,pcb)){
-			log_error(logger, "segmentation fault");
-		}
+		//log_error(logger, "(MOV_OUT)PID: %d - TAM REG: %d", pcb->pid, tamanio);
+		if(checkSegmentetitonFault(desplazamiento1+tamanio, n_segmento,pcb)){
+			log_error(logger, "PID: %d - SEGMENTATION FAULT", pcb->pid);
+			//op_code codigo = SEGMENTATION_FAULT;
+			//send_proceso(cliente_socket,pcb,codigo);
+			return 0;
+
+		}else{
 		send_escribir_memoria(memoria_fd,n_segmento,desplazamiento1,(pcb->pid),escribir,tamanio+1,MOV_OUT);
 		op_code cop;
 		recv(memoria_fd, &cop, sizeof(cop), 0);
 		//log_info(logger,"se escribio en memoria:  %d",cop);
 		//enviar pedido a memoria TODO
 		free(escribir);
+		return 1;
+		}
 }
 
 int checkSegmentetitonFault(uint32_t desplazamiento, uint32_t n_segmento,PCB_t* pcb){
@@ -58,6 +72,7 @@ int checkSegmentetitonFault(uint32_t desplazamiento, uint32_t n_segmento,PCB_t* 
 		if(segmentoN->id_segmento == n_segmento)
 			break;
 	}
+	//log_warning(logger,"DESP: %d - TAM SEG: %d",desplazamiento, segmentoN->tamanio_segmento );
 	return desplazamiento > segmentoN->tamanio_segmento;
 }
 

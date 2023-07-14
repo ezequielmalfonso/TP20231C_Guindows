@@ -396,7 +396,7 @@ void esperar_cpu(){
 										//TODO recorrer tabla de segmentos y enviar delete de cada uno. meterolo dentro del execute_a_exit
 										break;
 				case CREATE_SEGMENT_COMPACTO:
-										sem_wait(&s_fs_compacta);
+										//sem_wait(&s_fs_compacta);
 										log_warning(logger, "SOLICITAR COMPACTACION");
 										op_code cop_make = MAKE_COMPACTATION;
 										//sem_(&s_esperar_cpu);
@@ -427,7 +427,7 @@ void esperar_cpu(){
 										pthread_mutex_lock(&mx_cola_ready);  // TODO hacer mas pruebas
 										send_proceso(cpu_fd, pcb,DISPATCH);
 										pthread_mutex_unlock(&mx_cola_ready);
-										sem_post(&s_fs_compacta);
+										//sem_post(&s_fs_compacta);
 										break;
 
 				}
@@ -571,6 +571,11 @@ void esperar_cpu(){
 				execute_a_exit(pcb,motivoExit);
 				sem_post(&s_ready_execute);
 				break;
+			case SEGMENTATION_FAULT:	// Cada exit debe incluir estas tres lineas. El motivo seria mejor pasarlo por parametro.
+							motivoExit = "SEGMENTATION_FAULT";
+							execute_a_exit(pcb,motivoExit);
+							sem_post(&s_ready_execute);
+							break;
 
 			case YIELD:
 				 log_info(logger, "PID: %d - Recibi YIELD de CPU lo mandamos al final de la cola READY", pcb->pid);
@@ -941,7 +946,7 @@ void esperar_cpu(){
 				break;
 
 			case F_READ:
-				sem_wait(&s_fs_compacta);
+				//sem_wait(&s_fs_compacta);
 				/*
 				  F_READ (Nombre Archivo, Dirección Lógica, Cantidad de Bytes):
 				  Esta instrucción solicita al Kernel que se lea del archivo indicado,
@@ -1000,7 +1005,7 @@ void esperar_cpu(){
 				break;
 
 			case F_WRITE:
-				sem_wait(&s_fs_compacta);
+				//sem_wait(&s_fs_compacta);
 				log_info(logger, "PID: %d - Recibo pedido de F_WRITE por: %s", pcb->pid, instruccion->parametro1);
 
 				// Tiempos hrrn
@@ -1316,7 +1321,7 @@ void esperar_filesystem(PCB_t* pcb){	// Solo instrucciones con demora
 			char* pids = procesosEnReady(cola_ready);
 			log_info(logger, "Ingreso a Ready algoritmo %s - PIDS: [%s] ", configuracion->ALGORITMO_PLANIFICACION, pids);
 			//sem_post(&s_cont_ready);
-			sem_post(&s_fs_compacta);
+			//sem_post(&s_fs_compacta);
 
 			break;
 		case F_TRUNCATE_FAIL:

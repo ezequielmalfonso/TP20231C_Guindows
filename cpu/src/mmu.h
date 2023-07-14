@@ -17,9 +17,9 @@
 extern int cliente_socket;
 
 uint32_t desplazamiento(int logica);
-void mov_in(char direccion_logica[20], char registro[20], PCB_t* pcb);
+int mov_in(char direccion_logica[20], char registro[20], PCB_t* pcb);
 uint32_t num_seg(int logica);
-void mov_out(char* direccion_logica,char* registro,PCB_t* pcb);
+int mov_out(char* direccion_logica,char* registro,PCB_t* pcb);
 int checkSegmentetitonFault(uint32_t desplazamiento, uint32_t n_segmento,PCB_t* pcb);
 void set_registro(char* registro,char* registro_recibido, PCB_t* pcb);
 void parseo_registro(char registro_recibido[20], PCB_t* pcb,int tamanio);

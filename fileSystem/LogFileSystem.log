@@ -1331,3 +1331,509 @@ NOMBRE_ARCHIVO: Videogames
 [INFO] 21:25:56:748 FileSystem/(75279:75288): Bloque inicial: 0, Offset en este bloque: 0, bloques necesarios totales: 1
 [INFO] 21:25:56:763 FileSystem/(75279:75288): Se ha escrito en el bloque con puntero 320 un tamaño de 16, partiendo de la posicion del archivo 0
 [INFO] 21:28:28:211 FileSystem/(75279:75288): Se ha finalizado la conexion
+[INFO] 22:26:31:383 FileSystem/(76017:76017): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 22:26:31:385 FileSystem/(76017:76017): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 22:26:31:385 FileSystem/(76017:76017): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 22:26:31:385 FileSystem/(76017:76017): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 1024
+[INFO] 22:26:31:386 FileSystem/(76017:76017): Archivo de Bloques Cargado
+[INFO] 22:26:31:386 FileSystem/(76017:76017): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:26:31:387 FileSystem/(76017:76017): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 22:26:34:221 FileSystem/(76017:76017): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 22:26:55:418 FileSystem/(76017:76023): Se recibio F_EXISTS para archivo Consoles
+[INFO] 22:26:55:419 FileSystem/(76017:76023): Se recibio F_OPEN para archivo Consoles
+[INFO] 22:26:55:419 FileSystem/(76017:76023): Se ha abierto el archivo: Consoles
+[INFO] 22:26:55:421 FileSystem/(76017:76023): Se recibio F_TRUNCATE con parametros archivo: Consoles, nuevo tamaño: 256
+
+[INFO] 22:26:55:421 FileSystem/(76017:76023): Cargando fcb /home/utnso/tp-2023-1c-Guindows/fs/fcb/Consoles
+[INFO] 22:26:55:421 FileSystem/(76017:76023): FCB Cargado:		
+NOMBRE_ARCHIVO: Consoles
+		TAMANIO_ARCHIVO: 256
+		PUNTERO_DIRECTO: 0
+		PUNTERO_INDIRECTO: 64
+
+[WARNING] 22:26:55:422 FileSystem/(76017:76023): Bloques libres segun bitmap: 1018 de 1024 (ocupados=6)
+[WARNING] 22:26:55:422 FileSystem/(76017:76023): El archivo ocupa: 4 bloques - Debe pasar a ocupar: 4 bloques
+[WARNING] 22:26:55:423 FileSystem/(76017:76023): Tamaño nuevo: 256
+[INFO] 22:26:55:435 FileSystem/(76017:76023): Se recibio F_WRITE con parametros Archivo: Consoles, Tamaño: 80, Direccion Fisica: 0x32x0 y Posicion: 128
+[INFO] 22:26:55:435 FileSystem/(76017:76023): Cargando fcb /home/utnso/tp-2023-1c-Guindows/fs/fcb/Consoles
+[INFO] 22:26:55:435 FileSystem/(76017:76023): FCB Cargado:		
+NOMBRE_ARCHIVO: Consoles
+		TAMANIO_ARCHIVO: 256
+		PUNTERO_DIRECTO: 0
+		PUNTERO_INDIRECTO: 64
+
+[WARNING] 22:26:58:436 FileSystem/(76017:76023): Param: 0x32x0 - Tam: 80
+[WARNING] 22:27:26:964 FileSystem/(76017:76023): Recibiendo buffer que escribir: SonyPlaystation1SonyPlaystation2SonyPlaystation3SonyPlaystation4SonyPlaystation5
+[INFO] 22:27:26:965 FileSystem/(76017:76023): Bloque inicial: 2, Offset en este bloque: 0, bloques necesarios totales: 2
+[WARNING] 22:27:26:965 FileSystem/(76017:76023): Buscando puntero en offset: 10
+[WARNING] 22:27:26:965 FileSystem/(76017:76023): Se obtuvo la direccion 0: 
+[INFO] 22:27:26:981 FileSystem/(76017:76023): Se ha escrito en el bloque con puntero 0 un tamaño de 64, partiendo de la posicion del archivo 128
+[INFO] 22:27:26:984 FileSystem/(76017:76023): Se recibio F_EXISTS para archivo Videogames
+[INFO] 22:27:26:984 FileSystem/(76017:76023): Se recibio F_OPEN para archivo Videogames
+[INFO] 22:27:26:984 FileSystem/(76017:76023): Se ha abierto el archivo: Videogames
+[INFO] 22:27:26:984 FileSystem/(76017:76023): Se recibio F_TRUNCATE con parametros archivo: Videogames, nuevo tamaño: 64
+
+[INFO] 22:27:26:984 FileSystem/(76017:76023): Cargando fcb /home/utnso/tp-2023-1c-Guindows/fs/fcb/Videogames
+[INFO] 22:27:26:984 FileSystem/(76017:76023): FCB Cargado:		
+NOMBRE_ARCHIVO: Videogames
+		TAMANIO_ARCHIVO: 64
+		PUNTERO_DIRECTO: 320
+		PUNTERO_INDIRECTO: 0
+
+[WARNING] 22:27:26:985 FileSystem/(76017:76023): Bloques libres segun bitmap: 1018 de 1024 (ocupados=6)
+[WARNING] 22:27:26:985 FileSystem/(76017:76023): El archivo ocupa: 1 bloques - Debe pasar a ocupar: 1 bloques
+[WARNING] 22:27:26:985 FileSystem/(76017:76023): Tamaño nuevo: 64
+[INFO] 22:27:26:995 FileSystem/(76017:76023): Se recibio F_WRITE con parametros Archivo: Videogames, Tamaño: 16, Direccion Fisica: 0x0x0 y Posicion: 0
+[INFO] 22:27:26:995 FileSystem/(76017:76023): Cargando fcb /home/utnso/tp-2023-1c-Guindows/fs/fcb/Videogames
+[INFO] 22:27:26:995 FileSystem/(76017:76023): FCB Cargado:		
+NOMBRE_ARCHIVO: Videogames
+		TAMANIO_ARCHIVO: 64
+		PUNTERO_DIRECTO: 320
+		PUNTERO_INDIRECTO: 0
+
+[WARNING] 22:27:29:996 FileSystem/(76017:76023): Param: 0x0x0 - Tam: 16
+[WARNING] 22:27:30:998 FileSystem/(76017:76023): Recibiendo buffer que escribir: SonicTheHedgehog
+[INFO] 22:27:30:998 FileSystem/(76017:76023): Bloque inicial: 0, Offset en este bloque: 0, bloques necesarios totales: 1
+[INFO] 22:27:31:016 FileSystem/(76017:76023): Se ha escrito en el bloque con puntero 320 un tamaño de 16, partiendo de la posicion del archivo 0
+[INFO] 22:35:24:384 FileSystem/(76017:76023): Se ha finalizado la conexion
+[INFO] 22:35:35:528 FileSystem/(76239:76239): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 22:35:35:530 FileSystem/(76239:76239): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 22:35:35:530 FileSystem/(76239:76239): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 22:35:35:530 FileSystem/(76239:76239): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 1024
+[INFO] 22:35:35:530 FileSystem/(76239:76239): Archivo de Bloques Cargado
+[INFO] 22:35:35:532 FileSystem/(76239:76239): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:35:35:532 FileSystem/(76239:76239): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 22:35:37:764 FileSystem/(76239:76239): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 23:02:56:039 FileSystem/(76239:76245): Se ha finalizado la conexion
+[INFO] 23:03:05:317 FileSystem/(76628:76628): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 23:03:05:319 FileSystem/(76628:76628): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 23:03:05:320 FileSystem/(76628:76628): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 23:03:05:320 FileSystem/(76628:76628): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 1024
+[INFO] 23:03:05:320 FileSystem/(76628:76628): Archivo de Bloques Cargado
+[INFO] 23:03:05:321 FileSystem/(76628:76628): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:03:05:321 FileSystem/(76628:76628): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 23:03:07:627 FileSystem/(76628:76628): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 23:07:54:654 FileSystem/(76628:76634): Se ha finalizado la conexion
+[INFO] 23:08:17:566 FileSystem/(76799:76799): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 23:08:17:567 FileSystem/(76799:76799): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 23:08:17:567 FileSystem/(76799:76799): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 23:08:17:568 FileSystem/(76799:76799): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 1024
+[INFO] 23:08:17:568 FileSystem/(76799:76799): Archivo de Bloques Cargado
+[INFO] 23:08:17:568 FileSystem/(76799:76799): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:08:17:569 FileSystem/(76799:76799): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 23:08:19:643 FileSystem/(76799:76799): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 23:11:22:485 FileSystem/(76799:76805): Se ha finalizado la conexion
+[INFO] 23:11:30:527 FileSystem/(76923:76923): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 23:11:30:528 FileSystem/(76923:76923): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 23:11:30:528 FileSystem/(76923:76923): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 23:11:30:528 FileSystem/(76923:76923): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 1024
+[INFO] 23:11:30:529 FileSystem/(76923:76923): Archivo de Bloques Cargado
+[INFO] 23:11:30:529 FileSystem/(76923:76923): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:11:30:530 FileSystem/(76923:76923): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 23:11:33:084 FileSystem/(76923:76923): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 23:13:54:328 FileSystem/(76923:76929): Se ha finalizado la conexion
+[INFO] 23:14:05:696 FileSystem/(77082:77082): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 23:14:05:697 FileSystem/(77082:77082): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 23:14:05:697 FileSystem/(77082:77082): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 23:14:05:697 FileSystem/(77082:77082): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 1024
+[INFO] 23:14:05:698 FileSystem/(77082:77082): Archivo de Bloques Cargado
+[INFO] 23:14:05:698 FileSystem/(77082:77082): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:14:05:699 FileSystem/(77082:77082): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 23:14:07:588 FileSystem/(77082:77082): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 23:22:49:786 FileSystem/(77082:77088): Se ha finalizado la conexion
+[INFO] 23:22:54:897 FileSystem/(77939:77939): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 23:22:54:899 FileSystem/(77939:77939): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 23:22:54:899 FileSystem/(77939:77939): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 23:22:54:899 FileSystem/(77939:77939): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 1024
+[INFO] 23:22:54:899 FileSystem/(77939:77939): Archivo de Bloques Cargado
+[INFO] 23:22:54:900 FileSystem/(77939:77939): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:22:54:900 FileSystem/(77939:77939): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 23:22:55:653 FileSystem/(77939:77939): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 23:23:26:223 FileSystem/(77939:77944): Se ha finalizado la conexion
+[INFO] 23:27:05:817 FileSystem/(78221:78221): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 23:27:05:819 FileSystem/(78221:78221): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 23:27:05:819 FileSystem/(78221:78221): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 23:27:05:819 FileSystem/(78221:78221): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 1024
+[INFO] 23:27:05:820 FileSystem/(78221:78221): Archivo de Bloques Cargado
+[INFO] 23:27:05:820 FileSystem/(78221:78221): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:27:05:821 FileSystem/(78221:78221): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 23:27:06:550 FileSystem/(78221:78221): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 23:27:36:128 FileSystem/(78221:78226): Se ha finalizado la conexion
+[INFO] 23:40:15:949 FileSystem/(78874:78874): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 23:40:15:951 FileSystem/(78874:78874): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 23:40:15:952 FileSystem/(78874:78874): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 23:40:15:952 FileSystem/(78874:78874): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 1024
+[INFO] 23:40:15:952 FileSystem/(78874:78874): Archivo de Bloques Cargado
+[INFO] 23:40:15:953 FileSystem/(78874:78874): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:40:15:953 FileSystem/(78874:78874): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 23:40:17:665 FileSystem/(78874:78874): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 23:47:45:957 FileSystem/(78874:78880): Se ha finalizado la conexion
+[INFO] 23:52:42:246 FileSystem/(78987:78987): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 23:52:42:247 FileSystem/(78987:78987): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 23:52:42:247 FileSystem/(78987:78987): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 23:52:42:247 FileSystem/(78987:78987): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 1024
+[INFO] 23:52:42:248 FileSystem/(78987:78987): Archivo de Bloques Cargado
+[INFO] 23:52:42:248 FileSystem/(78987:78987): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:52:42:249 FileSystem/(78987:78987): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 23:52:42:867 FileSystem/(78987:78987): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 23:53:37:823 FileSystem/(78987:78992): Se ha finalizado la conexion
+[INFO] 23:55:15:871 FileSystem/(79109:79109): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 23:55:15:874 FileSystem/(79109:79109): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 23:55:15:874 FileSystem/(79109:79109): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 23:55:15:874 FileSystem/(79109:79109): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 1024
+[INFO] 23:55:15:875 FileSystem/(79109:79109): Archivo de Bloques Cargado
+[INFO] 23:55:15:875 FileSystem/(79109:79109): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:55:15:876 FileSystem/(79109:79109): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 23:55:18:042 FileSystem/(79109:79109): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 23:56:51:058 FileSystem/(79109:79115): Se ha finalizado la conexion
+[INFO] 23:59:38:743 FileSystem/(79272:79272): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 23:59:38:744 FileSystem/(79272:79272): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 23:59:38:744 FileSystem/(79272:79272): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 23:59:38:745 FileSystem/(79272:79272): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 1024
+[INFO] 23:59:38:745 FileSystem/(79272:79272): Archivo de Bloques Cargado
+[INFO] 23:59:38:746 FileSystem/(79272:79272): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:59:38:746 FileSystem/(79272:79272): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 23:59:40:740 FileSystem/(79272:79272): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 00:00:26:730 FileSystem/(79272:79279): Se recibio F_EXISTS para archivo Consoles
+[INFO] 00:00:26:731 FileSystem/(79272:79279): F_CREATE
+[INFO] 00:00:26:731 FileSystem/(79272:79279): Crear archivo: Consoles
+[INFO] 00:00:26:732 FileSystem/(79272:79279): Se recibio F_OPEN para archivo Consoles
+[INFO] 00:00:26:732 FileSystem/(79272:79279): Se ha abierto el archivo: Consoles
+[INFO] 00:00:26:733 FileSystem/(79272:79279): Se recibio F_TRUNCATE con parametros archivo: Consoles, nuevo tamaño: 256
+
+[INFO] 00:00:26:733 FileSystem/(79272:79279): Cargando fcb /home/utnso/tp-2023-1c-Guindows/fs/fcb/Consoles
+[INFO] 00:00:26:734 FileSystem/(79272:79279): FCB Cargado:		
+NOMBRE_ARCHIVO: Consoles
+		TAMANIO_ARCHIVO: 0
+		PUNTERO_DIRECTO: 0
+		PUNTERO_INDIRECTO: 0
+
+[WARNING] 00:00:26:736 FileSystem/(79272:79279): Bloques libres segun bitmap: 1018 de 1024 (ocupados=6)
+[WARNING] 00:00:26:736 FileSystem/(79272:79279): El archivo ocupa: 0 bloques - Debe pasar a ocupar: 4 bloques
+[INFO] 00:00:26:736 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 00:00:26:737 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 1 - Estado: 1
+[INFO] 00:00:26:737 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 2 - Estado: 1
+[INFO] 00:00:26:737 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 3 - Estado: 1
+[INFO] 00:00:26:737 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 4 - Estado: 1
+[INFO] 00:00:26:738 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 5 - Estado: 1
+[INFO] 00:00:26:738 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 6 - Estado: 0
+[INFO] 00:00:26:738 FileSystem/(79272:79279): Se encontro un bloque en la posicion nro: 6
+[INFO] 00:00:26:754 FileSystem/(79272:79279): Puntero directo asignado: 384
+[INFO] 00:00:26:755 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 00:00:26:755 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 1 - Estado: 1
+[INFO] 00:00:26:755 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 2 - Estado: 1
+[INFO] 00:00:26:755 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 3 - Estado: 1
+[INFO] 00:00:26:755 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 4 - Estado: 1
+[INFO] 00:00:26:755 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 5 - Estado: 1
+[INFO] 00:00:26:755 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 6 - Estado: 1
+[INFO] 00:00:26:756 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 7 - Estado: 0
+[INFO] 00:00:26:757 FileSystem/(79272:79279): Se encontro un bloque en la posicion nro: 7
+[INFO] 00:00:26:757 FileSystem/(79272:79279): Puntero indirecto asignado: 448
+[INFO] 00:00:26:757 FileSystem/(79272:79279): Cargando bloque indirecto con direccion 448
+[INFO] 00:00:41:758 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 00:00:41:760 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 1 - Estado: 1
+[INFO] 00:00:41:760 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 2 - Estado: 1
+[INFO] 00:00:41:760 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 3 - Estado: 1
+[INFO] 00:00:41:761 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 4 - Estado: 1
+[INFO] 00:00:41:761 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 5 - Estado: 1
+[INFO] 00:00:41:761 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 6 - Estado: 1
+[INFO] 00:00:41:762 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 7 - Estado: 1
+[INFO] 00:00:41:762 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 8 - Estado: 0
+[INFO] 00:00:41:762 FileSystem/(79272:79279): Puntero guardado en direccion: 448
+[ERROR] 00:00:41:763 FileSystem/(79272:79279): Dir a escribir : 512 
+[INFO] 00:00:41:763 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 00:00:41:763 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 1 - Estado: 1
+[INFO] 00:00:41:763 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 2 - Estado: 1
+[INFO] 00:00:41:764 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 3 - Estado: 1
+[INFO] 00:00:41:764 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 4 - Estado: 1
+[INFO] 00:00:41:765 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 5 - Estado: 1
+[INFO] 00:00:41:765 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 6 - Estado: 1
+[INFO] 00:00:41:765 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 7 - Estado: 1
+[INFO] 00:00:41:765 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 8 - Estado: 1
+[INFO] 00:00:41:766 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 9 - Estado: 0
+[INFO] 00:00:41:766 FileSystem/(79272:79279): Puntero guardado en direccion: 458
+[ERROR] 00:00:41:766 FileSystem/(79272:79279): Dir a escribir : 576 
+[INFO] 00:00:41:767 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 00:00:41:767 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 1 - Estado: 1
+[INFO] 00:00:41:767 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 2 - Estado: 1
+[INFO] 00:00:41:768 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 3 - Estado: 1
+[INFO] 00:00:41:768 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 4 - Estado: 1
+[INFO] 00:00:41:769 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 5 - Estado: 1
+[INFO] 00:00:41:769 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 6 - Estado: 1
+[INFO] 00:00:41:769 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 7 - Estado: 1
+[INFO] 00:00:41:769 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 8 - Estado: 1
+[INFO] 00:00:41:775 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 9 - Estado: 1
+[INFO] 00:00:41:775 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 10 - Estado: 0
+[INFO] 00:00:41:775 FileSystem/(79272:79279): Puntero guardado en direccion: 468
+[ERROR] 00:00:41:775 FileSystem/(79272:79279): Dir a escribir : 640 
+[INFO] 00:00:41:776 FileSystem/(79272:79279): Sincronizando los cambios en el bloque indirecto
+[WARNING] 00:00:56:779 FileSystem/(79272:79279): Tamaño nuevo: 256
+[INFO] 00:00:56:781 FileSystem/(79272:79279): Se recibio F_WRITE con parametros Archivo: Consoles, Tamaño: 80, Direccion Fisica: 0x32x0 y Posicion: 128
+[INFO] 00:00:56:781 FileSystem/(79272:79279): Cargando fcb /home/utnso/tp-2023-1c-Guindows/fs/fcb/Consoles
+[INFO] 00:00:56:781 FileSystem/(79272:79279): FCB Cargado:		
+NOMBRE_ARCHIVO: Consoles
+		TAMANIO_ARCHIVO: 256
+		PUNTERO_DIRECTO: 384
+		PUNTERO_INDIRECTO: 448
+
+[WARNING] 00:00:59:782 FileSystem/(79272:79279): Param: 0x32x0 - Tam: 80
+[WARNING] 00:01:28:310 FileSystem/(79272:79279): Recibiendo buffer que escribir: SonyPlaystation1SonyPlaystation2SonyPlaystation3SonyPlaystation4SonyPlaystation5
+[INFO] 00:01:28:310 FileSystem/(79272:79279): Bloque inicial: 2, Offset en este bloque: 0, bloques necesarios totales: 2
+[WARNING] 00:01:28:310 FileSystem/(79272:79279): Buscando puntero en offset: 10
+[WARNING] 00:01:28:311 FileSystem/(79272:79279): Se obtuvo la direccion 576: 
+[INFO] 00:01:28:327 FileSystem/(79272:79279): Se ha escrito en el bloque con puntero 576 un tamaño de 64, partiendo de la posicion del archivo 128
+[INFO] 00:01:28:333 FileSystem/(79272:79279): Se recibio F_EXISTS para archivo Videogames
+[INFO] 00:01:28:334 FileSystem/(79272:79279): F_CREATE
+[INFO] 00:01:28:334 FileSystem/(79272:79279): Crear archivo: Videogames
+[INFO] 00:01:28:334 FileSystem/(79272:79279): Se recibio F_OPEN para archivo Videogames
+[INFO] 00:01:28:335 FileSystem/(79272:79279): Se ha abierto el archivo: Videogames
+[INFO] 00:01:28:337 FileSystem/(79272:79279): Se recibio F_TRUNCATE con parametros archivo: Videogames, nuevo tamaño: 64
+
+[INFO] 00:01:28:347 FileSystem/(79272:79279): Cargando fcb /home/utnso/tp-2023-1c-Guindows/fs/fcb/Videogames
+[INFO] 00:01:28:348 FileSystem/(79272:79279): FCB Cargado:		
+NOMBRE_ARCHIVO: Videogames
+		TAMANIO_ARCHIVO: 0
+		PUNTERO_DIRECTO: 0
+		PUNTERO_INDIRECTO: 0
+
+[WARNING] 00:01:28:348 FileSystem/(79272:79279): Bloques libres segun bitmap: 1013 de 1024 (ocupados=11)
+[WARNING] 00:01:28:349 FileSystem/(79272:79279): El archivo ocupa: 0 bloques - Debe pasar a ocupar: 1 bloques
+[INFO] 00:01:28:349 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 00:01:28:349 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 1 - Estado: 1
+[INFO] 00:01:28:349 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 2 - Estado: 1
+[INFO] 00:01:28:349 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 3 - Estado: 1
+[INFO] 00:01:28:349 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 4 - Estado: 1
+[INFO] 00:01:28:349 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 5 - Estado: 1
+[INFO] 00:01:28:349 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 6 - Estado: 1
+[INFO] 00:01:28:349 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 7 - Estado: 1
+[INFO] 00:01:28:349 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 8 - Estado: 1
+[INFO] 00:01:28:350 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 9 - Estado: 1
+[INFO] 00:01:28:350 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 10 - Estado: 1
+[INFO] 00:01:28:350 FileSystem/(79272:79279): Acceso a Bitmap - Bloque: 11 - Estado: 0
+[INFO] 00:01:28:350 FileSystem/(79272:79279): Se encontro un bloque en la posicion nro: 11
+[INFO] 00:01:28:365 FileSystem/(79272:79279): Puntero directo asignado: 704
+[WARNING] 00:01:28:366 FileSystem/(79272:79279): Tamaño nuevo: 64
+[INFO] 00:01:28:367 FileSystem/(79272:79279): Se recibio F_WRITE con parametros Archivo: Videogames, Tamaño: 16, Direccion Fisica: 0x0x0 y Posicion: 0
+[INFO] 00:01:28:367 FileSystem/(79272:79279): Cargando fcb /home/utnso/tp-2023-1c-Guindows/fs/fcb/Videogames
+[INFO] 00:01:28:368 FileSystem/(79272:79279): FCB Cargado:		
+NOMBRE_ARCHIVO: Videogames
+		TAMANIO_ARCHIVO: 64
+		PUNTERO_DIRECTO: 704
+		PUNTERO_INDIRECTO: 0
+
+[WARNING] 00:01:31:368 FileSystem/(79272:79279): Param: 0x0x0 - Tam: 16
+[WARNING] 00:01:32:372 FileSystem/(79272:79279): Recibiendo buffer que escribir: SonicTheHedgehog
+[INFO] 00:01:32:372 FileSystem/(79272:79279): Bloque inicial: 0, Offset en este bloque: 0, bloques necesarios totales: 1
+[INFO] 00:01:32:388 FileSystem/(79272:79279): Se ha escrito en el bloque con puntero 704 un tamaño de 16, partiendo de la posicion del archivo 0
+[INFO] 00:02:21:907 FileSystem/(79272:79279): Se recibio F_EXISTS para archivo Videogames
+[INFO] 00:02:21:907 FileSystem/(79272:79279): Se recibio F_OPEN para archivo Videogames
+[INFO] 00:02:21:907 FileSystem/(79272:79279): Se ha abierto el archivo: Videogames
+[INFO] 00:02:21:908 FileSystem/(79272:79279): Se recibio F_READ con parametros Archivo: Videogames, Tamaño: 16, Direccion Fisica: 0x16x2 y Posicion: 0
+[INFO] 00:02:23:908 FileSystem/(79272:79279): Cargando fcb /home/utnso/tp-2023-1c-Guindows/fs/fcb/Videogames
+[INFO] 00:02:23:908 FileSystem/(79272:79279): FCB Cargado:		
+NOMBRE_ARCHIVO: Videogames
+		TAMANIO_ARCHIVO: 64
+		PUNTERO_DIRECTO: 704
+		PUNTERO_INDIRECTO: 0
+
+[INFO] 00:02:23:908 FileSystem/(79272:79279): Cargando bloque indirecto con direccion 0
+[INFO] 00:02:38:908 FileSystem/(79272:79279): Se debe empezar por el puntero directo
+[INFO] 00:02:38:909 FileSystem/(79272:79279): La lectura comienza en el bloque de puntero 704, perteneciente al bloque nro: 0
+[INFO] 00:02:38:909 FileSystem/(79272:79279): Tamaño a leer: 16, Tamaño Bloque: 64
+[INFO] 00:02:38:909 FileSystem/(79272:79279): Se deben leer 1 bloques
+[INFO] 00:02:38:925 FileSystem/(79272:79279): Se leyo a partir del offset 0 dentro del bloque. Informacion del primer bloque leido: SonicTheHedgehog
+[INFO] 00:02:38:925 FileSystem/(79272:79279): Tamaño leido en primer bloque: 16, tamaño restante por leer: 0
+[INFO] 00:02:38:925 FileSystem/(79272:79279): Lectura completa: SonicTheHedgehog, listo para enviar a memoria - tamanio: 16
+[INFO] 00:02:40:942 FileSystem/(79272:79279): Se recibio F_READ con parametros Archivo: Videogames, Tamaño: 16, Direccion Fisica: 0x16x3 y Posicion: 0
+[INFO] 00:02:42:943 FileSystem/(79272:79279): Cargando fcb /home/utnso/tp-2023-1c-Guindows/fs/fcb/Videogames
+[INFO] 00:02:42:943 FileSystem/(79272:79279): FCB Cargado:		
+NOMBRE_ARCHIVO: Videogames
+		TAMANIO_ARCHIVO: 64
+		PUNTERO_DIRECTO: 704
+		PUNTERO_INDIRECTO: 0
+
+[INFO] 00:02:42:944 FileSystem/(79272:79279): Cargando bloque indirecto con direccion 0
+[INFO] 00:02:57:944 FileSystem/(79272:79279): Se debe empezar por el puntero directo
+[INFO] 00:02:57:945 FileSystem/(79272:79279): La lectura comienza en el bloque de puntero 704, perteneciente al bloque nro: 0
+[INFO] 00:02:57:945 FileSystem/(79272:79279): Tamaño a leer: 16, Tamaño Bloque: 64
+[INFO] 00:02:57:945 FileSystem/(79272:79279): Se deben leer 1 bloques
+[INFO] 00:02:57:961 FileSystem/(79272:79279): Se leyo a partir del offset 0 dentro del bloque. Informacion del primer bloque leido: SonicTheHedgehog
+[INFO] 00:02:57:961 FileSystem/(79272:79279): Tamaño leido en primer bloque: 16, tamaño restante por leer: 0
+[INFO] 00:02:57:961 FileSystem/(79272:79279): Lectura completa: SonicTheHedgehog, listo para enviar a memoria - tamanio: 16
+[INFO] 00:02:59:974 FileSystem/(79272:79279): Se recibio F_READ con parametros Archivo: Videogames, Tamaño: 16, Direccion Fisica: 0x16x4 y Posicion: 0
+[INFO] 00:03:01:974 FileSystem/(79272:79279): Cargando fcb /home/utnso/tp-2023-1c-Guindows/fs/fcb/Videogames
+[INFO] 00:03:01:975 FileSystem/(79272:79279): FCB Cargado:		
+NOMBRE_ARCHIVO: Videogames
+		TAMANIO_ARCHIVO: 64
+		PUNTERO_DIRECTO: 704
+		PUNTERO_INDIRECTO: 0
+
+[INFO] 00:03:01:976 FileSystem/(79272:79279): Cargando bloque indirecto con direccion 0

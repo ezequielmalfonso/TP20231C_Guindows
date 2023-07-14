@@ -104,11 +104,16 @@ int execute(INSTRUCCION* instruccion_ejecutar, registros_t registros, uint16_t p
 		//log_error(logger,"Se seteo el registro: %s",pcb->registro_cpu.ax );	// NO solo el ax
 
 	}else if(!strcmp(instruccion_ejecutar->comando,"MOV_OUT") ){
-
+		int resp_mov_out;
 		log_info(logger,"PID: %d -  Listo para ejecutar MOV_OUT ", pid);
 		log_info(logger,"PID: %d - Se ha ejecutado MOV_OUT parametro 1: %s parametro 2: %s", pid,instruccion_ejecutar->parametro1,instruccion_ejecutar->parametro2);
-		mov_out(instruccion_ejecutar->parametro1, instruccion_ejecutar->parametro2, pcb);
+		resp_mov_out = mov_out(instruccion_ejecutar->parametro1, instruccion_ejecutar->parametro2, pcb);
 		log_info(logger,"PID: %d - Se ha ejecutado MOV_OUT parametro 1: %s parametro 2: %s", pid,instruccion_ejecutar->parametro1,instruccion_ejecutar->parametro2);
+		if (resp_mov_out == 0){
+			op_code codigo = SEGMENTATION_FAULT;
+			//send_proceso(cliente_socket,pcb,codigo);
+			return codigo;
+		}
 
 	}else if(!strcmp(instruccion_ejecutar->comando,"WAIT") ){
 
@@ -127,10 +132,15 @@ int execute(INSTRUCCION* instruccion_ejecutar, registros_t registros, uint16_t p
 		return SIGNAL;
 
 	}else if(!strcmp(instruccion_ejecutar->comando,"MOV_IN") ){
+		int resp_mov_in;
 		log_info(logger,"PID: %d -  Listo para ejecutar MOV_IN ", pid);
 		mov_in(instruccion_ejecutar->parametro2,instruccion_ejecutar->parametro1, pcb);
 		log_info(logger,"PID: %d - Se ha ejecutado MOV_IN parametro 1: %s parametro 2: %s", pid,instruccion_ejecutar->parametro1,instruccion_ejecutar->parametro2);
-
+		if (resp_mov_in == 0){
+			op_code codigo = SEGMENTATION_FAULT;
+			return codigo;
+			//send_proceso(cliente_socket,pcb,codigo);
+		}
 
 	}else if(!strcmp(instruccion_ejecutar->comando,"F_OPEN") ){
 
