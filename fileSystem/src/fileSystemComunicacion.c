@@ -314,6 +314,7 @@ static void procesar_conexion(void* void_args) {
 		 case F_READ:
 			 //recv_instruccion(cliente_socket, parametro1, parametro2, parametro3);
 			 char** seg_desp_pid_1 =  string_split(parametro2, "x");
+			 //log_warning(logger, "Dir FIS: %s:", parametro2);
 			 int dir_fisica_read = atoi(seg_desp_pid_1[1]) + atoi(seg_desp_pid_1[3]);
 			 log_info(logger, "Se recibio F_READ con parametros Archivo: %s, Tamaño: %s, Direccion Fisica: %d y Posicion: %s", parametro1, strtok(parametro3, "\n"), dir_fisica_read, pos);
 			 int tamanioTotalALeer = atoi(parametro3);

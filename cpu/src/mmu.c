@@ -28,22 +28,24 @@ int mov_in(char direccion_logica[20], char registro[20], PCB_t* pcb){
 	recv(memoria_fd, registro_recibido ,tamanio, MSG_WAITALL);
 
 
-	memcpy(registro_recibido+4,"\n",2);
+	//memcpy(registro_recibido+4,"\n",2);
 		//log_info(logger,"estamos recibiendo de memoria: %s", registro_recibido);
 	//log_info(logger,"estamos seteando de memoria: %d", tamanio);
-
+	//log_warning(logger,"Antes de setear registro: Regsitro: %s - Reg_recibido:%s", registro, registro_recibido);
 	set_registro(registro, registro_recibido, pcb);
+	//log_error(logger,"Dps de setear registro");
 
-	uint64_t base;
-	uint64_t direccion_fisica;
+	uint64_t base=0;
+	uint64_t direccion_fisica=0;
 	send_escribir_memoria(memoria_fd, n_segmento, 0, pcb->pid, "", 0, BASE);
-	recv(memoria_fd, base, sizeof(uint64_t), MSG_WAITALL);
+	recv(memoria_fd, &base, sizeof(uint64_t), MSG_WAITALL);
+	//log_error(logger,"(MOV_IN)Base rec desde memo: %d", base);
 	direccion_fisica = desplazamiento1+base;
 	log_info(logger, "PID: %d - Acción: LEER - Segmento: %d - Dirección Física: %d - Valor: %s", pcb->pid, n_segmento, direccion_fisica, registro_recibido);
 
 //	log_info(logger,"PID: %d - Ejecutando SET parametro 1: %s parametro 2: %s", pid,instruccion_ejecutar->parametro1,instruccion_ejecutar->parametro2);
 //	bool recv_instruccion(memoria_fd, tam, respuestaMemoria, char* param3);
-//enviar pedido a memoria TODO
+//  enviar pedido a memoria TODO
 	return 1;
 	}
 }
@@ -65,11 +67,12 @@ int mov_out(char* direccion_logica, char* registro,PCB_t* pcb){
 
 		}else{
 
-		uint64_t base;
-		uint64_t direccion_fisica;
+		uint64_t base=0;
+		uint64_t direccion_fisica=0;
 		//log_warning(logger, "Antes del send a memo");
 		send_escribir_memoria(memoria_fd, n_segmento, 0, pcb->pid, "", 0, BASE);
 		recv(memoria_fd, base, sizeof(uint64_t), MSG_WAITALL);
+		//log_error(logger,"(MOV_OUT)Base rec desde memo: %d", base);
 
 		direccion_fisica = desplazamiento1+base;
 		log_info(logger, "PID: %d - Acción: ESCRIBIR - Segmento: %d - Dirección Física: %d - Valor: %s", pcb->pid, n_segmento, direccion_fisica, escribir);
@@ -230,15 +233,17 @@ void* traducirAFisica(void* direccion_logica, PCB_t* pcb, int tamanio,char* valo
 	uint64_t base;
 
 	send_escribir_memoria(memoria_fd, n_segmento, 0, pcb->pid, "", 0, BASE);
-	recv(memoria_fd, base, sizeof(uint64_t), MSG_WAITALL);
+	recv(memoria_fd, &base, sizeof(uint64_t), MSG_WAITALL);
 
-	uint64_t direccion_fisica = desplazamiento1+base;
+	//log_error(logger,"(FS)Base rec desde memo: %d - Desplazamiento: %d", base, desplazamiento1);
 
+	uint64_t direccion_fisica = (uint64_t)desplazamiento1+base;
+/*
 	if(leer){
 		log_info(logger, "PID: %d - Acción: LEER - Segmento: %d - Dirección Física: %d - Valor: %s", pcb->pid, n_segmento, direccion_fisica, valor);
 	}else{
 		log_info(logger, "PID: %d - Acción: ESCRIBIR - Segmento: %d - Dirección Física: %d - Valor: %s", pcb->pid, n_segmento, direccion_fisica, valor);
-	}
+	}*/
 
 	if(checkSegmentetitonFault(desplazamiento1+tamanio, n_segmento,pcb)){
 		log_error(logger, "PID: %d - SEGMENTATION FAULT", pcb->pid);

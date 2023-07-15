@@ -116,7 +116,7 @@ void* leerMemoria(uint32_t id_seg, uint32_t desplazamiento, uint32_t pid, int ta
 	void* direccion = memoria+seg->direccion_base+desplazamiento;
 	void* leido = malloc(tam);
 	memcpy(leido,direccion,tam);
-	log_info(logger, "PID: %d - Acción: LEER - Dirección física: %d - Tamaño: %d - Origen: %s", pid, direccion, tam, origen);
+	log_info(logger, "PID: %d - Acción: LEER - Dirección física: %d - Tamaño: %d - Origen: %s", pid, seg->direccion_base+desplazamiento, tam, origen);
 	pthread_mutex_unlock(&mx_memoria);
 	return leido;
 }
@@ -127,7 +127,7 @@ int escribirEnMemoria(uint32_t id_seg,uint32_t  desplazamiento,uint32_t  pid, in
 	t_segmento* seg = buscarSegmento(buscarTabla(pid),id_seg);
 	void* direccion = memoria+seg->direccion_base+desplazamiento;
 	memcpy(direccion,escribir,tamanio);
-	log_info(logger, "PID: %d - Acción: ESCRIBIR - Dirección física: %d - Tamaño: %d - Origen: %s", pid, direccion, tamanio, origen);
+	log_info(logger, "PID: %d - Acción: ESCRIBIR - Dirección física: %d - Tamaño: %d - Origen: %s", pid, seg->direccion_base+desplazamiento, tamanio, origen);
 	pthread_mutex_unlock(&mx_memoria);
 	return 1;
 }

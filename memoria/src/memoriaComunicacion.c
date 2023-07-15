@@ -227,7 +227,7 @@ static void procesar_cpu(void * void_args) {
     	case BASE:
 
     		recv_escribir_memoria(cpu_fd, num_seg, desplazamiento1, pid, tamanio, escribir);
-    		t_list* tablaProceso = buscarTabla(*pid);
+    		/*t_list* tablaProceso = buscarTabla(*pid);
 			int i=0;
 
 			t_segmento* segmentoAux = list_get(tablaProceso,i);
@@ -237,8 +237,11 @@ static void procesar_cpu(void * void_args) {
 			}
 			if(segmentoAux==NULL){
 				log_error(logger, "SEGMENTO NO ENCONTRADO");
-			}
+			}*/
+    		t_list* tabla_proceso = buscarTabla(*pid);
+    	    t_segmento* segmentoAux = buscarSegmento(tabla_proceso, *num_seg);
 
+			//log_error(logger, "Direccion Base antes de ir a CPU: %lu ", segmentoAux->direccion_base);
     		send(cpu_fd, &segmentoAux->direccion_base, sizeof(uint64_t), MSG_WAITALL);
     		break;
 
@@ -288,7 +291,7 @@ static void procesar_fileSystem(void * void_args) {
     				void* leido;
     				recv_fs_memoria_read(cliente_socket, direccion_fisica, &tamanio, &leido);
     				char** seg_desp_pid =  string_split(direccion_fisica, "x");
-    				log_warning(logger, "Recibimos dir fisica: %s - Tamanio: %d",direccion_fisica, tamanio);
+    				//log_warning(logger, "Recibimos dir fisica: %s - Tamanio: %d",direccion_fisica, tamanio);
     				//TODO  separar direccion fisica en NRO SEG y OFFSET
     				// y escribir en memoria
 

@@ -7660,3 +7660,2691 @@ TAM_MAX_SEGMENTO: 256
 [INFO] 20:57:27:267 Cpu/(88806:88814): Recibi PCB id: 0
 [INFO] 20:57:27:267 Cpu/(88806:88814): PID: 0 - Ejecutando EXIT
 [INFO] 20:58:01:967 Cpu/(88806:88814): Se ha finalizado la conexion
+[INFO] 21:46:19:987 Cpu/(89141:89141): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 21:46:19:989 Cpu/(89141:89141): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:46:19:990 Cpu/(89141:89141): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 21:46:21:733 Cpu/(89141:89141): Cliente conectado (a CPU_SV)
+
+[INFO] 21:46:24:425 Cpu/(89141:89146): Se ha finalizado la conexion
+[INFO] 21:51:26:419 Cpu/(89221:89221): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 21:51:26:421 Cpu/(89221:89221): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:51:26:421 Cpu/(89221:89221): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 21:51:28:454 Cpu/(89221:89221): Cliente conectado (a CPU_SV)
+
+[INFO] 21:52:36:254 Cpu/(89221:89226): Recibi PCB id: 0
+[INFO] 21:52:36:254 Cpu/(89221:89226): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 21:52:36:254 Cpu/(89221:89226): Recibi PCB id: 0
+[INFO] 21:52:36:254 Cpu/(89221:89226): En CPU
+[INFO] 21:52:37:254 Cpu/(89221:89226): PID: 0 - Ejecutando SET parametro 1: RAX parametro 2: SonicTheHedgehog
+
+[INFO] 21:52:37:255 Cpu/(89221:89226): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 21:52:37:255 Cpu/(89221:89226): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 0 parametro 2: RAX
+
+[INFO] 21:52:37:255 Cpu/(89221:89226): Realizado lectura del registro RAX con valor SonicTheHedgehog
+[INFO] 21:52:37:255 Cpu/(89221:89226): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -1610608720 - Valor: SonicTheHedgehog
+[INFO] 21:52:38:257 Cpu/(89221:89226): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 0 parametro 2: RAX
+[INFO] 21:52:38:257 Cpu/(89221:89226): En CPU
+[INFO] 21:52:39:257 Cpu/(89221:89226): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation1
+
+[INFO] 21:52:39:259 Cpu/(89221:89226): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 21:52:39:259 Cpu/(89221:89226): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 32 parametro 2: RBX
+
+[INFO] 21:52:39:259 Cpu/(89221:89226): Realizado lectura del registro RBX con valor SonyPlaystation1
+[INFO] 21:52:39:260 Cpu/(89221:89226): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -1610608688 - Valor: SonyPlaystation1
+[INFO] 21:52:40:262 Cpu/(89221:89226): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 32 parametro 2: RBX
+[INFO] 21:52:40:262 Cpu/(89221:89226): En CPU
+[INFO] 21:52:41:263 Cpu/(89221:89226): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation2
+
+[INFO] 21:52:41:263 Cpu/(89221:89226): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 21:52:41:263 Cpu/(89221:89226): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 48 parametro 2: RBX
+
+[INFO] 21:52:41:264 Cpu/(89221:89226): Realizado lectura del registro RBX con valor SonyPlaystation2
+[INFO] 21:52:41:264 Cpu/(89221:89226): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -1610608672 - Valor: SonyPlaystation2
+[INFO] 21:52:42:265 Cpu/(89221:89226): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 48 parametro 2: RBX
+[INFO] 21:52:42:265 Cpu/(89221:89226): En CPU
+[INFO] 21:52:43:265 Cpu/(89221:89226): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation3
+
+[INFO] 21:52:43:266 Cpu/(89221:89226): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 21:52:43:266 Cpu/(89221:89226): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 64 parametro 2: RBX
+
+[INFO] 21:52:43:266 Cpu/(89221:89226): Realizado lectura del registro RBX con valor SonyPlaystation3
+[INFO] 21:52:43:267 Cpu/(89221:89226): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -1610608656 - Valor: SonyPlaystation3
+[INFO] 21:52:44:268 Cpu/(89221:89226): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 64 parametro 2: RBX
+[INFO] 21:52:44:269 Cpu/(89221:89226): En CPU
+[INFO] 21:52:45:269 Cpu/(89221:89226): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation4
+
+[INFO] 21:52:45:270 Cpu/(89221:89226): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 21:52:45:270 Cpu/(89221:89226): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 80 parametro 2: RBX
+
+[INFO] 21:52:45:270 Cpu/(89221:89226): Realizado lectura del registro RBX con valor SonyPlaystation4
+[INFO] 21:52:45:271 Cpu/(89221:89226): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -1610608640 - Valor: SonyPlaystation4
+[INFO] 21:52:46:273 Cpu/(89221:89226): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 80 parametro 2: RBX
+[INFO] 21:52:46:273 Cpu/(89221:89226): En CPU
+[INFO] 21:52:47:273 Cpu/(89221:89226): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation5
+
+[INFO] 21:52:47:274 Cpu/(89221:89226): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 21:52:47:274 Cpu/(89221:89226): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 96 parametro 2: RBX
+
+[INFO] 21:52:47:275 Cpu/(89221:89226): Realizado lectura del registro RBX con valor SonyPlaystation5ion2
+[INFO] 21:52:47:276 Cpu/(89221:89226): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -1610608624 - Valor: SonyPlaystation5
+[INFO] 21:52:48:277 Cpu/(89221:89226): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 96 parametro 2: RBX
+[INFO] 21:52:48:277 Cpu/(89221:89226): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Consoles
+ 
+[INFO] 21:52:48:280 Cpu/(89221:89226): Recibi PCB id: 0
+[INFO] 21:52:48:280 Cpu/(89221:89226): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 21:52:48:283 Cpu/(89221:89226): Recibi PCB id: 1
+[INFO] 21:52:48:283 Cpu/(89221:89226): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 21:52:48:286 Cpu/(89221:89226): Recibi PCB id: 0
+[INFO] 21:52:48:287 Cpu/(89221:89226): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 21:52:48:287 Cpu/(89221:89226): Recibi PCB id: 0
+[INFO] 21:52:48:287 Cpu/(89221:89226): PID: 0 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 21:52:48:288 Cpu/(89221:89226): Recibi PCB id: 0
+[INFO] 21:52:48:289 Cpu/(89221:89226): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 21:52:48:289 Cpu/(89221:89226): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -1741331296 - Valor: 80
+
+[INFO] 21:52:48:291 Cpu/(89221:89226): Recibi PCB id: 1
+[INFO] 21:52:48:291 Cpu/(89221:89226): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 21:52:48:338 Cpu/(89221:89226): Recibi PCB id: 1
+[INFO] 21:52:48:338 Cpu/(89221:89226): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 21:52:48:425 Cpu/(89221:89226): Recibi PCB id: 1
+[INFO] 21:52:48:425 Cpu/(89221:89226): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 21:52:48:514 Cpu/(89221:89226): Recibi PCB id: 1
+[INFO] 21:52:48:514 Cpu/(89221:89226): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 21:52:48:601 Cpu/(89221:89226): Recibi PCB id: 1
+[INFO] 21:52:48:601 Cpu/(89221:89226): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 21:52:48:689 Cpu/(89221:89226): Recibi PCB id: 1
+[INFO] 21:52:48:689 Cpu/(89221:89226): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 21:52:48:733 Cpu/(89221:89226): Recibi PCB id: 1
+[INFO] 21:52:48:734 Cpu/(89221:89226): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 21:52:48:777 Cpu/(89221:89226): Recibi PCB id: 1
+[INFO] 21:52:48:777 Cpu/(89221:89226): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 21:53:19:315 Cpu/(89221:89226): Recibi PCB id: 1
+[INFO] 21:53:19:315 Cpu/(89221:89226): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 21:53:19:358 Cpu/(89221:89226): Recibi PCB id: 1
+[INFO] 21:53:19:358 Cpu/(89221:89226): PID: 1 - Ejecutando EXIT
+[INFO] 21:53:19:359 Cpu/(89221:89226): Recibi PCB id: 0
+[INFO] 21:53:19:359 Cpu/(89221:89226): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 21:53:19:360 Cpu/(89221:89226): Recibi PCB id: 0
+[INFO] 21:53:19:360 Cpu/(89221:89226): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 21:53:19:361 Cpu/(89221:89226): Recibi PCB id: 0
+[INFO] 21:53:19:361 Cpu/(89221:89226): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 21:53:19:369 Cpu/(89221:89226): Recibi PCB id: 0
+[INFO] 21:53:19:369 Cpu/(89221:89226): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 21:53:19:370 Cpu/(89221:89226): Recibi PCB id: 0
+[INFO] 21:53:19:370 Cpu/(89221:89226): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 21:53:19:370 Cpu/(89221:89226): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -1741331328 - Valor: 16
+
+[INFO] 21:53:20:387 Cpu/(89221:89226): Recibi PCB id: 0
+[INFO] 21:53:20:387 Cpu/(89221:89226): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 21:53:20:387 Cpu/(89221:89226): Recibi PCB id: 0
+[INFO] 21:53:20:387 Cpu/(89221:89226): PID: 0 - Ejecutando EXIT
+[INFO] 21:55:10:643 Cpu/(89221:89226): Se ha finalizado la conexion
+[INFO] 21:56:55:596 Cpu/(89341:89341): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 21:56:55:599 Cpu/(89341:89341): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 21:56:55:599 Cpu/(89341:89341): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 21:56:57:120 Cpu/(89341:89341): Cliente conectado (a CPU_SV)
+
+[INFO] 21:56:58:805 Cpu/(89341:89346): Recibi PCB id: 0
+[INFO] 21:56:58:805 Cpu/(89341:89346): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 21:56:58:806 Cpu/(89341:89346): Recibi PCB id: 0
+[INFO] 21:56:58:806 Cpu/(89341:89346): En CPU
+[INFO] 21:56:59:806 Cpu/(89341:89346): PID: 0 - Ejecutando SET parametro 1: RAX parametro 2: SonicTheHedgehog
+
+[INFO] 21:56:59:807 Cpu/(89341:89346): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 21:56:59:807 Cpu/(89341:89346): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 0 parametro 2: RAX
+
+[INFO] 21:56:59:807 Cpu/(89341:89346): Realizado lectura del registro RAX con valor SonicTheHedgehog
+[INFO] 21:56:59:807 Cpu/(89341:89346): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -1275064400 - Valor: SonicTheHedgehog
+[INFO] 21:57:00:808 Cpu/(89341:89346): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 0 parametro 2: RAX
+[INFO] 21:57:00:808 Cpu/(89341:89346): En CPU
+[INFO] 21:57:01:808 Cpu/(89341:89346): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation1
+
+[INFO] 21:57:01:808 Cpu/(89341:89346): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 21:57:01:808 Cpu/(89341:89346): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 32 parametro 2: RBX
+
+[INFO] 21:57:01:809 Cpu/(89341:89346): Realizado lectura del registro RBX con valor SonyPlaystation1
+[INFO] 21:57:01:809 Cpu/(89341:89346): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -1275064368 - Valor: SonyPlaystation1
+[INFO] 21:57:02:809 Cpu/(89341:89346): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 32 parametro 2: RBX
+[INFO] 21:57:02:810 Cpu/(89341:89346): En CPU
+[INFO] 21:57:03:810 Cpu/(89341:89346): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation2
+
+[INFO] 21:57:03:810 Cpu/(89341:89346): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 21:57:03:810 Cpu/(89341:89346): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 48 parametro 2: RBX
+
+[INFO] 21:57:03:810 Cpu/(89341:89346): Realizado lectura del registro RBX con valor SonyPlaystation2
+[INFO] 21:57:03:810 Cpu/(89341:89346): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -1275064352 - Valor: SonyPlaystation2
+[INFO] 21:57:04:812 Cpu/(89341:89346): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 48 parametro 2: RBX
+[INFO] 21:57:04:812 Cpu/(89341:89346): En CPU
+[INFO] 21:57:05:813 Cpu/(89341:89346): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation3
+
+[INFO] 21:57:05:813 Cpu/(89341:89346): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 21:57:05:813 Cpu/(89341:89346): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 64 parametro 2: RBX
+
+[INFO] 21:57:05:813 Cpu/(89341:89346): Realizado lectura del registro RBX con valor SonyPlaystation3
+[INFO] 21:57:05:814 Cpu/(89341:89346): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -1275064336 - Valor: SonyPlaystation3
+[INFO] 21:57:06:814 Cpu/(89341:89346): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 64 parametro 2: RBX
+[INFO] 21:57:06:814 Cpu/(89341:89346): En CPU
+[INFO] 21:57:07:814 Cpu/(89341:89346): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation4
+
+[INFO] 21:57:07:815 Cpu/(89341:89346): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 21:57:07:816 Cpu/(89341:89346): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 80 parametro 2: RBX
+
+[INFO] 21:57:07:816 Cpu/(89341:89346): Realizado lectura del registro RBX con valor SonyPlaystation4
+[INFO] 21:57:07:816 Cpu/(89341:89346): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -1275064320 - Valor: SonyPlaystation4
+[INFO] 21:57:08:818 Cpu/(89341:89346): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 80 parametro 2: RBX
+[INFO] 21:57:08:818 Cpu/(89341:89346): En CPU
+[INFO] 21:57:09:819 Cpu/(89341:89346): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation5
+
+[INFO] 21:57:09:821 Cpu/(89341:89346): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 21:57:09:821 Cpu/(89341:89346): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 96 parametro 2: RBX
+
+[INFO] 21:57:09:822 Cpu/(89341:89346): Realizado lectura del registro RBX con valor SonyPlaystation5ion2
+[INFO] 21:57:09:822 Cpu/(89341:89346): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -1275064304 - Valor: SonyPlaystation5
+[INFO] 21:57:10:825 Cpu/(89341:89346): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 96 parametro 2: RBX
+[INFO] 21:57:10:825 Cpu/(89341:89346): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Consoles
+ 
+[INFO] 21:57:10:830 Cpu/(89341:89346): Recibi PCB id: 0
+[INFO] 21:57:10:830 Cpu/(89341:89346): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 21:57:10:832 Cpu/(89341:89346): Recibi PCB id: 1
+[INFO] 21:57:10:832 Cpu/(89341:89346): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 21:57:40:858 Cpu/(89341:89346): Recibi PCB id: 0
+[INFO] 21:57:40:858 Cpu/(89341:89346): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 21:57:40:858 Cpu/(89341:89346): Recibi PCB id: 0
+[INFO] 21:57:40:858 Cpu/(89341:89346): PID: 0 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 21:57:40:860 Cpu/(89341:89346): Recibi PCB id: 0
+[INFO] 21:57:40:860 Cpu/(89341:89346): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 21:57:40:860 Cpu/(89341:89346): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 1736838912 - Valor: 80
+
+[INFO] 21:57:40:861 Cpu/(89341:89346): Recibi PCB id: 1
+[INFO] 21:57:40:861 Cpu/(89341:89346): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 21:57:40:906 Cpu/(89341:89346): Recibi PCB id: 1
+[INFO] 21:57:40:906 Cpu/(89341:89346): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 21:57:40:993 Cpu/(89341:89346): Recibi PCB id: 1
+[INFO] 21:57:40:993 Cpu/(89341:89346): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 21:57:41:081 Cpu/(89341:89346): Recibi PCB id: 1
+[INFO] 21:57:41:081 Cpu/(89341:89346): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 21:57:41:170 Cpu/(89341:89346): Recibi PCB id: 1
+[INFO] 21:57:41:170 Cpu/(89341:89346): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 21:57:41:258 Cpu/(89341:89346): Recibi PCB id: 1
+[INFO] 21:57:41:258 Cpu/(89341:89346): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 21:57:41:301 Cpu/(89341:89346): Recibi PCB id: 1
+[INFO] 21:57:41:301 Cpu/(89341:89346): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 21:57:41:345 Cpu/(89341:89346): Recibi PCB id: 1
+[INFO] 21:57:41:345 Cpu/(89341:89346): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 21:58:11:885 Cpu/(89341:89346): Recibi PCB id: 1
+[INFO] 21:58:11:885 Cpu/(89341:89346): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 21:58:11:926 Cpu/(89341:89346): Recibi PCB id: 1
+[INFO] 21:58:11:926 Cpu/(89341:89346): PID: 1 - Ejecutando EXIT
+[INFO] 21:58:11:928 Cpu/(89341:89346): Recibi PCB id: 0
+[INFO] 21:58:11:928 Cpu/(89341:89346): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 21:58:11:930 Cpu/(89341:89346): Recibi PCB id: 0
+[INFO] 21:58:11:930 Cpu/(89341:89346): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 21:58:11:933 Cpu/(89341:89346): Recibi PCB id: 0
+[INFO] 21:58:11:933 Cpu/(89341:89346): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 21:58:11:951 Cpu/(89341:89346): Recibi PCB id: 0
+[INFO] 21:58:11:951 Cpu/(89341:89346): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 21:58:11:952 Cpu/(89341:89346): Recibi PCB id: 0
+[INFO] 21:58:11:952 Cpu/(89341:89346): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 21:58:11:952 Cpu/(89341:89346): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 1736838880 - Valor: 16
+
+[INFO] 21:58:12:974 Cpu/(89341:89346): Recibi PCB id: 0
+[INFO] 21:58:12:974 Cpu/(89341:89346): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 21:58:12:975 Cpu/(89341:89346): Recibi PCB id: 0
+[INFO] 21:58:12:975 Cpu/(89341:89346): PID: 0 - Ejecutando EXIT
+[INFO] 21:59:04:043 Cpu/(89341:89346): Recibi PCB id: 2
+[INFO] 21:59:04:043 Cpu/(89341:89346): PID: 2 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 21:59:04:044 Cpu/(89341:89346): Recibi PCB id: 2
+[INFO] 21:59:04:044 Cpu/(89341:89346): PID: 2 - Listo para ejecutar F_SEEK 
+[INFO] 21:59:04:044 Cpu/(89341:89346): Recibi PCB id: 2
+[INFO] 21:59:04:044 Cpu/(89341:89346): PID: 2 - Listo para ejecutar F_READ 
+[INFO] 21:59:04:045 Cpu/(89341:89346): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: 1736838896 - Valor: 16
+
+[INFO] 21:59:04:558 Cpu/(89341:89346): Recibi PCB id: 3
+[INFO] 21:59:04:558 Cpu/(89341:89346): PID: 3 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 21:59:22:067 Cpu/(89341:89346): Recibi PCB id: 4
+[INFO] 21:59:22:067 Cpu/(89341:89346): PID: 4 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 21:59:22:071 Cpu/(89341:89346): Recibi PCB id: 5
+[INFO] 21:59:22:071 Cpu/(89341:89346): PID: 5 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 21:59:22:074 Cpu/(89341:89346): Recibi PCB id: 2
+[INFO] 21:59:22:075 Cpu/(89341:89346): PID: 2 -  Listo para ejecutar MOV_IN 
+[INFO] 21:59:23:077 Cpu/(89341:89346): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: -1187756464 - Valor: Soni
+[INFO] 21:59:23:077 Cpu/(89341:89346): PID: 2 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 21:59:23:077 Cpu/(89341:89346): PID: 2 - Listo para ejecutar F_CLOSE 
+[INFO] 21:59:23:078 Cpu/(89341:89346): Recibi PCB id: 2
+[INFO] 21:59:23:078 Cpu/(89341:89346): PID: 2 - Ejecutando EXIT
+[INFO] 21:59:23:081 Cpu/(89341:89346): Recibi PCB id: 3
+[INFO] 21:59:23:081 Cpu/(89341:89346): PID: 3 - Listo para ejecutar F_SEEK 
+[INFO] 21:59:23:081 Cpu/(89341:89346): Recibi PCB id: 3
+[INFO] 21:59:23:082 Cpu/(89341:89346): PID: 3 - Listo para ejecutar F_READ 
+[INFO] 21:59:23:082 Cpu/(89341:89346): PID: 3 - Acción: LEER - Segmento: 0 - Dirección Física: 1736838896 - Valor: 16
+
+[INFO] 21:59:41:102 Cpu/(89341:89346): Recibi PCB id: 3
+[INFO] 21:59:41:102 Cpu/(89341:89346): PID: 3 -  Listo para ejecutar MOV_IN 
+[INFO] 22:25:10:372 Cpu/(89965:89965): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 22:25:10:373 Cpu/(89965:89965): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:25:10:374 Cpu/(89965:89965): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:25:15:959 Cpu/(89965:89965): Cliente conectado (a CPU_SV)
+
+[INFO] 22:25:22:964 Cpu/(89965:89972): Recibi PCB id: 0
+[INFO] 22:25:22:964 Cpu/(89965:89972): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 22:25:22:964 Cpu/(89965:89972): Recibi PCB id: 0
+[INFO] 22:25:22:964 Cpu/(89965:89972): En CPU
+[INFO] 22:25:23:965 Cpu/(89965:89972): PID: 0 - Ejecutando SET parametro 1: RAX parametro 2: SonicTheHedgehog
+
+[INFO] 22:25:23:965 Cpu/(89965:89972): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 22:25:23:965 Cpu/(89965:89972): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 0 parametro 2: RAX
+
+[INFO] 22:25:23:965 Cpu/(89965:89972): Realizado lectura del registro RAX con valor SonicTheHedgehog
+[INFO] 22:25:23:965 Cpu/(89965:89972): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 1610616752 - Valor: SonicTheHedgehog
+[INFO] 22:25:24:966 Cpu/(89965:89972): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 0 parametro 2: RAX
+[INFO] 22:25:24:966 Cpu/(89965:89972): En CPU
+[INFO] 22:25:25:966 Cpu/(89965:89972): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation1
+
+[INFO] 22:25:25:967 Cpu/(89965:89972): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 22:25:25:967 Cpu/(89965:89972): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 32 parametro 2: RBX
+
+[INFO] 22:25:25:967 Cpu/(89965:89972): Realizado lectura del registro RBX con valor SonyPlaystation1
+[INFO] 22:25:25:967 Cpu/(89965:89972): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 1610616784 - Valor: SonyPlaystation1
+[INFO] 22:25:26:968 Cpu/(89965:89972): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 32 parametro 2: RBX
+[INFO] 22:25:26:968 Cpu/(89965:89972): En CPU
+[INFO] 22:25:27:968 Cpu/(89965:89972): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation2
+
+[INFO] 22:25:27:970 Cpu/(89965:89972): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 22:25:27:970 Cpu/(89965:89972): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 48 parametro 2: RBX
+
+[INFO] 22:25:27:970 Cpu/(89965:89972): Realizado lectura del registro RBX con valor SonyPlaystation2
+[INFO] 22:25:27:971 Cpu/(89965:89972): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 1610616800 - Valor: SonyPlaystation2
+[INFO] 22:25:28:971 Cpu/(89965:89972): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 48 parametro 2: RBX
+[INFO] 22:25:28:971 Cpu/(89965:89972): En CPU
+[INFO] 22:25:29:972 Cpu/(89965:89972): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation3
+
+[INFO] 22:25:29:972 Cpu/(89965:89972): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 22:25:29:972 Cpu/(89965:89972): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 64 parametro 2: RBX
+
+[INFO] 22:25:29:972 Cpu/(89965:89972): Realizado lectura del registro RBX con valor SonyPlaystation3
+[INFO] 22:25:29:973 Cpu/(89965:89972): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 1610616816 - Valor: SonyPlaystation3
+[INFO] 22:25:30:974 Cpu/(89965:89972): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 64 parametro 2: RBX
+[INFO] 22:25:30:974 Cpu/(89965:89972): En CPU
+[INFO] 22:25:31:975 Cpu/(89965:89972): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation4
+
+[INFO] 22:25:31:975 Cpu/(89965:89972): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 22:25:31:975 Cpu/(89965:89972): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 80 parametro 2: RBX
+
+[INFO] 22:25:31:975 Cpu/(89965:89972): Realizado lectura del registro RBX con valor SonyPlaystation4
+[INFO] 22:25:31:975 Cpu/(89965:89972): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 1610616832 - Valor: SonyPlaystation4
+[INFO] 22:25:32:976 Cpu/(89965:89972): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 80 parametro 2: RBX
+[INFO] 22:25:32:976 Cpu/(89965:89972): En CPU
+[INFO] 22:25:33:977 Cpu/(89965:89972): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation5
+
+[INFO] 22:25:33:977 Cpu/(89965:89972): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 22:25:33:977 Cpu/(89965:89972): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 96 parametro 2: RBX
+
+[INFO] 22:25:33:977 Cpu/(89965:89972): Realizado lectura del registro RBX con valor SonyPlaystation5on2
+[INFO] 22:25:33:977 Cpu/(89965:89972): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 1610616848 - Valor: SonyPlaystation5
+[INFO] 22:25:34:978 Cpu/(89965:89972): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 96 parametro 2: RBX
+[INFO] 22:25:34:978 Cpu/(89965:89972): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Consoles
+ 
+[INFO] 22:25:34:981 Cpu/(89965:89972): Recibi PCB id: 0
+[INFO] 22:25:34:981 Cpu/(89965:89972): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 22:25:34:982 Cpu/(89965:89972): Recibi PCB id: 1
+[INFO] 22:25:34:982 Cpu/(89965:89972): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 22:26:05:006 Cpu/(89965:89972): Recibi PCB id: 0
+[INFO] 22:26:05:006 Cpu/(89965:89972): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 22:26:05:006 Cpu/(89965:89972): Recibi PCB id: 0
+[INFO] 22:26:05:007 Cpu/(89965:89972): PID: 0 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 22:26:05:008 Cpu/(89965:89972): Recibi PCB id: 0
+[INFO] 22:26:05:008 Cpu/(89965:89972): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 22:26:05:008 Cpu/(89965:89972): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 1857281264 - Valor: 80
+
+[INFO] 22:26:05:009 Cpu/(89965:89972): Recibi PCB id: 1
+[INFO] 22:26:05:010 Cpu/(89965:89972): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 22:26:05:054 Cpu/(89965:89972): Recibi PCB id: 1
+[INFO] 22:26:05:054 Cpu/(89965:89972): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 22:26:05:141 Cpu/(89965:89972): Recibi PCB id: 1
+[INFO] 22:26:05:141 Cpu/(89965:89972): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 22:26:05:230 Cpu/(89965:89972): Recibi PCB id: 1
+[INFO] 22:26:05:230 Cpu/(89965:89972): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 22:26:05:318 Cpu/(89965:89972): Recibi PCB id: 1
+[INFO] 22:26:05:318 Cpu/(89965:89972): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 22:26:05:405 Cpu/(89965:89972): Recibi PCB id: 1
+[INFO] 22:26:05:405 Cpu/(89965:89972): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 22:26:05:450 Cpu/(89965:89972): Recibi PCB id: 1
+[INFO] 22:26:05:450 Cpu/(89965:89972): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 22:26:05:498 Cpu/(89965:89972): Recibi PCB id: 1
+[INFO] 22:26:05:498 Cpu/(89965:89972): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 22:26:36:030 Cpu/(89965:89972): Recibi PCB id: 1
+[INFO] 22:26:36:030 Cpu/(89965:89972): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 22:26:36:074 Cpu/(89965:89972): Recibi PCB id: 1
+[INFO] 22:26:36:074 Cpu/(89965:89972): PID: 1 - Ejecutando EXIT
+[INFO] 22:26:36:076 Cpu/(89965:89972): Recibi PCB id: 0
+[INFO] 22:26:36:076 Cpu/(89965:89972): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 22:26:36:077 Cpu/(89965:89972): Recibi PCB id: 0
+[INFO] 22:26:36:077 Cpu/(89965:89972): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 22:26:36:089 Cpu/(89965:89972): Recibi PCB id: 0
+[INFO] 22:26:36:089 Cpu/(89965:89972): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 22:26:36:121 Cpu/(89965:89972): Recibi PCB id: 0
+[INFO] 22:26:36:121 Cpu/(89965:89972): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 22:26:36:121 Cpu/(89965:89972): Recibi PCB id: 0
+[INFO] 22:26:36:121 Cpu/(89965:89972): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 22:26:36:121 Cpu/(89965:89972): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 1857281232 - Valor: 16
+
+[INFO] 22:26:37:145 Cpu/(89965:89972): Recibi PCB id: 0
+[INFO] 22:26:37:145 Cpu/(89965:89972): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 22:26:37:146 Cpu/(89965:89972): Recibi PCB id: 0
+[INFO] 22:26:37:146 Cpu/(89965:89972): PID: 0 - Ejecutando EXIT
+[INFO] 22:26:52:187 Cpu/(89965:89972): Se ha finalizado la conexion
+[INFO] 22:27:47:636 Cpu/(90003:90003): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 22:27:47:638 Cpu/(90003:90003): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:27:47:638 Cpu/(90003:90003): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:27:49:614 Cpu/(90003:90003): Cliente conectado (a CPU_SV)
+
+[INFO] 22:27:54:931 Cpu/(90003:90009): Recibi PCB id: 0
+[INFO] 22:27:54:931 Cpu/(90003:90009): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 22:27:54:933 Cpu/(90003:90009): Recibi PCB id: 0
+[INFO] 22:27:54:933 Cpu/(90003:90009): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 22:27:54:933 Cpu/(90003:90009): Recibi PCB id: 0
+[INFO] 22:27:54:933 Cpu/(90003:90009): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 22:27:54:933 Cpu/(90003:90009): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: -2032426768 - Valor: 16
+
+[INFO] 22:27:55:474 Cpu/(90003:90009): Recibi PCB id: 1
+[INFO] 22:27:55:474 Cpu/(90003:90009): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 22:28:12:952 Cpu/(90003:90009): Recibi PCB id: 2
+[INFO] 22:28:12:952 Cpu/(90003:90009): PID: 2 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 22:28:12:954 Cpu/(90003:90009): Recibi PCB id: 3
+[INFO] 22:28:12:954 Cpu/(90003:90009): PID: 3 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 22:28:12:957 Cpu/(90003:90009): Recibi PCB id: 0
+[INFO] 22:28:12:957 Cpu/(90003:90009): PID: 0 -  Listo para ejecutar MOV_IN 
+[INFO] 22:28:13:959 Cpu/(90003:90009): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 798869072 - Valor: Soni
+[INFO] 22:28:13:959 Cpu/(90003:90009): PID: 0 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 22:28:13:959 Cpu/(90003:90009): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 22:28:13:960 Cpu/(90003:90009): Recibi PCB id: 0
+[INFO] 22:28:13:961 Cpu/(90003:90009): PID: 0 - Ejecutando EXIT
+[INFO] 22:28:13:965 Cpu/(90003:90009): Recibi PCB id: 1
+[INFO] 22:28:13:966 Cpu/(90003:90009): PID: 1 - Listo para ejecutar F_SEEK 
+[INFO] 22:28:13:967 Cpu/(90003:90009): Recibi PCB id: 1
+[INFO] 22:28:13:967 Cpu/(90003:90009): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 22:28:13:968 Cpu/(90003:90009): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: -2032426768 - Valor: 16
+
+[INFO] 22:28:31:988 Cpu/(90003:90009): Recibi PCB id: 1
+[INFO] 22:28:31:988 Cpu/(90003:90009): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 22:33:21:319 Cpu/(90172:90172): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 22:33:21:320 Cpu/(90172:90172): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:33:21:320 Cpu/(90172:90172): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:33:23:383 Cpu/(90172:90172): Cliente conectado (a CPU_SV)
+
+[INFO] 22:33:29:003 Cpu/(90172:90178): Recibi PCB id: 0
+[INFO] 22:33:29:003 Cpu/(90172:90178): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 22:33:29:004 Cpu/(90172:90178): Recibi PCB id: 0
+[INFO] 22:33:29:004 Cpu/(90172:90178): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 22:33:29:004 Cpu/(90172:90178): Recibi PCB id: 0
+[INFO] 22:33:29:004 Cpu/(90172:90178): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 22:33:29:004 Cpu/(90172:90178): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 92690160 - Valor: 16
+
+[INFO] 22:33:29:537 Cpu/(90172:90178): Recibi PCB id: 1
+[INFO] 22:33:29:537 Cpu/(90172:90178): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 22:33:47:026 Cpu/(90172:90178): Recibi PCB id: 2
+[INFO] 22:33:47:026 Cpu/(90172:90178): PID: 2 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 22:33:47:028 Cpu/(90172:90178): Recibi PCB id: 3
+[INFO] 22:33:47:028 Cpu/(90172:90178): PID: 3 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 22:33:47:031 Cpu/(90172:90178): Recibi PCB id: 0
+[INFO] 22:33:47:031 Cpu/(90172:90178): PID: 0 -  Listo para ejecutar MOV_IN 
+[INFO] 22:33:48:032 Cpu/(90172:90178): estamos seteando de memoria: 16
+[INFO] 22:33:48:032 Cpu/(90172:90178): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 2042644048 - Valor: Soni
+[INFO] 22:33:48:032 Cpu/(90172:90178): PID: 0 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 22:33:48:033 Cpu/(90172:90178): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 22:33:48:033 Cpu/(90172:90178): Recibi PCB id: 0
+[INFO] 22:33:48:033 Cpu/(90172:90178): PID: 0 - Ejecutando EXIT
+[INFO] 22:33:48:036 Cpu/(90172:90178): Recibi PCB id: 1
+[INFO] 22:33:48:036 Cpu/(90172:90178): PID: 1 - Listo para ejecutar F_SEEK 
+[INFO] 22:33:48:036 Cpu/(90172:90178): Recibi PCB id: 1
+[INFO] 22:33:48:036 Cpu/(90172:90178): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 22:33:48:036 Cpu/(90172:90178): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: 92690160 - Valor: 16
+
+[INFO] 22:34:06:058 Cpu/(90172:90178): Recibi PCB id: 1
+[INFO] 22:34:06:058 Cpu/(90172:90178): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 22:34:07:059 Cpu/(90172:90178): estamos seteando de memoria: 16
+[INFO] 22:36:39:438 Cpu/(90314:90314): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 22:36:39:440 Cpu/(90314:90314): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:36:39:441 Cpu/(90314:90314): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:36:41:706 Cpu/(90314:90314): Cliente conectado (a CPU_SV)
+
+[INFO] 22:36:43:379 Cpu/(90314:90319): Recibi PCB id: 0
+[INFO] 22:36:43:380 Cpu/(90314:90319): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 22:36:43:380 Cpu/(90314:90319): Recibi PCB id: 0
+[INFO] 22:36:43:380 Cpu/(90314:90319): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 22:36:43:381 Cpu/(90314:90319): Recibi PCB id: 0
+[INFO] 22:36:43:381 Cpu/(90314:90319): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 22:36:43:381 Cpu/(90314:90319): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 690878752 - Valor: 16
+
+[INFO] 22:36:43:966 Cpu/(90314:90319): Recibi PCB id: 1
+[INFO] 22:36:43:966 Cpu/(90314:90319): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 22:37:01:401 Cpu/(90314:90319): Recibi PCB id: 2
+[INFO] 22:37:01:401 Cpu/(90314:90319): PID: 2 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 22:37:01:401 Cpu/(90314:90319): Recibi PCB id: 3
+[INFO] 22:37:01:401 Cpu/(90314:90319): PID: 3 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 22:37:01:402 Cpu/(90314:90319): Recibi PCB id: 0
+[INFO] 22:37:01:402 Cpu/(90314:90319): PID: 0 -  Listo para ejecutar MOV_IN 
+[INFO] 22:37:02:404 Cpu/(90314:90319): Dps de setear registro
+[INFO] 22:37:02:404 Cpu/(90314:90319): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: -1185921456 - Valor: Soni
+[INFO] 22:37:02:404 Cpu/(90314:90319): PID: 0 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 22:37:02:404 Cpu/(90314:90319): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 22:37:02:404 Cpu/(90314:90319): Recibi PCB id: 0
+[INFO] 22:37:02:404 Cpu/(90314:90319): PID: 0 - Ejecutando EXIT
+[INFO] 22:37:02:406 Cpu/(90314:90319): Recibi PCB id: 1
+[INFO] 22:37:02:406 Cpu/(90314:90319): PID: 1 - Listo para ejecutar F_SEEK 
+[INFO] 22:37:02:406 Cpu/(90314:90319): Recibi PCB id: 1
+[INFO] 22:37:02:406 Cpu/(90314:90319): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 22:37:02:406 Cpu/(90314:90319): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: 690878752 - Valor: 16
+
+[INFO] 22:37:20:429 Cpu/(90314:90319): Recibi PCB id: 1
+[INFO] 22:37:20:429 Cpu/(90314:90319): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 22:40:20:096 Cpu/(90493:90493): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 22:40:20:098 Cpu/(90493:90493): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:40:20:099 Cpu/(90493:90493): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:40:26:721 Cpu/(90493:90493): Cliente conectado (a CPU_SV)
+
+[INFO] 22:40:46:062 Cpu/(90493:90499): Recibi PCB id: 0
+[INFO] 22:40:46:062 Cpu/(90493:90499): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 22:40:46:062 Cpu/(90493:90499): Recibi PCB id: 0
+[INFO] 22:40:46:062 Cpu/(90493:90499): En CPU
+[INFO] 22:40:47:063 Cpu/(90493:90499): PID: 0 - Ejecutando SET parametro 1: RAX parametro 2: SonicTheHedgehog
+
+[INFO] 22:40:47:063 Cpu/(90493:90499): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 22:40:47:063 Cpu/(90493:90499): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 0 parametro 2: RAX
+
+[INFO] 22:40:47:064 Cpu/(90493:90499): Realizado lectura del registro RAX con valor SonicTheHedgehog
+[INFO] 22:40:47:064 Cpu/(90493:90499): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -268431440 - Valor: SonicTheHedgehog
+[INFO] 22:40:48:064 Cpu/(90493:90499): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 0 parametro 2: RAX
+[INFO] 22:40:48:064 Cpu/(90493:90499): En CPU
+[INFO] 22:40:49:065 Cpu/(90493:90499): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation1
+
+[INFO] 22:40:49:065 Cpu/(90493:90499): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 22:40:49:065 Cpu/(90493:90499): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 32 parametro 2: RBX
+
+[INFO] 22:40:49:065 Cpu/(90493:90499): Realizado lectura del registro RBX con valor SonyPlaystation1
+[INFO] 22:40:49:065 Cpu/(90493:90499): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -268431408 - Valor: SonyPlaystation1
+[INFO] 22:40:50:066 Cpu/(90493:90499): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 32 parametro 2: RBX
+[INFO] 22:40:50:066 Cpu/(90493:90499): En CPU
+[INFO] 22:40:51:066 Cpu/(90493:90499): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation2
+
+[INFO] 22:40:51:067 Cpu/(90493:90499): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 22:40:51:067 Cpu/(90493:90499): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 48 parametro 2: RBX
+
+[INFO] 22:40:51:067 Cpu/(90493:90499): Realizado lectura del registro RBX con valor SonyPlaystation2
+[INFO] 22:40:51:067 Cpu/(90493:90499): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -268431392 - Valor: SonyPlaystation2
+[INFO] 22:40:52:068 Cpu/(90493:90499): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 48 parametro 2: RBX
+[INFO] 22:40:52:068 Cpu/(90493:90499): En CPU
+[INFO] 22:40:53:068 Cpu/(90493:90499): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation3
+
+[INFO] 22:40:53:069 Cpu/(90493:90499): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 22:40:53:069 Cpu/(90493:90499): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 64 parametro 2: RBX
+
+[INFO] 22:40:53:069 Cpu/(90493:90499): Realizado lectura del registro RBX con valor SonyPlaystation3
+[INFO] 22:40:53:069 Cpu/(90493:90499): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -268431376 - Valor: SonyPlaystation3
+[INFO] 22:40:54:070 Cpu/(90493:90499): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 64 parametro 2: RBX
+[INFO] 22:40:54:070 Cpu/(90493:90499): En CPU
+[INFO] 22:40:55:070 Cpu/(90493:90499): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation4
+
+[INFO] 22:40:55:070 Cpu/(90493:90499): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 22:40:55:070 Cpu/(90493:90499): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 80 parametro 2: RBX
+
+[INFO] 22:40:55:070 Cpu/(90493:90499): Realizado lectura del registro RBX con valor SonyPlaystation4
+[INFO] 22:40:55:070 Cpu/(90493:90499): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -268431360 - Valor: SonyPlaystation4
+[INFO] 22:40:56:071 Cpu/(90493:90499): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 80 parametro 2: RBX
+[INFO] 22:40:56:071 Cpu/(90493:90499): En CPU
+[INFO] 22:40:57:072 Cpu/(90493:90499): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation5
+
+[INFO] 22:40:57:072 Cpu/(90493:90499): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 22:40:57:072 Cpu/(90493:90499): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 96 parametro 2: RBX
+
+[INFO] 22:40:57:072 Cpu/(90493:90499): Realizado lectura del registro RBX con valor SonyPlaystation5on2
+[INFO] 22:40:57:072 Cpu/(90493:90499): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -268431344 - Valor: SonyPlaystation5
+[INFO] 22:40:58:074 Cpu/(90493:90499): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 96 parametro 2: RBX
+[INFO] 22:40:58:074 Cpu/(90493:90499): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Consoles
+ 
+[INFO] 22:40:58:075 Cpu/(90493:90499): Recibi PCB id: 0
+[INFO] 22:40:58:075 Cpu/(90493:90499): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 22:40:58:076 Cpu/(90493:90499): Recibi PCB id: 1
+[INFO] 22:40:58:076 Cpu/(90493:90499): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 22:41:28:111 Cpu/(90493:90499): Recibi PCB id: 0
+[INFO] 22:41:28:111 Cpu/(90493:90499): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 22:41:28:111 Cpu/(90493:90499): Recibi PCB id: 0
+[INFO] 22:41:28:111 Cpu/(90493:90499): PID: 0 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 22:41:28:112 Cpu/(90493:90499): Recibi PCB id: 0
+[INFO] 22:41:28:112 Cpu/(90493:90499): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 22:41:28:112 Cpu/(90493:90499): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 1223819024 - Valor: 80
+
+[INFO] 22:41:28:113 Cpu/(90493:90499): Recibi PCB id: 1
+[INFO] 22:41:28:113 Cpu/(90493:90499): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 22:41:28:158 Cpu/(90493:90499): Recibi PCB id: 1
+[INFO] 22:41:28:158 Cpu/(90493:90499): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 22:41:28:246 Cpu/(90493:90499): Recibi PCB id: 1
+[INFO] 22:41:28:246 Cpu/(90493:90499): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 22:41:28:333 Cpu/(90493:90499): Recibi PCB id: 1
+[INFO] 22:41:28:333 Cpu/(90493:90499): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 22:41:28:421 Cpu/(90493:90499): Recibi PCB id: 1
+[INFO] 22:41:28:421 Cpu/(90493:90499): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 22:41:28:509 Cpu/(90493:90499): Recibi PCB id: 1
+[INFO] 22:41:28:509 Cpu/(90493:90499): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 22:41:28:554 Cpu/(90493:90499): Recibi PCB id: 1
+[INFO] 22:41:28:554 Cpu/(90493:90499): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 22:41:28:597 Cpu/(90493:90499): Recibi PCB id: 1
+[INFO] 22:41:28:597 Cpu/(90493:90499): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 22:41:59:142 Cpu/(90493:90499): Recibi PCB id: 1
+[INFO] 22:41:59:142 Cpu/(90493:90499): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 22:41:59:186 Cpu/(90493:90499): Recibi PCB id: 1
+[INFO] 22:41:59:186 Cpu/(90493:90499): PID: 1 - Ejecutando EXIT
+[INFO] 22:41:59:188 Cpu/(90493:90499): Recibi PCB id: 0
+[INFO] 22:41:59:188 Cpu/(90493:90499): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 22:41:59:189 Cpu/(90493:90499): Recibi PCB id: 0
+[INFO] 22:41:59:189 Cpu/(90493:90499): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 22:41:59:195 Cpu/(90493:90499): Recibi PCB id: 0
+[INFO] 22:41:59:195 Cpu/(90493:90499): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 22:41:59:214 Cpu/(90493:90499): Recibi PCB id: 0
+[INFO] 22:41:59:216 Cpu/(90493:90499): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 22:41:59:216 Cpu/(90493:90499): Recibi PCB id: 0
+[INFO] 22:41:59:216 Cpu/(90493:90499): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 22:41:59:217 Cpu/(90493:90499): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 1223818992 - Valor: 16
+
+[INFO] 22:42:00:238 Cpu/(90493:90499): Recibi PCB id: 0
+[INFO] 22:42:00:238 Cpu/(90493:90499): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 22:42:00:239 Cpu/(90493:90499): Recibi PCB id: 0
+[INFO] 22:42:00:239 Cpu/(90493:90499): PID: 0 - Ejecutando EXIT
+[INFO] 22:42:34:846 Cpu/(90493:90499): Se ha finalizado la conexion
+[INFO] 22:42:43:287 Cpu/(90516:90516): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 22:42:43:288 Cpu/(90516:90516): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:42:43:288 Cpu/(90516:90516): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:42:46:636 Cpu/(90516:90516): Cliente conectado (a CPU_SV)
+
+[INFO] 22:42:55:039 Cpu/(90516:90521): Recibi PCB id: 0
+[INFO] 22:42:55:039 Cpu/(90516:90521): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 22:42:55:040 Cpu/(90516:90521): Recibi PCB id: 0
+[INFO] 22:42:55:040 Cpu/(90516:90521): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 22:42:55:040 Cpu/(90516:90521): Recibi PCB id: 0
+[INFO] 22:42:55:040 Cpu/(90516:90521): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 22:42:55:040 Cpu/(90516:90521): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 596620016 - Valor: 16
+
+[INFO] 22:42:55:590 Cpu/(90516:90521): Recibi PCB id: 1
+[INFO] 22:42:55:590 Cpu/(90516:90521): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 22:43:13:060 Cpu/(90516:90521): Recibi PCB id: 2
+[INFO] 22:43:13:060 Cpu/(90516:90521): PID: 2 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 22:43:13:061 Cpu/(90516:90521): Recibi PCB id: 3
+[INFO] 22:43:13:061 Cpu/(90516:90521): PID: 3 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 22:43:13:062 Cpu/(90516:90521): Recibi PCB id: 0
+[INFO] 22:43:13:062 Cpu/(90516:90521): PID: 0 -  Listo para ejecutar MOV_IN 
+[ERROR] 22:43:14:063 Cpu/(90516:90521): Dps de setear registro
+[INFO] 22:43:14:064 Cpu/(90516:90521): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: -1124219312 - Valor: Soni
+[INFO] 22:43:14:064 Cpu/(90516:90521): PID: 0 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 22:43:14:064 Cpu/(90516:90521): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 22:43:14:065 Cpu/(90516:90521): Recibi PCB id: 0
+[INFO] 22:43:14:065 Cpu/(90516:90521): PID: 0 - Ejecutando EXIT
+[INFO] 22:43:14:069 Cpu/(90516:90521): Recibi PCB id: 1
+[INFO] 22:43:14:069 Cpu/(90516:90521): PID: 1 - Listo para ejecutar F_SEEK 
+[INFO] 22:43:14:070 Cpu/(90516:90521): Recibi PCB id: 1
+[INFO] 22:43:14:070 Cpu/(90516:90521): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 22:43:14:072 Cpu/(90516:90521): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: 596620016 - Valor: 16
+
+[INFO] 22:43:32:093 Cpu/(90516:90521): Recibi PCB id: 1
+[INFO] 22:43:32:094 Cpu/(90516:90521): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 22:46:52:760 Cpu/(90576:90576): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 22:46:52:763 Cpu/(90576:90576): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:46:52:764 Cpu/(90576:90576): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:46:54:363 Cpu/(90576:90576): Cliente conectado (a CPU_SV)
+
+[INFO] 22:47:01:141 Cpu/(90576:90581): Recibi PCB id: 0
+[INFO] 22:47:01:141 Cpu/(90576:90581): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 22:47:01:142 Cpu/(90576:90581): Recibi PCB id: 0
+[INFO] 22:47:01:142 Cpu/(90576:90581): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 22:47:01:142 Cpu/(90576:90581): Recibi PCB id: 0
+[INFO] 22:47:01:142 Cpu/(90576:90581): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 22:47:01:142 Cpu/(90576:90581): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 18245616 - Valor: 16
+
+[INFO] 22:47:01:910 Cpu/(90576:90581): Recibi PCB id: 1
+[INFO] 22:47:01:910 Cpu/(90576:90581): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 22:47:19:163 Cpu/(90576:90581): Recibi PCB id: 2
+[INFO] 22:47:19:163 Cpu/(90576:90581): PID: 2 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 22:47:19:164 Cpu/(90576:90581): Recibi PCB id: 3
+[INFO] 22:47:19:164 Cpu/(90576:90581): PID: 3 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 22:47:19:165 Cpu/(90576:90581): Recibi PCB id: 0
+[INFO] 22:47:19:165 Cpu/(90576:90581): PID: 0 -  Listo para ejecutar MOV_IN 
+[ERROR] 22:47:20:165 Cpu/(90576:90581): Dps de setear registro
+[INFO] 22:47:20:165 Cpu/(90576:90581): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: -641939888 - Valor: Soni
+[INFO] 22:47:20:166 Cpu/(90576:90581): PID: 0 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 22:47:20:166 Cpu/(90576:90581): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 22:47:20:166 Cpu/(90576:90581): Recibi PCB id: 0
+[INFO] 22:47:20:166 Cpu/(90576:90581): PID: 0 - Ejecutando EXIT
+[INFO] 22:47:20:168 Cpu/(90576:90581): Recibi PCB id: 1
+[INFO] 22:47:20:168 Cpu/(90576:90581): PID: 1 - Listo para ejecutar F_SEEK 
+[INFO] 22:47:20:168 Cpu/(90576:90581): Recibi PCB id: 1
+[INFO] 22:47:20:168 Cpu/(90576:90581): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 22:47:20:168 Cpu/(90576:90581): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: 18245616 - Valor: 16
+
+[INFO] 22:47:38:192 Cpu/(90576:90581): Recibi PCB id: 1
+[INFO] 22:47:38:193 Cpu/(90576:90581): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 22:57:25:593 Cpu/(90784:90784): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 22:57:25:594 Cpu/(90784:90784): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 22:57:25:598 Cpu/(90784:90784): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 22:57:36:845 Cpu/(90784:90784): Cliente conectado (a CPU_SV)
+
+[INFO] 22:57:45:280 Cpu/(90784:90800): Recibi PCB id: 0
+[INFO] 22:57:45:281 Cpu/(90784:90800): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 22:57:45:282 Cpu/(90784:90800): Recibi PCB id: 0
+[INFO] 22:57:45:282 Cpu/(90784:90800): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 22:57:45:282 Cpu/(90784:90800): Recibi PCB id: 0
+[INFO] 22:57:45:282 Cpu/(90784:90800): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 22:57:45:283 Cpu/(90784:90800): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: -8656 - Valor: 16
+
+[INFO] 22:57:45:946 Cpu/(90784:90800): Recibi PCB id: 1
+[INFO] 22:57:45:946 Cpu/(90784:90800): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 22:58:03:302 Cpu/(90784:90800): Recibi PCB id: 2
+[INFO] 22:58:03:303 Cpu/(90784:90800): PID: 2 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 22:58:03:303 Cpu/(90784:90800): Recibi PCB id: 3
+[INFO] 22:58:03:303 Cpu/(90784:90800): PID: 3 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 22:58:03:304 Cpu/(90784:90800): Recibi PCB id: 0
+[INFO] 22:58:03:304 Cpu/(90784:90800): PID: 0 -  Listo para ejecutar MOV_IN 
+[ERROR] 22:58:04:306 Cpu/(90784:90800): Dps de setear registro
+[INFO] 22:58:04:306 Cpu/(90784:90800): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: -136915376 - Valor: Soni
+[INFO] 22:58:04:306 Cpu/(90784:90800): PID: 0 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 22:58:04:306 Cpu/(90784:90800): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 22:58:04:307 Cpu/(90784:90800): Recibi PCB id: 0
+[INFO] 22:58:04:307 Cpu/(90784:90800): PID: 0 - Ejecutando EXIT
+[INFO] 22:58:04:308 Cpu/(90784:90800): Recibi PCB id: 1
+[INFO] 22:58:04:308 Cpu/(90784:90800): PID: 1 - Listo para ejecutar F_SEEK 
+[INFO] 22:58:04:309 Cpu/(90784:90800): Recibi PCB id: 1
+[INFO] 22:58:04:309 Cpu/(90784:90800): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 22:58:04:309 Cpu/(90784:90800): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: -8656 - Valor: 16
+
+[INFO] 22:58:22:330 Cpu/(90784:90800): Recibi PCB id: 1
+[INFO] 22:58:22:331 Cpu/(90784:90800): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 23:09:41:759 Cpu/(90912:90912): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 23:09:41:761 Cpu/(90912:90912): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:09:41:761 Cpu/(90912:90912): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 23:09:45:330 Cpu/(90912:90912): Cliente conectado (a CPU_SV)
+
+[INFO] 23:09:53:438 Cpu/(90912:90917): Recibi PCB id: 0
+[INFO] 23:09:53:438 Cpu/(90912:90917): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 23:09:53:439 Cpu/(90912:90917): Recibi PCB id: 0
+[INFO] 23:09:53:439 Cpu/(90912:90917): En CPU
+[INFO] 23:09:54:439 Cpu/(90912:90917): PID: 0 - Ejecutando SET parametro 1: RAX parametro 2: SonicTheHedgehog
+
+[INFO] 23:09:54:440 Cpu/(90912:90917): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:09:54:440 Cpu/(90912:90917): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 0 parametro 2: RAX
+
+[INFO] 23:09:54:440 Cpu/(90912:90917): Realizado lectura del registro RAX con valor SonicTheHedgehog
+[INFO] 23:09:54:440 Cpu/(90912:90917): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -134213712 - Valor: SonicTheHedgehog
+[INFO] 23:09:55:441 Cpu/(90912:90917): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 0 parametro 2: RAX
+[INFO] 23:09:55:441 Cpu/(90912:90917): En CPU
+[INFO] 23:09:56:441 Cpu/(90912:90917): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation1
+
+[INFO] 23:09:56:446 Cpu/(90912:90917): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:09:56:446 Cpu/(90912:90917): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 32 parametro 2: RBX
+
+[INFO] 23:09:56:446 Cpu/(90912:90917): Realizado lectura del registro RBX con valor SonyPlaystation1
+[INFO] 23:09:56:447 Cpu/(90912:90917): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -134213680 - Valor: SonyPlaystation1
+[INFO] 23:09:57:449 Cpu/(90912:90917): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 32 parametro 2: RBX
+[INFO] 23:09:57:449 Cpu/(90912:90917): En CPU
+[INFO] 23:09:58:449 Cpu/(90912:90917): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation2
+
+[INFO] 23:09:58:449 Cpu/(90912:90917): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:09:58:450 Cpu/(90912:90917): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 48 parametro 2: RBX
+
+[INFO] 23:09:58:450 Cpu/(90912:90917): Realizado lectura del registro RBX con valor SonyPlaystation2
+[INFO] 23:09:58:450 Cpu/(90912:90917): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -134213664 - Valor: SonyPlaystation2
+[INFO] 23:09:59:451 Cpu/(90912:90917): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 48 parametro 2: RBX
+[INFO] 23:09:59:451 Cpu/(90912:90917): En CPU
+[INFO] 23:10:00:451 Cpu/(90912:90917): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation3
+
+[INFO] 23:10:00:452 Cpu/(90912:90917): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:10:00:452 Cpu/(90912:90917): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 64 parametro 2: RBX
+
+[INFO] 23:10:00:452 Cpu/(90912:90917): Realizado lectura del registro RBX con valor SonyPlaystation3
+[INFO] 23:10:00:452 Cpu/(90912:90917): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -134213648 - Valor: SonyPlaystation3
+[INFO] 23:10:01:453 Cpu/(90912:90917): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 64 parametro 2: RBX
+[INFO] 23:10:01:453 Cpu/(90912:90917): En CPU
+[INFO] 23:10:02:453 Cpu/(90912:90917): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation4
+
+[INFO] 23:10:02:454 Cpu/(90912:90917): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:10:02:454 Cpu/(90912:90917): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 80 parametro 2: RBX
+
+[INFO] 23:10:02:455 Cpu/(90912:90917): Realizado lectura del registro RBX con valor SonyPlaystation4
+[INFO] 23:10:02:455 Cpu/(90912:90917): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -134213632 - Valor: SonyPlaystation4
+[INFO] 23:10:03:457 Cpu/(90912:90917): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 80 parametro 2: RBX
+[INFO] 23:10:03:457 Cpu/(90912:90917): En CPU
+[INFO] 23:10:04:458 Cpu/(90912:90917): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation5
+
+[INFO] 23:10:04:458 Cpu/(90912:90917): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:10:04:458 Cpu/(90912:90917): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 96 parametro 2: RBX
+
+[INFO] 23:10:04:458 Cpu/(90912:90917): Realizado lectura del registro RBX con valor SonyPlaystation5on2
+[INFO] 23:10:04:459 Cpu/(90912:90917): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -134213616 - Valor: SonyPlaystation5
+[INFO] 23:10:05:460 Cpu/(90912:90917): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 96 parametro 2: RBX
+[INFO] 23:10:05:460 Cpu/(90912:90917): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Consoles
+ 
+[INFO] 23:10:05:461 Cpu/(90912:90917): Recibi PCB id: 0
+[INFO] 23:10:05:461 Cpu/(90912:90917): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 23:10:05:462 Cpu/(90912:90917): Recibi PCB id: 1
+[INFO] 23:10:05:462 Cpu/(90912:90917): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 23:10:35:484 Cpu/(90912:90917): Recibi PCB id: 0
+[INFO] 23:10:35:484 Cpu/(90912:90917): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 23:10:35:485 Cpu/(90912:90917): Recibi PCB id: 0
+[INFO] 23:10:35:485 Cpu/(90912:90917): PID: 0 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 23:10:35:485 Cpu/(90912:90917): Recibi PCB id: 0
+[INFO] 23:10:35:485 Cpu/(90912:90917): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 23:10:35:485 Cpu/(90912:90917): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -1801569600 - Valor: 80
+
+[INFO] 23:10:35:486 Cpu/(90912:90917): Recibi PCB id: 1
+[INFO] 23:10:35:486 Cpu/(90912:90917): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 23:10:35:530 Cpu/(90912:90917): Recibi PCB id: 1
+[INFO] 23:10:35:530 Cpu/(90912:90917): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 23:10:35:617 Cpu/(90912:90917): Recibi PCB id: 1
+[INFO] 23:10:35:618 Cpu/(90912:90917): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 23:10:35:706 Cpu/(90912:90917): Recibi PCB id: 1
+[INFO] 23:10:35:706 Cpu/(90912:90917): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 23:10:35:793 Cpu/(90912:90917): Recibi PCB id: 1
+[INFO] 23:10:35:793 Cpu/(90912:90917): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 23:10:35:882 Cpu/(90912:90917): Recibi PCB id: 1
+[INFO] 23:10:35:882 Cpu/(90912:90917): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 23:10:35:926 Cpu/(90912:90917): Recibi PCB id: 1
+[INFO] 23:10:35:926 Cpu/(90912:90917): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 23:10:35:969 Cpu/(90912:90917): Recibi PCB id: 1
+[INFO] 23:10:35:969 Cpu/(90912:90917): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 23:11:06:509 Cpu/(90912:90917): Recibi PCB id: 1
+[INFO] 23:11:06:509 Cpu/(90912:90917): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 23:11:06:551 Cpu/(90912:90917): Recibi PCB id: 1
+[INFO] 23:11:06:551 Cpu/(90912:90917): PID: 1 - Ejecutando EXIT
+[INFO] 23:11:06:555 Cpu/(90912:90917): Recibi PCB id: 0
+[INFO] 23:11:06:555 Cpu/(90912:90917): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 23:11:06:555 Cpu/(90912:90917): Recibi PCB id: 0
+[INFO] 23:11:06:555 Cpu/(90912:90917): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 23:11:06:559 Cpu/(90912:90917): Recibi PCB id: 0
+[INFO] 23:11:06:559 Cpu/(90912:90917): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 23:11:06:578 Cpu/(90912:90917): Recibi PCB id: 0
+[INFO] 23:11:06:578 Cpu/(90912:90917): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 23:11:06:578 Cpu/(90912:90917): Recibi PCB id: 0
+[INFO] 23:11:06:578 Cpu/(90912:90917): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 23:11:06:578 Cpu/(90912:90917): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -1801569632 - Valor: 16
+
+[INFO] 23:11:07:599 Cpu/(90912:90917): Recibi PCB id: 0
+[INFO] 23:11:07:599 Cpu/(90912:90917): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 23:11:07:600 Cpu/(90912:90917): Recibi PCB id: 0
+[INFO] 23:11:07:600 Cpu/(90912:90917): PID: 0 - Ejecutando EXIT
+[INFO] 23:11:46:209 Cpu/(90912:90917): Se ha finalizado la conexion
+[INFO] 23:11:55:046 Cpu/(90933:90933): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 23:11:55:048 Cpu/(90933:90933): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:11:55:049 Cpu/(90933:90933): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 23:11:57:158 Cpu/(90933:90933): Cliente conectado (a CPU_SV)
+
+[INFO] 23:12:46:426 Cpu/(90933:90938): Recibi PCB id: 0
+[INFO] 23:12:46:426 Cpu/(90933:90938): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 23:12:46:427 Cpu/(90933:90938): Recibi PCB id: 0
+[INFO] 23:12:46:427 Cpu/(90933:90938): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 23:12:46:427 Cpu/(90933:90938): Recibi PCB id: 0
+[INFO] 23:12:46:427 Cpu/(90933:90938): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 23:12:46:427 Cpu/(90933:90938): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: -353982464 - Valor: 16
+
+[INFO] 23:12:46:942 Cpu/(90933:90938): Recibi PCB id: 1
+[INFO] 23:12:46:942 Cpu/(90933:90938): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 23:13:04:449 Cpu/(90933:90938): Recibi PCB id: 2
+[INFO] 23:13:04:449 Cpu/(90933:90938): PID: 2 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 23:13:04:450 Cpu/(90933:90938): Recibi PCB id: 3
+[INFO] 23:13:04:450 Cpu/(90933:90938): PID: 3 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 23:13:04:450 Cpu/(90933:90938): Recibi PCB id: 0
+[INFO] 23:13:04:450 Cpu/(90933:90938): PID: 0 -  Listo para ejecutar MOV_IN 
+[ERROR] 23:13:05:451 Cpu/(90933:90938): Dps de setear registro
+[INFO] 23:13:05:451 Cpu/(90933:90938): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: -2058402224 - Valor: Soni
+[INFO] 23:13:05:451 Cpu/(90933:90938): PID: 0 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 23:13:05:451 Cpu/(90933:90938): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 23:13:05:452 Cpu/(90933:90938): Recibi PCB id: 0
+[INFO] 23:13:05:452 Cpu/(90933:90938): PID: 0 - Ejecutando EXIT
+[INFO] 23:13:05:453 Cpu/(90933:90938): Recibi PCB id: 1
+[INFO] 23:13:05:453 Cpu/(90933:90938): PID: 1 - Listo para ejecutar F_SEEK 
+[INFO] 23:13:05:454 Cpu/(90933:90938): Recibi PCB id: 1
+[INFO] 23:13:05:454 Cpu/(90933:90938): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 23:13:05:454 Cpu/(90933:90938): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: -353982464 - Valor: 16
+
+[INFO] 23:13:23:474 Cpu/(90933:90938): Recibi PCB id: 1
+[INFO] 23:13:23:474 Cpu/(90933:90938): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 23:21:01:579 Cpu/(91218:91218): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 23:21:01:580 Cpu/(91218:91218): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:21:01:580 Cpu/(91218:91218): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 23:21:06:555 Cpu/(91218:91218): Cliente conectado (a CPU_SV)
+
+[INFO] 23:21:10:154 Cpu/(91218:91225): Recibi PCB id: 0
+[INFO] 23:21:10:155 Cpu/(91218:91225): PID: 0 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 23:21:11:375 Cpu/(91218:91225): Recibi PCB id: 1
+[INFO] 23:21:11:375 Cpu/(91218:91225): PID: 1 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 23:21:11:375 Cpu/(91218:91225): Recibi PCB id: 1
+[INFO] 23:21:11:375 Cpu/(91218:91225): En CPU
+[INFO] 23:21:12:376 Cpu/(91218:91225): PID: 1 - Ejecutando SET parametro 1: RAX parametro 2: SonicTheHedgehog
+
+[INFO] 23:21:12:376 Cpu/(91218:91225): PID: 1 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:21:12:376 Cpu/(91218:91225): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 0 parametro 2: RAX
+
+[INFO] 23:21:12:376 Cpu/(91218:91225): Realizado lectura del registro RAX con valor SonicTheHedgehog
+[INFO] 23:21:12:377 Cpu/(91218:91225): PID: 1 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 0 - Valor: SonicTheHedgehog
+[INFO] 23:21:13:377 Cpu/(91218:91225): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 0 parametro 2: RAX
+[INFO] 23:21:13:377 Cpu/(91218:91225): En CPU
+[INFO] 23:21:14:378 Cpu/(91218:91225): PID: 1 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation1
+
+[INFO] 23:21:14:378 Cpu/(91218:91225): PID: 1 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:21:14:378 Cpu/(91218:91225): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 32 parametro 2: RBX
+
+[INFO] 23:21:14:378 Cpu/(91218:91225): Realizado lectura del registro RBX con valor SonyPlaystation1
+[INFO] 23:21:14:378 Cpu/(91218:91225): PID: 1 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 32 - Valor: SonyPlaystation1
+[INFO] 23:21:15:379 Cpu/(91218:91225): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 32 parametro 2: RBX
+[INFO] 23:21:15:379 Cpu/(91218:91225): En CPU
+[INFO] 23:21:16:380 Cpu/(91218:91225): PID: 1 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation2
+
+[INFO] 23:21:16:381 Cpu/(91218:91225): PID: 1 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:21:16:381 Cpu/(91218:91225): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 48 parametro 2: RBX
+
+[INFO] 23:21:16:381 Cpu/(91218:91225): Realizado lectura del registro RBX con valor SonyPlaystation2
+[INFO] 23:21:16:381 Cpu/(91218:91225): PID: 1 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 48 - Valor: SonyPlaystation2
+[INFO] 23:21:17:382 Cpu/(91218:91225): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 48 parametro 2: RBX
+[INFO] 23:21:17:382 Cpu/(91218:91225): En CPU
+[INFO] 23:21:18:383 Cpu/(91218:91225): PID: 1 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation3
+
+[INFO] 23:21:18:383 Cpu/(91218:91225): PID: 1 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:21:18:383 Cpu/(91218:91225): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 64 parametro 2: RBX
+
+[INFO] 23:21:18:384 Cpu/(91218:91225): Realizado lectura del registro RBX con valor SonyPlaystation3
+[INFO] 23:21:18:384 Cpu/(91218:91225): PID: 1 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 64 - Valor: SonyPlaystation3
+[INFO] 23:21:19:384 Cpu/(91218:91225): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 64 parametro 2: RBX
+[INFO] 23:21:19:384 Cpu/(91218:91225): En CPU
+[INFO] 23:21:20:384 Cpu/(91218:91225): PID: 1 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation4
+
+[INFO] 23:21:20:385 Cpu/(91218:91225): PID: 1 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:21:20:385 Cpu/(91218:91225): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 80 parametro 2: RBX
+
+[INFO] 23:21:20:385 Cpu/(91218:91225): Realizado lectura del registro RBX con valor SonyPlaystation4ion1
+
+[INFO] 23:21:20:385 Cpu/(91218:91225): PID: 1 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 80 - Valor: SonyPlaystation4
+[INFO] 23:21:21:386 Cpu/(91218:91225): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 80 parametro 2: RBX
+[INFO] 23:21:21:386 Cpu/(91218:91225): En CPU
+[INFO] 23:21:22:386 Cpu/(91218:91225): PID: 1 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation5
+
+[INFO] 23:21:22:389 Cpu/(91218:91225): PID: 1 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:21:22:389 Cpu/(91218:91225): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 96 parametro 2: RBX
+
+[INFO] 23:21:22:389 Cpu/(91218:91225): Realizado lectura del registro RBX con valor SonyPlaystation5
+[INFO] 23:21:22:389 Cpu/(91218:91225): PID: 1 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 96 - Valor: SonyPlaystation5
+[INFO] 23:21:37:320 Cpu/(91247:91247): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 23:21:37:322 Cpu/(91247:91247): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:21:37:323 Cpu/(91247:91247): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 23:21:38:708 Cpu/(91247:91247): Cliente conectado (a CPU_SV)
+
+[INFO] 23:21:41:115 Cpu/(91247:91252): Recibi PCB id: 0
+[INFO] 23:21:41:116 Cpu/(91247:91252): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 23:21:41:116 Cpu/(91247:91252): Recibi PCB id: 0
+[INFO] 23:21:41:116 Cpu/(91247:91252): En CPU
+[INFO] 23:21:42:117 Cpu/(91247:91252): PID: 0 - Ejecutando SET parametro 1: RAX parametro 2: SonicTheHedgehog
+
+[INFO] 23:21:42:117 Cpu/(91247:91252): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:21:42:117 Cpu/(91247:91252): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 0 parametro 2: RAX
+
+[INFO] 23:21:42:117 Cpu/(91247:91252): Realizado lectura del registro RAX con valor SonicTheHedgehog
+[INFO] 23:21:42:117 Cpu/(91247:91252): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 0 - Valor: SonicTheHedgehog
+[INFO] 23:21:43:119 Cpu/(91247:91252): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 0 parametro 2: RAX
+[INFO] 23:21:43:119 Cpu/(91247:91252): En CPU
+[INFO] 23:21:44:120 Cpu/(91247:91252): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation1
+
+[INFO] 23:21:44:120 Cpu/(91247:91252): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:21:44:121 Cpu/(91247:91252): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 32 parametro 2: RBX
+
+[INFO] 23:21:44:121 Cpu/(91247:91252): Realizado lectura del registro RBX con valor SonyPlaystation1
+[INFO] 23:21:44:122 Cpu/(91247:91252): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 32 - Valor: SonyPlaystation1
+[INFO] 23:21:45:124 Cpu/(91247:91252): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 32 parametro 2: RBX
+[INFO] 23:21:45:124 Cpu/(91247:91252): En CPU
+[INFO] 23:21:46:124 Cpu/(91247:91252): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation2
+
+[INFO] 23:21:46:124 Cpu/(91247:91252): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:21:46:124 Cpu/(91247:91252): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 48 parametro 2: RBX
+
+[INFO] 23:21:46:124 Cpu/(91247:91252): Realizado lectura del registro RBX con valor SonyPlaystation2
+[INFO] 23:21:46:125 Cpu/(91247:91252): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 48 - Valor: SonyPlaystation2
+[INFO] 23:21:47:126 Cpu/(91247:91252): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 48 parametro 2: RBX
+[INFO] 23:21:47:126 Cpu/(91247:91252): En CPU
+[INFO] 23:21:48:127 Cpu/(91247:91252): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation3
+
+[INFO] 23:21:48:127 Cpu/(91247:91252): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:21:48:127 Cpu/(91247:91252): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 64 parametro 2: RBX
+
+[INFO] 23:21:48:127 Cpu/(91247:91252): Realizado lectura del registro RBX con valor SonyPlaystation3
+[INFO] 23:21:48:128 Cpu/(91247:91252): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 64 - Valor: SonyPlaystation3
+[INFO] 23:21:49:129 Cpu/(91247:91252): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 64 parametro 2: RBX
+[INFO] 23:21:49:129 Cpu/(91247:91252): En CPU
+[INFO] 23:21:50:130 Cpu/(91247:91252): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation4
+
+[INFO] 23:21:50:130 Cpu/(91247:91252): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:21:50:130 Cpu/(91247:91252): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 80 parametro 2: RBX
+
+[INFO] 23:21:50:130 Cpu/(91247:91252): Realizado lectura del registro RBX con valor SonyPlaystation4
+[INFO] 23:21:50:130 Cpu/(91247:91252): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 80 - Valor: SonyPlaystation4
+[INFO] 23:21:51:132 Cpu/(91247:91252): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 80 parametro 2: RBX
+[INFO] 23:21:51:132 Cpu/(91247:91252): En CPU
+[INFO] 23:21:52:132 Cpu/(91247:91252): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation5
+
+[INFO] 23:21:52:133 Cpu/(91247:91252): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:21:52:133 Cpu/(91247:91252): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 96 parametro 2: RBX
+
+[INFO] 23:21:52:133 Cpu/(91247:91252): Realizado lectura del registro RBX con valor SonyPlaystation5ion2
+
+[INFO] 23:21:52:133 Cpu/(91247:91252): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 96 - Valor: SonyPlaystation5
+[INFO] 23:21:53:134 Cpu/(91247:91252): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 96 parametro 2: RBX
+[INFO] 23:21:53:134 Cpu/(91247:91252): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Consoles
+ 
+[INFO] 23:21:53:136 Cpu/(91247:91252): Recibi PCB id: 0
+[INFO] 23:21:53:136 Cpu/(91247:91252): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 23:21:53:137 Cpu/(91247:91252): Recibi PCB id: 1
+[INFO] 23:21:53:137 Cpu/(91247:91252): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 23:22:23:160 Cpu/(91247:91252): Recibi PCB id: 0
+[INFO] 23:22:23:160 Cpu/(91247:91252): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 23:22:23:161 Cpu/(91247:91252): Recibi PCB id: 0
+[INFO] 23:22:23:162 Cpu/(91247:91252): PID: 0 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 23:22:23:163 Cpu/(91247:91252): Recibi PCB id: 0
+[INFO] 23:22:23:163 Cpu/(91247:91252): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 23:22:23:164 Cpu/(91247:91252): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -1855937264 - Valor: 80
+
+[INFO] 23:22:23:166 Cpu/(91247:91252): Recibi PCB id: 1
+[INFO] 23:22:23:166 Cpu/(91247:91252): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 23:22:23:210 Cpu/(91247:91252): Recibi PCB id: 1
+[INFO] 23:22:23:211 Cpu/(91247:91252): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 23:22:23:297 Cpu/(91247:91252): Recibi PCB id: 1
+[INFO] 23:22:23:297 Cpu/(91247:91252): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 23:22:23:385 Cpu/(91247:91252): Recibi PCB id: 1
+[INFO] 23:22:23:385 Cpu/(91247:91252): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 23:22:23:474 Cpu/(91247:91252): Recibi PCB id: 1
+[INFO] 23:22:23:474 Cpu/(91247:91252): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 23:22:23:564 Cpu/(91247:91252): Recibi PCB id: 1
+[INFO] 23:22:23:564 Cpu/(91247:91252): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 23:22:23:606 Cpu/(91247:91252): Recibi PCB id: 1
+[INFO] 23:22:23:606 Cpu/(91247:91252): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 23:22:23:649 Cpu/(91247:91252): Recibi PCB id: 1
+[INFO] 23:22:23:649 Cpu/(91247:91252): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 23:22:54:190 Cpu/(91247:91252): Recibi PCB id: 1
+[INFO] 23:22:54:190 Cpu/(91247:91252): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 23:22:54:234 Cpu/(91247:91252): Recibi PCB id: 1
+[INFO] 23:22:54:234 Cpu/(91247:91252): PID: 1 - Ejecutando EXIT
+[INFO] 23:22:54:236 Cpu/(91247:91252): Recibi PCB id: 0
+[INFO] 23:22:54:236 Cpu/(91247:91252): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 23:22:54:236 Cpu/(91247:91252): Recibi PCB id: 0
+[INFO] 23:22:54:237 Cpu/(91247:91252): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 23:22:54:240 Cpu/(91247:91252): Recibi PCB id: 0
+[INFO] 23:22:54:240 Cpu/(91247:91252): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 23:22:54:264 Cpu/(91247:91252): Recibi PCB id: 0
+[INFO] 23:22:54:264 Cpu/(91247:91252): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 23:22:54:264 Cpu/(91247:91252): Recibi PCB id: 0
+[INFO] 23:22:54:264 Cpu/(91247:91252): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 23:22:54:264 Cpu/(91247:91252): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -1855937296 - Valor: 16
+
+[INFO] 23:22:55:285 Cpu/(91247:91252): Recibi PCB id: 0
+[INFO] 23:22:55:285 Cpu/(91247:91252): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 23:22:55:285 Cpu/(91247:91252): Recibi PCB id: 0
+[INFO] 23:22:55:285 Cpu/(91247:91252): PID: 0 - Ejecutando EXIT
+[INFO] 23:23:14:199 Cpu/(91247:91252): Se ha finalizado la conexion
+[INFO] 23:23:19:898 Cpu/(91268:91268): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 23:23:19:899 Cpu/(91268:91268): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:23:19:899 Cpu/(91268:91268): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 23:23:21:987 Cpu/(91268:91268): Cliente conectado (a CPU_SV)
+
+[INFO] 23:23:30:143 Cpu/(91268:91273): Recibi PCB id: 0
+[INFO] 23:23:30:144 Cpu/(91268:91273): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 23:23:30:144 Cpu/(91268:91273): Recibi PCB id: 0
+[INFO] 23:23:30:144 Cpu/(91268:91273): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 23:23:30:145 Cpu/(91268:91273): Recibi PCB id: 0
+[INFO] 23:23:30:145 Cpu/(91268:91273): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 23:23:30:145 Cpu/(91268:91273): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: -1516222256 - Valor: 16
+
+[INFO] 23:23:30:686 Cpu/(91268:91273): Recibi PCB id: 1
+[INFO] 23:23:30:686 Cpu/(91268:91273): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 23:23:48:165 Cpu/(91268:91273): Recibi PCB id: 2
+[INFO] 23:23:48:165 Cpu/(91268:91273): PID: 2 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 23:23:48:168 Cpu/(91268:91273): Recibi PCB id: 3
+[INFO] 23:23:48:168 Cpu/(91268:91273): PID: 3 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 23:23:48:172 Cpu/(91268:91273): Recibi PCB id: 0
+[INFO] 23:23:48:172 Cpu/(91268:91273): PID: 0 -  Listo para ejecutar MOV_IN 
+[ERROR] 23:23:49:172 Cpu/(91268:91273): Dps de setear registro
+[INFO] 23:23:49:173 Cpu/(91268:91273): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: Soni
+[INFO] 23:23:49:173 Cpu/(91268:91273): PID: 0 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 23:23:49:173 Cpu/(91268:91273): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 23:23:49:173 Cpu/(91268:91273): Recibi PCB id: 0
+[INFO] 23:23:49:173 Cpu/(91268:91273): PID: 0 - Ejecutando EXIT
+[INFO] 23:23:49:175 Cpu/(91268:91273): Recibi PCB id: 1
+[INFO] 23:23:49:175 Cpu/(91268:91273): PID: 1 - Listo para ejecutar F_SEEK 
+[INFO] 23:23:49:175 Cpu/(91268:91273): Recibi PCB id: 1
+[INFO] 23:23:49:175 Cpu/(91268:91273): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 23:23:49:175 Cpu/(91268:91273): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: -1516222256 - Valor: 16
+
+[INFO] 23:24:07:196 Cpu/(91268:91273): Recibi PCB id: 1
+[INFO] 23:24:07:196 Cpu/(91268:91273): PID: 1 -  Listo para ejecutar MOV_IN 
+[ERROR] 23:24:08:197 Cpu/(91268:91273): Dps de setear registro
+[INFO] 23:24:08:198 Cpu/(91268:91273): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: Soni
+[INFO] 23:24:08:198 Cpu/(91268:91273): PID: 1 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 23:24:08:198 Cpu/(91268:91273): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 23:24:08:199 Cpu/(91268:91273): Recibi PCB id: 1
+[INFO] 23:24:08:199 Cpu/(91268:91273): PID: 1 - Ejecutando EXIT
+[INFO] 23:24:08:201 Cpu/(91268:91273): Recibi PCB id: 2
+[INFO] 23:24:08:201 Cpu/(91268:91273): PID: 2 - Listo para ejecutar F_SEEK 
+[INFO] 23:24:08:202 Cpu/(91268:91273): Recibi PCB id: 2
+[INFO] 23:24:08:202 Cpu/(91268:91273): PID: 2 - Listo para ejecutar F_READ 
+[INFO] 23:24:08:203 Cpu/(91268:91273): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: -1516222256 - Valor: 16
+
+[INFO] 23:24:26:224 Cpu/(91268:91273): Recibi PCB id: 2
+[INFO] 23:24:26:224 Cpu/(91268:91273): PID: 2 -  Listo para ejecutar MOV_IN 
+[ERROR] 23:24:27:226 Cpu/(91268:91273): Dps de setear registro
+[INFO] 23:24:27:226 Cpu/(91268:91273): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: Soni
+[INFO] 23:24:27:226 Cpu/(91268:91273): PID: 2 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 23:24:27:226 Cpu/(91268:91273): PID: 2 - Listo para ejecutar F_CLOSE 
+[INFO] 23:24:27:227 Cpu/(91268:91273): Recibi PCB id: 2
+[INFO] 23:24:27:228 Cpu/(91268:91273): PID: 2 - Ejecutando EXIT
+[INFO] 23:24:27:232 Cpu/(91268:91273): Recibi PCB id: 3
+[INFO] 23:24:27:233 Cpu/(91268:91273): PID: 3 - Listo para ejecutar F_SEEK 
+[INFO] 23:24:27:235 Cpu/(91268:91273): Recibi PCB id: 3
+[INFO] 23:24:27:237 Cpu/(91268:91273): PID: 3 - Listo para ejecutar F_READ 
+[INFO] 23:24:27:238 Cpu/(91268:91273): PID: 3 - Acción: LEER - Segmento: 0 - Dirección Física: -1516222256 - Valor: 16
+
+[INFO] 23:24:45:270 Cpu/(91268:91273): Recibi PCB id: 3
+[INFO] 23:24:45:270 Cpu/(91268:91273): PID: 3 -  Listo para ejecutar MOV_IN 
+[ERROR] 23:24:46:271 Cpu/(91268:91273): Dps de setear registro
+[INFO] 23:24:46:271 Cpu/(91268:91273): PID: 3 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: Soni
+[INFO] 23:24:46:272 Cpu/(91268:91273): PID: 3 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 23:24:46:272 Cpu/(91268:91273): PID: 3 - Listo para ejecutar F_CLOSE 
+[INFO] 23:24:46:273 Cpu/(91268:91273): Recibi PCB id: 3
+[INFO] 23:24:46:273 Cpu/(91268:91273): PID: 3 - Ejecutando EXIT
+[INFO] 23:48:05:429 Cpu/(91268:91273): Se ha finalizado la conexion
+[INFO] 23:48:13:465 Cpu/(91576:91576): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 23:48:13:468 Cpu/(91576:91576): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:48:13:468 Cpu/(91576:91576): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 23:48:18:379 Cpu/(91576:91576): Cliente conectado (a CPU_SV)
+
+[INFO] 23:48:24:639 Cpu/(91576:91581): Recibi PCB id: 0
+[INFO] 23:48:24:639 Cpu/(91576:91581): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 23:48:24:640 Cpu/(91576:91581): Recibi PCB id: 0
+[INFO] 23:48:24:640 Cpu/(91576:91581): En CPU
+[INFO] 23:48:25:641 Cpu/(91576:91581): PID: 0 - Ejecutando SET parametro 1: RAX parametro 2: SonicTheHedgehog
+
+[INFO] 23:48:25:641 Cpu/(91576:91581): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:48:25:641 Cpu/(91576:91581): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 0 parametro 2: RAX
+
+[INFO] 23:48:25:641 Cpu/(91576:91581): Realizado lectura del registro RAX con valor SonicTheHedgehog
+[INFO] 23:48:25:641 Cpu/(91576:91581): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 0 - Valor: SonicTheHedgehog
+[INFO] 23:48:25:641 Cpu/(91576:91581): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 0 parametro 2: RAX
+[INFO] 23:48:25:641 Cpu/(91576:91581): En CPU
+[INFO] 23:48:26:642 Cpu/(91576:91581): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation1
+
+[INFO] 23:48:26:642 Cpu/(91576:91581): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:48:26:642 Cpu/(91576:91581): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 32 parametro 2: RBX
+
+[INFO] 23:48:26:642 Cpu/(91576:91581): Realizado lectura del registro RBX con valor SonyPlaystation1
+[INFO] 23:48:26:643 Cpu/(91576:91581): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 32 - Valor: SonyPlaystation1
+[INFO] 23:48:26:643 Cpu/(91576:91581): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 32 parametro 2: RBX
+[INFO] 23:48:26:643 Cpu/(91576:91581): En CPU
+[INFO] 23:48:27:644 Cpu/(91576:91581): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation2
+
+[INFO] 23:48:27:644 Cpu/(91576:91581): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:48:27:644 Cpu/(91576:91581): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 48 parametro 2: RBX
+
+[INFO] 23:48:27:644 Cpu/(91576:91581): Realizado lectura del registro RBX con valor SonyPlaystation2
+[INFO] 23:48:27:645 Cpu/(91576:91581): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 48 - Valor: SonyPlaystation2
+[INFO] 23:48:27:645 Cpu/(91576:91581): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 48 parametro 2: RBX
+[INFO] 23:48:27:645 Cpu/(91576:91581): En CPU
+[INFO] 23:48:28:645 Cpu/(91576:91581): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation3
+
+[INFO] 23:48:28:645 Cpu/(91576:91581): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:48:28:646 Cpu/(91576:91581): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 64 parametro 2: RBX
+
+[INFO] 23:48:28:646 Cpu/(91576:91581): Realizado lectura del registro RBX con valor SonyPlaystation3
+[INFO] 23:48:28:646 Cpu/(91576:91581): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 64 - Valor: SonyPlaystation3
+[INFO] 23:48:28:646 Cpu/(91576:91581): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 64 parametro 2: RBX
+[INFO] 23:48:28:646 Cpu/(91576:91581): En CPU
+[INFO] 23:48:29:647 Cpu/(91576:91581): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation4
+
+[INFO] 23:48:29:648 Cpu/(91576:91581): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:48:29:648 Cpu/(91576:91581): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 80 parametro 2: RBX
+
+[INFO] 23:48:29:648 Cpu/(91576:91581): Realizado lectura del registro RBX con valor SonyPlaystation4
+[INFO] 23:48:29:648 Cpu/(91576:91581): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 80 - Valor: SonyPlaystation4
+[INFO] 23:48:29:649 Cpu/(91576:91581): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 80 parametro 2: RBX
+[INFO] 23:48:29:649 Cpu/(91576:91581): En CPU
+[INFO] 23:48:30:649 Cpu/(91576:91581): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation5
+
+[INFO] 23:48:30:651 Cpu/(91576:91581): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 23:48:30:651 Cpu/(91576:91581): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 96 parametro 2: RBX
+
+[INFO] 23:48:30:651 Cpu/(91576:91581): Realizado lectura del registro RBX con valor SonyPlaystation5ion2
+
+[INFO] 23:48:30:651 Cpu/(91576:91581): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 96 - Valor: SonyPlaystation5
+[INFO] 23:48:30:651 Cpu/(91576:91581): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 96 parametro 2: RBX
+[INFO] 23:48:30:652 Cpu/(91576:91581): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Consoles
+ 
+[INFO] 23:48:30:655 Cpu/(91576:91581): Recibi PCB id: 0
+[INFO] 23:48:30:655 Cpu/(91576:91581): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 23:48:30:657 Cpu/(91576:91581): Recibi PCB id: 1
+[INFO] 23:48:30:657 Cpu/(91576:91581): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 23:49:00:677 Cpu/(91576:91581): Recibi PCB id: 0
+[INFO] 23:49:00:677 Cpu/(91576:91581): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 23:49:00:677 Cpu/(91576:91581): Recibi PCB id: 0
+[INFO] 23:49:00:677 Cpu/(91576:91581): PID: 0 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 23:49:00:678 Cpu/(91576:91581): Recibi PCB id: 0
+[INFO] 23:49:00:678 Cpu/(91576:91581): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 23:49:00:678 Cpu/(91576:91581): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 2110713744 - Valor: 80
+
+[INFO] 23:49:00:679 Cpu/(91576:91581): Recibi PCB id: 1
+[INFO] 23:49:00:679 Cpu/(91576:91581): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 23:49:00:722 Cpu/(91576:91581): Recibi PCB id: 1
+[INFO] 23:49:00:722 Cpu/(91576:91581): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 23:49:00:809 Cpu/(91576:91581): Recibi PCB id: 1
+[INFO] 23:49:00:810 Cpu/(91576:91581): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 23:49:00:897 Cpu/(91576:91581): Recibi PCB id: 1
+[INFO] 23:49:00:897 Cpu/(91576:91581): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 23:49:00:985 Cpu/(91576:91581): Recibi PCB id: 1
+[INFO] 23:49:00:985 Cpu/(91576:91581): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 23:49:01:073 Cpu/(91576:91581): Recibi PCB id: 1
+[INFO] 23:49:01:073 Cpu/(91576:91581): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 23:49:01:117 Cpu/(91576:91581): Recibi PCB id: 1
+[INFO] 23:49:01:117 Cpu/(91576:91581): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 23:49:01:161 Cpu/(91576:91581): Recibi PCB id: 1
+[INFO] 23:49:01:162 Cpu/(91576:91581): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 23:49:31:707 Cpu/(91576:91581): Recibi PCB id: 1
+[INFO] 23:49:31:707 Cpu/(91576:91581): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 23:49:31:749 Cpu/(91576:91581): Recibi PCB id: 1
+[INFO] 23:49:31:749 Cpu/(91576:91581): PID: 1 - Ejecutando EXIT
+[INFO] 23:49:31:752 Cpu/(91576:91581): Recibi PCB id: 0
+[INFO] 23:49:31:752 Cpu/(91576:91581): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 23:49:31:755 Cpu/(91576:91581): Recibi PCB id: 0
+[INFO] 23:49:31:755 Cpu/(91576:91581): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 23:49:31:758 Cpu/(91576:91581): Recibi PCB id: 0
+[INFO] 23:49:31:758 Cpu/(91576:91581): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 23:49:31:777 Cpu/(91576:91581): Recibi PCB id: 0
+[INFO] 23:49:31:778 Cpu/(91576:91581): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 23:49:31:778 Cpu/(91576:91581): Recibi PCB id: 0
+[INFO] 23:49:31:778 Cpu/(91576:91581): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 23:49:31:778 Cpu/(91576:91581): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 2110713712 - Valor: 16
+
+[INFO] 23:49:32:804 Cpu/(91576:91581): Recibi PCB id: 0
+[INFO] 23:49:32:804 Cpu/(91576:91581): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 23:49:32:805 Cpu/(91576:91581): Recibi PCB id: 0
+[INFO] 23:49:32:805 Cpu/(91576:91581): PID: 0 - Ejecutando EXIT
+[INFO] 23:49:41:070 Cpu/(91576:91581): Se ha finalizado la conexion
+[INFO] 23:49:46:998 Cpu/(91600:91600): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 23:49:47:000 Cpu/(91600:91600): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:49:47:001 Cpu/(91600:91600): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 23:49:48:946 Cpu/(91600:91600): Cliente conectado (a CPU_SV)
+
+[INFO] 23:49:58:110 Cpu/(91600:91605): Recibi PCB id: 0
+[INFO] 23:49:58:110 Cpu/(91600:91605): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 23:49:58:111 Cpu/(91600:91605): Recibi PCB id: 0
+[INFO] 23:49:58:111 Cpu/(91600:91605): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 23:49:58:111 Cpu/(91600:91605): Recibi PCB id: 0
+[INFO] 23:49:58:111 Cpu/(91600:91605): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 23:49:58:111 Cpu/(91600:91605): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: -1739026272 - Valor: 16
+
+[INFO] 23:49:58:662 Cpu/(91600:91605): Recibi PCB id: 1
+[INFO] 23:49:58:662 Cpu/(91600:91605): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 23:50:16:131 Cpu/(91600:91605): Recibi PCB id: 2
+[INFO] 23:50:16:131 Cpu/(91600:91605): PID: 2 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 23:50:16:132 Cpu/(91600:91605): Recibi PCB id: 3
+[INFO] 23:50:16:132 Cpu/(91600:91605): PID: 3 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 23:50:16:133 Cpu/(91600:91605): Recibi PCB id: 0
+[INFO] 23:50:16:133 Cpu/(91600:91605): PID: 0 -  Listo para ejecutar MOV_IN 
+[ERROR] 23:50:17:134 Cpu/(91600:91605): Dps de setear registro
+[INFO] 23:50:17:134 Cpu/(91600:91605): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: Soni
+[INFO] 23:50:17:134 Cpu/(91600:91605): PID: 0 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 23:50:17:135 Cpu/(91600:91605): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 23:50:17:135 Cpu/(91600:91605): Recibi PCB id: 0
+[INFO] 23:50:17:135 Cpu/(91600:91605): PID: 0 - Ejecutando EXIT
+[INFO] 23:50:17:137 Cpu/(91600:91605): Recibi PCB id: 1
+[INFO] 23:50:17:137 Cpu/(91600:91605): PID: 1 - Listo para ejecutar F_SEEK 
+[INFO] 23:50:17:137 Cpu/(91600:91605): Recibi PCB id: 1
+[INFO] 23:50:17:137 Cpu/(91600:91605): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 23:50:17:137 Cpu/(91600:91605): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: -1739026272 - Valor: 16
+
+[INFO] 23:50:35:156 Cpu/(91600:91605): Recibi PCB id: 1
+[INFO] 23:50:35:156 Cpu/(91600:91605): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 23:56:27:192 Cpu/(91790:91790): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 23:56:27:195 Cpu/(91790:91790): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 23:56:27:195 Cpu/(91790:91790): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 23:56:29:117 Cpu/(91790:91790): Cliente conectado (a CPU_SV)
+
+[INFO] 23:56:33:259 Cpu/(91790:91795): Recibi PCB id: 0
+[INFO] 23:56:33:259 Cpu/(91790:91795): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 23:56:33:262 Cpu/(91790:91795): Recibi PCB id: 0
+[INFO] 23:56:33:262 Cpu/(91790:91795): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 23:56:33:262 Cpu/(91790:91795): Recibi PCB id: 0
+[INFO] 23:56:33:262 Cpu/(91790:91795): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 23:56:33:262 Cpu/(91790:91795): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: -1250587632 - Valor: 16
+
+[INFO] 23:56:33:818 Cpu/(91790:91795): Recibi PCB id: 1
+[INFO] 23:56:33:818 Cpu/(91790:91795): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 23:56:51:282 Cpu/(91790:91795): Recibi PCB id: 2
+[INFO] 23:56:51:282 Cpu/(91790:91795): PID: 2 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 23:56:51:283 Cpu/(91790:91795): Recibi PCB id: 3
+[INFO] 23:56:51:283 Cpu/(91790:91795): PID: 3 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 23:56:51:284 Cpu/(91790:91795): Recibi PCB id: 0
+[INFO] 23:56:51:284 Cpu/(91790:91795): PID: 0 -  Listo para ejecutar MOV_IN 
+[WARNING] 23:56:52:286 Cpu/(91790:91795): Antes de setear registro
+[ERROR] 23:56:52:286 Cpu/(91790:91795): Dps de setear registro
+[INFO] 23:56:52:286 Cpu/(91790:91795): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 23:56:52:286 Cpu/(91790:91795): PID: 0 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 23:56:52:287 Cpu/(91790:91795): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 23:56:52:287 Cpu/(91790:91795): Recibi PCB id: 0
+[INFO] 23:56:52:287 Cpu/(91790:91795): PID: 0 - Ejecutando EXIT
+[INFO] 23:56:52:291 Cpu/(91790:91795): Recibi PCB id: 1
+[INFO] 23:56:52:291 Cpu/(91790:91795): PID: 1 - Listo para ejecutar F_SEEK 
+[INFO] 23:56:52:292 Cpu/(91790:91795): Recibi PCB id: 1
+[INFO] 23:56:52:293 Cpu/(91790:91795): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 23:56:52:294 Cpu/(91790:91795): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: -1250587632 - Valor: 16
+
+[INFO] 23:57:10:312 Cpu/(91790:91795): Recibi PCB id: 1
+[INFO] 23:57:10:312 Cpu/(91790:91795): PID: 1 -  Listo para ejecutar MOV_IN 
+[WARNING] 23:57:11:313 Cpu/(91790:91795): Antes de setear registro
+[INFO] 00:00:23:617 Cpu/(91998:91998): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 00:00:23:620 Cpu/(91998:91998): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 00:00:23:621 Cpu/(91998:91998): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 00:00:28:431 Cpu/(91998:91998): Cliente conectado (a CPU_SV)
+
+[INFO] 00:00:33:056 Cpu/(91998:92083): Recibi PCB id: 0
+[INFO] 00:00:33:056 Cpu/(91998:92083): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:00:33:057 Cpu/(91998:92083): Recibi PCB id: 0
+[INFO] 00:00:33:057 Cpu/(91998:92083): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 00:00:33:058 Cpu/(91998:92083): Recibi PCB id: 0
+[INFO] 00:00:33:058 Cpu/(91998:92083): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 00:00:33:058 Cpu/(91998:92083): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: -67950144 - Valor: 16
+
+[INFO] 00:00:33:570 Cpu/(91998:92083): Recibi PCB id: 1
+[INFO] 00:00:33:570 Cpu/(91998:92083): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:00:51:077 Cpu/(91998:92083): Recibi PCB id: 2
+[INFO] 00:00:51:077 Cpu/(91998:92083): PID: 2 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:00:51:078 Cpu/(91998:92083): Recibi PCB id: 3
+[INFO] 00:00:51:078 Cpu/(91998:92083): PID: 3 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:00:51:079 Cpu/(91998:92083): Recibi PCB id: 0
+[INFO] 00:00:51:079 Cpu/(91998:92083): PID: 0 -  Listo para ejecutar MOV_IN 
+[WARNING] 00:00:52:080 Cpu/(91998:92083): Antes de setear registro: Regsitro: RAX - Reg_recibido:SonicTheHedgehog
+[ERROR] 00:00:52:080 Cpu/(91998:92083): Dps de setear registro
+[INFO] 00:00:52:080 Cpu/(91998:92083): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:00:52:080 Cpu/(91998:92083): PID: 0 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:00:52:080 Cpu/(91998:92083): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 00:00:52:081 Cpu/(91998:92083): Recibi PCB id: 0
+[INFO] 00:00:52:081 Cpu/(91998:92083): PID: 0 - Ejecutando EXIT
+[INFO] 00:00:52:083 Cpu/(91998:92083): Recibi PCB id: 1
+[INFO] 00:00:52:083 Cpu/(91998:92083): PID: 1 - Listo para ejecutar F_SEEK 
+[INFO] 00:00:52:083 Cpu/(91998:92083): Recibi PCB id: 1
+[INFO] 00:00:52:083 Cpu/(91998:92083): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 00:00:52:084 Cpu/(91998:92083): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: -67950144 - Valor: 16
+
+[INFO] 00:01:10:101 Cpu/(91998:92083): Recibi PCB id: 1
+[INFO] 00:01:10:101 Cpu/(91998:92083): PID: 1 -  Listo para ejecutar MOV_IN 
+[WARNING] 00:01:11:102 Cpu/(91998:92083): Antes de setear registro: Regsitro: RAX - Reg_recibido:SonicTheHedgehog
+[ERROR] 00:01:11:102 Cpu/(91998:92083): Dps de setear registro
+[INFO] 00:01:11:102 Cpu/(91998:92083): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:01:11:102 Cpu/(91998:92083): PID: 1 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:01:11:102 Cpu/(91998:92083): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 00:01:11:103 Cpu/(91998:92083): Recibi PCB id: 1
+[INFO] 00:01:11:103 Cpu/(91998:92083): PID: 1 - Ejecutando EXIT
+[INFO] 00:01:11:104 Cpu/(91998:92083): Recibi PCB id: 2
+[INFO] 00:01:11:104 Cpu/(91998:92083): PID: 2 - Listo para ejecutar F_SEEK 
+[INFO] 00:01:11:104 Cpu/(91998:92083): Recibi PCB id: 2
+[INFO] 00:01:11:105 Cpu/(91998:92083): PID: 2 - Listo para ejecutar F_READ 
+[INFO] 00:01:11:105 Cpu/(91998:92083): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: -67950144 - Valor: 16
+
+[INFO] 00:01:29:123 Cpu/(91998:92083): Recibi PCB id: 2
+[INFO] 00:01:29:123 Cpu/(91998:92083): PID: 2 -  Listo para ejecutar MOV_IN 
+[WARNING] 00:01:30:125 Cpu/(91998:92083): Antes de setear registro: Regsitro: RAX - Reg_recibido:SonicTheHedgehog
+[ERROR] 00:01:30:125 Cpu/(91998:92083): Dps de setear registro
+[INFO] 00:01:30:125 Cpu/(91998:92083): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:01:30:125 Cpu/(91998:92083): PID: 2 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:01:30:125 Cpu/(91998:92083): PID: 2 - Listo para ejecutar F_CLOSE 
+[INFO] 00:01:30:126 Cpu/(91998:92083): Recibi PCB id: 2
+[INFO] 00:01:30:126 Cpu/(91998:92083): PID: 2 - Ejecutando EXIT
+[INFO] 00:01:30:128 Cpu/(91998:92083): Recibi PCB id: 3
+[INFO] 00:01:30:128 Cpu/(91998:92083): PID: 3 - Listo para ejecutar F_SEEK 
+[INFO] 00:01:30:128 Cpu/(91998:92083): Recibi PCB id: 3
+[INFO] 00:01:30:128 Cpu/(91998:92083): PID: 3 - Listo para ejecutar F_READ 
+[INFO] 00:01:30:128 Cpu/(91998:92083): PID: 3 - Acción: LEER - Segmento: 0 - Dirección Física: -67950144 - Valor: 16
+
+[INFO] 00:01:48:150 Cpu/(91998:92083): Recibi PCB id: 3
+[INFO] 00:01:48:150 Cpu/(91998:92083): PID: 3 -  Listo para ejecutar MOV_IN 
+[WARNING] 00:01:49:152 Cpu/(91998:92083): Antes de setear registro: Regsitro: RAX - Reg_recibido:SonicTheHedgehog
+[ERROR] 00:01:49:152 Cpu/(91998:92083): Dps de setear registro
+[INFO] 00:01:49:152 Cpu/(91998:92083): PID: 3 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:01:49:152 Cpu/(91998:92083): PID: 3 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:01:49:152 Cpu/(91998:92083): PID: 3 - Listo para ejecutar F_CLOSE 
+[INFO] 00:01:49:153 Cpu/(91998:92083): Recibi PCB id: 3
+[INFO] 00:01:49:153 Cpu/(91998:92083): PID: 3 - Ejecutando EXIT
+[INFO] 00:02:39:641 Cpu/(91998:92083): Se ha finalizado la conexion
+[INFO] 00:05:13:773 Cpu/(92236:92236): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 00:05:13:774 Cpu/(92236:92236): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 00:05:13:775 Cpu/(92236:92236): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 00:05:50:394 Cpu/(92236:92236): Cliente conectado (a CPU_SV)
+
+[INFO] 00:05:52:922 Cpu/(92236:92258): Recibi PCB id: 0
+[INFO] 00:05:52:922 Cpu/(92236:92258): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 00:05:52:923 Cpu/(92236:92258): Recibi PCB id: 0
+[INFO] 00:05:52:923 Cpu/(92236:92258): En CPU
+[INFO] 00:05:53:923 Cpu/(92236:92258): PID: 0 - Ejecutando SET parametro 1: RAX parametro 2: SonicTheHedgehog
+
+[INFO] 00:05:53:923 Cpu/(92236:92258): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 00:05:53:923 Cpu/(92236:92258): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 0 parametro 2: RAX
+
+[INFO] 00:05:53:923 Cpu/(92236:92258): Realizado lectura del registro RAX con valor SonicTheHedgehog
+[INFO] 00:05:53:923 Cpu/(92236:92258): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 0 - Valor: SonicTheHedgehog
+[INFO] 00:05:53:923 Cpu/(92236:92258): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 0 parametro 2: RAX
+[INFO] 00:05:53:923 Cpu/(92236:92258): En CPU
+[INFO] 00:05:54:924 Cpu/(92236:92258): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation1
+
+[INFO] 00:05:54:924 Cpu/(92236:92258): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 00:05:54:924 Cpu/(92236:92258): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 32 parametro 2: RBX
+
+[INFO] 00:05:54:924 Cpu/(92236:92258): Realizado lectura del registro RBX con valor SonyPlaystation1
+[INFO] 00:05:54:924 Cpu/(92236:92258): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 32 - Valor: SonyPlaystation1
+[INFO] 00:05:54:925 Cpu/(92236:92258): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 32 parametro 2: RBX
+[INFO] 00:05:54:925 Cpu/(92236:92258): En CPU
+[INFO] 00:05:55:925 Cpu/(92236:92258): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation2
+
+[INFO] 00:05:55:926 Cpu/(92236:92258): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 00:05:55:926 Cpu/(92236:92258): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 48 parametro 2: RBX
+
+[INFO] 00:05:55:926 Cpu/(92236:92258): Realizado lectura del registro RBX con valor SonyPlaystation2
+[INFO] 00:05:55:926 Cpu/(92236:92258): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 48 - Valor: SonyPlaystation2
+[INFO] 00:05:55:926 Cpu/(92236:92258): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 48 parametro 2: RBX
+[INFO] 00:05:55:926 Cpu/(92236:92258): En CPU
+[INFO] 00:05:56:927 Cpu/(92236:92258): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation3
+
+[INFO] 00:05:56:927 Cpu/(92236:92258): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 00:05:56:927 Cpu/(92236:92258): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 64 parametro 2: RBX
+
+[INFO] 00:05:56:927 Cpu/(92236:92258): Realizado lectura del registro RBX con valor SonyPlaystation3
+[INFO] 00:05:56:927 Cpu/(92236:92258): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 64 - Valor: SonyPlaystation3
+[INFO] 00:05:56:927 Cpu/(92236:92258): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 64 parametro 2: RBX
+[INFO] 00:05:56:927 Cpu/(92236:92258): En CPU
+[INFO] 00:05:57:928 Cpu/(92236:92258): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation4
+
+[INFO] 00:05:57:929 Cpu/(92236:92258): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 00:05:57:929 Cpu/(92236:92258): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 80 parametro 2: RBX
+
+[INFO] 00:05:57:929 Cpu/(92236:92258): Realizado lectura del registro RBX con valor SonyPlaystation4
+[INFO] 00:05:57:929 Cpu/(92236:92258): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 80 - Valor: SonyPlaystation4
+[INFO] 00:05:57:930 Cpu/(92236:92258): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 80 parametro 2: RBX
+[INFO] 00:05:57:930 Cpu/(92236:92258): En CPU
+[INFO] 00:05:58:930 Cpu/(92236:92258): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation5
+
+[INFO] 00:05:58:930 Cpu/(92236:92258): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 00:05:58:931 Cpu/(92236:92258): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 96 parametro 2: RBX
+
+[INFO] 00:05:58:931 Cpu/(92236:92258): Realizado lectura del registro RBX con valor SonyPlaystation5ion2
+
+[INFO] 00:05:58:931 Cpu/(92236:92258): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 96 - Valor: SonyPlaystation5
+[INFO] 00:05:58:931 Cpu/(92236:92258): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 96 parametro 2: RBX
+[INFO] 00:05:58:931 Cpu/(92236:92258): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Consoles
+ 
+[INFO] 00:05:58:932 Cpu/(92236:92258): Recibi PCB id: 0
+[INFO] 00:05:58:932 Cpu/(92236:92258): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 00:05:58:933 Cpu/(92236:92258): Recibi PCB id: 1
+[INFO] 00:05:58:933 Cpu/(92236:92258): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 00:06:28:957 Cpu/(92236:92258): Recibi PCB id: 0
+[INFO] 00:06:28:957 Cpu/(92236:92258): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 00:06:28:957 Cpu/(92236:92258): Recibi PCB id: 0
+[INFO] 00:06:28:957 Cpu/(92236:92258): PID: 0 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 00:06:28:958 Cpu/(92236:92258): Recibi PCB id: 0
+[INFO] 00:06:28:958 Cpu/(92236:92258): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 00:06:28:958 Cpu/(92236:92258): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -1526171088 - Valor: 80
+
+[INFO] 00:06:28:958 Cpu/(92236:92258): Recibi PCB id: 1
+[INFO] 00:06:28:958 Cpu/(92236:92258): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 00:06:29:002 Cpu/(92236:92258): Recibi PCB id: 1
+[INFO] 00:06:29:002 Cpu/(92236:92258): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 00:06:29:089 Cpu/(92236:92258): Recibi PCB id: 1
+[INFO] 00:06:29:089 Cpu/(92236:92258): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 00:06:29:178 Cpu/(92236:92258): Recibi PCB id: 1
+[INFO] 00:06:29:178 Cpu/(92236:92258): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 00:06:29:265 Cpu/(92236:92258): Recibi PCB id: 1
+[INFO] 00:06:29:266 Cpu/(92236:92258): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 00:06:29:356 Cpu/(92236:92258): Recibi PCB id: 1
+[INFO] 00:06:29:356 Cpu/(92236:92258): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 00:06:29:398 Cpu/(92236:92258): Recibi PCB id: 1
+[INFO] 00:06:29:399 Cpu/(92236:92258): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 00:06:29:442 Cpu/(92236:92258): Recibi PCB id: 1
+[INFO] 00:06:29:442 Cpu/(92236:92258): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 00:06:59:979 Cpu/(92236:92258): Recibi PCB id: 1
+[INFO] 00:06:59:979 Cpu/(92236:92258): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 00:07:00:022 Cpu/(92236:92258): Recibi PCB id: 1
+[INFO] 00:07:00:022 Cpu/(92236:92258): PID: 1 - Ejecutando EXIT
+[INFO] 00:07:00:026 Cpu/(92236:92258): Recibi PCB id: 0
+[INFO] 00:07:00:026 Cpu/(92236:92258): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 00:07:00:027 Cpu/(92236:92258): Recibi PCB id: 0
+[INFO] 00:07:00:027 Cpu/(92236:92258): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:07:00:030 Cpu/(92236:92258): Recibi PCB id: 0
+[INFO] 00:07:00:030 Cpu/(92236:92258): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 00:07:00:047 Cpu/(92236:92258): Recibi PCB id: 0
+[INFO] 00:07:00:047 Cpu/(92236:92258): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 00:07:00:047 Cpu/(92236:92258): Recibi PCB id: 0
+[INFO] 00:07:00:048 Cpu/(92236:92258): PID: 0 - Listo para ejecutar F_WRITE 
+[INFO] 00:07:00:048 Cpu/(92236:92258): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: -1526171120 - Valor: 16
+
+[INFO] 00:07:01:065 Cpu/(92236:92258): Recibi PCB id: 0
+[INFO] 00:07:01:066 Cpu/(92236:92258): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 00:07:01:066 Cpu/(92236:92258): Recibi PCB id: 0
+[INFO] 00:07:01:066 Cpu/(92236:92258): PID: 0 - Ejecutando EXIT
+[INFO] 00:07:30:251 Cpu/(92236:92258): Se ha finalizado la conexion
+[INFO] 00:07:38:044 Cpu/(92288:92288): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 00:07:38:046 Cpu/(92288:92288): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 00:07:38:046 Cpu/(92288:92288): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 00:07:41:105 Cpu/(92288:92288): Cliente conectado (a CPU_SV)
+
+[INFO] 00:07:45:731 Cpu/(92288:92293): Recibi PCB id: 0
+[INFO] 00:07:45:731 Cpu/(92288:92293): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:07:45:732 Cpu/(92288:92293): Recibi PCB id: 0
+[INFO] 00:07:45:732 Cpu/(92288:92293): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 00:07:45:732 Cpu/(92288:92293): Recibi PCB id: 0
+[INFO] 00:07:45:732 Cpu/(92288:92293): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 00:07:45:732 Cpu/(92288:92293): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 1264581424 - Valor: 16
+
+[INFO] 00:07:46:282 Cpu/(92288:92293): Recibi PCB id: 1
+[INFO] 00:07:46:282 Cpu/(92288:92293): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:08:03:751 Cpu/(92288:92293): Recibi PCB id: 2
+[INFO] 00:08:03:751 Cpu/(92288:92293): PID: 2 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:08:03:752 Cpu/(92288:92293): Recibi PCB id: 3
+[INFO] 00:08:03:752 Cpu/(92288:92293): PID: 3 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:08:03:752 Cpu/(92288:92293): Recibi PCB id: 0
+[INFO] 00:08:03:752 Cpu/(92288:92293): PID: 0 -  Listo para ejecutar MOV_IN 
+[INFO] 00:08:04:754 Cpu/(92288:92293): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:08:04:754 Cpu/(92288:92293): PID: 0 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:08:04:754 Cpu/(92288:92293): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 00:08:04:754 Cpu/(92288:92293): Recibi PCB id: 0
+[INFO] 00:08:04:754 Cpu/(92288:92293): PID: 0 - Ejecutando EXIT
+[INFO] 00:08:04:756 Cpu/(92288:92293): Recibi PCB id: 1
+[INFO] 00:08:04:756 Cpu/(92288:92293): PID: 1 - Listo para ejecutar F_SEEK 
+[INFO] 00:08:04:756 Cpu/(92288:92293): Recibi PCB id: 1
+[INFO] 00:08:04:756 Cpu/(92288:92293): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 00:08:04:756 Cpu/(92288:92293): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: 1264581424 - Valor: 16
+
+[INFO] 00:08:22:774 Cpu/(92288:92293): Recibi PCB id: 1
+[INFO] 00:08:22:774 Cpu/(92288:92293): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 00:08:23:775 Cpu/(92288:92293): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:08:23:775 Cpu/(92288:92293): PID: 1 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:08:23:775 Cpu/(92288:92293): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 00:08:23:775 Cpu/(92288:92293): Recibi PCB id: 1
+[INFO] 00:08:23:775 Cpu/(92288:92293): PID: 1 - Ejecutando EXIT
+[INFO] 00:08:23:778 Cpu/(92288:92293): Recibi PCB id: 2
+[INFO] 00:08:23:778 Cpu/(92288:92293): PID: 2 - Listo para ejecutar F_SEEK 
+[INFO] 00:08:23:779 Cpu/(92288:92293): Recibi PCB id: 2
+[INFO] 00:08:23:779 Cpu/(92288:92293): PID: 2 - Listo para ejecutar F_READ 
+[INFO] 00:08:23:780 Cpu/(92288:92293): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: 1264581424 - Valor: 16
+
+[INFO] 00:08:41:799 Cpu/(92288:92293): Recibi PCB id: 2
+[INFO] 00:08:41:799 Cpu/(92288:92293): PID: 2 -  Listo para ejecutar MOV_IN 
+[INFO] 00:08:42:800 Cpu/(92288:92293): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:08:42:801 Cpu/(92288:92293): PID: 2 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:08:42:801 Cpu/(92288:92293): PID: 2 - Listo para ejecutar F_CLOSE 
+[INFO] 00:08:42:801 Cpu/(92288:92293): Recibi PCB id: 2
+[INFO] 00:08:42:801 Cpu/(92288:92293): PID: 2 - Ejecutando EXIT
+[INFO] 00:08:42:803 Cpu/(92288:92293): Recibi PCB id: 3
+[INFO] 00:08:42:803 Cpu/(92288:92293): PID: 3 - Listo para ejecutar F_SEEK 
+[INFO] 00:08:42:803 Cpu/(92288:92293): Recibi PCB id: 3
+[INFO] 00:08:42:803 Cpu/(92288:92293): PID: 3 - Listo para ejecutar F_READ 
+[INFO] 00:08:42:804 Cpu/(92288:92293): PID: 3 - Acción: LEER - Segmento: 0 - Dirección Física: 1264581424 - Valor: 16
+
+[INFO] 00:09:00:824 Cpu/(92288:92293): Recibi PCB id: 3
+[INFO] 00:09:00:824 Cpu/(92288:92293): PID: 3 -  Listo para ejecutar MOV_IN 
+[INFO] 00:09:01:825 Cpu/(92288:92293): PID: 3 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:09:01:825 Cpu/(92288:92293): PID: 3 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:09:01:825 Cpu/(92288:92293): PID: 3 - Listo para ejecutar F_CLOSE 
+[INFO] 00:09:01:826 Cpu/(92288:92293): Recibi PCB id: 3
+[INFO] 00:09:01:826 Cpu/(92288:92293): PID: 3 - Ejecutando EXIT
+[INFO] 00:09:18:995 Cpu/(92288:92293): Se ha finalizado la conexion
+[INFO] 00:12:04:341 Cpu/(92513:92513): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 00:12:04:344 Cpu/(92513:92513): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 00:12:04:344 Cpu/(92513:92513): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 00:12:07:057 Cpu/(92513:92513): Cliente conectado (a CPU_SV)
+
+[INFO] 00:12:14:724 Cpu/(92513:92518): Recibi PCB id: 0
+[INFO] 00:12:14:724 Cpu/(92513:92518): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:12:14:725 Cpu/(92513:92518): Recibi PCB id: 0
+[INFO] 00:12:14:725 Cpu/(92513:92518): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 00:12:14:725 Cpu/(92513:92518): Recibi PCB id: 0
+[INFO] 00:12:14:725 Cpu/(92513:92518): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 00:12:14:725 Cpu/(92513:92518): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 1734964448 - Valor: 16
+
+[INFO] 00:12:15:206 Cpu/(92513:92518): Recibi PCB id: 1
+[INFO] 00:12:15:206 Cpu/(92513:92518): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:12:32:746 Cpu/(92513:92518): Recibi PCB id: 2
+[INFO] 00:12:32:746 Cpu/(92513:92518): PID: 2 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:12:32:746 Cpu/(92513:92518): Recibi PCB id: 3
+[INFO] 00:12:32:746 Cpu/(92513:92518): PID: 3 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:12:32:747 Cpu/(92513:92518): Recibi PCB id: 0
+[INFO] 00:12:32:747 Cpu/(92513:92518): PID: 0 -  Listo para ejecutar MOV_IN 
+[INFO] 00:12:33:748 Cpu/(92513:92518): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:12:33:748 Cpu/(92513:92518): PID: 0 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:12:33:748 Cpu/(92513:92518): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 00:12:33:749 Cpu/(92513:92518): Recibi PCB id: 0
+[INFO] 00:12:33:749 Cpu/(92513:92518): PID: 0 - Ejecutando EXIT
+[INFO] 00:12:33:750 Cpu/(92513:92518): Recibi PCB id: 1
+[INFO] 00:12:33:751 Cpu/(92513:92518): PID: 1 - Listo para ejecutar F_SEEK 
+[INFO] 00:12:33:751 Cpu/(92513:92518): Recibi PCB id: 1
+[INFO] 00:12:33:751 Cpu/(92513:92518): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 00:12:33:751 Cpu/(92513:92518): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: 1734964448 - Valor: 16
+
+[INFO] 00:12:51:770 Cpu/(92513:92518): Recibi PCB id: 1
+[INFO] 00:12:51:770 Cpu/(92513:92518): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 00:12:52:770 Cpu/(92513:92518): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:12:52:771 Cpu/(92513:92518): PID: 1 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:12:52:771 Cpu/(92513:92518): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 00:12:52:771 Cpu/(92513:92518): Recibi PCB id: 1
+[INFO] 00:12:52:771 Cpu/(92513:92518): PID: 1 - Ejecutando EXIT
+[INFO] 00:12:52:773 Cpu/(92513:92518): Recibi PCB id: 2
+[INFO] 00:12:52:773 Cpu/(92513:92518): PID: 2 - Listo para ejecutar F_SEEK 
+[INFO] 00:12:52:773 Cpu/(92513:92518): Recibi PCB id: 2
+[INFO] 00:12:52:773 Cpu/(92513:92518): PID: 2 - Listo para ejecutar F_READ 
+[INFO] 00:12:52:773 Cpu/(92513:92518): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: 1734964448 - Valor: 16
+
+[INFO] 00:13:10:792 Cpu/(92513:92518): Recibi PCB id: 2
+[INFO] 00:13:10:792 Cpu/(92513:92518): PID: 2 -  Listo para ejecutar MOV_IN 
+[INFO] 00:13:11:793 Cpu/(92513:92518): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:13:11:793 Cpu/(92513:92518): PID: 2 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:13:11:793 Cpu/(92513:92518): PID: 2 - Listo para ejecutar F_CLOSE 
+[INFO] 00:13:11:794 Cpu/(92513:92518): Recibi PCB id: 2
+[INFO] 00:13:11:794 Cpu/(92513:92518): PID: 2 - Ejecutando EXIT
+[INFO] 00:13:11:796 Cpu/(92513:92518): Recibi PCB id: 3
+[INFO] 00:13:11:796 Cpu/(92513:92518): PID: 3 - Listo para ejecutar F_SEEK 
+[INFO] 00:13:11:796 Cpu/(92513:92518): Recibi PCB id: 3
+[INFO] 00:13:11:796 Cpu/(92513:92518): PID: 3 - Listo para ejecutar F_READ 
+[INFO] 00:13:11:796 Cpu/(92513:92518): PID: 3 - Acción: LEER - Segmento: 0 - Dirección Física: 1734964448 - Valor: 16
+
+[INFO] 00:13:29:815 Cpu/(92513:92518): Recibi PCB id: 3
+[INFO] 00:13:29:815 Cpu/(92513:92518): PID: 3 -  Listo para ejecutar MOV_IN 
+[INFO] 00:13:30:816 Cpu/(92513:92518): PID: 3 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:13:30:816 Cpu/(92513:92518): PID: 3 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:13:30:816 Cpu/(92513:92518): PID: 3 - Listo para ejecutar F_CLOSE 
+[INFO] 00:13:30:817 Cpu/(92513:92518): Recibi PCB id: 3
+[INFO] 00:13:30:817 Cpu/(92513:92518): PID: 3 - Ejecutando EXIT
+[INFO] 00:18:03:493 Cpu/(92513:92518): Se ha finalizado la conexion
+[INFO] 00:18:10:171 Cpu/(92822:92822): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 00:18:10:174 Cpu/(92822:92822): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 00:18:10:175 Cpu/(92822:92822): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 00:18:19:974 Cpu/(92822:92822): Cliente conectado (a CPU_SV)
+
+[INFO] 00:18:21:770 Cpu/(92822:92828): Recibi PCB id: 0
+[INFO] 00:18:21:770 Cpu/(92822:92828): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:18:21:771 Cpu/(92822:92828): Recibi PCB id: 0
+[INFO] 00:18:21:771 Cpu/(92822:92828): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 00:18:21:772 Cpu/(92822:92828): Recibi PCB id: 0
+[INFO] 00:18:21:772 Cpu/(92822:92828): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 00:18:21:772 Cpu/(92822:92828): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: -1751142464 - Valor: 16
+
+[INFO] 00:18:22:339 Cpu/(92822:92828): Recibi PCB id: 1
+[INFO] 00:18:22:339 Cpu/(92822:92828): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:18:39:795 Cpu/(92822:92828): Recibi PCB id: 2
+[INFO] 00:18:39:795 Cpu/(92822:92828): PID: 2 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:18:39:796 Cpu/(92822:92828): Recibi PCB id: 3
+[INFO] 00:18:39:796 Cpu/(92822:92828): PID: 3 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:18:39:797 Cpu/(92822:92828): Recibi PCB id: 0
+[INFO] 00:18:39:797 Cpu/(92822:92828): PID: 0 -  Listo para ejecutar MOV_IN 
+[INFO] 00:18:40:798 Cpu/(92822:92828): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:18:40:798 Cpu/(92822:92828): PID: 0 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:18:40:798 Cpu/(92822:92828): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 00:18:40:799 Cpu/(92822:92828): Recibi PCB id: 0
+[INFO] 00:18:40:799 Cpu/(92822:92828): PID: 0 - Ejecutando EXIT
+[INFO] 00:18:40:801 Cpu/(92822:92828): Recibi PCB id: 1
+[INFO] 00:18:40:801 Cpu/(92822:92828): PID: 1 - Listo para ejecutar F_SEEK 
+[INFO] 00:18:40:802 Cpu/(92822:92828): Recibi PCB id: 1
+[INFO] 00:18:40:803 Cpu/(92822:92828): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 00:18:40:803 Cpu/(92822:92828): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: -1751142464 - Valor: 16
+
+[INFO] 00:18:58:823 Cpu/(92822:92828): Recibi PCB id: 1
+[INFO] 00:18:58:823 Cpu/(92822:92828): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 00:18:59:824 Cpu/(92822:92828): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:18:59:824 Cpu/(92822:92828): PID: 1 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:18:59:824 Cpu/(92822:92828): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 00:18:59:825 Cpu/(92822:92828): Recibi PCB id: 1
+[INFO] 00:18:59:825 Cpu/(92822:92828): PID: 1 - Ejecutando EXIT
+[INFO] 00:18:59:827 Cpu/(92822:92828): Recibi PCB id: 2
+[INFO] 00:18:59:827 Cpu/(92822:92828): PID: 2 - Listo para ejecutar F_SEEK 
+[INFO] 00:18:59:827 Cpu/(92822:92828): Recibi PCB id: 2
+[INFO] 00:18:59:827 Cpu/(92822:92828): PID: 2 - Listo para ejecutar F_READ 
+[INFO] 00:18:59:827 Cpu/(92822:92828): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: -1751142464 - Valor: 16
+
+[INFO] 00:19:17:847 Cpu/(92822:92828): Recibi PCB id: 2
+[INFO] 00:19:17:847 Cpu/(92822:92828): PID: 2 -  Listo para ejecutar MOV_IN 
+[INFO] 00:19:18:847 Cpu/(92822:92828): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:19:18:847 Cpu/(92822:92828): PID: 2 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:19:18:847 Cpu/(92822:92828): PID: 2 - Listo para ejecutar F_CLOSE 
+[INFO] 00:19:18:848 Cpu/(92822:92828): Recibi PCB id: 2
+[INFO] 00:19:18:848 Cpu/(92822:92828): PID: 2 - Ejecutando EXIT
+[INFO] 00:19:18:850 Cpu/(92822:92828): Recibi PCB id: 3
+[INFO] 00:19:18:850 Cpu/(92822:92828): PID: 3 - Listo para ejecutar F_SEEK 
+[INFO] 00:19:18:850 Cpu/(92822:92828): Recibi PCB id: 3
+[INFO] 00:19:18:850 Cpu/(92822:92828): PID: 3 - Listo para ejecutar F_READ 
+[INFO] 00:19:18:850 Cpu/(92822:92828): PID: 3 - Acción: LEER - Segmento: 0 - Dirección Física: -1751142464 - Valor: 16
+
+[INFO] 00:19:36:871 Cpu/(92822:92828): Recibi PCB id: 3
+[INFO] 00:19:36:871 Cpu/(92822:92828): PID: 3 -  Listo para ejecutar MOV_IN 
+[INFO] 00:19:37:873 Cpu/(92822:92828): PID: 3 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:19:37:873 Cpu/(92822:92828): PID: 3 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:19:37:873 Cpu/(92822:92828): PID: 3 - Listo para ejecutar F_CLOSE 
+[INFO] 00:19:37:874 Cpu/(92822:92828): Recibi PCB id: 3
+[INFO] 00:19:37:874 Cpu/(92822:92828): PID: 3 - Ejecutando EXIT
+[INFO] 00:20:26:958 Cpu/(92822:92828): Se ha finalizado la conexion
+[INFO] 00:20:45:760 Cpu/(92960:92960): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 00:20:45:763 Cpu/(92960:92960): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 00:20:45:764 Cpu/(92960:92960): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 00:20:47:933 Cpu/(92960:92960): Cliente conectado (a CPU_SV)
+
+[INFO] 00:20:53:605 Cpu/(92960:92965): Recibi PCB id: 0
+[INFO] 00:20:53:605 Cpu/(92960:92965): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:20:53:606 Cpu/(92960:92965): Recibi PCB id: 0
+[INFO] 00:20:53:606 Cpu/(92960:92965): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 00:20:53:607 Cpu/(92960:92965): Recibi PCB id: 0
+[INFO] 00:20:53:607 Cpu/(92960:92965): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 00:20:53:607 Cpu/(92960:92965): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: -1360834480 - Valor: 16
+
+[INFO] 00:20:54:142 Cpu/(92960:92965): Recibi PCB id: 1
+[INFO] 00:20:54:143 Cpu/(92960:92965): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:21:11:626 Cpu/(92960:92965): Recibi PCB id: 2
+[INFO] 00:21:11:626 Cpu/(92960:92965): PID: 2 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:21:11:627 Cpu/(92960:92965): Recibi PCB id: 3
+[INFO] 00:21:11:627 Cpu/(92960:92965): PID: 3 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:21:11:628 Cpu/(92960:92965): Recibi PCB id: 0
+[INFO] 00:21:11:628 Cpu/(92960:92965): PID: 0 -  Listo para ejecutar MOV_IN 
+[INFO] 00:21:12:629 Cpu/(92960:92965): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:21:12:629 Cpu/(92960:92965): PID: 0 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:21:12:629 Cpu/(92960:92965): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 00:21:12:630 Cpu/(92960:92965): Recibi PCB id: 0
+[INFO] 00:21:12:630 Cpu/(92960:92965): PID: 0 - Ejecutando EXIT
+[INFO] 00:21:12:632 Cpu/(92960:92965): Recibi PCB id: 1
+[INFO] 00:21:12:632 Cpu/(92960:92965): PID: 1 - Listo para ejecutar F_SEEK 
+[INFO] 00:21:12:633 Cpu/(92960:92965): Recibi PCB id: 1
+[INFO] 00:21:12:633 Cpu/(92960:92965): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 00:21:12:633 Cpu/(92960:92965): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: -1360834480 - Valor: 16
+
+[INFO] 00:21:30:657 Cpu/(92960:92965): Recibi PCB id: 1
+[INFO] 00:21:30:657 Cpu/(92960:92965): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 00:21:31:662 Cpu/(92960:92965): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:21:31:662 Cpu/(92960:92965): PID: 1 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:21:31:662 Cpu/(92960:92965): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 00:21:31:663 Cpu/(92960:92965): Recibi PCB id: 1
+[INFO] 00:21:31:663 Cpu/(92960:92965): PID: 1 - Ejecutando EXIT
+[INFO] 00:21:31:668 Cpu/(92960:92965): Recibi PCB id: 2
+[INFO] 00:21:31:668 Cpu/(92960:92965): PID: 2 - Listo para ejecutar F_SEEK 
+[INFO] 00:21:31:668 Cpu/(92960:92965): Recibi PCB id: 2
+[INFO] 00:21:31:669 Cpu/(92960:92965): PID: 2 - Listo para ejecutar F_READ 
+[INFO] 00:21:31:669 Cpu/(92960:92965): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: -1360834480 - Valor: 16
+
+[INFO] 00:21:49:689 Cpu/(92960:92965): Recibi PCB id: 2
+[INFO] 00:21:49:689 Cpu/(92960:92965): PID: 2 -  Listo para ejecutar MOV_IN 
+[INFO] 00:21:50:691 Cpu/(92960:92965): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:21:50:692 Cpu/(92960:92965): PID: 2 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:21:50:692 Cpu/(92960:92965): PID: 2 - Listo para ejecutar F_CLOSE 
+[INFO] 00:21:50:692 Cpu/(92960:92965): Recibi PCB id: 2
+[INFO] 00:21:50:692 Cpu/(92960:92965): PID: 2 - Ejecutando EXIT
+[INFO] 00:21:50:695 Cpu/(92960:92965): Recibi PCB id: 3
+[INFO] 00:21:50:695 Cpu/(92960:92965): PID: 3 - Listo para ejecutar F_SEEK 
+[INFO] 00:21:50:695 Cpu/(92960:92965): Recibi PCB id: 3
+[INFO] 00:21:50:695 Cpu/(92960:92965): PID: 3 - Listo para ejecutar F_READ 
+[INFO] 00:21:50:695 Cpu/(92960:92965): PID: 3 - Acción: LEER - Segmento: 0 - Dirección Física: -1360834480 - Valor: 16
+
+[INFO] 00:22:08:716 Cpu/(92960:92965): Recibi PCB id: 3
+[INFO] 00:22:08:716 Cpu/(92960:92965): PID: 3 -  Listo para ejecutar MOV_IN 
+[INFO] 00:22:09:717 Cpu/(92960:92965): PID: 3 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:22:09:717 Cpu/(92960:92965): PID: 3 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:22:09:717 Cpu/(92960:92965): PID: 3 - Listo para ejecutar F_CLOSE 
+[INFO] 00:22:09:718 Cpu/(92960:92965): Recibi PCB id: 3
+[INFO] 00:22:09:718 Cpu/(92960:92965): PID: 3 - Ejecutando EXIT
+[INFO] 00:35:29:188 Cpu/(92960:92965): Se ha finalizado la conexion
+[INFO] 00:35:39:333 Cpu/(93200:93200): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 00:35:39:337 Cpu/(93200:93200): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 00:35:39:342 Cpu/(93200:93200): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 00:35:41:752 Cpu/(93200:93200): Cliente conectado (a CPU_SV)
+
+[INFO] 00:35:45:929 Cpu/(93200:93205): Recibi PCB id: 0
+[INFO] 00:35:45:929 Cpu/(93200:93205): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:35:45:931 Cpu/(93200:93205): Recibi PCB id: 0
+[INFO] 00:35:45:931 Cpu/(93200:93205): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 00:35:45:931 Cpu/(93200:93205): Recibi PCB id: 0
+[INFO] 00:35:45:931 Cpu/(93200:93205): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 00:35:45:935 Cpu/(93200:93205): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 1282409520 - Valor: 16
+
+[INFO] 00:35:46:442 Cpu/(93200:93205): Recibi PCB id: 1
+[INFO] 00:35:46:442 Cpu/(93200:93205): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:36:03:954 Cpu/(93200:93205): Recibi PCB id: 2
+[INFO] 00:36:03:955 Cpu/(93200:93205): PID: 2 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:36:03:955 Cpu/(93200:93205): Recibi PCB id: 3
+[INFO] 00:36:03:956 Cpu/(93200:93205): PID: 3 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:36:03:957 Cpu/(93200:93205): Recibi PCB id: 0
+[INFO] 00:36:03:957 Cpu/(93200:93205): PID: 0 -  Listo para ejecutar MOV_IN 
+[ERROR] 00:36:04:958 Cpu/(93200:93205): (MOV_IN)Base rec desde memo: 0
+[INFO] 00:36:04:958 Cpu/(93200:93205): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:36:04:958 Cpu/(93200:93205): PID: 0 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:36:04:958 Cpu/(93200:93205): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 00:36:04:958 Cpu/(93200:93205): Recibi PCB id: 0
+[INFO] 00:36:04:958 Cpu/(93200:93205): PID: 0 - Ejecutando EXIT
+[INFO] 00:36:04:960 Cpu/(93200:93205): Recibi PCB id: 1
+[INFO] 00:36:04:960 Cpu/(93200:93205): PID: 1 - Listo para ejecutar F_SEEK 
+[INFO] 00:36:04:961 Cpu/(93200:93205): Recibi PCB id: 1
+[INFO] 00:36:04:961 Cpu/(93200:93205): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 00:36:04:961 Cpu/(93200:93205): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: 1282409520 - Valor: 16
+
+[INFO] 00:36:22:980 Cpu/(93200:93205): Recibi PCB id: 1
+[INFO] 00:36:22:980 Cpu/(93200:93205): PID: 1 -  Listo para ejecutar MOV_IN 
+[ERROR] 00:36:23:981 Cpu/(93200:93205): (MOV_IN)Base rec desde memo: 0
+[INFO] 00:36:23:981 Cpu/(93200:93205): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:36:23:981 Cpu/(93200:93205): PID: 1 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:36:23:981 Cpu/(93200:93205): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 00:36:23:982 Cpu/(93200:93205): Recibi PCB id: 1
+[INFO] 00:36:23:982 Cpu/(93200:93205): PID: 1 - Ejecutando EXIT
+[INFO] 00:36:23:984 Cpu/(93200:93205): Recibi PCB id: 2
+[INFO] 00:36:23:984 Cpu/(93200:93205): PID: 2 - Listo para ejecutar F_SEEK 
+[INFO] 00:36:23:984 Cpu/(93200:93205): Recibi PCB id: 2
+[INFO] 00:36:23:984 Cpu/(93200:93205): PID: 2 - Listo para ejecutar F_READ 
+[INFO] 00:36:23:985 Cpu/(93200:93205): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: 1282409520 - Valor: 16
+
+[INFO] 00:36:42:004 Cpu/(93200:93205): Recibi PCB id: 2
+[INFO] 00:36:42:004 Cpu/(93200:93205): PID: 2 -  Listo para ejecutar MOV_IN 
+[ERROR] 00:36:43:006 Cpu/(93200:93205): (MOV_IN)Base rec desde memo: 0
+[INFO] 00:36:43:006 Cpu/(93200:93205): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:36:43:006 Cpu/(93200:93205): PID: 2 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:36:43:006 Cpu/(93200:93205): PID: 2 - Listo para ejecutar F_CLOSE 
+[INFO] 00:36:43:006 Cpu/(93200:93205): Recibi PCB id: 2
+[INFO] 00:36:43:006 Cpu/(93200:93205): PID: 2 - Ejecutando EXIT
+[INFO] 00:36:43:008 Cpu/(93200:93205): Recibi PCB id: 3
+[INFO] 00:36:43:008 Cpu/(93200:93205): PID: 3 - Listo para ejecutar F_SEEK 
+[INFO] 00:36:43:008 Cpu/(93200:93205): Recibi PCB id: 3
+[INFO] 00:36:43:008 Cpu/(93200:93205): PID: 3 - Listo para ejecutar F_READ 
+[INFO] 00:36:43:009 Cpu/(93200:93205): PID: 3 - Acción: LEER - Segmento: 0 - Dirección Física: 1282409520 - Valor: 16
+
+[INFO] 00:37:01:030 Cpu/(93200:93205): Recibi PCB id: 3
+[INFO] 00:37:01:030 Cpu/(93200:93205): PID: 3 -  Listo para ejecutar MOV_IN 
+[ERROR] 00:37:02:033 Cpu/(93200:93205): (MOV_IN)Base rec desde memo: 0
+[INFO] 00:37:02:033 Cpu/(93200:93205): PID: 3 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:37:02:033 Cpu/(93200:93205): PID: 3 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:37:02:033 Cpu/(93200:93205): PID: 3 - Listo para ejecutar F_CLOSE 
+[INFO] 00:37:02:033 Cpu/(93200:93205): Recibi PCB id: 3
+[INFO] 00:37:02:034 Cpu/(93200:93205): PID: 3 - Ejecutando EXIT
+[INFO] 00:39:57:053 Cpu/(93200:93205): Se ha finalizado la conexion
+[INFO] 00:40:04:118 Cpu/(93362:93362): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 00:40:04:119 Cpu/(93362:93362): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 00:40:04:120 Cpu/(93362:93362): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 00:40:07:715 Cpu/(93362:93362): Cliente conectado (a CPU_SV)
+
+[INFO] 00:40:12:802 Cpu/(93362:93368): Recibi PCB id: 0
+[INFO] 00:40:12:802 Cpu/(93362:93368): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:40:12:803 Cpu/(93362:93368): Recibi PCB id: 0
+[INFO] 00:40:12:803 Cpu/(93362:93368): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 00:40:12:803 Cpu/(93362:93368): Recibi PCB id: 0
+[INFO] 00:40:12:803 Cpu/(93362:93368): PID: 0 - Listo para ejecutar F_READ 
+[ERROR] 00:40:12:804 Cpu/(93362:93368): (FS)Base rec desde memo: 1437512016 - Desplazamien
+[INFO] 00:40:12:804 Cpu/(93362:93368): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 1437512032 - Valor: 16
+
+[INFO] 00:40:13:335 Cpu/(93362:93368): Recibi PCB id: 1
+[INFO] 00:40:13:335 Cpu/(93362:93368): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:40:30:823 Cpu/(93362:93368): Recibi PCB id: 2
+[INFO] 00:40:30:823 Cpu/(93362:93368): PID: 2 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:40:30:824 Cpu/(93362:93368): Recibi PCB id: 3
+[INFO] 00:40:30:824 Cpu/(93362:93368): PID: 3 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:40:30:824 Cpu/(93362:93368): Recibi PCB id: 0
+[INFO] 00:40:30:824 Cpu/(93362:93368): PID: 0 -  Listo para ejecutar MOV_IN 
+[ERROR] 00:40:31:825 Cpu/(93362:93368): (MOV_IN)Base rec desde memo: 0
+[INFO] 00:40:31:825 Cpu/(93362:93368): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:40:31:825 Cpu/(93362:93368): PID: 0 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:40:31:825 Cpu/(93362:93368): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 00:40:31:825 Cpu/(93362:93368): Recibi PCB id: 0
+[INFO] 00:40:31:825 Cpu/(93362:93368): PID: 0 - Ejecutando EXIT
+[INFO] 00:40:31:827 Cpu/(93362:93368): Recibi PCB id: 1
+[INFO] 00:40:31:828 Cpu/(93362:93368): PID: 1 - Listo para ejecutar F_SEEK 
+[INFO] 00:40:31:828 Cpu/(93362:93368): Recibi PCB id: 1
+[INFO] 00:40:31:828 Cpu/(93362:93368): PID: 1 - Listo para ejecutar F_READ 
+[ERROR] 00:40:31:828 Cpu/(93362:93368): (FS)Base rec desde memo: 1437512016 - Desplazamien
+[INFO] 00:40:31:828 Cpu/(93362:93368): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: 1437512032 - Valor: 16
+
+[INFO] 00:40:49:846 Cpu/(93362:93368): Recibi PCB id: 1
+[INFO] 00:40:49:846 Cpu/(93362:93368): PID: 1 -  Listo para ejecutar MOV_IN 
+[ERROR] 00:40:50:847 Cpu/(93362:93368): (MOV_IN)Base rec desde memo: 0
+[INFO] 00:40:50:847 Cpu/(93362:93368): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:40:50:847 Cpu/(93362:93368): PID: 1 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:40:50:847 Cpu/(93362:93368): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 00:40:50:848 Cpu/(93362:93368): Recibi PCB id: 1
+[INFO] 00:40:50:848 Cpu/(93362:93368): PID: 1 - Ejecutando EXIT
+[INFO] 00:40:50:850 Cpu/(93362:93368): Recibi PCB id: 2
+[INFO] 00:40:50:850 Cpu/(93362:93368): PID: 2 - Listo para ejecutar F_SEEK 
+[INFO] 00:40:50:850 Cpu/(93362:93368): Recibi PCB id: 2
+[INFO] 00:40:50:850 Cpu/(93362:93368): PID: 2 - Listo para ejecutar F_READ 
+[ERROR] 00:40:50:850 Cpu/(93362:93368): (FS)Base rec desde memo: 1437512016 - Desplazamien
+[INFO] 00:40:50:850 Cpu/(93362:93368): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: 1437512032 - Valor: 16
+
+[INFO] 00:41:08:870 Cpu/(93362:93368): Recibi PCB id: 2
+[INFO] 00:41:08:870 Cpu/(93362:93368): PID: 2 -  Listo para ejecutar MOV_IN 
+[ERROR] 00:41:09:872 Cpu/(93362:93368): (MOV_IN)Base rec desde memo: 0
+[INFO] 00:41:09:872 Cpu/(93362:93368): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:41:09:872 Cpu/(93362:93368): PID: 2 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:41:09:872 Cpu/(93362:93368): PID: 2 - Listo para ejecutar F_CLOSE 
+[INFO] 00:41:09:872 Cpu/(93362:93368): Recibi PCB id: 2
+[INFO] 00:41:09:872 Cpu/(93362:93368): PID: 2 - Ejecutando EXIT
+[INFO] 00:41:09:874 Cpu/(93362:93368): Recibi PCB id: 3
+[INFO] 00:41:09:874 Cpu/(93362:93368): PID: 3 - Listo para ejecutar F_SEEK 
+[INFO] 00:41:09:874 Cpu/(93362:93368): Recibi PCB id: 3
+[INFO] 00:41:09:874 Cpu/(93362:93368): PID: 3 - Listo para ejecutar F_READ 
+[ERROR] 00:41:09:875 Cpu/(93362:93368): (FS)Base rec desde memo: 1437512016 - Desplazamien
+[INFO] 00:41:09:875 Cpu/(93362:93368): PID: 3 - Acción: LEER - Segmento: 0 - Dirección Física: 1437512032 - Valor: 16
+
+[INFO] 00:41:27:893 Cpu/(93362:93368): Recibi PCB id: 3
+[INFO] 00:41:27:893 Cpu/(93362:93368): PID: 3 -  Listo para ejecutar MOV_IN 
+[ERROR] 00:41:28:895 Cpu/(93362:93368): (MOV_IN)Base rec desde memo: 0
+[INFO] 00:41:28:895 Cpu/(93362:93368): PID: 3 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:41:28:895 Cpu/(93362:93368): PID: 3 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:41:28:895 Cpu/(93362:93368): PID: 3 - Listo para ejecutar F_CLOSE 
+[INFO] 00:41:28:895 Cpu/(93362:93368): Recibi PCB id: 3
+[INFO] 00:41:28:896 Cpu/(93362:93368): PID: 3 - Ejecutando EXIT
+[INFO] 00:41:43:573 Cpu/(93362:93368): Se ha finalizado la conexion
+[INFO] 00:48:50:784 Cpu/(93766:93766): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 00:48:50:786 Cpu/(93766:93766): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 00:48:50:787 Cpu/(93766:93766): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 00:49:01:478 Cpu/(93766:93766): Cliente conectado (a CPU_SV)
+
+[INFO] 00:49:05:004 Cpu/(93766:93779): Recibi PCB id: 0
+[INFO] 00:49:05:004 Cpu/(93766:93779): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:49:05:006 Cpu/(93766:93779): Recibi PCB id: 0
+[INFO] 00:49:05:006 Cpu/(93766:93779): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 00:49:05:006 Cpu/(93766:93779): Recibi PCB id: 0
+[INFO] 00:49:05:006 Cpu/(93766:93779): PID: 0 - Listo para ejecutar F_READ 
+[ERROR] 00:49:05:006 Cpu/(93766:93779): (FS)Base rec desde memo: 1080025440 - Desplazamiento: 16
+[INFO] 00:49:05:566 Cpu/(93766:93779): Recibi PCB id: 1
+[INFO] 00:49:05:566 Cpu/(93766:93779): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:49:23:025 Cpu/(93766:93779): Recibi PCB id: 2
+[INFO] 00:49:23:025 Cpu/(93766:93779): PID: 2 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:49:23:027 Cpu/(93766:93779): Recibi PCB id: 3
+[INFO] 00:49:23:027 Cpu/(93766:93779): PID: 3 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:49:23:028 Cpu/(93766:93779): Recibi PCB id: 0
+[INFO] 00:49:23:028 Cpu/(93766:93779): PID: 0 -  Listo para ejecutar MOV_IN 
+[ERROR] 00:49:24:029 Cpu/(93766:93779): (MOV_IN)Base rec desde memo: 0
+[INFO] 00:49:24:029 Cpu/(93766:93779): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:49:24:029 Cpu/(93766:93779): PID: 0 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:49:24:029 Cpu/(93766:93779): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 00:49:24:029 Cpu/(93766:93779): Recibi PCB id: 0
+[INFO] 00:49:24:029 Cpu/(93766:93779): PID: 0 - Ejecutando EXIT
+[INFO] 00:49:24:031 Cpu/(93766:93779): Recibi PCB id: 1
+[INFO] 00:49:24:031 Cpu/(93766:93779): PID: 1 - Listo para ejecutar F_SEEK 
+[INFO] 00:49:24:031 Cpu/(93766:93779): Recibi PCB id: 1
+[INFO] 00:49:24:031 Cpu/(93766:93779): PID: 1 - Listo para ejecutar F_READ 
+[ERROR] 00:49:24:032 Cpu/(93766:93779): (FS)Base rec desde memo: 1080025440 - Desplazamiento: 16
+[INFO] 00:49:42:051 Cpu/(93766:93779): Recibi PCB id: 1
+[INFO] 00:49:42:051 Cpu/(93766:93779): PID: 1 -  Listo para ejecutar MOV_IN 
+[ERROR] 00:49:43:052 Cpu/(93766:93779): (MOV_IN)Base rec desde memo: 0
+[INFO] 00:49:43:052 Cpu/(93766:93779): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:49:43:052 Cpu/(93766:93779): PID: 1 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:49:43:052 Cpu/(93766:93779): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 00:49:43:052 Cpu/(93766:93779): Recibi PCB id: 1
+[INFO] 00:49:43:052 Cpu/(93766:93779): PID: 1 - Ejecutando EXIT
+[INFO] 00:49:43:054 Cpu/(93766:93779): Recibi PCB id: 2
+[INFO] 00:49:43:054 Cpu/(93766:93779): PID: 2 - Listo para ejecutar F_SEEK 
+[INFO] 00:49:43:054 Cpu/(93766:93779): Recibi PCB id: 2
+[INFO] 00:49:43:055 Cpu/(93766:93779): PID: 2 - Listo para ejecutar F_READ 
+[ERROR] 00:49:43:055 Cpu/(93766:93779): (FS)Base rec desde memo: 1080025440 - Desplazamiento: 16
+[INFO] 00:50:01:075 Cpu/(93766:93779): Recibi PCB id: 2
+[INFO] 00:50:01:075 Cpu/(93766:93779): PID: 2 -  Listo para ejecutar MOV_IN 
+[ERROR] 00:50:02:076 Cpu/(93766:93779): (MOV_IN)Base rec desde memo: 0
+[INFO] 00:50:02:076 Cpu/(93766:93779): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:50:02:076 Cpu/(93766:93779): PID: 2 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:50:02:076 Cpu/(93766:93779): PID: 2 - Listo para ejecutar F_CLOSE 
+[INFO] 00:50:02:076 Cpu/(93766:93779): Recibi PCB id: 2
+[INFO] 00:50:02:076 Cpu/(93766:93779): PID: 2 - Ejecutando EXIT
+[INFO] 00:50:02:078 Cpu/(93766:93779): Recibi PCB id: 3
+[INFO] 00:50:02:079 Cpu/(93766:93779): PID: 3 - Listo para ejecutar F_SEEK 
+[INFO] 00:50:02:079 Cpu/(93766:93779): Recibi PCB id: 3
+[INFO] 00:50:02:079 Cpu/(93766:93779): PID: 3 - Listo para ejecutar F_READ 
+[ERROR] 00:50:02:079 Cpu/(93766:93779): (FS)Base rec desde memo: 1080025440 - Desplazamiento: 16
+[INFO] 00:50:20:098 Cpu/(93766:93779): Recibi PCB id: 3
+[INFO] 00:50:20:098 Cpu/(93766:93779): PID: 3 -  Listo para ejecutar MOV_IN 
+[ERROR] 00:50:21:099 Cpu/(93766:93779): (MOV_IN)Base rec desde memo: 0
+[INFO] 00:50:21:099 Cpu/(93766:93779): PID: 3 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:50:21:099 Cpu/(93766:93779): PID: 3 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:50:21:099 Cpu/(93766:93779): PID: 3 - Listo para ejecutar F_CLOSE 
+[INFO] 00:50:21:099 Cpu/(93766:93779): Recibi PCB id: 3
+[INFO] 00:50:21:100 Cpu/(93766:93779): PID: 3 - Ejecutando EXIT
+[INFO] 00:50:41:568 Cpu/(93766:93779): Se ha finalizado la conexion
+[INFO] 00:50:45:971 Cpu/(93937:93937): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 00:50:45:973 Cpu/(93937:93937): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 00:50:45:976 Cpu/(93937:93937): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 00:50:47:727 Cpu/(93937:93937): Cliente conectado (a CPU_SV)
+
+[INFO] 00:50:51:543 Cpu/(93937:93942): Recibi PCB id: 0
+[INFO] 00:50:51:543 Cpu/(93937:93942): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:50:51:545 Cpu/(93937:93942): Recibi PCB id: 0
+[INFO] 00:50:51:545 Cpu/(93937:93942): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 00:50:51:545 Cpu/(93937:93942): Recibi PCB id: 0
+[INFO] 00:50:51:545 Cpu/(93937:93942): PID: 0 - Listo para ejecutar F_READ 
+[ERROR] 00:50:51:545 Cpu/(93937:93942): (FS)Base rec desde memo: 0 - Desplazamiento: 16
+[INFO] 00:50:52:030 Cpu/(93937:93942): Recibi PCB id: 1
+[INFO] 00:50:52:030 Cpu/(93937:93942): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:51:09:570 Cpu/(93937:93942): Recibi PCB id: 2
+[INFO] 00:51:09:570 Cpu/(93937:93942): PID: 2 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:51:09:571 Cpu/(93937:93942): Recibi PCB id: 3
+[INFO] 00:51:09:571 Cpu/(93937:93942): PID: 3 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:51:09:572 Cpu/(93937:93942): Recibi PCB id: 0
+[INFO] 00:51:09:572 Cpu/(93937:93942): PID: 0 -  Listo para ejecutar MOV_IN 
+[ERROR] 00:51:10:574 Cpu/(93937:93942): (MOV_IN)Base rec desde memo: 0
+[INFO] 00:51:10:574 Cpu/(93937:93942): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:51:10:574 Cpu/(93937:93942): PID: 0 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:51:10:574 Cpu/(93937:93942): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 00:51:10:574 Cpu/(93937:93942): Recibi PCB id: 0
+[INFO] 00:51:10:574 Cpu/(93937:93942): PID: 0 - Ejecutando EXIT
+[INFO] 00:51:10:577 Cpu/(93937:93942): Recibi PCB id: 1
+[INFO] 00:51:10:577 Cpu/(93937:93942): PID: 1 - Listo para ejecutar F_SEEK 
+[INFO] 00:51:10:577 Cpu/(93937:93942): Recibi PCB id: 1
+[INFO] 00:51:10:577 Cpu/(93937:93942): PID: 1 - Listo para ejecutar F_READ 
+[ERROR] 00:51:10:577 Cpu/(93937:93942): (FS)Base rec desde memo: 0 - Desplazamiento: 16
+[INFO] 00:51:28:598 Cpu/(93937:93942): Recibi PCB id: 1
+[INFO] 00:51:28:598 Cpu/(93937:93942): PID: 1 -  Listo para ejecutar MOV_IN 
+[ERROR] 00:51:29:598 Cpu/(93937:93942): (MOV_IN)Base rec desde memo: 0
+[INFO] 00:51:29:598 Cpu/(93937:93942): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:51:29:598 Cpu/(93937:93942): PID: 1 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:51:29:599 Cpu/(93937:93942): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 00:51:29:599 Cpu/(93937:93942): Recibi PCB id: 1
+[INFO] 00:51:29:599 Cpu/(93937:93942): PID: 1 - Ejecutando EXIT
+[INFO] 00:51:29:601 Cpu/(93937:93942): Recibi PCB id: 2
+[INFO] 00:51:29:601 Cpu/(93937:93942): PID: 2 - Listo para ejecutar F_SEEK 
+[INFO] 00:51:29:601 Cpu/(93937:93942): Recibi PCB id: 2
+[INFO] 00:51:29:601 Cpu/(93937:93942): PID: 2 - Listo para ejecutar F_READ 
+[ERROR] 00:51:29:601 Cpu/(93937:93942): (FS)Base rec desde memo: 0 - Desplazamiento: 16
+[INFO] 00:51:47:621 Cpu/(93937:93942): Recibi PCB id: 2
+[INFO] 00:51:47:621 Cpu/(93937:93942): PID: 2 -  Listo para ejecutar MOV_IN 
+[ERROR] 00:51:48:621 Cpu/(93937:93942): (MOV_IN)Base rec desde memo: 0
+[INFO] 00:51:48:621 Cpu/(93937:93942): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:51:48:621 Cpu/(93937:93942): PID: 2 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:51:48:622 Cpu/(93937:93942): PID: 2 - Listo para ejecutar F_CLOSE 
+[INFO] 00:51:48:622 Cpu/(93937:93942): Recibi PCB id: 2
+[INFO] 00:51:48:622 Cpu/(93937:93942): PID: 2 - Ejecutando EXIT
+[INFO] 00:51:48:624 Cpu/(93937:93942): Recibi PCB id: 3
+[INFO] 00:51:48:624 Cpu/(93937:93942): PID: 3 - Listo para ejecutar F_SEEK 
+[INFO] 00:51:48:624 Cpu/(93937:93942): Recibi PCB id: 3
+[INFO] 00:51:48:624 Cpu/(93937:93942): PID: 3 - Listo para ejecutar F_READ 
+[ERROR] 00:51:48:625 Cpu/(93937:93942): (FS)Base rec desde memo: 0 - Desplazamiento: 16
+[INFO] 00:52:06:644 Cpu/(93937:93942): Recibi PCB id: 3
+[INFO] 00:52:06:644 Cpu/(93937:93942): PID: 3 -  Listo para ejecutar MOV_IN 
+[ERROR] 00:52:07:646 Cpu/(93937:93942): (MOV_IN)Base rec desde memo: 0
+[INFO] 00:52:07:646 Cpu/(93937:93942): PID: 3 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:52:07:646 Cpu/(93937:93942): PID: 3 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:52:07:646 Cpu/(93937:93942): PID: 3 - Listo para ejecutar F_CLOSE 
+[INFO] 00:52:07:646 Cpu/(93937:93942): Recibi PCB id: 3
+[INFO] 00:52:07:646 Cpu/(93937:93942): PID: 3 - Ejecutando EXIT
+[INFO] 00:56:10:226 Cpu/(93937:93942): Se ha finalizado la conexion
+[INFO] 00:56:18:476 Cpu/(94137:94137): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 00:56:18:478 Cpu/(94137:94137): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 00:56:18:479 Cpu/(94137:94137): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 00:56:22:519 Cpu/(94137:94137): Cliente conectado (a CPU_SV)
+
+[INFO] 00:56:34:569 Cpu/(94137:94142): Recibi PCB id: 0
+[INFO] 00:56:34:570 Cpu/(94137:94142): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:56:34:571 Cpu/(94137:94142): Recibi PCB id: 0
+[INFO] 00:56:34:571 Cpu/(94137:94142): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 00:56:34:571 Cpu/(94137:94142): Recibi PCB id: 0
+[INFO] 00:56:34:571 Cpu/(94137:94142): PID: 0 - Listo para ejecutar F_READ 
+[ERROR] 00:56:34:571 Cpu/(94137:94142): (FS)Base rec desde memo: 0 - Desplazamiento: 16
+[INFO] 00:56:35:164 Cpu/(94137:94142): Recibi PCB id: 1
+[INFO] 00:56:35:164 Cpu/(94137:94142): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:56:52:589 Cpu/(94137:94142): Recibi PCB id: 2
+[INFO] 00:56:52:589 Cpu/(94137:94142): PID: 2 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:56:52:590 Cpu/(94137:94142): Recibi PCB id: 3
+[INFO] 00:56:52:590 Cpu/(94137:94142): PID: 3 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 00:56:52:591 Cpu/(94137:94142): Recibi PCB id: 0
+[INFO] 00:56:52:591 Cpu/(94137:94142): PID: 0 -  Listo para ejecutar MOV_IN 
+[ERROR] 00:56:53:592 Cpu/(94137:94142): (MOV_IN)Base rec desde memo: 0
+[INFO] 00:56:53:592 Cpu/(94137:94142): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:56:53:592 Cpu/(94137:94142): PID: 0 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:56:53:592 Cpu/(94137:94142): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 00:56:53:592 Cpu/(94137:94142): Recibi PCB id: 0
+[INFO] 00:56:53:592 Cpu/(94137:94142): PID: 0 - Ejecutando EXIT
+[INFO] 00:56:53:595 Cpu/(94137:94142): Recibi PCB id: 1
+[INFO] 00:56:53:595 Cpu/(94137:94142): PID: 1 - Listo para ejecutar F_SEEK 
+[INFO] 00:56:53:596 Cpu/(94137:94142): Recibi PCB id: 1
+[INFO] 00:56:53:596 Cpu/(94137:94142): PID: 1 - Listo para ejecutar F_READ 
+[ERROR] 00:56:53:597 Cpu/(94137:94142): (FS)Base rec desde memo: 0 - Desplazamiento: 16
+[INFO] 00:57:11:617 Cpu/(94137:94142): Recibi PCB id: 1
+[INFO] 00:57:11:617 Cpu/(94137:94142): PID: 1 -  Listo para ejecutar MOV_IN 
+[ERROR] 00:57:12:618 Cpu/(94137:94142): (MOV_IN)Base rec desde memo: 0
+[INFO] 00:57:12:618 Cpu/(94137:94142): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:57:12:618 Cpu/(94137:94142): PID: 1 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:57:12:618 Cpu/(94137:94142): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 00:57:12:619 Cpu/(94137:94142): Recibi PCB id: 1
+[INFO] 00:57:12:619 Cpu/(94137:94142): PID: 1 - Ejecutando EXIT
+[INFO] 00:57:12:620 Cpu/(94137:94142): Recibi PCB id: 2
+[INFO] 00:57:12:620 Cpu/(94137:94142): PID: 2 - Listo para ejecutar F_SEEK 
+[INFO] 00:57:12:621 Cpu/(94137:94142): Recibi PCB id: 2
+[INFO] 00:57:12:621 Cpu/(94137:94142): PID: 2 - Listo para ejecutar F_READ 
+[ERROR] 00:57:12:621 Cpu/(94137:94142): (FS)Base rec desde memo: 0 - Desplazamiento: 16
+[INFO] 00:57:30:639 Cpu/(94137:94142): Recibi PCB id: 2
+[INFO] 00:57:30:639 Cpu/(94137:94142): PID: 2 -  Listo para ejecutar MOV_IN 
+[ERROR] 00:57:31:640 Cpu/(94137:94142): (MOV_IN)Base rec desde memo: 0
+[INFO] 00:57:31:640 Cpu/(94137:94142): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:57:31:640 Cpu/(94137:94142): PID: 2 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:57:31:640 Cpu/(94137:94142): PID: 2 - Listo para ejecutar F_CLOSE 
+[INFO] 00:57:31:640 Cpu/(94137:94142): Recibi PCB id: 2
+[INFO] 00:57:31:640 Cpu/(94137:94142): PID: 2 - Ejecutando EXIT
+[INFO] 00:57:31:642 Cpu/(94137:94142): Recibi PCB id: 3
+[INFO] 00:57:31:642 Cpu/(94137:94142): PID: 3 - Listo para ejecutar F_SEEK 
+[INFO] 00:57:31:642 Cpu/(94137:94142): Recibi PCB id: 3
+[INFO] 00:57:31:642 Cpu/(94137:94142): PID: 3 - Listo para ejecutar F_READ 
+[ERROR] 00:57:31:643 Cpu/(94137:94142): (FS)Base rec desde memo: 0 - Desplazamiento: 16
+[INFO] 00:57:49:666 Cpu/(94137:94142): Recibi PCB id: 3
+[INFO] 00:57:49:667 Cpu/(94137:94142): PID: 3 -  Listo para ejecutar MOV_IN 
+[ERROR] 00:57:50:667 Cpu/(94137:94142): (MOV_IN)Base rec desde memo: 0
+[INFO] 00:57:50:668 Cpu/(94137:94142): PID: 3 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 00:57:50:668 Cpu/(94137:94142): PID: 3 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 00:57:50:668 Cpu/(94137:94142): PID: 3 - Listo para ejecutar F_CLOSE 
+[INFO] 00:57:50:668 Cpu/(94137:94142): Recibi PCB id: 3
+[INFO] 00:57:50:668 Cpu/(94137:94142): PID: 3 - Ejecutando EXIT
+[INFO] 00:58:04:827 Cpu/(94137:94142): Se ha finalizado la conexion
+[INFO] 01:00:48:070 Cpu/(94447:94447): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 01:00:48:071 Cpu/(94447:94447): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 01:00:48:071 Cpu/(94447:94447): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 01:00:54:520 Cpu/(94447:94447): Cliente conectado (a CPU_SV)
+
+[INFO] 01:00:55:466 Cpu/(94447:94453): Recibi PCB id: 0
+[INFO] 01:00:55:466 Cpu/(94447:94453): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 01:00:55:466 Cpu/(94447:94453): Recibi PCB id: 0
+[INFO] 01:00:55:466 Cpu/(94447:94453): En CPU
+[INFO] 01:00:56:467 Cpu/(94447:94453): PID: 0 - Ejecutando SET parametro 1: RAX parametro 2: SonicTheHedgehog
+
+[INFO] 01:00:56:467 Cpu/(94447:94453): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 01:00:56:467 Cpu/(94447:94453): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 0 parametro 2: RAX
+
+[INFO] 01:00:56:467 Cpu/(94447:94453): Realizado lectura del registro RAX con valor SonicTheHedgehog
+[ERROR] 01:00:56:467 Cpu/(94447:94453): (MOV_OUT)Base rec desde memo: 0
+[INFO] 01:00:56:467 Cpu/(94447:94453): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 0 - Valor: SonicTheHedgehog
+[INFO] 01:00:56:467 Cpu/(94447:94453): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 0 parametro 2: RAX
+[INFO] 01:00:56:468 Cpu/(94447:94453): En CPU
+[INFO] 01:00:57:468 Cpu/(94447:94453): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation1
+
+[INFO] 01:00:57:469 Cpu/(94447:94453): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 01:00:57:469 Cpu/(94447:94453): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 32 parametro 2: RBX
+
+[INFO] 01:00:57:469 Cpu/(94447:94453): Realizado lectura del registro RBX con valor SonyPlaystation1
+[ERROR] 01:00:57:469 Cpu/(94447:94453): (MOV_OUT)Base rec desde memo: 0
+[INFO] 01:00:57:469 Cpu/(94447:94453): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 32 - Valor: SonyPlaystation1
+[INFO] 01:00:57:469 Cpu/(94447:94453): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 32 parametro 2: RBX
+[INFO] 01:00:57:469 Cpu/(94447:94453): En CPU
+[INFO] 01:00:58:470 Cpu/(94447:94453): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation2
+
+[INFO] 01:00:58:470 Cpu/(94447:94453): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 01:00:58:470 Cpu/(94447:94453): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 48 parametro 2: RBX
+
+[INFO] 01:00:58:470 Cpu/(94447:94453): Realizado lectura del registro RBX con valor SonyPlaystation2
+[ERROR] 01:00:58:470 Cpu/(94447:94453): (MOV_OUT)Base rec desde memo: 0
+[INFO] 01:00:58:470 Cpu/(94447:94453): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 48 - Valor: SonyPlaystation2
+[INFO] 01:00:58:470 Cpu/(94447:94453): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 48 parametro 2: RBX
+[INFO] 01:00:58:471 Cpu/(94447:94453): En CPU
+[INFO] 01:00:59:471 Cpu/(94447:94453): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation3
+
+[INFO] 01:00:59:472 Cpu/(94447:94453): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 01:00:59:472 Cpu/(94447:94453): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 64 parametro 2: RBX
+
+[INFO] 01:00:59:472 Cpu/(94447:94453): Realizado lectura del registro RBX con valor SonyPlaystation3
+[ERROR] 01:00:59:472 Cpu/(94447:94453): (MOV_OUT)Base rec desde memo: 0
+[INFO] 01:00:59:472 Cpu/(94447:94453): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 64 - Valor: SonyPlaystation3
+[INFO] 01:00:59:472 Cpu/(94447:94453): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 64 parametro 2: RBX
+[INFO] 01:00:59:472 Cpu/(94447:94453): En CPU
+[INFO] 01:01:00:473 Cpu/(94447:94453): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation4
+
+[INFO] 01:01:00:473 Cpu/(94447:94453): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 01:01:00:473 Cpu/(94447:94453): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 80 parametro 2: RBX
+
+[INFO] 01:01:00:473 Cpu/(94447:94453): Realizado lectura del registro RBX con valor SonyPlaystation4
+[ERROR] 01:01:00:473 Cpu/(94447:94453): (MOV_OUT)Base rec desde memo: 0
+[INFO] 01:01:00:473 Cpu/(94447:94453): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 80 - Valor: SonyPlaystation4
+[INFO] 01:01:00:474 Cpu/(94447:94453): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 80 parametro 2: RBX
+[INFO] 01:01:00:474 Cpu/(94447:94453): En CPU
+[INFO] 01:01:01:474 Cpu/(94447:94453): PID: 0 - Ejecutando SET parametro 1: RBX parametro 2: SonyPlaystation5
+
+[INFO] 01:01:01:474 Cpu/(94447:94453): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 01:01:01:474 Cpu/(94447:94453): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 96 parametro 2: RBX
+
+[INFO] 01:01:01:474 Cpu/(94447:94453): Realizado lectura del registro RBX con valor SonyPlaystation5ion2
+
+[ERROR] 01:01:01:474 Cpu/(94447:94453): (MOV_OUT)Base rec desde memo: 0
+[INFO] 01:01:01:475 Cpu/(94447:94453): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 96 - Valor: SonyPlaystation5
+[INFO] 01:01:01:475 Cpu/(94447:94453): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 96 parametro 2: RBX
+[INFO] 01:01:01:475 Cpu/(94447:94453): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Consoles
+ 
+[INFO] 01:01:01:476 Cpu/(94447:94453): Recibi PCB id: 0
+[INFO] 01:01:01:476 Cpu/(94447:94453): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 01:01:01:477 Cpu/(94447:94453): Recibi PCB id: 1
+[INFO] 01:01:01:477 Cpu/(94447:94453): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 01:01:31:499 Cpu/(94447:94453): Recibi PCB id: 0
+[INFO] 01:01:31:499 Cpu/(94447:94453): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 01:01:31:499 Cpu/(94447:94453): Recibi PCB id: 0
+[INFO] 01:01:31:499 Cpu/(94447:94453): PID: 0 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 01:01:31:499 Cpu/(94447:94453): Recibi PCB id: 0
+[INFO] 01:01:31:500 Cpu/(94447:94453): PID: 0 - Listo para ejecutar F_WRITE 
+[ERROR] 01:01:31:500 Cpu/(94447:94453): (FS)Base rec desde memo: 0 - Desplazamiento: 32
+[INFO] 01:01:31:500 Cpu/(94447:94453): Recibi PCB id: 1
+[INFO] 01:01:31:500 Cpu/(94447:94453): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 01:01:31:542 Cpu/(94447:94453): Recibi PCB id: 1
+[INFO] 01:01:31:542 Cpu/(94447:94453): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 01:01:31:629 Cpu/(94447:94453): Recibi PCB id: 1
+[INFO] 01:01:31:629 Cpu/(94447:94453): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 01:01:31:718 Cpu/(94447:94453): Recibi PCB id: 1
+[INFO] 01:01:31:718 Cpu/(94447:94453): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 01:01:31:806 Cpu/(94447:94453): Recibi PCB id: 1
+[INFO] 01:01:31:806 Cpu/(94447:94453): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 01:01:31:893 Cpu/(94447:94453): Recibi PCB id: 1
+[INFO] 01:01:31:894 Cpu/(94447:94453): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 01:01:31:938 Cpu/(94447:94453): Recibi PCB id: 1
+[INFO] 01:01:31:938 Cpu/(94447:94453): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 01:01:31:982 Cpu/(94447:94453): Recibi PCB id: 1
+[INFO] 01:01:31:982 Cpu/(94447:94453): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 01:02:02:523 Cpu/(94447:94453): Recibi PCB id: 1
+[INFO] 01:02:02:523 Cpu/(94447:94453): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 01:02:02:569 Cpu/(94447:94453): Recibi PCB id: 1
+[INFO] 01:02:02:569 Cpu/(94447:94453): PID: 1 - Ejecutando EXIT
+[INFO] 01:02:02:571 Cpu/(94447:94453): Recibi PCB id: 0
+[INFO] 01:02:02:571 Cpu/(94447:94453): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 01:02:02:574 Cpu/(94447:94453): Recibi PCB id: 0
+[INFO] 01:02:02:574 Cpu/(94447:94453): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 01:02:02:578 Cpu/(94447:94453): Recibi PCB id: 0
+[INFO] 01:02:02:578 Cpu/(94447:94453): PID: 0 - Listo para ejecutar F_TRUNCATE 
+[INFO] 01:02:02:598 Cpu/(94447:94453): Recibi PCB id: 0
+[INFO] 01:02:02:598 Cpu/(94447:94453): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 01:02:02:599 Cpu/(94447:94453): Recibi PCB id: 0
+[INFO] 01:02:02:599 Cpu/(94447:94453): PID: 0 - Listo para ejecutar F_WRITE 
+[ERROR] 01:02:02:599 Cpu/(94447:94453): (FS)Base rec desde memo: 122 - Desplazamiento: 0
+[INFO] 01:02:03:623 Cpu/(94447:94453): Recibi PCB id: 0
+[INFO] 01:02:03:623 Cpu/(94447:94453): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 01:02:03:623 Cpu/(94447:94453): Recibi PCB id: 0
+[INFO] 01:02:03:624 Cpu/(94447:94453): PID: 0 - Ejecutando EXIT
+[INFO] 01:02:52:660 Cpu/(94447:94453): Se ha finalizado la conexion
+[INFO] 01:03:00:325 Cpu/(94573:94573): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 01:03:00:327 Cpu/(94573:94573): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 01:03:00:328 Cpu/(94573:94573): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 01:03:23:308 Cpu/(94573:94573): Cliente conectado (a CPU_SV)
+
+[INFO] 01:03:26:175 Cpu/(94573:94587): Recibi PCB id: 0
+[INFO] 01:03:26:175 Cpu/(94573:94587): PID: 0 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 01:03:26:177 Cpu/(94573:94587): Recibi PCB id: 0
+[INFO] 01:03:26:177 Cpu/(94573:94587): PID: 0 - Listo para ejecutar F_SEEK 
+[INFO] 01:03:26:177 Cpu/(94573:94587): Recibi PCB id: 0
+[INFO] 01:03:26:177 Cpu/(94573:94587): PID: 0 - Listo para ejecutar F_READ 
+[INFO] 01:03:26:998 Cpu/(94573:94587): Recibi PCB id: 1
+[INFO] 01:03:26:998 Cpu/(94573:94587): PID: 1 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 01:03:44:198 Cpu/(94573:94587): Recibi PCB id: 2
+[INFO] 01:03:44:198 Cpu/(94573:94587): PID: 2 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 01:03:44:198 Cpu/(94573:94587): Recibi PCB id: 3
+[INFO] 01:03:44:198 Cpu/(94573:94587): PID: 3 - Ejecutando F_OPEN - Solicita a kernel abrir: Videogames
+ 
+[INFO] 01:03:44:199 Cpu/(94573:94587): Recibi PCB id: 0
+[INFO] 01:03:44:199 Cpu/(94573:94587): PID: 0 -  Listo para ejecutar MOV_IN 
+[INFO] 01:03:45:200 Cpu/(94573:94587): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 01:03:45:200 Cpu/(94573:94587): PID: 0 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 01:03:45:200 Cpu/(94573:94587): PID: 0 - Listo para ejecutar F_CLOSE 
+[INFO] 01:03:45:201 Cpu/(94573:94587): Recibi PCB id: 0
+[INFO] 01:03:45:201 Cpu/(94573:94587): PID: 0 - Ejecutando EXIT
+[INFO] 01:03:45:203 Cpu/(94573:94587): Recibi PCB id: 1
+[INFO] 01:03:45:203 Cpu/(94573:94587): PID: 1 - Listo para ejecutar F_SEEK 
+[INFO] 01:03:45:203 Cpu/(94573:94587): Recibi PCB id: 1
+[INFO] 01:03:45:203 Cpu/(94573:94587): PID: 1 - Listo para ejecutar F_READ 
+[INFO] 01:04:03:224 Cpu/(94573:94587): Recibi PCB id: 1
+[INFO] 01:04:03:224 Cpu/(94573:94587): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 01:04:04:226 Cpu/(94573:94587): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 01:04:04:226 Cpu/(94573:94587): PID: 1 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 01:04:04:226 Cpu/(94573:94587): PID: 1 - Listo para ejecutar F_CLOSE 
+[INFO] 01:04:04:226 Cpu/(94573:94587): Recibi PCB id: 1
+[INFO] 01:04:04:226 Cpu/(94573:94587): PID: 1 - Ejecutando EXIT
+[INFO] 01:04:04:228 Cpu/(94573:94587): Recibi PCB id: 2
+[INFO] 01:04:04:228 Cpu/(94573:94587): PID: 2 - Listo para ejecutar F_SEEK 
+[INFO] 01:04:04:229 Cpu/(94573:94587): Recibi PCB id: 2
+[INFO] 01:04:04:229 Cpu/(94573:94587): PID: 2 - Listo para ejecutar F_READ 
+[INFO] 01:04:22:250 Cpu/(94573:94587): Recibi PCB id: 2
+[INFO] 01:04:22:250 Cpu/(94573:94587): PID: 2 -  Listo para ejecutar MOV_IN 
+[INFO] 01:04:23:251 Cpu/(94573:94587): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 01:04:23:251 Cpu/(94573:94587): PID: 2 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 01:04:23:252 Cpu/(94573:94587): PID: 2 - Listo para ejecutar F_CLOSE 
+[INFO] 01:04:23:252 Cpu/(94573:94587): Recibi PCB id: 2
+[INFO] 01:04:23:252 Cpu/(94573:94587): PID: 2 - Ejecutando EXIT
+[INFO] 01:04:23:254 Cpu/(94573:94587): Recibi PCB id: 3
+[INFO] 01:04:23:254 Cpu/(94573:94587): PID: 3 - Listo para ejecutar F_SEEK 
+[INFO] 01:04:23:255 Cpu/(94573:94587): Recibi PCB id: 3
+[INFO] 01:04:23:255 Cpu/(94573:94587): PID: 3 - Listo para ejecutar F_READ 
+[INFO] 01:04:41:275 Cpu/(94573:94587): Recibi PCB id: 3
+[INFO] 01:04:41:275 Cpu/(94573:94587): PID: 3 -  Listo para ejecutar MOV_IN 
+[INFO] 01:04:42:276 Cpu/(94573:94587): PID: 3 - Acción: LEER - Segmento: 0 - Dirección Física: 16 - Valor: SonicTheHedgehog
+[INFO] 01:04:42:276 Cpu/(94573:94587): PID: 3 - Se ha ejecutado MOV_IN parametro 1: RAX parametro 2: 16
+
+[INFO] 01:04:42:276 Cpu/(94573:94587): PID: 3 - Listo para ejecutar F_CLOSE 
+[INFO] 01:04:42:277 Cpu/(94573:94587): Recibi PCB id: 3
+[INFO] 01:04:42:277 Cpu/(94573:94587): PID: 3 - Ejecutando EXIT
+[INFO] 01:05:09:493 Cpu/(94573:94587): Se ha finalizado la conexion
