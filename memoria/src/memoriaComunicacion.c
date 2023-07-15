@@ -141,6 +141,18 @@ static void procesar_kernel(void * void_args) {
 				pthread_mutex_unlock(&mx_kernel);
 
     			break;
+    case MEMO_EXIT:
+
+    			pthread_mutex_lock(&mx_kernel);
+    	    	recv(cliente_socket, & pid, sizeof(uint16_t), 0);
+    	    	pthread_mutex_unlock(&mx_kernel);
+
+    	    	eliminarProceso(pid);
+    	    	log_info(logger,"ELIMINACION DE PROCESO PID: %d",pid);
+
+
+    			break;
+
     case MAKE_COMPACTATION:
     			log_info(logger,"[KERNEL] Recibido pedido de COMPACTAR");
     			//compactacion();

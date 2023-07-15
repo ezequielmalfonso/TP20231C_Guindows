@@ -568,6 +568,8 @@ void esperar_cpu(){
 
 			case EXIT:	// Cada exit debe incluir estas tres lineas. El motivo seria mejor pasarlo por parametro.
 				motivoExit = "POR FIN";
+
+
 				execute_a_exit(pcb,motivoExit);
 				sem_post(&s_ready_execute);
 				break;
@@ -1101,8 +1103,15 @@ void execute_a_exit(PCB_t* pcb, char* motivoExit){
     log_info(logger,"PID: %d - Estado Anterior: EXECUTE - Estado Actual: EXIT", pcb->pid);
     log_info(logger,"Finaliza el proceso %d - Motivo: %s", pcb->pid, motivoExit);
     //pthread_mutex_unlock(&mx_log);
+    op_code cop_exit = MEMO_EXIT;
+    log_error(logger,"Eliminar segmento de pid: %d",pcb->pid);
+	pthread_mutex_lock(&mx_memoria);
+	send(memoria_fd,&cop_exit,sizeof(op_code),0);
+	send(memoria_fd,&(pcb->pid),sizeof(uint16_t),0);
+	pthread_mutex_unlock(&mx_memoria);
     sem_post(&s_multiprogramacion_actual);//cuando se finaliza
     //liberar_espacio_de_memoria(PCB); Liberamos las estructructuras de memoria
+
     pcb_destroy(pcb);
     //avisar_consola_finalizacion(); Funcion que le avisa a la consola que se finalizo correctamente
     sem_post(&s_cpu_desocupado);

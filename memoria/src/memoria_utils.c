@@ -362,6 +362,28 @@ t_segmento* unirHuecosAlfinal(t_segmento* hueco, t_segmento* huecoNuevo){
 return hueco;
 }
 
+void eliminarProceso(uint16_t pid){
+	int j=0;
+	int i=0;
+	t_nodoDePagina* aux = list_get(tabla_de_paginas,j);
+		while(pid!=aux->id_proceso){
+			if(j >= list_size(tabla_de_paginas)) {
+				log_error(logger, "Error en la busqueda de tabla");
+				break;
+			}
+		aux	= list_get(tabla_de_paginas,j);
+		j++;
+		}
+	t_list* tablaProceso = aux->tablaDelProceso;
+
+		t_segmento* segmentoAux;
+		for(i=0;list_size(tablaProceso)>1;i++){
+			segmentoAux = list_get(tablaProceso,list_size(tablaProceso)-1);
+			eliminarSegmentoProceso(pid,segmentoAux->id_segmento);
+		}
+		log_info(logger,"eliminar segmentos del pid:",aux->id_proceso);
+list_remove_and_destroy_element(tabla_de_paginas,j-1,free);
+}
 
 
 
