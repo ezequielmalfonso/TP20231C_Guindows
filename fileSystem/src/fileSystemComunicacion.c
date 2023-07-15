@@ -185,19 +185,22 @@ static void procesar_conexion(void* void_args) {
 				 int direccion_donde_leer;
 
 				 if(bloques_actuales > 1){
+					 int bloque_fs_w = ceil((double)(FCB_archivo->puntero_indirecto) / configuracionSuperBloque->BLOCK_SIZE);
+					 log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: %d - Bloque File System %d", parametro1, (1), bloque_fs_w);
 					 cargarBloqueIndirecto(descriptor_archivo_bloque, FCB_archivo->puntero_indirecto);
 					 for(i = 0; i < (bloques_actuales - 1) ; i++ ){
 						 direccion_donde_leer = FCB_archivo->puntero_indirecto + (i * tamanio_puntero);
 						 nro_bloque = leerBloqueIndirecto(descriptor_archivo_bloque, direccion_donde_leer) / configuracionSuperBloque->BLOCK_SIZE;
 						 bitarray_clean_bit(s_bitmap, nro_bloque);
 					 }
+					 log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: %d - Bloque File System %d", parametro1, (1), bloque_fs_w);
 					 guardarBloqueIndirecto(descriptor_archivo_bloque, FCB_archivo->puntero_indirecto);
 					 int bloque_liberar_indirecto = FCB_archivo->puntero_indirecto / configuracionSuperBloque->BLOCK_SIZE;
 					 bitarray_clean_bit(s_bitmap,bloque_liberar_indirecto);
 
 				 }
 
-				 log_error(logger, "Terminando trunc a 0");
+				 //log_error(logger, "Terminando trunc a 0");
 				 FCB_archivo->tamanio_archivo = 0;
 				 FCB_archivo->puntero_directo = 0;
 				 FCB_archivo->puntero_indirecto = 0;
@@ -220,6 +223,8 @@ static void procesar_conexion(void* void_args) {
 				 int direccion_donde_leer;
 
 				 if(bloques_actuales > 1){
+					 int bloque_fs_w = ceil((double)(FCB_archivo->puntero_indirecto) / configuracionSuperBloque->BLOCK_SIZE);
+					 log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: %d - Bloque File System %d", parametro1, (1), bloque_fs_w);
 					 cargarBloqueIndirecto(descriptor_archivo_bloque, FCB_archivo->puntero_indirecto);
 					 for(i = bloques_actuales ; i > bloques_totales ; i--){
 						 direccion_donde_leer = i*tamanio_puntero;
@@ -228,6 +233,8 @@ static void procesar_conexion(void* void_args) {
 						 bitarray_clean_bit(s_bitmap,nro_bloque);
 						 log_error(logger, "Se ha borrado el bloque nro: %d", nro_bloque);
 					 }
+					 log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: %d - Bloque File System %d", parametro1, (1), bloque_fs_w);
+					 guardarBloqueIndirecto(descriptor_archivo_bloque, FCB_archivo->puntero_indirecto);
 					 if(bloques_totales == 1 ){
 					   int bloque_liberar_indirecto = FCB_archivo->puntero_indirecto / configuracionSuperBloque->BLOCK_SIZE;
 					   bitarray_clean_bit(s_bitmap,bloque_liberar_indirecto);
@@ -284,6 +291,8 @@ static void procesar_conexion(void* void_args) {
 				 uint32_t puntero_nuevo;
 				 int direccion_donde_escribir;
 				 if(bloques_totales > bloques_actuales) {
+					 int bloque_fs_w = ceil((double)(FCB_archivo->puntero_indirecto) / configuracionSuperBloque->BLOCK_SIZE);
+					 log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: %d - Bloque File System %d", parametro1, (1), bloque_fs_w);
 					 cargarBloqueIndirecto(descriptor_archivo_bloque, FCB_archivo->puntero_indirecto);
 					 for(i = bloques_actuales; i < bloques_totales; i++) {
 						 indice_bitmap = buscarPrimerBloqueVacio (s_bitmap, configuracionSuperBloque->BLOCK_SIZE);
@@ -295,6 +304,7 @@ static void procesar_conexion(void* void_args) {
 						 direccion_donde_escribir = (i-1) * tamanio_puntero;
 						 escribirBloqueIndirecto( descriptor_archivo_bloque, direccion_donde_escribir, puntero_nuevo);
 					 }
+					 log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: %d - Bloque File System %d", parametro1, (1), bloque_fs_w);
 					 guardarBloqueIndirecto(descriptor_archivo_bloque, FCB_archivo->puntero_indirecto);
 				 }
 			 }
@@ -374,6 +384,8 @@ static void procesar_conexion(void* void_args) {
 			 char* buffer = malloc(tamanioALeerPrimerBloque+1);
 			 lseek(descriptor_archivo_bloque, posEnPrimerBloque + puntero_primer_bloque, SEEK_SET);
 			 read(descriptor_archivo_bloque, buffer, tamanioALeerPrimerBloque);
+			 int bloque_fs = ceil((double)(posEnPrimerBloque + puntero_primer_bloque) / configuracionSuperBloque->BLOCK_SIZE);
+             log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: %d - Bloque File System %d", parametro1, nro_bloque_archivo, bloque_fs);
 			 usleep(configuracion->RETARDO_ACCESO_BLOQUE);
 			 tamanioTotalALeer -= tamanioALeerPrimerBloque;
 			 buffer[tamanioALeerPrimerBloque] = '\0';
@@ -393,6 +405,8 @@ static void procesar_conexion(void* void_args) {
 				 char* buffer = malloc(tamanioALeer+1);
 				 usleep(configuracion->RETARDO_ACCESO_BLOQUE);
 				 read(descriptor_archivo_bloque, buffer, tamanioALeer);
+				 int bloque_fs_r = ceil((double)(pointer_a_leer) / configuracionSuperBloque->BLOCK_SIZE);
+				 log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: %d - Bloque File System %d", parametro1, (j/configuracionSuperBloque->BLOCK_SIZE), bloque_fs_r);
 				 buffer[tamanioALeer] = '\0';
 				 string_append(&leido, buffer);
 				 log_info(logger, "Se leyo en un bloque %s", buffer);
@@ -468,6 +482,8 @@ static void procesar_conexion(void* void_args) {
 			 usleep(configuracion->RETARDO_ACCESO_BLOQUE);
 			 lseek(descriptor_archivo_bloque, puntero, SEEK_SET);
 			 write(descriptor_archivo_bloque, escribirBuffer, size);
+			 int bloque_fs_w = ceil((double)(puntero) / configuracionSuperBloque->BLOCK_SIZE);
+			 log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: %d - Bloque File System %d", parametro1, (bloque_inicial), bloque_fs_w);
 			 tamanio_a_escribir -= size;
 			 escribirBuffer += size;
 			 log_info(logger, "Se ha escrito en el bloque con puntero %d un tamaño de %d, partiendo de la posicion del archivo %d", puntero, size, posicion);
@@ -483,6 +499,8 @@ static void procesar_conexion(void* void_args) {
 					 usleep(configuracion->RETARDO_ACCESO_BLOQUE);
 					 lseek(descriptor_archivo_bloque, puntero, SEEK_SET);
 					 write(descriptor_archivo_bloque, escribirBuffer, size);
+					 int bloque_fs_w = ceil((double)(puntero) / configuracionSuperBloque->BLOCK_SIZE);
+					 log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: %d - Bloque File System %d", parametro1, (l+1), bloque_fs_w);
 					 tamanio_a_escribir -= size;
 					 escribirBuffer += size;
 					 log_info(logger, "Se ha escrito en el bloque con puntero %d", puntero);

@@ -322,7 +322,7 @@ void agregarHueco(t_segmento* seg){
 		if(seg->direccion_base==sAux->direccion_base+sAux->tamanio_segmento){
 		sAux->tamanio_segmento+=seg->tamanio_segmento; //un hueco termina donde arranca el nuevo
 		hayQueAgregarlo = false;
-		log_info(logger,"manoseo el hueco");
+		//log_info(logger,"manoseo el hueco");
 		}
 	}
 	for(int i=0;i<list_size(tabla_de_huecos);i++){
@@ -331,7 +331,7 @@ void agregarHueco(t_segmento* seg){
 		sAux->direccion_base=seg->direccion_base;
 		sAux->tamanio_segmento+=seg->tamanio_segmento;
 		hayQueAgregarlo = false;
-		log_info(logger,"manoseo el hueco");
+		//log_info(logger,"manoseo el hueco");
 		}
 	}
 	if(hayQueAgregarlo)
@@ -381,7 +381,7 @@ void eliminarProceso(uint16_t pid){
 			segmentoAux = list_get(tablaProceso,list_size(tablaProceso)-1);
 			eliminarSegmentoProceso(pid,segmentoAux->id_segmento);
 		}
-		log_info(logger,"eliminar segmentos del pid:",aux->id_proceso);
+		//log_info(logger,"eliminar segmentos del pid:",aux->id_proceso);
 list_remove_and_destroy_element(tabla_de_paginas,j-1,free);
 }
 
