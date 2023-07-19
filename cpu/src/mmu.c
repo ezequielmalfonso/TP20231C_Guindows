@@ -9,7 +9,7 @@ uint32_t desplazamiento(int logica){
 	return logica%configuracion->TAM_MAX_SEGMENTO;
 }
 
-int mov_in(char direccion_logica[20], char registro[20], PCB_t* pcb){
+int mov_in(char direccion_logica[20], char* registro, PCB_t* pcb){
 	uint32_t desplazamiento1 = desplazamiento(atoi(direccion_logica));
 	uint32_t n_segmento = num_seg(atoi(direccion_logica));
 
@@ -23,15 +23,16 @@ int mov_in(char direccion_logica[20], char registro[20], PCB_t* pcb){
 		return 0;
 
 	}else{
-	char* registro_recibido = malloc(20);
+	char* registro_recibido = malloc(tamanio+1);
 	send_pedido_memoria(memoria_fd,n_segmento,desplazamiento1,(pcb->pid),tamanio, MOV_IN);
 	recv(memoria_fd, registro_recibido ,tamanio, MSG_WAITALL);
+	registro_recibido[tamanio] = '\0';
 
 
 	//memcpy(registro_recibido+4,"\n",2);
 		//log_info(logger,"estamos recibiendo de memoria: %s", registro_recibido);
 	//log_info(logger,"estamos seteando de memoria: %d", tamanio);
-	//log_warning(logger,"Antes de setear registro: Regsitro: %s - Reg_recibido:%s", registro, registro_recibido);
+	log_warning(logger,"Antes de setear registro: Regsitro: %s - Reg_recibido:%s", registro, registro_recibido);
 	set_registro(registro, registro_recibido, pcb);
 	//log_error(logger,"Dps de setear registro");
 
@@ -39,7 +40,7 @@ int mov_in(char direccion_logica[20], char registro[20], PCB_t* pcb){
 	uint64_t direccion_fisica=0;
 	send_escribir_memoria(memoria_fd, n_segmento, 0, pcb->pid, "", 0, BASE);
 	recv(memoria_fd, &base, sizeof(uint64_t), MSG_WAITALL);
-	//log_error(logger,"(MOV_IN)Base rec desde memo: %d", base);
+	log_error(logger,"(MOV_IN)Base rec desde memo: %d", base);
 	direccion_fisica = desplazamiento1+base;
 	log_info(logger, "PID: %d - Acción: LEER - Segmento: %d - Dirección Física: %d - Valor: %s", pcb->pid, n_segmento, direccion_fisica, registro_recibido);
 
@@ -56,8 +57,8 @@ int mov_out(char* direccion_logica, char* registro,PCB_t* pcb){
 		//log_warning(logger, "Tamanio registro: %d", tamanio );
 		char* escribir = malloc(tamanio+1);
 		memcpy(escribir,leer_registro(registro,tamanio),tamanio);
-		//escribir[tamanio-1]='\0';
-		//log_info(logger, "estamos mandando a memoria: %s", escribir);
+		escribir[tamanio] = '\0';
+		log_info(logger, "estamos mandando a memoria: %s", escribir);
 		//log_error(logger, "(MOV_OUT)PID: %d - TAM REG: %d", pcb->pid, tamanio);
 		if(checkSegmentetitonFault(desplazamiento1+tamanio, n_segmento,pcb)){
 			log_error(logger, "PID: %d - SEGMENTATION FAULT", pcb->pid);
@@ -72,7 +73,7 @@ int mov_out(char* direccion_logica, char* registro,PCB_t* pcb){
 		//log_warning(logger, "Antes del send a memo");
 		send_escribir_memoria(memoria_fd, n_segmento, 0, pcb->pid, "", 0, BASE);
 		recv(memoria_fd, &base, sizeof(uint64_t), MSG_WAITALL);
-		//log_error(logger,"(MOV_OUT)Base rec desde memo: %d", base);
+		log_error(logger,"(MOV_OUT)Base rec desde memo: %d", base);
 
 		direccion_fisica = desplazamiento1+base;
 		log_info(logger, "PID: %d - Acción: ESCRIBIR - Segmento: %d - Dirección Física: %d - Valor: %s", pcb->pid, n_segmento, direccion_fisica, escribir);
@@ -126,7 +127,7 @@ void set_registro(char* registro1,char* registro_recibido, PCB_t* pcb){
 	//log_warning(logger,"Registro: %s", registro_recibido);
 	//pcb->registro_cpu = malloc(sizeof(registros_t));
 	//log_info(logger,"registro recibido: %s", registro_recibido);
-	char* registro = strtok(registro1,"\n");
+	char* registro = strtok(registro1, "\n");
 	registro_recibido = strtok(registro_recibido,"\n");
 	if(!strcmp(registro,"AX")){
 		memcpy(regAX, registro_recibido, sizeof(char) * 5);
@@ -173,7 +174,8 @@ void set_registro(char* registro1,char* registro_recibido, PCB_t* pcb){
 }
 
 void* leer_registro(char* registro1, int tamanio){
-	char* registro_recibido=malloc(20);
+	char* registro_recibido=malloc(21);
+	if(tamanio > 20) log_error(logger, "Error con tamanio al leer registro");
 	char* registro=strtok(registro1,"\n");
 	//log_error(logger,"registro : %s - Tamanio: %d",registro, tamanio);
 	//log_error(logger,"registro AX : %s",regAX);
@@ -220,7 +222,7 @@ void* leer_registro(char* registro1, int tamanio){
 	}else{
 		log_error(logger, "me fui al else");
 	}
-
+	registro_recibido[tamanio] = '\0';
 	log_info(logger, "Realizado lectura del registro %s con valor %s", registro, registro_recibido);
 	return registro_recibido;
 }

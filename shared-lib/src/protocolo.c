@@ -467,7 +467,7 @@ static void deserializar_instruccion_memoria(void* stream, uint32_t* param1, uin
 	memcpy(param4, stream, sizeof(int));
 
 }
-bool send_escribir_memoria(int fd, uint32_t num_seg, uint32_t desplazamiento, uint32_t pid,void* escribir,int tamanio, op_code codigo) {
+bool send_escribir_memoria(int fd, uint32_t num_seg, uint32_t desplazamiento, uint32_t pid, char* escribir,int tamanio, op_code codigo) {
 	size_t size;
 	void* stream = serializar_escribir_memoria(&size, num_seg, desplazamiento, pid,escribir,tamanio, codigo);
 	if (send(fd, stream, size, 0) != size) {
@@ -478,7 +478,7 @@ bool send_escribir_memoria(int fd, uint32_t num_seg, uint32_t desplazamiento, ui
 	return true;
 }
 
-static void* serializar_escribir_memoria(size_t* size, uint32_t param1, uint32_t param2, uint32_t param3,void* param4, int tam, op_code codigo) {
+static void* serializar_escribir_memoria(size_t* size, uint32_t param1, uint32_t param2, uint32_t param3, char* param4, int tam, op_code codigo) {
 	size_t opcodesize = sizeof(op_code);
 	*size = 3 *sizeof(uint32_t) + opcodesize + sizeof(size_t)+ sizeof(int)+tam;
 	void * stream = malloc(*size);

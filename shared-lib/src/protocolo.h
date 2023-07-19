@@ -125,8 +125,8 @@ bool send_pedido_memoria(int fd, uint32_t num_seg, uint32_t desplazamiento, uint
 //escribir
 bool recv_escribir_memoria(int fd, uint32_t* num_seg, uint32_t* desplazamiento, uint32_t* pid,int* tamanio, void* escribir) ;
 static void deserializar_escribir_memoria(void* stream, uint32_t* param1, uint32_t* param2, uint32_t* param3,int* param4, void* escribir) ;
-static void* serializar_escribir_memoria(size_t* size, uint32_t param1, uint32_t param2, uint32_t param3,void* param4, int tam, op_code codigo) ;
-bool send_escribir_memoria(int fd, uint32_t num_seg, uint32_t desplazamiento, uint32_t pid,void* escribir,int tamanio, op_code codigo);
+static void* serializar_escribir_memoria(size_t* size, uint32_t param1, uint32_t param2, uint32_t param3,char* param4, int tam, op_code codigo) ;
+bool send_escribir_memoria(int fd, uint32_t num_seg, uint32_t desplazamiento, uint32_t pid,char* escribir,int tamanio, op_code codigo);
 //ENVIO FS a MEMORIA
 bool send_fs_memoria(int memoria_fd, char* direccion_fisica, int tamanio, op_code codigo);
 static void* serializar_fs_memoria(size_t* size, char* direccion_fisica, int tamanio, op_code codigo);

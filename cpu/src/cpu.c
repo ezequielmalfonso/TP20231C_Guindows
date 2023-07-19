@@ -30,18 +30,18 @@ int main(){
 	char* ip = config_get_string_value(config_ips,"IP_CPU");
 
 	// REGISTROS
-	regAX = malloc(4);
-	regBX = malloc(4);
-	regCX = malloc(4);
-	regDX = malloc(4);
-	regEAX = malloc(8);
-	regEBX = malloc(8);
-	regECX = malloc(8);
-	regEDX = malloc(8);
-	regRAX = malloc(16);
-	regRBX = malloc(16);
-	regRCX = malloc(16);
-	regRDX = malloc(16);
+	regAX = malloc(5);
+	regBX = malloc(5);
+	regCX = malloc(5);
+	regDX = malloc(5);
+	regEAX = malloc(9);
+	regEBX = malloc(9);
+	regECX = malloc(9);
+	regEDX = malloc(9);
+	regRAX = malloc(17);
+	regRBX = malloc(17);
+	regRCX = malloc(17);
+	regRDX = malloc(17);
 
 	//CLIENTE Conexion a MEMORIA
 	generar_conexion(&memoria_fd, configuracion);

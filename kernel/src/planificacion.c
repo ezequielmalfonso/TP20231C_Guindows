@@ -192,8 +192,8 @@ void inicializarPlanificacion(){
 	sem_init(&s_esperar_cpu, 0, 0);
 	sem_init(&s_cont_ready,0,0);
 	sem_init(&s_io, 0, 1);
-	sem_init(&s_blocked_fs, 0, 1);
-	sem_init(&s_fs_compacta, 0, 1);
+	sem_init(&s_blocked_fs, 0, 1);	//no se porque no use un mutex
+	sem_init(&s_fs_compacta, 0, 1); // no se usa?
 
 
 
@@ -358,7 +358,8 @@ void esperar_cpu(){
 				send(memoria_fd,&(pcb->pid),sizeof(uint16_t),0);
 				send(memoria_fd,&(id_seg),sizeof(uint32_t),0);
 				send(memoria_fd,&(tam_segmento),sizeof(uint32_t),0);
-				pthread_mutex_unlock(&mx_memoria);
+				//pthread_mutex_unlock(&mx_memoria);
+				//me lo llevo al final para que los procesos en new no jodan
 				t_segmento* segmento = malloc(sizeof(t_segmento));
 
 				uint32_t id_segmento      = 0;
@@ -400,9 +401,10 @@ void esperar_cpu(){
 										log_warning(logger, "SOLICITAR COMPACTACION");
 										op_code cop_make = MAKE_COMPACTATION;
 										//sem_(&s_esperar_cpu);
-										pthread_mutex_lock(&mx_memoria);
+										//pthread_mutex_lock(&mx_memoria);
+										// Hay un lock arriba
 										send(memoria_fd,&cop_make,sizeof(op_code),0);
-										pthread_mutex_unlock(&mx_memoria);
+										//pthread_mutex_unlock(&mx_memoria);
 
 										log_warning(logger, "ESPERO FIN DE COMPACTACION");
 
@@ -432,7 +434,7 @@ void esperar_cpu(){
 
 				}
 
-
+				pthread_mutex_unlock(&mx_memoria);
 				sem_post(&s_esperar_cpu);
 
 				//sem_post(&s_cont_ready);
@@ -502,7 +504,7 @@ void esperar_cpu(){
 								 pthread_mutex_lock(&mx_cola_blocked);
 								 pcb_blocked = queue_pop(aux_rec2_s->cola_bloqueados_recurso);
 								 pthread_mutex_unlock(&mx_cola_blocked);
-								 log_info(logger, "PID: %d que se  desbloqueo", pcb_blocked->pid );
+								 log_info(logger, "PID: %d - Estado anterior: BLOCKED por recurso - Estado actual: READY)", pcb_blocked->pid );
 							 }else {
 								 log_error(logger, "Ocurrio un error con las instancias del recurso %d: ", pcb->pid);
 							 }
@@ -512,6 +514,7 @@ void esperar_cpu(){
 							 // TODO para listar los pids despues de entrar a ready
 							 char* pids = procesosEnReady(cola_ready);
 							 log_info(logger, "Ingreso a Ready algoritmo %s - PIDS: [%s] ", configuracion->ALGORITMO_PLANIFICACION, pids);
+							 free(pids);
 
 							 log_info(logger, "PID: %d - Estado Anterior: BLOCKED - Estado Actual: READY - PROGRAM COINTER: %d", pcb_blocked->pid, pcb_blocked->pc );
 
@@ -612,6 +615,7 @@ void esperar_cpu(){
 				 // Lista los pids despues de entrar a ready
 				char* pids = procesosEnReady(cola_ready);
 				log_info(logger, "Ingreso a Ready algoritmo %s - PIDS: [%s] ", configuracion->ALGORITMO_PLANIFICACION, pids);
+				free(pids);
 
 
 				 sem_post(&s_cont_ready);
@@ -859,6 +863,7 @@ void esperar_cpu(){
 					// Lista los pids despues de entrar a ready
 				    char* pids = procesosEnReady(cola_ready);
 					log_info(logger, "Ingreso a Ready algoritmo %s - PIDS: [%s] ", configuracion->ALGORITMO_PLANIFICACION, pids);
+					free(pids);
 					log_info(logger, "PID: %d - Estado anterior: Blocked por archivo - Estado actual: READY", procesoBloqueado->pid);//TODO: listar cola ready?##########
 					sem_post(&s_cont_ready);
 					sem_post(&s_ready_execute);
@@ -956,7 +961,7 @@ void esperar_cpu(){
 				 */
 				log_info(logger, "PID: %d - Recibo pedido de F_READ por: %s", pcb->pid, instruccion->parametro1);
 				// LOG OBligatorio
-				log_info(logger, "PID: < %d >- Leer Archivo: <%s> - Puntero <PUNTERO> - Dirección Memoria <DIRECCIÓN MEMORIA> - Tamaño <TAMAÑO>", pcb->pid, instruccion->parametro1);
+				//log_info(logger, "PID: %d - Leer Archivo: %s - Puntero <PUNTERO> - Dirección Memoria <DIRECCIÓN MEMORIA> - Tamaño <TAMAÑO>", pcb->pid, instruccion->parametro1);
 
 				// Tiempos hrrn
 				rafAnteriorAux = list_get(list_rafa_anterior, pcb->pid);
@@ -1164,9 +1169,10 @@ void ejecutar_io(PCB_t* pcb) {
 		queue_push(cola_ready, pcb);
 		pthread_mutex_unlock(&mx_cola_ready);
 
-		// TODO para listar los pids despues de entrar a ready
+		// para listar los pids despues de entrar a ready
 		char* pids = procesosEnReady(cola_ready);
 		log_info(logger, "Ingreso a Ready algoritmo %s - PIDS: [%s] ", configuracion->ALGORITMO_PLANIFICACION, pids);
+		free(pids);
 		//sem_post(&s_ready_execute);
 		sem_post(&s_cont_ready);
 
@@ -1193,7 +1199,8 @@ char* procesosEnReady(t_queue* cola_ready){
 	int i = 0;
 	PCB_t * proceso;
 	int pids[queuesize];
-	char* string_pids;
+	char* string_pids=malloc(21);
+	string_pids[0] = '\0';
 
 	while(i < queuesize){
 
@@ -1329,6 +1336,7 @@ void esperar_filesystem(PCB_t* pcb){	// Solo instrucciones con demora
 			// Lista los pids despues de entrar a ready
 			char* pids = procesosEnReady(cola_ready);
 			log_info(logger, "Ingreso a Ready algoritmo %s - PIDS: [%s] ", configuracion->ALGORITMO_PLANIFICACION, pids);
+			free(pids);
 			//sem_post(&s_cont_ready);
 			//sem_post(&s_fs_compacta);
 

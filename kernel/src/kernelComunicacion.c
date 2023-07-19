@@ -33,11 +33,12 @@ static void procesar_conexion(void* void_args) {
 	// Aca inicializo los valores para el PCB
 	//TODO pasarle los valores de inicializacion al PCB
 	// casi un char* ??
-	t_link_element* aux1 = mensaje->listaInstrucciones->head;
-	INSTRUCCION* auxl2 = malloc(sizeof(INSTRUCCION));
-	auxl2 = aux1->data;
+	//t_link_element* aux1 = mensaje->listaInstrucciones->head;
+	//INSTRUCCION* auxl2 = malloc(sizeof(INSTRUCCION));	// TODO: QUE ES ESTO
+	//auxl2 = aux1->data;
 
-	asignacion_tamanio_registros(auxl2);
+	// Lo comento porque creo que no se usa
+	//asignacion_tamanio_registros(auxl2);	//que
 
 	//TODO preguntar si asi vamos bien para darle el tamaño a los registros antes de enviarlo al CPU y
 	//que el CPU Los tiene que cargar para devolverlos
@@ -69,6 +70,7 @@ static void procesar_conexion(void* void_args) {
 	//fin semaforo
 
 	//Solicito a memoria tabla de segmentos
+	pthread_mutex_lock(&mx_memoria);
 	solicitar_tabla_de_segmentos(proceso);
 
 	t_segmento* segmento = malloc(sizeof(t_segmento));
@@ -81,6 +83,7 @@ static void procesar_conexion(void* void_args) {
 	recv(memoria_fd, &id_segmento, sizeof(uint32_t), 0);
 	recv(memoria_fd, &direccion_base, sizeof(uint64_t), 0);
 	recv(memoria_fd, &tamanio_segmento, sizeof(uint32_t), 0);
+	pthread_mutex_unlock(&mx_memoria);
 
 	segmento->id_segmento      = id_segmento;
 	segmento->direccion_base   = direccion_base;
@@ -120,6 +123,7 @@ static void procesar_conexion(void* void_args) {
 	// TODO para listar los pids despues de entrar a ready
 	char* pids = procesosEnReady(cola_ready);
 	log_info(logger, "Ingreso a Ready algoritmo %s - PIDS: [%s] ", configuracion->ALGORITMO_PLANIFICACION, pids);
+	free(pids);
 
 	sem_post(&s_cont_ready);
 	//sem_post(&s_ready_execute);
@@ -133,10 +137,11 @@ static void procesar_conexion(void* void_args) {
 // TODO le mando el proceso y memoria que me responde en este momento?
 void solicitar_tabla_de_segmentos(PCB_t* pcb){ log_info(logger, "Envio solicitud a MEMORIA");
 	op_code op=CREAR_TABLA;
-	pthread_mutex_lock(&mx_memoria);
+	//pthread_mutex_lock(&mx_memoria);
+	// me los llevo fuera para que apliquen a los receive
     send(memoria_fd,&op,sizeof(op_code),0);
 	send(memoria_fd,&(pcb->pid),sizeof(uint16_t),0);
-	pthread_mutex_unlock(&mx_memoria);
+	//pthread_mutex_unlock(&mx_memoria);
 }
 
 
