@@ -23,7 +23,7 @@ int mov_in(char direccion_logica[20], char registro[20], PCB_t* pcb){
 		return 0;
 
 	}else{
-	char* registro_recibido= malloc(20);
+	char* registro_recibido = malloc(20);
 	send_pedido_memoria(memoria_fd,n_segmento,desplazamiento1,(pcb->pid),tamanio, MOV_IN);
 	recv(memoria_fd, registro_recibido ,tamanio, MSG_WAITALL);
 
@@ -71,7 +71,7 @@ int mov_out(char* direccion_logica, char* registro,PCB_t* pcb){
 		uint64_t direccion_fisica=0;
 		//log_warning(logger, "Antes del send a memo");
 		send_escribir_memoria(memoria_fd, n_segmento, 0, pcb->pid, "", 0, BASE);
-		recv(memoria_fd, base, sizeof(uint64_t), MSG_WAITALL);
+		recv(memoria_fd, &base, sizeof(uint64_t), MSG_WAITALL);
 		//log_error(logger,"(MOV_OUT)Base rec desde memo: %d", base);
 
 		direccion_fisica = desplazamiento1+base;

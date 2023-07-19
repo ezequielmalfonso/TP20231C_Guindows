@@ -232,7 +232,7 @@ static void procesar_cpu(void * void_args) {
     		void* escribir=malloc(20);
     		recv_escribir_memoria(cpu_fd, num_seg, desplazamiento1, pid, tamanio, escribir);	//OJO que ahora num_seg, desplazamiento y pid son punteros
     		log_info(logger, "PID: %d - N° Segmento: %d, Desplazamiento: %d, Tamanio: %d, Escribir: %s", *pid, *num_seg, *desplazamiento1, *tamanio, escribir);
-    		if(escribirEnMemoria( *num_seg,  *desplazamiento1,  *pid,  *tamanio-1,escribir, "CPU")){
+    		if(escribirEnMemoria( *num_seg,  *desplazamiento1,  *pid,  *tamanio-1, escribir, "CPU")){	// TODO: habia un -1 en tamanio
     			send(cpu_fd, &cop, sizeof(cop), 0); // hubieran usado op_codes :v
     		}	// else?
     		break;

@@ -11332,3 +11332,1168 @@ TAM_MAX_SEGMENTO: 256
 [INFO] 14:57:17:919 Cpu/(97935:97940): Recibi PCB id: 3
 [INFO] 14:57:17:919 Cpu/(97935:97940): PID: 3 - Ejecutando EXIT
 [INFO] 14:57:29:777 Cpu/(97935:97940): Se ha finalizado la conexion
+[INFO] 18:11:05:758 Cpu/(2882:2882): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 18:11:05:815 Cpu/(2882:2882): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:11:05:817 Cpu/(2882:2882): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 18:11:15:290 Cpu/(2882:2882): Cliente conectado (a CPU_SV)
+
+[INFO] 18:11:17:590 Cpu/(2882:2887): Recibi PCB id: 0
+[INFO] 18:11:17:590 Cpu/(2882:2887): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:11:17:591 Cpu/(2882:2887): Recibi PCB id: 0
+[INFO] 18:11:17:591 Cpu/(2882:2887): En CPU
+[INFO] 18:11:18:591 Cpu/(2882:2887): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: h014
+
+[INFO] 18:11:18:591 Cpu/(2882:2887): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:11:18:592 Cpu/(2882:2887): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: AX
+
+[INFO] 18:11:18:592 Cpu/(2882:2887): Realizado lectura del registro AX con valor h014*
+[INFO] 18:11:18:592 Cpu/(2882:2887): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 12 - Valor: h014*
+[INFO] 18:11:19:595 Cpu/(2882:2887): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: AX
+[INFO] 18:11:19:595 Cpu/(2882:2887): PID: 0 - Ejecutando CREATE_SEGMENT
+[INFO] 18:11:19:640 Cpu/(2882:2887): Recibi PCB id: 0
+[INFO] 18:11:19:640 Cpu/(2882:2887): PID: 0 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:11:19:641 Cpu/(2882:2887): Recibi PCB id: 0
+[INFO] 18:11:19:642 Cpu/(2882:2887): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:11:21:987 Cpu/(2882:2887): Recibi PCB id: 1
+[INFO] 18:11:21:987 Cpu/(2882:2887): PID: 1 - Ejecutando WAIT a Kernel por recurso: RC
+ 
+[INFO] 18:12:00:561 Cpu/(2882:2887): Se ha finalizado la conexion
+[INFO] 18:20:51:545 Cpu/(3183:3183): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 18:20:51:546 Cpu/(3183:3183): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:20:51:546 Cpu/(3183:3183): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 18:23:23:344 Cpu/(3203:3203): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 18:23:23:345 Cpu/(3203:3203): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:23:23:345 Cpu/(3203:3203): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 18:23:27:011 Cpu/(3203:3203): Cliente conectado (a CPU_SV)
+
+[INFO] 18:23:36:953 Cpu/(3203:3208): Recibi PCB id: 0
+[INFO] 18:23:36:953 Cpu/(3203:3208): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:23:36:954 Cpu/(3203:3208): Recibi PCB id: 0
+[INFO] 18:23:36:954 Cpu/(3203:3208): En CPU
+[INFO] 18:23:37:954 Cpu/(3203:3208): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: h014
+
+[INFO] 18:23:37:955 Cpu/(3203:3208): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:23:37:955 Cpu/(3203:3208): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: AX
+
+[INFO] 18:23:37:955 Cpu/(3203:3208): Realizado lectura del registro AX con valor h014
+[INFO] 18:23:37:956 Cpu/(3203:3208): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 12 - Valor: h014
+[INFO] 18:23:38:958 Cpu/(3203:3208): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: AX
+[INFO] 18:23:38:958 Cpu/(3203:3208): PID: 0 - Ejecutando CREATE_SEGMENT
+[INFO] 18:23:39:004 Cpu/(3203:3208): Recibi PCB id: 0
+[INFO] 18:23:39:004 Cpu/(3203:3208): PID: 0 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:23:39:005 Cpu/(3203:3208): Recibi PCB id: 0
+[INFO] 18:23:39:005 Cpu/(3203:3208): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:23:40:486 Cpu/(3203:3208): Recibi PCB id: 1
+[INFO] 18:23:40:487 Cpu/(3203:3208): PID: 1 - Ejecutando WAIT a Kernel por recurso: RC
+ 
+[INFO] 18:25:46:705 Cpu/(3203:3208): Se ha finalizado la conexion
+[INFO] 18:25:54:931 Cpu/(3221:3221): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 18:25:54:932 Cpu/(3221:3221): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:25:54:932 Cpu/(3221:3221): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 18:25:58:913 Cpu/(3221:3221): Cliente conectado (a CPU_SV)
+
+[INFO] 18:26:02:050 Cpu/(3221:3226): Recibi PCB id: 0
+[INFO] 18:26:02:050 Cpu/(3221:3226): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:26:02:051 Cpu/(3221:3226): Recibi PCB id: 0
+[INFO] 18:26:02:051 Cpu/(3221:3226): En CPU
+[INFO] 18:26:03:051 Cpu/(3221:3226): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: h014
+
+[INFO] 18:26:03:051 Cpu/(3221:3226): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:26:03:052 Cpu/(3221:3226): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: AX
+
+[INFO] 18:26:03:052 Cpu/(3221:3226): Realizado lectura del registro AX con valor h014
+[INFO] 18:26:03:053 Cpu/(3221:3226): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 12 - Valor: h014
+[INFO] 18:26:04:055 Cpu/(3221:3226): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: AX
+[INFO] 18:26:04:055 Cpu/(3221:3226): PID: 0 - Ejecutando CREATE_SEGMENT
+[INFO] 18:26:04:103 Cpu/(3221:3226): Recibi PCB id: 0
+[INFO] 18:26:04:110 Cpu/(3221:3226): PID: 0 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:26:04:110 Cpu/(3221:3226): Recibi PCB id: 0
+[INFO] 18:26:04:110 Cpu/(3221:3226): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:26:31:521 Cpu/(3221:3226): Se ha finalizado la conexion
+[INFO] 18:27:19:247 Cpu/(3246:3246): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 18:27:19:248 Cpu/(3246:3246): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:27:19:249 Cpu/(3246:3246): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 18:27:23:380 Cpu/(3246:3246): Cliente conectado (a CPU_SV)
+
+[INFO] 18:27:27:284 Cpu/(3246:3251): Recibi PCB id: 0
+[INFO] 18:27:27:284 Cpu/(3246:3251): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:27:27:284 Cpu/(3246:3251): Recibi PCB id: 0
+[INFO] 18:27:27:284 Cpu/(3246:3251): En CPU
+[INFO] 18:27:28:284 Cpu/(3246:3251): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: h014
+
+[INFO] 18:27:28:285 Cpu/(3246:3251): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:27:28:285 Cpu/(3246:3251): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: AX
+
+[INFO] 18:27:28:286 Cpu/(3246:3251): Realizado lectura del registro AX con valor h014�
+[INFO] 18:27:28:286 Cpu/(3246:3251): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 12 - Valor: h014�
+[INFO] 18:27:29:287 Cpu/(3246:3251): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: AX
+[INFO] 18:27:29:287 Cpu/(3246:3251): PID: 0 - Ejecutando CREATE_SEGMENT
+[INFO] 18:27:29:374 Cpu/(3246:3251): Recibi PCB id: 0
+[INFO] 18:27:29:374 Cpu/(3246:3251): PID: 0 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:27:29:375 Cpu/(3246:3251): Recibi PCB id: 0
+[INFO] 18:27:29:375 Cpu/(3246:3251): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:27:29:375 Cpu/(3246:3251): Recibi PCB id: 1
+[INFO] 18:27:29:375 Cpu/(3246:3251): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 18:27:29:376 Cpu/(3246:3251): Recibi PCB id: 1
+[INFO] 18:27:29:376 Cpu/(3246:3251): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 18:27:30:377 Cpu/(3246:3251): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: 12 - Valor: h014�
+[INFO] 18:27:30:377 Cpu/(3246:3251): PID: 1 - Se ha ejecutado MOV_IN parametro 1: CX parametro 2: 12
+
+[INFO] 18:27:30:377 Cpu/(3246:3251): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:27:30:420 Cpu/(3246:3251): Recibi PCB id: 1
+[INFO] 18:27:30:420 Cpu/(3246:3251): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:27:30:511 Cpu/(3246:3251): Recibi PCB id: 1
+[INFO] 18:27:30:511 Cpu/(3246:3251): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:27:30:599 Cpu/(3246:3251): Recibi PCB id: 1
+[INFO] 18:27:30:599 Cpu/(3246:3251): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:27:30:686 Cpu/(3246:3251): Recibi PCB id: 1
+[INFO] 18:27:30:687 Cpu/(3246:3251): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:27:30:775 Cpu/(3246:3251): Recibi PCB id: 1
+[INFO] 18:27:30:775 Cpu/(3246:3251): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:27:30:863 Cpu/(3246:3251): Recibi PCB id: 1
+[INFO] 18:27:30:863 Cpu/(3246:3251): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:27:30:950 Cpu/(3246:3251): Recibi PCB id: 1
+[INFO] 18:27:30:950 Cpu/(3246:3251): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:27:31:021 Cpu/(3246:3251): Recibi PCB id: 1
+[INFO] 18:27:31:021 Cpu/(3246:3251): En CPU
+[INFO] 18:27:32:021 Cpu/(3246:3251): PID: 1 - Ejecutando SET parametro 1: BX parametro 2: Ch4u
+
+[INFO] 18:27:32:022 Cpu/(3246:3251): PID: 1 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:27:32:023 Cpu/(3246:3251): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: BX
+
+[INFO] 18:27:32:023 Cpu/(3246:3251): Realizado lectura del registro BX con valor Ch4u�
+[INFO] 18:27:32:024 Cpu/(3246:3251): PID: 1 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 12 - Valor: Ch4u�
+[INFO] 18:27:33:025 Cpu/(3246:3251): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: BX
+[INFO] 18:27:33:025 Cpu/(3246:3251): PID: 1 - Ejecutando SIGNAL a kernel por recurso: RA
+ 
+[INFO] 18:27:33:027 Cpu/(3246:3251): Recibi PCB id: 1
+[INFO] 18:27:33:027 Cpu/(3246:3251): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 18:27:33:029 Cpu/(3246:3251): Recibi PCB id: 2
+[INFO] 18:27:33:029 Cpu/(3246:3251): PID: 2 - Ejecutando WAIT a Kernel por recurso: RC
+ 
+[INFO] 18:27:33:030 Cpu/(3246:3251): Recibi PCB id: 0
+[INFO] 18:27:33:030 Cpu/(3246:3251): PID: 0 - Ejecutando DELETE_SEGMENT
+[INFO] 18:27:33:076 Cpu/(3246:3251): Recibi PCB id: 0
+[INFO] 18:27:33:076 Cpu/(3246:3251): PID: 0 -  Listo para ejecutar MOV_IN 
+[INFO] 18:27:34:077 Cpu/(3246:3251): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 12 - Valor: Ch4u�
+[INFO] 18:27:34:078 Cpu/(3246:3251): PID: 0 - Se ha ejecutado MOV_IN parametro 1: DX parametro 2: 12
+
+[INFO] 18:27:34:078 Cpu/(3246:3251): PID: 0 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:27:34:080 Cpu/(3246:3251): Recibi PCB id: 0
+[INFO] 18:27:34:080 Cpu/(3246:3251): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:27:34:083 Cpu/(3246:3251): Recibi PCB id: 1
+[INFO] 18:27:34:083 Cpu/(3246:3251): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:27:34:127 Cpu/(3246:3251): Recibi PCB id: 1
+[INFO] 18:27:34:127 Cpu/(3246:3251): En CPU
+[INFO] 18:27:35:127 Cpu/(3246:3251): PID: 1 - Ejecutando SET parametro 1: EAX parametro 2: CoscuWin
+
+[INFO] 18:27:35:128 Cpu/(3246:3251): PID: 1 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:27:35:128 Cpu/(3246:3251): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 256 parametro 2: EAX
+
+[INFO] 18:27:35:128 Cpu/(3246:3251): Realizado lectura del registro EAX con valor CoscuWin
+[INFO] 18:27:35:129 Cpu/(3246:3251): PID: 1 - Acción: ESCRIBIR - Segmento: 1 - Dirección Física: 256 - Valor: CoscuWin
+[INFO] 18:27:36:131 Cpu/(3246:3251): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 256 parametro 2: EAX
+[INFO] 18:27:36:131 Cpu/(3246:3251): En CPU
+[INFO] 18:27:37:131 Cpu/(3246:3251): PID: 1 - Ejecutando SET parametro 1: EBX parametro 2: GermanNo
+
+[INFO] 18:27:37:132 Cpu/(3246:3251): PID: 1 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:27:37:132 Cpu/(3246:3251): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 2048 parametro 2: EBX
+
+[INFO] 18:27:37:132 Cpu/(3246:3251): Realizado lectura del registro EBX con valor GermanNo
+[INFO] 18:27:37:133 Cpu/(3246:3251): PID: 1 - Acción: ESCRIBIR - Segmento: 8 - Dirección Física: 704 - Valor: GermanNo
+[INFO] 18:27:38:135 Cpu/(3246:3251): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 2048 parametro 2: EBX
+[INFO] 18:27:38:135 Cpu/(3246:3251): PID: 1 - Ejecutando SIGNAL a kernel por recurso: RC
+ 
+[INFO] 18:27:38:137 Cpu/(3246:3251): Recibi PCB id: 1
+[INFO] 18:27:38:137 Cpu/(3246:3251): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 18:27:38:139 Cpu/(3246:3251): Recibi PCB id: 2
+[INFO] 18:27:38:139 Cpu/(3246:3251): PID: 2 - Ejecutando CREATE_SEGMENT
+[INFO] 18:27:38:186 Cpu/(3246:3251): Recibi PCB id: 2
+[INFO] 18:27:38:186 Cpu/(3246:3251): PID: 2 -  Listo para ejecutar MOV_IN 
+[INFO] 18:27:39:187 Cpu/(3246:3251): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: 12 - Valor: Ch4u�
+[INFO] 18:27:39:187 Cpu/(3246:3251): PID: 2 - Se ha ejecutado MOV_IN parametro 1: AX parametro 2: 12
+
+[INFO] 18:27:39:188 Cpu/(3246:3251): PID: 2 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:27:39:189 Cpu/(3246:3251): Recibi PCB id: 2
+[INFO] 18:27:39:189 Cpu/(3246:3251): PID: 2 - Ejecutando WAIT a Kernel por recurso: RC
+ 
+[INFO] 18:27:39:191 Cpu/(3246:3251): Recibi PCB id: 1
+[INFO] 18:27:39:191 Cpu/(3246:3251): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 18:27:40:193 Cpu/(3246:3251): PID: 1 - Acción: LEER - Segmento: 1 - Dirección Física: 256 - Valor: CoscuWin
+[INFO] 18:27:40:193 Cpu/(3246:3251): PID: 1 - Se ha ejecutado MOV_IN parametro 1: ECX parametro 2: 256
+
+[INFO] 18:27:40:193 Cpu/(3246:3251): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 18:27:40:235 Cpu/(3246:3251): Recibi PCB id: 1
+[INFO] 18:27:40:236 Cpu/(3246:3251): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 18:27:41:237 Cpu/(3246:3251): PID: 1 - Acción: LEER - Segmento: 8 - Dirección Física: 704 - Valor: GermanNo
+[INFO] 18:27:41:237 Cpu/(3246:3251): PID: 1 - Se ha ejecutado MOV_IN parametro 1: EDX parametro 2: 2048
+
+[INFO] 18:27:41:237 Cpu/(3246:3251): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 18:27:41:279 Cpu/(3246:3251): Recibi PCB id: 1
+[INFO] 18:27:41:279 Cpu/(3246:3251): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 18:27:41:323 Cpu/(3246:3251): Recibi PCB id: 1
+[INFO] 18:27:41:323 Cpu/(3246:3251): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 18:27:41:368 Cpu/(3246:3251): Recibi PCB id: 1
+[INFO] 18:27:41:368 Cpu/(3246:3251): PID: 1 - Ejecutando SIGNAL a kernel por recurso: RC
+ 
+[INFO] 18:27:41:368 Cpu/(3246:3251): Recibi PCB id: 1
+[INFO] 18:27:41:368 Cpu/(3246:3251): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 18:27:41:369 Cpu/(3246:3251): Recibi PCB id: 2
+[INFO] 18:27:41:369 Cpu/(3246:3251): PID: 2 - Ejecutando CREATE_SEGMENT
+[INFO] 18:27:41:455 Cpu/(3246:3251): Recibi PCB id: 2
+[INFO] 18:27:41:455 Cpu/(3246:3251): PID: 2 - Ejecutando SIGNAL a kernel por recurso: RA
+ 
+[INFO] 18:27:41:455 Cpu/(3246:3251): Recibi PCB id: 2
+[INFO] 18:27:41:455 Cpu/(3246:3251): PID: 2 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:27:41:456 Cpu/(3246:3251): Recibi PCB id: 2
+[INFO] 18:27:41:456 Cpu/(3246:3251): PID: 2 - Ejecutando EXIT
+[INFO] 18:27:41:457 Cpu/(3246:3251): Recibi PCB id: 0
+[INFO] 18:27:41:457 Cpu/(3246:3251): PID: 0 - Ejecutando EXIT
+[INFO] 18:27:41:458 Cpu/(3246:3251): Recibi PCB id: 1
+[INFO] 18:27:41:458 Cpu/(3246:3251): PID: 1 - Ejecutando EXIT
+[INFO] 18:28:27:162 Cpu/(3246:3251): Recibi PCB id: 3
+[INFO] 18:28:27:162 Cpu/(3246:3251): PID: 3 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:28:27:163 Cpu/(3246:3251): Recibi PCB id: 3
+[INFO] 18:28:27:163 Cpu/(3246:3251): En CPU
+[INFO] 18:28:28:163 Cpu/(3246:3251): PID: 3 - Ejecutando SET parametro 1: AX parametro 2: h014
+
+[INFO] 18:28:28:163 Cpu/(3246:3251): PID: 3 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:28:28:164 Cpu/(3246:3251): PID: 3 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: AX
+
+[INFO] 18:28:28:164 Cpu/(3246:3251): Realizado lectura del registro AX con valor h014�
+[INFO] 18:28:28:164 Cpu/(3246:3251): PID: 3 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 12 - Valor: h014�
+[INFO] 18:28:29:165 Cpu/(3246:3251): PID: 3 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: AX
+[INFO] 18:28:29:165 Cpu/(3246:3251): PID: 3 - Ejecutando CREATE_SEGMENT
+[INFO] 18:28:29:211 Cpu/(3246:3251): Recibi PCB id: 3
+[INFO] 18:28:29:211 Cpu/(3246:3251): PID: 3 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:28:29:212 Cpu/(3246:3251): Recibi PCB id: 3
+[INFO] 18:28:29:213 Cpu/(3246:3251): PID: 3 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:28:29:213 Cpu/(3246:3251): Recibi PCB id: 3
+[INFO] 18:28:29:213 Cpu/(3246:3251): PID: 3 - Ejecutando DELETE_SEGMENT
+[INFO] 18:28:29:255 Cpu/(3246:3251): Recibi PCB id: 3
+[INFO] 18:28:29:255 Cpu/(3246:3251): PID: 3 -  Listo para ejecutar MOV_IN 
+[INFO] 18:28:30:257 Cpu/(3246:3251): PID: 3 - Acción: LEER - Segmento: 0 - Dirección Física: 12 - Valor: h014�
+[INFO] 18:28:30:257 Cpu/(3246:3251): PID: 3 - Se ha ejecutado MOV_IN parametro 1: DX parametro 2: 12
+
+[INFO] 18:28:30:257 Cpu/(3246:3251): PID: 3 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:28:30:258 Cpu/(3246:3251): Recibi PCB id: 3
+[INFO] 18:28:30:258 Cpu/(3246:3251): PID: 3 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:28:30:259 Cpu/(3246:3251): Recibi PCB id: 3
+[INFO] 18:28:30:259 Cpu/(3246:3251): PID: 3 - Ejecutando EXIT
+[INFO] 18:28:30:262 Cpu/(3246:3251): Recibi PCB id: 4
+[INFO] 18:28:30:263 Cpu/(3246:3251): PID: 4 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 18:28:30:264 Cpu/(3246:3251): Recibi PCB id: 4
+[INFO] 18:28:30:264 Cpu/(3246:3251): PID: 4 -  Listo para ejecutar MOV_IN 
+[INFO] 18:28:31:266 Cpu/(3246:3251): PID: 4 - Acción: LEER - Segmento: 0 - Dirección Física: 12 - Valor: h014�
+[INFO] 18:28:31:266 Cpu/(3246:3251): PID: 4 - Se ha ejecutado MOV_IN parametro 1: CX parametro 2: 12
+
+[INFO] 18:28:31:267 Cpu/(3246:3251): PID: 4 - Ejecutando CREATE_SEGMENT
+[INFO] 18:28:31:268 Cpu/(3246:3251): Recibi PCB id: 4
+[INFO] 18:28:31:268 Cpu/(3246:3251): PID: 4 - Ejecutando CREATE_SEGMENT
+[INFO] 18:28:31:354 Cpu/(3246:3251): Recibi PCB id: 4
+[INFO] 18:28:31:355 Cpu/(3246:3251): PID: 4 - Ejecutando CREATE_SEGMENT
+[INFO] 18:28:31:443 Cpu/(3246:3251): Recibi PCB id: 4
+[INFO] 18:28:31:443 Cpu/(3246:3251): PID: 4 - Ejecutando CREATE_SEGMENT
+[INFO] 18:28:31:530 Cpu/(3246:3251): Recibi PCB id: 4
+[INFO] 18:28:31:530 Cpu/(3246:3251): PID: 4 - Ejecutando CREATE_SEGMENT
+[INFO] 18:28:31:619 Cpu/(3246:3251): Recibi PCB id: 4
+[INFO] 18:28:31:619 Cpu/(3246:3251): PID: 4 - Ejecutando CREATE_SEGMENT
+[INFO] 18:28:31:706 Cpu/(3246:3251): Recibi PCB id: 4
+[INFO] 18:28:31:706 Cpu/(3246:3251): PID: 4 - Ejecutando CREATE_SEGMENT
+[INFO] 18:28:31:795 Cpu/(3246:3251): Recibi PCB id: 4
+[INFO] 18:28:31:795 Cpu/(3246:3251): PID: 4 - Ejecutando CREATE_SEGMENT
+[INFO] 18:28:31:882 Cpu/(3246:3251): Recibi PCB id: 4
+[INFO] 18:28:31:883 Cpu/(3246:3251): En CPU
+[INFO] 18:28:32:883 Cpu/(3246:3251): PID: 4 - Ejecutando SET parametro 1: BX parametro 2: Ch4u
+
+[INFO] 18:28:32:884 Cpu/(3246:3251): PID: 4 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:28:32:885 Cpu/(3246:3251): PID: 4 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: BX
+
+[INFO] 18:28:32:885 Cpu/(3246:3251): Realizado lectura del registro BX con valor Ch4u�
+[INFO] 18:28:32:885 Cpu/(3246:3251): PID: 4 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 12 - Valor: Ch4u�
+[INFO] 18:28:33:888 Cpu/(3246:3251): PID: 4 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: BX
+[INFO] 18:28:33:888 Cpu/(3246:3251): PID: 4 - Ejecutando SIGNAL a kernel por recurso: RA
+ 
+[INFO] 18:28:33:889 Cpu/(3246:3251): Recibi PCB id: 4
+[INFO] 18:28:33:889 Cpu/(3246:3251): PID: 4 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 18:28:33:890 Cpu/(3246:3251): Recibi PCB id: 4
+[INFO] 18:28:33:891 Cpu/(3246:3251): PID: 4 - Ejecutando CREATE_SEGMENT
+[INFO] 18:28:33:938 Cpu/(3246:3251): Recibi PCB id: 4
+[INFO] 18:28:33:938 Cpu/(3246:3251): En CPU
+[INFO] 18:28:34:938 Cpu/(3246:3251): PID: 4 - Ejecutando SET parametro 1: EAX parametro 2: CoscuWin
+
+[INFO] 18:28:34:939 Cpu/(3246:3251): PID: 4 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:28:34:939 Cpu/(3246:3251): PID: 4 - Se ha ejecutado MOV_OUT parametro 1: 256 parametro 2: EAX
+
+[INFO] 18:28:34:939 Cpu/(3246:3251): Realizado lectura del registro EAX con valor CoscuWin
+[INFO] 18:28:34:940 Cpu/(3246:3251): PID: 4 - Acción: ESCRIBIR - Segmento: 1 - Dirección Física: 384 - Valor: CoscuWin
+[INFO] 18:28:35:942 Cpu/(3246:3251): PID: 4 - Se ha ejecutado MOV_OUT parametro 1: 256 parametro 2: EAX
+[INFO] 18:28:35:942 Cpu/(3246:3251): En CPU
+[INFO] 18:28:36:943 Cpu/(3246:3251): PID: 4 - Ejecutando SET parametro 1: EBX parametro 2: GermanNo
+
+[INFO] 18:28:36:943 Cpu/(3246:3251): PID: 4 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:28:36:944 Cpu/(3246:3251): PID: 4 - Se ha ejecutado MOV_OUT parametro 1: 2048 parametro 2: EBX
+
+[INFO] 18:28:36:944 Cpu/(3246:3251): Realizado lectura del registro EBX con valor GermanNo
+[INFO] 18:28:36:945 Cpu/(3246:3251): PID: 4 - Acción: ESCRIBIR - Segmento: 8 - Dirección Física: 320 - Valor: GermanNo
+[INFO] 18:28:37:947 Cpu/(3246:3251): PID: 4 - Se ha ejecutado MOV_OUT parametro 1: 2048 parametro 2: EBX
+[INFO] 18:28:37:948 Cpu/(3246:3251): PID: 4 - Ejecutando SIGNAL a kernel por recurso: RC
+ 
+[INFO] 18:28:37:949 Cpu/(3246:3251): Recibi PCB id: 4
+[INFO] 18:28:37:949 Cpu/(3246:3251): PID: 4 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 18:28:37:950 Cpu/(3246:3251): Recibi PCB id: 4
+[INFO] 18:28:37:951 Cpu/(3246:3251): PID: 4 -  Listo para ejecutar MOV_IN 
+[INFO] 18:28:38:952 Cpu/(3246:3251): PID: 4 - Acción: LEER - Segmento: 1 - Dirección Física: 384 - Valor: CoscuWin
+[INFO] 18:28:38:953 Cpu/(3246:3251): PID: 4 - Se ha ejecutado MOV_IN parametro 1: ECX parametro 2: 256
+
+[INFO] 18:28:38:953 Cpu/(3246:3251): PID: 4 - Ejecutando DELETE_SEGMENT
+[INFO] 18:28:38:995 Cpu/(3246:3251): Recibi PCB id: 4
+[INFO] 18:28:38:995 Cpu/(3246:3251): PID: 4 -  Listo para ejecutar MOV_IN 
+[INFO] 18:28:39:997 Cpu/(3246:3251): PID: 4 - Acción: LEER - Segmento: 8 - Dirección Física: 320 - Valor: GermanNo
+[INFO] 18:28:39:997 Cpu/(3246:3251): PID: 4 - Se ha ejecutado MOV_IN parametro 1: EDX parametro 2: 2048
+
+[INFO] 18:28:39:997 Cpu/(3246:3251): PID: 4 - Ejecutando DELETE_SEGMENT
+[INFO] 18:28:40:043 Cpu/(3246:3251): Recibi PCB id: 4
+[INFO] 18:28:40:043 Cpu/(3246:3251): PID: 4 - Ejecutando DELETE_SEGMENT
+[INFO] 18:28:40:087 Cpu/(3246:3251): Recibi PCB id: 4
+[INFO] 18:28:40:087 Cpu/(3246:3251): PID: 4 - Ejecutando DELETE_SEGMENT
+[INFO] 18:28:40:131 Cpu/(3246:3251): Recibi PCB id: 4
+[INFO] 18:28:40:131 Cpu/(3246:3251): PID: 4 - Ejecutando SIGNAL a kernel por recurso: RC
+ 
+[INFO] 18:28:40:132 Cpu/(3246:3251): Recibi PCB id: 4
+[INFO] 18:28:40:132 Cpu/(3246:3251): PID: 4 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 18:28:40:132 Cpu/(3246:3251): Recibi PCB id: 4
+[INFO] 18:28:40:132 Cpu/(3246:3251): PID: 4 - Ejecutando EXIT
+[INFO] 18:28:40:138 Cpu/(3246:3251): Recibi PCB id: 5
+[INFO] 18:28:40:138 Cpu/(3246:3251): PID: 5 - Ejecutando WAIT a Kernel por recurso: RC
+ 
+[INFO] 18:28:40:139 Cpu/(3246:3251): Recibi PCB id: 5
+[INFO] 18:28:40:139 Cpu/(3246:3251): PID: 5 - Ejecutando CREATE_SEGMENT
+[INFO] 18:28:40:227 Cpu/(3246:3251): Recibi PCB id: 5
+[INFO] 18:28:40:227 Cpu/(3246:3251): PID: 5 -  Listo para ejecutar MOV_IN 
+[INFO] 18:28:41:229 Cpu/(3246:3251): PID: 5 - Acción: LEER - Segmento: 0 - Dirección Física: 12 - Valor: Ch4u�
+[INFO] 18:28:41:229 Cpu/(3246:3251): PID: 5 - Se ha ejecutado MOV_IN parametro 1: AX parametro 2: 12
+
+[INFO] 18:28:41:229 Cpu/(3246:3251): PID: 5 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:28:41:230 Cpu/(3246:3251): Recibi PCB id: 5
+[INFO] 18:28:41:230 Cpu/(3246:3251): PID: 5 - Ejecutando WAIT a Kernel por recurso: RC
+ 
+[INFO] 18:28:41:231 Cpu/(3246:3251): Recibi PCB id: 5
+[INFO] 18:28:41:231 Cpu/(3246:3251): PID: 5 - Ejecutando CREATE_SEGMENT
+[INFO] 18:28:41:275 Cpu/(3246:3251): Recibi PCB id: 5
+[INFO] 18:28:41:275 Cpu/(3246:3251): PID: 5 - Ejecutando SIGNAL a kernel por recurso: RA
+ 
+[INFO] 18:28:41:275 Cpu/(3246:3251): Recibi PCB id: 5
+[INFO] 18:28:41:275 Cpu/(3246:3251): PID: 5 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:28:41:275 Cpu/(3246:3251): Recibi PCB id: 5
+[INFO] 18:28:41:276 Cpu/(3246:3251): PID: 5 - Ejecutando EXIT
+[INFO] 18:29:20:526 Cpu/(3246:3251): Se ha finalizado la conexion
+[INFO] 18:29:33:047 Cpu/(3271:3271): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 18:29:33:048 Cpu/(3271:3271): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:29:33:048 Cpu/(3271:3271): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 18:29:37:818 Cpu/(3271:3271): Cliente conectado (a CPU_SV)
+
+[INFO] 18:29:44:155 Cpu/(3271:3276): Recibi PCB id: 0
+[INFO] 18:29:44:155 Cpu/(3271:3276): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:29:44:155 Cpu/(3271:3276): Recibi PCB id: 0
+[INFO] 18:29:44:155 Cpu/(3271:3276): En CPU
+[INFO] 18:29:45:155 Cpu/(3271:3276): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: h014
+
+[INFO] 18:29:45:156 Cpu/(3271:3276): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:29:45:157 Cpu/(3271:3276): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: AX
+
+[INFO] 18:29:45:157 Cpu/(3271:3276): Realizado lectura del registro AX con valor h014�
+[INFO] 18:29:45:157 Cpu/(3271:3276): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 12 - Valor: h014�
+[INFO] 18:29:46:159 Cpu/(3271:3276): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: AX
+[INFO] 18:29:46:159 Cpu/(3271:3276): PID: 0 - Ejecutando CREATE_SEGMENT
+[INFO] 18:29:46:203 Cpu/(3271:3276): Recibi PCB id: 0
+[INFO] 18:29:46:203 Cpu/(3271:3276): PID: 0 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:29:46:204 Cpu/(3271:3276): Recibi PCB id: 0
+[INFO] 18:29:46:205 Cpu/(3271:3276): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:29:46:207 Cpu/(3271:3276): Recibi PCB id: 1
+[INFO] 18:29:46:207 Cpu/(3271:3276): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 18:29:46:208 Cpu/(3271:3276): Recibi PCB id: 1
+[INFO] 18:29:46:209 Cpu/(3271:3276): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 18:29:47:209 Cpu/(3271:3276): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: 12 - Valor: h014�
+[INFO] 18:29:47:209 Cpu/(3271:3276): PID: 1 - Se ha ejecutado MOV_IN parametro 1: CX parametro 2: 12
+
+[INFO] 18:29:47:209 Cpu/(3271:3276): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:31:53:595 Cpu/(3271:3276): Se ha finalizado la conexion
+[INFO] 18:33:32:749 Cpu/(3333:3333): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 18:33:32:750 Cpu/(3333:3333): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:33:32:750 Cpu/(3333:3333): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 18:33:39:818 Cpu/(3333:3333): Cliente conectado (a CPU_SV)
+
+[INFO] 18:33:48:041 Cpu/(3333:3340): Recibi PCB id: 0
+[INFO] 18:33:48:041 Cpu/(3333:3340): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:33:48:041 Cpu/(3333:3340): Recibi PCB id: 0
+[INFO] 18:33:48:041 Cpu/(3333:3340): En CPU
+[INFO] 18:33:49:041 Cpu/(3333:3340): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: h014
+
+[INFO] 18:33:49:042 Cpu/(3333:3340): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:33:49:042 Cpu/(3333:3340): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: AX
+
+[INFO] 18:33:49:042 Cpu/(3333:3340): Realizado lectura del registro AX con valor h0149
+[INFO] 18:33:49:042 Cpu/(3333:3340): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 12 - Valor: h0149
+[INFO] 18:33:50:043 Cpu/(3333:3340): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: AX
+[INFO] 18:33:50:043 Cpu/(3333:3340): PID: 0 - Ejecutando CREATE_SEGMENT
+[INFO] 18:33:50:088 Cpu/(3333:3340): Recibi PCB id: 0
+[INFO] 18:33:50:088 Cpu/(3333:3340): PID: 0 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:33:50:089 Cpu/(3333:3340): Recibi PCB id: 0
+[INFO] 18:33:50:089 Cpu/(3333:3340): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:33:50:090 Cpu/(3333:3340): Recibi PCB id: 1
+[INFO] 18:33:50:090 Cpu/(3333:3340): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 18:33:50:091 Cpu/(3333:3340): Recibi PCB id: 1
+[INFO] 18:33:50:091 Cpu/(3333:3340): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 18:33:51:092 Cpu/(3333:3340): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: 12 - Valor: h0149
+[INFO] 18:33:51:092 Cpu/(3333:3340): PID: 1 - Se ha ejecutado MOV_IN parametro 1: CX parametro 2: 12
+
+[INFO] 18:33:51:092 Cpu/(3333:3340): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:33:51:137 Cpu/(3333:3340): Recibi PCB id: 1
+[INFO] 18:33:51:137 Cpu/(3333:3340): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:33:51:222 Cpu/(3333:3340): Recibi PCB id: 1
+[INFO] 18:33:51:222 Cpu/(3333:3340): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:33:51:310 Cpu/(3333:3340): Recibi PCB id: 1
+[INFO] 18:33:51:310 Cpu/(3333:3340): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:33:51:399 Cpu/(3333:3340): Recibi PCB id: 1
+[INFO] 18:33:51:399 Cpu/(3333:3340): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:33:51:486 Cpu/(3333:3340): Recibi PCB id: 1
+[INFO] 18:33:51:486 Cpu/(3333:3340): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:33:51:574 Cpu/(3333:3340): Recibi PCB id: 1
+[INFO] 18:33:51:574 Cpu/(3333:3340): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:33:51:662 Cpu/(3333:3340): Recibi PCB id: 1
+[INFO] 18:33:51:662 Cpu/(3333:3340): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:33:51:751 Cpu/(3333:3340): Recibi PCB id: 1
+[INFO] 18:33:51:751 Cpu/(3333:3340): En CPU
+[INFO] 18:33:52:751 Cpu/(3333:3340): PID: 1 - Ejecutando SET parametro 1: BX parametro 2: Ch4u
+
+[INFO] 18:33:52:751 Cpu/(3333:3340): PID: 1 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:33:52:751 Cpu/(3333:3340): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: BX
+
+[INFO] 18:33:52:752 Cpu/(3333:3340): Realizado lectura del registro BX con valor Ch4u9
+[INFO] 18:33:52:752 Cpu/(3333:3340): PID: 1 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 12 - Valor: Ch4u9
+[INFO] 18:33:53:754 Cpu/(3333:3340): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: BX
+[INFO] 18:33:53:754 Cpu/(3333:3340): PID: 1 - Ejecutando SIGNAL a kernel por recurso: RA
+ 
+[INFO] 18:33:53:756 Cpu/(3333:3340): Recibi PCB id: 1
+[INFO] 18:33:53:756 Cpu/(3333:3340): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 18:33:53:757 Cpu/(3333:3340): Recibi PCB id: 2
+[INFO] 18:33:53:757 Cpu/(3333:3340): PID: 2 - Ejecutando WAIT a Kernel por recurso: RC
+ 
+[INFO] 18:33:53:758 Cpu/(3333:3340): Recibi PCB id: 0
+[INFO] 18:33:53:758 Cpu/(3333:3340): PID: 0 - Ejecutando DELETE_SEGMENT
+[INFO] 18:33:53:807 Cpu/(3333:3340): Recibi PCB id: 0
+[INFO] 18:33:53:807 Cpu/(3333:3340): PID: 0 -  Listo para ejecutar MOV_IN 
+[INFO] 18:33:54:808 Cpu/(3333:3340): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 12 - Valor: Ch4u9
+[INFO] 18:33:54:808 Cpu/(3333:3340): PID: 0 - Se ha ejecutado MOV_IN parametro 1: DX parametro 2: 12
+
+[INFO] 18:33:54:809 Cpu/(3333:3340): PID: 0 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:33:54:810 Cpu/(3333:3340): Recibi PCB id: 0
+[INFO] 18:33:54:810 Cpu/(3333:3340): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:33:54:811 Cpu/(3333:3340): Recibi PCB id: 1
+[INFO] 18:33:54:811 Cpu/(3333:3340): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:33:54:859 Cpu/(3333:3340): Recibi PCB id: 1
+[INFO] 18:33:54:859 Cpu/(3333:3340): En CPU
+[INFO] 18:33:55:860 Cpu/(3333:3340): PID: 1 - Ejecutando SET parametro 1: EAX parametro 2: CoscuWin
+
+[INFO] 18:33:55:860 Cpu/(3333:3340): PID: 1 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:33:55:860 Cpu/(3333:3340): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 256 parametro 2: EAX
+
+[INFO] 18:33:55:860 Cpu/(3333:3340): Realizado lectura del registro EAX con valor CoscuWin
+[INFO] 18:33:55:860 Cpu/(3333:3340): PID: 1 - Acción: ESCRIBIR - Segmento: 1 - Dirección Física: 256 - Valor: CoscuWin
+[INFO] 18:33:56:861 Cpu/(3333:3340): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 256 parametro 2: EAX
+[INFO] 18:33:56:862 Cpu/(3333:3340): En CPU
+[INFO] 18:33:57:862 Cpu/(3333:3340): PID: 1 - Ejecutando SET parametro 1: EBX parametro 2: GermanNo
+
+[INFO] 18:33:57:862 Cpu/(3333:3340): PID: 1 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:33:57:862 Cpu/(3333:3340): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 2048 parametro 2: EBX
+
+[INFO] 18:33:57:862 Cpu/(3333:3340): Realizado lectura del registro EBX con valor GermanNo
+[INFO] 18:33:57:863 Cpu/(3333:3340): PID: 1 - Acción: ESCRIBIR - Segmento: 8 - Dirección Física: 704 - Valor: GermanNo
+[INFO] 18:33:58:865 Cpu/(3333:3340): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 2048 parametro 2: EBX
+[INFO] 18:33:58:865 Cpu/(3333:3340): PID: 1 - Ejecutando SIGNAL a kernel por recurso: RC
+ 
+[INFO] 18:33:58:866 Cpu/(3333:3340): Recibi PCB id: 1
+[INFO] 18:33:58:866 Cpu/(3333:3340): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 18:33:58:867 Cpu/(3333:3340): Recibi PCB id: 2
+[INFO] 18:33:58:868 Cpu/(3333:3340): PID: 2 - Ejecutando CREATE_SEGMENT
+[INFO] 18:33:58:915 Cpu/(3333:3340): Recibi PCB id: 2
+[INFO] 18:33:58:915 Cpu/(3333:3340): PID: 2 -  Listo para ejecutar MOV_IN 
+[INFO] 18:33:59:916 Cpu/(3333:3340): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: 12 - Valor: Ch4u9
+[INFO] 18:33:59:917 Cpu/(3333:3340): PID: 2 - Se ha ejecutado MOV_IN parametro 1: AX parametro 2: 12
+
+[INFO] 18:33:59:917 Cpu/(3333:3340): PID: 2 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:33:59:918 Cpu/(3333:3340): Recibi PCB id: 2
+[INFO] 18:33:59:918 Cpu/(3333:3340): PID: 2 - Ejecutando WAIT a Kernel por recurso: RC
+ 
+[INFO] 18:33:59:921 Cpu/(3333:3340): Recibi PCB id: 1
+[INFO] 18:33:59:921 Cpu/(3333:3340): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 18:34:00:922 Cpu/(3333:3340): PID: 1 - Acción: LEER - Segmento: 1 - Dirección Física: 256 - Valor: CoscuWin
+[INFO] 18:34:00:922 Cpu/(3333:3340): PID: 1 - Se ha ejecutado MOV_IN parametro 1: ECX parametro 2: 256
+
+[INFO] 18:34:00:923 Cpu/(3333:3340): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 18:34:00:972 Cpu/(3333:3340): Recibi PCB id: 1
+[INFO] 18:34:00:972 Cpu/(3333:3340): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 18:34:01:973 Cpu/(3333:3340): PID: 1 - Acción: LEER - Segmento: 8 - Dirección Física: 704 - Valor: GermanNo
+[INFO] 18:34:01:973 Cpu/(3333:3340): PID: 1 - Se ha ejecutado MOV_IN parametro 1: EDX parametro 2: 2048
+
+[INFO] 18:34:01:973 Cpu/(3333:3340): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 18:34:02:016 Cpu/(3333:3340): Recibi PCB id: 1
+[INFO] 18:34:02:016 Cpu/(3333:3340): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 18:34:02:059 Cpu/(3333:3340): Recibi PCB id: 1
+[INFO] 18:34:02:059 Cpu/(3333:3340): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 18:34:02:102 Cpu/(3333:3340): Recibi PCB id: 1
+[INFO] 18:34:02:103 Cpu/(3333:3340): PID: 1 - Ejecutando SIGNAL a kernel por recurso: RC
+ 
+[INFO] 18:34:02:103 Cpu/(3333:3340): Recibi PCB id: 1
+[INFO] 18:34:02:103 Cpu/(3333:3340): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 18:34:02:103 Cpu/(3333:3340): Recibi PCB id: 2
+[INFO] 18:34:02:103 Cpu/(3333:3340): PID: 2 - Ejecutando CREATE_SEGMENT
+[INFO] 18:34:02:190 Cpu/(3333:3340): Recibi PCB id: 2
+[INFO] 18:34:02:191 Cpu/(3333:3340): PID: 2 - Ejecutando SIGNAL a kernel por recurso: RA
+ 
+[INFO] 18:34:02:191 Cpu/(3333:3340): Recibi PCB id: 2
+[INFO] 18:34:02:191 Cpu/(3333:3340): PID: 2 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:34:02:191 Cpu/(3333:3340): Recibi PCB id: 2
+[INFO] 18:34:02:192 Cpu/(3333:3340): PID: 2 - Ejecutando EXIT
+[INFO] 18:34:02:193 Cpu/(3333:3340): Recibi PCB id: 0
+[INFO] 18:34:02:193 Cpu/(3333:3340): PID: 0 - Ejecutando EXIT
+[INFO] 18:34:02:200 Cpu/(3333:3340): Recibi PCB id: 1
+[INFO] 18:34:02:201 Cpu/(3333:3340): PID: 1 - Ejecutando EXIT
+[INFO] 18:34:21:253 Cpu/(3333:3340): Se ha finalizado la conexion
+[INFO] 18:36:54:938 Cpu/(3373:3373): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 18:36:54:939 Cpu/(3373:3373): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:36:54:939 Cpu/(3373:3373): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 18:36:58:470 Cpu/(3373:3373): Cliente conectado (a CPU_SV)
+
+[INFO] 18:37:06:067 Cpu/(3373:3378): Recibi PCB id: 0
+[INFO] 18:37:06:067 Cpu/(3373:3378): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:37:06:068 Cpu/(3373:3378): Recibi PCB id: 0
+[INFO] 18:37:06:068 Cpu/(3373:3378): En CPU
+[INFO] 18:37:07:068 Cpu/(3373:3378): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: h014
+
+[INFO] 18:37:07:068 Cpu/(3373:3378): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:37:07:069 Cpu/(3373:3378): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: AX
+
+[INFO] 18:37:07:069 Cpu/(3373:3378): Realizado lectura del registro AX con valor h014�
+[INFO] 18:37:07:070 Cpu/(3373:3378): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 12 - Valor: h014�
+[INFO] 18:37:08:071 Cpu/(3373:3378): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: AX
+[INFO] 18:37:08:071 Cpu/(3373:3378): PID: 0 - Ejecutando CREATE_SEGMENT
+[INFO] 18:37:08:116 Cpu/(3373:3378): Recibi PCB id: 0
+[INFO] 18:37:08:119 Cpu/(3373:3378): PID: 0 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:37:08:120 Cpu/(3373:3378): Recibi PCB id: 0
+[INFO] 18:37:08:120 Cpu/(3373:3378): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:37:08:122 Cpu/(3373:3378): Recibi PCB id: 1
+[INFO] 18:37:08:123 Cpu/(3373:3378): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 18:37:08:124 Cpu/(3373:3378): Recibi PCB id: 1
+[INFO] 18:37:08:124 Cpu/(3373:3378): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 18:37:09:125 Cpu/(3373:3378): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: 12 - Valor: h014�
+[INFO] 18:37:09:125 Cpu/(3373:3378): PID: 1 - Se ha ejecutado MOV_IN parametro 1: CX parametro 2: 12
+
+[INFO] 18:37:09:126 Cpu/(3373:3378): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:37:09:167 Cpu/(3373:3378): Recibi PCB id: 1
+[INFO] 18:37:09:167 Cpu/(3373:3378): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:37:09:255 Cpu/(3373:3378): Recibi PCB id: 1
+[INFO] 18:37:09:255 Cpu/(3373:3378): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:37:09:343 Cpu/(3373:3378): Recibi PCB id: 1
+[INFO] 18:37:09:343 Cpu/(3373:3378): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:37:09:431 Cpu/(3373:3378): Recibi PCB id: 1
+[INFO] 18:37:09:431 Cpu/(3373:3378): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:37:09:519 Cpu/(3373:3378): Recibi PCB id: 1
+[INFO] 18:37:09:519 Cpu/(3373:3378): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:37:09:607 Cpu/(3373:3378): Recibi PCB id: 1
+[INFO] 18:37:09:607 Cpu/(3373:3378): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:37:09:695 Cpu/(3373:3378): Recibi PCB id: 1
+[INFO] 18:37:09:695 Cpu/(3373:3378): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:37:09:783 Cpu/(3373:3378): Recibi PCB id: 1
+[INFO] 18:37:09:783 Cpu/(3373:3378): En CPU
+[INFO] 18:37:10:783 Cpu/(3373:3378): PID: 1 - Ejecutando SET parametro 1: BX parametro 2: Ch4u
+
+[INFO] 18:37:10:784 Cpu/(3373:3378): PID: 1 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:37:10:784 Cpu/(3373:3378): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: BX
+
+[INFO] 18:37:10:784 Cpu/(3373:3378): Realizado lectura del registro BX con valor Ch4u�
+[INFO] 18:37:10:785 Cpu/(3373:3378): PID: 1 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 12 - Valor: Ch4u�
+[INFO] 18:37:11:787 Cpu/(3373:3378): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: BX
+[INFO] 18:37:11:788 Cpu/(3373:3378): PID: 1 - Ejecutando SIGNAL a kernel por recurso: RA
+ 
+[INFO] 18:37:11:790 Cpu/(3373:3378): Recibi PCB id: 1
+[INFO] 18:37:11:790 Cpu/(3373:3378): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 18:37:11:791 Cpu/(3373:3378): Recibi PCB id: 2
+[INFO] 18:37:11:792 Cpu/(3373:3378): PID: 2 - Ejecutando WAIT a Kernel por recurso: RC
+ 
+[INFO] 18:37:11:793 Cpu/(3373:3378): Recibi PCB id: 0
+[INFO] 18:37:11:793 Cpu/(3373:3378): PID: 0 - Ejecutando DELETE_SEGMENT
+[INFO] 18:37:11:835 Cpu/(3373:3378): Recibi PCB id: 0
+[INFO] 18:37:11:835 Cpu/(3373:3378): PID: 0 -  Listo para ejecutar MOV_IN 
+[INFO] 18:37:12:836 Cpu/(3373:3378): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 12 - Valor: Ch4u�
+[INFO] 18:37:12:836 Cpu/(3373:3378): PID: 0 - Se ha ejecutado MOV_IN parametro 1: DX parametro 2: 12
+
+[INFO] 18:37:12:836 Cpu/(3373:3378): PID: 0 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:37:12:838 Cpu/(3373:3378): Recibi PCB id: 0
+[INFO] 18:37:12:838 Cpu/(3373:3378): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:37:12:839 Cpu/(3373:3378): Recibi PCB id: 1
+[INFO] 18:37:12:840 Cpu/(3373:3378): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:37:12:883 Cpu/(3373:3378): Recibi PCB id: 1
+[INFO] 18:37:12:883 Cpu/(3373:3378): En CPU
+[INFO] 18:37:13:884 Cpu/(3373:3378): PID: 1 - Ejecutando SET parametro 1: EAX parametro 2: CoscuWin
+
+[INFO] 18:37:13:884 Cpu/(3373:3378): PID: 1 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:37:13:884 Cpu/(3373:3378): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 256 parametro 2: EAX
+
+[INFO] 18:37:13:885 Cpu/(3373:3378): Realizado lectura del registro EAX con valor CoscuWin
+[INFO] 18:37:13:885 Cpu/(3373:3378): PID: 1 - Acción: ESCRIBIR - Segmento: 1 - Dirección Física: 256 - Valor: CoscuWin
+[INFO] 18:37:14:887 Cpu/(3373:3378): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 256 parametro 2: EAX
+[INFO] 18:37:14:887 Cpu/(3373:3378): En CPU
+[INFO] 18:37:15:887 Cpu/(3373:3378): PID: 1 - Ejecutando SET parametro 1: EBX parametro 2: GermanNo
+
+[INFO] 18:37:15:888 Cpu/(3373:3378): PID: 1 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:37:15:888 Cpu/(3373:3378): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 2048 parametro 2: EBX
+
+[INFO] 18:37:15:888 Cpu/(3373:3378): Realizado lectura del registro EBX con valor GermanNo
+[INFO] 18:37:15:889 Cpu/(3373:3378): PID: 1 - Acción: ESCRIBIR - Segmento: 8 - Dirección Física: 704 - Valor: GermanNo
+[INFO] 18:37:16:890 Cpu/(3373:3378): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 2048 parametro 2: EBX
+[INFO] 18:37:16:890 Cpu/(3373:3378): PID: 1 - Ejecutando SIGNAL a kernel por recurso: RC
+ 
+[INFO] 18:37:16:892 Cpu/(3373:3378): Recibi PCB id: 1
+[INFO] 18:37:16:892 Cpu/(3373:3378): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 18:37:16:894 Cpu/(3373:3378): Recibi PCB id: 2
+[INFO] 18:37:16:894 Cpu/(3373:3378): PID: 2 - Ejecutando CREATE_SEGMENT
+[INFO] 18:37:16:939 Cpu/(3373:3378): Recibi PCB id: 2
+[INFO] 18:37:16:939 Cpu/(3373:3378): PID: 2 -  Listo para ejecutar MOV_IN 
+[INFO] 18:37:17:940 Cpu/(3373:3378): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: 12 - Valor: Ch4u�
+[INFO] 18:37:17:941 Cpu/(3373:3378): PID: 2 - Se ha ejecutado MOV_IN parametro 1: AX parametro 2: 12
+
+[INFO] 18:37:17:941 Cpu/(3373:3378): PID: 2 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:37:17:942 Cpu/(3373:3378): Recibi PCB id: 2
+[INFO] 18:37:17:942 Cpu/(3373:3378): PID: 2 - Ejecutando WAIT a Kernel por recurso: RC
+ 
+[INFO] 18:37:17:943 Cpu/(3373:3378): Recibi PCB id: 1
+[INFO] 18:37:17:943 Cpu/(3373:3378): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 18:37:18:945 Cpu/(3373:3378): PID: 1 - Acción: LEER - Segmento: 1 - Dirección Física: 256 - Valor: CoscuWin
+[INFO] 18:37:18:946 Cpu/(3373:3378): PID: 1 - Se ha ejecutado MOV_IN parametro 1: ECX parametro 2: 256
+
+[INFO] 18:37:18:946 Cpu/(3373:3378): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 18:37:18:992 Cpu/(3373:3378): Recibi PCB id: 1
+[INFO] 18:37:18:992 Cpu/(3373:3378): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 18:37:19:994 Cpu/(3373:3378): PID: 1 - Acción: LEER - Segmento: 8 - Dirección Física: 704 - Valor: GermanNo
+[INFO] 18:37:19:994 Cpu/(3373:3378): PID: 1 - Se ha ejecutado MOV_IN parametro 1: EDX parametro 2: 2048
+
+[INFO] 18:37:19:995 Cpu/(3373:3378): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 18:37:20:040 Cpu/(3373:3378): Recibi PCB id: 1
+[INFO] 18:37:20:040 Cpu/(3373:3378): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 18:37:20:091 Cpu/(3373:3378): Recibi PCB id: 1
+[INFO] 18:37:20:092 Cpu/(3373:3378): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 18:37:20:135 Cpu/(3373:3378): Recibi PCB id: 1
+[INFO] 18:37:20:135 Cpu/(3373:3378): PID: 1 - Ejecutando SIGNAL a kernel por recurso: RC
+ 
+[INFO] 18:37:20:135 Cpu/(3373:3378): Recibi PCB id: 1
+[INFO] 18:37:20:135 Cpu/(3373:3378): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 18:37:20:135 Cpu/(3373:3378): Recibi PCB id: 2
+[INFO] 18:37:20:135 Cpu/(3373:3378): PID: 2 - Ejecutando CREATE_SEGMENT
+[INFO] 18:37:20:227 Cpu/(3373:3378): Recibi PCB id: 2
+[INFO] 18:37:20:227 Cpu/(3373:3378): PID: 2 - Ejecutando SIGNAL a kernel por recurso: RA
+ 
+[INFO] 18:37:20:227 Cpu/(3373:3378): Recibi PCB id: 2
+[INFO] 18:37:20:227 Cpu/(3373:3378): PID: 2 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:37:20:228 Cpu/(3373:3378): Recibi PCB id: 2
+[INFO] 18:37:20:228 Cpu/(3373:3378): PID: 2 - Ejecutando EXIT
+[INFO] 18:37:20:232 Cpu/(3373:3378): Recibi PCB id: 0
+[INFO] 18:37:20:232 Cpu/(3373:3378): PID: 0 - Ejecutando EXIT
+[INFO] 18:37:20:236 Cpu/(3373:3378): Recibi PCB id: 1
+[INFO] 18:37:20:236 Cpu/(3373:3378): PID: 1 - Ejecutando EXIT
+[INFO] 18:38:28:484 Cpu/(3373:3378): Se ha finalizado la conexion
+[INFO] 18:38:58:309 Cpu/(3391:3391): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 18:38:58:312 Cpu/(3391:3391): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:38:58:314 Cpu/(3391:3391): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 18:39:01:040 Cpu/(3391:3391): Cliente conectado (a CPU_SV)
+
+[INFO] 18:39:08:435 Cpu/(3391:3396): Recibi PCB id: 0
+[INFO] 18:39:08:435 Cpu/(3391:3396): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:39:08:436 Cpu/(3391:3396): Recibi PCB id: 0
+[INFO] 18:39:08:436 Cpu/(3391:3396): En CPU
+[INFO] 18:39:09:436 Cpu/(3391:3396): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: h014
+
+[INFO] 18:39:09:437 Cpu/(3391:3396): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:39:09:437 Cpu/(3391:3396): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: AX
+
+[INFO] 18:39:09:437 Cpu/(3391:3396): Realizado lectura del registro AX con valor h014�
+[INFO] 18:39:09:438 Cpu/(3391:3396): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 12 - Valor: h014�
+[INFO] 18:39:10:439 Cpu/(3391:3396): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: AX
+[INFO] 18:39:10:439 Cpu/(3391:3396): PID: 0 - Ejecutando CREATE_SEGMENT
+[INFO] 18:39:10:483 Cpu/(3391:3396): Recibi PCB id: 0
+[INFO] 18:39:10:483 Cpu/(3391:3396): PID: 0 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:39:10:489 Cpu/(3391:3396): Recibi PCB id: 0
+[INFO] 18:39:10:489 Cpu/(3391:3396): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:39:10:490 Cpu/(3391:3396): Recibi PCB id: 1
+[INFO] 18:39:10:490 Cpu/(3391:3396): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 18:39:10:491 Cpu/(3391:3396): Recibi PCB id: 1
+[INFO] 18:39:10:491 Cpu/(3391:3396): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 18:39:11:492 Cpu/(3391:3396): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: 12 - Valor: h014�
+[INFO] 18:39:11:492 Cpu/(3391:3396): PID: 1 - Se ha ejecutado MOV_IN parametro 1: CX parametro 2: 12
+
+[INFO] 18:39:11:493 Cpu/(3391:3396): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:39:11:540 Cpu/(3391:3396): Recibi PCB id: 1
+[INFO] 18:39:11:540 Cpu/(3391:3396): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:39:11:584 Cpu/(3391:3396): Recibi PCB id: 1
+[INFO] 18:39:11:584 Cpu/(3391:3396): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:41:23:382 Cpu/(3391:3396): Se ha finalizado la conexion
+[INFO] 18:41:31:371 Cpu/(3410:3410): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 18:41:31:372 Cpu/(3410:3410): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:41:31:372 Cpu/(3410:3410): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 18:41:35:127 Cpu/(3410:3410): Cliente conectado (a CPU_SV)
+
+[INFO] 18:41:42:800 Cpu/(3410:3415): Recibi PCB id: 0
+[INFO] 18:41:42:800 Cpu/(3410:3415): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:41:42:800 Cpu/(3410:3415): Recibi PCB id: 0
+[INFO] 18:41:42:800 Cpu/(3410:3415): En CPU
+[INFO] 18:41:43:801 Cpu/(3410:3415): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: h014
+
+[INFO] 18:41:43:801 Cpu/(3410:3415): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:41:43:801 Cpu/(3410:3415): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: AX
+
+[INFO] 18:41:43:801 Cpu/(3410:3415): Realizado lectura del registro AX con valor h014�
+[INFO] 18:41:43:801 Cpu/(3410:3415): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 12 - Valor: h014�
+[INFO] 18:41:44:803 Cpu/(3410:3415): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: AX
+[INFO] 18:41:44:803 Cpu/(3410:3415): PID: 0 - Ejecutando CREATE_SEGMENT
+[INFO] 18:41:44:848 Cpu/(3410:3415): Recibi PCB id: 0
+[INFO] 18:41:44:848 Cpu/(3410:3415): PID: 0 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:41:44:849 Cpu/(3410:3415): Recibi PCB id: 0
+[INFO] 18:41:44:849 Cpu/(3410:3415): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:41:44:850 Cpu/(3410:3415): Recibi PCB id: 1
+[INFO] 18:41:44:851 Cpu/(3410:3415): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 18:41:44:851 Cpu/(3410:3415): Recibi PCB id: 1
+[INFO] 18:41:44:852 Cpu/(3410:3415): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 18:41:45:855 Cpu/(3410:3415): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: 12 - Valor: h014�
+[INFO] 18:41:45:855 Cpu/(3410:3415): PID: 1 - Se ha ejecutado MOV_IN parametro 1: CX parametro 2: 12
+
+[INFO] 18:41:45:855 Cpu/(3410:3415): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:41:45:899 Cpu/(3410:3415): Recibi PCB id: 1
+[INFO] 18:41:45:899 Cpu/(3410:3415): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:41:45:991 Cpu/(3410:3415): Recibi PCB id: 1
+[INFO] 18:41:45:991 Cpu/(3410:3415): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:41:46:079 Cpu/(3410:3415): Recibi PCB id: 1
+[INFO] 18:41:46:079 Cpu/(3410:3415): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:41:46:171 Cpu/(3410:3415): Recibi PCB id: 1
+[INFO] 18:41:46:171 Cpu/(3410:3415): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:41:46:259 Cpu/(3410:3415): Recibi PCB id: 1
+[INFO] 18:41:46:259 Cpu/(3410:3415): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:41:46:346 Cpu/(3410:3415): Recibi PCB id: 1
+[INFO] 18:41:46:347 Cpu/(3410:3415): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:41:46:434 Cpu/(3410:3415): Recibi PCB id: 1
+[INFO] 18:41:46:434 Cpu/(3410:3415): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:41:46:522 Cpu/(3410:3415): Recibi PCB id: 1
+[INFO] 18:41:46:522 Cpu/(3410:3415): En CPU
+[INFO] 18:41:47:523 Cpu/(3410:3415): PID: 1 - Ejecutando SET parametro 1: BX parametro 2: Ch4u
+
+[INFO] 18:41:47:523 Cpu/(3410:3415): PID: 1 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:41:47:524 Cpu/(3410:3415): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: BX
+
+[INFO] 18:41:47:524 Cpu/(3410:3415): Realizado lectura del registro BX con valor Ch4u�
+[INFO] 18:41:47:525 Cpu/(3410:3415): PID: 1 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 12 - Valor: Ch4u�
+[INFO] 18:41:48:528 Cpu/(3410:3415): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: BX
+[INFO] 18:41:48:528 Cpu/(3410:3415): PID: 1 - Ejecutando SIGNAL a kernel por recurso: RA
+ 
+[INFO] 18:41:48:530 Cpu/(3410:3415): Recibi PCB id: 1
+[INFO] 18:41:48:530 Cpu/(3410:3415): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 18:41:48:532 Cpu/(3410:3415): Recibi PCB id: 2
+[INFO] 18:41:48:532 Cpu/(3410:3415): PID: 2 - Ejecutando WAIT a Kernel por recurso: RC
+ 
+[INFO] 18:41:48:533 Cpu/(3410:3415): Recibi PCB id: 0
+[INFO] 18:41:48:534 Cpu/(3410:3415): PID: 0 - Ejecutando DELETE_SEGMENT
+[INFO] 18:41:48:579 Cpu/(3410:3415): Recibi PCB id: 0
+[INFO] 18:41:48:579 Cpu/(3410:3415): PID: 0 -  Listo para ejecutar MOV_IN 
+[INFO] 18:41:49:580 Cpu/(3410:3415): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 12 - Valor: Ch4u�
+[INFO] 18:41:49:581 Cpu/(3410:3415): PID: 0 - Se ha ejecutado MOV_IN parametro 1: DX parametro 2: 12
+
+[INFO] 18:41:49:581 Cpu/(3410:3415): PID: 0 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:41:49:583 Cpu/(3410:3415): Recibi PCB id: 0
+[INFO] 18:41:49:583 Cpu/(3410:3415): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:41:49:585 Cpu/(3410:3415): Recibi PCB id: 1
+[INFO] 18:41:49:585 Cpu/(3410:3415): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:41:49:631 Cpu/(3410:3415): Recibi PCB id: 1
+[INFO] 18:41:49:631 Cpu/(3410:3415): En CPU
+[INFO] 18:41:50:631 Cpu/(3410:3415): PID: 1 - Ejecutando SET parametro 1: EAX parametro 2: CoscuWin
+
+[INFO] 18:41:50:631 Cpu/(3410:3415): PID: 1 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:41:50:632 Cpu/(3410:3415): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 256 parametro 2: EAX
+
+[INFO] 18:41:50:632 Cpu/(3410:3415): Realizado lectura del registro EAX con valor CoscuWin
+[INFO] 18:41:50:632 Cpu/(3410:3415): PID: 1 - Acción: ESCRIBIR - Segmento: 1 - Dirección Física: 256 - Valor: CoscuWin
+[INFO] 18:41:51:633 Cpu/(3410:3415): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 256 parametro 2: EAX
+[INFO] 18:41:51:633 Cpu/(3410:3415): En CPU
+[INFO] 18:41:52:633 Cpu/(3410:3415): PID: 1 - Ejecutando SET parametro 1: EBX parametro 2: GermanNo
+
+[INFO] 18:41:52:634 Cpu/(3410:3415): PID: 1 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:41:52:634 Cpu/(3410:3415): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 2048 parametro 2: EBX
+
+[INFO] 18:41:52:635 Cpu/(3410:3415): Realizado lectura del registro EBX con valor GermanNo
+[INFO] 18:41:52:635 Cpu/(3410:3415): PID: 1 - Acción: ESCRIBIR - Segmento: 8 - Dirección Física: 704 - Valor: GermanNo
+[INFO] 18:41:53:638 Cpu/(3410:3415): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 2048 parametro 2: EBX
+[INFO] 18:41:53:638 Cpu/(3410:3415): PID: 1 - Ejecutando SIGNAL a kernel por recurso: RC
+ 
+[INFO] 18:41:53:640 Cpu/(3410:3415): Recibi PCB id: 1
+[INFO] 18:41:53:640 Cpu/(3410:3415): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 18:41:53:641 Cpu/(3410:3415): Recibi PCB id: 2
+[INFO] 18:41:53:641 Cpu/(3410:3415): PID: 2 - Ejecutando CREATE_SEGMENT
+[INFO] 18:42:53:732 Cpu/(3410:3415): Recibi PCB id: 2
+[INFO] 18:42:53:732 Cpu/(3410:3415): PID: 2 - Ejecutando CREATE_SEGMENT
+[INFO] 18:42:53:775 Cpu/(3410:3415): Recibi PCB id: 2
+[INFO] 18:42:53:775 Cpu/(3410:3415): PID: 2 -  Listo para ejecutar MOV_IN 
+[INFO] 18:42:54:776 Cpu/(3410:3415): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: 12 - Valor: Ch4u�
+[INFO] 18:42:54:776 Cpu/(3410:3415): PID: 2 - Se ha ejecutado MOV_IN parametro 1: AX parametro 2: 12
+
+[INFO] 18:42:54:777 Cpu/(3410:3415): PID: 2 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:42:54:778 Cpu/(3410:3415): Recibi PCB id: 2
+[INFO] 18:42:54:778 Cpu/(3410:3415): PID: 2 - Ejecutando WAIT a Kernel por recurso: RC
+ 
+[INFO] 18:42:54:779 Cpu/(3410:3415): Recibi PCB id: 1
+[INFO] 18:42:54:779 Cpu/(3410:3415): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 18:42:55:781 Cpu/(3410:3415): PID: 1 - Acción: LEER - Segmento: 1 - Dirección Física: 128 - Valor: CoscuWin
+[INFO] 18:42:55:781 Cpu/(3410:3415): PID: 1 - Se ha ejecutado MOV_IN parametro 1: ECX parametro 2: 256
+
+[INFO] 18:42:55:782 Cpu/(3410:3415): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 18:42:55:823 Cpu/(3410:3415): Recibi PCB id: 1
+[INFO] 18:42:55:823 Cpu/(3410:3415): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 18:42:56:825 Cpu/(3410:3415): PID: 1 - Acción: LEER - Segmento: 8 - Dirección Física: 576 - Valor: GermanNo
+[INFO] 18:42:56:825 Cpu/(3410:3415): PID: 1 - Se ha ejecutado MOV_IN parametro 1: EDX parametro 2: 2048
+
+[INFO] 18:42:56:825 Cpu/(3410:3415): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 18:42:56:867 Cpu/(3410:3415): Recibi PCB id: 1
+[INFO] 18:42:56:867 Cpu/(3410:3415): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 18:42:56:915 Cpu/(3410:3415): Recibi PCB id: 1
+[INFO] 18:42:56:915 Cpu/(3410:3415): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 18:42:56:958 Cpu/(3410:3415): Recibi PCB id: 1
+[INFO] 18:42:56:958 Cpu/(3410:3415): PID: 1 - Ejecutando SIGNAL a kernel por recurso: RC
+ 
+[INFO] 18:42:56:959 Cpu/(3410:3415): Recibi PCB id: 1
+[INFO] 18:42:56:959 Cpu/(3410:3415): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 18:42:56:959 Cpu/(3410:3415): Recibi PCB id: 2
+[INFO] 18:42:56:959 Cpu/(3410:3415): PID: 2 - Ejecutando CREATE_SEGMENT
+[INFO] 18:42:57:046 Cpu/(3410:3415): Recibi PCB id: 2
+[INFO] 18:42:57:047 Cpu/(3410:3415): PID: 2 - Ejecutando SIGNAL a kernel por recurso: RA
+ 
+[INFO] 18:42:57:047 Cpu/(3410:3415): Recibi PCB id: 2
+[INFO] 18:42:57:047 Cpu/(3410:3415): PID: 2 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:42:57:048 Cpu/(3410:3415): Recibi PCB id: 2
+[INFO] 18:42:57:048 Cpu/(3410:3415): PID: 2 - Ejecutando EXIT
+[INFO] 18:42:57:050 Cpu/(3410:3415): Recibi PCB id: 0
+[INFO] 18:42:57:050 Cpu/(3410:3415): PID: 0 - Ejecutando EXIT
+[INFO] 18:42:57:052 Cpu/(3410:3415): Recibi PCB id: 1
+[INFO] 18:42:57:052 Cpu/(3410:3415): PID: 1 - Ejecutando EXIT
+[INFO] 18:44:24:681 Cpu/(3410:3415): Se ha finalizado la conexion
+[INFO] 18:44:49:615 Cpu/(3429:3429): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 18:44:49:616 Cpu/(3429:3429): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:44:49:616 Cpu/(3429:3429): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 18:44:54:032 Cpu/(3429:3429): Cliente conectado (a CPU_SV)
+
+[INFO] 18:45:01:223 Cpu/(3429:3434): Recibi PCB id: 0
+[INFO] 18:45:01:223 Cpu/(3429:3434): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:45:01:223 Cpu/(3429:3434): Recibi PCB id: 0
+[INFO] 18:45:01:223 Cpu/(3429:3434): En CPU
+[INFO] 18:45:02:223 Cpu/(3429:3434): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: h014
+
+[INFO] 18:45:02:224 Cpu/(3429:3434): PID: 0 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:45:02:224 Cpu/(3429:3434): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: AX
+
+[INFO] 18:45:02:224 Cpu/(3429:3434): Realizado lectura del registro AX con valor h014
+[INFO] 18:45:02:225 Cpu/(3429:3434): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 12 - Valor: h014
+[INFO] 18:45:03:226 Cpu/(3429:3434): PID: 0 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: AX
+[INFO] 18:45:03:227 Cpu/(3429:3434): PID: 0 - Ejecutando CREATE_SEGMENT
+[INFO] 18:45:03:274 Cpu/(3429:3434): Recibi PCB id: 0
+[INFO] 18:45:03:278 Cpu/(3429:3434): PID: 0 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:45:03:280 Cpu/(3429:3434): Recibi PCB id: 0
+[INFO] 18:45:03:280 Cpu/(3429:3434): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:45:03:281 Cpu/(3429:3434): Recibi PCB id: 1
+[INFO] 18:45:03:281 Cpu/(3429:3434): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 18:45:03:281 Cpu/(3429:3434): Recibi PCB id: 1
+[INFO] 18:45:03:282 Cpu/(3429:3434): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 18:45:04:282 Cpu/(3429:3434): PID: 1 - Acción: LEER - Segmento: 0 - Dirección Física: 12 - Valor: h014
+[INFO] 18:45:04:282 Cpu/(3429:3434): PID: 1 - Se ha ejecutado MOV_IN parametro 1: CX parametro 2: 12
+
+[INFO] 18:45:04:282 Cpu/(3429:3434): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:45:04:371 Cpu/(3429:3434): Recibi PCB id: 1
+[INFO] 18:45:04:371 Cpu/(3429:3434): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:45:04:459 Cpu/(3429:3434): Recibi PCB id: 1
+[INFO] 18:45:04:460 Cpu/(3429:3434): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:45:04:547 Cpu/(3429:3434): Recibi PCB id: 1
+[INFO] 18:45:04:547 Cpu/(3429:3434): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:45:04:635 Cpu/(3429:3434): Recibi PCB id: 1
+[INFO] 18:45:04:635 Cpu/(3429:3434): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:45:04:722 Cpu/(3429:3434): Recibi PCB id: 1
+[INFO] 18:45:04:722 Cpu/(3429:3434): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:45:04:810 Cpu/(3429:3434): Recibi PCB id: 1
+[INFO] 18:45:04:810 Cpu/(3429:3434): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:45:04:898 Cpu/(3429:3434): Recibi PCB id: 1
+[INFO] 18:45:04:898 Cpu/(3429:3434): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:45:04:986 Cpu/(3429:3434): Recibi PCB id: 1
+[INFO] 18:45:04:986 Cpu/(3429:3434): En CPU
+[INFO] 18:45:05:987 Cpu/(3429:3434): PID: 1 - Ejecutando SET parametro 1: BX parametro 2: Ch4u
+
+[INFO] 18:45:05:988 Cpu/(3429:3434): PID: 1 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:45:05:989 Cpu/(3429:3434): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: BX
+
+[INFO] 18:45:05:989 Cpu/(3429:3434): Realizado lectura del registro BX con valor Ch4u
+[INFO] 18:45:05:989 Cpu/(3429:3434): PID: 1 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 12 - Valor: Ch4u
+[INFO] 18:45:06:991 Cpu/(3429:3434): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 12 parametro 2: BX
+[INFO] 18:45:06:991 Cpu/(3429:3434): PID: 1 - Ejecutando SIGNAL a kernel por recurso: RA
+ 
+[INFO] 18:45:06:993 Cpu/(3429:3434): Recibi PCB id: 1
+[INFO] 18:45:06:993 Cpu/(3429:3434): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 18:45:06:994 Cpu/(3429:3434): Recibi PCB id: 2
+[INFO] 18:45:06:994 Cpu/(3429:3434): PID: 2 - Ejecutando WAIT a Kernel por recurso: RC
+ 
+[INFO] 18:45:06:996 Cpu/(3429:3434): Recibi PCB id: 0
+[INFO] 18:45:06:996 Cpu/(3429:3434): PID: 0 - Ejecutando DELETE_SEGMENT
+[INFO] 18:45:07:039 Cpu/(3429:3434): Recibi PCB id: 0
+[INFO] 18:45:07:039 Cpu/(3429:3434): PID: 0 -  Listo para ejecutar MOV_IN 
+[INFO] 18:45:08:041 Cpu/(3429:3434): PID: 0 - Acción: LEER - Segmento: 0 - Dirección Física: 12 - Valor: Ch4u
+[INFO] 18:45:08:041 Cpu/(3429:3434): PID: 0 - Se ha ejecutado MOV_IN parametro 1: DX parametro 2: 12
+
+[INFO] 18:45:08:041 Cpu/(3429:3434): PID: 0 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:45:08:042 Cpu/(3429:3434): Recibi PCB id: 0
+[INFO] 18:45:08:043 Cpu/(3429:3434): PID: 0 - Ejecutando WAIT a Kernel por recurso: RA
+ 
+[INFO] 18:45:08:044 Cpu/(3429:3434): Recibi PCB id: 1
+[INFO] 18:45:08:044 Cpu/(3429:3434): PID: 1 - Ejecutando CREATE_SEGMENT
+[INFO] 18:45:08:087 Cpu/(3429:3434): Recibi PCB id: 1
+[INFO] 18:45:08:087 Cpu/(3429:3434): En CPU
+[INFO] 18:45:09:087 Cpu/(3429:3434): PID: 1 - Ejecutando SET parametro 1: EAX parametro 2: CoscuWin
+
+[INFO] 18:45:09:088 Cpu/(3429:3434): PID: 1 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:45:09:088 Cpu/(3429:3434): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 256 parametro 2: EAX
+
+[INFO] 18:45:09:088 Cpu/(3429:3434): Realizado lectura del registro EAX con valor CoscuWin
+[INFO] 18:45:09:088 Cpu/(3429:3434): PID: 1 - Acción: ESCRIBIR - Segmento: 1 - Dirección Física: 256 - Valor: CoscuWin
+[INFO] 18:45:10:090 Cpu/(3429:3434): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 256 parametro 2: EAX
+[INFO] 18:45:10:090 Cpu/(3429:3434): En CPU
+[INFO] 18:45:11:090 Cpu/(3429:3434): PID: 1 - Ejecutando SET parametro 1: EBX parametro 2: GermanNo
+
+[INFO] 18:45:11:091 Cpu/(3429:3434): PID: 1 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:45:11:091 Cpu/(3429:3434): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 2048 parametro 2: EBX
+
+[INFO] 18:45:11:091 Cpu/(3429:3434): Realizado lectura del registro EBX con valor GermanNo
+[INFO] 18:45:11:092 Cpu/(3429:3434): PID: 1 - Acción: ESCRIBIR - Segmento: 8 - Dirección Física: 704 - Valor: GermanNo
+[INFO] 18:45:12:094 Cpu/(3429:3434): PID: 1 - Se ha ejecutado MOV_OUT parametro 1: 2048 parametro 2: EBX
+[INFO] 18:45:12:094 Cpu/(3429:3434): PID: 1 - Ejecutando SIGNAL a kernel por recurso: RC
+ 
+[INFO] 18:45:12:096 Cpu/(3429:3434): Recibi PCB id: 1
+[INFO] 18:45:12:096 Cpu/(3429:3434): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 18:45:12:098 Cpu/(3429:3434): Recibi PCB id: 2
+[INFO] 18:45:12:098 Cpu/(3429:3434): PID: 2 - Ejecutando CREATE_SEGMENT
+[INFO] 18:46:12:187 Cpu/(3429:3434): Recibi PCB id: 2
+[INFO] 18:46:12:187 Cpu/(3429:3434): PID: 2 - Ejecutando CREATE_SEGMENT
+[INFO] 18:46:12:231 Cpu/(3429:3434): Recibi PCB id: 2
+[INFO] 18:46:12:231 Cpu/(3429:3434): PID: 2 -  Listo para ejecutar MOV_IN 
+[INFO] 18:46:13:233 Cpu/(3429:3434): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: 12 - Valor: Ch4u
+[INFO] 18:46:13:233 Cpu/(3429:3434): PID: 2 - Se ha ejecutado MOV_IN parametro 1: AX parametro 2: 12
+
+[INFO] 18:46:13:233 Cpu/(3429:3434): PID: 2 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:46:13:235 Cpu/(3429:3434): Recibi PCB id: 2
+[INFO] 18:46:13:236 Cpu/(3429:3434): PID: 2 - Ejecutando WAIT a Kernel por recurso: RC
+ 
+[INFO] 18:46:13:238 Cpu/(3429:3434): Recibi PCB id: 1
+[INFO] 18:46:13:238 Cpu/(3429:3434): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 18:46:14:240 Cpu/(3429:3434): PID: 1 - Acción: LEER - Segmento: 1 - Dirección Física: 128 - Valor: CoscuWin
+[INFO] 18:46:14:240 Cpu/(3429:3434): PID: 1 - Se ha ejecutado MOV_IN parametro 1: ECX parametro 2: 256
+
+[INFO] 18:46:14:240 Cpu/(3429:3434): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 18:46:14:284 Cpu/(3429:3434): Recibi PCB id: 1
+[INFO] 18:46:14:284 Cpu/(3429:3434): PID: 1 -  Listo para ejecutar MOV_IN 
+[INFO] 18:46:15:286 Cpu/(3429:3434): PID: 1 - Acción: LEER - Segmento: 8 - Dirección Física: 576 - Valor: GermanNo
+[INFO] 18:46:15:286 Cpu/(3429:3434): PID: 1 - Se ha ejecutado MOV_IN parametro 1: EDX parametro 2: 2048
+
+[INFO] 18:46:15:286 Cpu/(3429:3434): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 18:46:15:331 Cpu/(3429:3434): Recibi PCB id: 1
+[INFO] 18:46:15:331 Cpu/(3429:3434): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 18:46:15:375 Cpu/(3429:3434): Recibi PCB id: 1
+[INFO] 18:46:15:375 Cpu/(3429:3434): PID: 1 - Ejecutando DELETE_SEGMENT
+[INFO] 18:46:15:418 Cpu/(3429:3434): Recibi PCB id: 1
+[INFO] 18:46:15:418 Cpu/(3429:3434): PID: 1 - Ejecutando SIGNAL a kernel por recurso: RC
+ 
+[INFO] 18:46:15:419 Cpu/(3429:3434): Recibi PCB id: 1
+[INFO] 18:46:15:419 Cpu/(3429:3434): PID: 1 - Ejecutando WAIT a Kernel por recurso: RB
+ 
+[INFO] 18:46:15:419 Cpu/(3429:3434): Recibi PCB id: 2
+[INFO] 18:46:15:419 Cpu/(3429:3434): PID: 2 - Ejecutando CREATE_SEGMENT
+[INFO] 18:46:15:506 Cpu/(3429:3434): Recibi PCB id: 2
+[INFO] 18:46:15:506 Cpu/(3429:3434): PID: 2 - Ejecutando SIGNAL a kernel por recurso: RA
+ 
+[INFO] 18:46:15:507 Cpu/(3429:3434): Recibi PCB id: 2
+[INFO] 18:46:15:507 Cpu/(3429:3434): PID: 2 - Ejecutando SIGNAL a kernel por recurso: RB
+ 
+[INFO] 18:46:15:507 Cpu/(3429:3434): Recibi PCB id: 2
+[INFO] 18:46:15:507 Cpu/(3429:3434): PID: 2 - Ejecutando EXIT
+[INFO] 18:46:15:508 Cpu/(3429:3434): Recibi PCB id: 0
+[INFO] 18:46:15:508 Cpu/(3429:3434): PID: 0 - Ejecutando EXIT
+[INFO] 18:46:15:508 Cpu/(3429:3434): Recibi PCB id: 1
+[INFO] 18:46:15:509 Cpu/(3429:3434): PID: 1 - Ejecutando EXIT
+[INFO] 18:46:31:995 Cpu/(3429:3434): Se ha finalizado la conexion
