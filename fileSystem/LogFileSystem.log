@@ -211,3 +211,26 @@ NOMBRE_ARCHIVO: Videogames
 [INFO] 15:54:13:666 FileSystem/(5998:6003): Se leyo a partir del offset 0 dentro del bloque. Informacion del primer bloque leido: SonicTheHedgehog
 [INFO] 15:54:13:667 FileSystem/(5998:6003): Tamaño leido en primer bloque: 16, tamaño restante por leer: 0
 [INFO] 15:54:13:668 FileSystem/(5998:6003): Lectura completa: SonicTheHedgehog, listo para enviar a memoria - tamanio: 16
+[INFO] 16:24:27:615 FileSystem/(6420:6420): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8003
+PATH_SUPERBLOQUE: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+PATH_BITMAP: /home/utnso/tp-2023-1c-Guindows/fs/bitmap.dat
+PATH_BLOQUES: /home/utnso/tp-2023-1c-Guindows/fs/bloques.dat
+PATH_FCB: /home/utnso/tp-2023-1c-Guindows/fs/fcb
+RETARDO_ACCESO_BLOQUE: 15000
+
+[WARNING] 16:24:27:696 FileSystem/(6420:6420): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[ERROR] 16:24:27:727 FileSystem/(6420:6420): PATH: /home/utnso/tp-2023-1c-Guindows/fs/superbloque.dat
+[INFO] 16:24:27:728 FileSystem/(6420:6420): 
+BLOCK_SIZE: 64
+BLOCK_COUNT: 1024
+[INFO] 16:24:27:730 FileSystem/(6420:6420): Archivo de Bloques Cargado
+[INFO] 16:24:27:757 FileSystem/(6420:6420): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 16:24:27:845 FileSystem/(6420:6420): Escuchando en (null):8003 (FileSystem server)
+
+[INFO] 16:24:33:506 FileSystem/(6420:6420): Cliente conectado (a FILESYSTEM_SV)
+
+[INFO] 16:26:01:262 FileSystem/(6420:6425): Se ha finalizado la conexion

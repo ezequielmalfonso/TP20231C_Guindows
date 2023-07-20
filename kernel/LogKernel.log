@@ -305,3 +305,216 @@ GRADO_MAX_MULTIPROGRAMACION: 12
 [INFO] 15:54:15:689 Kernel/(5999:6001): PID: 3 - Estado Anterior: EXECUTE - Estado Actual: EXIT
 [INFO] 15:54:15:691 Kernel/(5999:6001): Finaliza el proceso 3 - Motivo: POR FIN
 [ERROR] 15:54:15:692 Kernel/(5999:6001): Eliminar segmento de pid: 3
+[INFO] 16:24:33:176 Kernel/(6421:6421): Probando hora 0
+[INFO] 16:24:33:366 Kernel/(6421:6421): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: FIFO
+ESTIMACION_INICIAL: 10000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 12
+
+[INFO] 16:24:33:370 Kernel/(6421:6421): RECURSO: RA con 1 instancias
+[INFO] 16:24:33:371 Kernel/(6421:6421): RECURSO: RB con 0 instancias
+[INFO] 16:24:33:371 Kernel/(6421:6421): RECURSO: RC con 0 instancias
+[INFO] 16:24:33:372 Kernel/(6421:6421): Cantidad total de recursos disponibles: 3 
+[INFO] 16:24:33:431 Kernel/(6421:6421): ALGORITMO_PLANIFICACION FIFOOO!!!!
+[INFO] 16:24:33:492 Kernel/(6421:6421): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 16:24:33:503 Kernel/(6421:6421): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 16:24:33:511 Kernel/(6421:6421): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 16:24:33:514 Kernel/(6421:6421): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 16:24:40:894 Kernel/(6421:6421): Cliente conectado (a KERNEL_SV)
+
+[INFO] 16:24:41:076 Kernel/(6421:6427): Envio solicitud a MEMORIA
+[INFO] 16:24:41:086 Kernel/(6421:6427): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 16:24:41:098 Kernel/(6421:6427): Se crea el proceso 0 en NEW
+[INFO] 16:24:41:099 Kernel/(6421:6427): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:24:41:105 Kernel/(6421:6427): Ingreso a Ready algoritmo FIFO - PIDS: [0] 
+[INFO] 16:24:41:110 Kernel/(6421:6422): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:24:41:163 Kernel/(6421:6423): PID: 0 - Recibo pedido de WAIT por RECURSO: RA
+[INFO] 16:24:41:165 Kernel/(6421:6423): Para RECURSO RA hay 1 instancias disponibles antes de ejecutar
+[INFO] 16:24:41:167 Kernel/(6421:6423): PID: 0 - Wait: RA - Instancias: 0 
+[INFO] 16:24:41:987 Kernel/(6421:6421): Cliente conectado (a KERNEL_SV)
+
+[INFO] 16:24:42:022 Kernel/(6421:6429): Envio solicitud a MEMORIA
+[INFO] 16:24:42:066 Kernel/(6421:6429): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 16:24:42:069 Kernel/(6421:6429): Se crea el proceso 1 en NEW
+[INFO] 16:24:42:070 Kernel/(6421:6429): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:24:42:071 Kernel/(6421:6429): Ingreso a Ready algoritmo FIFO - PIDS: [1] 
+[INFO] 16:24:43:176 Kernel/(6421:6423): PID: 0 - Crear segmento - ID:1 - Tamanio: :128  
+[WARNING] 16:24:43:185 Kernel/(6421:6423): Id_seg: 1 - Tam seg: 128 
+[WARNING] 16:24:43:239 Kernel/(6421:6423): Recibiendo Segmento: Id: 1 - Dir Base: 128 - Tamanio: 128
+[INFO] 16:24:43:248 Kernel/(6421:6423): PID: 0 - Recibo pedido de SIGNAL por RECURSO: RB
+[INFO] 16:24:43:255 Kernel/(6421:6423): Para RECURSO RB hay 0 instancias disponibles antes de ejecutar
+[INFO] 16:24:43:262 Kernel/(6421:6423): PID: 0 - SIGNAL: RB - Instancias: 1 
+[INFO] 16:24:43:269 Kernel/(6421:6423): PID: 0 - Recibo pedido de WAIT por RECURSO: RA
+[INFO] 16:24:43:269 Kernel/(6421:6423): Para RECURSO RA hay 0 instancias disponibles antes de ejecutar
+[INFO] 16:24:43:273 Kernel/(6421:6423): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: RA - Instancias: -1 - PC: 6
+[INFO] 16:24:43:274 Kernel/(6421:6422): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:24:43:275 Kernel/(6421:6423): PID: 1 - Recibo pedido de WAIT por RECURSO: RB
+[INFO] 16:24:43:276 Kernel/(6421:6423): Para RECURSO RB hay 1 instancias disponibles antes de ejecutar
+[INFO] 16:24:43:276 Kernel/(6421:6423): PID: 1 - Wait: RB - Instancias: 0 
+[INFO] 16:24:43:758 Kernel/(6421:6421): Cliente conectado (a KERNEL_SV)
+
+[INFO] 16:24:43:879 Kernel/(6421:6431): Envio solicitud a MEMORIA
+[INFO] 16:24:43:922 Kernel/(6421:6431): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 16:24:43:923 Kernel/(6421:6431): Se crea el proceso 2 en NEW
+[INFO] 16:24:43:924 Kernel/(6421:6431): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:24:43:927 Kernel/(6421:6431): Ingreso a Ready algoritmo FIFO - PIDS: [2] 
+[INFO] 16:24:44:283 Kernel/(6421:6423): PID: 1 - Crear segmento - ID:1 - Tamanio: :64  
+[WARNING] 16:24:44:293 Kernel/(6421:6423): Id_seg: 1 - Tam seg: 64 
+[WARNING] 16:24:44:337 Kernel/(6421:6423): Recibiendo Segmento: Id: 1 - Dir Base: 256 - Tamanio: 64
+[INFO] 16:24:44:340 Kernel/(6421:6423): PID: 1 - Crear segmento - ID:2 - Tamanio: :64  
+[WARNING] 16:24:44:341 Kernel/(6421:6423): Id_seg: 2 - Tam seg: 64 
+[WARNING] 16:24:44:434 Kernel/(6421:6423): Recibiendo Segmento: Id: 2 - Dir Base: 320 - Tamanio: 64
+[INFO] 16:24:44:435 Kernel/(6421:6423): PID: 1 - Crear segmento - ID:3 - Tamanio: :64  
+[WARNING] 16:24:44:435 Kernel/(6421:6423): Id_seg: 3 - Tam seg: 64 
+[WARNING] 16:24:44:521 Kernel/(6421:6423): Recibiendo Segmento: Id: 3 - Dir Base: 384 - Tamanio: 64
+[INFO] 16:24:44:522 Kernel/(6421:6423): PID: 1 - Crear segmento - ID:4 - Tamanio: :64  
+[WARNING] 16:24:44:523 Kernel/(6421:6423): Id_seg: 4 - Tam seg: 64 
+[WARNING] 16:24:44:609 Kernel/(6421:6423): Recibiendo Segmento: Id: 4 - Dir Base: 448 - Tamanio: 64
+[INFO] 16:24:44:610 Kernel/(6421:6423): PID: 1 - Crear segmento - ID:5 - Tamanio: :64  
+[WARNING] 16:24:44:611 Kernel/(6421:6423): Id_seg: 5 - Tam seg: 64 
+[WARNING] 16:24:44:697 Kernel/(6421:6423): Recibiendo Segmento: Id: 5 - Dir Base: 512 - Tamanio: 64
+[INFO] 16:24:44:702 Kernel/(6421:6423): PID: 1 - Crear segmento - ID:6 - Tamanio: :64  
+[WARNING] 16:24:44:705 Kernel/(6421:6423): Id_seg: 6 - Tam seg: 64 
+[WARNING] 16:24:44:805 Kernel/(6421:6423): Recibiendo Segmento: Id: 6 - Dir Base: 576 - Tamanio: 64
+[INFO] 16:24:44:808 Kernel/(6421:6423): PID: 1 - Crear segmento - ID:7 - Tamanio: :64  
+[WARNING] 16:24:44:810 Kernel/(6421:6423): Id_seg: 7 - Tam seg: 64 
+[WARNING] 16:24:44:897 Kernel/(6421:6423): Recibiendo Segmento: Id: 7 - Dir Base: 640 - Tamanio: 64
+[INFO] 16:24:44:899 Kernel/(6421:6423): PID: 1 - Crear segmento - ID:8 - Tamanio: :64  
+[WARNING] 16:24:44:899 Kernel/(6421:6423): Id_seg: 8 - Tam seg: 64 
+[WARNING] 16:24:44:990 Kernel/(6421:6423): Recibiendo Segmento: Id: 8 - Dir Base: 704 - Tamanio: 64
+[INFO] 16:24:47:000 Kernel/(6421:6423): PID: 1 - Recibo pedido de SIGNAL por RECURSO: RA
+[INFO] 16:24:47:002 Kernel/(6421:6423): Para RECURSO RA hay -1 instancias disponibles antes de ejecutar
+[INFO] 16:24:47:007 Kernel/(6421:6423): PID: 1 - SIGNAL: RA - Instancias: 0 
+[INFO] 16:24:47:012 Kernel/(6421:6423): PID: 0 - Estado anterior: BLOCKED por recurso - Estado actual: READY)
+[INFO] 16:24:47:017 Kernel/(6421:6423): Ingreso a Ready algoritmo FIFO - PIDS: [2] 
+[INFO] 16:24:47:020 Kernel/(6421:6423): PID: 0 - Estado Anterior: BLOCKED - Estado Actual: READY - PROGRAM COINTER: 6
+[INFO] 16:24:47:030 Kernel/(6421:6423): PID: 1 - Recibo pedido de WAIT por RECURSO: RB
+[INFO] 16:24:47:031 Kernel/(6421:6423): Para RECURSO RB hay 0 instancias disponibles antes de ejecutar
+[INFO] 16:24:47:034 Kernel/(6421:6423): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: RB - Instancias: -1 - PC: 14
+[INFO] 16:24:47:036 Kernel/(6421:6422): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:24:47:038 Kernel/(6421:6423): PID: 2 - Recibo pedido de WAIT por RECURSO: RC
+[INFO] 16:24:47:039 Kernel/(6421:6423): Para RECURSO RC hay 0 instancias disponibles antes de ejecutar
+[INFO] 16:24:47:040 Kernel/(6421:6423): PID: 2 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: RC - Instancias: -1 - PC: 1
+[INFO] 16:24:47:041 Kernel/(6421:6422): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:24:47:043 Kernel/(6421:6423): PID: 0 - Eliminar segmento - Id: 1 
+[WARNING] 16:24:47:045 Kernel/(6421:6423): Id_seg a eliminar: 1  
+[INFO] 16:24:47:090 Kernel/(6421:6423): PID: 0 - Eliminar Segmento - Id Segmento: 8
+[INFO] 16:24:48:096 Kernel/(6421:6423): PID: 0 - Recibo pedido de SIGNAL por RECURSO: RB
+[INFO] 16:24:48:100 Kernel/(6421:6423): Para RECURSO RB hay -1 instancias disponibles antes de ejecutar
+[INFO] 16:24:48:103 Kernel/(6421:6423): PID: 0 - SIGNAL: RB - Instancias: 0 
+[INFO] 16:24:48:110 Kernel/(6421:6423): PID: 1 - Estado anterior: BLOCKED por recurso - Estado actual: READY)
+[INFO] 16:24:48:114 Kernel/(6421:6423): Ingreso a Ready algoritmo FIFO - PIDS: [] 
+[INFO] 16:24:48:116 Kernel/(6421:6423): PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY - PROGRAM COINTER: 14
+[INFO] 16:24:48:125 Kernel/(6421:6423): PID: 0 - Recibo pedido de WAIT por RECURSO: RA
+[INFO] 16:24:48:133 Kernel/(6421:6423): Para RECURSO RA hay 0 instancias disponibles antes de ejecutar
+[INFO] 16:24:48:135 Kernel/(6421:6423): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: RA - Instancias: -1 - PC: 10
+[INFO] 16:24:48:138 Kernel/(6421:6422): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:24:48:142 Kernel/(6421:6423): PID: 1 - Crear segmento - ID:9 - Tamanio: :64  
+[WARNING] 16:24:48:149 Kernel/(6421:6423): Id_seg: 9 - Tam seg: 64 
+[WARNING] 16:24:48:198 Kernel/(6421:6423): Recibiendo Segmento: Id: 9 - Dir Base: 768 - Tamanio: 64
+[INFO] 16:24:52:209 Kernel/(6421:6423): PID: 1 - Recibo pedido de SIGNAL por RECURSO: RC
+[INFO] 16:24:52:211 Kernel/(6421:6423): Para RECURSO RC hay -1 instancias disponibles antes de ejecutar
+[INFO] 16:24:52:213 Kernel/(6421:6423): PID: 1 - SIGNAL: RC - Instancias: 0 
+[INFO] 16:24:52:215 Kernel/(6421:6423): PID: 2 - Estado anterior: BLOCKED por recurso - Estado actual: READY)
+[INFO] 16:24:52:221 Kernel/(6421:6423): Ingreso a Ready algoritmo FIFO - PIDS: [] 
+[INFO] 16:24:52:224 Kernel/(6421:6423): PID: 2 - Estado Anterior: BLOCKED - Estado Actual: READY - PROGRAM COINTER: 1
+[INFO] 16:24:52:229 Kernel/(6421:6423): PID: 1 - Recibo pedido de WAIT por RECURSO: RB
+[INFO] 16:24:52:231 Kernel/(6421:6423): Para RECURSO RB hay 0 instancias disponibles antes de ejecutar
+[INFO] 16:24:52:241 Kernel/(6421:6423): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: RB - Instancias: -1 - PC: 21
+[INFO] 16:24:52:243 Kernel/(6421:6422): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:24:52:245 Kernel/(6421:6423): PID: 2 - Crear segmento - ID:1 - Tamanio: :256  
+[WARNING] 16:24:52:246 Kernel/(6421:6423): Id_seg: 1 - Tam seg: 256 
+[WARNING] 16:24:52:290 Kernel/(6421:6423): SOLICITAR COMPACTACION
+[WARNING] 16:24:52:291 Kernel/(6421:6423): ESPERO FIN DE COMPACTACION
+[WARNING] 16:25:52:335 Kernel/(6421:6423): Actualizar segmento 1 del proceso 1 con la base: 128
+[WARNING] 16:25:52:342 Kernel/(6421:6423): Actualizar segmento 2 del proceso 1 con la base: 192
+[WARNING] 16:25:52:343 Kernel/(6421:6423): Actualizar segmento 3 del proceso 1 con la base: 256
+[WARNING] 16:25:52:348 Kernel/(6421:6423): Actualizar segmento 4 del proceso 1 con la base: 320
+[WARNING] 16:25:52:349 Kernel/(6421:6423): Actualizar segmento 5 del proceso 1 con la base: 384
+[WARNING] 16:25:52:353 Kernel/(6421:6423): Actualizar segmento 6 del proceso 1 con la base: 448
+[WARNING] 16:25:52:362 Kernel/(6421:6423): Actualizar segmento 7 del proceso 1 con la base: 512
+[WARNING] 16:25:52:363 Kernel/(6421:6423): Actualizar segmento 8 del proceso 1 con la base: 576
+[WARNING] 16:25:52:364 Kernel/(6421:6423): Actualizar segmento 9 del proceso 1 con la base: 640
+[WARNING] 16:25:52:366 Kernel/(6421:6423): termino compactacion
+[INFO] 16:25:52:375 Kernel/(6421:6423): PID: 2 - Crear segmento - ID:1 - Tamanio: :256  
+[WARNING] 16:25:52:376 Kernel/(6421:6423): Id_seg: 1 - Tam seg: 256 
+[WARNING] 16:25:52:377 Kernel/(6421:6423): Recibiendo Segmento: Id: 1 - Dir Base: 704 - Tamanio: 256
+[INFO] 16:25:53:382 Kernel/(6421:6423): PID: 2 - Recibo pedido de SIGNAL por RECURSO: RB
+[INFO] 16:25:53:384 Kernel/(6421:6423): Para RECURSO RB hay -1 instancias disponibles antes de ejecutar
+[INFO] 16:25:53:386 Kernel/(6421:6423): PID: 2 - SIGNAL: RB - Instancias: 0 
+[INFO] 16:25:53:388 Kernel/(6421:6423): PID: 1 - Estado anterior: BLOCKED por recurso - Estado actual: READY)
+[INFO] 16:25:53:393 Kernel/(6421:6423): Ingreso a Ready algoritmo FIFO - PIDS: [] 
+[INFO] 16:25:53:398 Kernel/(6421:6423): PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY - PROGRAM COINTER: 21
+[INFO] 16:25:53:400 Kernel/(6421:6423): PID: 2 - Recibo pedido de WAIT por RECURSO: RC
+[INFO] 16:25:53:402 Kernel/(6421:6423): Para RECURSO RC hay 0 instancias disponibles antes de ejecutar
+[INFO] 16:25:53:404 Kernel/(6421:6423): PID: 2 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: RC - Instancias: -1 - PC: 5
+[INFO] 16:25:53:410 Kernel/(6421:6422): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:25:54:416 Kernel/(6421:6423): PID: 1 - Eliminar segmento - Id: 1 
+[WARNING] 16:25:54:419 Kernel/(6421:6423): Id_seg a eliminar: 1  
+[INFO] 16:25:54:462 Kernel/(6421:6423): PID: 1 - Eliminar Segmento - Id Segmento: 1
+[INFO] 16:25:55:468 Kernel/(6421:6423): PID: 1 - Eliminar segmento - Id: 2 
+[WARNING] 16:25:55:479 Kernel/(6421:6423): Id_seg a eliminar: 2  
+[INFO] 16:25:55:530 Kernel/(6421:6423): PID: 1 - Eliminar Segmento - Id Segmento: 1
+[INFO] 16:25:55:543 Kernel/(6421:6423): PID: 1 - Eliminar segmento - Id: 4 
+[WARNING] 16:25:55:549 Kernel/(6421:6423): Id_seg a eliminar: 4  
+[INFO] 16:25:55:593 Kernel/(6421:6423): PID: 1 - Eliminar Segmento - Id Segmento: 1
+[INFO] 16:25:55:596 Kernel/(6421:6423): PID: 1 - Eliminar segmento - Id: 5 
+[WARNING] 16:25:55:600 Kernel/(6421:6423): Id_seg a eliminar: 5  
+[INFO] 16:25:55:645 Kernel/(6421:6423): PID: 1 - Eliminar Segmento - Id Segmento: 1
+[INFO] 16:25:55:648 Kernel/(6421:6423): PID: 1 - Recibo pedido de SIGNAL por RECURSO: RC
+[INFO] 16:25:55:650 Kernel/(6421:6423): Para RECURSO RC hay -1 instancias disponibles antes de ejecutar
+[INFO] 16:25:55:651 Kernel/(6421:6423): PID: 1 - SIGNAL: RC - Instancias: 0 
+[INFO] 16:25:55:652 Kernel/(6421:6423): PID: 2 - Estado anterior: BLOCKED por recurso - Estado actual: READY)
+[INFO] 16:25:55:653 Kernel/(6421:6423): Ingreso a Ready algoritmo FIFO - PIDS: [] 
+[INFO] 16:25:55:654 Kernel/(6421:6423): PID: 2 - Estado Anterior: BLOCKED - Estado Actual: READY - PROGRAM COINTER: 5
+[INFO] 16:25:55:656 Kernel/(6421:6423): PID: 1 - Recibo pedido de WAIT por RECURSO: RB
+[INFO] 16:25:55:657 Kernel/(6421:6423): Para RECURSO RB hay 0 instancias disponibles antes de ejecutar
+[INFO] 16:25:55:659 Kernel/(6421:6423): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: RB - Instancias: -1 - PC: 29
+[INFO] 16:25:55:660 Kernel/(6421:6422): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 16:25:55:662 Kernel/(6421:6423): PID: 2 - Crear segmento - ID:2 - Tamanio: :128  
+[WARNING] 16:25:55:662 Kernel/(6421:6423): Id_seg: 2 - Tam seg: 128 
+[WARNING] 16:25:55:749 Kernel/(6421:6423): Recibiendo Segmento: Id: 2 - Dir Base: 128 - Tamanio: 128
+[INFO] 16:25:55:753 Kernel/(6421:6423): PID: 2 - Recibo pedido de SIGNAL por RECURSO: RA
+[INFO] 16:25:55:755 Kernel/(6421:6423): Para RECURSO RA hay -1 instancias disponibles antes de ejecutar
+[INFO] 16:25:55:756 Kernel/(6421:6423): PID: 2 - SIGNAL: RA - Instancias: 0 
+[INFO] 16:25:55:758 Kernel/(6421:6423): PID: 0 - Estado anterior: BLOCKED por recurso - Estado actual: READY)
+[INFO] 16:25:55:759 Kernel/(6421:6423): Ingreso a Ready algoritmo FIFO - PIDS: [] 
+[INFO] 16:25:55:760 Kernel/(6421:6423): PID: 0 - Estado Anterior: BLOCKED - Estado Actual: READY - PROGRAM COINTER: 10
+[INFO] 16:25:55:763 Kernel/(6421:6423): PID: 2 - Recibo pedido de SIGNAL por RECURSO: RB
+[INFO] 16:25:55:765 Kernel/(6421:6423): Para RECURSO RB hay -1 instancias disponibles antes de ejecutar
+[INFO] 16:25:55:766 Kernel/(6421:6423): PID: 2 - SIGNAL: RB - Instancias: 0 
+[INFO] 16:25:55:768 Kernel/(6421:6423): PID: 1 - Estado anterior: BLOCKED por recurso - Estado actual: READY)
+[INFO] 16:25:55:770 Kernel/(6421:6423): Ingreso a Ready algoritmo FIFO - PIDS: [0] 
+[INFO] 16:25:55:771 Kernel/(6421:6423): PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY - PROGRAM COINTER: 29
+[WARNING] 16:25:55:782 Kernel/(6421:6423): PID: 2 - SIGNAL por exit sin signal: RC - Instancias: 1 
+[WARNING] 16:25:55:784 Kernel/(6421:6423): PID: 2 - SIGNAL por exit sin signal: RC - Instancias: 2 
+[INFO] 16:25:55:791 Kernel/(6421:6423): PID: 2 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 16:25:55:793 Kernel/(6421:6423): Finaliza el proceso 2 - Motivo: POR FIN
+[ERROR] 16:25:55:797 Kernel/(6421:6423): Eliminar segmento de pid: 2
+[INFO] 16:25:55:800 Kernel/(6421:6422): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[WARNING] 16:25:55:802 Kernel/(6421:6423): PID: 0 - SIGNAL por exit sin signal: RA - Instancias: 1 
+[WARNING] 16:25:55:803 Kernel/(6421:6423): PID: 0 - SIGNAL por exit sin signal: RA - Instancias: 2 
+[WARNING] 16:25:55:804 Kernel/(6421:6423): PID: 0 - SIGNAL por exit sin signal: RA - Instancias: 3 
+[INFO] 16:25:55:809 Kernel/(6421:6423): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 16:25:55:813 Kernel/(6421:6423): Finaliza el proceso 0 - Motivo: POR FIN
+[ERROR] 16:25:55:814 Kernel/(6421:6423): Eliminar segmento de pid: 0
+[INFO] 16:25:55:815 Kernel/(6421:6422): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[WARNING] 16:25:55:826 Kernel/(6421:6423): PID: 1 - SIGNAL por exit sin signal: RB - Instancias: 1 
+[WARNING] 16:25:55:827 Kernel/(6421:6423): PID: 1 - SIGNAL por exit sin signal: RB - Instancias: 2 
+[WARNING] 16:25:55:827 Kernel/(6421:6423): PID: 1 - SIGNAL por exit sin signal: RB - Instancias: 3 
+[WARNING] 16:25:55:828 Kernel/(6421:6423): PID: 1 - SIGNAL por exit sin signal: RB - Instancias: 4 
+[INFO] 16:25:55:829 Kernel/(6421:6423): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 16:25:55:833 Kernel/(6421:6423): Finaliza el proceso 1 - Motivo: POR FIN
+[ERROR] 16:25:55:834 Kernel/(6421:6423): Eliminar segmento de pid: 1
