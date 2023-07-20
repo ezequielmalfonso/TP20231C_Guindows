@@ -356,14 +356,15 @@ static void procesar_conexion(void* void_args) {
 			 uint32_t puntero_primer_bloque;
 			 uint32_t direccion_indirecto = /*FCB_archivo->puntero_indirecto +*/ tamanio_puntero * (nro_bloque_archivo-1);
 
-			 // Lo carga siempre, se podria ver de que solo lo cargue si lo necesita
-			 cargarBloqueIndirecto(descriptor_archivo_bloque, FCB_archivo->puntero_indirecto);
 
+			 int cargado_indirecto = 0;
 			 if(nro_bloque_archivo == 0) {
 				 puntero_primer_bloque = FCB_archivo->puntero_directo;
 				 log_info(logger, "Se debe empezar por el puntero directo");
 			 }
 			 else {
+				 cargarBloqueIndirecto(descriptor_archivo_bloque, FCB_archivo->puntero_indirecto);
+				 cargado_indirecto = 1;
 				 log_info(logger, "Se debe empezar por el puntero indirecto");
 				 puntero_primer_bloque = leerBloqueIndirecto(descriptor_archivo_bloque, direccion_indirecto);
 				 indice_nro_bloque++;
@@ -397,6 +398,9 @@ static void procesar_conexion(void* void_args) {
 			 int j;
 			 int tamanioALeer;
 			 int pointer_a_leer;
+			 if(1 <= tamanioTotalALeer && !cargado_indirecto) {
+				 cargarBloqueIndirecto(descriptor_archivo_bloque, FCB_archivo->puntero_indirecto);
+			 }
 			 // Si entra ya leyo un bloque (solo debe recorrer los indirectos restantes)
 			 for(j = 1; j <= tamanioTotalALeer; j += configuracionSuperBloque->BLOCK_SIZE) {
 				 tamanioALeer = max(tamanioTotalALeer, configuracionSuperBloque->BLOCK_SIZE);
