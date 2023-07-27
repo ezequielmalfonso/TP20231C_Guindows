@@ -1,0 +1,85 @@
+[INFO] 18:39:15:121 Kernel/(22052:22052): Probando hora 0
+[INFO] 18:39:15:122 Kernel/(22052:22052): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: FIFO
+ESTIMACION_INICIAL: 10000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 4
+
+[INFO] 18:39:15:123 Kernel/(22052:22052): RECURSO: DISCO con 1 instancias
+[INFO] 18:39:15:123 Kernel/(22052:22052): Cantidad total de recursos disponibles: 1 
+[INFO] 18:39:15:123 Kernel/(22052:22052): ALGORITMO_PLANIFICACION FIFOOO!!!!
+[INFO] 18:39:15:124 Kernel/(22052:22052): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 18:39:15:124 Kernel/(22052:22052): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:39:15:125 Kernel/(22052:22052): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 18:39:15:125 Kernel/(22052:22052): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 18:40:29:325 Kernel/(22052:22052): Cliente conectado (a KERNEL_SV)
+
+[INFO] 18:40:29:325 Kernel/(22052:22066): Envio solicitud a MEMORIA
+[INFO] 18:40:29:326 Kernel/(22052:22066): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 18:40:29:326 Kernel/(22052:22066): Se crea el proceso 0 en NEW
+[INFO] 18:40:29:326 Kernel/(22052:22066): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:40:29:326 Kernel/(22052:22066): Ingreso a Ready algoritmo FIFO - PIDS: [0] 
+[INFO] 18:40:29:327 Kernel/(22052:22053): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 18:40:29:811 Kernel/(22052:22052): Cliente conectado (a KERNEL_SV)
+
+[INFO] 18:40:29:812 Kernel/(22052:22068): Envio solicitud a MEMORIA
+[INFO] 18:40:29:854 Kernel/(22052:22068): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 18:40:29:854 Kernel/(22052:22068): Se crea el proceso 1 en NEW
+[INFO] 18:40:29:854 Kernel/(22052:22068): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:40:29:854 Kernel/(22052:22068): Ingreso a Ready algoritmo FIFO - PIDS: [1] 
+[INFO] 18:40:30:328 Kernel/(22052:22054): PID: 0 - Recibo pedido de WAIT por RECURSO: LA_TERCERA_DE_FRANCIA
+[ERROR] 18:40:30:328 Kernel/(22052:22054): PID: 0 - Recibo pedido de WAIT por recurso desconocido: LA_TERCERA_DE_FRANCIA
+[INFO] 18:40:30:328 Kernel/(22052:22054): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 18:40:30:330 Kernel/(22052:22054): Finaliza el proceso 0 - Motivo: WAIT por Recurso Inexistente
+[ERROR] 18:40:30:330 Kernel/(22052:22054): Eliminar segmento de pid: 0
+[INFO] 18:40:30:330 Kernel/(22052:22053): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 18:40:30:375 Kernel/(22052:22052): Cliente conectado (a KERNEL_SV)
+
+[INFO] 18:40:30:377 Kernel/(22052:22070): Envio solicitud a MEMORIA
+[INFO] 18:40:30:377 Kernel/(22052:22070): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 18:40:30:378 Kernel/(22052:22070): Se crea el proceso 2 en NEW
+[INFO] 18:40:30:378 Kernel/(22052:22070): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:40:30:378 Kernel/(22052:22070): Ingreso a Ready algoritmo FIFO - PIDS: [2] 
+[INFO] 18:40:30:874 Kernel/(22052:22052): Cliente conectado (a KERNEL_SV)
+
+[INFO] 18:40:30:874 Kernel/(22052:22072): Envio solicitud a MEMORIA
+[INFO] 18:40:30:918 Kernel/(22052:22072): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 18:40:30:918 Kernel/(22052:22072): Se crea el proceso 3 en NEW
+[INFO] 18:40:30:918 Kernel/(22052:22072): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:40:30:918 Kernel/(22052:22072): Ingreso a Ready algoritmo FIFO - PIDS: [2 3] 
+[INFO] 18:40:31:331 Kernel/(22052:22054): PID: 1 - Recibo pedido de SIGNAL por RECURSO: EL_CUARTO_DE_FRANCIA
+[ERROR] 18:40:31:331 Kernel/(22052:22054): PID: 1 - Recibo pedido de SIGNAL por recurso desconocido: EL_CUARTO_DE_FRANCIA
+[INFO] 18:40:31:331 Kernel/(22052:22054): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 18:40:31:331 Kernel/(22052:22054): Finaliza el proceso 1 - Motivo: SIGNAL por Recurso Inexistente
+[ERROR] 18:40:31:331 Kernel/(22052:22054): Eliminar segmento de pid: 1
+[INFO] 18:40:31:331 Kernel/(22052:22053): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 18:40:35:343 Kernel/(22052:22054): PID: 2 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 18:40:35:345 Kernel/(22052:22054): Finaliza el proceso 2 - Motivo: SEGMENTATION_FAULT
+[ERROR] 18:40:35:346 Kernel/(22052:22054): Eliminar segmento de pid: 2
+[INFO] 18:40:35:347 Kernel/(22052:22053): PID: 3 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 18:40:35:348 Kernel/(22052:22054): PID: 3 - Crear segmento - ID:1 - Tamanio: :256  
+[WARNING] 18:40:35:348 Kernel/(22052:22054): Id_seg: 1 - Tam seg: 256 
+[WARNING] 18:40:35:349 Kernel/(22052:22054): Recibiendo Segmento: Id: 1 - Dir Base: 128 - Tamanio: 256
+[INFO] 18:40:35:350 Kernel/(22052:22054): PID: 3 - Crear segmento - ID:2 - Tamanio: :256  
+[WARNING] 18:40:35:351 Kernel/(22052:22054): Id_seg: 2 - Tam seg: 256 
+[WARNING] 18:40:35:438 Kernel/(22052:22054): Recibiendo Segmento: Id: 2 - Dir Base: 384 - Tamanio: 256
+[INFO] 18:40:35:438 Kernel/(22052:22054): PID: 3 - Crear segmento - ID:3 - Tamanio: :256  
+[WARNING] 18:40:35:438 Kernel/(22052:22054): Id_seg: 3 - Tam seg: 256 
+[WARNING] 18:40:35:526 Kernel/(22052:22054): Recibiendo Segmento: Id: 3 - Dir Base: 640 - Tamanio: 256
+[INFO] 18:40:35:526 Kernel/(22052:22054): PID: 3 - Crear segmento - ID:4 - Tamanio: :256  
+[WARNING] 18:40:35:526 Kernel/(22052:22054): Id_seg: 4 - Tam seg: 256 
+[ERROR] 18:40:35:570 Kernel/(22052:22054): NO HAY SUFICIENTE
+[INFO] 18:40:35:570 Kernel/(22052:22054): PID: 3 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 18:40:35:570 Kernel/(22052:22054): Finaliza el proceso 3 - Motivo: Out of Memory
+[ERROR] 18:40:35:570 Kernel/(22052:22054): Eliminar segmento de pid: 3

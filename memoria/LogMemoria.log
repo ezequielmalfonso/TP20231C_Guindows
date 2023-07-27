@@ -1,0 +1,50 @@
+[INFO] 18:39:07:187 Memoria/(22043:22043): PUERTO_ESCUCHA: 8002
+TAM_MEMORIA: 1024
+TAM_SEGMENTO_0: 128
+CANT_SEGMENTOS: 16
+RETARDO_MEMORIA: 1000
+RETARDO_COMPACTACION: 60000
+ALGORITMO_ASIGNACION: BEST
+
+[INFO] 18:39:07:187 Memoria/(22043:22043): Algoritmo BEST configurado
+[INFO] 18:39:07:188 Memoria/(22043:22043): Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 18:39:07:188 Memoria/(22043:22043): Escuchando en 127.0.0.1:8002 (memoria_sv)
+
+[INFO] 18:39:09:690 Memoria/(22043:22044): Cliente conectado (a memoria_sv)
+
+[INFO] 18:39:09:691 Memoria/(22043:22044): RESPUESTA AL CONECTAR CPU
+[INFO] 18:39:11:973 Memoria/(22043:22045): Cliente conectado (a memoria_sv)
+
+[INFO] 18:39:11:973 Memoria/(22043:22045): RESPUESTA AL CONECTAR FILESYSTEM
+[INFO] 18:39:15:124 Memoria/(22043:22046): Cliente conectado (a memoria_sv)
+
+[INFO] 18:39:15:125 Memoria/(22043:22046): RESPUESTA AL CONECTAR KERNEL
+[INFO] 18:40:29:326 Memoria/(22043:22046): [KERNEL] Recibiendo solicitud de segmento para programa 0
+[INFO] 18:40:29:326 Memoria/(22043:22046): [KERNEL] Se crea el proceso PID: 0 en NEW
+[INFO] 18:40:29:326 Memoria/(22043:22046): [KERNEL] Envio de segmento 0 para programa 0
+[INFO] 18:40:29:853 Memoria/(22043:22046): [KERNEL] Recibiendo solicitud de segmento para programa 1
+[INFO] 18:40:29:854 Memoria/(22043:22046): [KERNEL] Se crea el proceso PID: 1 en NEW
+[INFO] 18:40:29:854 Memoria/(22043:22046): [KERNEL] Envio de segmento 0 para programa 1
+[INFO] 18:40:30:374 Memoria/(22043:22046): ELIMINACION DE PROCESO PID: 0
+[INFO] 18:40:30:377 Memoria/(22043:22046): [KERNEL] Recibiendo solicitud de segmento para programa 2
+[INFO] 18:40:30:377 Memoria/(22043:22046): [KERNEL] Se crea el proceso PID: 2 en NEW
+[INFO] 18:40:30:377 Memoria/(22043:22046): [KERNEL] Envio de segmento 0 para programa 2
+[INFO] 18:40:30:917 Memoria/(22043:22046): [KERNEL] Recibiendo solicitud de segmento para programa 3
+[INFO] 18:40:30:918 Memoria/(22043:22046): [KERNEL] Se crea el proceso PID: 3 en NEW
+[INFO] 18:40:30:918 Memoria/(22043:22046): [KERNEL] Envio de segmento 0 para programa 3
+[INFO] 18:40:31:373 Memoria/(22043:22046): ELIMINACION DE PROCESO PID: 1
+[INFO] 18:40:33:337 Memoria/(22043:22044): [CPU] Recibido pedido de MOV_OUT
+[INFO] 18:40:33:337 Memoria/(22043:22044): PID: 2 - N° Segmento: 0, Desplazamiento: 124, Tamanio: 5, Escribir: HOLA
+[INFO] 18:40:34:338 Memoria/(22043:22044): PID: 2 - Acción: ESCRIBIR - Dirección física: 124 - Tamaño: 4 - Origen: CPU
+[INFO] 18:40:34:339 Memoria/(22043:22044): [CPU] Recibido pedido de MOV_IN
+[INFO] 18:40:34:340 Memoria/(22043:22044): PID: 2 - N° Segmento: 0, Desplazamiento: 124, Tamanio: 4
+[INFO] 18:40:35:340 Memoria/(22043:22044): PID: 2 - Acción: LEER - Dirección física: 124 - Tamaño: 4 - Origen: CPU
+[INFO] 18:40:35:347 Memoria/(22043:22046): ELIMINACION DE PROCESO PID: 2
+[INFO] 18:40:35:348 Memoria/(22043:22046): [KERNEL] Solcitud de creacion de segmento
+[INFO] 18:40:35:349 Memoria/(22043:22046): [KERNEL] PID: 3 - Crear Segmento id: 1 - BASE: 128 - TAMAÑO: 256
+[INFO] 18:40:35:351 Memoria/(22043:22046): [KERNEL] Solcitud de creacion de segmento
+[INFO] 18:40:35:393 Memoria/(22043:22046): [KERNEL] PID: 3 - Crear Segmento id: 2 - BASE: 384 - TAMAÑO: 256
+[INFO] 18:40:35:438 Memoria/(22043:22046): [KERNEL] Solcitud de creacion de segmento
+[INFO] 18:40:35:482 Memoria/(22043:22046): [KERNEL] PID: 3 - Crear Segmento id: 3 - BASE: 640 - TAMAÑO: 256
+[INFO] 18:40:35:526 Memoria/(22043:22046): [KERNEL] Solcitud de creacion de segmento
+[ERROR] 18:40:35:570 Memoria/(22043:22046): NO HAY ESPACIO DISPONIBLE

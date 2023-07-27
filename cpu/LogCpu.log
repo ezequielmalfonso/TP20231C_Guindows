@@ -1,0 +1,56 @@
+[INFO] 18:39:09:689 Cpu/(22048:22048): 
+RETARDO_INSTRUCCION 1000
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+PUERTO_ESCUCHA: 8001
+TAM_MAX_SEGMENTO: 256
+
+[INFO] 18:39:09:691 Cpu/(22048:22048): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 18:39:09:691 Cpu/(22048:22048): Escuchando en 127.0.0.1:8001 (cpu server)
+
+[INFO] 18:39:15:124 Cpu/(22048:22048): Cliente conectado (a CPU_SV)
+
+[INFO] 18:40:29:327 Cpu/(22048:22055): Recibi PCB id: 0
+[INFO] 18:40:29:327 Cpu/(22048:22055): En CPU
+[INFO] 18:40:30:328 Cpu/(22048:22055): PID: 0 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 18:40:30:328 Cpu/(22048:22055): PID: 0 - Ejecutando WAIT a Kernel por recurso: LA_TERCERA_DE_FRANCIA
+ 
+[INFO] 18:40:30:330 Cpu/(22048:22055): Recibi PCB id: 1
+[INFO] 18:40:30:331 Cpu/(22048:22055): En CPU
+[INFO] 18:40:31:331 Cpu/(22048:22055): PID: 1 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 18:40:31:331 Cpu/(22048:22055): PID: 1 - Ejecutando SIGNAL a kernel por recurso: EL_CUARTO_DE_FRANCIA
+ 
+[INFO] 18:40:31:332 Cpu/(22048:22055): Recibi PCB id: 2
+[INFO] 18:40:31:332 Cpu/(22048:22055): En CPU
+[INFO] 18:40:32:333 Cpu/(22048:22055): PID: 2 - Ejecutando SET parametro 1: AX parametro 2: HOLA
+
+[INFO] 18:40:32:333 Cpu/(22048:22055): En CPU
+[INFO] 18:40:33:334 Cpu/(22048:22055): PID: 2 - Ejecutando SET parametro 1: RAX parametro 2: MappaLlegaEl2c23
+
+[INFO] 18:40:33:335 Cpu/(22048:22055): PID: 2 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:40:33:336 Cpu/(22048:22055): PID: 2 - Se ha ejecutado MOV_OUT parametro 1: 124 parametro 2: AX
+
+[INFO] 18:40:33:336 Cpu/(22048:22055): Realizado lectura del registro AX con valor HOLA
+[INFO] 18:40:33:337 Cpu/(22048:22055): PID: 2 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 124 - Valor: HOLA
+[INFO] 18:40:34:339 Cpu/(22048:22055): PID: 2 - Se ha ejecutado MOV_OUT parametro 1: 124 parametro 2: AX
+[INFO] 18:40:34:339 Cpu/(22048:22055): PID: 2 -  Listo para ejecutar MOV_IN 
+[INFO] 18:40:35:341 Cpu/(22048:22055): PID: 2 - Acción: LEER - Segmento: 0 - Dirección Física: 124 - Valor: HOLA
+[INFO] 18:40:35:341 Cpu/(22048:22055): PID: 2 - Se ha ejecutado MOV_IN parametro 1: BX parametro 2: 124
+
+[INFO] 18:40:35:342 Cpu/(22048:22055): PID: 2 -  Listo para ejecutar MOV_OUT 
+[INFO] 18:40:35:342 Cpu/(22048:22055): PID: 2 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: RAX
+
+[INFO] 18:40:35:342 Cpu/(22048:22055): Realizado lectura del registro RAX con valor MappaLlegaEl2c23
+[ERROR] 18:40:35:343 Cpu/(22048:22055): PID: 2 - SEGMENTATION FAULT
+[INFO] 18:40:35:343 Cpu/(22048:22055): PID: 2 - Se ha ejecutado MOV_OUT parametro 1: 120 parametro 2: RAX
+[INFO] 18:40:35:347 Cpu/(22048:22055): Recibi PCB id: 3
+[INFO] 18:40:35:348 Cpu/(22048:22055): PID: 3 - Ejecutando CREATE_SEGMENT
+[INFO] 18:40:35:349 Cpu/(22048:22055): Recibi PCB id: 3
+[INFO] 18:40:35:350 Cpu/(22048:22055): PID: 3 - Ejecutando CREATE_SEGMENT
+[INFO] 18:40:35:438 Cpu/(22048:22055): Recibi PCB id: 3
+[INFO] 18:40:35:438 Cpu/(22048:22055): PID: 3 - Ejecutando CREATE_SEGMENT
+[INFO] 18:40:35:526 Cpu/(22048:22055): Recibi PCB id: 3
+[INFO] 18:40:35:526 Cpu/(22048:22055): PID: 3 - Ejecutando CREATE_SEGMENT
