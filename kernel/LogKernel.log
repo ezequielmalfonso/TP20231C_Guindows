@@ -518,3 +518,371 @@ GRADO_MAX_MULTIPROGRAMACION: 12
 [INFO] 16:25:55:829 Kernel/(6421:6423): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: EXIT
 [INFO] 16:25:55:833 Kernel/(6421:6423): Finaliza el proceso 1 - Motivo: POR FIN
 [ERROR] 16:25:55:834 Kernel/(6421:6423): Eliminar segmento de pid: 1
+[INFO] 00:50:06:166 Kernel/(7209:7209): Probando hora 0
+[INFO] 00:50:06:167 Kernel/(7209:7209): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: FIFO
+ESTIMACION_INICIAL: 10000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 12
+
+[INFO] 00:50:06:167 Kernel/(7209:7209): RECURSO: RA con 1 instancias
+[INFO] 00:50:06:167 Kernel/(7209:7209): RECURSO: RB con 0 instancias
+[INFO] 00:50:06:167 Kernel/(7209:7209): RECURSO: RC con 0 instancias
+[INFO] 00:50:06:167 Kernel/(7209:7209): Cantidad total de recursos disponibles: 3 
+[INFO] 00:50:06:167 Kernel/(7209:7209): ALGORITMO_PLANIFICACION FIFOOO!!!!
+[INFO] 00:50:06:167 Kernel/(7209:7209): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 00:50:06:167 Kernel/(7209:7209): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 00:50:06:168 Kernel/(7209:7209): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 00:50:06:168 Kernel/(7209:7209): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 00:50:26:845 Kernel/(7209:7209): Cliente conectado (a KERNEL_SV)
+
+[INFO] 00:50:26:846 Kernel/(7209:7219): Envio solicitud a MEMORIA
+[INFO] 00:50:26:846 Kernel/(7209:7219): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 00:50:26:846 Kernel/(7209:7219): Se crea el proceso 0 en NEW
+[INFO] 00:50:26:846 Kernel/(7209:7219): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:50:26:846 Kernel/(7209:7219): Ingreso a Ready algoritmo FIFO - PIDS: [0] 
+[INFO] 00:50:26:847 Kernel/(7209:7210): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 00:50:26:847 Kernel/(7209:7211): PID: 0 - Recibo pedido de WAIT por RECURSO: RA
+[INFO] 00:50:26:847 Kernel/(7209:7211): Para RECURSO RA hay 1 instancias disponibles antes de ejecutar
+[INFO] 00:50:26:847 Kernel/(7209:7211): PID: 0 - Wait: RA - Instancias: 0 
+[INFO] 00:50:31:718 Kernel/(7209:7209): Cliente conectado (a KERNEL_SV)
+
+[INFO] 00:50:31:720 Kernel/(7209:7225): Envio solicitud a MEMORIA
+[INFO] 00:50:31:763 Kernel/(7209:7225): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 00:50:31:764 Kernel/(7209:7225): Se crea el proceso 1 en NEW
+[INFO] 00:50:31:764 Kernel/(7209:7225): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:50:31:764 Kernel/(7209:7225): Ingreso a Ready algoritmo FIFO - PIDS: [1] 
+[INFO] 00:50:38:853 Kernel/(7209:7211): PID: 0 - Recibo pedido de F_OPEN por: Consoles
+
+[INFO] 00:50:38:853 Kernel/(7209:7211): PID: 0 - Abrir Archivo: Consoles
+
+[WARNING] 00:50:38:853 Kernel/(7209:7211): La tabla global de archivos esta vacia
+[WARNING] 00:50:38:853 Kernel/(7209:7211): Archivo Consoles
+ no esta abierto
+[WARNING] 00:50:38:853 Kernel/(7209:7211): Existencia=1
+[WARNING] 00:50:38:853 Kernel/(7209:7211): El archivo Consoles fue abierto y cargado a la tabla global de archivos abiertos
+[INFO] 00:50:38:853 Kernel/(7209:7211): PID: 0 - Se agrego Consoles a la tabla de archivos abiertos
+[INFO] 00:50:38:853 Kernel/(7209:7211): PID: 0 - Recibo pedido de F_TRUNCATE por: Consoles
+[INFO] 00:50:38:853 Kernel/(7209:7211): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 00:50:38:853 Kernel/(7209:7210): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 00:50:38:854 Kernel/(7209:7211): PID: 1 - Recibo pedido de WAIT por RECURSO: RB
+[INFO] 00:50:38:854 Kernel/(7209:7211): Para RECURSO RB hay 0 instancias disponibles antes de ejecutar
+[INFO] 00:50:38:854 Kernel/(7209:7211): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: RB - Instancias: -1 - PC: 1
+[INFO] 00:50:38:864 Kernel/(7209:7226): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 00:50:38:864 Kernel/(7209:7226): Ingreso a Ready algoritmo FIFO - PIDS: [0] 
+[INFO] 00:50:38:864 Kernel/(7209:7210): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 00:50:38:864 Kernel/(7209:7211): PID: 0 - Actualizar puntero Archivo:: Consoles - Puntero: 128
+
+[INFO] 00:50:38:864 Kernel/(7209:7211): PID: 0 - Recibo pedido de SIGNAL por RECURSO: RB
+[INFO] 00:50:38:864 Kernel/(7209:7211): Para RECURSO RB hay -1 instancias disponibles antes de ejecutar
+[INFO] 00:50:38:864 Kernel/(7209:7211): PID: 0 - SIGNAL: RB - Instancias: 0 
+[INFO] 00:50:38:865 Kernel/(7209:7211): PID: 1 - Estado anterior: BLOCKED por recurso - Estado actual: READY)
+[INFO] 00:50:38:865 Kernel/(7209:7211): Ingreso a Ready algoritmo FIFO - PIDS: [] 
+[INFO] 00:50:38:865 Kernel/(7209:7211): PID: 1 - Estado Anterior: BLOCKED - Estado Actual: READY - PROGRAM COINTER: 1
+[INFO] 00:50:38:865 Kernel/(7209:7211): PID: 0 - Recibo pedido de F_WRITE por: Consoles
+[INFO] 00:50:38:865 Kernel/(7209:7211): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 00:50:38:865 Kernel/(7209:7210): PID: 1 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 00:50:38:866 Kernel/(7209:7211): PID: 1 - Crear segmento - ID:1 - Tamanio: :64  
+[WARNING] 00:50:38:866 Kernel/(7209:7211): Id_seg: 1 - Tam seg: 64 
+[WARNING] 00:50:38:907 Kernel/(7209:7211): Recibiendo Segmento: Id: 1 - Dir Base: 128 - Tamanio: 64
+[INFO] 00:50:38:907 Kernel/(7209:7211): PID: 1 - Crear segmento - ID:2 - Tamanio: :64  
+[WARNING] 00:50:38:907 Kernel/(7209:7211): Id_seg: 2 - Tam seg: 64 
+[WARNING] 00:50:38:995 Kernel/(7209:7211): Recibiendo Segmento: Id: 2 - Dir Base: 192 - Tamanio: 64
+[INFO] 00:50:38:995 Kernel/(7209:7211): PID: 1 - Crear segmento - ID:3 - Tamanio: :64  
+[WARNING] 00:50:38:995 Kernel/(7209:7211): Id_seg: 3 - Tam seg: 64 
+[WARNING] 00:50:39:083 Kernel/(7209:7211): Recibiendo Segmento: Id: 3 - Dir Base: 256 - Tamanio: 64
+[INFO] 00:50:39:083 Kernel/(7209:7211): PID: 1 - Crear segmento - ID:4 - Tamanio: :64  
+[WARNING] 00:50:39:083 Kernel/(7209:7211): Id_seg: 4 - Tam seg: 64 
+[WARNING] 00:50:39:171 Kernel/(7209:7211): Recibiendo Segmento: Id: 4 - Dir Base: 320 - Tamanio: 64
+[INFO] 00:50:39:172 Kernel/(7209:7211): PID: 1 - Crear segmento - ID:5 - Tamanio: :128  
+[WARNING] 00:50:39:172 Kernel/(7209:7211): Id_seg: 5 - Tam seg: 128 
+[WARNING] 00:50:39:260 Kernel/(7209:7211): Recibiendo Segmento: Id: 5 - Dir Base: 384 - Tamanio: 128
+[INFO] 00:50:39:260 Kernel/(7209:7211): PID: 1 - Eliminar segmento - Id: 2 
+[WARNING] 00:50:39:260 Kernel/(7209:7211): Id_seg a eliminar: 2  
+[INFO] 00:50:39:303 Kernel/(7209:7211): PID: 1 - Eliminar Segmento - Id Segmento: 5
+[INFO] 00:50:39:303 Kernel/(7209:7211): PID: 1 - Eliminar segmento - Id: 4 
+[WARNING] 00:50:39:303 Kernel/(7209:7211): Id_seg a eliminar: 4  
+[INFO] 00:50:39:347 Kernel/(7209:7211): PID: 1 - Eliminar Segmento - Id Segmento: 5
+[INFO] 00:50:39:347 Kernel/(7209:7211): PID: 1 - Crear segmento - ID:6 - Tamanio: :128  
+[WARNING] 00:50:39:347 Kernel/(7209:7211): Id_seg: 6 - Tam seg: 128 
+[WARNING] 00:50:39:435 Kernel/(7209:7211): Recibiendo Segmento: Id: 6 - Dir Base: 512 - Tamanio: 128
+[WARNING] 00:50:39:435 Kernel/(7209:7211): PID: 1 - SIGNAL por exit sin signal: RB - Instancias: 1 
+[INFO] 00:50:39:435 Kernel/(7209:7211): PID: 1 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 00:50:39:435 Kernel/(7209:7211): Finaliza el proceso 1 - Motivo: POR FIN
+[ERROR] 00:50:39:435 Kernel/(7209:7211): Eliminar segmento de pid: 1
+[INFO] 00:50:39:887 Kernel/(7209:7227): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 00:50:39:887 Kernel/(7209:7227): Ingreso a Ready algoritmo FIFO - PIDS: [0] 
+[INFO] 00:50:39:887 Kernel/(7209:7210): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 00:50:39:887 Kernel/(7209:7211): PID: 0 - Recibo pedido de F_CLOSE por: Consoles
+
+[INFO] 00:50:39:887 Kernel/(7209:7211): PID: 0 - Se elimino Consoles de la tabla de archivos abiertos
+[WARNING] 00:50:39:887 Kernel/(7209:7211): El archivo Consoles fue eliminado de la tabla global de archivos abiertos
+[INFO] 00:50:39:888 Kernel/(7209:7211): PID: 0 - Recibo pedido de F_OPEN por: Videogames
+
+[INFO] 00:50:39:888 Kernel/(7209:7211): PID: 0 - Abrir Archivo: Videogames
+
+[WARNING] 00:50:39:888 Kernel/(7209:7211): La tabla global de archivos esta vacia
+[WARNING] 00:50:39:888 Kernel/(7209:7211): Archivo Videogames
+ no esta abierto
+[WARNING] 00:50:39:888 Kernel/(7209:7211): Existencia=1
+[WARNING] 00:50:39:888 Kernel/(7209:7211): El archivo Videogames fue abierto y cargado a la tabla global de archivos abiertos
+[INFO] 00:50:39:888 Kernel/(7209:7211): PID: 0 - Se agrego Videogames a la tabla de archivos abiertos
+[INFO] 00:50:39:888 Kernel/(7209:7211): PID: 0 - Recibo pedido de F_TRUNCATE por: Videogames
+[INFO] 00:50:39:888 Kernel/(7209:7211): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 00:50:39:891 Kernel/(7209:7228): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 00:50:39:891 Kernel/(7209:7228): Ingreso a Ready algoritmo FIFO - PIDS: [0] 
+[INFO] 00:50:39:891 Kernel/(7209:7210): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 00:50:39:891 Kernel/(7209:7211): PID: 0 - Actualizar puntero Archivo:: Videogames - Puntero: 0
+
+[INFO] 00:50:39:891 Kernel/(7209:7211): PID: 0 - Recibo pedido de F_WRITE por: Videogames
+[INFO] 00:50:39:891 Kernel/(7209:7211): PID: 0 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 00:50:40:907 Kernel/(7209:7229): PID: 0 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 00:50:40:907 Kernel/(7209:7229): Ingreso a Ready algoritmo FIFO - PIDS: [0] 
+[INFO] 00:50:40:907 Kernel/(7209:7210): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 00:50:40:907 Kernel/(7209:7211): PID: 0 - Recibo pedido de F_CLOSE por: Videogames
+
+[INFO] 00:50:40:907 Kernel/(7209:7211): PID: 0 - Se elimino Videogames de la tabla de archivos abiertos
+[WARNING] 00:50:40:907 Kernel/(7209:7211): El archivo Videogames fue eliminado de la tabla global de archivos abiertos
+[WARNING] 00:50:40:907 Kernel/(7209:7211): PID: 0 - SIGNAL por exit sin signal: RA - Instancias: 1 
+[INFO] 00:50:40:908 Kernel/(7209:7211): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 00:50:40:908 Kernel/(7209:7211): Finaliza el proceso 0 - Motivo: POR FIN
+[ERROR] 00:50:40:908 Kernel/(7209:7211): Eliminar segmento de pid: 0
+[INFO] 00:50:55:988 Kernel/(7209:7209): Cliente conectado (a KERNEL_SV)
+
+[INFO] 00:50:55:988 Kernel/(7209:7234): Envio solicitud a MEMORIA
+[INFO] 00:50:56:032 Kernel/(7209:7234): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 00:50:56:032 Kernel/(7209:7234): Se crea el proceso 2 en NEW
+[INFO] 00:50:56:032 Kernel/(7209:7234): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:50:56:032 Kernel/(7209:7234): Ingreso a Ready algoritmo FIFO - PIDS: [2] 
+[INFO] 00:50:56:032 Kernel/(7209:7210): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 00:50:56:033 Kernel/(7209:7211): PID: 2 - Recibo pedido de F_OPEN por: Videogames
+
+[INFO] 00:50:56:033 Kernel/(7209:7211): PID: 2 - Abrir Archivo: Videogames
+
+[WARNING] 00:50:56:033 Kernel/(7209:7211): La tabla global de archivos esta vacia
+[WARNING] 00:50:56:033 Kernel/(7209:7211): Archivo Videogames
+ no esta abierto
+[WARNING] 00:50:56:033 Kernel/(7209:7211): Existencia=1
+[WARNING] 00:50:56:033 Kernel/(7209:7211): El archivo Videogames fue abierto y cargado a la tabla global de archivos abiertos
+[INFO] 00:50:56:033 Kernel/(7209:7211): PID: 2 - Se agrego Videogames a la tabla de archivos abiertos
+[INFO] 00:50:56:034 Kernel/(7209:7211): PID: 2 - Actualizar puntero Archivo:: Videogames - Puntero: 0
+
+[INFO] 00:50:56:034 Kernel/(7209:7211): PID: 2 - Recibo pedido de F_READ por: Videogames
+[INFO] 00:50:56:034 Kernel/(7209:7211): PID: 2 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 00:50:57:822 Kernel/(7209:7209): Cliente conectado (a KERNEL_SV)
+
+[INFO] 00:50:57:823 Kernel/(7209:7240): Envio solicitud a MEMORIA
+[INFO] 00:50:57:863 Kernel/(7209:7240): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 00:50:57:863 Kernel/(7209:7240): Se crea el proceso 3 en NEW
+[INFO] 00:50:57:863 Kernel/(7209:7240): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:50:57:863 Kernel/(7209:7240): Ingreso a Ready algoritmo FIFO - PIDS: [3] 
+[INFO] 00:50:57:863 Kernel/(7209:7210): PID: 3 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 00:50:57:863 Kernel/(7209:7211): PID: 3 - Recibo pedido de F_OPEN por: Videogames
+
+[INFO] 00:50:57:863 Kernel/(7209:7211): PID: 3 - Abrir Archivo: Videogames
+
+[INFO] 00:50:59:051 Kernel/(7209:7235): PID: 2 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 00:50:59:051 Kernel/(7209:7235): Ingreso a Ready algoritmo FIFO - PIDS: [2] 
+[WARNING] 00:50:59:051 Kernel/(7209:7211): Hay elementos en la tabla global de archivos. Busco el Videogames
+
+[WARNING] 00:50:59:051 Kernel/(7209:7211): El archivo Videogames ya estaba abierto en la TGA
+[INFO] 00:50:59:051 Kernel/(7209:7211): PID: 3 - Se agrego Videogames a la tabla de archivos abiertos (ya en TGA)
+[WARNING] 00:50:59:051 Kernel/(7209:7211): PID: 3 - Bloqueado esperando archivo Videogames
+[INFO] 00:50:59:052 Kernel/(7209:7210): PID: 2 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 00:50:59:540 Kernel/(7209:7209): Cliente conectado (a KERNEL_SV)
+
+[INFO] 00:50:59:541 Kernel/(7209:7245): Envio solicitud a MEMORIA
+[INFO] 00:50:59:583 Kernel/(7209:7245): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 00:50:59:583 Kernel/(7209:7245): Se crea el proceso 4 en NEW
+[INFO] 00:50:59:583 Kernel/(7209:7245): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:50:59:583 Kernel/(7209:7245): Ingreso a Ready algoritmo FIFO - PIDS: [4] 
+[INFO] 00:51:00:053 Kernel/(7209:7211): PID: 2 - Recibo pedido de F_CLOSE por: Videogames
+
+[INFO] 00:51:00:053 Kernel/(7209:7211): PID: 2 - Se elimino Videogames de la tabla de archivos abiertos
+[INFO] 00:51:00:053 Kernel/(7209:7211): Ingreso a Ready algoritmo FIFO - PIDS: [4 3] 
+[INFO] 00:51:00:053 Kernel/(7209:7211): PID: 3 - Estado anterior: Blocked por archivo - Estado actual: READY
+[INFO] 00:51:00:053 Kernel/(7209:7211): PID: 2 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 00:51:00:053 Kernel/(7209:7211): Finaliza el proceso 2 - Motivo: POR FIN
+[ERROR] 00:51:00:053 Kernel/(7209:7211): Eliminar segmento de pid: 2
+[INFO] 00:51:00:053 Kernel/(7209:7210): PID: 4 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 00:51:00:054 Kernel/(7209:7211): PID: 4 - Recibo pedido de F_OPEN por: Videogames
+
+[INFO] 00:51:00:054 Kernel/(7209:7211): PID: 4 - Abrir Archivo: Videogames
+
+[WARNING] 00:51:00:054 Kernel/(7209:7211): Hay elementos en la tabla global de archivos. Busco el Videogames
+
+[WARNING] 00:51:00:054 Kernel/(7209:7211): El archivo Videogames ya estaba abierto en la TGA
+[INFO] 00:51:00:054 Kernel/(7209:7211): PID: 4 - Se agrego Videogames a la tabla de archivos abiertos (ya en TGA)
+[WARNING] 00:51:00:054 Kernel/(7209:7211): PID: 4 - Bloqueado esperando archivo Videogames
+[INFO] 00:51:00:054 Kernel/(7209:7210): PID: 3 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 00:51:00:054 Kernel/(7209:7211): PID: 3 - Actualizar puntero Archivo:: Videogames - Puntero: 0
+
+[INFO] 00:51:00:054 Kernel/(7209:7211): PID: 3 - Recibo pedido de F_READ por: Videogames
+[INFO] 00:51:00:054 Kernel/(7209:7211): PID: 3 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 00:51:03:072 Kernel/(7209:7246): PID: 3 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 00:51:03:072 Kernel/(7209:7246): Ingreso a Ready algoritmo FIFO - PIDS: [3] 
+[INFO] 00:51:03:072 Kernel/(7209:7210): PID: 3 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 00:51:04:073 Kernel/(7209:7211): PID: 3 - Recibo pedido de F_CLOSE por: Videogames
+
+[INFO] 00:51:04:073 Kernel/(7209:7211): PID: 3 - Se elimino Videogames de la tabla de archivos abiertos
+[INFO] 00:51:04:073 Kernel/(7209:7211): Ingreso a Ready algoritmo FIFO - PIDS: [4] 
+[INFO] 00:51:04:073 Kernel/(7209:7211): PID: 4 - Estado anterior: Blocked por archivo - Estado actual: READY
+[INFO] 00:51:04:074 Kernel/(7209:7211): PID: 3 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 00:51:04:074 Kernel/(7209:7211): Finaliza el proceso 3 - Motivo: POR FIN
+[ERROR] 00:51:04:074 Kernel/(7209:7211): Eliminar segmento de pid: 3
+[INFO] 00:51:04:074 Kernel/(7209:7210): PID: 4 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 00:51:04:074 Kernel/(7209:7211): PID: 4 - Actualizar puntero Archivo:: Videogames - Puntero: 0
+
+[INFO] 00:51:04:074 Kernel/(7209:7211): PID: 4 - Recibo pedido de F_READ por: Videogames
+[INFO] 00:51:04:074 Kernel/(7209:7211): PID: 4 - Estado anterior EXECUTE - Estado actual BLOCKED esperando respuesta de FS
+[INFO] 00:51:07:091 Kernel/(7209:7247): PID: 4 - Estado anterior BLOCKED por respuesta FS - Estado actual READY 0
+[INFO] 00:51:07:091 Kernel/(7209:7247): Ingreso a Ready algoritmo FIFO - PIDS: [4] 
+[INFO] 00:51:07:091 Kernel/(7209:7210): PID: 4 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 00:51:08:092 Kernel/(7209:7211): PID: 4 - Recibo pedido de F_CLOSE por: Videogames
+
+[INFO] 00:51:08:092 Kernel/(7209:7211): PID: 4 - Se elimino Videogames de la tabla de archivos abiertos
+[WARNING] 00:51:08:092 Kernel/(7209:7211): El archivo Videogames fue eliminado de la tabla global de archivos abiertos
+[INFO] 00:51:08:092 Kernel/(7209:7211): PID: 4 - Estado Anterior: EXECUTE - Estado Actual: EXIT
+[INFO] 00:51:08:092 Kernel/(7209:7211): Finaliza el proceso 4 - Motivo: POR FIN
+[ERROR] 00:51:08:092 Kernel/(7209:7211): Eliminar segmento de pid: 4
+[INFO] 00:52:44:513 Kernel/(7262:7262): Probando hora 0
+[INFO] 00:52:44:513 Kernel/(7262:7262): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: FIFO
+ESTIMACION_INICIAL: 10000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 12
+
+[INFO] 00:52:44:513 Kernel/(7262:7262): RECURSO: RA con 1 instancias
+[INFO] 00:52:44:513 Kernel/(7262:7262): RECURSO: RB con 0 instancias
+[INFO] 00:52:44:513 Kernel/(7262:7262): RECURSO: RC con 0 instancias
+[INFO] 00:52:44:513 Kernel/(7262:7262): Cantidad total de recursos disponibles: 3 
+[INFO] 00:52:44:513 Kernel/(7262:7262): ALGORITMO_PLANIFICACION FIFOOO!!!!
+[INFO] 00:52:44:513 Kernel/(7262:7262): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 00:52:44:514 Kernel/(7262:7262): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 00:52:44:514 Kernel/(7262:7262): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 00:52:44:514 Kernel/(7262:7262): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 00:52:47:640 Kernel/(7262:7262): Cliente conectado (a KERNEL_SV)
+
+[INFO] 00:52:47:640 Kernel/(7262:7273): Envio solicitud a MEMORIA
+[INFO] 00:52:47:641 Kernel/(7262:7273): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 00:52:47:641 Kernel/(7262:7273): Se crea el proceso 0 en NEW
+[INFO] 00:52:47:641 Kernel/(7262:7273): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:52:47:641 Kernel/(7262:7273): Ingreso a Ready algoritmo FIFO - PIDS: [0] 
+[INFO] 00:52:47:641 Kernel/(7262:7263): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 00:52:47:641 Kernel/(7262:7264): PID: 0 - Recibo pedido de WAIT por RECURSO: RA
+[INFO] 00:52:47:641 Kernel/(7262:7264): Para RECURSO RA hay 1 instancias disponibles antes de ejecutar
+[INFO] 00:52:47:641 Kernel/(7262:7264): PID: 0 - Wait: RA - Instancias: 0 
+[INFO] 00:52:49:643 Kernel/(7262:7264): PID: 0 - Crear segmento - ID:1 - Tamanio: :128  
+[WARNING] 00:52:49:643 Kernel/(7262:7264): Id_seg: 1 - Tam seg: 128 
+[WARNING] 00:52:49:683 Kernel/(7262:7264): Recibiendo Segmento: Id: 1 - Dir Base: 128 - Tamanio: 128
+[INFO] 00:52:49:683 Kernel/(7262:7264): PID: 0 - Recibo pedido de SIGNAL por RECURSO: RB
+[INFO] 00:52:49:683 Kernel/(7262:7264): Para RECURSO RB hay 0 instancias disponibles antes de ejecutar
+[INFO] 00:52:49:683 Kernel/(7262:7264): PID: 0 - SIGNAL: RB - Instancias: 1 
+[INFO] 00:52:49:685 Kernel/(7262:7264): PID: 0 - Recibo pedido de WAIT por RECURSO: RA
+[INFO] 00:52:49:685 Kernel/(7262:7264): Para RECURSO RA hay 0 instancias disponibles antes de ejecutar
+[INFO] 00:52:49:686 Kernel/(7262:7264): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: RA - Instancias: -1 - PC: 6
+[INFO] 00:58:18:695 Kernel/(7635:7635): Probando hora 0
+[INFO] 00:58:18:696 Kernel/(7635:7635): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: FIFO
+ESTIMACION_INICIAL: 10000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 12
+
+[INFO] 00:58:18:696 Kernel/(7635:7635): RECURSO: RA con 1 instancias
+[INFO] 00:58:18:696 Kernel/(7635:7635): RECURSO: RB con 0 instancias
+[INFO] 00:58:18:696 Kernel/(7635:7635): RECURSO: RC con 0 instancias
+[INFO] 00:58:18:696 Kernel/(7635:7635): Cantidad total de recursos disponibles: 3 
+[INFO] 00:58:18:696 Kernel/(7635:7635): ALGORITMO_PLANIFICACION FIFOOO!!!!
+[INFO] 00:58:18:696 Kernel/(7635:7635): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 00:58:18:696 Kernel/(7635:7635): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 00:58:18:697 Kernel/(7635:7635): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 00:58:18:697 Kernel/(7635:7635): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 00:58:28:473 Kernel/(7635:7635): Cliente conectado (a KERNEL_SV)
+
+[INFO] 00:58:28:474 Kernel/(7635:7644): Envio solicitud a MEMORIA
+[INFO] 00:58:28:474 Kernel/(7635:7644): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 00:58:28:474 Kernel/(7635:7644): Se crea el proceso 0 en NEW
+[INFO] 00:58:28:474 Kernel/(7635:7644): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:58:28:474 Kernel/(7635:7644): Ingreso a Ready algoritmo FIFO - PIDS: [0] 
+[INFO] 00:58:28:474 Kernel/(7635:7636): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[INFO] 00:58:28:474 Kernel/(7635:7637): PID: 0 - Recibo pedido de WAIT por RECURSO: RA
+[INFO] 00:58:28:474 Kernel/(7635:7637): Para RECURSO RA hay 1 instancias disponibles antes de ejecutar
+[INFO] 00:58:28:474 Kernel/(7635:7637): PID: 0 - Wait: RA - Instancias: 0 
+[INFO] 00:58:30:475 Kernel/(7635:7637): PID: 0 - Crear segmento - ID:1 - Tamanio: :128  
+[WARNING] 00:58:30:475 Kernel/(7635:7637): Id_seg: 1 - Tam seg: 128 
+[WARNING] 00:58:30:515 Kernel/(7635:7637): Recibiendo Segmento: Id: 1 - Dir Base: 128 - Tamanio: 128
+[INFO] 00:58:30:516 Kernel/(7635:7637): PID: 0 - Recibo pedido de SIGNAL por RECURSO: RB
+[INFO] 00:58:30:516 Kernel/(7635:7637): Para RECURSO RB hay 0 instancias disponibles antes de ejecutar
+[INFO] 00:58:30:516 Kernel/(7635:7637): PID: 0 - SIGNAL: RB - Instancias: 1 
+[INFO] 00:58:30:516 Kernel/(7635:7637): PID: 0 - Recibo pedido de WAIT por RECURSO: RA
+[INFO] 00:58:30:516 Kernel/(7635:7637): Para RECURSO RA hay 0 instancias disponibles antes de ejecutar
+[INFO] 00:58:30:516 Kernel/(7635:7637): PID: 0 - Estado Anterior: EXECUTE - Estado Actual: BLOCKED por  Wait: RA - Instancias: -1 - PC: 6
+[INFO] 02:45:40:623 Kernel/(7838:7838): Probando hora 0
+[INFO] 02:45:40:631 Kernel/(7838:7838): 
+IP_MEMORIA: 127.0.0.1
+PUERTO_MEMORIA: 8002
+IP_FILESYSTEM: 127.0.0.1
+PUERTO_FILESYSTEM: 8003
+IP_CPU: 127.0.0.1
+PUERTO_CPU: 8001
+PUERTO_ESCUCHA: 8000
+ALGORITMO_PLANIFICACION: FIFO
+ESTIMACION_INICIAL: 10000
+HRRN_ALFA: 0.50
+GRADO_MAX_MULTIPROGRAMACION: 12
+
+[INFO] 02:45:40:631 Kernel/(7838:7838): RECURSO: RA con 1 instancias
+[INFO] 02:45:40:631 Kernel/(7838:7838): RECURSO: RB con 0 instancias
+[INFO] 02:45:40:631 Kernel/(7838:7838): RECURSO: RC con 0 instancias
+[INFO] 02:45:40:631 Kernel/(7838:7838): Cantidad total de recursos disponibles: 3 
+[INFO] 02:45:40:631 Kernel/(7838:7838): ALGORITMO_PLANIFICACION FIFOOO!!!!
+[INFO] 02:45:40:631 Kernel/(7838:7838): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 02:45:40:631 Kernel/(7838:7838): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 02:45:40:631 Kernel/(7838:7838): Cliente conectado en 127.0.0.1:8003 (a FILESYSTEM)
+
+[INFO] 02:45:40:631 Kernel/(7838:7838): Escuchando en 127.0.0.1:8000 (kernel server)
+
+[INFO] 02:47:37:016 Kernel/(7838:7838): Cliente conectado (a KERNEL_SV)
+
+[INFO] 02:47:37:184 Kernel/(7838:7865): Envio solicitud a MEMORIA
+[INFO] 02:47:37:184 Kernel/(7838:7865): Recibiendo Segmento 0 (Compartido) creado: Id: 0 - Dir Base: 0 - Tamanio: 128
+[INFO] 02:47:37:184 Kernel/(7838:7865): Se crea el proceso 0 en NEW
+[INFO] 02:47:37:184 Kernel/(7838:7865): PID: 0 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:47:37:184 Kernel/(7838:7865): Ingreso a Ready algoritmo FIFO - PIDS: [0] 
+[INFO] 02:47:37:184 Kernel/(7838:7839): PID: 0 - Estado Anterior: READY - Estado Actual: EXECUTE
+[ERROR] 02:47:37:355 Kernel/(7838:7840): DISCONNECT FAILURE!

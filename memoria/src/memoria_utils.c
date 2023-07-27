@@ -161,21 +161,33 @@ t_segmento* buscarSegmento(t_list* tabla, uint32_t id){
 	return segmentoN;
 }
 uint64_t firstFit(int tam){
-	int i=0;
-	t_segmento* segmentoAux = list_get(tabla_de_huecos,i);
-	while(tam > segmentoAux->tamanio_segmento && i <= list_size(tabla_de_huecos) )
-	{
-		i++;
-		segmentoAux = list_get(tabla_de_huecos,i);
-	}
-	uint64_t nuevaBase = segmentoAux->direccion_base;
+	int pos_hueco=0;
+	t_segmento* segmentoAux2 = NULL;
+		t_segmento* segmentoAux = list_get(tabla_de_huecos,0);
+		for(int i = 0;i<list_size(tabla_de_huecos);i++)
+		{
+			segmentoAux= list_get(tabla_de_huecos,i);
+
+			if(segmentoAux->tamanio_segmento>=tam)
+			{
+				if(segmentoAux2 == NULL){
+					segmentoAux2 = list_get(tabla_de_huecos,i);
+					pos_hueco = i;
+				}
+				if( segmentoAux->direccion_base < segmentoAux2->direccion_base){
+					segmentoAux2 = list_get(tabla_de_huecos,i);
+					pos_hueco = i;
+				}
+			}
+		}
+		uint64_t nuevaBase = segmentoAux2->direccion_base;
 	// TODO ver : if(segmentoAux==NULL){}// pedir acoplamiento}
-	segmentoAux->direccion_base=segmentoAux->direccion_base+tam;
-	segmentoAux->tamanio_segmento=segmentoAux->tamanio_segmento-tam;
+	segmentoAux2->direccion_base=segmentoAux2->direccion_base+tam;
+	segmentoAux2->tamanio_segmento=segmentoAux2->tamanio_segmento-tam;
 	if(segmentoAux->tamanio_segmento<0){
-		list_remove_and_destroy_element(tabla_de_huecos,i,free);
+		list_remove_and_destroy_element(tabla_de_huecos,pos_hueco,free);
 	}else{
-	list_replace(tabla_de_huecos,i,segmentoAux);
+	list_replace(tabla_de_huecos,pos_hueco,segmentoAux);
 	}
 	return nuevaBase;
 }
