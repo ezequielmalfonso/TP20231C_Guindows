@@ -66,7 +66,7 @@ static void procesar_kernel(void * void_args) {
       // Despuesta cambiar a tabla de segmentos
       //envio_segmento_0(segmento);
 
-	  log_info(logger, "[KERNEL] Se crea el proceso PID: %d en NEW %d", pid);
+	  log_info(logger, "[KERNEL] Se crea el proceso PID: %d en NEW", pid);
       log_info(logger, "[KERNEL] Envio de segmento 0 para programa %d", pid);
       pthread_mutex_lock(&mx_kernel);
       send(cliente_socket, &(segmento->id_segmento), sizeof(uint32_t), MSG_WAITALL);
